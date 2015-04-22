@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <!-- Non translatable values -->
+    <authors>Eric Maeker, MD</authors>
+    <version>test</version>
+    <fmfv>0.8.4</fmfv>
+    <cdate>2012-10-13</cdate>
+    <lmdate>2013-04-18</lmdate>
+    <icon>__theme__/stethoscope.png</icon>
+    <weblink></weblink>
+    <bibliography/>
+
+    <!-- Translatable values -->
+    <license>GPLv3</license>
+    <description lang="xx">test form</description>
+    <description lang="fr">formulaire de test</description>
+    <category lang="xx">Generic tools</category>
+    <category lang="fr">Outils généraux</category>
+    <specialties lang="xx">Tools</specialties>
+    <specialties lang="fr">Outils</specialties>
+
+    <updateinfo>
+      <updateversion from="0.8.2" to="0.8.4">
+        <text lang="fr">
+        Gestion du poids et de la taille du patient
+        Ajout des masques HTML d'exportation et d'impression plus modernes.
+        </text>
+        <text lang="xx">
+        Correctly manages weight and height of the patient
+        Adding modern HTML export and print masks.
+        </text>
+      </updateversion>
+      <updateversion from="" to="0.8.2">
+        <text lang="fr">Première version</text>
+        <text lang="xx">First version</text>
+      </updateversion>
+    </updateinfo>
+
+  </formdescription>
+
+
+  <MedForm name="Maternity::Tools::Test">
+    <label lang="xx">Test form</label>
+    <label lang="fr">Formulaire de test</label>
+    <options>UseFormNameAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
+    <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
+    
+    <!-- test item here -->
+
+    <Item>
+      <name>sampleCombo</name>
+      <type>combo</type>
+      <label>This a simple combo from the BaseWidgetsForm plugins</label>
+        <value>
+          <uuid id="0">firstcombo</uuid>
+          <uuid id="1">secondcombo</uuid>
+          <uuid id="2">thirdcombo</uuid>
+          <possible id="0" lang="xx">First Combo's Element</possible>
+          <possible id="1" lang="xx">Second Combo's Element</possible>
+          <possible id="2" lang="xx">Third Combo's Element</possible>
+          <possible id="0" lang="fr">Premier élément</possible>
+          <possible id="1" lang="fr">Deuxième élément</possible>
+          <possible id="2" lang="fr">Troisième élément</possible>
+          <default>secondcombo</default>
+        </value>
+    </Item>
+    
+    <!-- end test -->
+
+  </MedForm>
+
+</FreeMedForms>
