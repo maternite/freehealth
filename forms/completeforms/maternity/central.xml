@@ -75,7 +75,7 @@
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <file>__subForms__/maternity/generic/soap_with_biomeasurements/central.xml</file>
+    <file>__subForms__/maternity/pediatrics/pediatrics_soap_with_biomeasurements/central.xml</file>
 
     <MedForm name="Maternity::Pediatrics::Reports">
       <label lang="xx">Consultation reports</label>
