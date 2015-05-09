@@ -31,13 +31,13 @@
 
   <file type="script" name="onload">./scripts/xx/pediatrics.js</file>
 
-  <MedForm name="Subs::Tools::Pediatrics::Soap" uifilename="./ui/xx/pediatrics.ui">
+  <MedForm name="Maternity::Pediatrics::Consultation" uifilename="./ui/xx/pediatrics.ui">
     <label lang="xx">Pediatrics form with biometrics</label>
     <label lang="fr">Formulaire pédiatrique avec biométrie</label>
-    <options>UseFormNameAsNameSpace</options>
+    <options>DontPrintEmptyValues;UseFormAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
-    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
-    <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
+    <file type="htmlprintmask">./html/xx/new_mask.html</file>
+    <file type="htmlexportmask">./html/xx/new_mask.html</file>
 
     <Item type="group" name="SubjectiveGroup">
       <uilink widget="subjectiveGroup"/>
@@ -49,7 +49,8 @@
           <uilink label="" widget="" layout="subjectiveLayout"/>
           <tooltip lang="xx">Subjective</tooltip>
           <tooltip lang="fr">Subjectif (plainte du patient ou des parents)</tooltip>
-          <options>DontPrintEmptyValues</options>
+          <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues</options>
+          <papers>Generic</papers>
         </Item>
 
     </Item>

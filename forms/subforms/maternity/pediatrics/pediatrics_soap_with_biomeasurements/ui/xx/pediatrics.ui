@@ -51,7 +51,7 @@
               <property name="maximum">
                <number>300</number>
               </property>
-              <property name="singlestep">
+              <property name="singleStep">
                <number>10</number>
               </property>
              </widget>
@@ -61,7 +61,7 @@
               <property name="maximum">                                
                <number>300</number>                                   
               </property>                                              
-              <property name="singlestep">                             
+              <property name="singleStep">                             
                <number>10</number>                                    
               </property>
              </widget>
