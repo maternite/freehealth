@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jerome Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-05-06</cdate>
+    <lmdate>2015-05-06</cdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">Preoperative anesthesia consultation</description>
+    <description lang="fr">Consultation préanesthésique<description>
+    <category lang="xx">Consultation</category>
+    <category lang="en">Consultation</category>
+    <specialties lang="xx">Anesthesiology</specialties>
+    <specialties lang="en">Anesthésie</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiology.ui">
+    <label lang="xx">Consultation préanesthésique</label>
+    <label lang="en">Preoperative anesthesia consultation</label>
+    <options>UseFormAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
+    <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
+
+  </MedForm>
+</FreeMedForms>
