@@ -13,13 +13,13 @@ namespace.module('com.freemedforms.generic.pediatrics', function (exports, requi
     function setupUi() {
         print("com.freemedforms.generic.pediatrics Setup UI");
         freemedforms.forms.namespaceInUse = "";
-        var formItem = freemedforms.forms.item("Subs::Tools::Pediatrics::Soap");
+        var formItem = freemedforms.forms.item("Maternity::Pediatrics::Consultation");
         print(formItem);
         formUi = formItem.ui();
         syst = formUi.findChild("bloodPressureSystolicValue");
         diast = formUi.findChild("bloodPressureDiastolicValue");
         pulse = formUi.findChild("bloodPressurePulseValue");
-	bmi = formUi.findChild("bmiValue");
+        bmi = formUi.findChild("bmiValue");
         weight = formUi.findChild("weightValue");
         weightUnit = formUi.findChild("weightUnit");
         height = formUi.findChild("heightValue");
@@ -31,8 +31,8 @@ namespace.module('com.freemedforms.generic.pediatrics', function (exports, requi
         syst['valueChanged(int)'].connect(this, computePulsePressure);
         diast['valueChanged(int)'].connect(this, computePulsePressure);
 
-        weight['valueChanged(int)'].connect(this, computeBMI);
-        height['valueChanged(int)'].connect(this, computeBMI);
+        weight['valueChanged(double)'].connect(this, computeBMI);
+        height['valueChanged(double)'].connect(this, computeBMI);
         weightUnit['currentIndexChanged(int)'].connect(this, computeBMI);
         heightUnit['currentIndexChanged(int)'].connect(this, computeBMI);
 
@@ -59,9 +59,7 @@ namespace.module('com.freemedforms.generic.pediatrics', function (exports, requi
     }
 
     function computeBMI() {
-	var metricweight = weight.value;
-	var metricheight = height.value;
-        var textbmi  = (metricweight) / ((metricheight) * (metricheight));
+        var textbmi  = (weight.value) / ((height.value) * (height.value));
         bmi.setText(textbmi);
     }
 

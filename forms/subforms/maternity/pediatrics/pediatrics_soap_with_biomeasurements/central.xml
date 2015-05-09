@@ -214,7 +214,7 @@
 
     </Item>
 
-    <tabstops ns="Subs::Tools::Pediatrics::Soap">
+    <tabstops ns="Maternity::Pediatrics::Consultation">
     <tabstop>SubjectiveGroup::Subjective</tabstop>
     <tabstop>ObjectiveGroup::Temperature::TemperatureValue</tabstop>
     <tabstop>ObjectiveGroup::BloodPressure::Syst</tabstop>

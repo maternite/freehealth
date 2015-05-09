@@ -1,187 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <ui version="4.2">
-  <class>BaseWidgets::Internal::BaseFormWidget</class>
-   <widget class="QWidget" name="BaseWidgets::Internal::BaseFormWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>570</width>
-      <height>500</height>
-     </rect>
-    </property>
-   <property name="windowTitle">
-    <string/> 
-   </property>
-    <layout class="QGridLayout" name="gridLayout_4">
-     <item row="0" column="0">
-      <widget class="QGroupBox" name="subjectiveGroup">
-       <property name="title">
-        <string>S</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
-         <layout class="QVBoxLayout" name="subjectiveLayout"/>
-        </item>
-       </layout><!-- end gridLayout_2 -->
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QGroupBox" name="objectiveGroup">
-       <property name="title">
-        <string>O</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_1">
-        <item row="0" column="0">
-         <layout class="QFormLayout" name="formLayout">
-          <property name="fieldGrowthPolicy">
-           <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+<ui version="4.0">
+ <class>BaseWidgets::Internal::BaseFormWidget</class>
+ <widget class="QWidget" name="BaseWidgets::Internal::BaseFormWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>570</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="subjectiveGroup">
+     <property name="title">
+      <string>S</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="subjectiveLayout"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="objectiveGroup">
+     <property name="title">
+      <string>O</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_1">
+      <item row="0" column="0">
+       <layout class="QFormLayout" name="formLayout">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+        </property>
+        <item row="1" column="0">
+         <widget class="QLabel" name="bloodPressureLabel">
+          <property name="text">
+           <string>BP</string>
           </property>
-          <item row="1" column="0">
-           <widget class="QLabel" name="bloodPressureLabel">
-            <property name="text">
-             <string>BP</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QSpinBox" name="bloodPressureSystolicValue">
-              <property name="maximum">
-               <number>300</number>
-              </property>
-              <property name="singleStep">
-               <number>10</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="bloodPressureDiastolicValue">
-              <property name="maximum">                                
-               <number>300</number>                                   
-              </property>                                              
-              <property name="singleStep">                             
-               <number>10</number>                                    
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="bloodPressurePulseValue">
-              <property name="text">
-               <string>PP</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="weightLabel">
-            <property name="text">
-             <string>W</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
-            <item>
-             <widget class="QDoubleSpinBox" name="weightValue"/>
-            </item>
-            <item>
-             <widget class="QComboBox" name="weightUnit"/>
-            </item>
-           </layout>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="heightLabel">
-            <property name="text">
-             <string>H</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QDoubleSpinBox" name="heightValue"/>
-            </item>
-            <item>
-             <widget class="QComboBox" name="heightUnit"/>
-            </item>
-           </layout>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="bmiLabel">
-            <property name="text">
-             <string>BMI</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QLabel" name="bmiValue">
-            <property name="text">
-             <string>BMI</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="headCircumferenceLabel">
-            <property name="text">
-             <string>HC</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QDoubleSpinBox" name="headCircumferenceValue"/>
-            </item>
-            <item>
-             <widget class="QComboBox" name="headCircumferenceUnit"/>
-            </item>
-           </layout>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="temperatureLabel">
-            <property name="text">
-             <string>T</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <widget class="QDoubleSpinBox" name="temperatureValue"/>
-            </item>
-            <item>
-             <widget class="QComboBox" name="temperatureUnit"/>
-            </item>
-           </layout>
-          </item>
-         </layout><!-- end formLayout -->
+         </widget>
         </item>
-        <item row="0" column="1">
-         <layout class="QVBoxLayout" name="objectiveLayout"/>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QSpinBox" name="bloodPressureSystolicValue">
+            <property name="maximum">
+             <number>300</number>
+            </property>
+            <property name="singleStep">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="bloodPressureDiastolicValue">
+            <property name="maximum">
+             <number>300</number>
+            </property>
+            <property name="singleStep">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="bloodPressurePulseValue">
+            <property name="text">
+             <string>PP</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-       </layout><!-- end gridLayout_1 -->
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QGroupBox" name="assessmentPlanGroup">
-       <property name="title">
-        <string>AP</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="2" column="0">
+         <widget class="QLabel" name="weightLabel">
+          <property name="text">
+           <string>W</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QDoubleSpinBox" name="weightValue">
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="weightUnit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="heightLabel">
+          <property name="text">
+           <string>H</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QDoubleSpinBox" name="heightValue">
+            <property name="maximum">
+             <double>1000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="heightUnit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="bmiLabel">
+          <property name="text">
+           <string>BMI</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="bmiValue">
+          <property name="text">
+           <string>BMI</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="headCircumferenceLabel">
+          <property name="text">
+           <string>HC</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QDoubleSpinBox" name="headCircumferenceValue"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="headCircumferenceUnit"/>
+          </item>
+         </layout>
+        </item>
         <item row="0" column="0">
-         <layout class="QHBoxLayout" name="assessmentLayout"/>
+         <widget class="QLabel" name="temperatureLabel">
+          <property name="text">
+           <string>T</string>
+          </property>
+         </widget>
         </item>
         <item row="0" column="1">
-         <layout class="QHBoxLayout" name="planLayout"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QDoubleSpinBox" name="temperatureValue">
+            <property name="decimals">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <double>150.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="temperatureUnit"/>
+          </item>
+         </layout>
         </item>
        </layout>
-      </widget>
-     </item>
-    </layout><!-- end gridLayout_4 -->
-   </widget>
-  <resources/>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="objectiveLayout"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="assessmentPlanGroup">
+     <property name="title">
+      <string>AP</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="assessmentLayout"/>
+      </item>
+      <item row="0" column="1">
+       <layout class="QHBoxLayout" name="planLayout"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
  <connections/>
 </ui>
