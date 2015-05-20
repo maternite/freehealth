@@ -209,12 +209,13 @@
     <label lang="fr">Anesthésie</label>
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
-      <MedForm name="Maternity::Anesthesiology::Consultation">
+      <file>__subForms__/maternity/anesthesiology/central.xml</file>
+      <!--<MedForm name="Maternity::Anesthesiology::Consultation">
         <label lang="xx">Consultations</label>
         <label lang="en">Consultations</label>
         <icon>__theme__/stethoscope.png</icon>
         <options>NoEpisode;DontPrintEmptyValues</options>
-      </MedForm>
+      </MedForm>-->
   </MedForm>
   
   <MedForm name="Maternity::Obstetrics">

@@ -126,7 +126,11 @@
         <item row="3" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QDoubleSpinBox" name="weightValue"/>
+           <widget class="QDoubleSpinBox" name="weightValue">
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QComboBox" name="weightUnit"/>
@@ -143,7 +147,11 @@
         <item row="4" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
-           <widget class="QDoubleSpinBox" name="heightValue"/>
+           <widget class="QDoubleSpinBox" name="heightValue">
+            <property name="maximum">
+             <double>1000.000000000000000</double>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QComboBox" name="heightUnit"/>
@@ -165,19 +173,23 @@
          </widget>
         </item>
         <item row="6" column="0">
-         <widget class="QLabel" name="headCircumferenceLabel">
+         <widget class="QLabel" name="oxygenSaturationLabel">
           <property name="text">
-           <string>HC</string>
+           <string>SpO2</string>
           </property>
          </widget>
         </item>
         <item row="6" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
-           <widget class="QDoubleSpinBox" name="headCircumferenceValue"/>
-          </item>
-          <item>
-           <widget class="QComboBox" name="headCircumferenceUnit"/>
+           <widget class="QSpinBox" name="oxygenSaturationValue">
+            <property name="suffix">
+             <string>%</string>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>

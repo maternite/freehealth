@@ -1,4 +1,4 @@
-namespace.module('com.freemedforms.generic.pediatrics', function (exports, require) {
+namespace.module('com.freemedforms.generic.anesthesiology', function (exports, require) {
 
     exports.extend({
                        'setupUi': setupUi,
@@ -11,9 +11,9 @@ namespace.module('com.freemedforms.generic.pediatrics', function (exports, requi
     var weight, weightUnit, height, heightUnit, bmi;
 
     function setupUi() {
-        print("com.freemedforms.generic.pediatrics Setup UI");
+        print("com.freemedforms.generic.anesthesiology Setup UI");
         freemedforms.forms.namespaceInUse = "";
-        var formItem = freemedforms.forms.item("Maternity::Pediatrics::Consultation");
+        var formItem = freemedforms.forms.item("Maternity::Anesthesiology::Consultation");
         print(formItem);
         formUi = formItem.ui();
         syst = formUi.findChild("bloodPressureSystolicValue");
@@ -65,4 +65,4 @@ namespace.module('com.freemedforms.generic.pediatrics', function (exports, requi
 
 });
 
-namespace.com.freemedforms.generic.pediatrics.setupUi();
+namespace.com.freemedforms.generic.anesthesiology.setupUi();

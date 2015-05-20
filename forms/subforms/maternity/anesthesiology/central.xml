@@ -26,6 +26,8 @@
 
   </formdescription>
 
+  <file type="script" name="onload">./scripts/xx/anesthesiology.js</file> 
+
   <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiology.ui">
     <label lang="xx">Consultation préanesthésique</label>
     <label lang="en">Preoperative anesthesia consultation</label>
@@ -77,8 +79,8 @@
 
         <Item type="helptext" name="ObjectiveGroup::Temperature::TemperatureLabel">
           <uilink label="temperatureLabel" widget="" layout=""/>
-          <label lang="xx">T°</label>                                           
-          <label lang="fr">T°</label>                                           
+          <label lang="xx">Temperature</label>                                           
+          <label lang="fr">Température</label>                                           
           <tooltip lang="xx">Temperature</tooltip>                                
           <tooltip lang="fr">Température</tooltip>
         </Item>
@@ -88,6 +90,13 @@
           <tooltip lang="xx">Temperature</tooltip>                                
           <tooltip lang="fr">Température</tooltip>                                
           <options>DontPrintEmptyValues</options>                               
+        </Item>
+
+        <Item type="spin" name="ObjectiveGroup::HeartRate::HeatRateValue">
+          <uilink label="heartRateLabel" widget="heartRateValue" layout=""/>
+          <label lang="xx">Heart rate</label>
+          <label lang="fr">Fréquence cardiaque</label>
+          <options>DontPrintEmptyValues</options>
         </Item>
 
         <Item type="combo" name="ObjectiveGroup::Temperature::TemperatureUnit">
@@ -105,10 +114,10 @@
 
         <Item type="helptext" name="ObjectiveGroup::BloodPressure::UiLabel">
           <uilink label="" widget="bloodPressureLabel" layout=""/>
-          <label lang="xx">BP (mmHg)</label>
-          <label lang="fr">TA (mmHg)</label>
+          <label lang="xx">Blood Pressure (mmHg)</label>
+          <label lang="fr">Pression artérielle (mmHg)</label>
           <tooltip lang="xx">Blood pressure (mmHg)</tooltip>
-          <tooltip lang="fr">Tension artérielle (mmHg)</tooltip>
+          <tooltip lang="fr">Pression artérielle (mmHg)</tooltip>
           <options>DontPrintEmptyValues</options>
         </Item>
 
@@ -173,16 +182,12 @@
           <options>DontPrintEmptyValues</options>
         </Item>
 
-        <Item type="measurement" name="ObjectiveGroup::HeadCircumference::Value">
-      <uilink label="headCircumferenceLabel" widget="headCircumferenceValue;headCircumferenceUnit" layout=""/>
-      <label lang="xx">Head Circumference</label>
-      <label lang="fr">Périmètre crânien</label>
-      <tooltip lang="xx">Head Circumference</tooltip>
-      <tooltip lang="fr">Périmètre crânien</tooltip>
-      <options>DontPrintEmptyValues;Length</options>
-      <default>centimeter</default>
-      <patientdata>HeadCircumferenceInCentimeters</patientdata>
-    </Item>
+        <Item type="spin" name="ObjectiveGroup::OxygenSaturation::Value">
+          <uilink label="oxygenSaturationLabel" widget="oxygenSaturationValue" layout=""/>
+          <label lang="xx">Oxygen saturation SpO2</label>
+          <label lang="fr">Saturation en oxygène SpO2</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
 
 
     </Item>
