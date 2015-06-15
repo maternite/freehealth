@@ -28,7 +28,7 @@
 
   <file type="script" name="onload">./scripts/xx/anesthesiology.js</file> 
 
-  <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiology.ui">
+  <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiologymain.ui">
     <label lang="xx">Consultation préanesthésique</label>
     <label lang="en">Preoperative anesthesia consultation</label>
     <options>UseFormAsNameSpace</options>
@@ -36,21 +36,26 @@
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 
-<Item type="group" name="SubjectiveGroup">
-      <uilink widget="subjectiveGroup"/>
-      <label lang="xx">Subjective</label>
-      <label lang="fr">Subjectif (plainte du patient ou des parents)</label>
-      <options>DontPrintEmptyValues</options>
+    <Item type="detailswidget" name="SOAP" uifilename="./ui/xx/anesthesiologysoap.ui">
+      <uilink label="" widget="" layout="mainLayout"/>
+      <label lang="xx">SOAP</label>
+      <label lang="fr">SOAP</label>
+      <options>SummaryFontBold;expanded</options>    
 
-        <Item type="texteditor" name="SubjectiveGroup::Subjective">
-          <uilink label="" widget="" layout="subjectiveLayout"/>
-          <tooltip lang="xx">Subjective</tooltip>
-          <tooltip lang="fr">Subjectif (plainte du patient ou des parents)</tooltip>
-          <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues</options>
-          <papers>Generic</papers>
+        <Item type="group" name="SubjectiveGroup">
+          <uilink widget="subjectiveGroup"/>
+          <label lang="xx">Subjective</label>
+          <label lang="fr">Subjectif (plainte du patient ou des parents)</label>
+          <options>DontPrintEmptyValues</options>
+
+            <Item type="texteditor" name="SubjectiveGroup::Subjective">
+              <uilink label="" widget="" layout="subjectiveLayout"/>
+              <tooltip lang="xx">Subjective</tooltip>
+              <tooltip lang="fr">Subjectif (plainte du patient ou des parents)</tooltip>
+              <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues</options>
+              <papers>Generic</papers>
+            </Item>
         </Item>
-
-    </Item>
 
     <Item type="group" name="ObjectiveGroup">
       <uilink widget="objectiveGroup"/>
@@ -214,6 +219,8 @@
 
     </Item>
 
+  </Item>
+
     <tabstops ns="Maternity::Anesthesiology::Consultation">
     <tabstop>SubjectiveGroup::Subjective</tabstop>
     <tabstop>ObjectiveGroup::Temperature::TemperatureValue</tabstop>
@@ -228,4 +235,5 @@
     </tabstops>
 
   </MedForm>
+
 </FreeMedForms>
