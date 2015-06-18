@@ -1,0 +1,29 @@
+<!-- Preoperative anesthesia consultation -->
+<!-- Airway assessment evaluation detailswidget  -->
+<Item type="detailswidget" name="airway" uifilename="anesthesiologyairway.ui">
+  <uilink label="" widget="" layout="mainLayout"/>
+  <label lang="xx">Airway assessment evaluation</label>
+  <label lang="fr">Evaluation des voies aériennes</label>
+  <options>SummaryFontBold;expanded</options>
+
+    <Item type="combo" name="Airway::MallampatiScore">
+      <uilink label="mallampatiScoreLabel" widget="mallampatiScoreCombo" layout=""/>
+      <label lang="xx">Mallampati Score</label>
+      <label lang="fr">Score de Mallampati</label>
+      <value>
+        <uuid id="0">MallampatiClass1</uuid>
+        <uuid id="1">MallampatiClass2</uuid>
+        <uuid id="2">MallampatiClass3</uuid>
+        <uuid id="3">MallampatiClass4</uuid>
+        <possible id="0" lang="xx">Class I: Soft palate, uvula, fauces, pillars visible.</possible>
+        <possible id="1" lang="xx">Class II: Soft palate, uvula, fauces visible</possible>
+        <possible id="2" lang="xx">Class III: Soft palate, base of uvula visible</possible>
+        <possible id="3" lang="xx">Class IV: Only hard palate visible</possible>
+        <possible id="0" lang="fr">Classe 1 : toute la luette et les loges amygdaliennes sont visibles</possible>
+        <possible id="1" lang="fr">classe 2 : la luette est partiellement visible</possible>
+        <possible id="2" lang="fr">classe 3 : le palais membraneux est visible</possible>
+        <possible id="3" lang="fr">classe 4 : seul le palais osseux est visible</possible>
+      </value>
+    </Item>
+
+</Item>
