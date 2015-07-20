@@ -26,8 +26,6 @@
 
   </formdescription>
 
-  <file type="script" name="onload">./scripts/xx/anesthesiology.js</file> 
-
   <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiologymain.ui">
     <label lang="xx">Consultation préanesthésique</label>
     <label lang="en">Preoperative anesthesia consultation</label>
@@ -65,7 +63,57 @@
         <possible id="3" lang="fr">classe 4 : seul le palais osseux est visible</possible>
       </value>
     </Item>
-
+    
+    <Item type="shorttext" name="Airway::StateOfDentitionReview">
+      <uilink label="stateOfDentitionReviewLabel" widget="stateOfDentitionReviewLineEdit" layout=""/>
+      <label lang="xx">State of dentition review</label>
+      <label lang="fr">État dentaire</label>
+    </Item>
+    <Item type="group" name="IntraoralProsthesis">
+      <uilink widget="intraoralProsthesisGroupBox"/>
+      <label lang="xx">Intraoral prosthesis</label>
+      <label lang="fr">Prothèse dentaire</label>
+       
+        <Item type="radio" name="IntraoralProsthesisPresence">
+          <uilink label="intraoralProsthesisPresenceLabel" widget="" layout="intraoralProsthesisPresenceLayout"/>
+          <label lang="xx">Presence of intraoral prosthesis</label>
+          <label lang="fr">Présence d'une prothèse dentaire</label>
+          <value>                                                                   
+            <uuid id="0">IntraoralProsthesisYes</uuid>                                               
+            <uuid id="1">IntraoralProsthesisNo</uuid>
+            <possible id="0" lang="xx">Yes</possible>
+            <possible id="1" lang="xx">No</possible>
+            <possible id="0" lang="fr">Oui</possible>
+            <possible id="1" lang="fr">Non</possible>
+          </value>
+        </Item>
+        <Item type="radio" name="IntraoralProsthesisMobility">
+          <uilink label="intraoralProsthesisMobilityLabel" widget="" layout="intraoralProsthesisMobilityLayout"/>                  
+          <label lang="xx">Mobility</label>             
+          <label lang="fr">Mobilité</label>             
+          <value>                                                               
+            <uuid id="0">IntraoralProsthesisMobile</uuid>                          
+            <uuid id="1">IntraoralProsthesisFixed</uuid>                           
+            <possible id="0" lang="xx">Mobile</possible>                           
+            <possible id="1" lang="xx">Fixed</possible>                            
+            <possible id="0" lang="fr">Mobile</possible>                           
+            <possible id="1" lang="fr">Fixe</possible>
+          </value>                           
+        </Item>
+        <Item type="radio" name="IntraoralProsthesisType">                  
+          <uilink label="intraoralProsthesisTypeLabel" widget="" layout="intraoralProsthesisTypeLayout"/>
+          <label lang="xx">Type</label>                                     
+          <label lang="fr">Type</label>                                     
+          <value>                                                               
+            <uuid id="0">IntraoralProsthesisDenture</uuid>                       
+            <uuid id="1">IntraoralProsthesisOrthodonticAppliance</uuid>                        
+            <possible id="0" lang="xx">Denture</possible>                        
+            <possible id="1" lang="xx">Orthondontic appliance</possible>                         
+            <possible id="0" lang="fr">Dentier</possible>                        
+            <possible id="1" lang="fr">Appareil orthodontique</possible>                          
+          </value>                                                              
+        </Item>   
+    </Item>
 </Item>
 
     <Item type="detailswidget" name="SOAP" uifilename="./ui/xx/anesthesiologysoap.ui">

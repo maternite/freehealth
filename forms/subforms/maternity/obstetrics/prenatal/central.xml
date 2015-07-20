@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE FreeMedForms>                                                         
+                                                                                
+<FreeMedForms>                                                                  
+                                                                                
+  <formdescription>                                                             
+    <authors>Jérôme Pinguet</authors>                                           
+    <version>test</version>                                                     
+    <fmfv>0.9.6</fmfv>                                                          
+    <cdate>2015-06-24</cdate>                                                   
+    <lmdate>2015-06-24</lmdate>                                                 
+    <icon>__theme__stethoscope.png</icon>                                       
+    <weblink>https://github.com/maternite/freemedforms</weblink>                
+    <bibliograpy/>                                                              
+                                                                                
+    <license>GPLv3</license>                                                    
+    <description lang="xx">Prenatal consultation</description>   
+    <description lang="fr">Consultation prénatale</description>           
+    <category lang="xx">Consultation</category>                                 
+    <category lang="en">Consultation</category>                                 
+    <specialties lang="xx">Obstetrics</specialties>                         
+    <specialties lang="en">Obstétrique</specialties>                             
+                                                                                
+    <updateinfo>                                                                
+    </updateinfo>                                                               
+                                                                                
+  </formdescription>
+
+  <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/prenatalmain.ui">
+    <label lang="xx">Prenatal consultation</label>                       
+    <label lang="fr">Consultation prénatale</label>               
+    <options>UseFormAsNameSpace</options>                                       
+    <icon>__theme__/stethoscope.png</icon>                                      
+<!--
+    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
+    <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
+-->
+    <Item type="detailswidget" name="PrenatalFetus" uifilename="./ui/xx/prenatalfetus.ui">
+    <uilink label="" widget="" layout="mainLayout"/>
+    <label lang="xx">Fetus</label>                         
+    <label lang="fr">Fœtus</label>                       
+    <options>SummaryFontBold;expanded</options>
+
+      <Item type="group" name="Fetus1GroupBox">
+        <uilink widget="fetus1GroupBox"/>
+        <label lang="xx">Fetus 1</label>                       
+        <label lang="fr">Fœtus 1</label>                       
+        <options>DontPrintEmptyValues</options>                                 
+      </Item>
+
+      <Item type="group" name="Fetus2GroupBox">
+        <uilink widget="fetus2GroupBox"/>                      
+        <label lang="xx">Fetus 2</label>                                          
+        <label lang="fr">Fœtus 2</label>                                          
+        <options>DontPrintEmptyValues</options>                                   
+      </Item>    
+
+      <Item type="group" name="Fetus3GroupBox">
+        <uilink widget="fetus3GroupBox"/>                      
+        <label lang="xx">Fetus 3</label>                                          
+        <label lang="fr">Fœtus 3</label>                                          
+        <options>DontPrintEmptyValues</options>                                   
+      </Item>
+
+    </Item>
+
+  </MedForm>
+
+</FreeMedForms>
