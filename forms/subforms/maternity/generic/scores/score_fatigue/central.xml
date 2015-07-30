@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE FreeMedForms>
+<FreeMedForms>
+    <formdescription>
+        <!-- Non translatable values -->
+        <authors>Pinguet Jérôme</authors>
+        <version>test</version>
+        <fmfv>0.9.6</fmfv>
+        <cdate>2015-07-29</cdate>
+        <lmdate>2015-07-30</lmdate>
+        <icon>geriatrics.png</icon>
+        <weblink/>
+        <bibliography/>
+
+        <!-- Translatable values -->
+        <license>GPLv3</license>
+        <description lang="xx">Fatigue score</description>
+        <description lang="fr">Score de fatigue</description>
+        <category lang="xx">Obstetrics</category>
+        <category lang="fr">Obstétrique</category>
+        <specialties lang="xx">Obstetrics</specialties>
+        <specialties lang="fr">Obstétrique</specialties>
+    </formdescription>
+
+    <file type="script" name="onload">./scripts/xx/score_fatigue.js</file>
+
+    <MedForm name="Maternity::Obstetrics::Prenatal::Score::Fatigue" uifilename="./ui/xx/prenatalscorefatigue.ui">
+        <uilink label="formLabel"/>
+        <label lang="xx">Fatigue Score</label>
+        <label lang="fr">Score de fatigue</label>
+        <options>DontPrintEmptyValues;UseFormNameAsNameSpace</options>
+
+        <Item type="group" name="Questions">
+            <uilink widget="questionsGroup"/>
+            <options>compact;DontPrintEmptyValues</options>
+
+            <Item type="check" name="Standing">
+                <uilink widget="standingCheck"/>
+                <options>DontPrintEmptyValues;OnLeft</options>
+                <label lang="xx">Standing up at work for more than 4 hours a day</label>
+                <label lang="fr">Travail debout pendant plus de 4 heures par jour</label>
+                <value>
+                    <numerical id="1">0</numerical>
+                    <numerical id="0">1</numerical>
+                </value>
+            </Item>
+            <Item type="check" name="Industrial">
+                <uilink widget="industrialCheck"/>
+                <options>DontPrintEmptyValues;OnLeft</options>
+                <label lang="xx">Industrial machinery related work</label>
+                <label lang="fr">Travail sur machine industrielle</label>
+                <value>
+                    <numerical id="0">1</numerical>
+                    <numerical id="1">0</numerical>
+                </value>
+            </Item>
+            <Item type="check" name="Repetitive">
+                <uilink widget="repetitiveCheck"/>
+                <options>DontPrintEmptyValues;OnLeft</options>
+                <label lang="xx">Repetitive tasks</label>
+                <label lang="fr">Travail répétitif</label>
+                <value>
+                    <numerical id="0">1</numerical>
+                    <numerical id="1">0</numerical>
+                </value>
+            </Item>
+            <Item type="check" name="Physical">
+                <uilink widget="physicalCheck"/>
+                <options>DontPrintEmptyValues;OnLeft</options>
+                <label lang="xx">Physical work, heavy lifting </label>
+                <label lang="fr">Travail physique, port de charges lourdes</label>
+                <value>
+                    <numerical id="0">1</numerical>
+                    <numerical id="1">0</numerical>
+                </value>
+            </Item>
+            <Item type="check" name="Hardness">
+                <uilink widget="hardnessCheck"/>
+                <options>DontPrintEmptyValues;OnLeft</options>
+                <label lang="xx">Hard labor</label>
+                <label lang="fr">Pénibilité du poste de travail</label>
+                <value>
+                    <numerical id="0">1</numerical>
+                    <numerical id="1">0</numerical>
+                </value>
+            </Item>
+        </Item> <!-- Item type="group" name="Questions"-->
+     
+        <Item name="FinalScore" type="sum">
+            <uilink label="totalLabel" widget="total"/>
+            <label>Score = </label>
+            <sumof_regexp>Maternity::Obstetrics::Prenatal::Score::Fatigue*</sumof_regexp>
+            <options>changeepisodelabel;horizontal;DontPrintEmptyValues</options>
+        </Item>
+
+        <Item name="Comment" type="texteditor">
+          <uilink label="commentLabel" layout="commentLayout"/>
+          <label lang="xx">Comments</label>
+          <label lang="fr">Remarques</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+    </MedForm>
+</FreeMedForms>
