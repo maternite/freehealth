@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <!-- Non translatable values -->
+    <authors>Eric Maeker, Jerome Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-08-07</cdate>
+    <lmdate>2015-08-07</lmdate>
+    <icon>__theme__/pregnancy.png</icon>
+    <weblink></weblink>
+    <bibliography/>
+    <genderlimitation>F</genderlimitation>
+
+    <!-- Translatable values -->
+    <license>GPLv3</license>
+    <description lang="xx">Term and ultrasound scans date calculator. Modified from "Pregancy monitoring calendar" form by Eric Maeker.</description>
+    <description lang="fr">Calcul du terme et des dates d'échographie obstétricale. Version modifiée du formulaire "Calendrier obstétrical" écrit par Eric Maeker.</description>
+    <category lang="xx">Obstetrics</category>
+    <category lang="fr">Obstétrique</category>
+    <specialties lang="xx">Obstetrics</specialties>
+    <specialties lang="fr">Obstétrique</specialties>
+
+    <updateinfo>
+      <updateversion from="0.8.2" to="0.8.4">
+        <text lang="fr">Amélioration de l'interface</text>
+        <text lang="xx">Small UI improvements</text>
+      </updateversion>
+      <updateversion from="" to="0.8.2">
+        <text lang="fr">Première version</text>
+        <text lang="xx">First version</text>
+      </updateversion>
+    </updateinfo>
+
+  </formdescription>
+
+  <file type="script" name="onload">./scripts/xx/script.js</file>
+
+  <MedForm name="Subs::Tools::Obstetrics::Calendar" uifilename="./ui/xx/obstcal.ui">
+    <label lang="xx">Pregnancy monitoring calendar</label>
+    <label lang="fr">Calendrier obstétrical</label>
+    <options>UseFormNameAsNameSpace</options>
+    <icon>__theme__/pregnancy.png</icon>
+    <file type="htmlprintmask">./html/xx/printmask.html</file>
+
+    <Item type="group" name="PregnancyGroup">
+      <uilink widget="pregnancyGroup"/>
+      <label lang="xx">Pregnancy</label>
+      <label lang="fr">Grossesse</label>
+      <options>DontPrintEmptyValues</options>
+
+    <Item name="lastMenstrualPeriodCheckBox" type="check">
+      <uilink label="" layout="" widget="lastMenstrualPeriodCheckBox" />
+      <label lang="xx">Enable/Disable</label>
+      <label lang="fr">Activer/Désactiver</label>
+      <tooltip lang="xx">Enable or disable LMP date widget</tooltip>
+      <tooltip lang="fr">Activer ou désactiver le widget DDR</tooltip>
+      <options></options>
+      <value>
+        <numerical id="0">0</numerical>
+        <numerical id="1">1</numerical>
+      </value>
+    </Item>
+
+      <Item type="date" name="LastMentrualPeriod">
+        <uilink label="lastMenstrualPeriodLabel" layout="" widget="lastMenstrualPeriodDateEdit"/>
+        <label lang="xx">Last Menstrual Period (LMP)</label>
+        <label lang="fr">Date des Dernières Règles (DDR)</label>
+        <patientdata>LastMenstrualPeriod</patientdata>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="date" name="ConceptionDate">
+        <uilink label="conceptionDateLabel" layout="" widget="conceptionDateEdit"/>
+        <label lang="xx">Conception date</label>
+        <label lang="fr">Date de conception</label>
+        <patientdata>LastMenstrualPeriod</patientdata>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item name="HelpText" type="helptext">
+        <uilink label="gestationalAgeHelpTextLabel" layout="" widget=""/>
+        <label lang="xx">Gestational age in weeks of amenorrhoea</label>
+        <label lang="fr">Âge gestationnel en semaines d'aménorrhée</label>
+        <options>printable</options>
+        <value>
+          <default>The default value</default>
+        </value>
+      </Item>
+
+      <Item type="shorttext" name="CurrentWeeksAmenorrhoeaWeeks">
+        <uilink label="currentWeeksAmenorrhoeaWeeksLabel" layout="" widget="currentWeeksAmenorrhoeaWeeks"/>
+        <label lang="xx">weeks</label>
+        <label lang="fr">semaines</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="shorttext" name="CurrentWeeksAmnorrhoeaDays">
+        <uilink label="currentWeeksAmenorrhoeDaysLabel" layout="" widget="currentWeeksAmenorrhoeaDays"/>
+        <label lang="xx">days:</label>
+        <label lang="fr">jours :</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="button" name="ClearLastMenstrualPeriodPushButton">                        
+        <uilink label="" layout="" widget="clearLastMenstrualPeriodPushButton"/>                    
+        <label lang="xx">Clear</label>                                        
+        <label lang="fr">Effacez</label>                                         
+        <options>DontPrint</options>                                            
+        <Script>                                                                
+          <OnClicked>namespace.com.freemedforms.tools.obstetrics.pregnancycalendar.clearLastMenstrualPeriod();</OnClicked>
+        </Script>                                                               
+      </Item>
+
+      <Item type="button" name="ComputeCalendarFromLMP">
+        <uilink label="" layout="" widget="computeFromLMP"/>
+        <label lang="xx">Compute</label>
+        <label lang="fr">Calcul</label>
+        <options>DontPrint</options>
+        <Script>
+          <OnClicked>namespace.com.freemedforms.tools.obstetrics.pregnancycalendar.lmpDateChanged();</OnClicked>
+        </Script>
+      </Item>
+
+      <Item type="button" name="ComputeCalendarFromConceptionDate">
+        <uilink label="" layout="" widget="computeFromConceptionDate"/>
+        <label lang="xx">Compute</label>
+        <label lang="fr">Calcul</label>
+        <options>DontPrint</options>
+        <Script>
+          <OnClicked>namespace.com.freemedforms.tools.obstetrics.pregnancycalendar.conceptionDateChanged();</OnClicked>
+        </Script>
+      </Item>
+
+      <Item type="button" name="ComputeCurrentWA">
+        <uilink label="" layout="" widget="computeCurrentWA"/>
+        <label lang="xx">Compute current WA</label>
+        <label lang="fr">Calcul du terme actuel</label>
+        <options>DontPrint</options>
+        <Script>
+          <OnClicked>namespace.com.freemedforms.tools.obstetrics.pregnancycalendar.computeCurrentWA();</OnClicked>
+        </Script>
+      </Item>
+
+
+    </Item>
+
+    <Item type="group" name="UltrasoundGroup">
+      <uilink widget="ultrasoundGroup"/>
+      <label lang="xx">Ultrasound</label>
+      <label lang="fr">Échographies</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="shorttext" name="UltrasoundGroup::FirstUltrasound">
+          <uilink label="firstEchoLabel" widget="firstUltrasound" layout=""/>
+          <label lang="xx">First ultrasound (12 weeks of amenorrhoea)</label>
+          <label lang="fr">Première échographie (12 SA)</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <tooltip lang="de"></tooltip>
+          <options>DontPrintEmptyValues;readonly</options>
+        </Item>
+
+        <Item type="shorttext" name="UltrasoundGroup::SecondUltrasound">
+          <uilink label="secondUltrasoundLabel" widget="secondUltrasound" layout=""/>
+          <label lang="xx">Second ultrasound (22 weeks of amenorrhoea)</label>
+          <label lang="fr">Deuxième échographie (22 SA)</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <tooltip lang="de"></tooltip>
+          <options>DontPrintEmptyValues;readonly</options>
+        </Item>
+
+        <Item type="shorttext" name="UltrasoundGroup::ThirdUltrasound">
+          <uilink label="thirdUltrasoundLabel" widget="thirdUltrasound" layout=""/>
+          <label lang="xx">Third ultrasound (32 weeks of amenorrhoea)</label>
+          <label lang="fr">Troisième échographie (32 SA)</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <tooltip lang="de"></tooltip>
+          <options>DontPrintEmptyValues;readonly</options>
+        </Item>
+
+    </Item>
+
+    <Item type="group" name="TermGroup">
+      <uilink widget="termGroup"/>
+      <label lang="xx">For the work</label>
+      <label lang="fr">Pour le travail</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="shorttext" name="TermGroup::Term">
+          <uilink label="" widget="termLineEdit" layout=""/>
+          <label lang="xx">Term</label>
+          <label lang="fr">Terme</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <options>DontPrintEmptyValues;readonly;html</options>
+        </Item>
+
+    </Item>
+
+<!--    <tabstops ns="Subs::Tools::SOAP::WithBio">
+     <tabstop>SubjectiveGroup::Subjective</tabstop>
+     <tabstop>ObjectiveGroup::BloodPressure::Syst</tabstop>
+     <tabstop>ObjectiveGroup::BloodPressure::Diast</tabstop>
+     <tabstop>ObjectiveGroup::Weight::Value</tabstop>
+     <tabstop>ObjectiveGroup::Height::Value</tabstop>
+     <tabstop>ObjectiveGroup::Objective</tabstop>
+     <tabstop>AssessmentPlanGroup::Assessment</tabstop>
+     <tabstop>AssessmentPlanGroup::Plan</tabstop>
+    </tabstops>-->
+
+  </MedForm>
+
+</FreeMedForms>
