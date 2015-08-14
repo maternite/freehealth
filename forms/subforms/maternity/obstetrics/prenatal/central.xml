@@ -26,6 +26,8 @@
                                                                                 
   </formdescription>
 
+  <file type="script" name="onload">./scripts/xx/prenatal.js</file>
+
   <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/prenatalmain.ui">
     <label lang="xx">Prenatal consultation</label>                       
     <label lang="fr">Consultation prénatale</label>               
@@ -35,34 +37,144 @@
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 -->
-    <Item type="detailswidget" name="PrenatalFetus" uifilename="./ui/xx/prenatalfetus.ui">
-    <uilink label="" widget="" layout="mainLayout"/>
-    <label lang="xx">Fetus</label>                         
-    <label lang="fr">Fœtus</label>                       
-    <options>SummaryFontBold;expanded</options>
+    <Item type="group" name="Fetus">
+
+      <uilink label="" widget="fetusGroupBox" layout="" />
+      <label lang="xx">Fetus</label>                         
+      <label lang="fr">Fœtus</label>                       
+      <options>SummaryFontBold;expanded</options>
+
+        <Item type="spin" name="FetusNumber">
+          <uilink label="fetusNumberLabel" widget="fetusNumberSpinBox" layout="" />
+          <label lang="xx">Number of fetus</label>
+          <label lang="fr">Nombre de fœtus</label>
+          <min>0</min>
+          <max>15</max>
+          <step>1</step>
+        </Item>
+    
+    </Item>
 
       <Item type="group" name="Fetus1GroupBox">
         <uilink widget="fetus1GroupBox"/>
         <label lang="xx">Fetus 1</label>                       
         <label lang="fr">Fœtus 1</label>                       
-        <options>DontPrintEmptyValues</options>                                 
+        <options>DontPrintEmptyValues</options>
+        
+          <Item type="radio" name="Fetus1::PrenatalHeartbeat::Radio">                        
+            <uilink label="prenatalHeartbeatF1Label" widget="" layout="prenatalHeartbeatF1RadioLayout"/>         
+              <label lang="xx">Prenatal heartbeat</label>                            
+              <label lang="fr">Bruit du cœur fœtal</label>                     
+              <options>compact</options>                                      
+              <value>                                                         
+                <uuid id="0">yes</uuid>                                     
+                <uuid id="1">no</uuid>
+                <uuid id="2">∅</uuid>                                      
+                <possible id="0" lang="xx">Yes</possible>                   
+                <possible id="1" lang="xx">No</possible>
+                <possible id="2" lang="xx">∅</possible>                    
+                <print id="0" lang="xx">Prenatal heartbeat present</print>  
+                <print id="1" lang="xx">Prenatal heartbeat absent</print>
+                <print id="2" lang="xx">Not evaluated</print>
+                <possible id="0" lang="fr">Oui</possible>                   
+                <possible id="1" lang="fr">Non</possible>
+                <possible id="2" lang="fr">∅</possible>                   
+                <print id="0" lang="fr">Oui</print>          
+                <print id="1" lang="fr">Non</print>
+                <print id="2" lang="fr">∅</print>   
+              </value>                                                        
+          </Item>
+
+          <Item name="Fetus1::PrenatalHeartbeat::Comment" type="shorttext">
+            <uilink label="" widget="prenatalHeartbeatF1LineEdit" layout="" /> 
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+         </Item>          
+                                 
       </Item>
 
       <Item type="group" name="Fetus2GroupBox">
         <uilink widget="fetus2GroupBox"/>                      
         <label lang="xx">Fetus 2</label>                                          
         <label lang="fr">Fœtus 2</label>                                          
-        <options>DontPrintEmptyValues</options>                                   
+        <options>DontPrintEmptyValues</options>
+
+          <Item type="radio" name="Fetus2::PrenatalHeartbeat::Radio">           
+            <uilink label="prenatalHeartbeatF2Label" widget="" layout="prenatalHeartbeatF2RadioLayout"/>     
+              <label lang="xx">Prenatal heartbeat</label>                       
+              <label lang="fr">Bruit du cœur fœtal</label>                      
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">yes</uuid>                                         
+                <uuid id="1">no</uuid>                                          
+                <uuid id="2">∅</uuid>                                           
+                <possible id="0" lang="xx">Yes</possible>                       
+                <possible id="1" lang="xx">No</possible>                        
+                <possible id="2" lang="xx">∅</possible>                         
+                <print id="0" lang="xx">Prenatal heartbeat present</print>      
+                <print id="1" lang="xx">Prenatal heartbeat absent</print>       
+                <print id="2" lang="xx">Not evaluated</print>                   
+                <possible id="0" lang="fr">Oui</possible>                       
+                <possible id="1" lang="fr">Non</possible>                       
+                <possible id="2" lang="fr">∅</possible>                         
+                <print id="0" lang="fr">Oui</print>                             
+                <print id="1" lang="fr">Non</print>                             
+                <print id="2" lang="fr">∅</print>                               
+              </value>                                                          
+          </Item>
+      
+          <Item name="Fetus2::PrenatalHeartbeat::Comment" type="shorttext">     
+            <uilink label="" widget="prenatalHeartbeatF2LineEdit" layout="" />  
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>                             
+      
       </Item>    
 
       <Item type="group" name="Fetus3GroupBox">
         <uilink widget="fetus3GroupBox"/>                      
         <label lang="xx">Fetus 3</label>                                          
         <label lang="fr">Fœtus 3</label>                                          
-        <options>DontPrintEmptyValues</options>                                   
+        <options>DontPrintEmptyValues</options>
+
+          <Item type="radio" name="Fetus3::PrenatalHeartbeat::Radio">           
+            <uilink label="prenatalHeartbeatF3Label" widget="" layout="prenatalHeartbeatF3RadioLayout"/>     
+              <label lang="xx">Prenatal heartbeat</label>                       
+              <label lang="fr">Bruit du cœur fœtal</label>                      
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">yes</uuid>                                         
+                <uuid id="1">no</uuid>                                          
+                <uuid id="2">∅</uuid>                                           
+                <possible id="0" lang="xx">Yes</possible>                       
+                <possible id="1" lang="xx">No</possible>                        
+                <possible id="2" lang="xx">∅</possible>                         
+                <print id="0" lang="xx">Prenatal heartbeat present</print>      
+                <print id="1" lang="xx">Prenatal heartbeat absent</print>       
+                <print id="2" lang="xx">Not evaluated</print>                   
+                <possible id="0" lang="fr">Oui</possible>                       
+                <possible id="1" lang="fr">Non</possible>                       
+                <possible id="2" lang="fr">∅</possible>                         
+                <print id="0" lang="fr">Oui</print>                             
+                <print id="1" lang="fr">Non</print>                             
+                <print id="2" lang="fr">∅</print>                               
+              </value>                                                          
+          </Item>
+
+          <Item name="Fetus3::PrenatalHeartbeat::Comment" type="shorttext">     
+            <uilink label="" widget="prenatalHeartbeatF3LineEdit" layout="" />  
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+           </Item>
+
       </Item>
 
-    </Item>
 
   </MedForm>
 

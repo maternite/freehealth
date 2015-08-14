@@ -6,36 +6,222 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>672</width>
+    <width>701</width>
     <height>499</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QGroupBox" name="fetus1GroupBox">
-     <property name="title">
-      <string>Fetus1GroupBox</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="fetus2GroupBox">
-     <property name="title">
-      <string>Fetus2GroupBox</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="fetus3GroupBox">
-     <property name="title">
-      <string>Fetus3GroupBox</string>
-     </property>
-    </widget>
-   </item>
-  </layout>
+  <widget class="QGroupBox" name="fetus1GroupBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>152</y>
+     <width>683</width>
+     <height>109</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Fetus1GroupBox</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>641</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="prenatalHeartbeatF1Label">
+       <property name="text">
+        <string>prenatal heartbeat</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="prenatalHeartbeatF1RadioLayout">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="prenatalHeartbeatF1LineEdit">
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="fetus2GroupBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>267</y>
+     <width>683</width>
+     <height>108</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Fetus2GroupBox</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>20</y>
+      <width>641</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="prenatalHeartbeatF2Label">
+       <property name="text">
+        <string>prenatal heartbeat</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="prenatalHeartbeatF2RadioLayout">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="prenatalHeartbeatF2LineEdit">
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="fetus3GroupBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>381</y>
+     <width>683</width>
+     <height>109</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Fetus3GroupBox</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>20</y>
+      <width>641</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="prenatalHeartbeatF3Label">
+       <property name="text">
+        <string>prenatal heartbeat</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="prenatalHeartbeatF3RadioLayout">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="prenatalHeartbeatF3LineEdit">
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="fetusNumberLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Number of fetuses</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="fetusNumberSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>10</y>
+     <width>48</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>15</number>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
