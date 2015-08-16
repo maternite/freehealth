@@ -91,7 +91,40 @@
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
-         </Item>          
+          </Item>          
+
+          <Item type="uniquelist" name="F1Presentation">                   
+            <uilink label="presentationLabel" widget="presentationListView" layout=""/>         
+            <label lang="xx">Presentation</label>                             
+            <label lang="fr">Présentation</label>                            
+            <value>                                                         
+            <uuid id="0">Vertex presentation</uuid> 
+            <!--<sctid id="0">70028003</sctid>-->                             
+            <uuid id="1">Frank breech presentation</uuid>
+            <!--<sctid id="1">18559007</sctid>-->                              
+            <uuid id="2">Complete breech presentation</uuid>
+            <!--<sctid id="2">49168004</sctid>-->
+            <uuid id="3">Incomplete breech presentation</uuid>
+            <!--<sctid id="3">38049006</sctid>-->                                      
+            <uuid id="4">Acromion presentation</uuid>
+            <!--<sctid id="4">23954006</sctid>-->                                  
+            <uuid id="5">ø</uuid>                                
+            <possible id="0">Vertex</possible>
+            <possible id="1">Frank breech</possible>      
+            <possible id="2">Complete breech</possible>                    
+            <possible id="3">Incomplete breech</possible>                      
+            <possible id="4">Acromion presentation</possible>
+            <possible id="5">ø</possible>              
+            <possible id="0" lang="fr">céphalique (sommet)</possible>
+            <possible id="1" lang="fr">siège décomplété</possible>      
+            <possible id="2" lang="fr">siège complet</possible>                      
+            <possible id="3" lang="fr">siège incomplet</possible>                      
+            <possible id="4" lang="fr">transverse (épaule)</possible>   
+            <possible id="5" lang="fr">ø</possible>              
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+
                                  
       </Item>
 
