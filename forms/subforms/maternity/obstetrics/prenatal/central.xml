@@ -94,7 +94,7 @@
           </Item>          
 
           <Item type="uniquelist" name="F1Presentation">                   
-            <uilink label="presentationLabel" widget="presentationListView" layout=""/>         
+            <uilink label="presentationF1Label" widget="presentationF1ListView" layout=""/>         
             <label lang="xx">Presentation</label>                             
             <label lang="fr">Présentation</label>                            
             <value>                                                         
@@ -125,8 +125,100 @@
             <options>resizeToContent;DontPrintEmptyValue</options>          
           </Item>
 
+          <Item type="uniquelist" name="F1Position">                   
+            <uilink label="positionF1Label" widget="positionF1ListView" layout=""/>         
+            <label lang="xx">Position</label>                             
+            <label lang="fr">Variété</label>                            
+            <value>                                                         
+            <uuid id="0">Left occipitoanterior position</uuid>
+            <!--<sctid id="0">11409005</sctid>-->
+            <uuid id="1">Right occipitoanterior position</uuid>
+            <!--<sctid id="1">39889007</sctid>-->                              
+            <uuid id="2">Left occipitoposterior position</uuid>
+            <!--<sctid id="2">31477000</sctid>-->                                     
+            <uuid id="3">Right occipitoposterior position</uuid>
+            <!--<sctid id="3">36547009</sctid>-->                                     
+            <uuid id="4">Occipitoanterior position</uuid>
+            <!--<sctid id="4">90381008</sctid>-->                                     
+            <uuid id="5">Occipitoposterior position</uuid>
+            <!--<sctid id="5">37235006</sctid>-->                                
+            <uuid id="6">Left occipitolateral position</uuid>
+            <!--<sctid id="6">18905000</sctid>-->            
+            <uuid id="7">Right occipitolateral position</uuid>
+            <!--<sctid id="7">37040008</sctid>-->                   
+            <uuid id="8">Left sacroanterior position</uuid>
+            <!--<sctid id="8">79888005</sctid>-->
+            <uuid id="9">Right sacroanterior position</uuid>
+            <!--<sctid id="9">79643007</sctid>-->                         
+            <uuid id="10">Left sacroposterior position</uuid>
+            <!--<sctid id="10">2138000</sctid>-->
+            <uuid id="11">Right sacroposterior position</uuid>
+            <!--<sctid id="11">112073004</sctid>-->
+            <uuid id="12">Sacroanterior position</uuid>
+            <!--<sctid id="12">79888005</sctid>-->
+            <uuid id="13">Sacroposterior position</uuid>       
+            <!--<sctid id="13">58261003</sctid>-->
+            <uuid id="14">Left sacrolateral position</uuid>
+            <!--<sctid id="14">54486001</sctid>-->
+            <uuid id="15">Right sacrolateral position</uuid>  
+            <!--<sctid id="15">89550007</sctid>-->
+            <uuid id="16">Shoulder left anterior position</uuid>
+            <!--<sctid id="16">249108000</sctid>-->
+            <uuid id="17">Shoulder right anterior position</uuid>                
+            <!--<sctid id="17">249107005</sctid>-->
+            <uuid id="18">Shoulder left posterior position</uuid>            
+            <!--<sctid id="18">27921008</sctid>-->
+            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <!--<sctid id="19">26644000</sctid>-->
+            <uuid id="20">∅</uuid>                        
+            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
+            <possible id="4">Vertex - OA Occipitoanterior</possible>   
+            <possible id="5">Vertex - OP Occipitoposterior</possible>              
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
+            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="9">Breech - RSA Right sacroanterior</possible>
+            <possible id="10">Breech - LSP Left sacroposterior</possible>
+            <possible id="11">Breech - RSP Right sacroposterior</possible>
+            <possible id="12">Breech - SA Sacroanterior</possible>
+            <possible id="13">Breech - SP Sacroposterior</possible>
+            <possible id="14">Breech - LSL Left sacrolateral</possible>
+            <possible id="15">Breech - RSL Right sacrolateral</possible>
+            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
+            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
+            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
+            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
+            <possible id="20">∅</possible>
+            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
+            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
+            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
+            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
+            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
+            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
+            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
+            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
+            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
+            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
+            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
+            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
+            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
+            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
+            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
+            <possible id="20" lang="fr">∅</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+
                                  
-      </Item>
+      </Item> <!-- End Of Fetus1GroupBox -->
 
       <Item type="group" name="Fetus2GroupBox">
         <uilink widget="fetus2GroupBox"/>                      
@@ -164,9 +256,133 @@
             <label lang="fr"></label>                                           
             <placeholder lang="xx">Comment</placeholder>                        
             <placeholder lang="fr">Commentaire</placeholder>                    
-          </Item>                             
-      
-      </Item>    
+          </Item>
+
+          <Item type="uniquelist" name="F2Presentation">                        
+            <uilink label="presentationF2Label" widget="presentationF2ListView" layout=""/>
+            <label lang="xx">Presentation</label>                               
+            <label lang="fr">Présentation</label>                               
+            <value>                                                             
+            <uuid id="0">Vertex presentation</uuid>                             
+            <!--<sctid id="0">70028003</sctid>-->                               
+            <uuid id="1">Frank breech presentation</uuid>                       
+            <!--<sctid id="1">18559007</sctid>-->                               
+            <uuid id="2">Complete breech presentation</uuid>                    
+            <!--<sctid id="2">49168004</sctid>-->                               
+            <uuid id="3">Incomplete breech presentation</uuid>                  
+            <!--<sctid id="3">38049006</sctid>-->                               
+            <uuid id="4">Acromion presentation</uuid>                           
+            <!--<sctid id="4">23954006</sctid>-->                               
+            <uuid id="5">ø</uuid>                                               
+            <possible id="0">Vertex</possible>                                  
+            <possible id="1">Frank breech</possible>                            
+            <possible id="2">Complete breech</possible>                         
+            <possible id="3">Incomplete breech</possible>                       
+            <possible id="4">Acromion presentation</possible>                   
+            <possible id="5">ø</possible>                                       
+            <possible id="0" lang="fr">céphalique (sommet)</possible>           
+            <possible id="1" lang="fr">siège décomplété</possible>              
+            <possible id="2" lang="fr">siège complet</possible>                 
+            <possible id="3" lang="fr">siège incomplet</possible>               
+            <possible id="4" lang="fr">transverse (épaule)</possible>           
+            <possible id="5" lang="fr">ø</possible>                             
+            </value>                                                            
+            <options>resizeToContent;DontPrintEmptyValue</options>              
+          </Item>                              
+     
+          <Item type="uniquelist" name="F2Position">                   
+            <uilink label="positionF2Label" widget="positionF2ListView" layout=""/>         
+            <label lang="xx">Position</label>                             
+            <label lang="fr">Variété</label>                            
+            <value>                                                         
+            <uuid id="0">Left occipitoanterior position</uuid>
+            <!--<sctid id="0">11409005</sctid>-->
+            <uuid id="1">Right occipitoanterior position</uuid>
+            <!--<sctid id="1">39889007</sctid>-->                              
+            <uuid id="2">Left occipitoposterior position</uuid>
+            <!--<sctid id="2">31477000</sctid>-->                                     
+            <uuid id="3">Right occipitoposterior position</uuid>
+            <!--<sctid id="3">36547009</sctid>-->                                     
+            <uuid id="4">Occipitoanterior position</uuid>
+            <!--<sctid id="4">90381008</sctid>-->                                     
+            <uuid id="5">Occipitoposterior position</uuid>
+            <!--<sctid id="5">37235006</sctid>-->                                
+            <uuid id="6">Left occipitolateral position</uuid>
+            <!--<sctid id="6">18905000</sctid>-->            
+            <uuid id="7">Right occipitolateral position</uuid>
+            <!--<sctid id="7">37040008</sctid>-->                   
+            <uuid id="8">Left sacroanterior position</uuid>
+            <!--<sctid id="8">79888005</sctid>-->
+            <uuid id="9">Right sacroanterior position</uuid>
+            <!--<sctid id="9">79643007</sctid>-->                         
+            <uuid id="10">Left sacroposterior position</uuid>
+            <!--<sctid id="10">2138000</sctid>-->
+            <uuid id="11">Right sacroposterior position</uuid>
+            <!--<sctid id="11">112073004</sctid>-->
+            <uuid id="12">Sacroanterior position</uuid>
+            <!--<sctid id="12">79888005</sctid>-->
+            <uuid id="13">Sacroposterior position</uuid>       
+            <!--<sctid id="13">58261003</sctid>-->
+            <uuid id="14">Left sacrolateral position</uuid>
+            <!--<sctid id="14">54486001</sctid>-->
+            <uuid id="15">Right sacrolateral position</uuid>  
+            <!--<sctid id="15">89550007</sctid>-->
+            <uuid id="16">Shoulder left anterior position</uuid>
+            <!--<sctid id="16">249108000</sctid>-->
+            <uuid id="17">Shoulder right anterior position</uuid>                
+            <!--<sctid id="17">249107005</sctid>-->
+            <uuid id="18">Shoulder left posterior position</uuid>            
+            <!--<sctid id="18">27921008</sctid>-->
+            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <!--<sctid id="19">26644000</sctid>-->
+            <uuid id="20">∅</uuid>                        
+            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
+            <possible id="4">Vertex - OA Occipitoanterior</possible>   
+            <possible id="5">Vertex - OP Occipitoposterior</possible>              
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
+            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="9">Breech - RSA Right sacroanterior</possible>
+            <possible id="10">Breech - LSP Left sacroposterior</possible>
+            <possible id="11">Breech - RSP Right sacroposterior</possible>
+            <possible id="12">Breech - SA Sacroanterior</possible>
+            <possible id="13">Breech - SP Sacroposterior</possible>
+            <possible id="14">Breech - LSL Left sacrolateral</possible>
+            <possible id="15">Breech - RSL Right sacrolateral</possible>
+            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
+            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
+            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
+            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
+            <possible id="20">∅</possible>
+            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
+            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
+            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
+            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
+            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
+            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
+            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
+            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
+            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
+            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
+            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
+            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
+            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
+            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
+            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
+            <possible id="20" lang="fr">∅</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+ 
+      </Item> <!-- End Of Fetus2GroupBox -->  
 
       <Item type="group" name="Fetus3GroupBox">
         <uilink widget="fetus3GroupBox"/>                      
@@ -204,10 +420,465 @@
             <label lang="fr"></label>                                           
             <placeholder lang="xx">Comment</placeholder>                        
             <placeholder lang="fr">Commentaire</placeholder>                    
-           </Item>
+          </Item>
 
-      </Item>
+          <Item type="uniquelist" name="F3Presentation">                        
+            <uilink label="presentationF3Label" widget="presentationF3ListView" layout=""/>
+            <label lang="xx">Presentation</label>                               
+            <label lang="fr">Présentation</label>                               
+            <value>                                                             
+            <uuid id="0">Vertex presentation</uuid>                             
+            <!--<sctid id="0">70028003</sctid>-->                               
+            <uuid id="1">Frank breech presentation</uuid>                       
+            <!--<sctid id="1">18559007</sctid>-->                               
+            <uuid id="2">Complete breech presentation</uuid>                    
+            <!--<sctid id="2">49168004</sctid>-->                               
+            <uuid id="3">Incomplete breech presentation</uuid>                  
+            <!--<sctid id="3">38049006</sctid>-->                               
+            <uuid id="4">Acromion presentation</uuid>                           
+            <!--<sctid id="4">23954006</sctid>-->                               
+            <uuid id="5">ø</uuid>                                               
+            <possible id="0">Vertex</possible>                                  
+            <possible id="1">Frank breech</possible>                            
+            <possible id="2">Complete breech</possible>                         
+            <possible id="3">Incomplete breech</possible>                       
+            <possible id="4">Acromion presentation</possible>                   
+            <possible id="5">ø</possible>                                       
+            <possible id="0" lang="fr">céphalique (sommet)</possible>           
+            <possible id="1" lang="fr">siège décomplété</possible>              
+            <possible id="2" lang="fr">siège complet</possible>                 
+            <possible id="3" lang="fr">siège incomplet</possible>               
+            <possible id="4" lang="fr">transverse (épaule)</possible>           
+            <possible id="5" lang="fr">ø</possible>                             
+            </value>                                                            
+            <options>resizeToContent;DontPrintEmptyValue</options>              
+          </Item>
 
+          <Item type="uniquelist" name="F3Position">                   
+            <uilink label="positionF3Label" widget="positionF3ListView" layout=""/>         
+            <label lang="xx">Position</label>                             
+            <label lang="fr">Variété</label>                            
+            <value>                                                         
+            <uuid id="0">Left occipitoanterior position</uuid>
+            <!--<sctid id="0">11409005</sctid>-->
+            <uuid id="1">Right occipitoanterior position</uuid>
+            <!--<sctid id="1">39889007</sctid>-->                              
+            <uuid id="2">Left occipitoposterior position</uuid>
+            <!--<sctid id="2">31477000</sctid>-->                                     
+            <uuid id="3">Right occipitoposterior position</uuid>
+            <!--<sctid id="3">36547009</sctid>-->                                     
+            <uuid id="4">Occipitoanterior position</uuid>
+            <!--<sctid id="4">90381008</sctid>-->                                     
+            <uuid id="5">Occipitoposterior position</uuid>
+            <!--<sctid id="5">37235006</sctid>-->                                
+            <uuid id="6">Left occipitolateral position</uuid>
+            <!--<sctid id="6">18905000</sctid>-->            
+            <uuid id="7">Right occipitolateral position</uuid>
+            <!--<sctid id="7">37040008</sctid>-->                   
+            <uuid id="8">Left sacroanterior position</uuid>
+            <!--<sctid id="8">79888005</sctid>-->
+            <uuid id="9">Right sacroanterior position</uuid>
+            <!--<sctid id="9">79643007</sctid>-->                         
+            <uuid id="10">Left sacroposterior position</uuid>
+            <!--<sctid id="10">2138000</sctid>-->
+            <uuid id="11">Right sacroposterior position</uuid>
+            <!--<sctid id="11">112073004</sctid>-->
+            <uuid id="12">Sacroanterior position</uuid>
+            <!--<sctid id="12">79888005</sctid>-->
+            <uuid id="13">Sacroposterior position</uuid>       
+            <!--<sctid id="13">58261003</sctid>-->
+            <uuid id="14">Left sacrolateral position</uuid>
+            <!--<sctid id="14">54486001</sctid>-->
+            <uuid id="15">Right sacrolateral position</uuid>  
+            <!--<sctid id="15">89550007</sctid>-->
+            <uuid id="16">Shoulder left anterior position</uuid>
+            <!--<sctid id="16">249108000</sctid>-->
+            <uuid id="17">Shoulder right anterior position</uuid>                
+            <!--<sctid id="17">249107005</sctid>-->
+            <uuid id="18">Shoulder left posterior position</uuid>            
+            <!--<sctid id="18">27921008</sctid>-->
+            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <!--<sctid id="19">26644000</sctid>-->
+            <uuid id="20">∅</uuid>                        
+            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
+            <possible id="4">Vertex - OA Occipitoanterior</possible>   
+            <possible id="5">Vertex - OP Occipitoposterior</possible>              
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
+            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="9">Breech - RSA Right sacroanterior</possible>
+            <possible id="10">Breech - LSP Left sacroposterior</possible>
+            <possible id="11">Breech - RSP Right sacroposterior</possible>
+            <possible id="12">Breech - SA Sacroanterior</possible>
+            <possible id="13">Breech - SP Sacroposterior</possible>
+            <possible id="14">Breech - LSL Left sacrolateral</possible>
+            <possible id="15">Breech - RSL Right sacrolateral</possible>
+            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
+            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
+            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
+            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
+            <possible id="20">∅</possible>
+            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
+            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
+            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
+            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
+            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
+            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
+            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
+            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
+            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
+            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
+            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
+            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
+            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
+            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
+            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
+            <possible id="20" lang="fr">∅</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+                   
+
+        </Item> <!-- End Of Fetus3GroupBox -->
+   
+            
+        <Item type="group" name="Fetus4GroupBox">
+          <uilink widget="fetus4GroupBox"/>
+          <label lang="xx">Fetus 4</label>                       
+          <label lang="fr">Fœtus 4</label>                       
+          <options>DontPrintEmptyValues</options>
+        
+          <Item type="radio" name="Fetus4::PrenatalHeartbeat::Radio">                        
+            <uilink label="prenatalHeartbeatF4Label" widget="" layout="prenatalHeartbeatF4RadioLayout"/>         
+              <label lang="xx">Prenatal heartbeat</label>                            
+              <label lang="fr">Bruit du cœur fœtal</label>                     
+              <options>compact</options>                                      
+              <value>                                                         
+                <uuid id="0">yes</uuid>                                     
+                <uuid id="1">no</uuid>
+                <uuid id="2">∅</uuid>                                      
+                <possible id="0" lang="xx">Yes</possible>                   
+                <possible id="1" lang="xx">No</possible>
+                <possible id="2" lang="xx">∅</possible>                    
+                <print id="0" lang="xx">Prenatal heartbeat present</print>  
+                <print id="1" lang="xx">Prenatal heartbeat absent</print>
+                <print id="2" lang="xx">Not evaluated</print>
+                <possible id="0" lang="fr">Oui</possible>                   
+                <possible id="1" lang="fr">Non</possible>
+                <possible id="2" lang="fr">∅</possible>                   
+                <print id="0" lang="fr">Oui</print>          
+                <print id="1" lang="fr">Non</print>
+                <print id="2" lang="fr">∅</print>   
+              </value>                                                        
+          </Item>
+
+          <Item name="Fetus4::PrenatalHeartbeat::Comment" type="shorttext">
+            <uilink label="" widget="prenatalHeartbeatF4LineEdit" layout="" /> 
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>          
+
+          <Item type="uniquelist" name="F4Presentation">                   
+            <uilink label="presentationF4Label" widget="presentationF4ListView" layout=""/>         
+            <label lang="xx">Presentation</label>                             
+            <label lang="fr">Présentation</label>                            
+            <value>                                                         
+            <uuid id="0">Vertex presentation</uuid> 
+            <!--<sctid id="0">70028003</sctid>-->                             
+            <uuid id="1">Frank breech presentation</uuid>
+            <!--<sctid id="1">18559007</sctid>-->                              
+            <uuid id="2">Complete breech presentation</uuid>
+            <!--<sctid id="2">49168004</sctid>-->
+            <uuid id="3">Incomplete breech presentation</uuid>
+            <!--<sctid id="3">38049006</sctid>-->                                      
+            <uuid id="4">Acromion presentation</uuid>
+            <!--<sctid id="4">23954006</sctid>-->                                  
+            <uuid id="5">ø</uuid>                                
+            <possible id="0">Vertex</possible>
+            <possible id="1">Frank breech</possible>      
+            <possible id="2">Complete breech</possible>                    
+            <possible id="3">Incomplete breech</possible>                      
+            <possible id="4">Acromion presentation</possible>
+            <possible id="5">ø</possible>              
+            <possible id="0" lang="fr">céphalique (sommet)</possible>
+            <possible id="1" lang="fr">siège décomplété</possible>      
+            <possible id="2" lang="fr">siège complet</possible>                      
+            <possible id="3" lang="fr">siège incomplet</possible>                      
+            <possible id="4" lang="fr">transverse (épaule)</possible>   
+            <possible id="5" lang="fr">ø</possible>              
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+
+          <Item type="uniquelist" name="F4Position">                   
+            <uilink label="positionF4Label" widget="positionF4ListView" layout=""/>         
+            <label lang="xx">Position</label>                             
+            <label lang="fr">Variété</label>                            
+            <value>                                                         
+            <uuid id="0">Left occipitoanterior position</uuid>
+            <!--<sctid id="0">11409005</sctid>-->
+            <uuid id="1">Right occipitoanterior position</uuid>
+            <!--<sctid id="1">39889007</sctid>-->                              
+            <uuid id="2">Left occipitoposterior position</uuid>
+            <!--<sctid id="2">31477000</sctid>-->                                     
+            <uuid id="3">Right occipitoposterior position</uuid>
+            <!--<sctid id="3">36547009</sctid>-->                                     
+            <uuid id="4">Occipitoanterior position</uuid>
+            <!--<sctid id="4">90381008</sctid>-->                                     
+            <uuid id="5">Occipitoposterior position</uuid>
+            <!--<sctid id="5">37235006</sctid>-->                                
+            <uuid id="6">Left occipitolateral position</uuid>
+            <!--<sctid id="6">18905000</sctid>-->            
+            <uuid id="7">Right occipitolateral position</uuid>
+            <!--<sctid id="7">37040008</sctid>-->                   
+            <uuid id="8">Left sacroanterior position</uuid>
+            <!--<sctid id="8">79888005</sctid>-->
+            <uuid id="9">Right sacroanterior position</uuid>
+            <!--<sctid id="9">79643007</sctid>-->                         
+            <uuid id="10">Left sacroposterior position</uuid>
+            <!--<sctid id="10">2138000</sctid>-->
+            <uuid id="11">Right sacroposterior position</uuid>
+            <!--<sctid id="11">112073004</sctid>-->
+            <uuid id="12">Sacroanterior position</uuid>
+            <!--<sctid id="12">79888005</sctid>-->
+            <uuid id="13">Sacroposterior position</uuid>       
+            <!--<sctid id="13">58261003</sctid>-->
+            <uuid id="14">Left sacrolateral position</uuid>
+            <!--<sctid id="14">54486001</sctid>-->
+            <uuid id="15">Right sacrolateral position</uuid>  
+            <!--<sctid id="15">89550007</sctid>-->
+            <uuid id="16">Shoulder left anterior position</uuid>
+            <!--<sctid id="16">249108000</sctid>-->
+            <uuid id="17">Shoulder right anterior position</uuid>                
+            <!--<sctid id="17">249107005</sctid>-->
+            <uuid id="18">Shoulder left posterior position</uuid>            
+            <!--<sctid id="18">27921008</sctid>-->
+            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <!--<sctid id="19">26644000</sctid>-->
+            <uuid id="20">∅</uuid>                        
+            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
+            <possible id="4">Vertex - OA Occipitoanterior</possible>   
+            <possible id="5">Vertex - OP Occipitoposterior</possible>              
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
+            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="9">Breech - RSA Right sacroanterior</possible>
+            <possible id="10">Breech - LSP Left sacroposterior</possible>
+            <possible id="11">Breech - RSP Right sacroposterior</possible>
+            <possible id="12">Breech - SA Sacroanterior</possible>
+            <possible id="13">Breech - SP Sacroposterior</possible>
+            <possible id="14">Breech - LSL Left sacrolateral</possible>
+            <possible id="15">Breech - RSL Right sacrolateral</possible>
+            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
+            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
+            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
+            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
+            <possible id="20">∅</possible>
+            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
+            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
+            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
+            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
+            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
+            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
+            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
+            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
+            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
+            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
+            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
+            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
+            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
+            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
+            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
+            <possible id="20" lang="fr">∅</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+
+                                 
+      </Item> <!-- End Of Fetus4GroupBox -->
+
+         
+      <Item type="group" name="Fetus5GroupBox">
+        <uilink widget="fetus5GroupBox"/>
+        <label lang="xx">Fetus 5</label>                       
+        <label lang="fr">Fœtus 5</label>                       
+        <options>DontPrintEmptyValues</options>
+        
+          <Item type="radio" name="Fetus5::PrenatalHeartbeat::Radio">                        
+            <uilink label="prenatalHeartbeatF5Label" widget="" layout="prenatalHeartbeatF5RadioLayout"/>         
+              <label lang="xx">Prenatal heartbeat</label>                            
+              <label lang="fr">Bruit du cœur fœtal</label>                     
+              <options>compact</options>                                      
+              <value>                                                         
+                <uuid id="0">yes</uuid>                                     
+                <uuid id="1">no</uuid>
+                <uuid id="2">∅</uuid>                                      
+                <possible id="0" lang="xx">Yes</possible>                   
+                <possible id="1" lang="xx">No</possible>
+                <possible id="2" lang="xx">∅</possible>                    
+                <print id="0" lang="xx">Prenatal heartbeat present</print>  
+                <print id="1" lang="xx">Prenatal heartbeat absent</print>
+                <print id="2" lang="xx">Not evaluated</print>
+                <possible id="0" lang="fr">Oui</possible>                   
+                <possible id="1" lang="fr">Non</possible>
+                <possible id="2" lang="fr">∅</possible>                   
+                <print id="0" lang="fr">Oui</print>          
+                <print id="1" lang="fr">Non</print>
+                <print id="2" lang="fr">∅</print>   
+              </value>                                                        
+          </Item>
+
+          <Item name="Fetus5::PrenatalHeartbeat::Comment" type="shorttext">
+            <uilink label="" widget="prenatalHeartbeatF5LineEdit" layout="" /> 
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>          
+
+          <Item type="uniquelist" name="F5Presentation">                   
+            <uilink label="presentationF5Label" widget="presentationF5ListView" layout=""/>         
+            <label lang="xx">Presentation</label>                             
+            <label lang="fr">Présentation</label>                            
+            <value>                                                         
+            <uuid id="0">Vertex presentation</uuid> 
+            <!--<sctid id="0">70028003</sctid>-->                             
+            <uuid id="1">Frank breech presentation</uuid>
+            <!--<sctid id="1">18559007</sctid>-->                              
+            <uuid id="2">Complete breech presentation</uuid>
+            <!--<sctid id="2">49168004</sctid>-->
+            <uuid id="3">Incomplete breech presentation</uuid>
+            <!--<sctid id="3">38049006</sctid>-->                                      
+            <uuid id="4">Acromion presentation</uuid>
+            <!--<sctid id="4">23954006</sctid>-->                                  
+            <uuid id="5">ø</uuid>                                
+            <possible id="0">Vertex</possible>
+            <possible id="1">Frank breech</possible>      
+            <possible id="2">Complete breech</possible>                    
+            <possible id="3">Incomplete breech</possible>                      
+            <possible id="4">Acromion presentation</possible>
+            <possible id="5">ø</possible>              
+            <possible id="0" lang="fr">céphalique (sommet)</possible>
+            <possible id="1" lang="fr">siège décomplété</possible>      
+            <possible id="2" lang="fr">siège complet</possible>                      
+            <possible id="3" lang="fr">siège incomplet</possible>                      
+            <possible id="4" lang="fr">transverse (épaule)</possible>   
+            <possible id="5" lang="fr">ø</possible>              
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+
+          <Item type="uniquelist" name="F5Position">                   
+            <uilink label="positionF5Label" widget="positionF5ListView" layout=""/>         
+            <label lang="xx">Position</label>                             
+            <label lang="fr">Variété</label>                            
+            <value>                                                         
+            <uuid id="0">Left occipitoanterior position</uuid>
+            <!--<sctid id="0">11409005</sctid>-->
+            <uuid id="1">Right occipitoanterior position</uuid>
+            <!--<sctid id="1">39889007</sctid>-->                              
+            <uuid id="2">Left occipitoposterior position</uuid>
+            <!--<sctid id="2">31477000</sctid>-->                                     
+            <uuid id="3">Right occipitoposterior position</uuid>
+            <!--<sctid id="3">36547009</sctid>-->                                     
+            <uuid id="4">Occipitoanterior position</uuid>
+            <!--<sctid id="4">90381008</sctid>-->                                     
+            <uuid id="5">Occipitoposterior position</uuid>
+            <!--<sctid id="5">37235006</sctid>-->                                
+            <uuid id="6">Left occipitolateral position</uuid>
+            <!--<sctid id="6">18905000</sctid>-->            
+            <uuid id="7">Right occipitolateral position</uuid>
+            <!--<sctid id="7">37040008</sctid>-->                   
+            <uuid id="8">Left sacroanterior position</uuid>
+            <!--<sctid id="8">79888005</sctid>-->
+            <uuid id="9">Right sacroanterior position</uuid>
+            <!--<sctid id="9">79643007</sctid>-->                         
+            <uuid id="10">Left sacroposterior position</uuid>
+            <!--<sctid id="10">2138000</sctid>-->
+            <uuid id="11">Right sacroposterior position</uuid>
+            <!--<sctid id="11">112073004</sctid>-->
+            <uuid id="12">Sacroanterior position</uuid>
+            <!--<sctid id="12">79888005</sctid>-->
+            <uuid id="13">Sacroposterior position</uuid>       
+            <!--<sctid id="13">58261003</sctid>-->
+            <uuid id="14">Left sacrolateral position</uuid>
+            <!--<sctid id="14">54486001</sctid>-->
+            <uuid id="15">Right sacrolateral position</uuid>  
+            <!--<sctid id="15">89550007</sctid>-->
+            <uuid id="16">Shoulder left anterior position</uuid>
+            <!--<sctid id="16">249108000</sctid>-->
+            <uuid id="17">Shoulder right anterior position</uuid>                
+            <!--<sctid id="17">249107005</sctid>-->
+            <uuid id="18">Shoulder left posterior position</uuid>            
+            <!--<sctid id="18">27921008</sctid>-->
+            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <!--<sctid id="19">26644000</sctid>-->
+            <uuid id="20">∅</uuid>                        
+            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
+            <possible id="4">Vertex - OA Occipitoanterior</possible>   
+            <possible id="5">Vertex - OP Occipitoposterior</possible>              
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
+            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="9">Breech - RSA Right sacroanterior</possible>
+            <possible id="10">Breech - LSP Left sacroposterior</possible>
+            <possible id="11">Breech - RSP Right sacroposterior</possible>
+            <possible id="12">Breech - SA Sacroanterior</possible>
+            <possible id="13">Breech - SP Sacroposterior</possible>
+            <possible id="14">Breech - LSL Left sacrolateral</possible>
+            <possible id="15">Breech - RSL Right sacrolateral</possible>
+            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
+            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
+            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
+            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
+            <possible id="20">∅</possible>
+            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
+            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
+            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
+            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
+            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
+            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
+            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
+            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
+            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
+            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
+            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
+            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
+            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
+            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
+            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
+            <possible id="20" lang="fr">∅</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>          
+          </Item>
+                                 
+        </Item> <!-- End Of Fetus5GroupBox -->
 
   </MedForm>
 
