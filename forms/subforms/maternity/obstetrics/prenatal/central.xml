@@ -28,7 +28,7 @@
 
   <file type="script" name="onload">./scripts/xx/prenatal.js</file>
 
-  <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/prenatalmain.ui">
+  <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/prenatal.ui">
     <label lang="xx">Prenatal consultation</label>                       
     <label lang="fr">Consultation prénatale</label>               
     <options>UseFormAsNameSpace</options>                                       
@@ -37,19 +37,94 @@
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 -->
+  <Item type="group" name="Subjective">
+    <uilink label="" widget="subjectiveGroupBox" layout="" />
+    <label lang="xx">Subjective</label>
+    <label lang="fr">Subjectif</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="texteditor" name="CaseHistory">
+      <uilink label="caseHistoryLabel" widget="" layout="caseHistoryFormLayout" />
+      <label lang="xx">Case history</label>
+      <label lang ="fr">Anamnèse</label>
+      <options>FullEditor</options>
+    </Item>
+
+    <Item type="radio" name="FetalMovement">
+      <uilink label="fetalMovementLabel" widget="" layout="fetalMovementRadioLayout" />
+      <label lang="xx">fetal movement</label>
+      <label lang="en">mouvements actifs fœtaux</label>
+      <value>
+      <uuid id="0">yes</uuid>
+      <!--<sctid id="0">373066001</sctid>-->
+      <uuid id="1">decreased</uuid>
+      <!--<sctid id="1">1250004</sctid>-->
+      <uuid id="2">no</uuid>
+      <!--<sctid id="2">373067005</sctid>-->
+      <uuid id="3">not done</uuid>
+      <!--<sctid id="3">385660001</sctid>-->
+      <possible id="0" lang="xx">Yes</possible>
+      <possible id="1" lang="xx">Decreased</possible>
+      <possible id="2" lang="xx">No</possible>
+      <possible id="3" lang="xx">ø</possible>
+      <possible id="0" lang="fr">Oui</possible>
+      <possible id="1" lang="fr">Diminués</possible>
+      <possible id="2" lang="fr">Non</possible>
+      <possible id="3" lang="fr">ø</possible>
+      </value>
+    </Item> 
+  </Item>
+
+    <Item type="group" name="Objective">
+    
+      <uilink label="" widget="objectiveGroup" />
+      <label lang="xx">Objective</label>
+      <label lang="fr">Objectif</label>
+      <options>collapsible;expanded</options>
+
+      <Item type="helptext" name="ObjectiveGroup::Temperature::TemperatureLabel">
+          <uilink label="temperatureLabel" widget="" layout=""/>                
+          <label lang="xx">T°</label>                                           
+          <label lang="fr">T°</label>                                           
+          <tooltip lang="xx">Temperature</tooltip>                              
+          <tooltip lang="fr">Température</tooltip>                              
+      </Item>                                                                 
+                                                                                
+      <Item type="doublespin" name="ObjectiveGroup::Temperature::TemperatureValue">
+          <uilink label="" widget="temperatureValue" layout=""/>                
+          <tooltip lang="xx">Temperature</tooltip>                              
+          <tooltip lang="fr">Température</tooltip>                              
+          <options>DontPrintEmptyValues</options>                               
+      </Item>                                                                 
+                                                                                
+      <Item type="combo" name="ObjectiveGroup::Temperature::TemperatureUnit"> 
+          <uilink label="" widget="temperatureUnit" layout=""/>                 
+          <value>                                                               
+              <uuid id="0">celsius</uuid>                                       
+              <uuid id="1">fahrenheit</uuid>                                    
+              <possible id="0" lang="xx">°Celsius</possible>                    
+              <possible id="1" lang="xx">°Fahrenheit</possible>                 
+              <possible id="0" lang="fr">°Celsius</possible>                    
+              <possible id="1" lang="fr">°Fahrenheit</possible>                 
+              <default>celsius</default>                                        
+          </value>                                                              
+      </Item>
+
+    </Item> <!-- end of group Objective -->     
+
     <Item type="group" name="Fetus">
 
       <uilink label="" widget="fetusGroupBox" layout="" />
-      <label lang="xx">Fetus</label>                         
-      <label lang="fr">Fœtus</label>                       
-      <options>SummaryFontBold;expanded</options>
+      <label lang="xx">Fetus number</label>                         
+      <label lang="fr">Nombre de fœtus</label>                       
+      <options>collapsible;expanded</options>
 
         <Item type="spin" name="FetusNumber">
           <uilink label="fetusNumberLabel" widget="fetusNumberSpinBox" layout="" />
           <label lang="xx">Number of fetus</label>
           <label lang="fr">Nombre de fœtus</label>
-          <min>0</min>
-          <max>15</max>
+          <min>1</min>
+          <max>5</max>
           <step>1</step>
         </Item>
     
@@ -59,7 +134,7 @@
         <uilink widget="fetus1GroupBox"/>
         <label lang="xx">Fetus 1</label>                       
         <label lang="fr">Fœtus 1</label>                       
-        <options>DontPrintEmptyValues</options>
+        <options>DontPrintEmptyValues;collapsible;expanded</options>
         
           <Item type="radio" name="Fetus1::PrenatalHeartbeat::Radio">                        
             <uilink label="prenatalHeartbeatF1Label" widget="" layout="prenatalHeartbeatF1RadioLayout"/>         
@@ -224,7 +299,7 @@
         <uilink widget="fetus2GroupBox"/>                      
         <label lang="xx">Fetus 2</label>                                          
         <label lang="fr">Fœtus 2</label>                                          
-        <options>DontPrintEmptyValues</options>
+        <options>DontPrintEmptyValues;collapsible</options>
 
           <Item type="radio" name="Fetus2::PrenatalHeartbeat::Radio">           
             <uilink label="prenatalHeartbeatF2Label" widget="" layout="prenatalHeartbeatF2RadioLayout"/>     
@@ -388,7 +463,7 @@
         <uilink widget="fetus3GroupBox"/>                      
         <label lang="xx">Fetus 3</label>                                          
         <label lang="fr">Fœtus 3</label>                                          
-        <options>DontPrintEmptyValues</options>
+        <options>DontPrintEmptyValues;collapsible</options>
 
           <Item type="radio" name="Fetus3::PrenatalHeartbeat::Radio">           
             <uilink label="prenatalHeartbeatF3Label" widget="" layout="prenatalHeartbeatF3RadioLayout"/>     
@@ -554,7 +629,7 @@
           <uilink widget="fetus4GroupBox"/>
           <label lang="xx">Fetus 4</label>                       
           <label lang="fr">Fœtus 4</label>                       
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;collapsible</options>
         
           <Item type="radio" name="Fetus4::PrenatalHeartbeat::Radio">                        
             <uilink label="prenatalHeartbeatF4Label" widget="" layout="prenatalHeartbeatF4RadioLayout"/>         
@@ -720,7 +795,7 @@
         <uilink widget="fetus5GroupBox"/>
         <label lang="xx">Fetus 5</label>                       
         <label lang="fr">Fœtus 5</label>                       
-        <options>DontPrintEmptyValues</options>
+        <options>DontPrintEmptyValues;collapsible</options>
         
           <Item type="radio" name="Fetus5::PrenatalHeartbeat::Radio">                        
             <uilink label="prenatalHeartbeatF5Label" widget="" layout="prenatalHeartbeatF5RadioLayout"/>         
@@ -879,6 +954,7 @@
           </Item>
                                  
         </Item> <!-- End Of Fetus5GroupBox -->
+
 
   </MedForm>
 
