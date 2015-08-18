@@ -27,6 +27,7 @@
   </formdescription>
 
   <file type="script" name="onload">./scripts/xx/prenatal.js</file>
+  <!--<file type="script" name="onload">./scripts/xx/prenatalpulse.js</file>-->
 
   <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/prenatal.ui">
     <label lang="xx">Prenatal consultation</label>                       
@@ -53,7 +54,7 @@
     <Item type="radio" name="FetalMovement">
       <uilink label="fetalMovementLabel" widget="" layout="fetalMovementRadioLayout" />
       <label lang="xx">fetal movement</label>
-      <label lang="en">mouvements actifs fœtaux</label>
+      <label lang="fr">mouvements actifs fœtaux</label>
       <value>
       <uuid id="0">yes</uuid>
       <!--<sctid id="0">373066001</sctid>-->
@@ -110,6 +111,105 @@
           </value>                                                              
       </Item>
 
+      <Item type="helptext" name="ObjectiveGroup::BloodPressure::Label">    
+          <uilink label="" widget="bloodPressureLabel" layout=""/>              
+          <label lang="xx">BP (mmHg)</label>                                    
+          <label lang="fr">TA (mmHg)</label>                                    
+          <tooltip lang="xx">Blood pressure (mmHg)</tooltip>                    
+          <tooltip lang="fr">Tension artérielle (mmHg)</tooltip>                
+          <options>DontPrintEmptyValues</options>                               
+        </Item>                                                                 
+                                                                                
+        <Item type="spin" name="ObjectiveGroup::BloodPressure::Syst">           
+          <uilink label="" widget="bloodPressureSystolicValue" layout=""/>      
+          <tooltip lang="xx">Systolic</tooltip>                                 
+          <tooltip lang="fr">Systolique</tooltip>                               
+          <options>DontPrintEmptyValues</options>                               
+          <patientdata>SystolicBloodPressure</patientdata>                      
+        </Item>                                                                 
+                                                                                
+        <Item type="spin" name="ObjectiveGroup::BloodPressure::Diast">          
+          <uilink label="" widget="bloodPressureDiastolicValue" layout=""/>     
+          <tooltip lang="xx">Diastolic</tooltip>                                
+          <tooltip lang="fr">Diastolique</tooltip>                              
+          <options>DontPrintEmptyValues</options>                               
+          <patientdata>DiastolicBloodPressure</patientdata>                     
+        </Item>                                                                 
+                                                                                
+        <Item type="helptext" name="ObjectiveGroup::BloodPressure::Pulse">      
+          <uilink label="" widget="bloodPressurePulseValue" layout=""/>         
+          <tooltip lang="xx">Pulse pressure</tooltip>                           
+          <tooltip lang="fr">Différentielle</tooltip>                           
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+        
+        <Item type="measurement" name="ObjectiveGroup::Weight::Value">          
+          <uilink label="weightLabel" widget="weightValue;weightUnit" layout=""/>
+          <label lang="xx">Weight</label>                                       
+          <label lang="fr">Poids</label>                                        
+          <tooltip lang="xx">Weight</tooltip>                                   
+          <tooltip lang="fr">Poids</tooltip>                                    
+          <options>DontPrintEmptyValues;Weight</options>                        
+          <default>kilogram</default>                                           
+          <patientdata>WeightInGrams</patientdata>                              
+        </Item>
+
+        <Item type="measurement" name="ObjectiveGroup::PrePregnancyWeight::Value">          
+          <uilink label="prePregnancyWeightLabel" widget="prePregnancyWeightValue;prePregnancyWeightUnit" layout=""/>
+          <label lang="xx">Pre-pregnancy weight</label>                                       
+          <label lang="fr">Poids avant la grossesse</label>                                        
+          <tooltip lang="xx">Pre-pregnancy weight</tooltip>                                   
+          <tooltip lang="fr">Poids avant la grossesse</tooltip>                                    
+          <options>DontPrintEmptyValues;Weight</options>                        
+          <default>kilogram</default>                                           
+          <patientdata>WeightInGrams</patientdata>                              
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::WeightGain::Label">         
+          <uilink label="" widget="weightGainLabel" layout=""/>
+          <label lang="xx">Weight gain</label>
+          <label lang="fr">Prise de poids</label>                       
+          <tooltip lang="xx">Weight gain</tooltip>                              
+          <tooltip lang="fr">Prise de poids</tooltip>                           
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::WeightGain::Value">      
+          <uilink label="" widget="weightGainValue" layout=""/>         
+          <tooltip lang="xx">Weight gain</tooltip>                           
+          <tooltip lang="fr">Prise de poids</tooltip>                           
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+
+                                                                         
+                                                                                
+        <Item type="measurement" name="ObjectiveGroup::Height::Value">          
+          <uilink label="heightLabel" widget="heightValue;heightUnit" layout=""/>
+          <label lang="xx">Height</label>                                       
+          <label lang="fr">Taille</label>                                       
+          <tooltip lang="xx">Height</tooltip>                                   
+          <tooltip lang="fr">Taille</tooltip>                                   
+          <options>DontPrintEmptyValues;Length</options>                        
+          <default>centimeter</default>                                         
+          <patientdata>HeightInCentimeters</patientdata>                        
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::BMI::Label">                
+          <uilink widget="bmiLabel"/>                                           
+          <label lang="xx">BMI</label>                                          
+          <label lang="fr">IMC</label>                                          
+          <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
+          <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>DontPrintEmptyValues</options>                               
+        </Item>                                                                 
+                                                                                
+        <Item type="helptext" name="ObjectiveGroup::BMI::Value">                
+          <uilink label="" widget="bmiValue" layout=""/>                        
+          <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
+          <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+
     </Item> <!-- end of group Objective -->     
 
     <Item type="group" name="Fetus">
@@ -126,6 +226,9 @@
           <min>1</min>
           <max>5</max>
           <step>1</step>
+          <!--<script>
+          <onValueChanged>com.freemedforms.obstetrics.prenatal.hideFetusGroupBox();</onValueChanged>
+          </script>-->
         </Item>
     
     </Item>
