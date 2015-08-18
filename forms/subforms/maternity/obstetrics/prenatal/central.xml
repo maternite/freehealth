@@ -83,7 +83,7 @@
       <label lang="fr">Objectif</label>
       <options>collapsible;expanded</options>
 
-      <Item type="helptext" name="ObjectiveGroup::Temperature::TemperatureLabel">
+      <Item type="helptext" name="ObjectiveGroup::Temperature::Label">
           <uilink label="temperatureLabel" widget="" layout=""/>                
           <label lang="xx">T°</label>                                           
           <label lang="fr">T°</label>                                           
@@ -91,14 +91,14 @@
           <tooltip lang="fr">Température</tooltip>                              
       </Item>                                                                 
                                                                                 
-      <Item type="doublespin" name="ObjectiveGroup::Temperature::TemperatureValue">
+      <Item type="doublespin" name="ObjectiveGroup::Temperature::Value">
           <uilink label="" widget="temperatureValue" layout=""/>                
           <tooltip lang="xx">Temperature</tooltip>                              
           <tooltip lang="fr">Température</tooltip>                              
           <options>DontPrintEmptyValues</options>                               
       </Item>                                                                 
                                                                                 
-      <Item type="combo" name="ObjectiveGroup::Temperature::TemperatureUnit"> 
+      <Item type="combo" name="ObjectiveGroup::Temperature::Unit"> 
           <uilink label="" widget="temperatureUnit" layout=""/>                 
           <value>                                                               
               <uuid id="0">celsius</uuid>                                       
@@ -180,8 +180,6 @@
           <tooltip lang="fr">Prise de poids</tooltip>                           
           <options>DontPrintEmptyValues</options>                               
         </Item>
-
-                                                                         
                                                                                 
         <Item type="measurement" name="ObjectiveGroup::Height::Value">          
           <uilink label="heightLabel" widget="heightValue;heightUnit" layout=""/>
@@ -208,6 +206,86 @@
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
           <options>DontPrintEmptyValues</options>                               
+        </Item>
+
+        <Item type="spin" name="ObjectiveGroup::FundalHeight::Value">
+          <!--<sctid>249016007</sctid>-->          
+          <uilink label="fundalHeightLabel" widget="fundalHeightSpinBox" layout=""/>
+          <label lang="xx">Fundal height</label>
+          <label lang="fr">Hauteur utérine</label>
+          <tooltip lang="xx">Fundal height</tooltip>                                
+          <tooltip lang="fr">Hauteur utérine</tooltip>                              
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+
+        <Item type="radio" name="ObjectiveGroup::PeripheralEdema::Radio">           
+          <uilink label="peripheralEdemaLabel" widget="" layout="peripheralEdemaRadioLayout"/>
+          <label lang="xx">Peripheral edema</label>                       
+          <label lang="fr">Œdèmes périphériques (des membres inférieurs)</label>                      
+          <options>compact</options>                                        
+          <value>                                                           
+            <uuid id="0">yes</uuid>
+            <!--<sctid id="0">373066001</sctid>-->
+            <uuid id="1">no</uuid>                                                    
+            <!--<sctid id="1">373067005</sctid>-->
+            <uuid id="2">not done</uuid>                                              
+            <!--<sctid id="2">385660001</sctid>-->              
+            <possible id="0" lang="xx">Yes</possible>                       
+            <possible id="1" lang="xx">No</possible>                        
+            <possible id="2" lang="xx">∅</possible>                         
+            <print id="0" lang="xx">Yes</print>      
+            <print id="1" lang="xx">No</print>       
+            <print id="2" lang="xx">Not evaluated</print>                   
+            <possible id="0" lang="fr">Oui</possible>                       
+            <possible id="1" lang="fr">Non</possible>                       
+            <possible id="2" lang="fr">∅</possible>                         
+            <print id="0" lang="fr">Oui</print>                             
+            <print id="1" lang="fr">Non</print>                             
+            <print id="2" lang="fr">Item non évalué</print>                               
+          </value>                                                          
+        </Item>
+
+        <Item name="ObjectiveGroup::PeripheralEdema::Comment" type="shorttext">     
+          <uilink label="" widget="peripheralEdemaLineEdit" layout="" />  
+          <label lang="xx"></label>                                           
+          <label lang="fr"></label>                                           
+          <placeholder lang="xx">Comment</placeholder>                        
+          <placeholder lang="fr">Commentaire</placeholder>                    
+        </Item> 
+
+        <Item type="radio" name="ObjectiveGroup::VaricoseVeins::Radio">       
+          <uilink label="varicoseVeinsLabel" widget="" layout="varicoseVeinsRadioLayout"/>
+          <label lang="xx">Varicose veins</label>                             
+          <label lang="fr">Varices</label>
+          <options>compact</options>                                            
+          <value>                                                               
+            <uuid id="0">yes</uuid>                                             
+            <!--<sctid id="0">373066001</sctid>-->                              
+            <uuid id="1">no</uuid>                                              
+            <!--<sctid id="1">373067005</sctid>-->                              
+            <uuid id="2">not done</uuid>                                        
+            <!--<sctid id="2">385660001</sctid>-->                              
+            <possible id="0" lang="xx">Yes</possible>                           
+            <possible id="1" lang="xx">No</possible>                            
+            <possible id="2" lang="xx">∅</possible>                             
+            <print id="0" lang="xx">Yes</print>                                 
+            <print id="1" lang="xx">No</print>                                  
+            <print id="2" lang="xx">Not evaluated</print>                       
+            <possible id="0" lang="fr">Oui</possible>                           
+            <possible id="1" lang="fr">Non</possible>                           
+            <possible id="2" lang="fr">∅</possible>                             
+            <print id="0" lang="fr">Oui</print>                                 
+            <print id="1" lang="fr">Non</print>                                 
+            <print id="2" lang="fr">Item non évalué</print>                     
+          </value>                                                              
+        </Item> 
+
+        <Item name="ObjectiveGroup::VaricoseVeins::Comment" type="shorttext"> 
+          <uilink label="" widget="varicoseVeinsLineEdit" layout="" />        
+          <label lang="xx"></label>                                             
+          <label lang="fr"></label>                                             
+          <placeholder lang="xx">Comment</placeholder>                          
+          <placeholder lang="fr">Commentaire</placeholder>                      
         </Item>
 
     </Item> <!-- end of group Objective -->     

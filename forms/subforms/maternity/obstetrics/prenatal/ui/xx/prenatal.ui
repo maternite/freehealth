@@ -654,37 +654,37 @@
        </widget>
       </item>
       <item row="7" column="4" colspan="2">
-       <widget class="QSpinBox" name="spinBox">
+       <widget class="QSpinBox" name="fundalHeightSpinBox">
         <property name="suffix">
          <string notr="true" extracomment="centimeters">cm</string>
         </property>
        </widget>
       </item>
       <item row="8" column="0" colspan="5">
-       <widget class="QLabel" name="PeripheralEdemaLabel">
+       <widget class="QLabel" name="peripheralEdemaLabel">
         <property name="text">
          <string>Peripheral edema</string>
         </property>
        </widget>
       </item>
       <item row="8" column="5">
-       <layout class="QHBoxLayout" name="PeripheralEdemaRadioLayout"/>
+       <layout class="QHBoxLayout" name="peripheralEdemaRadioLayout"/>
       </item>
       <item row="8" column="6">
-       <widget class="QLineEdit" name="PeripheralEdemaLineEdit"/>
+       <widget class="QLineEdit" name="peripheralEdemaLineEdit"/>
       </item>
       <item row="9" column="0" colspan="4">
-       <widget class="QLabel" name="VaricoseVeinsLabel">
+       <widget class="QLabel" name="varicoseVeinsLabel">
         <property name="text">
          <string>Varicose veins</string>
         </property>
        </widget>
       </item>
       <item row="9" column="5">
-       <layout class="QHBoxLayout" name="VaricoseVeinsRadioLayout"/>
+       <layout class="QHBoxLayout" name="varicoseVeinsRadioLayout"/>
       </item>
       <item row="9" column="6">
-       <widget class="QLineEdit" name="VaricoseVeinsLineEdit"/>
+       <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
       </item>
       <item row="10" column="0" colspan="3">
        <widget class="QLabel" name="label">
