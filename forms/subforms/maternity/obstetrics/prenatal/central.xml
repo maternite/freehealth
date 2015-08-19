@@ -299,11 +299,11 @@
           <uuid id="1">Funnel shape</uuid>
           <!--<sctid id="1">36394000</sctid>-->
           <uuid id="2">Asymmetrical</uuid>
-          <!--<sctid id="1">4128009</sctid>-->
+          <!--<sctid id="2">4128009</sctid>-->
           <uuid id="3">Borderline normal</uuid>
-          <!--<sctid id="1">371932001</sctid>-->
+          <!--<sctid id="3">371932001</sctid>-->
           <uuid id="4">Normal shape</uuid>
-          <!--<sctid id="1">371932001</sctid>-->
+          <!--<sctid id="4">371932001</sctid>-->
           <uuid id="5">not done</uuid>
           <!--<sctid id="5">385660001</sctid>-->
           <possible id="0" lang="xx">Narrow</possible>
@@ -323,38 +323,105 @@
       </Item>
 
       <Item type="radio" name="ObjectiveGroup::Cervix::Position">                
-          <!--<sctid>46633002</sctid>-->                                        
-          <uilink label="pelvisLabel" widget="" layout="pelvisRadioLayout" />   
-          <label lang="xx">Pelvis</label>                                       
-          <label lang="fr">Bassin</label>                                       
+          <!--<sctid></sctid>-->                                        
+          <uilink label="cervixPositionLabel" widget="" layout="cervixPositionRadioLayout" />   
+          <label lang="xx">Position</label>                                       
+          <label lang="fr">Position</label>                                       
           <value>                                                               
-          <uuid id="0">Narrow</uuid>                                            
-          <!--<sctid id="0">134223000</sctid>-->                                
-          <uuid id="1">Funnel shape</uuid>                                      
-          <!--<sctid id="1">36394000</sctid>-->                                 
-          <uuid id="2">Asymmetrical</uuid>                                      
-          <!--<sctid id="1">4128009</sctid>-->                                  
-          <uuid id="3">Borderline normal</uuid>                                 
-          <!--<sctid id="1">371932001</sctid>-->                                
-          <uuid id="4">Normal shape</uuid>                                      
-          <!--<sctid id="1">371932001</sctid>-->                                
-          <uuid id="5">not done</uuid>                                          
-          <!--<sctid id="5">385660001</sctid>-->                                
-          <possible id="0" lang="xx">Narrow</possible>                          
-          <possible id="1" lang="xx">Funnel shape</possible>                    
-          <possible id="2" lang="xx">Asymmetrical</possible>                    
-          <possible id="3" lang="xx">Borderline</possible>                      
-          <possible id="4" lang="xx">Normal</possible>                          
-          <possible id="5" lang="xx">ø</possible>                               
-          <possible id="0" lang="fr">Rétréci</possible>                         
-          <possible id="1" lang="fr">En entonnoir</possible>                    
-          <possible id="2" lang="fr">Asymétrique</possible>                     
-          <possible id="3" lang="fr">Limite</possible>                          
-          <possible id="4" lang="fr">Normal</possible>                          
-          <possible id="5" lang="fr">ø</possible>                               
+          <uuid id="0">Posterior</uuid>                        
+          <!--<sctid id="0"></sctid>-->                                 
+          <uuid id="1">Middle</uuid>                        
+          <!--<sctid id="1"></sctid>-->                              
+          <uuid id="2">Anterior</uuid>                      
+          <!--<sctid id="2"></sctid>-->                                
+          <uuid id="3">Lateral</uuid>                          
+          <!--<sctid id="3"></sctid>-->                                
+          <uuid id="4">not done</uuid>                             
+          <!--<sctid id="4">385660001</sctid>-->                     
+          <possible id="0" lang="xx">Posterior</possible>                 
+          <possible id="1" lang="xx">Middle</possible>                    
+          <possible id="2" lang="xx">Anterior</possible>                    
+          <possible id="3" lang="xx">Lateral</possible>                      
+          <possible id="4" lang="xx">ø</possible>                               
+          <possible id="0" lang="fr">Postérieur</possible>                         
+          <possible id="1" lang="fr">Intermédiaire</possible>                    
+          <possible id="2" lang="fr">Centré</possible>                     
+          <possible id="3" lang="fr">Latéro-dévié</possible>                          
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>                                         
+          <numerical id="1">1</numerical>                                         
+          <numerical id="2">2</numerical>                                         
+          <numerical id="3">2</numerical>
+          <numerical id="4">0</numerical>                               
           <options>compact</options>                                            
         </value>                                                                
       </Item>
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Consistency">                
+          <!--<sctid></sctid>-->                                        
+          <uilink label="cervixConsistencyLabel" widget="" layout="cervixConsistencyRadioLayout" />   
+          <label lang="xx">Consistency</label>
+          <label lang="fr">Consistence</label>                                       
+          <value>                                                               
+          <uuid id="0">Firm</uuid>                        
+          <!--<sctid id="0"></sctid>-->                                 
+          <uuid id="1">Medium</uuid>                        
+          <!--<sctid id="1"></sctid>-->                              
+          <uuid id="2">Soft</uuid>                      
+          <!--<sctid id="2"></sctid>-->                                
+          <uuid id="3">not done</uuid>                             
+          <!--<sctid id="3">385660001</sctid>-->                     
+          <possible id="0" lang="xx">Firm</possible>                 
+          <possible id="1" lang="xx">Medium</possible>                    
+          <possible id="2" lang="xx">Soft</possible>                    
+          <possible id="3" lang="xx">ø</possible>                               
+          <possible id="0" lang="fr">Ferme</possible>                         
+          <possible id="1" lang="fr">Moyen</possible>                    
+          <possible id="2" lang="fr">Mou</possible>                     
+          <possible id="3" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>                                         
+          <numerical id="1">1</numerical>                                         
+          <numerical id="2">2</numerical>                                         
+          <numerical id="3">0</numerical>
+          <options>compact</options>                                            
+        </value>                                                                
+      </Item>
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Position">                
+          <!--<sctid></sctid>-->                                        
+          <uilink label="cervixEffacementLabel" widget="" layout="cervixEffacementRadioLayout" />   
+          <label lang="xx">Effacement</label>                                       
+          <label lang="fr">Effacement</label>                                       
+          <value>                                                               
+          <uuid id="0">0-30%</uuid>                        
+          <!--<sctid id="0"></sctid>-->                                 
+          <uuid id="1">40-50%</uuid>                        
+          <!--<sctid id="1"></sctid>-->                              
+          <uuid id="2">60-70%</uuid>                      
+          <!--<sctid id="2"></sctid>-->                                
+          <uuid id="3">80+%</uuid>                          
+          <!--<sctid id="3"></sctid>-->                                
+          <uuid id="4">not done</uuid>                             
+          <!--<sctid id="4">385660001</sctid>-->                     
+          <possible id="0" lang="xx">0-30%</possible>                 
+          <possible id="1" lang="xx">40-50%</possible>                    
+          <possible id="2" lang="xx">60-70%</possible>                    
+          <possible id="3" lang="xx">80+%</possible>                      
+          <possible id="4" lang="xx">ø</possible>                               
+          <possible id="0" lang="fr">Long à mi-long (0-30%)</possible>                  
+          <possible id="1" lang="fr">Court (40-50%)</possible>                
+          <possible id="2" lang="fr">En voie d'effacement (60-70%)</possible>       
+          <possible id="3" lang="fr">Effacé (+80%)</possible>                          
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>                                         
+          <numerical id="1">1</numerical>                                         
+          <numerical id="2">2</numerical>                                         
+          <numerical id="3">3</numerical>
+          <numerical id="4">0</numerical>                               
+          <options>compact</options>                                            
+        </value>                                                                
+      </Item>
+ 
 
     </Item> <!-- end of group Objective -->     
 
