@@ -468,6 +468,12 @@
        <layout class="QHBoxLayout" name="fetalMovementHorizontalLayout">
         <item>
          <widget class="QLabel" name="fetalMovementLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Fetal movement</string>
           </property>
@@ -662,6 +668,12 @@
       </item>
       <item row="8" column="0" colspan="5">
        <widget class="QLabel" name="peripheralEdemaLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>Peripheral edema</string>
         </property>
@@ -687,14 +699,14 @@
        <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
       </item>
       <item row="10" column="0" colspan="3">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="pelvisLabel">
         <property name="text">
          <string>Pelvis</string>
         </property>
        </widget>
       </item>
       <item row="10" column="3" colspan="4">
-       <layout class="QHBoxLayout" name="horizontalLayout_10"/>
+       <layout class="QHBoxLayout" name="pelvisRadioLayout"/>
       </item>
       <item row="11" column="0" colspan="7">
        <widget class="QGroupBox" name="ObjectiveCervixGroup">
@@ -703,74 +715,110 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_10">
          <item row="0" column="0">
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="cervixPositionLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="text">
             <string>Position</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="cervixConsistencyLabel">
            <property name="text">
             <string>Consistency</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="cervixEffacementLabel">
            <property name="text">
             <string>Effacement</string>
            </property>
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="cervixDilationLabel">
            <property name="text">
             <string>Dilation</string>
            </property>
           </widget>
          </item>
          <item row="4" column="0">
-          <widget class="QLabel" name="label_6">
+          <widget class="QLabel" name="fetalStationLabel">
            <property name="text">
             <string>Fetal station</string>
            </property>
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="internalCervicalDilationLabel">
            <property name="text">
             <string>Internal cervical dilation</string>
            </property>
           </widget>
          </item>
          <item row="6" column="0">
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="externalCervicalDilationLabel">
            <property name="text">
             <string>External cervical dilation</string>
            </property>
           </widget>
          </item>
          <item row="7" column="0">
-          <widget class="QLabel" name="label_9">
+          <widget class="QLabel" name="vaginalExaminationLabel">
            <property name="text">
             <string>vaginal examination</string>
            </property>
           </widget>
          </item>
          <item row="8" column="0">
-          <widget class="QLabel" name="label_10">
+          <widget class="QLabel" name="amnioticSacLabel">
            <property name="text">
             <string>Amniotic sac</string>
            </property>
           </widget>
          </item>
          <item row="9" column="0">
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="lowerUterineSegmentLabel">
            <property name="text">
             <string>Lower uterine segment</string>
            </property>
           </widget>
+         </item>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="cervixPositionRadioLayout"/>
+         </item>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="cervixConsistencyRadioLayout"/>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="cervixEffacementRadioLayout"/>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="cervixDilationRadioLayout"/>
+         </item>
+         <item row="4" column="1">
+          <layout class="QHBoxLayout" name="fetalStationRadioLayout"/>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="internalCervicalDilationLineEdit"/>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="externalCervicalDilationLineEdit"/>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLineEdit" name="vaginalExaminationLineEdit"/>
+         </item>
+         <item row="8" column="1">
+          <widget class="QLineEdit" name="amnioticSacLineEdit"/>
+         </item>
+         <item row="9" column="1">
+          <layout class="QHBoxLayout" name="lowerUterineSegmentRadioLayout"/>
          </item>
         </layout>
        </widget>

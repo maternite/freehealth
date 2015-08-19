@@ -288,6 +288,74 @@
           <placeholder lang="fr">Commentaire</placeholder>                      
         </Item>
 
+        <Item type="radio" name="ObjectiveGroup::Pelvis::Radio">
+          <!--<sctid>46633002</sctid>-->
+          <uilink label="pelvisLabel" widget="" layout="pelvisRadioLayout" />
+          <label lang="xx">Pelvis</label>
+          <label lang="fr">Bassin</label>
+          <value>
+          <uuid id="0">Narrow</uuid>
+          <!--<sctid id="0">134223000</sctid>-->
+          <uuid id="1">Funnel shape</uuid>
+          <!--<sctid id="1">36394000</sctid>-->
+          <uuid id="2">Asymmetrical</uuid>
+          <!--<sctid id="1">4128009</sctid>-->
+          <uuid id="3">Borderline normal</uuid>
+          <!--<sctid id="1">371932001</sctid>-->
+          <uuid id="4">Normal shape</uuid>
+          <!--<sctid id="1">371932001</sctid>-->
+          <uuid id="5">not done</uuid>
+          <!--<sctid id="5">385660001</sctid>-->
+          <possible id="0" lang="xx">Narrow</possible>
+          <possible id="1" lang="xx">Funnel shape</possible>
+          <possible id="2" lang="xx">Asymmetrical</possible>
+          <possible id="3" lang="xx">Borderline</possible>
+          <possible id="4" lang="xx">Normal</possible>
+          <possible id="5" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Rétréci</possible>
+          <possible id="1" lang="fr">En entonnoir</possible>
+          <possible id="2" lang="fr">Asymétrique</possible>
+          <possible id="3" lang="fr">Limite</possible>
+          <possible id="4" lang="fr">Normal</possible>
+          <possible id="5" lang="fr">ø</possible>
+          <options>compact</options>
+        </value>
+      </Item>
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Position">                
+          <!--<sctid>46633002</sctid>-->                                        
+          <uilink label="pelvisLabel" widget="" layout="pelvisRadioLayout" />   
+          <label lang="xx">Pelvis</label>                                       
+          <label lang="fr">Bassin</label>                                       
+          <value>                                                               
+          <uuid id="0">Narrow</uuid>                                            
+          <!--<sctid id="0">134223000</sctid>-->                                
+          <uuid id="1">Funnel shape</uuid>                                      
+          <!--<sctid id="1">36394000</sctid>-->                                 
+          <uuid id="2">Asymmetrical</uuid>                                      
+          <!--<sctid id="1">4128009</sctid>-->                                  
+          <uuid id="3">Borderline normal</uuid>                                 
+          <!--<sctid id="1">371932001</sctid>-->                                
+          <uuid id="4">Normal shape</uuid>                                      
+          <!--<sctid id="1">371932001</sctid>-->                                
+          <uuid id="5">not done</uuid>                                          
+          <!--<sctid id="5">385660001</sctid>-->                                
+          <possible id="0" lang="xx">Narrow</possible>                          
+          <possible id="1" lang="xx">Funnel shape</possible>                    
+          <possible id="2" lang="xx">Asymmetrical</possible>                    
+          <possible id="3" lang="xx">Borderline</possible>                      
+          <possible id="4" lang="xx">Normal</possible>                          
+          <possible id="5" lang="xx">ø</possible>                               
+          <possible id="0" lang="fr">Rétréci</possible>                         
+          <possible id="1" lang="fr">En entonnoir</possible>                    
+          <possible id="2" lang="fr">Asymétrique</possible>                     
+          <possible id="3" lang="fr">Limite</possible>                          
+          <possible id="4" lang="fr">Normal</possible>                          
+          <possible id="5" lang="fr">ø</possible>                               
+          <options>compact</options>                                            
+        </value>                                                                
+      </Item>
+
     </Item> <!-- end of group Objective -->     
 
     <Item type="group" name="Fetus">
