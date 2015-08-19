@@ -1,41 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>                                          
-<!DOCTYPE FreeMedForms>                                                         
-                                                                                
-<FreeMedForms>                                                                  
-                                                                                
-  <formdescription>                                                             
-    <authors>Jérôme Pinguet</authors>                                           
-    <version>test</version>                                                     
-    <fmfv>0.9.6</fmfv>                                                          
-    <cdate>2015-06-24</cdate>                                                   
-    <lmdate>2015-06-24</lmdate>                                                 
-    <icon>__theme__stethoscope.png</icon>                                       
-    <weblink>https://github.com/maternite/freemedforms</weblink>                
-    <bibliograpy/>                                                              
-                                                                                
-    <license>GPLv3</license>                                                    
-    <description lang="xx">Prenatal consultation</description>   
-    <description lang="fr">Consultation prénatale</description>           
-    <category lang="xx">Consultation</category>                                 
-    <category lang="en">Consultation</category>                                 
-    <specialties lang="xx">Obstetrics</specialties>                         
-    <specialties lang="en">Obstétrique</specialties>                             
-                                                                                
-    <updateinfo>                                                                
-    </updateinfo>                                                               
-                                                                                
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jérôme Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-06-24</cdate>
+    <lmdate>2015-06-24</lmdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">Prenatal consultation</description>
+    <description lang="fr">Consultation prénatale</description>
+    <category lang="xx">Consultation</category>
+    <category lang="en">Consultation</category>
+    <specialties lang="xx">Obstetrics</specialties>
+    <specialties lang="en">Obstétrique</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
   </formdescription>
 
   <file type="script" name="onload">./scripts/xx/prenatal.js</file>
   <!--<file type="script" name="onload">./scripts/xx/prenatalpulse.js</file>-->
 
   <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/prenatal.ui">
-    <label lang="xx">Prenatal consultation</label>                       
-    <label lang="fr">Consultation prénatale</label>               
-    <options>UseFormAsNameSpace</options>                                       
-    <icon>__theme__/stethoscope.png</icon>                                      
+    <label lang="xx">Prenatal consultation</label>
+    <label lang="fr">Consultation prénatale</label>
+    <options>UseFormAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
 <!--
-    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
+    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 -->
   <Item type="group" name="Subjective">
@@ -73,219 +73,218 @@
       <possible id="2" lang="fr">Non</possible>
       <possible id="3" lang="fr">ø</possible>
       </value>
-    </Item> 
+    </Item>
   </Item>
 
     <Item type="group" name="Objective">
-    
       <uilink label="" widget="objectiveGroup" />
       <label lang="xx">Objective</label>
       <label lang="fr">Objectif</label>
       <options>collapsible;expanded</options>
 
-      <Item type="helptext" name="ObjectiveGroup::Temperature::Label">
-          <uilink label="temperatureLabel" widget="" layout=""/>                
-          <label lang="xx">T°</label>                                           
-          <label lang="fr">T°</label>                                           
-          <tooltip lang="xx">Temperature</tooltip>                              
-          <tooltip lang="fr">Température</tooltip>                              
-      </Item>                                                                 
-                                                                                
-      <Item type="doublespin" name="ObjectiveGroup::Temperature::Value">
-          <uilink label="" widget="temperatureValue" layout=""/>                
-          <tooltip lang="xx">Temperature</tooltip>                              
-          <tooltip lang="fr">Température</tooltip>                              
-          <options>DontPrintEmptyValues</options>                               
-      </Item>                                                                 
-                                                                                
-      <Item type="combo" name="ObjectiveGroup::Temperature::Unit"> 
-          <uilink label="" widget="temperatureUnit" layout=""/>                 
-          <value>                                                               
-              <uuid id="0">celsius</uuid>                                       
-              <uuid id="1">fahrenheit</uuid>                                    
-              <possible id="0" lang="xx">°Celsius</possible>                    
-              <possible id="1" lang="xx">°Fahrenheit</possible>                 
-              <possible id="0" lang="fr">°Celsius</possible>                    
-              <possible id="1" lang="fr">°Fahrenheit</possible>                 
-              <default>celsius</default>                                        
-          </value>                                                              
+       <Item type="helptext" name="ObjectiveGroup::Temperature::Label">
+          <uilink label="temperatureLabel" widget="" layout=""/>
+          <label lang="xx">T°</label>
+          <label lang="fr">T°</label>
+          <tooltip lang="xx">Temperature</tooltip>
+          <tooltip lang="fr">Température</tooltip>
+        </Item>
+
+        <Item type="doublespin" name="ObjectiveGroup::Temperature::Value">
+          <uilink label="" widget="temperatureValue" layout=""/>
+          <tooltip lang="xx">Temperature</tooltip>
+          <tooltip lang="fr">Température</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="combo" name="ObjectiveGroup::Temperature::Unit">
+          <uilink label="" widget="temperatureUnit" layout=""/>
+          <value>
+              <uuid id="0">celsius</uuid>
+              <uuid id="1">fahrenheit</uuid>
+              <possible id="0" lang="xx">°Celsius</possible>
+              <possible id="1" lang="xx">°Fahrenheit</possible>
+              <possible id="0" lang="fr">°Celsius</possible>
+              <possible id="1" lang="fr">°Fahrenheit</possible>
+              <default>celsius</default>
+        </value>
       </Item>
 
-      <Item type="helptext" name="ObjectiveGroup::BloodPressure::Label">    
-          <uilink label="" widget="bloodPressureLabel" layout=""/>              
-          <label lang="xx">BP (mmHg)</label>                                    
-          <label lang="fr">TA (mmHg)</label>                                    
-          <tooltip lang="xx">Blood pressure (mmHg)</tooltip>                    
-          <tooltip lang="fr">Tension artérielle (mmHg)</tooltip>                
-          <options>DontPrintEmptyValues</options>                               
-        </Item>                                                                 
-                                                                                
-        <Item type="spin" name="ObjectiveGroup::BloodPressure::Syst">           
-          <uilink label="" widget="bloodPressureSystolicValue" layout=""/>      
-          <tooltip lang="xx">Systolic</tooltip>                                 
-          <tooltip lang="fr">Systolique</tooltip>                               
-          <options>DontPrintEmptyValues</options>                               
-          <patientdata>SystolicBloodPressure</patientdata>                      
-        </Item>                                                                 
-                                                                                
-        <Item type="spin" name="ObjectiveGroup::BloodPressure::Diast">          
-          <uilink label="" widget="bloodPressureDiastolicValue" layout=""/>     
-          <tooltip lang="xx">Diastolic</tooltip>                                
-          <tooltip lang="fr">Diastolique</tooltip>                              
-          <options>DontPrintEmptyValues</options>                               
-          <patientdata>DiastolicBloodPressure</patientdata>                     
-        </Item>                                                                 
-                                                                                
-        <Item type="helptext" name="ObjectiveGroup::BloodPressure::Pulse">      
-          <uilink label="" widget="bloodPressurePulseValue" layout=""/>         
-          <tooltip lang="xx">Pulse pressure</tooltip>                           
-          <tooltip lang="fr">Différentielle</tooltip>                           
-          <options>DontPrintEmptyValues</options>                               
+      <Item type="helptext" name="ObjectiveGroup::BloodPressure::Label">
+          <uilink label="" widget="bloodPressureLabel" layout=""/>
+          <label lang="xx">BP (mmHg)</label>
+          <label lang="fr">TA (mmHg)</label>
+          <tooltip lang="xx">Blood pressure (mmHg)</tooltip>
+          <tooltip lang="fr">Tension artérielle (mmHg)</tooltip>
+          <options>DontPrintEmptyValues</options>
         </Item>
-        
-        <Item type="measurement" name="ObjectiveGroup::Weight::Value">          
+
+        <Item type="spin" name="ObjectiveGroup::BloodPressure::Syst">
+          <uilink label="" widget="bloodPressureSystolicValue" layout=""/>
+          <tooltip lang="xx">Systolic</tooltip>
+          <tooltip lang="fr">Systolique</tooltip>
+          <options>DontPrintEmptyValues</options>
+          <patientdata>SystolicBloodPressure</patientdata>
+        </Item>
+
+        <Item type="spin" name="ObjectiveGroup::BloodPressure::Diast">
+          <uilink label="" widget="bloodPressureDiastolicValue" layout=""/>
+          <tooltip lang="xx">Diastolic</tooltip>
+          <tooltip lang="fr">Diastolique</tooltip>
+          <options>DontPrintEmptyValues</options>
+          <patientdata>DiastolicBloodPressure</patientdata>
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::BloodPressure::Pulse">
+          <uilink label="" widget="bloodPressurePulseValue" layout=""/>
+          <tooltip lang="xx">Pulse pressure</tooltip>
+          <tooltip lang="fr">Différentielle</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="measurement" name="ObjectiveGroup::Weight::Value">
           <uilink label="weightLabel" widget="weightValue;weightUnit" layout=""/>
-          <label lang="xx">Weight</label>                                       
-          <label lang="fr">Poids</label>                                        
-          <tooltip lang="xx">Weight</tooltip>                                   
-          <tooltip lang="fr">Poids</tooltip>                                    
-          <options>DontPrintEmptyValues;Weight</options>                        
-          <default>kilogram</default>                                           
-          <patientdata>WeightInGrams</patientdata>                              
+          <label lang="xx">Weight</label>
+          <label lang="fr">Poids</label>
+          <tooltip lang="xx">Weight</tooltip>
+          <tooltip lang="fr">Poids</tooltip>
+          <options>DontPrintEmptyValues;Weight</options>
+          <default>kilogram</default>
+          <patientdata>WeightInGrams</patientdata>
         </Item>
 
-        <Item type="measurement" name="ObjectiveGroup::PrePregnancyWeight::Value">          
+        <Item type="measurement" name="ObjectiveGroup::PrePregnancyWeight::Value">
           <uilink label="prePregnancyWeightLabel" widget="prePregnancyWeightValue;prePregnancyWeightUnit" layout=""/>
-          <label lang="xx">Pre-pregnancy weight</label>                                       
-          <label lang="fr">Poids avant la grossesse</label>                                        
-          <tooltip lang="xx">Pre-pregnancy weight</tooltip>                                   
-          <tooltip lang="fr">Poids avant la grossesse</tooltip>                                    
-          <options>DontPrintEmptyValues;Weight</options>                        
-          <default>kilogram</default>                                           
-          <patientdata>WeightInGrams</patientdata>                              
+          <label lang="xx">Pre-pregnancy weight</label>
+          <label lang="fr">Poids avant la grossesse</label>
+          <tooltip lang="xx">Pre-pregnancy weight</tooltip>
+          <tooltip lang="fr">Poids avant la grossesse</tooltip>
+          <options>DontPrintEmptyValues;Weight</options>
+          <default>kilogram</default>
+          <patientdata>WeightInGrams</patientdata>
         </Item>
 
-        <Item type="helptext" name="ObjectiveGroup::WeightGain::Label">         
+        <Item type="helptext" name="ObjectiveGroup::WeightGain::Label">
           <uilink label="" widget="weightGainLabel" layout=""/>
           <label lang="xx">Weight gain</label>
-          <label lang="fr">Prise de poids</label>                       
-          <tooltip lang="xx">Weight gain</tooltip>                              
-          <tooltip lang="fr">Prise de poids</tooltip>                           
-          <options>DontPrintEmptyValues</options>                               
+          <label lang="fr">Prise de poids</label>
+          <tooltip lang="xx">Weight gain</tooltip>
+          <tooltip lang="fr">Prise de poids</tooltip>
+          <options>DontPrintEmptyValues</options>
         </Item>
 
-        <Item type="helptext" name="ObjectiveGroup::WeightGain::Value">      
-          <uilink label="" widget="weightGainValue" layout=""/>         
-          <tooltip lang="xx">Weight gain</tooltip>                           
-          <tooltip lang="fr">Prise de poids</tooltip>                           
-          <options>DontPrintEmptyValues</options>                               
+        <Item type="helptext" name="ObjectiveGroup::WeightGain::Value">
+          <uilink label="" widget="weightGainValue" layout=""/>
+          <tooltip lang="xx">Weight gain</tooltip>
+          <tooltip lang="fr">Prise de poids</tooltip>
+          <options>DontPrintEmptyValues</options>
         </Item>
-                                                                                
-        <Item type="measurement" name="ObjectiveGroup::Height::Value">          
+
+        <Item type="measurement" name="ObjectiveGroup::Height::Value">
           <uilink label="heightLabel" widget="heightValue;heightUnit" layout=""/>
-          <label lang="xx">Height</label>                                       
-          <label lang="fr">Taille</label>                                       
-          <tooltip lang="xx">Height</tooltip>                                   
-          <tooltip lang="fr">Taille</tooltip>                                   
-          <options>DontPrintEmptyValues;Length</options>                        
-          <default>centimeter</default>                                         
-          <patientdata>HeightInCentimeters</patientdata>                        
+          <label lang="xx">Height</label>
+          <label lang="fr">Taille</label>
+          <tooltip lang="xx">Height</tooltip>
+          <tooltip lang="fr">Taille</tooltip>
+          <options>DontPrintEmptyValues;Length</options>
+          <default>centimeter</default>
+          <patientdata>HeightInCentimeters</patientdata>
         </Item>
 
-        <Item type="helptext" name="ObjectiveGroup::BMI::Label">                
-          <uilink widget="bmiLabel"/>                                           
-          <label lang="xx">BMI</label>                                          
-          <label lang="fr">IMC</label>                                          
+        <Item type="helptext" name="ObjectiveGroup::BMI::Label">
+          <uilink widget="bmiLabel"/>
+          <label lang="xx">BMI</label>
+          <label lang="fr">IMC</label>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
-          <options>DontPrintEmptyValues</options>                               
-        </Item>                                                                 
-                                                                                
-        <Item type="helptext" name="ObjectiveGroup::BMI::Value">                
-          <uilink label="" widget="bmiValue" layout=""/>                        
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::BMI::Value">
+          <uilink label="" widget="bmiValue" layout=""/>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
-          <options>DontPrintEmptyValues</options>                               
+          <options>DontPrintEmptyValues</options>
         </Item>
 
         <Item type="spin" name="ObjectiveGroup::FundalHeight::Value">
-          <!--<sctid>249016007</sctid>-->          
+          <!--<sctid>249016007</sctid>-->
           <uilink label="fundalHeightLabel" widget="fundalHeightSpinBox" layout=""/>
           <label lang="xx">Fundal height</label>
           <label lang="fr">Hauteur utérine</label>
-          <tooltip lang="xx">Fundal height</tooltip>                                
-          <tooltip lang="fr">Hauteur utérine</tooltip>                              
-          <options>DontPrintEmptyValues</options>                               
+          <tooltip lang="xx">Fundal height</tooltip>
+          <tooltip lang="fr">Hauteur utérine</tooltip>
+          <options>DontPrintEmptyValues</options>
         </Item>
 
-        <Item type="radio" name="ObjectiveGroup::PeripheralEdema::Radio">           
+        <Item type="radio" name="ObjectiveGroup::PeripheralEdema::Radio">
           <uilink label="peripheralEdemaLabel" widget="" layout="peripheralEdemaRadioLayout"/>
-          <label lang="xx">Peripheral edema</label>                       
-          <label lang="fr">Œdèmes périphériques (des membres inférieurs)</label>                      
-          <options>compact</options>                                        
-          <value>                                                           
+          <label lang="xx">Peripheral edema</label>
+          <label lang="fr">Œdèmes périphériques (des membres inférieurs)</label>
+          <options>compact</options>
+          <value>
             <uuid id="0">yes</uuid>
             <!--<sctid id="0">373066001</sctid>-->
-            <uuid id="1">no</uuid>                                                    
+            <uuid id="1">no</uuid>
             <!--<sctid id="1">373067005</sctid>-->
-            <uuid id="2">not done</uuid>                                              
-            <!--<sctid id="2">385660001</sctid>-->              
-            <possible id="0" lang="xx">Yes</possible>                       
-            <possible id="1" lang="xx">No</possible>                        
-            <possible id="2" lang="xx">∅</possible>                         
-            <print id="0" lang="xx">Yes</print>      
-            <print id="1" lang="xx">No</print>       
-            <print id="2" lang="xx">Not evaluated</print>                   
-            <possible id="0" lang="fr">Oui</possible>                       
-            <possible id="1" lang="fr">Non</possible>                       
-            <possible id="2" lang="fr">∅</possible>                         
-            <print id="0" lang="fr">Oui</print>                             
-            <print id="1" lang="fr">Non</print>                             
-            <print id="2" lang="fr">Item non évalué</print>                               
-          </value>                                                          
+            <uuid id="2">not done</uuid>
+            <!--<sctid id="2">385660001</sctid>-->
+            <possible id="0" lang="xx">Yes</possible>
+            <possible id="1" lang="xx">No</possible>
+            <possible id="2" lang="xx">∅</possible>
+            <print id="0" lang="xx">Yes</print>
+            <print id="1" lang="xx">No</print>
+            <print id="2" lang="xx">Not evaluated</print>
+            <possible id="0" lang="fr">Oui</possible>
+            <possible id="1" lang="fr">Non</possible>
+            <possible id="2" lang="fr">∅</possible>
+            <print id="0" lang="fr">Oui</print>
+            <print id="1" lang="fr">Non</print>
+            <print id="2" lang="fr">Item non évalué</print>
+          </value>
         </Item>
 
-        <Item name="ObjectiveGroup::PeripheralEdema::Comment" type="shorttext">     
-          <uilink label="" widget="peripheralEdemaLineEdit" layout="" />  
-          <label lang="xx"></label>                                           
-          <label lang="fr"></label>                                           
-          <placeholder lang="xx">Comment</placeholder>                        
-          <placeholder lang="fr">Commentaire</placeholder>                    
-        </Item> 
+        <Item name="ObjectiveGroup::PeripheralEdema::Comment" type="shorttext">
+          <uilink label="" widget="peripheralEdemaLineEdit" layout="" />
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <placeholder lang="xx">Comment</placeholder>
+          <placeholder lang="fr">Commentaire</placeholder>
+        </Item>
 
-        <Item type="radio" name="ObjectiveGroup::VaricoseVeins::Radio">       
+        <Item type="radio" name="ObjectiveGroup::VaricoseVeins::Radio">
           <uilink label="varicoseVeinsLabel" widget="" layout="varicoseVeinsRadioLayout"/>
-          <label lang="xx">Varicose veins</label>                             
+          <label lang="xx">Varicose veins</label>
           <label lang="fr">Varices</label>
-          <options>compact</options>                                            
-          <value>                                                               
-            <uuid id="0">yes</uuid>                                             
-            <!--<sctid id="0">373066001</sctid>-->                              
-            <uuid id="1">no</uuid>                                              
-            <!--<sctid id="1">373067005</sctid>-->                              
-            <uuid id="2">not done</uuid>                                        
-            <!--<sctid id="2">385660001</sctid>-->                              
-            <possible id="0" lang="xx">Yes</possible>                           
-            <possible id="1" lang="xx">No</possible>                            
-            <possible id="2" lang="xx">∅</possible>                             
-            <print id="0" lang="xx">Yes</print>                                 
-            <print id="1" lang="xx">No</print>                                  
-            <print id="2" lang="xx">Not evaluated</print>                       
-            <possible id="0" lang="fr">Oui</possible>                           
-            <possible id="1" lang="fr">Non</possible>                           
-            <possible id="2" lang="fr">∅</possible>                             
-            <print id="0" lang="fr">Oui</print>                                 
-            <print id="1" lang="fr">Non</print>                                 
-            <print id="2" lang="fr">Item non évalué</print>                     
-          </value>                                                              
-        </Item> 
+          <options>compact</options>
+          <value>
+            <uuid id="0">yes</uuid>
+            <!--<sctid id="0">373066001</sctid>-->
+            <uuid id="1">no</uuid>
+            <!--<sctid id="1">373067005</sctid>-->
+            <uuid id="2">not done</uuid>
+            <!--<sctid id="2">385660001</sctid>-->
+            <possible id="0" lang="xx">Yes</possible>
+            <possible id="1" lang="xx">No</possible>
+            <possible id="2" lang="xx">∅</possible>
+            <print id="0" lang="xx">Yes</print>
+            <print id="1" lang="xx">No</print>
+            <print id="2" lang="xx">Not evaluated</print>
+            <possible id="0" lang="fr">Oui</possible>
+            <possible id="1" lang="fr">Non</possible>
+            <possible id="2" lang="fr">∅</possible>
+            <print id="0" lang="fr">Oui</print>
+            <print id="1" lang="fr">Non</print>
+            <print id="2" lang="fr">Item non évalué</print>
+          </value>
+        </Item>
 
-        <Item name="ObjectiveGroup::VaricoseVeins::Comment" type="shorttext"> 
-          <uilink label="" widget="varicoseVeinsLineEdit" layout="" />        
-          <label lang="xx"></label>                                             
-          <label lang="fr"></label>                                             
-          <placeholder lang="xx">Comment</placeholder>                          
-          <placeholder lang="fr">Commentaire</placeholder>                      
+        <Item name="ObjectiveGroup::VaricoseVeins::Comment" type="shorttext">
+          <uilink label="" widget="varicoseVeinsLineEdit" layout="" />
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <placeholder lang="xx">Comment</placeholder>
+          <placeholder lang="fr">Commentaire</placeholder>
         </Item>
 
         <Item type="radio" name="ObjectiveGroup::Pelvis::Radio">
@@ -322,114 +321,227 @@
         </value>
       </Item>
 
-      <Item type="radio" name="ObjectiveGroup::Cervix::Position">                
-          <!--<sctid></sctid>-->                                        
-          <uilink label="cervixPositionLabel" widget="" layout="cervixPositionRadioLayout" />   
-          <label lang="xx">Position</label>                                       
-          <label lang="fr">Position</label>                                       
-          <value>                                                               
-          <uuid id="0">Posterior</uuid>                        
-          <!--<sctid id="0"></sctid>-->                                 
-          <uuid id="1">Middle</uuid>                        
-          <!--<sctid id="1"></sctid>-->                              
-          <uuid id="2">Anterior</uuid>                      
-          <!--<sctid id="2"></sctid>-->                                
-          <uuid id="3">Lateral</uuid>                          
-          <!--<sctid id="3"></sctid>-->                                
-          <uuid id="4">not done</uuid>                             
-          <!--<sctid id="4">385660001</sctid>-->                     
-          <possible id="0" lang="xx">Posterior</possible>                 
-          <possible id="1" lang="xx">Middle</possible>                    
-          <possible id="2" lang="xx">Anterior</possible>                    
-          <possible id="3" lang="xx">Lateral</possible>                      
-          <possible id="4" lang="xx">ø</possible>                               
-          <possible id="0" lang="fr">Postérieur</possible>                         
-          <possible id="1" lang="fr">Intermédiaire</possible>                    
-          <possible id="2" lang="fr">Centré</possible>                     
-          <possible id="3" lang="fr">Latéro-dévié</possible>                          
+      <Item type="group" name="Objective::Cervix">
+        <uilink label="" widget="objectiveCervixGroup" />
+        <label lang="xx">Cervix</label>
+        <label lang="fr">Col</label>
+        <options>collapsible;expanded</options>
+
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Position">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixPositionLabel" widget="" layout="cervixPositionRadioLayout" />
+          <label lang="xx">Position</label>
+          <label lang="fr">Position</label>
+          <value>
+          <uuid id="0">Posterior</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">Middle</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">Anterior</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">Lateral</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">Posterior</possible>
+          <possible id="1" lang="xx">Middle</possible>
+          <possible id="2" lang="xx">Anterior</possible>
+          <possible id="3" lang="xx">Lateral</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Postérieur</possible>
+          <possible id="1" lang="fr">Intermédiaire</possible>
+          <possible id="2" lang="fr">Centré</possible>
+          <possible id="3" lang="fr">Latéro-dévié</possible>
           <possible id="4" lang="fr">ø</possible>
-          <numerical id="0">0</numerical>                                         
-          <numerical id="1">1</numerical>                                         
-          <numerical id="2">2</numerical>                                         
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
           <numerical id="3">2</numerical>
-          <numerical id="4">0</numerical>                               
-          <options>compact</options>                                            
-        </value>                                                                
+          <numerical id="4">0</numerical>
+          <options>compact</options>
+        </value>
       </Item>
 
-      <Item type="radio" name="ObjectiveGroup::Cervix::Consistency">                
-          <!--<sctid></sctid>-->                                        
-          <uilink label="cervixConsistencyLabel" widget="" layout="cervixConsistencyRadioLayout" />   
+      <Item type="radio" name="ObjectiveGroup::Cervix::Consistency">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixConsistencyLabel" widget="" layout="cervixConsistencyRadioLayout" />
           <label lang="xx">Consistency</label>
-          <label lang="fr">Consistence</label>                                       
-          <value>                                                               
-          <uuid id="0">Firm</uuid>                        
-          <!--<sctid id="0"></sctid>-->                                 
-          <uuid id="1">Medium</uuid>                        
-          <!--<sctid id="1"></sctid>-->                              
-          <uuid id="2">Soft</uuid>                      
-          <!--<sctid id="2"></sctid>-->                                
-          <uuid id="3">not done</uuid>                             
-          <!--<sctid id="3">385660001</sctid>-->                     
-          <possible id="0" lang="xx">Firm</possible>                 
-          <possible id="1" lang="xx">Medium</possible>                    
-          <possible id="2" lang="xx">Soft</possible>                    
-          <possible id="3" lang="xx">ø</possible>                               
-          <possible id="0" lang="fr">Ferme</possible>                         
-          <possible id="1" lang="fr">Moyen</possible>                    
-          <possible id="2" lang="fr">Mou</possible>                     
+          <label lang="fr">Consistence</label>
+          <value>
+          <uuid id="0">Firm</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">Medium</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">Soft</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">not done</uuid>
+          <!--<sctid id="3">385660001</sctid>-->
+          <possible id="0" lang="xx">Firm</possible>
+          <possible id="1" lang="xx">Medium</possible>
+          <possible id="2" lang="xx">Soft</possible>
+          <possible id="3" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Ferme</possible>
+          <possible id="1" lang="fr">Moyen</possible>
+          <possible id="2" lang="fr">Mou</possible>
           <possible id="3" lang="fr">ø</possible>
-          <numerical id="0">0</numerical>                                         
-          <numerical id="1">1</numerical>                                         
-          <numerical id="2">2</numerical>                                         
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
           <numerical id="3">0</numerical>
-          <options>compact</options>                                            
-        </value>                                                                
+          <options>compact</options>
+        </value>
       </Item>
 
-      <Item type="radio" name="ObjectiveGroup::Cervix::Position">                
-          <!--<sctid></sctid>-->                                        
-          <uilink label="cervixEffacementLabel" widget="" layout="cervixEffacementRadioLayout" />   
-          <label lang="xx">Effacement</label>                                       
-          <label lang="fr">Effacement</label>                                       
-          <value>                                                               
-          <uuid id="0">0-30%</uuid>                        
-          <!--<sctid id="0"></sctid>-->                                 
-          <uuid id="1">40-50%</uuid>                        
-          <!--<sctid id="1"></sctid>-->                              
-          <uuid id="2">60-70%</uuid>                      
-          <!--<sctid id="2"></sctid>-->                                
-          <uuid id="3">80+%</uuid>                          
-          <!--<sctid id="3"></sctid>-->                                
-          <uuid id="4">not done</uuid>                             
-          <!--<sctid id="4">385660001</sctid>-->                     
-          <possible id="0" lang="xx">0-30%</possible>                 
-          <possible id="1" lang="xx">40-50%</possible>                    
-          <possible id="2" lang="xx">60-70%</possible>                    
-          <possible id="3" lang="xx">80+%</possible>                      
-          <possible id="4" lang="xx">ø</possible>                               
-          <possible id="0" lang="fr">Long à mi-long (0-30%)</possible>                  
-          <possible id="1" lang="fr">Court (40-50%)</possible>                
-          <possible id="2" lang="fr">En voie d'effacement (60-70%)</possible>       
-          <possible id="3" lang="fr">Effacé (+80%)</possible>                          
+      <Item type="radio" name="ObjectiveGroup::Cervix::Position">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixEffacementLabel" widget="" layout="cervixEffacementRadioLayout" />
+          <label lang="xx">Effacement</label>
+          <label lang="fr">Effacement</label>
+          <value>
+          <uuid id="0">0-30%</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">40-50%</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">60-70%</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">80+%</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">0-30%</possible>
+          <possible id="1" lang="xx">40-50%</possible>
+          <possible id="2" lang="xx">60-70%</possible>
+          <possible id="3" lang="xx">80+%</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Long à mi-long (0-30%)</possible>
+          <possible id="1" lang="fr">Court (40-50%)</possible>
+          <possible id="2" lang="fr">En voie d'effacement (60-70%)</possible>
+          <possible id="3" lang="fr">Effacé (+80%)</possible>
           <possible id="4" lang="fr">ø</possible>
-          <numerical id="0">0</numerical>                                         
-          <numerical id="1">1</numerical>                                         
-          <numerical id="2">2</numerical>                                         
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
           <numerical id="3">3</numerical>
-          <numerical id="4">0</numerical>                               
-          <options>compact</options>                                            
-        </value>                                                                
+          <numerical id="4">0</numerical>
+          <options>compact</options>
+        </value>
       </Item>
- 
 
-    </Item> <!-- end of group Objective -->     
+      <Item type="radio" name="ObjectiveGroup::Cervix::Dilation">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixDilationLabel" widget="" layout="cervixDilationRadioLayout" />
+          <label lang="xx">Dilation</label>
+          <label lang="fr">Dilatation</label>
+          <value>
+          <uuid id="0">Closed</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">1-2cm</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">3-4cm</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">5+cm</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">Closed</possible>
+          <possible id="1" lang="xx">1-2 cm</possible>
+          <possible id="2" lang="xx">3-4 cm</possible>
+          <possible id="3" lang="xx">5+ cm</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Fermé</possible>
+          <possible id="1" lang="fr">1 à 2 cm</possible>
+          <possible id="2" lang="fr">3 à 4 cm</possible>
+          <possible id="3" lang="fr">Supérieur à 5 cm</possible>
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
+          <numerical id="3">3</numerical>
+          <numerical id="4">0</numerical>
+          <options>compact</options>
+        </value>
+      </Item>
+
+      <Item name="ObjectiveGroup::InternalCervicalDilation::Comment" type="shorttext">
+        <uilink label="internalCervicalDilationLabel" widget="internalCervicalDilationLineEdit" layout="" />
+        <label lang="xx">Internal cervical dilation</label>
+        <label lang="fr">Dilatation de l'orifice interne du col</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+      </Item>
+
+      <Item name="ObjectiveGroup::ExternalCervicalDilation::Comment" type="shorttext">
+        <uilink label="externalCervicalDilationLabel" widget="externalCervicalDilationLineEdit" layout="" />
+        <label lang="xx">External cervical dilation</label>
+        <label lang="fr">Dilatation de l'orifice externe du col</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+      </Item>
+
+      <Item name="ObjectiveGroup::VaginalExamination::Comment" type="shorttext">
+        <uilink label="vaginalExaminationLabel" widget="vaginalExaminationLineEdit" layout="" />
+        <label lang="xx">Vaginal examination</label>
+        <label lang="fr">Doigté (Toucher vaginal)</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+      </Item>
+
+      <Item name="ObjectiveGroup::AmnioticSacStatus" type="shorttext">
+        <uilink label="amnioticSacLabel" widget="amnioticSacLineEdit" layout="" />
+        <label lang="xx">Amniotic sac status</label>
+        <label lang="fr">État de la poche des eaux</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+      </Item>
+
+     <Item type="radio" name="ObjectiveGroup::LowerUterineSegment::Distension">
+          <uilink label="lowerUterineSegmentLabel" widget="" layout="lowerUterineSegmentRadioLayout"/>
+          <label lang="xx">(Distention of) Lower uterine segment</label>
+          <label lang="fr">(Ampliation du) Segment inférieur</label>
+          <options>compact</options>
+          <value>
+            <uuid id="0">Distended</uuid>
+            <!--<sctid id="0"></sctid>-->
+            <uuid id="1">Not distended</uuid>
+            <!--<sctid id="1"></sctid>-->
+            <uuid id="2">not done</uuid>
+            <!--<sctid id="2">385660001</sctid>-->
+            <possible id="0" lang="xx">Distended</possible>
+            <possible id="1" lang="xx">Not distended</possible>
+            <possible id="2" lang="xx">∅</possible>
+            <print id="0" lang="xx">Distended</print>
+            <print id="1" lang="xx">Not distended</print>
+            <print id="2" lang="xx">Not evaluated</print>
+            <possible id="0" lang="fr">Amplié</possible>
+            <possible id="1" lang="fr">Non amplié</possible>
+            <possible id="2" lang="fr">∅</possible>
+            <print id="0" lang="fr">Amplié</print>
+            <print id="1" lang="fr">Non amplié</print>
+            <print id="2" lang="fr">Item non évalué</print>
+          </value>
+        </Item>
+
+
+      </Item> <!-- end of group Cervix -->
+
+      <Item type="group" name="Objective::Ultrasound">                                         
+        <uilink label="" widget="objectiveUltrasoundGroupBox" />                       
+        <label lang="xx">Ultrasound</label>                                         
+        <label lang="fr">Échographie</label>                                            
+        <options>collapsible;expanded</options>
+
+        
+     
+      </Item> <!-- end of group Objective::Ultrasound -->
+
+    </Item> <!-- end of group Objective -->
 
     <Item type="group" name="Fetus">
 
       <uilink label="" widget="fetusGroupBox" layout="" />
-      <label lang="xx">Fetus number</label>                         
-      <label lang="fr">Nombre de fœtus</label>                       
+      <label lang="xx">Fetus number</label>
+      <label lang="fr">Nombre de fœtus</label>
       <options>collapsible;expanded</options>
 
         <Item type="spin" name="FetusNumber">
@@ -443,134 +555,134 @@
           <onValueChanged>com.freemedforms.obstetrics.prenatal.hideFetusGroupBox();</onValueChanged>
           </script>-->
         </Item>
-    
+
     </Item>
 
       <Item type="group" name="Fetus1GroupBox">
         <uilink widget="fetus1GroupBox"/>
-        <label lang="xx">Fetus 1</label>                       
-        <label lang="fr">Fœtus 1</label>                       
+        <label lang="xx">Fetus 1</label>
+        <label lang="fr">Fœtus 1</label>
         <options>DontPrintEmptyValues;collapsible;expanded</options>
-        
-          <Item type="radio" name="Fetus1::PrenatalHeartbeat::Radio">                        
-            <uilink label="prenatalHeartbeatF1Label" widget="" layout="prenatalHeartbeatF1RadioLayout"/>         
-              <label lang="xx">Prenatal heartbeat</label>                            
-              <label lang="fr">Bruit du cœur fœtal</label>                     
-              <options>compact</options>                                      
-              <value>                                                         
-                <uuid id="0">yes</uuid>                                     
+
+          <Item type="radio" name="Fetus1::PrenatalHeartbeat::Radio">
+            <uilink label="prenatalHeartbeatF1Label" widget="" layout="prenatalHeartbeatF1RadioLayout"/>
+              <label lang="xx">Prenatal heartbeat</label>
+              <label lang="fr">Bruit du cœur fœtal</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">yes</uuid>
                 <uuid id="1">no</uuid>
-                <uuid id="2">∅</uuid>                                      
-                <possible id="0" lang="xx">Yes</possible>                   
+                <uuid id="2">∅</uuid>
+                <possible id="0" lang="xx">Yes</possible>
                 <possible id="1" lang="xx">No</possible>
-                <possible id="2" lang="xx">∅</possible>                    
-                <print id="0" lang="xx">Prenatal heartbeat present</print>  
+                <possible id="2" lang="xx">∅</possible>
+                <print id="0" lang="xx">Prenatal heartbeat present</print>
                 <print id="1" lang="xx">Prenatal heartbeat absent</print>
                 <print id="2" lang="xx">Not evaluated</print>
-                <possible id="0" lang="fr">Oui</possible>                   
+                <possible id="0" lang="fr">Oui</possible>
                 <possible id="1" lang="fr">Non</possible>
-                <possible id="2" lang="fr">∅</possible>                   
-                <print id="0" lang="fr">Oui</print>          
+                <possible id="2" lang="fr">∅</possible>
+                <print id="0" lang="fr">Oui</print>
                 <print id="1" lang="fr">Non</print>
-                <print id="2" lang="fr">∅</print>   
-              </value>                                                        
+                <print id="2" lang="fr">∅</print>
+              </value>
           </Item>
 
           <Item name="Fetus1::PrenatalHeartbeat::Comment" type="shorttext">
-            <uilink label="" widget="prenatalHeartbeatF1LineEdit" layout="" /> 
+            <uilink label="" widget="prenatalHeartbeatF1LineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
-          </Item>          
+          </Item>
 
-          <Item type="uniquelist" name="F1Presentation">                   
-            <uilink label="presentationF1Label" widget="presentationF1ListView" layout=""/>         
-            <label lang="xx">Presentation</label>                             
-            <label lang="fr">Présentation</label>                            
-            <value>                                                         
-            <uuid id="0">Vertex presentation</uuid> 
-            <!--<sctid id="0">70028003</sctid>-->                             
+          <Item type="uniquelist" name="F1Presentation">
+            <uilink label="presentationF1Label" widget="presentationF1ListView" layout=""/>
+            <label lang="xx">Presentation</label>
+            <label lang="fr">Présentation</label>
+            <value>
+            <uuid id="0">Vertex presentation</uuid>
+            <!--<sctid id="0">70028003</sctid>-->
             <uuid id="1">Frank breech presentation</uuid>
-            <!--<sctid id="1">18559007</sctid>-->                              
+            <!--<sctid id="1">18559007</sctid>-->
             <uuid id="2">Complete breech presentation</uuid>
             <!--<sctid id="2">49168004</sctid>-->
             <uuid id="3">Incomplete breech presentation</uuid>
-            <!--<sctid id="3">38049006</sctid>-->                                      
+            <!--<sctid id="3">38049006</sctid>-->
             <uuid id="4">Acromion presentation</uuid>
-            <!--<sctid id="4">23954006</sctid>-->                                  
-            <uuid id="5">ø</uuid>                                
+            <!--<sctid id="4">23954006</sctid>-->
+            <uuid id="5">ø</uuid>
             <possible id="0">Vertex</possible>
-            <possible id="1">Frank breech</possible>      
-            <possible id="2">Complete breech</possible>                    
-            <possible id="3">Incomplete breech</possible>                      
+            <possible id="1">Frank breech</possible>
+            <possible id="2">Complete breech</possible>
+            <possible id="3">Incomplete breech</possible>
             <possible id="4">Acromion presentation</possible>
-            <possible id="5">ø</possible>              
+            <possible id="5">ø</possible>
             <possible id="0" lang="fr">céphalique (sommet)</possible>
-            <possible id="1" lang="fr">siège décomplété</possible>      
-            <possible id="2" lang="fr">siège complet</possible>                      
-            <possible id="3" lang="fr">siège incomplet</possible>                      
-            <possible id="4" lang="fr">transverse (épaule)</possible>   
-            <possible id="5" lang="fr">ø</possible>              
+            <possible id="1" lang="fr">siège décomplété</possible>
+            <possible id="2" lang="fr">siège complet</possible>
+            <possible id="3" lang="fr">siège incomplet</possible>
+            <possible id="4" lang="fr">transverse (épaule)</possible>
+            <possible id="5" lang="fr">ø</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
+            <options>resizeToContent;DontPrintEmptyValue</options>
           </Item>
 
-          <Item type="uniquelist" name="F1Position">                   
-            <uilink label="positionF1Label" widget="positionF1ListView" layout=""/>         
-            <label lang="xx">Position</label>                             
-            <label lang="fr">Variété</label>                            
-            <value>                                                         
+          <Item type="uniquelist" name="F1Position">
+            <uilink label="positionF1Label" widget="positionF1ListView" layout=""/>
+            <label lang="xx">Position</label>
+            <label lang="fr">Variété</label>
+            <value>
             <uuid id="0">Left occipitoanterior position</uuid>
             <!--<sctid id="0">11409005</sctid>-->
             <uuid id="1">Right occipitoanterior position</uuid>
-            <!--<sctid id="1">39889007</sctid>-->                              
+            <!--<sctid id="1">39889007</sctid>-->
             <uuid id="2">Left occipitoposterior position</uuid>
-            <!--<sctid id="2">31477000</sctid>-->                                     
+            <!--<sctid id="2">31477000</sctid>-->
             <uuid id="3">Right occipitoposterior position</uuid>
-            <!--<sctid id="3">36547009</sctid>-->                                     
+            <!--<sctid id="3">36547009</sctid>-->
             <uuid id="4">Occipitoanterior position</uuid>
-            <!--<sctid id="4">90381008</sctid>-->                                     
+            <!--<sctid id="4">90381008</sctid>-->
             <uuid id="5">Occipitoposterior position</uuid>
-            <!--<sctid id="5">37235006</sctid>-->                                
+            <!--<sctid id="5">37235006</sctid>-->
             <uuid id="6">Left occipitolateral position</uuid>
-            <!--<sctid id="6">18905000</sctid>-->            
+            <!--<sctid id="6">18905000</sctid>-->
             <uuid id="7">Right occipitolateral position</uuid>
-            <!--<sctid id="7">37040008</sctid>-->                   
+            <!--<sctid id="7">37040008</sctid>-->
             <uuid id="8">Left sacroanterior position</uuid>
             <!--<sctid id="8">79888005</sctid>-->
             <uuid id="9">Right sacroanterior position</uuid>
-            <!--<sctid id="9">79643007</sctid>-->                         
+            <!--<sctid id="9">79643007</sctid>-->
             <uuid id="10">Left sacroposterior position</uuid>
             <!--<sctid id="10">2138000</sctid>-->
             <uuid id="11">Right sacroposterior position</uuid>
             <!--<sctid id="11">112073004</sctid>-->
             <uuid id="12">Sacroanterior position</uuid>
             <!--<sctid id="12">79888005</sctid>-->
-            <uuid id="13">Sacroposterior position</uuid>       
+            <uuid id="13">Sacroposterior position</uuid>
             <!--<sctid id="13">58261003</sctid>-->
             <uuid id="14">Left sacrolateral position</uuid>
             <!--<sctid id="14">54486001</sctid>-->
-            <uuid id="15">Right sacrolateral position</uuid>  
+            <uuid id="15">Right sacrolateral position</uuid>
             <!--<sctid id="15">89550007</sctid>-->
             <uuid id="16">Shoulder left anterior position</uuid>
             <!--<sctid id="16">249108000</sctid>-->
-            <uuid id="17">Shoulder right anterior position</uuid>                
+            <uuid id="17">Shoulder right anterior position</uuid>
             <!--<sctid id="17">249107005</sctid>-->
-            <uuid id="18">Shoulder left posterior position</uuid>            
+            <uuid id="18">Shoulder left posterior position</uuid>
             <!--<sctid id="18">27921008</sctid>-->
-            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <uuid id="19">Shoulder right posterior position</uuid>
             <!--<sctid id="19">26644000</sctid>-->
-            <uuid id="20">∅</uuid>                        
+            <uuid id="20">∅</uuid>
             <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
-            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
-            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
-            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
-            <possible id="4">Vertex - OA Occipitoanterior</possible>   
-            <possible id="5">Vertex - OP Occipitoposterior</possible>              
-            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
-            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
-            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>
+            <possible id="4">Vertex - OA Occipitoanterior</possible>
+            <possible id="5">Vertex - OP Occipitoposterior</possible>
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>
+            <possible id="8">Breech - LSA Left sacroanterior</possible>
             <possible id="9">Breech - RSA Right sacroanterior</possible>
             <possible id="10">Breech - LSP Left sacroposterior</possible>
             <possible id="11">Breech - RSP Right sacroposterior</possible>
@@ -584,8 +696,8 @@
             <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
             <possible id="20">∅</possible>
             <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
-            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
-            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>
             <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
             <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
             <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
@@ -605,467 +717,467 @@
             <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
             <possible id="20" lang="fr">∅</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
+            <options>resizeToContent;DontPrintEmptyValue</options>
           </Item>
 
-                                 
+
       </Item> <!-- End Of Fetus1GroupBox -->
 
       <Item type="group" name="Fetus2GroupBox">
-        <uilink widget="fetus2GroupBox"/>                      
-        <label lang="xx">Fetus 2</label>                                          
-        <label lang="fr">Fœtus 2</label>                                          
+        <uilink widget="fetus2GroupBox"/>
+        <label lang="xx">Fetus 2</label>
+        <label lang="fr">Fœtus 2</label>
         <options>DontPrintEmptyValues;collapsible</options>
 
-          <Item type="radio" name="Fetus2::PrenatalHeartbeat::Radio">           
-            <uilink label="prenatalHeartbeatF2Label" widget="" layout="prenatalHeartbeatF2RadioLayout"/>     
-              <label lang="xx">Prenatal heartbeat</label>                       
-              <label lang="fr">Bruit du cœur fœtal</label>                      
-              <options>compact</options>                                        
-              <value>                                                           
-                <uuid id="0">yes</uuid>                                         
-                <uuid id="1">no</uuid>                                          
-                <uuid id="2">∅</uuid>                                           
-                <possible id="0" lang="xx">Yes</possible>                       
-                <possible id="1" lang="xx">No</possible>                        
-                <possible id="2" lang="xx">∅</possible>                         
-                <print id="0" lang="xx">Prenatal heartbeat present</print>      
-                <print id="1" lang="xx">Prenatal heartbeat absent</print>       
-                <print id="2" lang="xx">Not evaluated</print>                   
-                <possible id="0" lang="fr">Oui</possible>                       
-                <possible id="1" lang="fr">Non</possible>                       
-                <possible id="2" lang="fr">∅</possible>                         
-                <print id="0" lang="fr">Oui</print>                             
-                <print id="1" lang="fr">Non</print>                             
-                <print id="2" lang="fr">∅</print>                               
-              </value>                                                          
-          </Item>
-      
-          <Item name="Fetus2::PrenatalHeartbeat::Comment" type="shorttext">     
-            <uilink label="" widget="prenatalHeartbeatF2LineEdit" layout="" />  
-            <label lang="xx"></label>                                           
-            <label lang="fr"></label>                                           
-            <placeholder lang="xx">Comment</placeholder>                        
-            <placeholder lang="fr">Commentaire</placeholder>                    
-          </Item>
-
-          <Item type="uniquelist" name="F2Presentation">                        
-            <uilink label="presentationF2Label" widget="presentationF2ListView" layout=""/>
-            <label lang="xx">Presentation</label>                               
-            <label lang="fr">Présentation</label>                               
-            <value>                                                             
-            <uuid id="0">Vertex presentation</uuid>                             
-            <!--<sctid id="0">70028003</sctid>-->                               
-            <uuid id="1">Frank breech presentation</uuid>                       
-            <!--<sctid id="1">18559007</sctid>-->                               
-            <uuid id="2">Complete breech presentation</uuid>                    
-            <!--<sctid id="2">49168004</sctid>-->                               
-            <uuid id="3">Incomplete breech presentation</uuid>                  
-            <!--<sctid id="3">38049006</sctid>-->                               
-            <uuid id="4">Acromion presentation</uuid>                           
-            <!--<sctid id="4">23954006</sctid>-->                               
-            <uuid id="5">ø</uuid>                                               
-            <possible id="0">Vertex</possible>                                  
-            <possible id="1">Frank breech</possible>                            
-            <possible id="2">Complete breech</possible>                         
-            <possible id="3">Incomplete breech</possible>                       
-            <possible id="4">Acromion presentation</possible>                   
-            <possible id="5">ø</possible>                                       
-            <possible id="0" lang="fr">céphalique (sommet)</possible>           
-            <possible id="1" lang="fr">siège décomplété</possible>              
-            <possible id="2" lang="fr">siège complet</possible>                 
-            <possible id="3" lang="fr">siège incomplet</possible>               
-            <possible id="4" lang="fr">transverse (épaule)</possible>           
-            <possible id="5" lang="fr">ø</possible>                             
-            </value>                                                            
-            <options>resizeToContent;DontPrintEmptyValue</options>              
-          </Item>                              
-     
-          <Item type="uniquelist" name="F2Position">                   
-            <uilink label="positionF2Label" widget="positionF2ListView" layout=""/>         
-            <label lang="xx">Position</label>                             
-            <label lang="fr">Variété</label>                            
-            <value>                                                         
-            <uuid id="0">Left occipitoanterior position</uuid>
-            <!--<sctid id="0">11409005</sctid>-->
-            <uuid id="1">Right occipitoanterior position</uuid>
-            <!--<sctid id="1">39889007</sctid>-->                              
-            <uuid id="2">Left occipitoposterior position</uuid>
-            <!--<sctid id="2">31477000</sctid>-->                                     
-            <uuid id="3">Right occipitoposterior position</uuid>
-            <!--<sctid id="3">36547009</sctid>-->                                     
-            <uuid id="4">Occipitoanterior position</uuid>
-            <!--<sctid id="4">90381008</sctid>-->                                     
-            <uuid id="5">Occipitoposterior position</uuid>
-            <!--<sctid id="5">37235006</sctid>-->                                
-            <uuid id="6">Left occipitolateral position</uuid>
-            <!--<sctid id="6">18905000</sctid>-->            
-            <uuid id="7">Right occipitolateral position</uuid>
-            <!--<sctid id="7">37040008</sctid>-->                   
-            <uuid id="8">Left sacroanterior position</uuid>
-            <!--<sctid id="8">79888005</sctid>-->
-            <uuid id="9">Right sacroanterior position</uuid>
-            <!--<sctid id="9">79643007</sctid>-->                         
-            <uuid id="10">Left sacroposterior position</uuid>
-            <!--<sctid id="10">2138000</sctid>-->
-            <uuid id="11">Right sacroposterior position</uuid>
-            <!--<sctid id="11">112073004</sctid>-->
-            <uuid id="12">Sacroanterior position</uuid>
-            <!--<sctid id="12">79888005</sctid>-->
-            <uuid id="13">Sacroposterior position</uuid>       
-            <!--<sctid id="13">58261003</sctid>-->
-            <uuid id="14">Left sacrolateral position</uuid>
-            <!--<sctid id="14">54486001</sctid>-->
-            <uuid id="15">Right sacrolateral position</uuid>  
-            <!--<sctid id="15">89550007</sctid>-->
-            <uuid id="16">Shoulder left anterior position</uuid>
-            <!--<sctid id="16">249108000</sctid>-->
-            <uuid id="17">Shoulder right anterior position</uuid>                
-            <!--<sctid id="17">249107005</sctid>-->
-            <uuid id="18">Shoulder left posterior position</uuid>            
-            <!--<sctid id="18">27921008</sctid>-->
-            <uuid id="19">Shoulder right posterior position</uuid>                    
-            <!--<sctid id="19">26644000</sctid>-->
-            <uuid id="20">∅</uuid>                        
-            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
-            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
-            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
-            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
-            <possible id="4">Vertex - OA Occipitoanterior</possible>   
-            <possible id="5">Vertex - OP Occipitoposterior</possible>              
-            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
-            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
-            <possible id="8">Breech - LSA Left sacroanterior</possible>         
-            <possible id="9">Breech - RSA Right sacroanterior</possible>
-            <possible id="10">Breech - LSP Left sacroposterior</possible>
-            <possible id="11">Breech - RSP Right sacroposterior</possible>
-            <possible id="12">Breech - SA Sacroanterior</possible>
-            <possible id="13">Breech - SP Sacroposterior</possible>
-            <possible id="14">Breech - LSL Left sacrolateral</possible>
-            <possible id="15">Breech - RSL Right sacrolateral</possible>
-            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
-            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
-            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
-            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
-            <possible id="20">∅</possible>
-            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
-            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
-            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
-            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
-            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
-            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
-            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
-            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
-            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
-            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
-            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
-            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
-            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
-            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
-            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
-            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
-            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
-            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
-            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
-            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
-            <possible id="20" lang="fr">∅</possible>
-            </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
-          </Item>
- 
-      </Item> <!-- End Of Fetus2GroupBox -->  
-
-      <Item type="group" name="Fetus3GroupBox">
-        <uilink widget="fetus3GroupBox"/>                      
-        <label lang="xx">Fetus 3</label>                                          
-        <label lang="fr">Fœtus 3</label>                                          
-        <options>DontPrintEmptyValues;collapsible</options>
-
-          <Item type="radio" name="Fetus3::PrenatalHeartbeat::Radio">           
-            <uilink label="prenatalHeartbeatF3Label" widget="" layout="prenatalHeartbeatF3RadioLayout"/>     
-              <label lang="xx">Prenatal heartbeat</label>                       
-              <label lang="fr">Bruit du cœur fœtal</label>                      
-              <options>compact</options>                                        
-              <value>                                                           
-                <uuid id="0">yes</uuid>                                         
-                <uuid id="1">no</uuid>                                          
-                <uuid id="2">∅</uuid>                                           
-                <possible id="0" lang="xx">Yes</possible>                       
-                <possible id="1" lang="xx">No</possible>                        
-                <possible id="2" lang="xx">∅</possible>                         
-                <print id="0" lang="xx">Prenatal heartbeat present</print>      
-                <print id="1" lang="xx">Prenatal heartbeat absent</print>       
-                <print id="2" lang="xx">Not evaluated</print>                   
-                <possible id="0" lang="fr">Oui</possible>                       
-                <possible id="1" lang="fr">Non</possible>                       
-                <possible id="2" lang="fr">∅</possible>                         
-                <print id="0" lang="fr">Oui</print>                             
-                <print id="1" lang="fr">Non</print>                             
-                <print id="2" lang="fr">∅</print>                               
-              </value>                                                          
-          </Item>
-
-          <Item name="Fetus3::PrenatalHeartbeat::Comment" type="shorttext">     
-            <uilink label="" widget="prenatalHeartbeatF3LineEdit" layout="" />  
-            <label lang="xx"></label>                                           
-            <label lang="fr"></label>                                           
-            <placeholder lang="xx">Comment</placeholder>                        
-            <placeholder lang="fr">Commentaire</placeholder>                    
-          </Item>
-
-          <Item type="uniquelist" name="F3Presentation">                        
-            <uilink label="presentationF3Label" widget="presentationF3ListView" layout=""/>
-            <label lang="xx">Presentation</label>                               
-            <label lang="fr">Présentation</label>                               
-            <value>                                                             
-            <uuid id="0">Vertex presentation</uuid>                             
-            <!--<sctid id="0">70028003</sctid>-->                               
-            <uuid id="1">Frank breech presentation</uuid>                       
-            <!--<sctid id="1">18559007</sctid>-->                               
-            <uuid id="2">Complete breech presentation</uuid>                    
-            <!--<sctid id="2">49168004</sctid>-->                               
-            <uuid id="3">Incomplete breech presentation</uuid>                  
-            <!--<sctid id="3">38049006</sctid>-->                               
-            <uuid id="4">Acromion presentation</uuid>                           
-            <!--<sctid id="4">23954006</sctid>-->                               
-            <uuid id="5">ø</uuid>                                               
-            <possible id="0">Vertex</possible>                                  
-            <possible id="1">Frank breech</possible>                            
-            <possible id="2">Complete breech</possible>                         
-            <possible id="3">Incomplete breech</possible>                       
-            <possible id="4">Acromion presentation</possible>                   
-            <possible id="5">ø</possible>                                       
-            <possible id="0" lang="fr">céphalique (sommet)</possible>           
-            <possible id="1" lang="fr">siège décomplété</possible>              
-            <possible id="2" lang="fr">siège complet</possible>                 
-            <possible id="3" lang="fr">siège incomplet</possible>               
-            <possible id="4" lang="fr">transverse (épaule)</possible>           
-            <possible id="5" lang="fr">ø</possible>                             
-            </value>                                                            
-            <options>resizeToContent;DontPrintEmptyValue</options>              
-          </Item>
-
-          <Item type="uniquelist" name="F3Position">                   
-            <uilink label="positionF3Label" widget="positionF3ListView" layout=""/>         
-            <label lang="xx">Position</label>                             
-            <label lang="fr">Variété</label>                            
-            <value>                                                         
-            <uuid id="0">Left occipitoanterior position</uuid>
-            <!--<sctid id="0">11409005</sctid>-->
-            <uuid id="1">Right occipitoanterior position</uuid>
-            <!--<sctid id="1">39889007</sctid>-->                              
-            <uuid id="2">Left occipitoposterior position</uuid>
-            <!--<sctid id="2">31477000</sctid>-->                                     
-            <uuid id="3">Right occipitoposterior position</uuid>
-            <!--<sctid id="3">36547009</sctid>-->                                     
-            <uuid id="4">Occipitoanterior position</uuid>
-            <!--<sctid id="4">90381008</sctid>-->                                     
-            <uuid id="5">Occipitoposterior position</uuid>
-            <!--<sctid id="5">37235006</sctid>-->                                
-            <uuid id="6">Left occipitolateral position</uuid>
-            <!--<sctid id="6">18905000</sctid>-->            
-            <uuid id="7">Right occipitolateral position</uuid>
-            <!--<sctid id="7">37040008</sctid>-->                   
-            <uuid id="8">Left sacroanterior position</uuid>
-            <!--<sctid id="8">79888005</sctid>-->
-            <uuid id="9">Right sacroanterior position</uuid>
-            <!--<sctid id="9">79643007</sctid>-->                         
-            <uuid id="10">Left sacroposterior position</uuid>
-            <!--<sctid id="10">2138000</sctid>-->
-            <uuid id="11">Right sacroposterior position</uuid>
-            <!--<sctid id="11">112073004</sctid>-->
-            <uuid id="12">Sacroanterior position</uuid>
-            <!--<sctid id="12">79888005</sctid>-->
-            <uuid id="13">Sacroposterior position</uuid>       
-            <!--<sctid id="13">58261003</sctid>-->
-            <uuid id="14">Left sacrolateral position</uuid>
-            <!--<sctid id="14">54486001</sctid>-->
-            <uuid id="15">Right sacrolateral position</uuid>  
-            <!--<sctid id="15">89550007</sctid>-->
-            <uuid id="16">Shoulder left anterior position</uuid>
-            <!--<sctid id="16">249108000</sctid>-->
-            <uuid id="17">Shoulder right anterior position</uuid>                
-            <!--<sctid id="17">249107005</sctid>-->
-            <uuid id="18">Shoulder left posterior position</uuid>            
-            <!--<sctid id="18">27921008</sctid>-->
-            <uuid id="19">Shoulder right posterior position</uuid>                    
-            <!--<sctid id="19">26644000</sctid>-->
-            <uuid id="20">∅</uuid>                        
-            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
-            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
-            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
-            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
-            <possible id="4">Vertex - OA Occipitoanterior</possible>   
-            <possible id="5">Vertex - OP Occipitoposterior</possible>              
-            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
-            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
-            <possible id="8">Breech - LSA Left sacroanterior</possible>         
-            <possible id="9">Breech - RSA Right sacroanterior</possible>
-            <possible id="10">Breech - LSP Left sacroposterior</possible>
-            <possible id="11">Breech - RSP Right sacroposterior</possible>
-            <possible id="12">Breech - SA Sacroanterior</possible>
-            <possible id="13">Breech - SP Sacroposterior</possible>
-            <possible id="14">Breech - LSL Left sacrolateral</possible>
-            <possible id="15">Breech - RSL Right sacrolateral</possible>
-            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
-            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
-            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
-            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
-            <possible id="20">∅</possible>
-            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
-            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
-            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
-            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
-            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
-            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
-            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
-            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
-            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
-            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
-            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
-            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
-            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
-            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
-            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
-            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
-            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
-            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
-            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
-            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
-            <possible id="20" lang="fr">∅</possible>
-            </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
-          </Item>
-                   
-
-        </Item> <!-- End Of Fetus3GroupBox -->
-   
-            
-        <Item type="group" name="Fetus4GroupBox">
-          <uilink widget="fetus4GroupBox"/>
-          <label lang="xx">Fetus 4</label>                       
-          <label lang="fr">Fœtus 4</label>                       
-          <options>DontPrintEmptyValues;collapsible</options>
-        
-          <Item type="radio" name="Fetus4::PrenatalHeartbeat::Radio">                        
-            <uilink label="prenatalHeartbeatF4Label" widget="" layout="prenatalHeartbeatF4RadioLayout"/>         
-              <label lang="xx">Prenatal heartbeat</label>                            
-              <label lang="fr">Bruit du cœur fœtal</label>                     
-              <options>compact</options>                                      
-              <value>                                                         
-                <uuid id="0">yes</uuid>                                     
+          <Item type="radio" name="Fetus2::PrenatalHeartbeat::Radio">
+            <uilink label="prenatalHeartbeatF2Label" widget="" layout="prenatalHeartbeatF2RadioLayout"/>
+              <label lang="xx">Prenatal heartbeat</label>
+              <label lang="fr">Bruit du cœur fœtal</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">yes</uuid>
                 <uuid id="1">no</uuid>
-                <uuid id="2">∅</uuid>                                      
-                <possible id="0" lang="xx">Yes</possible>                   
+                <uuid id="2">∅</uuid>
+                <possible id="0" lang="xx">Yes</possible>
                 <possible id="1" lang="xx">No</possible>
-                <possible id="2" lang="xx">∅</possible>                    
-                <print id="0" lang="xx">Prenatal heartbeat present</print>  
+                <possible id="2" lang="xx">∅</possible>
+                <print id="0" lang="xx">Prenatal heartbeat present</print>
                 <print id="1" lang="xx">Prenatal heartbeat absent</print>
                 <print id="2" lang="xx">Not evaluated</print>
-                <possible id="0" lang="fr">Oui</possible>                   
+                <possible id="0" lang="fr">Oui</possible>
                 <possible id="1" lang="fr">Non</possible>
-                <possible id="2" lang="fr">∅</possible>                   
-                <print id="0" lang="fr">Oui</print>          
+                <possible id="2" lang="fr">∅</possible>
+                <print id="0" lang="fr">Oui</print>
                 <print id="1" lang="fr">Non</print>
-                <print id="2" lang="fr">∅</print>   
-              </value>                                                        
+                <print id="2" lang="fr">∅</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus2::PrenatalHeartbeat::Comment" type="shorttext">
+            <uilink label="" widget="prenatalHeartbeatF2LineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="uniquelist" name="F2Presentation">
+            <uilink label="presentationF2Label" widget="presentationF2ListView" layout=""/>
+            <label lang="xx">Presentation</label>
+            <label lang="fr">Présentation</label>
+            <value>
+            <uuid id="0">Vertex presentation</uuid>
+            <!--<sctid id="0">70028003</sctid>-->
+            <uuid id="1">Frank breech presentation</uuid>
+            <!--<sctid id="1">18559007</sctid>-->
+            <uuid id="2">Complete breech presentation</uuid>
+            <!--<sctid id="2">49168004</sctid>-->
+            <uuid id="3">Incomplete breech presentation</uuid>
+            <!--<sctid id="3">38049006</sctid>-->
+            <uuid id="4">Acromion presentation</uuid>
+            <!--<sctid id="4">23954006</sctid>-->
+            <uuid id="5">ø</uuid>
+            <possible id="0">Vertex</possible>
+            <possible id="1">Frank breech</possible>
+            <possible id="2">Complete breech</possible>
+            <possible id="3">Incomplete breech</possible>
+            <possible id="4">Acromion presentation</possible>
+            <possible id="5">ø</possible>
+            <possible id="0" lang="fr">céphalique (sommet)</possible>
+            <possible id="1" lang="fr">siège décomplété</possible>
+            <possible id="2" lang="fr">siège complet</possible>
+            <possible id="3" lang="fr">siège incomplet</possible>
+            <possible id="4" lang="fr">transverse (épaule)</possible>
+            <possible id="5" lang="fr">ø</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>
+          </Item>
+
+          <Item type="uniquelist" name="F2Position">
+            <uilink label="positionF2Label" widget="positionF2ListView" layout=""/>
+            <label lang="xx">Position</label>
+            <label lang="fr">Variété</label>
+            <value>
+            <uuid id="0">Left occipitoanterior position</uuid>
+            <!--<sctid id="0">11409005</sctid>-->
+            <uuid id="1">Right occipitoanterior position</uuid>
+            <!--<sctid id="1">39889007</sctid>-->
+            <uuid id="2">Left occipitoposterior position</uuid>
+            <!--<sctid id="2">31477000</sctid>-->
+            <uuid id="3">Right occipitoposterior position</uuid>
+            <!--<sctid id="3">36547009</sctid>-->
+            <uuid id="4">Occipitoanterior position</uuid>
+            <!--<sctid id="4">90381008</sctid>-->
+            <uuid id="5">Occipitoposterior position</uuid>
+            <!--<sctid id="5">37235006</sctid>-->
+            <uuid id="6">Left occipitolateral position</uuid>
+            <!--<sctid id="6">18905000</sctid>-->
+            <uuid id="7">Right occipitolateral position</uuid>
+            <!--<sctid id="7">37040008</sctid>-->
+            <uuid id="8">Left sacroanterior position</uuid>
+            <!--<sctid id="8">79888005</sctid>-->
+            <uuid id="9">Right sacroanterior position</uuid>
+            <!--<sctid id="9">79643007</sctid>-->
+            <uuid id="10">Left sacroposterior position</uuid>
+            <!--<sctid id="10">2138000</sctid>-->
+            <uuid id="11">Right sacroposterior position</uuid>
+            <!--<sctid id="11">112073004</sctid>-->
+            <uuid id="12">Sacroanterior position</uuid>
+            <!--<sctid id="12">79888005</sctid>-->
+            <uuid id="13">Sacroposterior position</uuid>
+            <!--<sctid id="13">58261003</sctid>-->
+            <uuid id="14">Left sacrolateral position</uuid>
+            <!--<sctid id="14">54486001</sctid>-->
+            <uuid id="15">Right sacrolateral position</uuid>
+            <!--<sctid id="15">89550007</sctid>-->
+            <uuid id="16">Shoulder left anterior position</uuid>
+            <!--<sctid id="16">249108000</sctid>-->
+            <uuid id="17">Shoulder right anterior position</uuid>
+            <!--<sctid id="17">249107005</sctid>-->
+            <uuid id="18">Shoulder left posterior position</uuid>
+            <!--<sctid id="18">27921008</sctid>-->
+            <uuid id="19">Shoulder right posterior position</uuid>
+            <!--<sctid id="19">26644000</sctid>-->
+            <uuid id="20">∅</uuid>
+            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>
+            <possible id="4">Vertex - OA Occipitoanterior</possible>
+            <possible id="5">Vertex - OP Occipitoposterior</possible>
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>
+            <possible id="8">Breech - LSA Left sacroanterior</possible>
+            <possible id="9">Breech - RSA Right sacroanterior</possible>
+            <possible id="10">Breech - LSP Left sacroposterior</possible>
+            <possible id="11">Breech - RSP Right sacroposterior</possible>
+            <possible id="12">Breech - SA Sacroanterior</possible>
+            <possible id="13">Breech - SP Sacroposterior</possible>
+            <possible id="14">Breech - LSL Left sacrolateral</possible>
+            <possible id="15">Breech - RSL Right sacrolateral</possible>
+            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
+            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
+            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
+            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
+            <possible id="20">∅</possible>
+            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>
+            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
+            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
+            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
+            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
+            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
+            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
+            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
+            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
+            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
+            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
+            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
+            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
+            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
+            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
+            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
+            <possible id="20" lang="fr">∅</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>
+          </Item>
+
+      </Item> <!-- End Of Fetus2GroupBox -->
+
+      <Item type="group" name="Fetus3GroupBox">
+        <uilink widget="fetus3GroupBox"/>
+        <label lang="xx">Fetus 3</label>
+        <label lang="fr">Fœtus 3</label>
+        <options>DontPrintEmptyValues;collapsible</options>
+
+          <Item type="radio" name="Fetus3::PrenatalHeartbeat::Radio">
+            <uilink label="prenatalHeartbeatF3Label" widget="" layout="prenatalHeartbeatF3RadioLayout"/>
+              <label lang="xx">Prenatal heartbeat</label>
+              <label lang="fr">Bruit du cœur fœtal</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">yes</uuid>
+                <uuid id="1">no</uuid>
+                <uuid id="2">∅</uuid>
+                <possible id="0" lang="xx">Yes</possible>
+                <possible id="1" lang="xx">No</possible>
+                <possible id="2" lang="xx">∅</possible>
+                <print id="0" lang="xx">Prenatal heartbeat present</print>
+                <print id="1" lang="xx">Prenatal heartbeat absent</print>
+                <print id="2" lang="xx">Not evaluated</print>
+                <possible id="0" lang="fr">Oui</possible>
+                <possible id="1" lang="fr">Non</possible>
+                <possible id="2" lang="fr">∅</possible>
+                <print id="0" lang="fr">Oui</print>
+                <print id="1" lang="fr">Non</print>
+                <print id="2" lang="fr">∅</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus3::PrenatalHeartbeat::Comment" type="shorttext">
+            <uilink label="" widget="prenatalHeartbeatF3LineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="uniquelist" name="F3Presentation">
+            <uilink label="presentationF3Label" widget="presentationF3ListView" layout=""/>
+            <label lang="xx">Presentation</label>
+            <label lang="fr">Présentation</label>
+            <value>
+            <uuid id="0">Vertex presentation</uuid>
+            <!--<sctid id="0">70028003</sctid>-->
+            <uuid id="1">Frank breech presentation</uuid>
+            <!--<sctid id="1">18559007</sctid>-->
+            <uuid id="2">Complete breech presentation</uuid>
+            <!--<sctid id="2">49168004</sctid>-->
+            <uuid id="3">Incomplete breech presentation</uuid>
+            <!--<sctid id="3">38049006</sctid>-->
+            <uuid id="4">Acromion presentation</uuid>
+            <!--<sctid id="4">23954006</sctid>-->
+            <uuid id="5">ø</uuid>
+            <possible id="0">Vertex</possible>
+            <possible id="1">Frank breech</possible>
+            <possible id="2">Complete breech</possible>
+            <possible id="3">Incomplete breech</possible>
+            <possible id="4">Acromion presentation</possible>
+            <possible id="5">ø</possible>
+            <possible id="0" lang="fr">céphalique (sommet)</possible>
+            <possible id="1" lang="fr">siège décomplété</possible>
+            <possible id="2" lang="fr">siège complet</possible>
+            <possible id="3" lang="fr">siège incomplet</possible>
+            <possible id="4" lang="fr">transverse (épaule)</possible>
+            <possible id="5" lang="fr">ø</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>
+          </Item>
+
+          <Item type="uniquelist" name="F3Position">
+            <uilink label="positionF3Label" widget="positionF3ListView" layout=""/>
+            <label lang="xx">Position</label>
+            <label lang="fr">Variété</label>
+            <value>
+            <uuid id="0">Left occipitoanterior position</uuid>
+            <!--<sctid id="0">11409005</sctid>-->
+            <uuid id="1">Right occipitoanterior position</uuid>
+            <!--<sctid id="1">39889007</sctid>-->
+            <uuid id="2">Left occipitoposterior position</uuid>
+            <!--<sctid id="2">31477000</sctid>-->
+            <uuid id="3">Right occipitoposterior position</uuid>
+            <!--<sctid id="3">36547009</sctid>-->
+            <uuid id="4">Occipitoanterior position</uuid>
+            <!--<sctid id="4">90381008</sctid>-->
+            <uuid id="5">Occipitoposterior position</uuid>
+            <!--<sctid id="5">37235006</sctid>-->
+            <uuid id="6">Left occipitolateral position</uuid>
+            <!--<sctid id="6">18905000</sctid>-->
+            <uuid id="7">Right occipitolateral position</uuid>
+            <!--<sctid id="7">37040008</sctid>-->
+            <uuid id="8">Left sacroanterior position</uuid>
+            <!--<sctid id="8">79888005</sctid>-->
+            <uuid id="9">Right sacroanterior position</uuid>
+            <!--<sctid id="9">79643007</sctid>-->
+            <uuid id="10">Left sacroposterior position</uuid>
+            <!--<sctid id="10">2138000</sctid>-->
+            <uuid id="11">Right sacroposterior position</uuid>
+            <!--<sctid id="11">112073004</sctid>-->
+            <uuid id="12">Sacroanterior position</uuid>
+            <!--<sctid id="12">79888005</sctid>-->
+            <uuid id="13">Sacroposterior position</uuid>
+            <!--<sctid id="13">58261003</sctid>-->
+            <uuid id="14">Left sacrolateral position</uuid>
+            <!--<sctid id="14">54486001</sctid>-->
+            <uuid id="15">Right sacrolateral position</uuid>
+            <!--<sctid id="15">89550007</sctid>-->
+            <uuid id="16">Shoulder left anterior position</uuid>
+            <!--<sctid id="16">249108000</sctid>-->
+            <uuid id="17">Shoulder right anterior position</uuid>
+            <!--<sctid id="17">249107005</sctid>-->
+            <uuid id="18">Shoulder left posterior position</uuid>
+            <!--<sctid id="18">27921008</sctid>-->
+            <uuid id="19">Shoulder right posterior position</uuid>
+            <!--<sctid id="19">26644000</sctid>-->
+            <uuid id="20">∅</uuid>
+            <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>
+            <possible id="4">Vertex - OA Occipitoanterior</possible>
+            <possible id="5">Vertex - OP Occipitoposterior</possible>
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>
+            <possible id="8">Breech - LSA Left sacroanterior</possible>
+            <possible id="9">Breech - RSA Right sacroanterior</possible>
+            <possible id="10">Breech - LSP Left sacroposterior</possible>
+            <possible id="11">Breech - RSP Right sacroposterior</possible>
+            <possible id="12">Breech - SA Sacroanterior</possible>
+            <possible id="13">Breech - SP Sacroposterior</possible>
+            <possible id="14">Breech - LSL Left sacrolateral</possible>
+            <possible id="15">Breech - RSL Right sacrolateral</possible>
+            <possible id="16">Shoulder - LSA Shoulder left anterior position</possible>
+            <possible id="17">Shoulder - RSA Shoulder right anterior position</possible>
+            <possible id="18">Shoulder - LSP Shoulder left posterior position</possible>
+            <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
+            <possible id="20">∅</possible>
+            <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>
+            <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
+            <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
+            <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
+            <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
+            <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
+            <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
+            <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
+            <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>
+            <possible id="13" lang="fr">Podalique - SIP Sacro-iliaque postérieure</possible>
+            <possible id="14" lang="fr">Podalique - SIGT Sacro-iliaque gauche transverse</possible>
+            <possible id="15" lang="fr">Podalique - SIDT Sacro-iliaque droite transverse</possible>
+            <possible id="16" lang="fr">Épaule - EGDA Épaule gauche dorso-antérieure</possible>
+            <possible id="17" lang="fr">Épaule - EDDA Épaule droite dorso-antérieure</possible>
+            <possible id="18" lang="fr">Épaule - EGDP Épaule gauche dorso-postérieure</possible>
+            <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
+            <possible id="20" lang="fr">∅</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>
+          </Item>
+
+
+        </Item> <!-- End Of Fetus3GroupBox -->
+
+
+        <Item type="group" name="Fetus4GroupBox">
+          <uilink widget="fetus4GroupBox"/>
+          <label lang="xx">Fetus 4</label>
+          <label lang="fr">Fœtus 4</label>
+          <options>DontPrintEmptyValues;collapsible</options>
+
+          <Item type="radio" name="Fetus4::PrenatalHeartbeat::Radio">
+            <uilink label="prenatalHeartbeatF4Label" widget="" layout="prenatalHeartbeatF4RadioLayout"/>
+              <label lang="xx">Prenatal heartbeat</label>
+              <label lang="fr">Bruit du cœur fœtal</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">yes</uuid>
+                <uuid id="1">no</uuid>
+                <uuid id="2">∅</uuid>
+                <possible id="0" lang="xx">Yes</possible>
+                <possible id="1" lang="xx">No</possible>
+                <possible id="2" lang="xx">∅</possible>
+                <print id="0" lang="xx">Prenatal heartbeat present</print>
+                <print id="1" lang="xx">Prenatal heartbeat absent</print>
+                <print id="2" lang="xx">Not evaluated</print>
+                <possible id="0" lang="fr">Oui</possible>
+                <possible id="1" lang="fr">Non</possible>
+                <possible id="2" lang="fr">∅</possible>
+                <print id="0" lang="fr">Oui</print>
+                <print id="1" lang="fr">Non</print>
+                <print id="2" lang="fr">∅</print>
+              </value>
           </Item>
 
           <Item name="Fetus4::PrenatalHeartbeat::Comment" type="shorttext">
-            <uilink label="" widget="prenatalHeartbeatF4LineEdit" layout="" /> 
+            <uilink label="" widget="prenatalHeartbeatF4LineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
-          </Item>          
+          </Item>
 
-          <Item type="uniquelist" name="F4Presentation">                   
-            <uilink label="presentationF4Label" widget="presentationF4ListView" layout=""/>         
-            <label lang="xx">Presentation</label>                             
-            <label lang="fr">Présentation</label>                            
-            <value>                                                         
-            <uuid id="0">Vertex presentation</uuid> 
-            <!--<sctid id="0">70028003</sctid>-->                             
+          <Item type="uniquelist" name="F4Presentation">
+            <uilink label="presentationF4Label" widget="presentationF4ListView" layout=""/>
+            <label lang="xx">Presentation</label>
+            <label lang="fr">Présentation</label>
+            <value>
+            <uuid id="0">Vertex presentation</uuid>
+            <!--<sctid id="0">70028003</sctid>-->
             <uuid id="1">Frank breech presentation</uuid>
-            <!--<sctid id="1">18559007</sctid>-->                              
+            <!--<sctid id="1">18559007</sctid>-->
             <uuid id="2">Complete breech presentation</uuid>
             <!--<sctid id="2">49168004</sctid>-->
             <uuid id="3">Incomplete breech presentation</uuid>
-            <!--<sctid id="3">38049006</sctid>-->                                      
+            <!--<sctid id="3">38049006</sctid>-->
             <uuid id="4">Acromion presentation</uuid>
-            <!--<sctid id="4">23954006</sctid>-->                                  
-            <uuid id="5">ø</uuid>                                
+            <!--<sctid id="4">23954006</sctid>-->
+            <uuid id="5">ø</uuid>
             <possible id="0">Vertex</possible>
-            <possible id="1">Frank breech</possible>      
-            <possible id="2">Complete breech</possible>                    
-            <possible id="3">Incomplete breech</possible>                      
+            <possible id="1">Frank breech</possible>
+            <possible id="2">Complete breech</possible>
+            <possible id="3">Incomplete breech</possible>
             <possible id="4">Acromion presentation</possible>
-            <possible id="5">ø</possible>              
+            <possible id="5">ø</possible>
             <possible id="0" lang="fr">céphalique (sommet)</possible>
-            <possible id="1" lang="fr">siège décomplété</possible>      
-            <possible id="2" lang="fr">siège complet</possible>                      
-            <possible id="3" lang="fr">siège incomplet</possible>                      
-            <possible id="4" lang="fr">transverse (épaule)</possible>   
-            <possible id="5" lang="fr">ø</possible>              
+            <possible id="1" lang="fr">siège décomplété</possible>
+            <possible id="2" lang="fr">siège complet</possible>
+            <possible id="3" lang="fr">siège incomplet</possible>
+            <possible id="4" lang="fr">transverse (épaule)</possible>
+            <possible id="5" lang="fr">ø</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
+            <options>resizeToContent;DontPrintEmptyValue</options>
           </Item>
 
-          <Item type="uniquelist" name="F4Position">                   
-            <uilink label="positionF4Label" widget="positionF4ListView" layout=""/>         
-            <label lang="xx">Position</label>                             
-            <label lang="fr">Variété</label>                            
-            <value>                                                         
+          <Item type="uniquelist" name="F4Position">
+            <uilink label="positionF4Label" widget="positionF4ListView" layout=""/>
+            <label lang="xx">Position</label>
+            <label lang="fr">Variété</label>
+            <value>
             <uuid id="0">Left occipitoanterior position</uuid>
             <!--<sctid id="0">11409005</sctid>-->
             <uuid id="1">Right occipitoanterior position</uuid>
-            <!--<sctid id="1">39889007</sctid>-->                              
+            <!--<sctid id="1">39889007</sctid>-->
             <uuid id="2">Left occipitoposterior position</uuid>
-            <!--<sctid id="2">31477000</sctid>-->                                     
+            <!--<sctid id="2">31477000</sctid>-->
             <uuid id="3">Right occipitoposterior position</uuid>
-            <!--<sctid id="3">36547009</sctid>-->                                     
+            <!--<sctid id="3">36547009</sctid>-->
             <uuid id="4">Occipitoanterior position</uuid>
-            <!--<sctid id="4">90381008</sctid>-->                                     
+            <!--<sctid id="4">90381008</sctid>-->
             <uuid id="5">Occipitoposterior position</uuid>
-            <!--<sctid id="5">37235006</sctid>-->                                
+            <!--<sctid id="5">37235006</sctid>-->
             <uuid id="6">Left occipitolateral position</uuid>
-            <!--<sctid id="6">18905000</sctid>-->            
+            <!--<sctid id="6">18905000</sctid>-->
             <uuid id="7">Right occipitolateral position</uuid>
-            <!--<sctid id="7">37040008</sctid>-->                   
+            <!--<sctid id="7">37040008</sctid>-->
             <uuid id="8">Left sacroanterior position</uuid>
             <!--<sctid id="8">79888005</sctid>-->
             <uuid id="9">Right sacroanterior position</uuid>
-            <!--<sctid id="9">79643007</sctid>-->                         
+            <!--<sctid id="9">79643007</sctid>-->
             <uuid id="10">Left sacroposterior position</uuid>
             <!--<sctid id="10">2138000</sctid>-->
             <uuid id="11">Right sacroposterior position</uuid>
             <!--<sctid id="11">112073004</sctid>-->
             <uuid id="12">Sacroanterior position</uuid>
             <!--<sctid id="12">79888005</sctid>-->
-            <uuid id="13">Sacroposterior position</uuid>       
+            <uuid id="13">Sacroposterior position</uuid>
             <!--<sctid id="13">58261003</sctid>-->
             <uuid id="14">Left sacrolateral position</uuid>
             <!--<sctid id="14">54486001</sctid>-->
-            <uuid id="15">Right sacrolateral position</uuid>  
+            <uuid id="15">Right sacrolateral position</uuid>
             <!--<sctid id="15">89550007</sctid>-->
             <uuid id="16">Shoulder left anterior position</uuid>
             <!--<sctid id="16">249108000</sctid>-->
-            <uuid id="17">Shoulder right anterior position</uuid>                
+            <uuid id="17">Shoulder right anterior position</uuid>
             <!--<sctid id="17">249107005</sctid>-->
-            <uuid id="18">Shoulder left posterior position</uuid>            
+            <uuid id="18">Shoulder left posterior position</uuid>
             <!--<sctid id="18">27921008</sctid>-->
-            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <uuid id="19">Shoulder right posterior position</uuid>
             <!--<sctid id="19">26644000</sctid>-->
-            <uuid id="20">∅</uuid>                        
+            <uuid id="20">∅</uuid>
             <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
-            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
-            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
-            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
-            <possible id="4">Vertex - OA Occipitoanterior</possible>   
-            <possible id="5">Vertex - OP Occipitoposterior</possible>              
-            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
-            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
-            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>
+            <possible id="4">Vertex - OA Occipitoanterior</possible>
+            <possible id="5">Vertex - OP Occipitoposterior</possible>
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>
+            <possible id="8">Breech - LSA Left sacroanterior</possible>
             <possible id="9">Breech - RSA Right sacroanterior</possible>
             <possible id="10">Breech - LSP Left sacroposterior</possible>
             <possible id="11">Breech - RSP Right sacroposterior</possible>
@@ -1079,8 +1191,8 @@
             <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
             <possible id="20">∅</possible>
             <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
-            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
-            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>
             <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
             <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
             <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
@@ -1100,138 +1212,138 @@
             <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
             <possible id="20" lang="fr">∅</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
+            <options>resizeToContent;DontPrintEmptyValue</options>
           </Item>
 
-                                 
+
       </Item> <!-- End Of Fetus4GroupBox -->
 
-         
+
       <Item type="group" name="Fetus5GroupBox">
         <uilink widget="fetus5GroupBox"/>
-        <label lang="xx">Fetus 5</label>                       
-        <label lang="fr">Fœtus 5</label>                       
+        <label lang="xx">Fetus 5</label>
+        <label lang="fr">Fœtus 5</label>
         <options>DontPrintEmptyValues;collapsible</options>
-        
-          <Item type="radio" name="Fetus5::PrenatalHeartbeat::Radio">                        
-            <uilink label="prenatalHeartbeatF5Label" widget="" layout="prenatalHeartbeatF5RadioLayout"/>         
-              <label lang="xx">Prenatal heartbeat</label>                            
-              <label lang="fr">Bruit du cœur fœtal</label>                     
-              <options>compact</options>                                      
-              <value>                                                         
-                <uuid id="0">yes</uuid>                                     
+
+          <Item type="radio" name="Fetus5::PrenatalHeartbeat::Radio">
+            <uilink label="prenatalHeartbeatF5Label" widget="" layout="prenatalHeartbeatF5RadioLayout"/>
+              <label lang="xx">Prenatal heartbeat</label>
+              <label lang="fr">Bruit du cœur fœtal</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">yes</uuid>
                 <uuid id="1">no</uuid>
-                <uuid id="2">∅</uuid>                                      
-                <possible id="0" lang="xx">Yes</possible>                   
+                <uuid id="2">∅</uuid>
+                <possible id="0" lang="xx">Yes</possible>
                 <possible id="1" lang="xx">No</possible>
-                <possible id="2" lang="xx">∅</possible>                    
-                <print id="0" lang="xx">Prenatal heartbeat present</print>  
+                <possible id="2" lang="xx">∅</possible>
+                <print id="0" lang="xx">Prenatal heartbeat present</print>
                 <print id="1" lang="xx">Prenatal heartbeat absent</print>
                 <print id="2" lang="xx">Not evaluated</print>
-                <possible id="0" lang="fr">Oui</possible>                   
+                <possible id="0" lang="fr">Oui</possible>
                 <possible id="1" lang="fr">Non</possible>
-                <possible id="2" lang="fr">∅</possible>                   
-                <print id="0" lang="fr">Oui</print>          
+                <possible id="2" lang="fr">∅</possible>
+                <print id="0" lang="fr">Oui</print>
                 <print id="1" lang="fr">Non</print>
-                <print id="2" lang="fr">∅</print>   
-              </value>                                                        
+                <print id="2" lang="fr">∅</print>
+              </value>
           </Item>
 
           <Item name="Fetus5::PrenatalHeartbeat::Comment" type="shorttext">
-            <uilink label="" widget="prenatalHeartbeatF5LineEdit" layout="" /> 
+            <uilink label="" widget="prenatalHeartbeatF5LineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
-          </Item>          
+          </Item>
 
-          <Item type="uniquelist" name="F5Presentation">                   
-            <uilink label="presentationF5Label" widget="presentationF5ListView" layout=""/>         
-            <label lang="xx">Presentation</label>                             
-            <label lang="fr">Présentation</label>                            
-            <value>                                                         
-            <uuid id="0">Vertex presentation</uuid> 
-            <!--<sctid id="0">70028003</sctid>-->                             
+          <Item type="uniquelist" name="F5Presentation">
+            <uilink label="presentationF5Label" widget="presentationF5ListView" layout=""/>
+            <label lang="xx">Presentation</label>
+            <label lang="fr">Présentation</label>
+            <value>
+            <uuid id="0">Vertex presentation</uuid>
+            <!--<sctid id="0">70028003</sctid>-->
             <uuid id="1">Frank breech presentation</uuid>
-            <!--<sctid id="1">18559007</sctid>-->                              
+            <!--<sctid id="1">18559007</sctid>-->
             <uuid id="2">Complete breech presentation</uuid>
             <!--<sctid id="2">49168004</sctid>-->
             <uuid id="3">Incomplete breech presentation</uuid>
-            <!--<sctid id="3">38049006</sctid>-->                                      
+            <!--<sctid id="3">38049006</sctid>-->
             <uuid id="4">Acromion presentation</uuid>
-            <!--<sctid id="4">23954006</sctid>-->                                  
-            <uuid id="5">ø</uuid>                                
+            <!--<sctid id="4">23954006</sctid>-->
+            <uuid id="5">ø</uuid>
             <possible id="0">Vertex</possible>
-            <possible id="1">Frank breech</possible>      
-            <possible id="2">Complete breech</possible>                    
-            <possible id="3">Incomplete breech</possible>                      
+            <possible id="1">Frank breech</possible>
+            <possible id="2">Complete breech</possible>
+            <possible id="3">Incomplete breech</possible>
             <possible id="4">Acromion presentation</possible>
-            <possible id="5">ø</possible>              
+            <possible id="5">ø</possible>
             <possible id="0" lang="fr">céphalique (sommet)</possible>
-            <possible id="1" lang="fr">siège décomplété</possible>      
-            <possible id="2" lang="fr">siège complet</possible>                      
-            <possible id="3" lang="fr">siège incomplet</possible>                      
-            <possible id="4" lang="fr">transverse (épaule)</possible>   
-            <possible id="5" lang="fr">ø</possible>              
+            <possible id="1" lang="fr">siège décomplété</possible>
+            <possible id="2" lang="fr">siège complet</possible>
+            <possible id="3" lang="fr">siège incomplet</possible>
+            <possible id="4" lang="fr">transverse (épaule)</possible>
+            <possible id="5" lang="fr">ø</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
+            <options>resizeToContent;DontPrintEmptyValue</options>
           </Item>
 
-          <Item type="uniquelist" name="F5Position">                   
-            <uilink label="positionF5Label" widget="positionF5ListView" layout=""/>         
-            <label lang="xx">Position</label>                             
-            <label lang="fr">Variété</label>                            
-            <value>                                                         
+          <Item type="uniquelist" name="F5Position">
+            <uilink label="positionF5Label" widget="positionF5ListView" layout=""/>
+            <label lang="xx">Position</label>
+            <label lang="fr">Variété</label>
+            <value>
             <uuid id="0">Left occipitoanterior position</uuid>
             <!--<sctid id="0">11409005</sctid>-->
             <uuid id="1">Right occipitoanterior position</uuid>
-            <!--<sctid id="1">39889007</sctid>-->                              
+            <!--<sctid id="1">39889007</sctid>-->
             <uuid id="2">Left occipitoposterior position</uuid>
-            <!--<sctid id="2">31477000</sctid>-->                                     
+            <!--<sctid id="2">31477000</sctid>-->
             <uuid id="3">Right occipitoposterior position</uuid>
-            <!--<sctid id="3">36547009</sctid>-->                                     
+            <!--<sctid id="3">36547009</sctid>-->
             <uuid id="4">Occipitoanterior position</uuid>
-            <!--<sctid id="4">90381008</sctid>-->                                     
+            <!--<sctid id="4">90381008</sctid>-->
             <uuid id="5">Occipitoposterior position</uuid>
-            <!--<sctid id="5">37235006</sctid>-->                                
+            <!--<sctid id="5">37235006</sctid>-->
             <uuid id="6">Left occipitolateral position</uuid>
-            <!--<sctid id="6">18905000</sctid>-->            
+            <!--<sctid id="6">18905000</sctid>-->
             <uuid id="7">Right occipitolateral position</uuid>
-            <!--<sctid id="7">37040008</sctid>-->                   
+            <!--<sctid id="7">37040008</sctid>-->
             <uuid id="8">Left sacroanterior position</uuid>
             <!--<sctid id="8">79888005</sctid>-->
             <uuid id="9">Right sacroanterior position</uuid>
-            <!--<sctid id="9">79643007</sctid>-->                         
+            <!--<sctid id="9">79643007</sctid>-->
             <uuid id="10">Left sacroposterior position</uuid>
             <!--<sctid id="10">2138000</sctid>-->
             <uuid id="11">Right sacroposterior position</uuid>
             <!--<sctid id="11">112073004</sctid>-->
             <uuid id="12">Sacroanterior position</uuid>
             <!--<sctid id="12">79888005</sctid>-->
-            <uuid id="13">Sacroposterior position</uuid>       
+            <uuid id="13">Sacroposterior position</uuid>
             <!--<sctid id="13">58261003</sctid>-->
             <uuid id="14">Left sacrolateral position</uuid>
             <!--<sctid id="14">54486001</sctid>-->
-            <uuid id="15">Right sacrolateral position</uuid>  
+            <uuid id="15">Right sacrolateral position</uuid>
             <!--<sctid id="15">89550007</sctid>-->
             <uuid id="16">Shoulder left anterior position</uuid>
             <!--<sctid id="16">249108000</sctid>-->
-            <uuid id="17">Shoulder right anterior position</uuid>                
+            <uuid id="17">Shoulder right anterior position</uuid>
             <!--<sctid id="17">249107005</sctid>-->
-            <uuid id="18">Shoulder left posterior position</uuid>            
+            <uuid id="18">Shoulder left posterior position</uuid>
             <!--<sctid id="18">27921008</sctid>-->
-            <uuid id="19">Shoulder right posterior position</uuid>                    
+            <uuid id="19">Shoulder right posterior position</uuid>
             <!--<sctid id="19">26644000</sctid>-->
-            <uuid id="20">∅</uuid>                        
+            <uuid id="20">∅</uuid>
             <possible id="0">Vertex - LOA Lef occipitoanterior</possible>
-            <possible id="1">Vertex - ROA Right occipitoanterior</possible>      
-            <possible id="2">Vertex - LOP Left occipitoposterior</possible>           
-            <possible id="3">Vertex - ROP Right occipitoposterior</possible>          
-            <possible id="4">Vertex - OA Occipitoanterior</possible>   
-            <possible id="5">Vertex - OP Occipitoposterior</possible>              
-            <possible id="6">Vertex - LOL Left occipitolateral</possible>            
-            <possible id="7">Vertex - ROL Right occipitolateral</possible>            
-            <possible id="8">Breech - LSA Left sacroanterior</possible>         
+            <possible id="1">Vertex - ROA Right occipitoanterior</possible>
+            <possible id="2">Vertex - LOP Left occipitoposterior</possible>
+            <possible id="3">Vertex - ROP Right occipitoposterior</possible>
+            <possible id="4">Vertex - OA Occipitoanterior</possible>
+            <possible id="5">Vertex - OP Occipitoposterior</possible>
+            <possible id="6">Vertex - LOL Left occipitolateral</possible>
+            <possible id="7">Vertex - ROL Right occipitolateral</possible>
+            <possible id="8">Breech - LSA Left sacroanterior</possible>
             <possible id="9">Breech - RSA Right sacroanterior</possible>
             <possible id="10">Breech - LSP Left sacroposterior</possible>
             <possible id="11">Breech - RSP Right sacroposterior</possible>
@@ -1245,8 +1357,8 @@
             <possible id="19">Shoulder - RSP Shoulder right posterior position</possible>
             <possible id="20">∅</possible>
             <possible id="0" lang="fr">Céphalique - OIAG Occipito-iliaque gauche antérieure</possible>
-            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>  
-            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>    
+            <possible id="1" lang="fr">Céphalique - OIDA Occipito-iliaque droite antérieure</possible>
+            <possible id="2" lang="fr">Céphalique - OIGP Occipito-iliaque gauche postérieure</possible>
             <possible id="3" lang="fr">Céphalique - OIDP Occipito-iliaque droite postérieure</possible>
             <possible id="4" lang="fr">Céphalique - OIA Occipito-iliaque antérieure</possible>
             <possible id="5" lang="fr">Céphalique - OIP Occipito-iliaque postérieure</possible>
@@ -1266,10 +1378,10 @@
             <possible id="19" lang="fr">Épaule - EDDP Épaule droite dorso-postérieure </possible>
             <possible id="20" lang="fr">∅</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>          
+            <options>resizeToContent;DontPrintEmptyValue</options>
           </Item>
-                                 
-        </Item> <!-- End Of Fetus5GroupBox -->
+
+        </Item> <!-- end of Fetus5GroupBox -->
 
 
   </MedForm>
