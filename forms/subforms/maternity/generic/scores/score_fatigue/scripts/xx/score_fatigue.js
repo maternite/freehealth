@@ -26,7 +26,7 @@ namespace.module('com.freemedforms.obstetrics.score.fatigue', function (exports,
                      }
 
                      function createVariableContent() {
-                         // Three options :
+                         // Two options :
                          buttonText["fr"] = [ "Tout effacer" ];
                          buttonText["xx"] = [ "Clear all" ];
                      }
@@ -37,13 +37,16 @@ namespace.module('com.freemedforms.obstetrics.score.fatigue', function (exports,
                      }
 
                      function retranslateUi() {
+                         print("retranslateUi()");
                          // Find the optionsText language
                          var lang = freemedforms.forms.currentLanguage;
                          if (buttonText[lang].length <= 0) {
                              lang = "xx";
+                             print("lang = " + lang);
                          }
                          for(var i=0; i < buttonText[lang].length; i++) {
-                             freemedforms.uiTools.setItemText(clearButton, i, buttonText[lang][i]);
+                             print("buttonText[lang][i] = " + buttonText[lang][i]);
+                             clearButton.setText(buttonText[lang][i]);
                          }
                      }
 

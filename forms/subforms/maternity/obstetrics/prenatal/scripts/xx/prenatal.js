@@ -4,12 +4,14 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         'setupUi': setupUi,
         'hideFetusGroupBox': hideFetusGroupBox,
         'computePulsePressure': computePulsePressure,
-        'computeWeightGain': computeWeightGain
+        'computeWeightGain': computeWeightGain,
+        'computeFatigueScore': computeFatigueScore
     });
 
     var fetusNumber, fetusGroup1, fetusGroup2, fetusGroup3, fetusGroup4, fetusGroup5;
     var syst, diast, pulse;
     var weight, weightPrePregnancy, weightGain;
+    var fatigueScore, fatigueScoreLineEdit, standing, industrial, repetitive, physical, hardness;
 
     function setupUi() {
 
@@ -39,6 +41,15 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         weight = formUi.findChild("weightValue");
         weightPrePregnancy = formUi.findChild("prePregnancyWeightValue");
         weightGain = formUi.findChild("weightGainValue");
+
+        // fatigue score
+        standing = formUi.findChild("standingCheck");
+        industrial = formUi.findChild("industrialCheck");
+        repetitive = formUi.findChild("repetitiveCheck");
+        physical = formUi.findChild("physicalCheck");
+        hardness = formUi.findChild("hardnessCheck");
+        fatigueScoreLineEdit = formUi.findChild("fatigueScoreTotalLineEdit");
+        
                 
 
         // fetus connection
@@ -50,7 +61,14 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         
         // weight connection
         weight['valueChanged(double)'].connect(this, computeWeightGain);          
-        weightPrePregnancy['valueChanged(double)'].connect(this, computeWeightGain);          
+        weightPrePregnancy['valueChanged(double)'].connect(this, computeWeightGain);
+        
+        // fatigue score connection
+        standing['stateChanged(int)'].connect(this, computeFatigueScore);
+        industrial['stateChanged(int)'].connect(this, computeFatigueScore);
+        repetitive['stateChanged(int)'].connect(this, computeFatigueScore);
+        physical['stateChanged(int)'].connect(this, computeFatigueScore);
+        hardness['stateChanged(int)'].connect(this, computeFatigueScore); 
 
     }
 
@@ -128,6 +146,12 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         var text = weight.value - weightPrePregnancy.value;                                    
         weightGain.setText(text);
         print("computeWeightGain() gain = " + text);                                                   
+    }
+
+    function computeFatigueScore() {
+        print("computeFatigueScore()");
+        fatigueScore = (standing.checked == true) + (industrial.checked == true) + (repetitive.checked == true) + (physical.checked == true) + (hardness.checked == true);
+        fatigueScoreLineEdit.setText(fatigueScore);
     }
 
 });

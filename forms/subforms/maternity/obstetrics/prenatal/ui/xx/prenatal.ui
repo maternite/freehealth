@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>892</width>
-    <height>2124</height>
+    <height>2626</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -453,7 +453,7 @@
          </size>
         </property>
         <property name="text">
-         <string>Case History</string>
+         <string>case History</string>
         </property>
        </widget>
       </item>
@@ -484,6 +484,108 @@
         </item>
        </layout>
       </item>
+      <item row="3" column="0">
+       <widget class="QGroupBox" name="subjectiveFatigueScoreGroupBox">
+        <property name="title">
+         <string>fatigueScoreGroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QCheckBox" name="standingCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="industrialCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="repetitiveCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="physicalCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="hardnessCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <widget class="QLabel" name="fatigueScoreTotalLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fatigueScoreTotalLineEdit">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QLabel" name="fatigueScoreCommentLabel">
+             <property name="text">
+              <string>commentLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="fatigueScoreCommentLayout"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -493,6 +595,20 @@
       <string>Objective</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_9">
+      <item row="7" column="0" colspan="4">
+       <widget class="QLabel" name="fundalHeightLabel">
+        <property name="text">
+         <string>Fundal height</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="4">
+       <widget class="QLabel" name="varicoseVeinsLabel">
+        <property name="text">
+         <string>Varicose veins</string>
+        </property>
+       </widget>
+      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="temperatureLabel">
         <property name="text">
@@ -652,12 +768,8 @@
         </property>
        </widget>
       </item>
-      <item row="7" column="0" colspan="4">
-       <widget class="QLabel" name="fundalHeightLabel">
-        <property name="text">
-         <string>Fundal height</string>
-        </property>
-       </widget>
+      <item row="8" column="6">
+       <widget class="QLineEdit" name="peripheralEdemaLineEdit"/>
       </item>
       <item row="7" column="4" colspan="2">
        <widget class="QSpinBox" name="fundalHeightSpinBox">
@@ -682,28 +794,18 @@
       <item row="8" column="5">
        <layout class="QHBoxLayout" name="peripheralEdemaRadioLayout"/>
       </item>
-      <item row="8" column="6">
-       <widget class="QLineEdit" name="peripheralEdemaLineEdit"/>
-      </item>
-      <item row="9" column="0" colspan="4">
-       <widget class="QLabel" name="varicoseVeinsLabel">
-        <property name="text">
-         <string>Varicose veins</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="5">
-       <layout class="QHBoxLayout" name="varicoseVeinsRadioLayout"/>
-      </item>
-      <item row="9" column="6">
-       <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
-      </item>
       <item row="10" column="0" colspan="3">
        <widget class="QLabel" name="pelvisLabel">
         <property name="text">
          <string>Pelvis</string>
         </property>
        </widget>
+      </item>
+      <item row="9" column="6">
+       <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
+      </item>
+      <item row="9" column="5">
+       <layout class="QHBoxLayout" name="varicoseVeinsRadioLayout"/>
       </item>
       <item row="10" column="3" colspan="4">
        <layout class="QHBoxLayout" name="pelvisRadioLayout"/>
@@ -928,7 +1030,7 @@
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_11">
+       <layout class="QVBoxLayout" name="ultrasoundImpressionLayout">
         <item>
          <widget class="QLabel" name="ultrasoundImpressionLabel">
           <property name="text">
@@ -937,7 +1039,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QTextEdit" name="ultrasoundImpressionTextEdit"/>
+         <layout class="QHBoxLayout" name="ultrasoundImpressionTexteditorLayout"/>
         </item>
        </layout>
       </item>

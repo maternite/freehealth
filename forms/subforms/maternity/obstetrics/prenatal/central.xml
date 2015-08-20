@@ -74,7 +74,83 @@
       <possible id="3" lang="fr">ø</possible>
       </value>
     </Item>
-  </Item>
+
+    <Item type="group" name="SubjectiveFatigueScore">                                         
+      <uilink label="" widget="subjectiveFatigueScoreGroupBox" layout="" />                   
+      <label lang="xx">Fatigue score</label>                                         
+      <label lang="fr">Score de fatigue</label>                                          
+      <options>collapsible;expanded</options>
+
+      <Item type="check" name="Score::Fatigue::Check::Standing">                                 
+        <uilink widget="standingCheck"/>                                
+        <options>DontPrintEmptyValues;OnLeft</options>                  
+        <label lang="xx">Standing up at work for more than 4 hours a day</label>
+        <label lang="fr">Travail debout pendant plus de 4 heures par jour</label>
+        <value>                                                         
+          <numerical id="1">0</numerical>                             
+          <numerical id="0">1</numerical>                             
+        </value>
+      </Item>
+
+      <Item type="check" name="Score::Fatigue::Check::Industrial">                               
+        <uilink widget="industrialCheck"/>                              
+        <options>DontPrintEmptyValues;OnLeft</options>                  
+        <label lang="xx">Industrial machinery related work</label>      
+        <label lang="fr">Travail sur machine industrielle</label>       
+        <value>                                                         
+          <numerical id="0">1</numerical>                             
+          <numerical id="1">0</numerical>                             
+        </value>                                                        
+      </Item>
+
+      <Item type="check" name="Score::Fatigue::Check::Repetitive">                               
+        <uilink widget="repetitiveCheck"/>                              
+        <options>DontPrintEmptyValues;OnLeft</options>                  
+        <label lang="xx">Repetitive tasks</label>                       
+        <label lang="fr">Travail répétitif</label>                      
+        <value>                                                         
+          <numerical id="0">1</numerical>                             
+          <numerical id="1">0</numerical>                             
+        </value>                                                        
+      </Item>
+                                                             
+      <Item type="check" name="Score::Fatigue::Check::Physical">                                 
+        <uilink widget="physicalCheck"/>                                
+        <options>DontPrintEmptyValues;OnLeft</options>                  
+        <label lang="xx">Physical work, heavy lifting </label>          
+        <label lang="fr">Travail physique, port de charges lourdes</label>
+        <value>                                                         
+          <numerical id="0">1</numerical>                             
+          <numerical id="1">0</numerical>                             
+        </value>                                                        
+      </Item>
+
+      <Item type="check" name="Score::Fatigue::Check::Hardness">                                 
+        <uilink widget="hardnessCheck"/>                                
+        <options>DontPrintEmptyValues;OnLeft</options>                  
+        <label lang="xx">Hard labor</label>                             
+        <label lang="fr">Pénibilité du poste de travail</label>         
+        <value>                                                         
+          <numerical id="0">1</numerical>                             
+          <numerical id="1">0</numerical>                             
+        </value>                                                        
+      </Item>
+
+      <Item type="shorttext" name="Score::Fatigue::FinalScore">                                     
+        <uilink label="fatigueScoreTotalLabel" widget="fatigueScoreTotalLineEdit"/>                         
+        <label>Score = </label>                                             
+        <options>DontPrintEmptyValues</options>
+      </Item>                                                                 
+                                                                                
+      <Item type="texteditor" name="Score::Fatigue::Comment">                                 
+        <uilink label="fatigueScoreCommentLabel" layout="fatigueScoreCommentLayout"/>                 
+        <label lang="xx">Comments</label>                                     
+        <label lang="fr">Remarques</label>                                    
+        <options>DontPrintEmptyValues</options>                               
+      </Item>
+    </Item> <!-- end of group subjective fatigue score -->
+
+  </Item>  <!-- end of group subjective --> 
 
     <Item type="group" name="Objective">
       <uilink label="" widget="objectiveGroup" />
@@ -367,7 +443,7 @@
           <!--<sctid></sctid>-->
           <uilink label="cervixConsistencyLabel" widget="" layout="cervixConsistencyRadioLayout" />
           <label lang="xx">Consistency</label>
-          <label lang="fr">Consistence</label>
+          <label lang="fr">Consistance</label>
           <value>
           <uuid id="0">Firm</uuid>
           <!--<sctid id="0"></sctid>-->
@@ -463,6 +539,43 @@
         </value>
       </Item>
 
+      <Item type="radio" name="ObjectiveGroup::Cervix::FetalStation">               
+          <!--<sctid></sctid>-->                                                
+          <uilink label="fetalStationLabel" widget="" layout="fetalStationRadioLayout" />
+          <label lang="xx">Fetal station</label>                                     
+          <label lang="fr">Positionnement</label>
+          <tooltip lang="xx">Position of the fetus' head in relation to the distance from the ischial spines</tooltip>
+          <tooltip lang="fr">Positionnement de la présentation fœtale par rapport aux épines sciatiques</tooltip>                             
+          <value>                                                               
+          <uuid id="0">−3</uuid>                                            
+          <!--<sctid id="0"></sctid>-->                                         
+          <uuid id="1">−2</uuid>                                             
+          <!--<sctid id="1"></sctid>-->                                         
+          <uuid id="2">−1, 0</uuid>                                             
+          <!--<sctid id="2"></sctid>-->                                         
+          <uuid id="3">+1, +2</uuid>                                              
+          <!--<sctid id="3"></sctid>-->                                         
+          <uuid id="4">not done</uuid>                                          
+          <!--<sctid id="4">385660001</sctid>-->                                
+          <possible id="0" lang="xx">−3</possible>                          
+          <possible id="1" lang="xx">−2</possible>                          
+          <possible id="2" lang="xx">−1, 0</possible>                          
+          <possible id="3" lang="xx">+1, +2</possible>                           
+          <possible id="4" lang="xx">ø</possible>                               
+          <possible id="0" lang="fr">Mobile</possible>                           
+          <possible id="1" lang="fr">Amorcée</possible>                        
+          <possible id="2" lang="fr">Fixée</possible>                        
+          <possible id="3" lang="fr">Engagée</possible>                
+          <possible id="4" lang="fr">ø</possible>                               
+          <numerical id="0">0</numerical>                                       
+          <numerical id="1">1</numerical>                                       
+          <numerical id="2">2</numerical>                                       
+          <numerical id="3">3</numerical>                                       
+          <numerical id="4">0</numerical>                                       
+          <options>compact</options>                                            
+        </value>
+      </Item>
+
       <Item name="ObjectiveGroup::InternalCervicalDilation::Comment" type="shorttext">
         <uilink label="internalCervicalDilationLabel" widget="internalCervicalDilationLineEdit" layout="" />
         <label lang="xx">Internal cervical dilation</label>
@@ -531,8 +644,57 @@
         <label lang="fr">Échographie</label>                                            
         <options>collapsible;expanded</options>
 
-        
-     
+      <Item type="shorttext" name="Objective::Ultrasound::Bip::Comment">                                                 
+        <uilink label="ultrasoundBipLabel" widget="ultrasoundBipLineEdit" layout="" />                                 
+        <label lang="xx">BIP (biparietal diameter)</label>                                               
+        <label lang="fr">BIP (diamètre bipariétal)</label>                                               
+        <placeholder lang="xx">Comment</placeholder>                                   
+        <placeholder lang="fr">Commentaire</placeholder>                                   
+      </Item>
+
+      <Item type="doublespin" name="Objective::Ultrasound::Bip::Value">
+        <uilink label="" widget="ultrasoundBipDoubleSpinBox" layout="" />
+        <tooltip lang="xx">BIP (millimeter)</tooltip>
+        <tooltip lang="fr">BIP (millimètre)</tooltip>
+      </Item>
+
+      <Item type="shorttext" name="Objective::Ultrasound::EstimatedFetalWeight::Comment">        
+        <uilink label="ultrasoundEfwLabel" widget="ultrasoundEfwLineEdit" layout="" />
+        <label lang="xx">EFW (estimated fetal weight)</label>                      
+        <label lang="fr">PFE (poids fœtal estimé)</label>                      
+        <placeholder lang="xx">Comment</placeholder>                            
+        <placeholder lang="fr">Commentaire</placeholder>                        
+      </Item>                                                                   
+                                                                                
+      <Item type="spin" name="Objective::Ultrasound::EstimatedFetalWeight::Value">         
+        <uilink label="" widget="ultrasoundEfwSpinBox" layout="" />       
+        <tooltip lang="xx">EFW (gram)</tooltip>                           
+        <tooltip lang="fr">PFE (gramme)</tooltip>                           
+      </Item>
+
+      <Item type="shorttext" name="Objective::Ultrasound::AmnioticFluid::Findings">
+        <uilink label="ultrasoundAmnioticFluidLabel" widget="ultrasoundAmnioticFluidLineEdit" layout="" />
+        <label lang="xx">Amniotic fluid</label>                   
+        <label lang="fr">Liquide amniotique</label>                       
+        <placeholder lang="xx"></placeholder>                            
+        <placeholder lang="fr"></placeholder>                        
+      </Item>
+
+      <Item type="shorttext" name="Objective::Ultrasound::OtherFindings">
+        <uilink label="ultrasoundOtherFindingsLabel" widget="ultrasoundOtherFindingsLineEdit" layout="" />
+        <label lang="xx">Other findings</label>                                 
+        <label lang="fr">Autres résultats</label>                             
+        <placeholder lang="xx"></placeholder>                                   
+        <placeholder lang="fr"></placeholder>                                   
+      </Item>
+
+      <Item type="texteditor" name="Objective::Ultrasound::Impression">                                 
+      <uilink label="ultrasoundImpressionLabel" widget="" layout="ultrasoundImpressionTexteditorLayout" />
+      <label lang="xx">Impression</label>                                     
+      <label lang ="fr">Conclusion</label>                                        
+      <options>FullEditor</options>                                             
+    </Item>
+       
       </Item> <!-- end of group Objective::Ultrasound -->
 
     </Item> <!-- end of group Objective -->
