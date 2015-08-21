@@ -6,15 +6,55 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>892</width>
-    <height>2626</height>
+    <width>778</width>
+    <height>3003</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string/>
   </property>
   <layout class="QGridLayout" name="gridLayout_8">
-   <item row="4" column="0" colspan="2">
+   <item row="6" column="0" colspan="2">
+    <widget class="QGroupBox" name="assessmentGroupBox">
+     <property name="title">
+      <string>assessment</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_15">
+      <item>
+       <layout class="QVBoxLayout" name="diagnosisVerticalLayout">
+        <item>
+         <widget class="QLabel" name="assessmentDiagnosisLabel">
+          <property name="text">
+           <string>diagnosis</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="assessmentDiagnosisListView"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="assessmentDiagnosisLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="problemsVerticalLayout">
+        <item>
+         <widget class="QLabel" name="assessmentProblemsLabel">
+          <property name="text">
+           <string>problems</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="assessmentProblemsTextEditorLayout"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
     <layout class="QGridLayout" name="fetusGridLayout">
      <item row="0" column="0">
       <widget class="QGroupBox" name="fetusGroupBox">
@@ -438,7 +478,7 @@
      </item>
     </layout>
    </item>
-   <item row="0" column="0" colspan="2">
+   <item row="1" column="0" colspan="2">
     <widget class="QGroupBox" name="subjectiveGroupBox">
      <property name="title">
       <string>subjectiveGroupBox</string>
@@ -589,7 +629,7 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="0" colspan="2">
+   <item row="2" column="0" colspan="2">
     <widget class="QGroupBox" name="objectiveGroup">
      <property name="title">
       <string>Objective</string>
@@ -941,7 +981,7 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="0" colspan="2">
+   <item row="3" column="0" colspan="2">
     <widget class="QGroupBox" name="objectiveUltrasoundGroupBox">
      <property name="title">
       <string>ultrasoundGroupBox</string>
@@ -1040,6 +1080,248 @@
         </item>
         <item>
          <layout class="QHBoxLayout" name="ultrasoundImpressionTexteditorLayout"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QGroupBox" name="planGroupBox">
+     <property name="title">
+      <string>plan</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_16">
+      <item>
+       <layout class="QVBoxLayout" name="planOfCareVerticalLayout">
+        <item>
+         <widget class="QLabel" name="assessmentPlanOfCareLabel">
+          <property name="text">
+           <string>plan of care</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="assessmentPlanOfCareTextEditorLayout"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
+     <property name="title">
+      <string>obstetrical calendar</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_19">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="lmpHorizontalLayout">
+            <item>
+             <widget class="QLabel" name="lastMenstrualPeriodLabel">
+              <property name="text">
+               <string>last menstrual period</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="lastMenstrualPeriodDateEdit">
+              <property name="locale">
+               <locale language="French" country="Madagascar"/>
+              </property>
+              <property name="correctionMode">
+               <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+              </property>
+              <property name="displayFormat">
+               <string>dd/MM/yyyy</string>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="conceptionHorizontalLayout">
+            <item>
+             <widget class="QLabel" name="conceptionDateLabel">
+              <property name="text">
+               <string>conception date</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="conceptionDateEdit">
+              <property name="locale">
+               <locale language="French" country="Madagascar"/>
+              </property>
+              <property name="showGroupSeparator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="minimumDate">
+               <date>
+                <year>1790</year>
+                <month>9</month>
+                <day>1</day>
+               </date>
+              </property>
+              <property name="displayFormat">
+               <string>dd/MM/yyyy</string>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+              <property name="currentSectionIndex">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_17">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="useLmpDateOfConceptionLabel">
+            <property name="text">
+             <string>use</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="useLmpCheck">
+            <property name="text">
+             <string>LMP</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="useDateOfConceptionCheck">
+            <property name="text">
+             <string>CD</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_17">
+        <item>
+         <widget class="QLabel" name="gestationalAgeHelpTextLabel">
+          <property name="text">
+           <string>gestational age</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="currentWeeksAmenorrhoeaWeeks">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksLabel">
+          <property name="text">
+           <string>weeks</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="currentWeeksAmenorrhoeaDays">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysLabel">
+          <property name="text">
+           <string>days</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="termHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="termLabel">
+          <property name="text">
+           <string>term</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="termLineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>

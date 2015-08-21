@@ -38,6 +38,95 @@
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 -->
+  <Item type="group" name="ObstetricalCalendar">                                         
+    <uilink label="" widget="obstetricalCalendarGroupBox" layout="" />                   
+    <label lang="xx">Obstetrical calendar</label>                                         
+    <label lang="fr">Calendrier obstétrical</label>                                          
+    <options>collapsible;expanded</options>
+
+      <Item type="date" name="ObstetricalCalendar::LastMentrualPeriod">                              
+        <uilink label="lastMenstrualPeriodLabel" layout="" widget="lastMenstrualPeriodDateEdit"/>
+        <label lang="xx">Last Menstrual Period (LMP)</label>                    
+        <label lang="fr">Date des Dernières Règles (DDR)</label>                
+        <patientdata>LastMenstrualPeriod</patientdata>                          
+        <options>DontPrintEmptyValues</options>                                 
+      </Item>                                                                   
+                                                                                
+      <Item type="date" name="ObstetricalCalendar::ConceptionDate">                                  
+        <uilink label="conceptionDateLabel" layout="" widget="conceptionDateEdit"/>
+        <label lang="xx">Conception date</label>                                
+        <label lang="fr">Date de conception</label>                             
+        <patientdata>LastMenstrualPeriod</patientdata>                          
+        <options>DontPrintEmptyValues</options>                                 
+      </Item>
+
+      <Item name="ObstetricalCalendar::UseLmpDateOfConceptionHelpText" type="helptext">   
+        <uilink label="useLmpDateOfConceptionLabel" layout="" widget=""/>       
+        <label lang="xx">Which date to use?</label>        
+        <label lang="fr">Quelle date utiliser?</label>      
+        <options>printable</options>                                            
+        <value>                                                                 
+          <default></default>                                  
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="ObstetricalCalendar::UseLMP::Check">                
+        <uilink widget="useLmpCheck"/>                                        
+        <options>DontPrintEmptyValues;OnLeft</options>                          
+        <label lang="xx">LMP</label>
+        <label lang="fr">DDR</label>
+        <value>                                                                 
+          <numerical id="1">0</numerical>                                       
+          <numerical id="0">1</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">             
+        <uilink widget="useDateOfConceptionCheck"/>                                          
+        <options>DontPrintEmptyValues;OnLeft</options>                          
+        <label lang="xx">Conception date</label>                                            
+        <label lang="fr">Date de conception</label>                                            
+        <value>                                                                 
+          <numerical id="1">0</numerical>                                       
+          <numerical id="0">1</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item name="ObstetricalCalendar::gestationalAgeHelpText" type="helptext">                                    
+        <uilink label="gestationalAgeHelpTextLabel" layout="" widget=""/>       
+        <label lang="xx">Gestational age in weeks of amenorrhoea</label>        
+        <label lang="fr">Âge gestationnel en semaines d'aménorrhée</label>      
+        <options>printable</options>                                            
+        <value>                                                                 
+          <default>The default value</default>                                  
+        </value>                                                                
+      </Item>                                                                   
+                                                                                
+      <Item type="shorttext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks">               
+        <uilink label="currentWeeksAmenorrhoeaWeeksLabel" layout="" widget="currentWeeksAmenorrhoeaWeeks"/>
+        <label lang="xx">weeks</label>                                          
+        <label lang="fr">semaines</label>                                       
+        <options>DontPrintEmptyValues</options>                                 
+      </Item>                                                                   
+                                                                                
+      <Item type="shorttext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays">                 
+        <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget="currentWeeksAmenorrhoeaDays"/>
+        <label lang="xx">days</label>                                          
+        <label lang="fr">jours</label>                                        
+        <options>DontPrintEmptyValues</options>                                 
+      </Item>
+
+      <Item type="shorttext" name="ObstetricalCalendar::Term">                          
+          <uilink label="termLabel" widget="termLineEdit" layout=""/>                    
+          <label lang="xx">Term</label>                                         
+          <label lang="fr">Terme</label>                                        
+          <tooltip lang="xx"></tooltip>                                         
+          <tooltip lang="fr"></tooltip>                                         
+          <options>DontPrintEmptyValues;readonly;html</options>                 
+      </Item>
+ 
+  </Item> <!-- end of group obstetrical calendar -->
+
   <Item type="group" name="Subjective">
     <uilink label="" widget="subjectiveGroupBox" layout="" />
     <label lang="xx">Subjective</label>
@@ -53,8 +142,8 @@
 
     <Item type="radio" name="FetalMovement">
       <uilink label="fetalMovementLabel" widget="" layout="fetalMovementRadioLayout" />
-      <label lang="xx">fetal movement</label>
-      <label lang="fr">mouvements actifs fœtaux</label>
+      <label lang="xx">Fetal movement</label>
+      <label lang="fr">Mouvements actifs fœtaux</label>
       <value>
       <uuid id="0">yes</uuid>
       <!--<sctid id="0">373066001</sctid>-->
@@ -1545,6 +1634,69 @@
 
         </Item> <!-- end of Fetus5GroupBox -->
 
+    <Item type="group" name="Assessment">                                         
+      <uilink label="" widget="assessmentGroupBox" layout="" />                   
+      <label lang="xx">Assessment</label>                                         
+      <label lang="fr">Analyse</label>                                          
+      <options>collapsible;expanded</options>
+
+      <Item type="uniquelist" name="Diagnosis::UniqueList">                        
+            <uilink label="assessmentDiagnosisLabel" widget="assessmentDiagnosisListView" layout=""/>
+            <label lang="xx">Diagnosis</label>                               
+            <label lang="fr">Diagnostic</label>                               
+            <value>                                                             
+            <uuid id="0">Normal pregnancy</uuid>                             
+            <!--<sctid id="0">72892002</sctid>-->                               
+            <uuid id="1">Term pregnancy</uuid>                       
+            <!--<sctid id="1">72892002</sctid>-->
+            <!--<sctid id="1">87527008</sctid>-->                               
+            <uuid id="2">Fetal growth retardation</uuid>                    
+            <!--<sctid id="2">22033007</sctid>-->                               
+            <uuid id="3">not done</uuid>
+            <!--<sctid id="3">385660001</sctid>-->                                               
+            <possible id="0">Normal pregnancy</possible>                                  
+            <possible id="1">Term pregnancy</possible>                            
+            <possible id="2">Fetal growth retardation</possible>                         
+            <possible id="3">ø</possible>                                       
+            <possible id="0" lang="fr">Grossesse normalement évolutive</possible>           
+            <possible id="1" lang="fr">Grossesse à terme normalement évolutive</possible>              
+            <possible id="2" lang="fr">Retard de croissance intra-utérin</possible>                 
+            <possible id="3" lang="fr">ø</possible>                             
+            </value>                                                            
+            <options>resizeToContent;DontPrintEmptyValue</options>              
+      </Item>   
+
+      <Item name="Diagnosis::ShortText" type="shorttext"> 
+          <uilink label="" widget="assessmentDiagnosisLineEdit" layout="" />        
+          <label lang="xx"></label>                                             
+          <label lang="fr"></label>                                             
+          <placeholder lang="xx">Other diagnosis</placeholder>                          
+          <placeholder lang="fr">Autre diagnostic</placeholder>                      
+      </Item> 
+
+      <Item type="texteditor" name="Problems::TextEditor">                                 
+        <uilink label="assessmentProblemsLabel" widget="" layout="assessmentProblemsTextEditorLayout" />
+        <label lang="xx">Problems</label>                                     
+        <label lang ="fr">Problèmes</label>                                        
+        <options>FullEditor</options>                                             
+      </Item>
+
+    </Item>
+
+    <Item type="group" name="Plan">                                       
+      <uilink label="" widget="planGroupBox" layout="" />                 
+      <label lang="xx">Plan</label>                                       
+      <label lang="fr">Plan</label>                                            
+      <options>collapsible;expanded</options>                                   
+      
+      <Item type="texteditor" name="PlanOfCare::TextEditor">                      
+        <uilink label="assessmentPlanOfCareLabel" widget="" layout="assessmentPlanOfCareTextEditorLayout" />
+        <label lang="xx">Plan of care</label>                                       
+        <label lang ="fr">Conduite à tenir</label>                                     
+        <options>FullEditor</options>                                           
+      </Item> 
+                                                                          
+    </Item>
 
   </MedForm>
 
