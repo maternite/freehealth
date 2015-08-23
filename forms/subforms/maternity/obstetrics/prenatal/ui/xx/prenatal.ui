@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>778</width>
-    <height>3003</height>
+    <height>3036</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -856,6 +856,23 @@
          <string>Cervix</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_10">
+         <item row="1" column="0">
+          <widget class="QLabel" name="cervixConsistencyLabel">
+           <property name="text">
+            <string>Consistency</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLineEdit" name="internalCervicalDilationLineEdit"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="externalCervicalDilationLabel">
+           <property name="text">
+            <string>External cervical dilation</string>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="0">
           <widget class="QLabel" name="cervixPositionLabel">
            <property name="sizePolicy">
@@ -866,13 +883,6 @@
            </property>
            <property name="text">
             <string>Position</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="cervixConsistencyLabel">
-           <property name="text">
-            <string>Consistency</string>
            </property>
           </widget>
          </item>
@@ -904,13 +914,6 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="externalCervicalDilationLabel">
-           <property name="text">
-            <string>External cervical dilation</string>
-           </property>
-          </widget>
-         </item>
          <item row="7" column="0">
           <widget class="QLabel" name="vaginalExaminationLabel">
            <property name="text">
@@ -918,8 +921,8 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
-          <widget class="QLineEdit" name="internalCervicalDilationLineEdit"/>
+         <item row="6" column="2">
+          <widget class="QLineEdit" name="externalCervicalDilationLineEdit"/>
          </item>
          <item row="8" column="0">
           <widget class="QLabel" name="amnioticSacLabel">
@@ -928,8 +931,8 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
-          <widget class="QLineEdit" name="externalCervicalDilationLineEdit"/>
+         <item row="7" column="2">
+          <widget class="QLineEdit" name="vaginalExaminationLineEdit"/>
          </item>
          <item row="9" column="0">
           <widget class="QLabel" name="lowerUterineSegmentLabel">
@@ -938,31 +941,28 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
+         <item row="0" column="2">
           <layout class="QHBoxLayout" name="cervixPositionRadioLayout"/>
          </item>
-         <item row="1" column="1">
+         <item row="1" column="2">
           <layout class="QHBoxLayout" name="cervixConsistencyRadioLayout"/>
          </item>
-         <item row="2" column="1">
+         <item row="2" column="2">
           <layout class="QHBoxLayout" name="cervixEffacementRadioLayout"/>
          </item>
-         <item row="3" column="1">
+         <item row="3" column="2">
           <layout class="QHBoxLayout" name="cervixDilationRadioLayout"/>
          </item>
-         <item row="4" column="1">
+         <item row="4" column="2">
           <layout class="QHBoxLayout" name="fetalStationRadioLayout"/>
          </item>
-         <item row="7" column="1">
-          <widget class="QLineEdit" name="vaginalExaminationLineEdit"/>
-         </item>
-         <item row="8" column="1">
+         <item row="8" column="2">
           <widget class="QLineEdit" name="amnioticSacLineEdit"/>
          </item>
-         <item row="9" column="1">
+         <item row="9" column="2">
           <layout class="QHBoxLayout" name="lowerUterineSegmentRadioLayout"/>
          </item>
-         <item row="0" column="2" rowspan="2">
+         <item row="0" column="3" rowspan="2">
           <spacer name="horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -974,6 +974,32 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="internalCervicalDilationSpinBox">
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::UpDownArrows</enum>
+           </property>
+           <property name="showGroupSeparator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="suffix">
+            <string comment="centimeter">cm</string>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QSpinBox" name="externalCervicalDilationSpinBox">
+           <property name="suffix">
+            <string comment="centimeter">cm</string>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -1168,7 +1194,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QDateEdit" name="conceptionDateEdit">
+             <widget class="QDateEdit" name="conceptionDateDateEdit">
               <property name="locale">
                <locale language="French" country="Madagascar"/>
               </property>
@@ -1196,6 +1222,13 @@
            </layout>
           </item>
          </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -1228,6 +1261,30 @@
        </layout>
       </item>
       <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <item>
+         <widget class="QLabel" name="lmpDeterminedByLabel">
+          <property name="text">
+           <string>LMP determined by</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="lmpDeterminedByRadioLayout"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lmpDeterminedByLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_17">
         <item>
          <widget class="QLabel" name="gestationalAgeHelpTextLabel">
@@ -1237,15 +1294,9 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="currentWeeksAmenorrhoeaWeeks">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksValueLabel">
+          <property name="text">
+           <string>weeksValue</string>
           </property>
          </widget>
         </item>
@@ -1257,15 +1308,9 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="currentWeeksAmenorrhoeaDays">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysValueLabel">
+          <property name="text">
+           <string>daysValue</string>
           </property>
          </widget>
         </item>
@@ -1292,21 +1337,18 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="termHorizontalLayout">
+       <layout class="QHBoxLayout" name="eddHorizontalLayout">
         <item>
-         <widget class="QLabel" name="termLabel">
+         <widget class="QLabel" name="eddLabel">
           <property name="text">
-           <string>term</string>
+           <string>edd</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="termLineEdit">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+         <widget class="QLabel" name="eddValueLabel">
+          <property name="text">
+           <string/>
           </property>
          </widget>
         </item>

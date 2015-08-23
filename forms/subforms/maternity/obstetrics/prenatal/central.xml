@@ -49,15 +49,21 @@
         <label lang="xx">Last Menstrual Period (LMP)</label>                    
         <label lang="fr">Date des Dernières Règles (DDR)</label>                
         <patientdata>LastMenstrualPeriod</patientdata>                          
-        <options>DontPrintEmptyValues</options>                                 
+        <options>DontPrintEmptyValues</options>
+        <script>
+          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.chooseDateToUse();</onValueChanged>
+        </script>      
       </Item>                                                                   
                                                                                 
       <Item type="date" name="ObstetricalCalendar::ConceptionDate">                                  
-        <uilink label="conceptionDateLabel" layout="" widget="conceptionDateEdit"/>
+        <uilink label="conceptionDateLabel" layout="" widget="conceptionDateDateEdit"/>
         <label lang="xx">Conception date</label>                                
         <label lang="fr">Date de conception</label>                             
         <patientdata>LastMenstrualPeriod</patientdata>                          
-        <options>DontPrintEmptyValues</options>                                 
+        <options>DontPrintEmptyValues</options>
+        <script>                                                                
+          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.chooseDateToUse();</onValueChanged>
+        </script> 
       </Item>
 
       <Item name="ObstetricalCalendar::UseLmpDateOfConceptionHelpText" type="helptext">   
@@ -76,20 +82,65 @@
         <label lang="xx">LMP</label>
         <label lang="fr">DDR</label>
         <value>                                                                 
-          <numerical id="1">0</numerical>                                       
-          <numerical id="0">1</numerical>                                       
-        </value>                                                                
+          <numerical id="0">0</numerical>                                       
+          <numerical id="1">1</numerical>                                       
+        </value>
+        <script>
+          <onload>namespace.com.freemedforms.obstetrics.prenatal.setLmp();</onload>                                                            
+          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.setLmp();</onValueChanged>
+        </script>                                                                
       </Item>
 
       <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">             
         <uilink widget="useDateOfConceptionCheck"/>                                          
         <options>DontPrintEmptyValues;OnLeft</options>                          
-        <label lang="xx">Conception date</label>                                            
-        <label lang="fr">Date de conception</label>                                            
+        <label lang="xx">Conception date (only in cas of ART or IUI)</label>                                            
+        <label lang="fr">Date de conception (uniquement en cas de procréation médicalement assistée)</label>                                            
         <value>                                                                 
-          <numerical id="1">0</numerical>                                       
-          <numerical id="0">1</numerical>                                       
-        </value>                                                                
+          <numerical id="0">0</numerical>                                       
+          <numerical id="1">1</numerical>                                       
+        </value>
+        <script>                                                                
+          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.setDateOfConception();</onValueChanged>
+        </script>                                                        
+      </Item>
+
+      <Item type="radio" name="ObstetricalCalendar::LmpDeterminedBy::Radio">       
+          <uilink label="lmpDeterminedByLabel" widget="" layout="lmpDeterminedByRadioLayout"/>
+          <label lang="xx">LMP determined by</label>                             
+          <label lang="fr">DDR déterminée par</label>
+          <options>compact</options>                                            
+          <value>                                                               
+            <uuid id="0">History taking</uuid>                                             
+            <!--<sctid id="0">84100007</sctid>-->                              
+            <uuid id="1">Ultrasound scan for fetal cephalometry</uuid>                                              
+            <!--<sctid id="1">169224002</sctid>-->                              
+            <uuid id="2">not done</uuid>                                        
+            <!--<sctid id="2">385660001</sctid>-->                              
+            <possible id="0" lang="xx">History taking</possible>                           
+            <possible id="1" lang="xx">Ultrasound scan (cephalometry)</possible>                            
+            <possible id="2" lang="xx">∅</possible>                             
+            <print id="0" lang="xx">History taking</print>                                 
+            <print id="1" lang="xx">Ultrasound scan (cephalometry)</print>                                  
+            <print id="2" lang="xx">Not evaluated</print>                       
+            <possible id="0" lang="fr">Anamnèse</possible>                           
+            <possible id="1" lang="fr">Échographie du 1er trimestre</possible>                           
+            <possible id="2" lang="fr">∅</possible>                             
+            <print id="0" lang="fr">Anamnèse</print>                                 
+            <print id="1" lang="fr">Échographie du 1er trimestre</print>                                 
+            <print id="2" lang="fr">Item non évalué</print>                     
+          </value>                                                              
+        </Item>
+
+      <Item type="shorttext" name="ObstetricalCalendar::LmpDeterminedBy::Comment">                  
+          <uilink label="" widget="lmpDeterminedByLineEdit" layout=""/>           
+          <label lang="xx"></label>                                         
+          <label lang="fr"></label>                                        
+          <tooltip lang="xx"></tooltip>                                         
+          <tooltip lang="fr"></tooltip>
+          <placeholder lang="xx">Comment</placeholder>                          
+          <placeholder lang="fr">Commentaire</placeholder>                                         
+          <options>DontPrintEmptyValues;readonly;html</options>                 
       </Item>
 
       <Item name="ObstetricalCalendar::gestationalAgeHelpText" type="helptext">                                    
@@ -102,23 +153,23 @@
         </value>                                                                
       </Item>                                                                   
                                                                                 
-      <Item type="shorttext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks">               
-        <uilink label="currentWeeksAmenorrhoeaWeeksLabel" layout="" widget="currentWeeksAmenorrhoeaWeeks"/>
+      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText">               
+        <uilink label="currentWeeksAmenorrhoeaWeeksLabel" layout="" widget=""/>
         <label lang="xx">weeks</label>                                          
         <label lang="fr">semaines</label>                                       
         <options>DontPrintEmptyValues</options>                                 
       </Item>                                                                   
                                                                                 
-      <Item type="shorttext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays">                 
-        <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget="currentWeeksAmenorrhoeaDays"/>
+      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText">                 
+        <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget=""/>
         <label lang="xx">days</label>                                          
         <label lang="fr">jours</label>                                        
         <options>DontPrintEmptyValues</options>                                 
       </Item>
 
-      <Item type="shorttext" name="ObstetricalCalendar::Term">                          
-          <uilink label="termLabel" widget="termLineEdit" layout=""/>                    
-          <label lang="xx">Term</label>                                         
+      <Item type="helptext" name="ObstetricalCalendar::Edd::HelpText">                          
+          <uilink label="eddLabel" widget="" layout=""/>                    
+          <label lang="xx">Estimated date of delivery</label>                                         
           <label lang="fr">Terme</label>                                        
           <tooltip lang="xx"></tooltip>                                         
           <tooltip lang="fr"></tooltip>                                         
@@ -665,20 +716,28 @@
         </value>
       </Item>
 
+      <Item name="ObjectiveGroup::InternalCervicalDilation::Value" type="spin">
+        <uilink label="" widget="internalCervicalDilationSpinBox" layout="" />
+      </Item>
+
       <Item name="ObjectiveGroup::InternalCervicalDilation::Comment" type="shorttext">
         <uilink label="internalCervicalDilationLabel" widget="internalCervicalDilationLineEdit" layout="" />
         <label lang="xx">Internal cervical dilation</label>
         <label lang="fr">Dilatation de l'orifice interne du col</label>
-        <placeholder lang="xx"></placeholder>
-        <placeholder lang="fr"></placeholder>
+        <placeholder lang="xx">Comment</placeholder>
+        <placeholder lang="fr">Commentaire</placeholder>
+      </Item>
+
+      <Item name="ObjectiveGroup::ExternalCervicalDilation::Value" type="spin"> 
+        <uilink label="" widget="externalCervicalDilationSpinBox" layout="" />
       </Item>
 
       <Item name="ObjectiveGroup::ExternalCervicalDilation::Comment" type="shorttext">
         <uilink label="externalCervicalDilationLabel" widget="externalCervicalDilationLineEdit" layout="" />
         <label lang="xx">External cervical dilation</label>
         <label lang="fr">Dilatation de l'orifice externe du col</label>
-        <placeholder lang="xx"></placeholder>
-        <placeholder lang="fr"></placeholder>
+        <placeholder lang="xx">Comment</placeholder>
+        <placeholder lang="fr">Commentaire</placeholder>
       </Item>
 
       <Item name="ObjectiveGroup::VaginalExamination::Comment" type="shorttext">
@@ -955,7 +1014,7 @@
             <possible id="6" lang="fr">Céphalique - OIGT Occipito-iliaque gauche transverse</possible>
             <possible id="7" lang="fr">Céphalique - OIDT Occipito-iliaque droite transverse</possible>
             <possible id="8" lang="fr">Podalique - SIGA Sacro-iliaque gauche antérieure</possible>
-            <possible id="9" lang="fr">Podalique - SIDA Sacri-iliaque droite antérieure</possible>
+            <possible id="9" lang="fr">Podalique - SIDA Sacro-iliaque droite antérieure</possible>
             <possible id="10" lang="fr">Podalique - SIGP Sacro-iliaque gauche postérieure</possible>
             <possible id="11" lang="fr">Podalique - SIDP Sacro-iliaque droite postérieure</possible>
             <possible id="12" lang="fr">Podalique - SIA Sacro-iliaque antérieure</possible>

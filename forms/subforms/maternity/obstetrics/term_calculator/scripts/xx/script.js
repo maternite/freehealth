@@ -8,7 +8,7 @@ namespace.module('com.freemedforms.tools.obstetrics.pregnancycalendar', function
                        'computeCurrentWA' : computeCurrentWA,
                        'clearLastMenstrualPeriod' : clearLastMenstrualPeriod,
                        'enableLastMenstrualPeriod' : enableLastMenstrualPeriod,
-                       'disableLastMenstrualPeriod' : enableLastMenstrualPeriod,
+                       'disableLastMenstrualPeriod' : disableLastMenstrualPeriod,
                        'connectUiElements' : connectUiElements
                    });
 
@@ -40,7 +40,7 @@ namespace.module('com.freemedforms.tools.obstetrics.pregnancycalendar', function
         LMPCheck.checked.connect(this, enableLastMenstrualPeriod);              
         LMPCheck.unchecked.connect(this, disableLastMenstrualPeriod);           
         freemedforms.forms.languageChanged.connect(this, reTranslateUi);        
-        dateLMPwidget['valueChanged(int)'].connect(this, lmpDateChanged);
+        dateLMPwidget['dateChanged(int)'].connect(this, lmpDateChanged);
     }
 
     function connectUiElements() {
@@ -124,7 +124,7 @@ namespace.module('com.freemedforms.tools.obstetrics.pregnancycalendar', function
 
     function computeCurrentWA(fromDate)
     {
-        if (!fromDate.isValid || fromDate === "") {
+        if (!fromDate.isValid || fromDate == "") {
             if (conceptionDate.currentValue !== "")
                 fromDate = conceptionDate.currentValue;
             else
