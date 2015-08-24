@@ -7,9 +7,9 @@
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD</authors>
     <version>test</version>
-    <fmfv>0.8.2</fmfv>
-    <cdate>2012-09-03</cdate>
-    <lmdate>2015-03-23</lmdate>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-08-24</cdate>
+    <lmdate>2015-08-24</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink></weblink>
     <bibliography/>
@@ -228,6 +228,7 @@
         <label lang="en">Consultations</label>
         <icon>__theme__/stethoscope.png</icon>
         <options>NoEpisode;DontPrintEmptyValues</options>
+          <file>__subForms__/maternity/obstetrics/prenatal/central.xml</file>
       </MedForm>
   </MedForm>
 
