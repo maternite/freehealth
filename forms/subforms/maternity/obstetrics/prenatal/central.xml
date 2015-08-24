@@ -1748,14 +1748,75 @@
       <label lang="fr">Plan</label>                                            
       <options>collapsible;expanded</options>                                   
       
-      <Item type="texteditor" name="PlanOfCare::TextEditor">                      
-        <uilink label="assessmentPlanOfCareLabel" widget="" layout="assessmentPlanOfCareTextEditorLayout" />
+      <Item type="texteditor" name="Plan::PlanOfCare::TextEditor">                      
+        <uilink label="planPlanOfCareLabel" widget="" layout="planPlanOfCareTextEditorLayout" />
         <label lang="xx">Plan of care</label>                                       
         <label lang ="fr">Conduite à tenir</label>                                     
         <options>FullEditor</options>                                           
-      </Item> 
-                                                                          
-    </Item>
+      </Item>
+      
+      <Item type="helptext" name="Plan::PrescribedUltrasound::HelpText">
+        <uilink label="prescribedUltrasoundLabel" />
+        <label lang="xx">Prescribed ultrasounds</label>                       
+        <label lang="fr">Échographies prescrites</label>
+      </Item>
+  
+      <Item type="check" name="Plan::PrescribedUltrasound::Trimester1::CheckBox">
+        <uilink label="" widget="prescribedUltrasoundTrimester1CheckBox" layout="" />
+        <label lang="xx">1st trimester ultrasound</label>
+        <label lang="fr">Échographie du 1er trimestre</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value> 
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedUltrasound::Trimester2::CheckBox">
+        <uilink label="" widget="prescribedUltrasoundTrimester2CheckBox" layout="" />
+        <label lang="xx">2nd trimester ultrasound</label>                       
+        <label lang="fr">Échographie du 2ème trimestre</label>                   
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedUltrasound::Trimester3::CheckBox">
+        <uilink label="" widget="prescribedUltrasoundTrimester3CheckBox" layout="" />
+        <label lang="xx">3rd trimester ultrasound</label>                       
+        <label lang="fr">Échographie du 3ème trimestre</label>                   
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedUltrasound::Control::CheckBox">
+        <uilink label="" widget="prescribedUltrasoundControlCheckBox" layout="" />
+        <label lang="xx">Control ultrasound</label>                       
+        <label lang="fr">Échographie de contrôle</label>                  
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedUltrasound::Pelvic::CheckBox">
+        <uilink label="" widget="prescribedUltrasoundPelvicCheckBox" layout="" />
+        <label lang="xx">Pelvic ultrasound</label>                       
+        <label lang="fr">Échographie pelvienne</label>                  
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+    </Item> <!-- end of group Plan -->
 
   </MedForm>
 

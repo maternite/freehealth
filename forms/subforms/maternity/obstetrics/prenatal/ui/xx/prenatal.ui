@@ -319,83 +319,6 @@
        </layout>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QGroupBox" name="fetus4GroupBox">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="title">
-        <string>Fetus4GroupBox</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_4">
-        <item row="1" column="0" colspan="2">
-         <layout class="QVBoxLayout" name="verticalLayout_5">
-          <item>
-           <widget class="QLabel" name="presentationF4Label">
-            <property name="text">
-             <string>presentation</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QListView" name="presentationF4ListView"/>
-          </item>
-         </layout>
-        </item>
-        <item row="2" column="0" colspan="2">
-         <layout class="QVBoxLayout" name="verticalLayout_10">
-          <item>
-           <widget class="QLabel" name="positionF4Label">
-            <property name="text">
-             <string>position</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QListView" name="positionF4ListView"/>
-          </item>
-         </layout>
-        </item>
-        <item row="0" column="0" colspan="2">
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QLabel" name="prenatalHeartbeatF4Label">
-            <property name="text">
-             <string>prenatal heartbeat</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="prenatalHeartbeatF4RadioLayout">
-            <property name="spacing">
-             <number>1</number>
-            </property>
-            <property name="sizeConstraint">
-             <enum>QLayout::SetDefaultConstraint</enum>
-            </property>
-            <property name="leftMargin">
-             <number>2</number>
-            </property>
-            <property name="topMargin">
-             <number>2</number>
-            </property>
-            <property name="rightMargin">
-             <number>9</number>
-            </property>
-           </layout>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="prenatalHeartbeatF4LineEdit">
-            <property name="dragEnabled">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </item>
      <item row="5" column="0">
       <widget class="QGroupBox" name="fetus5GroupBox">
        <property name="enabled">
@@ -476,6 +399,83 @@
        </layout>
       </widget>
      </item>
+     <item row="4" column="0">
+      <widget class="QGroupBox" name="fetus4GroupBox">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="title">
+        <string>Fetus4GroupBox</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0" colspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="presentationF4Label">
+            <property name="text">
+             <string>presentation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="presentationF4ListView"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QLabel" name="positionF4Label">
+            <property name="text">
+             <string>position</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListView" name="positionF4ListView"/>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="prenatalHeartbeatF4Label">
+            <property name="text">
+             <string>prenatal heartbeat</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="prenatalHeartbeatF4RadioLayout">
+            <property name="spacing">
+             <number>1</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>9</number>
+            </property>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="prenatalHeartbeatF4LineEdit">
+            <property name="dragEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
     </layout>
    </item>
    <item row="1" column="0" colspan="2">
@@ -521,6 +521,19 @@
         </item>
         <item>
          <layout class="QHBoxLayout" name="fetalMovementRadioLayout"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
@@ -1112,29 +1125,6 @@
      </layout>
     </widget>
    </item>
-   <item row="7" column="0" colspan="2">
-    <widget class="QGroupBox" name="planGroupBox">
-     <property name="title">
-      <string>plan</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_16">
-      <item>
-       <layout class="QVBoxLayout" name="planOfCareVerticalLayout">
-        <item>
-         <widget class="QLabel" name="assessmentPlanOfCareLabel">
-          <property name="text">
-           <string>plan of care</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="assessmentPlanOfCareTextEditorLayout"/>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="0" column="0" colspan="2">
     <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
      <property name="title">
@@ -1144,7 +1134,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_14">
         <property name="spacing">
-         <number>8</number>
+         <number>1</number>
         </property>
         <property name="leftMargin">
          <number>0</number>
@@ -1269,6 +1259,9 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
         <item>
          <widget class="QLabel" name="lmpDeterminedByLabel">
           <property name="text">
@@ -1280,7 +1273,14 @@
          <layout class="QHBoxLayout" name="lmpDeterminedByRadioLayout"/>
         </item>
         <item>
-         <widget class="QLineEdit" name="lmpDeterminedByLineEdit"/>
+         <widget class="QLineEdit" name="lmpDeterminedByLineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -1364,6 +1364,78 @@
            </size>
           </property>
          </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QGroupBox" name="planGroupBox">
+     <property name="title">
+      <string>plan</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_16">
+      <item>
+       <layout class="QVBoxLayout" name="planOfCareVerticalLayout">
+        <item>
+         <widget class="QLabel" name="planPlanOfCareLabel">
+          <property name="text">
+           <string>plan of care</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="planPlanOfCareTextEditorLayout"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="prescribedUltrasoundGridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="prescribedUltrasoundLabel">
+          <property name="text">
+           <string>prescribedUltrasound</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="prescribedUltrasoundTrimester1CheckBox">
+          <property name="text">
+           <string>us trimester 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="prescribedUltrasoundTrimester2CheckBox">
+          <property name="text">
+           <string>us trimester 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QCheckBox" name="prescribedUltrasoundTrimester3CheckBox">
+          <property name="text">
+           <string>us trimester 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="prescribedUltrasoundPelvicCheckBox">
+          <property name="text">
+           <string>us pelvic</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="prescribedUltrasoundControlCheckBox">
+          <property name="text">
+           <string>us control</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

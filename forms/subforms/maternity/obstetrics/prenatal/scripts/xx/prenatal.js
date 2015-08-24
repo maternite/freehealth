@@ -195,6 +195,7 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         print("chooseDateToUse()");
         var empty = "";
         estimatedDueDate.setText(empty);
+
         if (!useLmpItem.checked && !useDateOfConceptionItem.checked) {
         setLmpDefault();
         return;
@@ -205,8 +206,12 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
     }
 
     function computeEstimatedDueDate() {
-        estimatedDueDate.setText("");
+        var empty = "";
+        estimatedDueDate.setText(empty);
+        currentWeeksAmenorrhoeaWeeksValue.setText(empty);                     
+        currentWeeksAmenorrhoeaDaysValue.setText(empty);
         if (freemedforms.tools.dateToString(lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
+            print("inside computeEstimatedDueDate()-> lmp=01/01/2000 -> return");
             return;
         }
         print("computeEstimatedDueDate()");
@@ -219,15 +224,28 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
 
     }
 
-    function computeGestationalAge() {                                        
+    function computeGestationalAge() {
+        var emptyGA = "";
+        currentWeeksAmenorrhoeaWeeksValue.setText(emptyGA);                     
+        currentWeeksAmenorrhoeaDaysValue.setText(emptyGA);
+        if (freemedforms.tools.dateToString(lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
+            print("inside computeGestationalAge()-> lmp=01/01/2000 -> return");
+            return;                                                             
+        }                                        
         print("computeGestationalAge()");
         var edd = freemedforms.tools.addWeeks(lastMenstrualPeriodItem.currentValue, 40);
         var days = freemedforms.tools.daysTo(new Date(), edd);
         var GAdays = (280 - days);
         var GAweeks = (GAdays - GAdays%7) / 7;
         var GAdays = GAdays%7;
-        currentWeeksAmenorrhoeaWeeksValue.setText(GAweeks);
-        currentWeeksAmenorrhoeaDaysValue.setText(GAdays);
+        var GAweeksText = "<b>";
+        GAweeksText += GAweeks;
+        GAweeksText += "</b>";
+        var GAdaysText = "<b>";                                                
+        GAdaysText += GAdays;                                                 
+        GAdaysText += "</b>";
+        currentWeeksAmenorrhoeaWeeksValue.setText(GAweeksText);
+        currentWeeksAmenorrhoeaDaysValue.setText(GAdaysText);
     }
 
     function setLmpDefault() {
