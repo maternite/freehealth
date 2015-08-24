@@ -1375,11 +1375,17 @@
      <property name="title">
       <string>plan</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_20">
+     <layout class="QVBoxLayout" name="verticalLayout_16">
       <item>
        <layout class="QVBoxLayout" name="planOfCareVerticalLayout">
         <item>
          <widget class="QLabel" name="planPlanOfCareLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>plan of care</string>
           </property>
@@ -1391,12 +1397,25 @@
        </layout>
       </item>
       <item>
+       <widget class="Line" name="line_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
        <layout class="QGridLayout" name="prescribedUltrasoundGridLayout">
         <property name="sizeConstraint">
          <enum>QLayout::SetMinimumSize</enum>
         </property>
         <item row="0" column="0">
          <widget class="QLabel" name="prescribedUltrasoundLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>prescribedUltrasound</string>
           </property>
@@ -1440,166 +1459,175 @@
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_16">
-        <item>
-         <widget class="QLabel" name="label">
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="prescribedLabTestTitleLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>prescribed biology</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="serologyGridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="prescribedLabTestSerologyLabel">
           <property name="text">
-           <string>prescribed biology</string>
+           <string>serology</string>
           </property>
          </widget>
         </item>
-        <item>
-         <layout class="QGridLayout" name="serologyGridLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>serology</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="checkBox_5">
-            <property name="text">
-             <string>serum toxoplasmosis</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QCheckBox" name="checkBox_7">
-            <property name="text">
-             <string>serum measles (rubeola)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="checkBox_4">
-            <property name="text">
-             <string>serum hbv</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QCheckBox" name="checkBox">
-            <property name="text">
-             <string>serum syphilis</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QCheckBox" name="checkBox_8">
-            <property name="text">
-             <string>serum hiv</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="prescribedToxoplasmosisCheckBox">
+          <property name="text">
+           <string>serum toxoplasmosis</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout_12">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>hematology</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="checkBox_12">
-            <property name="text">
-             <string>serum RBC antibody screen</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QCheckBox" name="checkBox_10">
-            <property name="text">
-             <string>serum CBC</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="prescribedMeaslesCheckBox">
+          <property name="text">
+           <string>serum measles (rubeola)</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout_13">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>biochemistry</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="checkBox_13">
-            <property name="text">
-             <string>serum creatinine</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QCheckBox" name="checkBox_11">
-            <property name="text">
-             <string>serum CRP</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="checkBox_14">
-            <property name="text">
-             <string>serum uric acid</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QCheckBox" name="checkBox_9">
-            <property name="text">
-             <string>urine proteine 24h</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="prescribedHepatitisBVirusCheckBox">
+          <property name="text">
+           <string>serum hbv</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout_14">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>bacteriology</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="checkBox_6">
-            <property name="text">
-             <string>urine culture</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QCheckBox" name="checkBox_2">
-            <property name="text">
-             <string>vaginal wet mount</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item row="1" column="2">
+         <widget class="QCheckBox" name="prescribedSyphilisCheckBox">
+          <property name="text">
+           <string>serum syphilis</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout_15">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_6">
-            <property name="text">
-             <string>others</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="checkBox_3">
-            <property name="text">
-             <string>o'sullivan test</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="prescribedHIVCheckBox">
+          <property name="text">
+           <string>serum hiv</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="0">
+         <widget class="QLabel" name="prescribedLabTestHematologyLabel">
+          <property name="text">
+           <string>hematology</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="prescribedRBCAntibodyScreenCheckBox">
+          <property name="text">
+           <string>serum RBC antibody screen</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="prescribedCBCCheckBox">
+          <property name="text">
+           <string>serum CBC</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0">
+         <widget class="QLabel" name="prescribedLabTestBiochemistryLabel">
+          <property name="text">
+           <string>biochemistry</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="prescribedSerumCreatinineCheckBox">
+          <property name="text">
+           <string>serum creatinine</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="prescribedCRPCheckBox">
+          <property name="text">
+           <string>serum CRP</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="prescribedSerumUricAcidCheckBox">
+          <property name="text">
+           <string>serum uric acid</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QCheckBox" name="prescribedUrineProtein24HourCheckBox">
+          <property name="text">
+           <string>urine proteine 24h</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_14">
+        <item row="0" column="0">
+         <widget class="QLabel" name="prescribedLabTestBacteriologyLabel">
+          <property name="text">
+           <string>bacteriology</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="prescribedUrineCultureCheckBox">
+          <property name="text">
+           <string>urine culture</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="vaginalWetMountCheckBox">
+          <property name="text">
+           <string>vaginal wet mount</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QLabel" name="prescribedLabTestOtherLabel">
+          <property name="text">
+           <string>others</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="checkBox_3">
+          <property name="text">
+           <string>o'sullivan test</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

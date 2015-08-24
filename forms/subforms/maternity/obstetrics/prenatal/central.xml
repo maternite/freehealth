@@ -1740,7 +1740,7 @@
         <options>FullEditor</options>                                             
       </Item>
 
-    </Item>
+    </Item> <!-- end of group assessment -->
 
     <Item type="group" name="Plan">                                       
       <uilink label="" widget="planGroupBox" layout="" />                 
@@ -1815,6 +1815,199 @@
           <numerical id="1">2</numerical>                                       
         </value>                                                                
       </Item>
+
+      <!-- prescribed biology -->
+
+      <Item type="helptext" name="Plan:PrescribedLabTest::Title::HelpText">
+        <uilink label="prescribedLabTestTitleLabel" />
+        <label lang="xx">Prescribed lab tests</label>
+        <label lang="fr">Analyses biologiques prescrites</label>
+      </Item>
+
+      <Item type="helptext" name="Plan:PrescribedLabTest::Serology::HelpText">            
+        <uilink label="prescribedLabTestSerologyLabel" />                                 
+        <label lang="xx">Serology</label>                           
+        <label lang="fr">Sérologie</label>                
+      </Item>
+
+      <Item type="helptext" name="Plan:PrescribedLabTest::Hematology::HelpText">  
+        <uilink label="prescribedLabTestHematologyLabel" />                         
+        <label lang="xx">Hematology</label>                           
+        <label lang="fr">Hématologie</label>                
+      </Item>
+
+      <Item type="helptext" name="Plan:PrescribedLabTest::Biochemistry::HelpText"> 
+        <uilink label="prescribedLabTestBiochemistryLabel" />                       
+        <label lang="xx">Biochemistry</label>                                     
+        <label lang="fr">Biochimie</label>                                    
+      </Item>
+
+      <Item type="helptext" name="Plan:PrescribedLabTest::Bacteriology::HelpText"> 
+        <uilink label="prescribedLabTestBacteriologyLabel" />                       
+        <label lang="xx">Bacteriology</label>                           
+        <label lang="fr">Bactériologie</label>                
+      </Item>
+
+      <Item type="helptext" name="Plan:PrescribedLabTest::Other::HelpText">
+        <uilink label="prescribedLabTestOtherLabel" />                     
+        <label lang="xx">Other</label>                           
+        <label lang="fr">Autre</label>                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::Toxoplasmosis::CheckBox">   
+        <uilink label="" widget="prescribedToxoplasmosisCheckBox" layout="" />
+        <label lang="xx">Toxoplasmosis</label>                              
+        <label lang="fr">Toxoplasmose</label>                          
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::Measles::CheckBox">            
+        <uilink label="" widget="prescribedMeaslesCheckBox" layout="" />                
+        <label lang="xx">Measles</label>                                        
+        <label lang="fr">Rubéole</label>                                       
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::HepatitisBVirus::CheckBox">       
+        <uilink label="" widget="prescribedHepatitisBVirusCheckBox" layout="" />         
+        <label lang="xx">Hepatitis B</label>                                           
+        <label lang="fr">Hépatite B</label>                                               
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::Syphilis::CheckBox">            
+        <uilink label="" widget="prescribedSyphilisCheckBox" layout="" />                
+        <label lang="xx">Syphilis</label>                                               
+        <label lang="fr">Syphilis</label>                                               
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::HIV::CheckBox">            
+        <uilink label="" widget="prescribedHIVCheckBox" layout="" />                
+        <label lang="xx">HIV</label>                                               
+        <label lang="fr">HIV</label>                                               
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::RBCAntibodyScreen::CheckBox">            
+        <uilink label="" widget="prescribedRBCAntibodyScreenCheckBox" layout="" />                
+        <label lang="xx">RBC antibody screen</label>                                               
+        <label lang="fr">RAI (Rech. agglutinines irrégulières)</label>                           
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::CompleteBloodCount::CheckBox">            
+        <uilink label="" widget="prescribedCBCCheckBox" layout="" />                
+        <label lang="xx">Complete Blood Count</label>                                               
+        <label lang="fr">Numération Formule Sanguine</label>                                           
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::SerumCreatinine::CheckBox">      
+        <uilink label="" widget="prescribedSerumCreatinineCheckBox" layout="" />         
+        <label lang="xx">Serum creatinine</label>                                        
+        <label lang="fr">Créatinine</label>                                    
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::CRP::CheckBox">            
+        <uilink label="" widget="prescribedCRPCheckBox" layout="" />                
+        <label lang="xx">CRP</label>                                               
+        <label lang="fr">CRP</label>                                               
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::SerumUricAcid::CheckBox">   
+        <uilink label="" widget="prescribedSerumUricAcidCheckBox" layout="" />           
+        <label lang="xx">Serum uric acide</label>                                      
+        <label lang="fr">Acide urique sérique</label>                                   
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::UrineProteine24Hour::CheckBox"> 
+        <uilink label="" widget="prescribedUrineProtein24HourCheckBox" layout="" />     
+        <label lang="xx">Urine protein - 24 hour urine</label>                         
+        <label lang="fr">Protéinurie des 24 heures</label>                           
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::UrineCulture::CheckBox">
+        <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />
+        <label lang="xx">Urine culture</label>                  
+        <label lang="fr">ECBU</label>                      
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::VaginalWetMount::CheckBox">
+        <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />   
+        <label lang="xx">Urine culture</label>                                  
+        <label lang="fr">ECBU</label>                                           
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
+      <Item type="check" name="Plan::PrescribedLabTest::UrineCulture::CheckBox">
+        <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />   
+        <label lang="xx">Urine culture</label>                                  
+        <label lang="fr">ECBU</label>                                           
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
+      </Item>
+
 
     </Item> <!-- end of group Plan -->
 
