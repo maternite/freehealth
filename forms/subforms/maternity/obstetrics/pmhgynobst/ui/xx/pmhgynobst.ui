@@ -13,284 +13,510 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>9</y>
-     <width>551</width>
-     <height>220</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>gynecologic pmh</string>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>gynecologic pmh</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLabel" name="menarchiaLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>menarchia</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="menarchiaLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>menarchia</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="menarchiaDateEdit"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="menarchiaLineEdit"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QDateEdit" name="menarchiaDateEdit"/>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="cycleLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>cycle</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="cycleRadioLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="cycleLengthLabel">
+          <property name="text">
+           <string>length</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="cycleSpinBox"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="CycleDayLabel">
+          <property name="text">
+           <string>day</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="cycleLineEdit"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QLineEdit" name="menarchiaLineEdit"/>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="birthControlLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>birth control</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="birthControlRadioLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="birthControlOtherLabel">
+          <property name="text">
+           <string>other</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="birthControlOtherLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item alignment="Qt::AlignLeft">
+         <widget class="QLabel" name="gestityLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>gestity</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="gestitySpinBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="bornAliveLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>alive new born</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="bornAliveSpinBox"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="parityLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>parity</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="paritySpinBox"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
      </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="cycleLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>cycle</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="cycleRadioLayout"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="cycleLengthLabel">
-        <property name="text">
-         <string>length</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="cycleSpinBox"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="CycleDayLabel">
-        <property name="text">
-         <string>day</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="cycleLineEdit"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QLabel" name="birthControlLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>birth control</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="birthControlRadioLayout"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="birthControlOtherLabel">
-        <property name="text">
-         <string>other</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="birthControlOtherLineEdit"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item alignment="Qt::AlignLeft">
-       <widget class="QLabel" name="gestityLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>gestity</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="gestitySpinBox">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <widget class="QLabel" name="bornAliveLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>alive new born</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="bornAliveSpinBox"/>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
-      <item>
-       <widget class="QLabel" name="parityLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>parity</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="paritySpinBox"/>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="pregnancy1GroupBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>230</y>
-     <width>524</width>
-     <height>747</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>pregnancy1</string>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0" colspan="2">
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="p1IdentityLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>identity</string>
-        </property>
-       </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="pregnancy1GroupBox">
+     <property name="title">
+      <string>pregnancy1</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="2">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="p1IdentityLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>identity</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="p1LastNameLabel">
+          <property name="text">
+           <string>last name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="p1LastNameLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="p1FirstNameLabel">
+          <property name="text">
+           <string>first name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="p1FirstNameLabelLineEdit"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="p1UidLabel">
+          <property name="text">
+           <string>uid</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QLineEdit" name="p1UidLineEdit"/>
+        </item>
+       </layout>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="p1LastNameLabel">
-        <property name="text">
-         <string>last name</string>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="p1DobLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>date</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="p1DobDateEdit"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="p1PlaceOfBirthLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>place</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="p1PlaceOfBirthLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QLabel" name="p1SexLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>sex</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="p1SexRadioLayout"/>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QLabel" name="p1WeightLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>weight</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="p1WeightDoubleSpinBox">
+          <property name="suffix">
+           <string>kg</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="singleStep">
+           <double>0.010000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLabel" name="p1WeeksOfAmenorrhoeaLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>weeks of amenorrhoea</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="p1WeeksOfAmenorrhoeaSpinBox"/>
+        </item>
+       </layout>
+      </item>
+      <item row="4" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <item>
+         <widget class="QLabel" name="p1BirthControlPregnancyDelayLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>birth control pregnancy delay</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="p1BirthControlPregnancyDelaySpinBox"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="p1BirthControlPregnancyDelayComboBox"/>
+        </item>
+       </layout>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="p1ModeOfDeliveryLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>mode of delivery</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="p1ModeOfDeliveryListView"/>
+        </item>
+       </layout>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="p1PathologiesLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Pathologies</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="p1PathologiesListView"/>
+        </item>
+       </layout>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>birth defect</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <widget class="QLabel" name="p1PerinatalMortalityLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>perinatal mortality</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="p1PerinatalMortalityRadioLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="p1PerinatalMortalityDiagnosticLabel">
+          <property name="text">
+           <string>diagnostic</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="p1PerinatalMortalityDiagnosticLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QGroupBox" name="cesareanSectionReasonGroupBox">
+        <property name="title">
+         <string>cesareanSectionReasonGroupBox</string>
         </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLineEdit" name="cesareanSectionReasonLlineEdit"/>
+         </item>
+        </layout>
        </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="p1LastNameLineEdit"/>
-      </item>
-      <item row="1" column="2">
-       <widget class="QLabel" name="p1FirstNameLabel">
-        <property name="text">
-         <string>first name</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
-       <widget class="QLineEdit" name="p1FirstNameLabelLineEdit"/>
-      </item>
-      <item row="1" column="4">
-       <widget class="QLabel" name="p1UidLabel">
-        <property name="text">
-         <string>uid</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="5">
-       <widget class="QLineEdit" name="p1UidLineEdit"/>
       </item>
      </layout>
-    </item>
-    <item row="1" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
-      <item>
-       <widget class="QLabel" name="p1DobLabel">
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="ip1GroupBox">
+     <property name="title">
+      <string>interrupted pregnancy 1</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="ip1InterruptionDateLabel">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -302,302 +528,83 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QDateEdit" name="p1DobDateEdit"/>
+      <item row="0" column="1">
+       <widget class="QDateEdit" name="ip1InterruptionDateEdit"/>
       </item>
-      <item>
-       <widget class="QLabel" name="p1PlaceOfBirthLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>place</string>
-        </property>
-       </widget>
+      <item row="0" column="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <item>
+         <widget class="QLabel" name="ip1WeeksOfAmenorrhoeaLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>weeks of amenorrhoea</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="ip1WeeksOfAmenorrhoeaSpinBox"/>
+        </item>
+       </layout>
       </item>
-      <item>
-       <widget class="QLineEdit" name="p1PlaceOfBirthLineEdit"/>
+      <item row="1" column="0" colspan="3">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="ip1DiagnosticLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>diagnostic</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="ip1DiagnosticListView"/>
+        </item>
+       </layout>
       </item>
-     </layout>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_8">
-      <item>
-       <widget class="QLabel" name="p1SexLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>sex</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="p1SexRadioLayout"/>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_9">
-      <item>
-       <widget class="QLabel" name="p1WeightLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>weight</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QDoubleSpinBox" name="p1WeightDoubleSpinBox">
-        <property name="suffix">
-         <string>kg</string>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="singleStep">
-         <double>0.010000000000000</double>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_10">
-      <item>
-       <widget class="QLabel" name="p1WeeksOfAmenorrhoeaLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>weeks of amenorrhoea</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="p1WeeksOfAmenorrhoeaSpinBox"/>
+      <item row="2" column="0" colspan="3">
+       <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <item>
+         <widget class="QLabel" name="ip1ProcedureLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>procedure</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="ip1ProcedureRadioLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="ip1ProcedureOtherLabel">
+          <property name="text">
+           <string>other</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ip1ProcedureLineEdit"/>
+        </item>
+       </layout>
       </item>
      </layout>
-    </item>
-    <item row="4" column="0" colspan="2">
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="p1ModeOfDeliveryLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>mode of delivery</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QListView" name="p1ModeOfDeliveryListView"/>
-      </item>
-     </layout>
-    </item>
-    <item row="5" column="0" colspan="2">
-     <widget class="QGroupBox" name="cesareanSectionReasonGroupBox">
-      <property name="title">
-       <string>cesareanSectionReasonGroupBox</string>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_13">
-       <item>
-        <widget class="QLineEdit" name="cesareanSectionReasonLlineEdit"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <widget class="QLabel" name="p1PathologiesLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Pathologies</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QListView" name="p1PathologiesListView"/>
-      </item>
-     </layout>
-    </item>
-    <item row="7" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_12">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>birth defect</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit"/>
-      </item>
-     </layout>
-    </item>
-    <item row="8" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
-      <item>
-       <widget class="QLabel" name="p1PerinatalMortalityLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>perinatal mortality</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="p1PerinatalMortalityRadioLayout"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="p1PerinatalMortalityDiagnosticLabel">
-        <property name="text">
-         <string>diagnostic</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="p1PerinatalMortalityDiagnosticLineEdit"/>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGroupBox" name="ip1GroupBox">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>990</y>
-     <width>377</width>
-     <height>316</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>interrupted pregnancy 1</string>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
-     <widget class="QLabel" name="ip1InterruptionDateLabel">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>date</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QDateEdit" name="ip1InterruptionDateEdit"/>
-    </item>
-    <item row="0" column="2">
-     <layout class="QHBoxLayout" name="horizontalLayout_14">
-      <item>
-       <widget class="QLabel" name="ip1WeeksOfAmenorrhoeaLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>weeks of amenorrhoea</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="ip1WeeksOfAmenorrhoeaSpinBox"/>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="0" colspan="3">
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QLabel" name="ip1DiagnosticLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>diagnostic</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QListView" name="ip1DiagnosticListView"/>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="0" colspan="3">
-     <layout class="QHBoxLayout" name="horizontalLayout_15">
-      <item>
-       <widget class="QLabel" name="ip1ProcedureLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>procedure</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="ip1ProcedureRadioLayout"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="ip1ProcedureOtherLabel">
-        <property name="text">
-         <string>other</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="ip1ProcedureLineEdit"/>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
