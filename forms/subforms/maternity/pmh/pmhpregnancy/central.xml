@@ -162,11 +162,38 @@
   </Item>
 
   <Item name="PregnancyNumber" type="sum">
+      <uilink label="pregnancyNumberLabel" widget="pregnancyNumberLineEdit" layout="" />
       <label lang="fr">Grossesse numéro </label>
       <label lang="xx">Pregnancy number </label>
       <sumof>PregnancyNumberRadio</sumof>
       <options>changeepisodelabel;DontPrintEmptyValues</options>
-    </Item>
+  </Item>
+
+  <Item type="date" name="DateOfBirth">
+    <uilink label="dobLabel" widget="dobDateEdit" layout="" />
+    <label lang="xx">Date of birth</label>
+    <label lang="fr">Date de naissance</label>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="shorttext" name="PlaceOfBirthShortText">
+    <uilink label="placeOfBirthLabel" widget="placeOfBirthLineEdit" layout="" />
+    <label lang="xx">Place of birth</label>
+    <label lang="fr">Lieu de naissance</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="radio" name="SexRadio">
+    <uilink label="sexLabel" widget="" layout="sexRadioLayout"
+
+    <value>                                                                       
+    <uuid id="0">0</uuid>                                                       
+    <uuid id="1">1</uuid>                                                       
+    <uuid id="2">2</uuid>                                                       
+    <uuid id="3">3</uuid>
+   </value>
+  </Item> 
 
 </MedForm>
 
