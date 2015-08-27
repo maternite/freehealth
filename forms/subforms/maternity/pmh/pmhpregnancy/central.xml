@@ -185,15 +185,74 @@
   </Item>
 
   <Item type="radio" name="SexRadio">
-    <uilink label="sexLabel" widget="" layout="sexRadioLayout"
-
-    <value>                                                                       
-    <uuid id="0">0</uuid>                                                       
-    <uuid id="1">1</uuid>                                                       
-    <uuid id="2">2</uuid>                                                       
+    <uilink label="sexLabel" widget="" layout="sexRadioLayout" />
+    <label lang="xx">Sex</label>
+    <label lang="fr">Sexe</label>
+    <value>
+    <uuid id="0">0</uuid>
+    <uuid id="1">1</uuid>
+    <uuid id="2">2</uuid>
     <uuid id="3">3</uuid>
-   </value>
-  </Item> 
+
+    <possible id="0" lang="xx">female</possible>
+    <possible id="1" lang="xx">male</possible>
+    <possible id="2" lang="xx">indeterminate</possible>
+    <possible id="3" lang="xx">ø</possible>
+
+    <possible id="0" lang="fr">féminin</possible>
+    <possible id="1" lang="fr">masculin</possible>
+    <possible id="2" lang="fr">indeterminé</possible>
+    <possible id="3" lang="fr">ø</possible>
+
+    </value>
+  </Item>
+
+  <Item type="doublespin" name="BirthWeight">
+    <uilink label="weightLabel" widget="weightDoubleSpinBox" layout=""/>
+    <label lang="xx">Weight</label>
+    <label lang="fr">Poids</label>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="spin" name="WeeksOfAmenorrhoea">
+        <uilink label="weeksOfAmenorrhoeaLabel" widget="weeksOfAmenorrhoeaSpinBox" layout="" />
+        <label lang="xx">Weeks of amenorrhoea</label>
+        <label lang="fr">Semaines d'aménorrhée</label>
+        <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="spin" name="BirthControlPregnancyDelaySpin">
+        <uilink label="birthControlPregnancyDelayLabel" widget="birthControlPregnancyDelaySpinBox" layout="" />
+        <label lang="xx">Birth control to pregnancy delay</label>
+        <label lang="fr">Délai entre planning familial et grossesse</label>
+        <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="combo" name="BirthControlPregnancyDelayCombo">
+        <uilink label="" widget="birthControlPregnancyDelayComboBox" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <value>
+          <uuid id="0">Days</uuid>
+          <uuid id="1">Weeks</uuid>
+          <uuid id="2">Months</uuid>
+          <uuid id="3">Years</uuid>
+          <uuid id="4">Not done</uuid>
+
+          <possible id="0" lang="xx">Days</possible>
+          <possible id="1" lang="xx">Weeks</possible>
+          <possible id="2" lang="xx">Months</possible>
+          <possible id="3" lang="xx">Years</possible>
+          <possible id="4" lang="xx">ø</possible>
+
+          <possible id="0" lang="fr">Jours</possible>
+          <possible id="1" lang="fr">Semaines</possible>
+          <possible id="2" lang="fr">Mois</possible>
+          <possible id="3" lang="fr">Années</possible>
+          <possible id="4" lang="fr">ø</possible>
+        </value>
+        <options>DontPrintEmptyValues</options>
+  </Item>
 
 </MedForm>
 

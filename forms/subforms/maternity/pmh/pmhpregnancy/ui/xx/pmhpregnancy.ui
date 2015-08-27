@@ -20,8 +20,15 @@
       <string/>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0" colspan="2">
+      <item row="0" column="0" colspan="3">
        <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="2">
+         <widget class="Line" name="line_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="identityLabel">
           <property name="font">
@@ -45,17 +52,20 @@
         <item row="1" column="1">
          <widget class="QLineEdit" name="lastNameLineEdit"/>
         </item>
-        <item row="1" column="2">
+        <item row="1" column="3">
          <widget class="QLabel" name="firstNameLabel">
           <property name="text">
            <string>first name</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="3">
+        <item row="1" column="4">
          <widget class="QLineEdit" name="firstNameLineEdit"/>
         </item>
-        <item row="1" column="4">
+        <item row="1" column="7">
+         <widget class="QLineEdit" name="uidLineEdit"/>
+        </item>
+        <item row="1" column="6">
          <widget class="QLabel" name="uidLabel">
           <property name="text">
            <string>uid</string>
@@ -63,11 +73,15 @@
          </widget>
         </item>
         <item row="1" column="5">
-         <widget class="QLineEdit" name="uidLineEdit"/>
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item row="1" column="0" colspan="3">
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QLabel" name="pregnancyNumberLabel">
@@ -140,7 +154,7 @@
         </item>
        </layout>
       </item>
-      <item row="2" column="0" colspan="2">
+      <item row="2" column="0" colspan="3">
        <layout class="QHBoxLayout" name="horizontalLayout_7">
         <item>
          <widget class="QLabel" name="dobLabel">
@@ -157,6 +171,13 @@
         </item>
         <item>
          <widget class="QDateEdit" name="dobDateEdit"/>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="placeOfBirthLabel">
@@ -196,10 +217,10 @@
         </item>
        </layout>
       </item>
-      <item row="3" column="1">
+      <item row="3" column="2">
        <layout class="QHBoxLayout" name="horizontalLayout_9">
         <item>
-         <widget class="QLabel" name="WeightLabel">
+         <widget class="QLabel" name="weightLabel">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -212,12 +233,15 @@
          </widget>
         </item>
         <item>
-         <widget class="QDoubleSpinBox" name="WeightDoubleSpinBox">
+         <widget class="QDoubleSpinBox" name="weightDoubleSpinBox">
           <property name="suffix">
            <string>kg</string>
           </property>
           <property name="decimals">
            <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>10.000000000000000</double>
           </property>
           <property name="singleStep">
            <double>0.010000000000000</double>
@@ -239,10 +263,10 @@
         </item>
        </layout>
       </item>
-      <item row="4" column="0" colspan="2">
+      <item row="4" column="0" colspan="3">
        <layout class="QHBoxLayout" name="horizontalLayout_10">
         <item>
-         <widget class="QLabel" name="WeeksOfAmenorrhoeaLabel">
+         <widget class="QLabel" name="weeksOfAmenorrhoeaLabel">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -255,7 +279,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="WeeksOfAmenorrhoeaSpinBox"/>
+         <widget class="QSpinBox" name="weeksOfAmenorrhoeaSpinBox"/>
         </item>
         <item>
          <spacer name="horizontalSpacer_3">
@@ -272,10 +296,10 @@
         </item>
        </layout>
       </item>
-      <item row="5" column="0" colspan="2">
+      <item row="5" column="0" colspan="3">
        <layout class="QHBoxLayout" name="horizontalLayout_16">
         <item>
-         <widget class="QLabel" name="BirthControlPregnancyDelayLabel">
+         <widget class="QLabel" name="birthControlPregnancyDelayLabel">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -288,10 +312,10 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="BirthControlPregnancyDelaySpinBox"/>
+         <widget class="QSpinBox" name="birthControlPregnancyDelaySpinBox"/>
         </item>
         <item>
-         <widget class="QComboBox" name="BirthControlPregnancyDelayComboBox"/>
+         <widget class="QComboBox" name="birthControlPregnancyDelayComboBox"/>
         </item>
         <item>
          <spacer name="horizontalSpacer_4">
@@ -308,7 +332,7 @@
         </item>
        </layout>
       </item>
-      <item row="6" column="0" colspan="2">
+      <item row="6" column="0" colspan="3">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QLabel" name="ModeOfDeliveryLabel">
@@ -328,7 +352,7 @@
         </item>
        </layout>
       </item>
-      <item row="7" column="0" colspan="2">
+      <item row="7" column="0" colspan="3">
        <widget class="QGroupBox" name="cesareanSectionReasonGroupBox">
         <property name="title">
          <string>cesareanSectionReasonGroupBox</string>
@@ -340,7 +364,7 @@
         </layout>
        </widget>
       </item>
-      <item row="8" column="0" colspan="2">
+      <item row="8" column="0" colspan="3">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <widget class="QLabel" name="PathologiesLabel">
@@ -360,7 +384,7 @@
         </item>
        </layout>
       </item>
-      <item row="9" column="0" colspan="2">
+      <item row="9" column="0" colspan="3">
        <layout class="QHBoxLayout" name="horizontalLayout_12">
         <item>
          <widget class="QLabel" name="label">
@@ -380,7 +404,7 @@
         </item>
        </layout>
       </item>
-      <item row="10" column="0" colspan="2">
+      <item row="10" column="0" colspan="3">
        <layout class="QHBoxLayout" name="horizontalLayout_11">
         <item>
          <widget class="QLabel" name="PerinatalMortalityLabel">
@@ -409,6 +433,13 @@
          <widget class="QLineEdit" name="PerinatalMortalityDiagnosticLineEdit"/>
         </item>
        </layout>
+      </item>
+      <item row="3" column="1">
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
