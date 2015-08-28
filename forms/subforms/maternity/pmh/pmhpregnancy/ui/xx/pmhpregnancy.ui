@@ -335,7 +335,7 @@
       <item row="6" column="0" colspan="3">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QLabel" name="ModeOfDeliveryLabel">
+         <widget class="QLabel" name="modeOfDeliveryLabel">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -348,7 +348,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QListView" name="ModeOfDeliveryListView"/>
+         <widget class="QListView" name="modeOfDeliveryListView"/>
         </item>
        </layout>
       </item>
@@ -367,7 +367,7 @@
       <item row="8" column="0" colspan="3">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QLabel" name="PathologiesLabel">
+         <widget class="QLabel" name="pathologiesLabel">
           <property name="font">
            <font>
             <weight>75</weight>
@@ -375,12 +375,12 @@
            </font>
           </property>
           <property name="text">
-           <string>Pathologies</string>
+           <string>pathologies</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QListView" name="PathologiesListView"/>
+         <widget class="QListView" name="pathologiesListView"/>
         </item>
        </layout>
       </item>

@@ -26,7 +26,7 @@
 
   </formdescription>
 
-  <!-- <file type="script" name="onload">./scripts/xx/pmhpregnancy.js</file> -->
+  <file type="script" name="onload">./scripts/xx/pmhpregnancy.js</file>
 
 <MedForm name="Maternity::Obstetrics::PastMedicalHistory::Pregnancy" uifilename="./ui/xx/pmhpregnancy.ui">
     <label lang="xx">Completed pregnancy</label>
@@ -239,19 +239,104 @@
           <uuid id="3">Years</uuid>
           <uuid id="4">Not done</uuid>
 
-          <possible id="0" lang="xx">Days</possible>
-          <possible id="1" lang="xx">Weeks</possible>
-          <possible id="2" lang="xx">Months</possible>
-          <possible id="3" lang="xx">Years</possible>
+          <possible id="0" lang="xx">Day(s)</possible>
+          <possible id="1" lang="xx">Week(s)</possible>
+          <possible id="2" lang="xx">Month(s)</possible>
+          <possible id="3" lang="xx">Year(s)</possible>
           <possible id="4" lang="xx">ø</possible>
 
-          <possible id="0" lang="fr">Jours</possible>
-          <possible id="1" lang="fr">Semaines</possible>
+          <possible id="0" lang="fr">Jour(s)</possible>
+          <possible id="1" lang="fr">Semaine(s)</possible>
           <possible id="2" lang="fr">Mois</possible>
-          <possible id="3" lang="fr">Années</possible>
+          <possible id="3" lang="fr">Année(s)</possible>
           <possible id="4" lang="fr">ø</possible>
+
+          <default>Weeks</default>
         </value>
         <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="uniquelist" name="Delivery::procedure::uniquelist">
+    <!--<sctid>236973005</sctid>-->
+    <uilink label="modeOfDeliveryLabel" widget="modeOfDeliveryListView" layout="" />
+    <label lang="xx">Mode of delivery</label>
+    <label lang="fr">Mode d'accouchement</label>
+    <value>
+      <uuid id="0">Delivery normal</uuid>
+      <!--<sctid>48782003</sctid>-->
+      <uuid id="1">Instrumental delivery</uuid>
+      <!--<sctid>236974004</sctid>-->
+      <uuid id="2">Delivery by emergency cesarean section</uuid>
+      <!--<sctid>200149009</sctid>-->
+      <uuid id="3">Elective cesarean section</uuid>
+      <!--<sctid>177141003</sctid>-->
+      <uuid id="4">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+
+      <possible id="0" lang="xx">Normal delivery</possible>
+      <possible id="1" lang="xx">Instrumental delivery</possible>
+      <possible id="2" lang="xx">Delivery by emergency cesarean section</possible>
+      <possible id="3" lang="xx">Elective cesarean section</possible>
+      <possible id="4" lang="xx">ø</possible>
+
+      <possible id="0" lang="fr">Accouchement normal par voie basse</possible>
+      <possible id="1" lang="fr">Accouchement par voie basse avec manœuvre instrumentale</possible>
+      <possible id="2" lang="fr">Césarienne en urgence</possible>
+      <possible id="3" lang="fr">Césarienne programmée</possible>
+      <possible id="4" lang="fr">ø</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+    <script>
+      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.hideCesareanReason()</onValueChanged>
+    </script>
+  </Item>
+
+  <Item type="group" name="Cesarean::section::reason::GroupBox">
+    <uilink widget="cesareanSectionReasonGroupBox"/>
+    <options>collapsible;DontPrintEmptyValues</options>
+    <label lang="xx">Reason for cesarean section</label>
+    <label lang="fr">Motif de césarienne</label>
+
+    <Item type="shorttext" name="Cesarean::section::reason::shorttext">
+        <uilink label="" widget="cesareanSectionReasonLlineEdit" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+    </Item>
+
+  </Item> <!-- end of Cesarean reason Group -->
+
+  <Item type="uniquelist" name="Delivery::Pathologies::uniquelist">               
+    <!--<sctid></sctid>-->                                             
+    <uilink label="pathologiesLabel" widget="pathologiesListView" layout="" />
+    <label lang="xx">Pathologies</label>                                   
+    <label lang="fr">Pathologies</label>                                
+    <value>                                                                     
+      <uuid id="0">Miscarriage</uuid>                                       
+      <!--<sctid>17369002</sctid>-->                                            
+      <uuid id="1">Threatened premature labor - not delivered</uuid>                                 
+      <!--<sctid>199049003</sctid>-->                                           
+      <uuid id="2">Pregnancy-induced hypertension</uuid>                
+      <!--<sctid>48194001</sctid>-->                                           
+      <uuid id="3">Gestational diabetes mellitus</uuid>                             
+      <!--<sctid>11687002</sctid>-->                                           
+      <uuid id="4">Not done</uuid>                                              
+      <!--<sctid>385660001</sctid>-->                                           
+                                                                                
+      <possible id="0" lang="xx">Miscarriage</possible>                     
+      <possible id="1" lang="xx">Threatened premature labor</possible>               
+      <possible id="2" lang="xx">Pregnancy-induced hypertension</possible>
+      <possible id="3" lang="xx">Gestational diabetes mellitus</possible>           
+      <possible id="4" lang="xx">ø</possible> 
+
+      <possible id="0" lang="fr">Menace de fausse couche spontanée</possible>  
+      <possible id="1" lang="fr">Menace d'accouchement prématuré</possible>
+      <possible id="2" lang="fr">Hypertension artérielle pendant la grossesse</possible>               
+      <possible id="3" lang="fr">Diabète gestationnel</possible>               
+      <possible id="4" lang="fr">ø</possible> 
+
+    </value>
   </Item>
 
 </MedForm>
