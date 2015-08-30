@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+<formdescription>
+<authors>Jérôme Pinguet</authors>
+<version>test</version>
+<fmfv>0.9.6</fmfv>
+<cdate>2015-08-25</cdate>
+<lmdate>2015-08-25</lmdate>
+<icon>__theme__stethoscope.png</icon>
+<weblink>https://github.com/maternite/freemedforms</weblink>
+<bibliograpy/>
+
+<license>GPLv3</license>
+<description lang="xx">Gynecology and Obstetrics Past Medical History</description>
+<description lang="fr">Antécédents gynécologiques et obstétricaux</description>
+<category lang="xx">Past Medical History</category>
+<category lang="en">Antécédents</category>
+<specialties lang="xx">Obstetrics</specialties>
+<specialties lang="en">Obstétrique</specialties>
+
+<updateinfo>
+</updateinfo>
+
+</formdescription>
+
+<!--<file type="script" name="onload">./scripts/xx/pmhgynobst.js</file>-->
+
+<MedForm name="Maternity::Obstetrics::Past::Medical::History::Gynecology::Obstetrics" uifilename="./ui/xx/pmhgynobst.ui">
+<label lang="xx">PMH: gynecology and obstetrics</label>
+<label lang="fr">ATCD: gynécologie et obstétrique </label>
+<options>unique;HideHeaderOnUniqueEpisode;UseFormAsNameSpace</options>
+<icon>__theme__/stethoscope.png</icon>
+
+  <Item type="group" name="PMH::Gynecology::Obstetrics::Group">
+    <uilink widget="pmhGynObstGroupBox" />
+    <label lang="xx">PMH Gynecology and Obstetrics</label>
+    <label lang="fr">ATCD gynécologie and obstétrique</label>
+
+    <Item type="date" name="Menarche::Date">
+      <uilink label="menarcheLabel" widget="menarcheDateEdit" layout="" />
+      <!--<sct>Menarche (finding)</sct>-->
+      <!--<sctid>20016009</sctid>-->
+      <label lang="xx">Menarche</label>
+      <label lang="fr">Ménarche</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Menarche::Comment::Shorttext">
+      <uilink label="" widget="menarcheLineEdit" layout="" />
+      <label lang="xx"></label>
+      <label lang="fr"></label>
+      <placeholder lang="xx">Comment</placeholder>
+      <placeholder lang="fr">Commentaire</placeholder>
+    </Item>
+
+    <Item type="radio" name="Finding::Of::Regularity::Of::Menstrual::Cycle">
+      <!--<sct>Finding of regularity of menstrual cycle (finding)</sct>-->
+      <!--<sctid>248965005</sctid>-->
+      <uilink label="cycleLabel" widget="" layout="cycleRadioLayout" />
+      <label lang="xx">Menstrual cycle</label>
+      <label lang="fr">Cycle menstruel</label>
+      <value>
+        <uuid id="0">Regular periods</uuid>
+        <!--<sct id="0">Regular periods (finding)</sct>-->
+        <!--<sctid id="0">302757007</sctid>-->
+        <uuid id="1">Irregular periods</uuid>
+        <!--<sct id="1"> Irregular periods (finding) </sct>-->
+        <!--<sctid id="1">80182007</sctid>-->
+        <uuid id="2">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <possible id="0" lang="xx">Regular periods</possible>
+        <possible id="1" lang="xx">Irregular periods</possible>
+        <possible id="2" lang="xx">ø</possible>
+        <possible id="0" lang="fr">Cycle menstruel régulier</possible>
+        <possible id="1" lang="fr">Cycle menstruel irrégulier</possible>
+        <possible id="2" lang="fr">ø</possible>
+      </value>
+      <options>compact</options>
+    </Item>
+
+    <Item type="spin" name="Measure::of::duration::of::menstrual::cycle::Spin">
+      <!--<sct>Measure of duration of menstrual cycle (observable entity)</sct>-->
+      <!--<sctid>248961001</sctid>-->
+      <uilink label="cycleLengthLabel" widget="cycleSpinBox" layout="" />
+      <label lang="xx">Duration of menstrual cycle</label>
+      <label lang="fr">Durée du cycle menstruel</label>
+      <options></options>
+    </Item>
+
+    <Item type="helptext" name="Menstrual::Cycle::Day::Helptext">
+      <uilink label="" widget="cycleDayLabel" layout="" />
+      <label lang="xx">day(s)</label>
+      <label lang="fr">jour(s)</label>
+    </Item>
+
+    <Item type="shorttext" name="Menstrual::Cycle::Comment">
+      <uilink label="" widget="cycleLineEdit" layout="" />
+      <label lang="xx"></label>
+      <label lang="fr"></label>
+      <placeholder lang="xx">Comment</placeholder>
+      <placeholder lang="fr">Commentaire</placeholder>
+    </Item>
+
+
+
+  </Item>
+
+</MedForm>
+
+</FreeMedForms>
