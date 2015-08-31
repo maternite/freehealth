@@ -8,7 +8,7 @@
 <version>test</version>
 <fmfv>0.9.6</fmfv>
 <cdate>2015-08-25</cdate>
-<lmdate>2015-08-25</lmdate>
+<lmdate>2015-08-31</lmdate>
 <icon>__theme__stethoscope.png</icon>
 <weblink>https://github.com/maternite/freemedforms</weblink>
 <bibliograpy/>
@@ -104,7 +104,86 @@
       <placeholder lang="fr">Commentaire</placeholder>
     </Item>
 
+    <Item type="uniquelist" name="Contraception::care">
+      <!--<sct>Contraception care (regime/therapy)</sct>-->
+      <!--<sctid>389095005</sctid>-->
+      <uilink label="birthControlLabel" widget="contraceptionListView" layout="" />
+      <label lang="xx">Contraception</label>
+      <label lang="fr">Contraception</label>
+      <value>
+        <uuid id="0">Does not use contraception</uuid>
+        <!--<sct id="0">Does not use contraception (finding)</sct>-->
+        <!--<sctid id="0">445375000</sctid>-->
+        <uuid id="1">Oral contraception</uuid>
+        <!--<sct id="1">Oral contraception (finding)</sct>-->
+        <!--<sctid id="1">5935008</sctid>-->
+        <uuid id="2">Progestogen only depot contraception</uuid>
+        <!--<sct id="2">Progestogen only depot contraception (finding)</sct>-->
+        <!--<sctid id="2">709457002</sctid>-->
+        <uuid id="3">Subcutaneous contraceptive implant</uuid>
+        <!--<sct id="3">Subcutaneous contraceptive implant (finding)</sct>-->
+        <!--<sctid id="3">428987008</sctid>-->
+        <uuid id="4">Intrauterine device contraception</uuid>
+        <!--<sct id="4">Intrauterine device contraception (finding)</sct>-->
+        <!--<sctid id="4">312081001</sctid>-->
+        <uuid id="5">Other</uuid>
+        <!--<sct id="4">Other (qualifier value)</sct>-->
+        <!--<sctid id="4">74964007</sctid>-->
+        <uuid id="6">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <possible id="0" lang="xx">Does not use contraception</possible>
+        <possible id="1" lang="xx">Oral contraception</possible>
+        <possible id="2" lang="xx">Progestogen only depot contraception</possible>
+        <possible id="3" lang="xx">Subcutaneous contraceptive implant</possible>
+        <possible id="4" lang="xx">Intrauterine device contraception</possible>
+        <possible id="5" lang="xx">Other</possible>
+        <possible id="6" lang="xx">ø</possible>
+        <possible id="0" lang="fr">Pas de contraception</possible>
+        <possible id="1" lang="fr">Contraception orale</possible>
+        <possible id="2" lang="fr">Contraception injectable</possible>
+        <possible id="3" lang="fr">Implant contraceptif sous-cutané</possible>
+        <possible id="4" lang="fr">Dispositif Intra-Utérin</possible>
+        <possible id="5" lang="fr">Autre</possible>
+        <possible id="6" lang="fr">ø</possible>
+      </value>
+      <options>resizeToContent</options>
+    </Item>
 
+    <Item type="shorttext" name="Contraception::Other::Shorttext">
+      <uilink label="birthControlOtherLabel" widget="birthControlOtherLineEdit" layout="" />
+      <label lang="xx">Other contraception</label>
+      <label lang="fr">Autre contraception</label>
+      <placeholder lang="xx"></placeholder>
+      <placeholder lang="fr"></placeholder>
+    </Item>
+
+    <Item type="spin" name="Gravida">
+      <uilink label="gravidaLabel" widget="gravidaSpinBox" layout="" />
+      <label lang="xx">Gravida</label>
+      <label lang="fr">Gestité</label>
+      <options></options>
+    </Item>
+
+    <Item type="spin" name="Live:Birth">
+      <uilink label="liveBirthLabel" widget="liveBirthSpinBox" layout="" />
+      <label lang="xx">Live birth(s)</label>
+      <label lang="fr">Enfant(s) né(s) vivant(s)</label>
+      <options></options>
+    </Item>
+
+    <Item type="spin" name="Parity">
+      <uilink label="parityLabel" widget="paritySpinBox" layout="" />
+      <label lang="xx">Parity</label>
+      <label lang="fr">Parité</label>
+      <options></options>
+    </Item>
+
+    <Item type="spin" name="Pregnancy::with::abortive::outcome">
+      <uilink label="abortiveOutcomeLabel" widget="abortiveOutcomeSpinBox" layout="" />
+      <label lang="xx">Pregnancy with abortive outcome</label>
+      <label lang="fr">Grossesse(s) interrompue(s)</label>
+      <options></options>
+    </Item>
 
   </Item>
 

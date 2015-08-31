@@ -452,15 +452,28 @@
          <item row="0" column="1">
           <widget class="QSpinBox" name="fetusNumberSpinBox">
            <property name="minimum">
-            <number>1</number>
+            <number>0</number>
            </property>
            <property name="maximum">
-            <number>5</number>
+            <number>6</number>
            </property>
            <property name="value">
             <number>1</number>
            </property>
           </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_17">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -649,7 +662,30 @@
             </widget>
            </item>
            <item>
+            <layout class="QHBoxLayout" name="f1BirthDefectRadioLayout"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="f1BirthDefectDiagnosticLabel">
+             <property name="text">
+              <string>diagnostic</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QLineEdit" name="f1BirthDefectLineEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -883,7 +919,30 @@
             </widget>
            </item>
            <item>
+            <layout class="QHBoxLayout" name="f2BirthDefectRadioLayout"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="f2BirthDefectDiagnosticLabel">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QLineEdit" name="f2BirthDefectLineEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_23">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -1117,7 +1176,30 @@
             </widget>
            </item>
            <item>
+            <layout class="QHBoxLayout" name="f3BirthDefectRadioLayout"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="f3BirthDefectDiagnosticLabel">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QLineEdit" name="f3BirthDefectLineEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_22">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -1168,7 +1250,7 @@
        </widget>
       </item>
       <item row="10" column="0">
-       <widget class="QGroupBox" name="fetus3GroupBox">
+       <widget class="QGroupBox" name="fetus4GroupBox">
         <property name="title">
          <string>fetus4GroupBox</string>
         </property>
@@ -1351,7 +1433,30 @@
             </widget>
            </item>
            <item>
+            <layout class="QHBoxLayout" name="f4BirthDefectRadioLayout"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="f4BirthDefectDiagnosticLabel">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QLineEdit" name="f4BirthDefectLineEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -1585,7 +1690,30 @@
             </widget>
            </item>
            <item>
+            <layout class="QHBoxLayout" name="f5BirthDefectRadioLayout"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="f5BirthDefectDiagnosticLabel">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QLineEdit" name="f5BirthDefectLineEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_20">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -1819,7 +1947,30 @@
             </widget>
            </item>
            <item>
+            <layout class="QHBoxLayout" name="f6BirthDefectRadioLayout"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="f6BirthDefectDiagnosticLabel">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QLineEdit" name="f6BirthDefectLineEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>

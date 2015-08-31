@@ -338,7 +338,7 @@
     <uilink widget="fetus1GroupBox" />
     <label lang="xx">Fetus 1</label>
     <label lang="fr">Fœtus 1</label>
-    <options>collapsible;DontPrintEmptyValues</options>
+    <options>DontPrintEmptyValues;collapsible</options>
 
   <Item type="helptext" name="F1::Identity::Label::HelpText">
     <uilink label="f1IdentityLabel" layout="" widget=""/>
@@ -436,9 +436,9 @@
       <possible id="3" lang="fr">Césarienne programmée</possible>
       <possible id="4" lang="fr">ø</possible>
     </value>
-    <options>DontPrintEmptyValues</options>
+    <options>DontPrintEmptyValues;resizeToContent</options>
     <script>
-      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.hideCesareanReason()</onValueChanged>
+      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f1HideCesareanReason()</onValueChanged>
     </script>
   </Item>
 
@@ -448,7 +448,7 @@
     <label lang="xx">Reason for cesarean section</label>
     <label lang="fr">Motif de césarienne</label>
 
-    <Item type="shorttext" name="f1::Cesarean::section::reason::shorttext">
+    <Item type="shorttext" name="F1::Cesarean::section::reason::shorttext">
         <uilink label="" widget="f1CesareanSectionReasonLlineEdit" layout="" />
         <label lang="xx"></label>
         <label lang="fr"></label>
@@ -461,11 +461,32 @@
   <Item type="shorttext" name="F1::Dysmorphism::ShortText">
     <!--<sct>Dysmorphism (disorder)</sct>-->
     <!--<sctid>276720006</sctid>-->
-    <uilink label="f1BirthDefectLabel" widget="f1BirthDefectLineEdit" layout="" />
-    <label lang="xx">Dysmorphism</label>
-    <label lang="fr">Malformation</label>
+    <uilink label="f1BirthDefectDiagnosticLabel" widget="f1BirthDefectLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
     <placeholder lang="xx"></placeholder>
     <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="radio" name="F1::Dysmorphism::Radio">                    
+    <uilink label="f1BirthDefectLabel" widget="" layout="f1BirthDefectRadioLayout" />
+    <label lang="xx">Dysmorphism</label>                                
+    <label lang="fr">Malformation</label>                               
+    <value>                                                                     
+    <uuid id="0">yes</uuid>                                                     
+    <!--<sctid id="0">373066001</sctid>-->                                      
+    <uuid id="1">no</uuid>                                                      
+    <!--<sctid id="2">373067005</sctid>-->                                      
+    <uuid id="2">not done</uuid>                                                
+    <!--<sctid id="3">385660001</sctid>-->                                      
+    <possible id="0" lang="xx">Yes</possible>                                   
+    <possible id="1" lang="xx">No</possible>                                    
+    <possible id="2" lang="xx">ø</possible>                                     
+    <possible id="0" lang="fr">Oui</possible>                                   
+    <possible id="1" lang="fr">Non</possible>                                   
+    <possible id="2" lang="fr">ø</possible>                                     
+    </value>                                                                    
+    <options>compact</options>                                                  
   </Item>
 
   <Item type="radio" name="F1::Perinatal::Mortality::Radio">
@@ -498,6 +519,936 @@
   </Item>
 
   </Item> <!-- end of Fetus 1 Group -->
+
+  <Item type="group" name="Fetus2group">
+    <uilink widget="fetus2GroupBox" />
+    <label lang="xx">Fetus 2</label>
+    <label lang="fr">Fœtus 2</label>
+    <options>DontPrintEmptyValues;collapsible</options>
+
+  <Item type="helptext" name="F2::Identity::Label::HelpText">
+    <uilink label="f2IdentityLabel" layout="" widget=""/>
+    <label lang="xx">Identity</label>
+    <label lang="fr">Identité</label>
+    <options>printable</options>
+    <value>
+    <default></default>
+    </value>
+  </Item>
+
+  <Item type="shorttext" name="F2::Last::Name::ShortText">
+        <uilink label="f2LastNameLabel" widget="f2LastNameLineEdit" layout="" />
+        <label lang="xx">Last name</label>
+        <label lang="fr">Nom de famille</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F2::First::Name::ShortText">
+        <uilink label="f2FirstNameLabel" widget="f2FirstNameLineEdit" layout="" />
+        <label lang="xx">First name</label>
+        <label lang="fr">Prénom</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F2::Uid::ShortText">
+        <uilink label="f2UidLabel" widget="f2UidLineEdit" layout="" />
+        <label lang="xx">Unique identifier</label>
+        <label lang="fr">Identifiant unique</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+
+  <Item type="radio" name="F2::Sex::Radio">
+    <uilink label="f2SexLabel" widget="" layout="f2SexRadioLayout" />
+    <label lang="xx">Sex</label>
+    <label lang="fr">Sexe</label>
+    <value>
+    <uuid id="0">0</uuid>
+    <uuid id="1">1</uuid>
+    <uuid id="2">2</uuid>
+    <uuid id="3">3</uuid>
+
+    <possible id="0" lang="xx">female</possible>
+    <possible id="1" lang="xx">male</possible>
+    <possible id="2" lang="xx">indeterminate</possible>
+    <possible id="3" lang="xx">ø</possible>
+
+    <possible id="0" lang="fr">féminin</possible>
+    <possible id="1" lang="fr">masculin</possible>
+    <possible id="2" lang="fr">indeterminé</possible>
+    <possible id="3" lang="fr">ø</possible>
+
+    </value>
+  </Item>
+
+  <Item type="doublespin" name="F2::Birth::Weight">
+    <uilink label="f2WeightLabel" widget="f2WeightDoubleSpinBox" layout=""/>
+    <label lang="xx">Weight</label>
+    <label lang="fr">Poids</label>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+
+
+  <Item type="uniquelist" name="F2::Delivery::procedure::uniquelist">
+    <!--<sctid>236973005</sctid>-->
+    <uilink label="f2ModeOfDeliveryLabel" widget="f2ModeOfDeliveryListView" layout="" />
+    <label lang="xx">Mode of delivery</label>
+    <label lang="fr">Mode d'accouchement</label>
+    <value>
+      <uuid id="0">Delivery normal</uuid>
+      <!--<sctid>48782003</sctid>-->
+      <uuid id="1">Instrumental delivery</uuid>
+      <!--<sctid>236974004</sctid>-->
+      <uuid id="2">Delivery by emergency cesarean section</uuid>
+      <!--<sctid>200149009</sctid>-->
+      <uuid id="3">Elective cesarean section</uuid>
+      <!--<sctid>177141003</sctid>-->
+      <uuid id="4">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+
+      <possible id="0" lang="xx">Normal delivery</possible>
+      <possible id="1" lang="xx">Instrumental delivery</possible>
+      <possible id="2" lang="xx">Delivery by emergency cesarean section</possible>
+      <possible id="3" lang="xx">Elective cesarean section</possible>
+      <possible id="4" lang="xx">ø</possible>
+
+      <possible id="0" lang="fr">Accouchement normal par voie basse</possible>
+      <possible id="1" lang="fr">Accouchement par voie basse avec manœuvre instrumentale</possible>
+      <possible id="2" lang="fr">Césarienne en urgence</possible>
+      <possible id="3" lang="fr">Césarienne programmée</possible>
+      <possible id="4" lang="fr">ø</possible>
+    </value>
+    <options>DontPrintEmptyValues;resizeToContent</options>
+    <script>
+      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f2HideCesareanReason()</onValueChanged>
+    </script>
+  </Item>
+
+  <Item type="group" name="F2::Cesarean::section::reason::GroupBox">
+    <uilink widget="f2CesareanSectionReasonGroupBox"/>
+    <options>collapsible;DontPrintEmptyValues</options>
+    <label lang="xx">Reason for cesarean section</label>
+    <label lang="fr">Motif de césarienne</label>
+
+    <Item type="shorttext" name="F2::Cesarean::section::reason::shorttext">
+        <uilink label="" widget="f2CesareanSectionReasonLlineEdit" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+    </Item>
+
+  </Item> <!-- end of Cesarean reason Group -->
+
+  <Item type="shorttext" name="F2::Dysmorphism::ShortText">
+    <!--<sct>Dysmorphism (disorder)</sct>-->
+    <!--<sctid>276720006</sctid>-->
+    <uilink label="f2BirthDefectDiagnosticLabel" widget="f2BirthDefectLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="radio" name="F2::Dysmorphism::Radio">                    
+    <uilink label="f2BirthDefectLabel" widget="" layout="f2BirthDefectRadioLayout" />
+    <label lang="xx">Dysmorphism</label>                                
+    <label lang="fr">Malformation</label>                               
+    <value>                                                                     
+    <uuid id="0">yes</uuid>                                                     
+    <!--<sctid id="0">373066001</sctid>-->                                      
+    <uuid id="1">no</uuid>                                                      
+    <!--<sctid id="2">373067005</sctid>-->                                      
+    <uuid id="2">not done</uuid>                                                
+    <!--<sctid id="3">385660001</sctid>-->                                      
+    <possible id="0" lang="xx">Yes</possible>                                   
+    <possible id="1" lang="xx">No</possible>                                    
+    <possible id="2" lang="xx">ø</possible>                                     
+    <possible id="0" lang="fr">Oui</possible>                                   
+    <possible id="1" lang="fr">Non</possible>                                   
+    <possible id="2" lang="fr">ø</possible>                                     
+    </value>                                                                    
+    <options>compact</options>                                                  
+  </Item>
+
+  <Item type="radio" name="F2::Perinatal::Mortality::Radio">
+    <uilink label="f2PerinatalMortalityLabel" widget="" layout="f2PerinatalMortalityRadioLayout" />
+    <label lang="xx">Perinatal mortality</label>
+    <label lang="fr">Mortalité périnatale</label>
+    <value>
+    <uuid id="0">yes</uuid>
+    <!--<sctid id="0">373066001</sctid>-->
+    <uuid id="1">no</uuid>
+    <!--<sctid id="2">373067005</sctid>-->
+    <uuid id="2">not done</uuid>
+    <!--<sctid id="3">385660001</sctid>-->
+    <possible id="0" lang="xx">Yes</possible>
+    <possible id="1" lang="xx">No</possible>
+    <possible id="2" lang="xx">ø</possible>
+    <possible id="0" lang="fr">Oui</possible>
+    <possible id="1" lang="fr">Non</possible>
+    <possible id="2" lang="fr">ø</possible>
+    </value>
+    <options>compact</options>
+  </Item>
+
+  <Item type="shorttext" name="F2::Perinatal::Mortality::Diagnostic::ShortText">
+    <uilink label="f2PerinatalMortalityDiagnosticLabel" widget="f2PerinatalMortalityDiagnosticLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  </Item> <!-- end of Fetus 2 Group -->
+
+  <Item type="group" name="Fetus3group">
+    <uilink widget="fetus3GroupBox" />
+    <label lang="xx">Fetus 3</label>
+    <label lang="fr">Fœtus 3</label>
+    <options>DontPrintEmptyValues;collapsible</options>
+
+  <Item type="helptext" name="F3::Identity::Label::HelpText">
+    <uilink label="f3IdentityLabel" layout="" widget=""/>
+    <label lang="xx">Identity</label>
+    <label lang="fr">Identité</label>
+    <options>printable</options>
+    <value>
+    <default></default>
+    </value>
+  </Item>
+
+  <Item type="shorttext" name="F3::Last::Name::ShortText">
+        <uilink label="f3LastNameLabel" widget="f3LastNameLineEdit" layout="" />
+        <label lang="xx">Last name</label>
+        <label lang="fr">Nom de famille</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F3::First::Name::ShortText">
+        <uilink label="f3FirstNameLabel" widget="f3FirstNameLineEdit" layout="" />
+        <label lang="xx">First name</label>
+        <label lang="fr">Prénom</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F3::Uid::ShortText">
+        <uilink label="f3UidLabel" widget="f3UidLineEdit" layout="" />
+        <label lang="xx">Unique identifier</label>
+        <label lang="fr">Identifiant unique</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+
+  <Item type="radio" name="F3::Sex::Radio">
+    <uilink label="f3SexLabel" widget="" layout="f3SexRadioLayout" />
+    <label lang="xx">Sex</label>
+    <label lang="fr">Sexe</label>
+    <value>
+    <uuid id="0">0</uuid>
+    <uuid id="1">1</uuid>
+    <uuid id="2">2</uuid>
+    <uuid id="3">3</uuid>
+
+    <possible id="0" lang="xx">female</possible>
+    <possible id="1" lang="xx">male</possible>
+    <possible id="2" lang="xx">indeterminate</possible>
+    <possible id="3" lang="xx">ø</possible>
+
+    <possible id="0" lang="fr">féminin</possible>
+    <possible id="1" lang="fr">masculin</possible>
+    <possible id="2" lang="fr">indeterminé</possible>
+    <possible id="3" lang="fr">ø</possible>
+
+    </value>
+  </Item>
+
+  <Item type="doublespin" name="F3::Birth::Weight">
+    <uilink label="f3WeightLabel" widget="f3WeightDoubleSpinBox" layout=""/>
+    <label lang="xx">Weight</label>
+    <label lang="fr">Poids</label>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+
+
+  <Item type="uniquelist" name="F3::Delivery::procedure::uniquelist">
+    <!--<sctid>236973005</sctid>-->
+    <uilink label="f3ModeOfDeliveryLabel" widget="f3ModeOfDeliveryListView" layout="" />
+    <label lang="xx">Mode of delivery</label>
+    <label lang="fr">Mode d'accouchement</label>
+    <value>
+      <uuid id="0">Delivery normal</uuid>
+      <!--<sctid>48782003</sctid>-->
+      <uuid id="1">Instrumental delivery</uuid>
+      <!--<sctid>236974004</sctid>-->
+      <uuid id="2">Delivery by emergency cesarean section</uuid>
+      <!--<sctid>200149009</sctid>-->
+      <uuid id="3">Elective cesarean section</uuid>
+      <!--<sctid>177141003</sctid>-->
+      <uuid id="4">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+
+      <possible id="0" lang="xx">Normal delivery</possible>
+      <possible id="1" lang="xx">Instrumental delivery</possible>
+      <possible id="2" lang="xx">Delivery by emergency cesarean section</possible>
+      <possible id="3" lang="xx">Elective cesarean section</possible>
+      <possible id="4" lang="xx">ø</possible>
+
+      <possible id="0" lang="fr">Accouchement normal par voie basse</possible>
+      <possible id="1" lang="fr">Accouchement par voie basse avec manœuvre instrumentale</possible>
+      <possible id="2" lang="fr">Césarienne en urgence</possible>
+      <possible id="3" lang="fr">Césarienne programmée</possible>
+      <possible id="4" lang="fr">ø</possible>
+    </value>
+    <options>DontPrintEmptyValues;resizeToContent</options>
+    <script>
+      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f3HideCesareanReason()</onValueChanged>
+    </script>
+  </Item>
+
+  <Item type="group" name="F3::Cesarean::section::reason::GroupBox">
+    <uilink widget="f3CesareanSectionReasonGroupBox"/>
+    <options>collapsible;DontPrintEmptyValues</options>
+    <label lang="xx">Reason for cesarean section</label>
+    <label lang="fr">Motif de césarienne</label>
+
+    <Item type="shorttext" name="F3::Cesarean::section::reason::shorttext">
+        <uilink label="" widget="f3CesareanSectionReasonLlineEdit" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+    </Item>
+
+  </Item> <!-- end of Cesarean reason Group -->
+
+  <Item type="shorttext" name="F3::Dysmorphism::ShortText">
+    <!--<sct>Dysmorphism (disorder)</sct>-->
+    <!--<sctid>276720006</sctid>-->
+    <uilink label="f3BirthDefectDiagnosticLabel" widget="f3BirthDefectLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="radio" name="F3::Dysmorphism::Radio">                    
+    <uilink label="f3BirthDefectLabel" widget="" layout="f3BirthDefectRadioLayout" />
+    <label lang="xx">Dysmorphism</label>                                
+    <label lang="fr">Malformation</label>                               
+    <value>                                                                     
+    <uuid id="0">yes</uuid>                                                     
+    <!--<sctid id="0">373066001</sctid>-->                                      
+    <uuid id="1">no</uuid>                                                      
+    <!--<sctid id="2">373067005</sctid>-->                                      
+    <uuid id="2">not done</uuid>                                                
+    <!--<sctid id="3">385660001</sctid>-->                                      
+    <possible id="0" lang="xx">Yes</possible>                                   
+    <possible id="1" lang="xx">No</possible>                                    
+    <possible id="2" lang="xx">ø</possible>                                     
+    <possible id="0" lang="fr">Oui</possible>                                   
+    <possible id="1" lang="fr">Non</possible>                                   
+    <possible id="2" lang="fr">ø</possible>                                     
+    </value>                                                                    
+    <options>compact</options>                                                  
+  </Item>
+
+  <Item type="radio" name="F3::Perinatal::Mortality::Radio">
+    <uilink label="f3PerinatalMortalityLabel" widget="" layout="f3PerinatalMortalityRadioLayout" />
+    <label lang="xx">Perinatal mortality</label>
+    <label lang="fr">Mortalité périnatale</label>
+    <value>
+    <uuid id="0">yes</uuid>
+    <!--<sctid id="0">373066001</sctid>-->
+    <uuid id="1">no</uuid>
+    <!--<sctid id="2">373067005</sctid>-->
+    <uuid id="2">not done</uuid>
+    <!--<sctid id="3">385660001</sctid>-->
+    <possible id="0" lang="xx">Yes</possible>
+    <possible id="1" lang="xx">No</possible>
+    <possible id="2" lang="xx">ø</possible>
+    <possible id="0" lang="fr">Oui</possible>
+    <possible id="1" lang="fr">Non</possible>
+    <possible id="2" lang="fr">ø</possible>
+    </value>
+    <options>compact</options>
+  </Item>
+
+  <Item type="shorttext" name="F3::Perinatal::Mortality::Diagnostic::ShortText">
+    <uilink label="f3PerinatalMortalityDiagnosticLabel" widget="f3PerinatalMortalityDiagnosticLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  </Item> <!-- end of Fetus 3 Group -->
+
+  <Item type="group" name="Fetus4group">
+    <uilink widget="fetus4GroupBox" />
+    <label lang="xx">Fetus 4</label>
+    <label lang="fr">Fœtus 4</label>
+    <options>DontPrintEmptyValues;collapsible</options>
+
+  <Item type="helptext" name="F4::Identity::Label::HelpText">
+    <uilink label="f4IdentityLabel" layout="" widget=""/>
+    <label lang="xx">Identity</label>
+    <label lang="fr">Identité</label>
+    <options>printable</options>
+    <value>
+    <default></default>
+    </value>
+  </Item>
+
+  <Item type="shorttext" name="F4::Last::Name::ShortText">
+        <uilink label="f4LastNameLabel" widget="f4LastNameLineEdit" layout="" />
+        <label lang="xx">Last name</label>
+        <label lang="fr">Nom de famille</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F4::First::Name::ShortText">
+        <uilink label="f4FirstNameLabel" widget="f4FirstNameLineEdit" layout="" />
+        <label lang="xx">First name</label>
+        <label lang="fr">Prénom</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F4::Uid::ShortText">
+        <uilink label="f4UidLabel" widget="f4UidLineEdit" layout="" />
+        <label lang="xx">Unique identifier</label>
+        <label lang="fr">Identifiant unique</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+
+  <Item type="radio" name="F4::Sex::Radio">
+    <uilink label="f4SexLabel" widget="" layout="f4SexRadioLayout" />
+    <label lang="xx">Sex</label>
+    <label lang="fr">Sexe</label>
+    <value>
+    <uuid id="0">0</uuid>
+    <uuid id="1">1</uuid>
+    <uuid id="2">2</uuid>
+    <uuid id="3">3</uuid>
+
+    <possible id="0" lang="xx">female</possible>
+    <possible id="1" lang="xx">male</possible>
+    <possible id="2" lang="xx">indeterminate</possible>
+    <possible id="3" lang="xx">ø</possible>
+
+    <possible id="0" lang="fr">féminin</possible>
+    <possible id="1" lang="fr">masculin</possible>
+    <possible id="2" lang="fr">indeterminé</possible>
+    <possible id="3" lang="fr">ø</possible>
+
+    </value>
+  </Item>
+
+  <Item type="doublespin" name="F4::Birth::Weight">
+    <uilink label="f4WeightLabel" widget="f4WeightDoubleSpinBox" layout=""/>
+    <label lang="xx">Weight</label>
+    <label lang="fr">Poids</label>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+
+
+  <Item type="uniquelist" name="F4::Delivery::procedure::uniquelist">
+    <!--<sctid>236973005</sctid>-->
+    <uilink label="f4ModeOfDeliveryLabel" widget="f4ModeOfDeliveryListView" layout="" />
+    <label lang="xx">Mode of delivery</label>
+    <label lang="fr">Mode d'accouchement</label>
+    <value>
+      <uuid id="0">Delivery normal</uuid>
+      <!--<sctid>48782003</sctid>-->
+      <uuid id="1">Instrumental delivery</uuid>
+      <!--<sctid>236974004</sctid>-->
+      <uuid id="2">Delivery by emergency cesarean section</uuid>
+      <!--<sctid>200149009</sctid>-->
+      <uuid id="3">Elective cesarean section</uuid>
+      <!--<sctid>177141003</sctid>-->
+      <uuid id="4">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+
+      <possible id="0" lang="xx">Normal delivery</possible>
+      <possible id="1" lang="xx">Instrumental delivery</possible>
+      <possible id="2" lang="xx">Delivery by emergency cesarean section</possible>
+      <possible id="3" lang="xx">Elective cesarean section</possible>
+      <possible id="4" lang="xx">ø</possible>
+
+      <possible id="0" lang="fr">Accouchement normal par voie basse</possible>
+      <possible id="1" lang="fr">Accouchement par voie basse avec manœuvre instrumentale</possible>
+      <possible id="2" lang="fr">Césarienne en urgence</possible>
+      <possible id="3" lang="fr">Césarienne programmée</possible>
+      <possible id="4" lang="fr">ø</possible>
+    </value>
+    <options>DontPrintEmptyValues;resizeToContent</options>
+    <script>
+      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f4HideCesareanReason()</onValueChanged>
+    </script>
+  </Item>
+
+  <Item type="group" name="F4::Cesarean::section::reason::GroupBox">
+    <uilink widget="f4CesareanSectionReasonGroupBox"/>
+    <options>collapsible;DontPrintEmptyValues</options>
+    <label lang="xx">Reason for cesarean section</label>
+    <label lang="fr">Motif de césarienne</label>
+
+    <Item type="shorttext" name="F4::Cesarean::section::reason::shorttext">
+        <uilink label="" widget="f4CesareanSectionReasonLlineEdit" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+    </Item>
+
+  </Item> <!-- end of Cesarean reason Group -->
+
+  <Item type="shorttext" name="F4::Dysmorphism::ShortText">
+    <!--<sct>Dysmorphism (disorder)</sct>-->
+    <!--<sctid>276720006</sctid>-->
+    <uilink label="f4BirthDefectDiagnosticLabel" widget="f4BirthDefectLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="radio" name="F4::Dysmorphism::Radio">                    
+    <uilink label="f4BirthDefectLabel" widget="" layout="f4BirthDefectRadioLayout" />
+    <label lang="xx">Dysmorphism</label>                                
+    <label lang="fr">Malformation</label>                               
+    <value>                                                                     
+    <uuid id="0">yes</uuid>                                                     
+    <!--<sctid id="0">373066001</sctid>-->                                      
+    <uuid id="1">no</uuid>                                                      
+    <!--<sctid id="2">373067005</sctid>-->                                      
+    <uuid id="2">not done</uuid>                                                
+    <!--<sctid id="3">385660001</sctid>-->                                      
+    <possible id="0" lang="xx">Yes</possible>                                   
+    <possible id="1" lang="xx">No</possible>                                    
+    <possible id="2" lang="xx">ø</possible>                                     
+    <possible id="0" lang="fr">Oui</possible>                                   
+    <possible id="1" lang="fr">Non</possible>                                   
+    <possible id="2" lang="fr">ø</possible>                                     
+    </value>                                                                    
+    <options>compact</options>                                                  
+  </Item>
+
+  <Item type="radio" name="F4::Perinatal::Mortality::Radio">
+    <uilink label="f4PerinatalMortalityLabel" widget="" layout="f4PerinatalMortalityRadioLayout" />
+    <label lang="xx">Perinatal mortality</label>
+    <label lang="fr">Mortalité périnatale</label>
+    <value>
+    <uuid id="0">yes</uuid>
+    <!--<sctid id="0">373066001</sctid>-->
+    <uuid id="1">no</uuid>
+    <!--<sctid id="2">373067005</sctid>-->
+    <uuid id="2">not done</uuid>
+    <!--<sctid id="3">385660001</sctid>-->
+    <possible id="0" lang="xx">Yes</possible>
+    <possible id="1" lang="xx">No</possible>
+    <possible id="2" lang="xx">ø</possible>
+    <possible id="0" lang="fr">Oui</possible>
+    <possible id="1" lang="fr">Non</possible>
+    <possible id="2" lang="fr">ø</possible>
+    </value>
+    <options>compact</options>
+  </Item>
+
+  <Item type="shorttext" name="F4::Perinatal::Mortality::Diagnostic::ShortText">
+    <uilink label="f4PerinatalMortalityDiagnosticLabel" widget="f4PerinatalMortalityDiagnosticLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  </Item> <!-- end of Fetus 4 Group -->
+
+  <Item type="group" name="Fetus5group">
+    <uilink widget="fetus5GroupBox" />
+    <label lang="xx">Fetus 5</label>
+    <label lang="fr">Fœtus 5</label>
+    <options>DontPrintEmptyValues;collapsible</options>
+
+  <Item type="helptext" name="F5::Identity::Label::HelpText">
+    <uilink label="f5IdentityLabel" layout="" widget=""/>
+    <label lang="xx">Identity</label>
+    <label lang="fr">Identité</label>
+    <options>printable</options>
+    <value>
+    <default></default>
+    </value>
+  </Item>
+
+  <Item type="shorttext" name="F5::Last::Name::ShortText">
+        <uilink label="f5LastNameLabel" widget="f5LastNameLineEdit" layout="" />
+        <label lang="xx">Last name</label>
+        <label lang="fr">Nom de famille</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F5::First::Name::ShortText">
+        <uilink label="f5FirstNameLabel" widget="f5FirstNameLineEdit" layout="" />
+        <label lang="xx">First name</label>
+        <label lang="fr">Prénom</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F5::Uid::ShortText">
+        <uilink label="f5UidLabel" widget="f5UidLineEdit" layout="" />
+        <label lang="xx">Unique identifier</label>
+        <label lang="fr">Identifiant unique</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+
+  <Item type="radio" name="F5::Sex::Radio">
+    <uilink label="f5SexLabel" widget="" layout="f5SexRadioLayout" />
+    <label lang="xx">Sex</label>
+    <label lang="fr">Sexe</label>
+    <value>
+    <uuid id="0">0</uuid>
+    <uuid id="1">1</uuid>
+    <uuid id="2">2</uuid>
+    <uuid id="3">3</uuid>
+
+    <possible id="0" lang="xx">female</possible>
+    <possible id="1" lang="xx">male</possible>
+    <possible id="2" lang="xx">indeterminate</possible>
+    <possible id="3" lang="xx">ø</possible>
+
+    <possible id="0" lang="fr">féminin</possible>
+    <possible id="1" lang="fr">masculin</possible>
+    <possible id="2" lang="fr">indeterminé</possible>
+    <possible id="3" lang="fr">ø</possible>
+
+    </value>
+  </Item>
+
+  <Item type="doublespin" name="F5::Birth::Weight">
+    <uilink label="f5WeightLabel" widget="f5WeightDoubleSpinBox" layout=""/>
+    <label lang="xx">Weight</label>
+    <label lang="fr">Poids</label>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+
+
+  <Item type="uniquelist" name="F5::Delivery::procedure::uniquelist">
+    <!--<sctid>236973005</sctid>-->
+    <uilink label="f5ModeOfDeliveryLabel" widget="f5ModeOfDeliveryListView" layout="" />
+    <label lang="xx">Mode of delivery</label>
+    <label lang="fr">Mode d'accouchement</label>
+    <value>
+      <uuid id="0">Delivery normal</uuid>
+      <!--<sctid>48782003</sctid>-->
+      <uuid id="1">Instrumental delivery</uuid>
+      <!--<sctid>236974004</sctid>-->
+      <uuid id="2">Delivery by emergency cesarean section</uuid>
+      <!--<sctid>200149009</sctid>-->
+      <uuid id="3">Elective cesarean section</uuid>
+      <!--<sctid>177141003</sctid>-->
+      <uuid id="4">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+
+      <possible id="0" lang="xx">Normal delivery</possible>
+      <possible id="1" lang="xx">Instrumental delivery</possible>
+      <possible id="2" lang="xx">Delivery by emergency cesarean section</possible>
+      <possible id="3" lang="xx">Elective cesarean section</possible>
+      <possible id="4" lang="xx">ø</possible>
+
+      <possible id="0" lang="fr">Accouchement normal par voie basse</possible>
+      <possible id="1" lang="fr">Accouchement par voie basse avec manœuvre instrumentale</possible>
+      <possible id="2" lang="fr">Césarienne en urgence</possible>
+      <possible id="3" lang="fr">Césarienne programmée</possible>
+      <possible id="4" lang="fr">ø</possible>
+    </value>
+    <options>DontPrintEmptyValues;resizeToContent</options>
+    <script>
+      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f5HideCesareanReason()</onValueChanged>
+    </script>
+  </Item>
+
+  <Item type="group" name="F5::Cesarean::section::reason::GroupBox">
+    <uilink widget="f5CesareanSectionReasonGroupBox"/>
+    <options>collapsible;DontPrintEmptyValues</options>
+    <label lang="xx">Reason for cesarean section</label>
+    <label lang="fr">Motif de césarienne</label>
+
+    <Item type="shorttext" name="F5::Cesarean::section::reason::shorttext">
+        <uilink label="" widget="f5CesareanSectionReasonLlineEdit" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+    </Item>
+
+  </Item> <!-- end of Cesarean reason Group -->
+
+  <Item type="shorttext" name="F5::Dysmorphism::ShortText">
+    <!--<sct>Dysmorphism (disorder)</sct>-->
+    <!--<sctid>276720006</sctid>-->
+    <uilink label="f5BirthDefectDiagnosticLabel" widget="f5BirthDefectLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="radio" name="F5::Dysmorphism::Radio">                    
+    <uilink label="f5BirthDefectLabel" widget="" layout="f5BirthDefectRadioLayout" />
+    <label lang="xx">Dysmorphism</label>                                
+    <label lang="fr">Malformation</label>                               
+    <value>                                                                     
+    <uuid id="0">yes</uuid>                                                     
+    <!--<sctid id="0">373066001</sctid>-->                                      
+    <uuid id="1">no</uuid>                                                      
+    <!--<sctid id="2">373067005</sctid>-->                                      
+    <uuid id="2">not done</uuid>                                                
+    <!--<sctid id="3">385660001</sctid>-->                                      
+    <possible id="0" lang="xx">Yes</possible>                                   
+    <possible id="1" lang="xx">No</possible>                                    
+    <possible id="2" lang="xx">ø</possible>                                     
+    <possible id="0" lang="fr">Oui</possible>                                   
+    <possible id="1" lang="fr">Non</possible>                                   
+    <possible id="2" lang="fr">ø</possible>                                     
+    </value>                                                                    
+    <options>compact</options>                                                  
+  </Item>
+
+  <Item type="radio" name="F5::Perinatal::Mortality::Radio">
+    <uilink label="f5PerinatalMortalityLabel" widget="" layout="f5PerinatalMortalityRadioLayout" />
+    <label lang="xx">Perinatal mortality</label>
+    <label lang="fr">Mortalité périnatale</label>
+    <value>
+    <uuid id="0">yes</uuid>
+    <!--<sctid id="0">373066001</sctid>-->
+    <uuid id="1">no</uuid>
+    <!--<sctid id="2">373067005</sctid>-->
+    <uuid id="2">not done</uuid>
+    <!--<sctid id="3">385660001</sctid>-->
+    <possible id="0" lang="xx">Yes</possible>
+    <possible id="1" lang="xx">No</possible>
+    <possible id="2" lang="xx">ø</possible>
+    <possible id="0" lang="fr">Oui</possible>
+    <possible id="1" lang="fr">Non</possible>
+    <possible id="2" lang="fr">ø</possible>
+    </value>
+    <options>compact</options>
+  </Item>
+
+  <Item type="shorttext" name="F5::Perinatal::Mortality::Diagnostic::ShortText">
+    <uilink label="f5PerinatalMortalityDiagnosticLabel" widget="f5PerinatalMortalityDiagnosticLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  </Item> <!-- end of Fetus 5 Group -->
+
+  <Item type="group" name="Fetus6group">
+    <uilink widget="fetus6GroupBox" />
+    <label lang="xx">Fetus 6</label>
+    <label lang="fr">Fœtus 6</label>
+    <options>DontPrintEmptyValues;collapsible</options>
+
+  <Item type="helptext" name="F6::Identity::Label::HelpText">
+    <uilink label="f6IdentityLabel" layout="" widget=""/>
+    <label lang="xx">Identity</label>
+    <label lang="fr">Identité</label>
+    <options>printable</options>
+    <value>
+    <default></default>
+    </value>
+  </Item>
+
+  <Item type="shorttext" name="F6::Last::Name::ShortText">
+        <uilink label="f6LastNameLabel" widget="f6LastNameLineEdit" layout="" />
+        <label lang="xx">Last name</label>
+        <label lang="fr">Nom de famille</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F6::First::Name::ShortText">
+        <uilink label="f6FirstNameLabel" widget="f6FirstNameLineEdit" layout="" />
+        <label lang="xx">First name</label>
+        <label lang="fr">Prénom</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="shorttext" name="F6::Uid::ShortText">
+        <uilink label="f6UidLabel" widget="f6UidLineEdit" layout="" />
+        <label lang="xx">Unique identifier</label>
+        <label lang="fr">Identifiant unique</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+  </Item>
+
+
+  <Item type="radio" name="F6::Sex::Radio">
+    <uilink label="f6SexLabel" widget="" layout="f6SexRadioLayout" />
+    <label lang="xx">Sex</label>
+    <label lang="fr">Sexe</label>
+    <value>
+    <uuid id="0">0</uuid>
+    <uuid id="1">1</uuid>
+    <uuid id="2">2</uuid>
+    <uuid id="3">3</uuid>
+
+    <possible id="0" lang="xx">female</possible>
+    <possible id="1" lang="xx">male</possible>
+    <possible id="2" lang="xx">indeterminate</possible>
+    <possible id="3" lang="xx">ø</possible>
+
+    <possible id="0" lang="fr">féminin</possible>
+    <possible id="1" lang="fr">masculin</possible>
+    <possible id="2" lang="fr">indeterminé</possible>
+    <possible id="3" lang="fr">ø</possible>
+
+    </value>
+  </Item>
+
+  <Item type="doublespin" name="F6::Birth::Weight">
+    <uilink label="f6WeightLabel" widget="f6WeightDoubleSpinBox" layout=""/>
+    <label lang="xx">Weight</label>
+    <label lang="fr">Poids</label>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+
+
+  <Item type="uniquelist" name="F6::Delivery::procedure::uniquelist">
+    <!--<sctid>236973005</sctid>-->
+    <uilink label="f6ModeOfDeliveryLabel" widget="f6ModeOfDeliveryListView" layout="" />
+    <label lang="xx">Mode of delivery</label>
+    <label lang="fr">Mode d'accouchement</label>
+    <value>
+      <uuid id="0">Delivery normal</uuid>
+      <!--<sctid>48782003</sctid>-->
+      <uuid id="1">Instrumental delivery</uuid>
+      <!--<sctid>236974004</sctid>-->
+      <uuid id="2">Delivery by emergency cesarean section</uuid>
+      <!--<sctid>200149009</sctid>-->
+      <uuid id="3">Elective cesarean section</uuid>
+      <!--<sctid>177141003</sctid>-->
+      <uuid id="4">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+
+      <possible id="0" lang="xx">Normal delivery</possible>
+      <possible id="1" lang="xx">Instrumental delivery</possible>
+      <possible id="2" lang="xx">Delivery by emergency cesarean section</possible>
+      <possible id="3" lang="xx">Elective cesarean section</possible>
+      <possible id="4" lang="xx">ø</possible>
+
+      <possible id="0" lang="fr">Accouchement normal par voie basse</possible>
+      <possible id="1" lang="fr">Accouchement par voie basse avec manœuvre instrumentale</possible>
+      <possible id="2" lang="fr">Césarienne en urgence</possible>
+      <possible id="3" lang="fr">Césarienne programmée</possible>
+      <possible id="4" lang="fr">ø</possible>
+    </value>
+    <options>DontPrintEmptyValues;resizeToContent</options>
+    <script>
+      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f6HideCesareanReason()</onValueChanged>
+    </script>
+  </Item>
+
+  <Item type="group" name="F6::Cesarean::section::reason::GroupBox">
+    <uilink widget="f6CesareanSectionReasonGroupBox"/>
+    <options>collapsible;DontPrintEmptyValues</options>
+    <label lang="xx">Reason for cesarean section</label>
+    <label lang="fr">Motif de césarienne</label>
+
+    <Item type="shorttext" name="F6::Cesarean::section::reason::shorttext">
+        <uilink label="" widget="f6CesareanSectionReasonLlineEdit" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+    </Item>
+
+  </Item> <!-- end of Cesarean reason Group -->
+
+  <Item type="shorttext" name="F6::Dysmorphism::ShortText">
+    <!--<sct>Dysmorphism (disorder)</sct>-->
+    <!--<sctid>276720006</sctid>-->
+    <uilink label="f6BirthDefectDiagnosticLabel" widget="f6BirthDefectLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  <Item type="radio" name="F6::Dysmorphism::Radio">                    
+    <uilink label="f6BirthDefectLabel" widget="" layout="f6BirthDefectRadioLayout" />
+    <label lang="xx">Dysmorphism</label>                                
+    <label lang="fr">Malformation</label>                               
+    <value>                                                                     
+    <uuid id="0">yes</uuid>                                                     
+    <!--<sctid id="0">373066001</sctid>-->                                      
+    <uuid id="1">no</uuid>                                                      
+    <!--<sctid id="2">373067005</sctid>-->                                      
+    <uuid id="2">not done</uuid>                                                
+    <!--<sctid id="3">385660001</sctid>-->                                      
+    <possible id="0" lang="xx">Yes</possible>                                   
+    <possible id="1" lang="xx">No</possible>                                    
+    <possible id="2" lang="xx">ø</possible>                                     
+    <possible id="0" lang="fr">Oui</possible>                                   
+    <possible id="1" lang="fr">Non</possible>                                   
+    <possible id="2" lang="fr">ø</possible>                                     
+    </value>                                                                    
+    <options>compact</options>                                                  
+  </Item>
+
+  <Item type="radio" name="F6::Perinatal::Mortality::Radio">
+    <uilink label="f6PerinatalMortalityLabel" widget="" layout="f6PerinatalMortalityRadioLayout" />
+    <label lang="xx">Perinatal mortality</label>
+    <label lang="fr">Mortalité périnatale</label>
+    <value>
+    <uuid id="0">yes</uuid>
+    <!--<sctid id="0">373066001</sctid>-->
+    <uuid id="1">no</uuid>
+    <!--<sctid id="2">373067005</sctid>-->
+    <uuid id="2">not done</uuid>
+    <!--<sctid id="3">385660001</sctid>-->
+    <possible id="0" lang="xx">Yes</possible>
+    <possible id="1" lang="xx">No</possible>
+    <possible id="2" lang="xx">ø</possible>
+    <possible id="0" lang="fr">Oui</possible>
+    <possible id="1" lang="fr">Non</possible>
+    <possible id="2" lang="fr">ø</possible>
+    </value>
+    <options>compact</options>
+  </Item>
+
+  <Item type="shorttext" name="F6::Perinatal::Mortality::Diagnostic::ShortText">
+    <uilink label="f6PerinatalMortalityDiagnosticLabel" widget="f6PerinatalMortalityDiagnosticLineEdit" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <placeholder lang="xx"></placeholder>
+    <placeholder lang="fr"></placeholder>
+  </Item>
+
+  </Item> <!-- end of Fetus 6 Group -->
 
   <Item type="uniquelist" name="Delivery::Pathologies::uniquelist">
     <!--<sctid></sctid>-->
