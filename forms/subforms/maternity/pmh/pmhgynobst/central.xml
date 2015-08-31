@@ -29,15 +29,15 @@
 <!--<file type="script" name="onload">./scripts/xx/pmhgynobst.js</file>-->
 
 <MedForm name="Maternity::Obstetrics::Past::Medical::History::Gynecology::Obstetrics" uifilename="./ui/xx/pmhgynobst.ui">
-<label lang="xx">PMH: gynecology and obstetrics</label>
-<label lang="fr">ATCD: gynécologie et obstétrique </label>
+<label lang="xx">PMH gynecology and obstetrics</label>
+<label lang="fr">ATCD gynécologie et obstétrique </label>
 <options>unique;HideHeaderOnUniqueEpisode;UseFormAsNameSpace</options>
 <icon>__theme__/stethoscope.png</icon>
 
   <Item type="group" name="PMH::Gynecology::Obstetrics::Group">
     <uilink widget="pmhGynObstGroupBox" />
     <label lang="xx">PMH Gynecology and Obstetrics</label>
-    <label lang="fr">ATCD gynécologie and obstétrique</label>
+    <label lang="fr">Antécédents gynécologiques et obstétricaux</label>
 
     <Item type="date" name="Menarche::Date">
       <uilink label="menarcheLabel" widget="menarcheDateEdit" layout="" />
