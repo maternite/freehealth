@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jérôme Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-08-26</cdate>
+    <lmdate>2015-08-26</lmdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">Obstetrics Past Medical History: Pregnancy with Abortive Outcome</description>
+    <description lang="fr">Antécédents obstétriques: grossesse interrompue</description>
+    <category lang="xx">Past Medical History</category>
+    <category lang="en">Antécédents</category>
+    <specialties lang="xx">Obstetrics</specialties>
+    <specialties lang="en">Obstétrique</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <!--<file type="script" name="onload">./scripts/xx/pmhpregnancy.js</file>-->
+
+<MedForm name="Maternity::Obstetrics::PastMedicalHistory::Pregnancy::with:abortive::outcome" uifilename="./ui/xx/pmhinterruptedpregnancy.ui">
+  <label lang="xx">Pregnancy with abortive outcome</label>
+  <label lang="fr">Grossesse interrompue</label>
+  <options>UseFormAsNameSpace</options>
+  <icon>__theme__/stethoscope.png</icon>
+
+  <Item type="group" name="Pregnancy::with:abortive::outcome::group">
+    <uilink widget="ipGroupBox" />
+    <label lang="xx">Pregnancy with abortive outcome</label>
+    <label lang="fr">Grossesse interrompue</label>
+
+    <Item type="date" name="Abortive::outcome::date">
+      <uilink label="interruptionDateLabel" widget="interruptionDateEdit" layout="" />
+      <label lang="xx">Date of abortive outcome</label>
+      <label lang="fr">Date d'interruption de grossesse</label>
+      <options></options>
+    </Item>
+
+    <Item type="radio" name="Pregnancy::with::abortive::outcome::Number::Radio">
+      <uilink label="interruptedPregnancyNumberLabel" widget="" layout="interruptedPregnancyNumberRadioLayout"/>
+      <label lang="xx">Pregnancy with abortive outcome number</label>
+      <label lang="fr">Grossesse interrompue numéro</label>
+      <value>
+        <uuid id="0">0</uuid>
+        <uuid id="1">1</uuid>
+        <uuid id="2">2</uuid>
+        <uuid id="3">3</uuid>
+        <uuid id="4">4</uuid>
+        <uuid id="5">5</uuid>
+        <uuid id="6">6</uuid>
+        <uuid id="7">7</uuid>
+        <uuid id="8">8</uuid>
+        <uuid id="9">9</uuid>
+        <uuid id="10">10</uuid>
+        <uuid id="11">11</uuid>
+        <uuid id="12">12</uuid>
+        <uuid id="13">13</uuid>
+        <uuid id="14">14</uuid>
+        <uuid id="15">15</uuid>
+        <uuid id="16">16</uuid>
+        <uuid id="17">17</uuid>
+        <uuid id="18">18</uuid>
+        <uuid id="19">19</uuid>
+        <uuid id="20">ø</uuid>
+        <possible id="0" lang="xx">0</possible>
+        <possible id="1" lang="xx">1</possible>
+        <possible id="2" lang="xx">2</possible>
+        <possible id="3" lang="xx">3</possible>
+        <possible id="4" lang="xx">4</possible>
+        <possible id="5" lang="xx">5</possible>
+        <possible id="6" lang="xx">6</possible>
+        <possible id="7" lang="xx">7</possible>
+        <possible id="8" lang="xx">8</possible>
+        <possible id="9" lang="xx">9</possible>
+        <possible id="10" lang="xx">10</possible>
+        <possible id="11" lang="xx">11</possible>
+        <possible id="12" lang="xx">12</possible>
+        <possible id="13" lang="xx">13</possible>
+        <possible id="14" lang="xx">13</possible>
+        <possible id="15" lang="xx">15</possible>
+        <possible id="16" lang="xx">16</possible>
+        <possible id="17" lang="xx">17</possible>
+        <possible id="18" lang="xx">18</possible>
+        <possible id="19" lang="xx">19</possible>
+        <possible id="20" lang="xx">ø</possible>
+        <numerical id="0">0</numerical>
+        <numerical id="1">1</numerical>
+        <numerical id="2">2</numerical>
+        <numerical id="3">3</numerical>
+        <numerical id="4">4</numerical>
+        <numerical id="5">5</numerical>
+        <numerical id="6">6</numerical>
+        <numerical id="7">7</numerical>
+        <numerical id="8">8</numerical>
+        <numerical id="9">9</numerical>
+        <numerical id="10">10</numerical>
+        <numerical id="11">11</numerical>
+        <numerical id="12">12</numerical>
+        <numerical id="13">13</numerical>
+        <numerical id="14">14</numerical>
+        <numerical id="15">15</numerical>
+        <numerical id="16">16</numerical>
+        <numerical id="17">17</numerical>
+        <numerical id="18">18</numerical>
+        <numerical id="19">19</numerical>
+        <numerical id="20">0</numerical>
+      </value>
+      <options>resizeToContent;DontPrintEmptyValue</options>
+    </Item>
+
+    <Item name="Interrupted::Pregnancy::Number" type="sum">
+      <uilink label="interruptedPregnancyNumberLabel" widget="interruptedPregnancyNumberLineEdit" layout="" />
+      <label lang="fr">Grossesse interrompue numéro</label>
+      <label lang="xx">Pregnancy with abortive outcome number</label>
+      <sumof>Pregnancy::with::abortive::outcome::Number::Radio</sumof>
+      <options>changeepisodelabel;DontPrintEmptyValues</options>
+    </Item>
+
+    <Item type="spin" name="WeeksOfAmenorrhoea">
+      <uilink label="ipWeeksOfAmenorrhoeaLabel" widget="ipWeeksOfAmenorrhoeaSpinBox" layout="" />
+      <label lang="xx">Weeks of amenorrhoea</label>
+      <label lang="fr">Semaines d'aménorrhée</label>
+      <options>DontPrintEmptyValues</options>
+    </Item>
+
+    <Item type="uniquelist" name="Diagnostic">
+    <!--<sctid></sctid>-->
+    <uilink label="ipDiagnosticLabel" widget="ipDiagnosticListView" layout="" />
+    <label lang="xx">Diagnostic</label>
+    <label lang="fr">Diagnostic</label>
+    <value>
+      <uuid id="0">Miscarriage</uuid>
+      <!--<sctid>17369002</sctid>-->
+      <uuid id="1">Elective abortion</uuid>
+      <!--<sctid>18391007</sctid>-->
+      <uuid id="2">Therapeutic abortion</uuid>
+      <!--<sctid>53638009</sctid>-->
+      <uuid id="3">Hydatidiform mole, benign</uuid>
+      <!--<sctid>417044008</sctid>-->
+      <uuid id="4">Ectopic pregnancy</uuid>
+      <!--<sctid>34801009</sctid>-->
+      <uuid id="5">Blighted ovum</uuid>
+      <!--<sctid>35999006</sctid>-->
+      <uuid id="6">Other</uuid>
+      <!--<sctid>74964007</sctid>-->
+      <uuid id="7">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+
+      <possible id="0" lang="xx">Miscarriage</possible>
+      <possible id="1" lang="xx">Elective abortion</possible>
+      <possible id="2" lang="xx">Therapeutic termination of pregnancy</possible>
+      <possible id="3" lang="xx">Hydatidiform mole, benign</possible>
+      <possible id="4" lang="xx">Ectopic pregnancy</possible>
+      <possible id="5" lang="xx">Blighted ovum</possible>
+      <possible id="6" lang="xx">Other</possible>
+      <possible id="7" lang="xx">ø</possible>
+
+      <possible id="0" lang="fr">Fausse couche spontanée</possible>
+      <possible id="1" lang="fr">Interruption volontaire de grossesse</possible>
+      <possible id="2" lang="fr">Interruption thérapeutique de grossesse</possible>
+      <possible id="3" lang="fr">Môle hydatiforme</possible>
+      <possible id="4" lang="fr">Grossesse extra-utérine</possible>
+      <possible id="5" lang="fr">Œuf clair</possible>
+      <possible id="6" lang="fr">Autre</possible>
+      <possible id="7" lang="fr">ø</possible>
+    </value>
+    <options>DontPrintEmptyValues;resizeToContent</options>
+    </Item>
+
+    <Item type="shorttext" name="Diagnostic::Other::Shorttext">
+      <uilink label="otherDiagnosticLabel" widget="otherDiagnosticLineEdit" layout="" />
+      <label lang="xx">Other</label>
+      <label lang="fr">Autre</label>
+      <placeholder lang="xx">Diagnostic</placeholder>
+      <placeholder lang="fr">Diagnostic</placeholder>
+    </Item>
+
+    <Item type="radio" name="Procedure">
+      <uilink label="ipProcedureLabel" widget="" layout="ipProcedureRadioLayout" />
+      <label lang="xx">Procedure</label>
+      <label lang="fr">Procédure</label>
+      <options>compact</options>
+        <value>
+          <uuid id="0">Aspiration curettage of uterus for termination of pregnancy (procedure)</uuid>
+          <!--<sctid>391897002</sctid>-->
+          <uuid id="1">Medical termination of pregnancy (procedure)</uuid>
+          <!--<sctid>285409006</sctid>-->
+          <uuid id="2">Other</uuid>
+          <!--<sctid>74964007</sctid>-->
+          <uuid id="3">Not done</uuid>
+          <!--<sctid>385660001</sctid>-->
+
+          <possible id="0" lang="xx">Aspiration curettage of uterus</possible>
+          <possible id="1" lang="xx">Medical termination of pregnancy</possible>
+          <possible id="2" lang="xx">Other</possible>
+          <possible id="3" lang="xx">ø</possible>
+
+          <possible id="0" lang="fr">Aspiration curetage</possible>
+          <possible id="1" lang="fr">Interruption médicamenteuse</possible>
+          <possible id="2" lang="fr">Autre</possible>
+          <possible id="3" lang="fr">ø</possible>
+        </value>
+    </Item>
+
+    <Item type="shorttext" name="Procedure::Other::Shorttext">
+      <uilink label="ipProcedureOtherLabel" widget="ipProcedureLineEdit" layout="" />
+      <label lang="xx">Other</label>
+      <label lang="fr">Autre</label>
+      <placeholder lang="xx">Procedure</placeholder>
+      <placeholder lang="fr">Procédure</placeholder>
+    </Item>
+
+  </Item> <!-- end of group Preg. Wth Abort. Outcome -->
+
+</MedForm>
+
+</FreeMedForms>

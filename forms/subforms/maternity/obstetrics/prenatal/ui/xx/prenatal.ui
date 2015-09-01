@@ -7,54 +7,1125 @@
     <x>0</x>
     <y>0</y>
     <width>671</width>
-    <height>3214</height>
+    <height>3900</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string/>
   </property>
-  <layout class="QGridLayout" name="gridLayout_8">
-   <item row="6" column="0" colspan="2">
-    <widget class="QGroupBox" name="assessmentGroupBox">
+  <layout class="QGridLayout" name="gridLayout_16">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
      <property name="title">
-      <string>assessment</string>
+      <string>obstetrical calendar</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_15">
+     <layout class="QVBoxLayout" name="verticalLayout_19">
       <item>
-       <layout class="QVBoxLayout" name="diagnosisVerticalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <property name="spacing">
+         <number>1</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
         <item>
-         <widget class="QLabel" name="assessmentDiagnosisLabel">
-          <property name="text">
-           <string>diagnosis</string>
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="lmpHorizontalLayout">
+            <item>
+             <widget class="QLabel" name="lastMenstrualPeriodLabel">
+              <property name="text">
+               <string>last menstrual period</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="lastMenstrualPeriodDateEdit">
+              <property name="locale">
+               <locale language="French" country="Madagascar"/>
+              </property>
+              <property name="correctionMode">
+               <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+              </property>
+              <property name="displayFormat">
+               <string>dd/MM/yyyy</string>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="conceptionHorizontalLayout">
+            <item>
+             <widget class="QLabel" name="conceptionDateLabel">
+              <property name="text">
+               <string>conception date</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="conceptionDateDateEdit">
+              <property name="locale">
+               <locale language="French" country="Madagascar"/>
+              </property>
+              <property name="showGroupSeparator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="minimumDate">
+               <date>
+                <year>1790</year>
+                <month>9</month>
+                <day>1</day>
+               </date>
+              </property>
+              <property name="displayFormat">
+               <string>dd/MM/yyyy</string>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+              <property name="currentSectionIndex">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QListView" name="assessmentDiagnosisListView"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="assessmentDiagnosisLineEdit"/>
+         <layout class="QVBoxLayout" name="verticalLayout_17">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="useLmpDateOfConceptionLabel">
+            <property name="text">
+             <string>use</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="useLmpCheck">
+            <property name="text">
+             <string>LMP</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="useDateOfConceptionCheck">
+            <property name="text">
+             <string>CD</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="problemsVerticalLayout">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
         <item>
-         <widget class="QLabel" name="assessmentProblemsLabel">
+         <widget class="QLabel" name="lmpDeterminedByLabel">
           <property name="text">
-           <string>problems</string>
+           <string>LMP determined by</string>
           </property>
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="assessmentProblemsTextEditorLayout"/>
+         <layout class="QHBoxLayout" name="lmpDeterminedByRadioLayout"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lmpDeterminedByLineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_17">
+        <item>
+         <widget class="QLabel" name="gestationalAgeHelpTextLabel">
+          <property name="text">
+           <string>gestational age</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksValueLabel">
+          <property name="text">
+           <string>weeksValue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksLabel">
+          <property name="text">
+           <string>weeks</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysValueLabel">
+          <property name="text">
+           <string>daysValue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysLabel">
+          <property name="text">
+           <string>days</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="eddHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="eddLabel">
+          <property name="text">
+           <string>edd</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="eddValueLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="5" column="0" colspan="2">
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="subjectiveGroupBox">
+     <property name="title">
+      <string>subjectiveGroupBox</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="caseHistoryLabel">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>14</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>case History</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QFormLayout" name="caseHistoryFormLayout">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="fetalMovementHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="fetalMovementLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Fetal movement</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="fetalMovementRadioLayout"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <widget class="QGroupBox" name="subjectiveFatigueScoreGroupBox">
+        <property name="title">
+         <string>fatigueScoreGroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QCheckBox" name="standingCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="industrialCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="repetitiveCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="physicalCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="hardnessCheck">
+             <property name="text">
+              <string>CheckBox</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <widget class="QLabel" name="fatigueScoreTotalLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fatigueScoreTotalLineEdit">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QLabel" name="fatigueScoreCommentLabel">
+             <property name="text">
+              <string>commentLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="fatigueScoreCommentLayout"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="objectiveGroup">
+     <property name="title">
+      <string>Objective</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_9">
+      <item row="7" column="0" colspan="4">
+       <widget class="QLabel" name="fundalHeightLabel">
+        <property name="text">
+         <string>Fundal height</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="4">
+       <widget class="QLabel" name="varicoseVeinsLabel">
+        <property name="text">
+         <string>Varicose veins</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="temperatureLabel">
+        <property name="text">
+         <string>T</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="5">
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QDoubleSpinBox" name="temperatureValue">
+          <property name="decimals">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <double>150.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="temperatureUnit"/>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="bloodPressureLabel">
+        <property name="text">
+         <string>BP</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="5">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QSpinBox" name="bloodPressureSystolicValue">
+          <property name="maximum">
+           <number>300</number>
+          </property>
+          <property name="singleStep">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="bloodPressureDiastolicValue">
+          <property name="maximum">
+           <number>300</number>
+          </property>
+          <property name="singleStep">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="bloodPressurePulseValue">
+          <property name="text">
+           <string>PP</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="weightLabel">
+        <property name="text">
+         <string>W</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="5">
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QDoubleSpinBox" name="weightValue">
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>1000000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="weightUnit"/>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="prePregnancyWeightLabel">
+        <property name="text">
+         <string>PPW</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="5">
+       <layout class="QHBoxLayout" name="prePregnancyWeightLayout">
+        <item>
+         <widget class="QDoubleSpinBox" name="prePregnancyWeightValue">
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>1000000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="prePregnancyWeightUnit"/>
+        </item>
+       </layout>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QLabel" name="weightGainLabel">
+        <property name="text">
+         <string>WG L</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2" colspan="3">
+       <widget class="QLabel" name="weightGainValue">
+        <property name="text">
+         <string>WG V</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="heightLabel">
+        <property name="text">
+         <string>H</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="5">
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QDoubleSpinBox" name="heightValue">
+          <property name="maximum">
+           <double>1000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="heightUnit"/>
+        </item>
+       </layout>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="bmiLabel">
+        <property name="text">
+         <string>BMI</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" colspan="2">
+       <widget class="QLabel" name="bmiValue">
+        <property name="text">
+         <string>BMI</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="6">
+       <widget class="QLineEdit" name="peripheralEdemaLineEdit"/>
+      </item>
+      <item row="7" column="4" colspan="2">
+       <widget class="QSpinBox" name="fundalHeightSpinBox">
+        <property name="suffix">
+         <string notr="true" extracomment="centimeters">cm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="5">
+       <widget class="QLabel" name="peripheralEdemaLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Peripheral edema</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="5">
+       <layout class="QHBoxLayout" name="peripheralEdemaRadioLayout"/>
+      </item>
+      <item row="10" column="0" colspan="3">
+       <widget class="QLabel" name="pelvisLabel">
+        <property name="text">
+         <string>Pelvis</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="6">
+       <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
+      </item>
+      <item row="9" column="5">
+       <layout class="QHBoxLayout" name="varicoseVeinsRadioLayout"/>
+      </item>
+      <item row="10" column="3" colspan="4">
+       <layout class="QHBoxLayout" name="pelvisRadioLayout"/>
+      </item>
+      <item row="11" column="0" colspan="7">
+       <widget class="QGroupBox" name="objectiveCervixGroup">
+        <property name="title">
+         <string>Cervix</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="1" column="0">
+          <widget class="QLabel" name="cervixConsistencyLabel">
+           <property name="text">
+            <string>Consistency</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLineEdit" name="internalCervicalDilationLineEdit"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="externalCervicalDilationLabel">
+           <property name="text">
+            <string>External cervical dilation</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="cervixPositionLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Position</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="cervixEffacementLabel">
+           <property name="text">
+            <string>Effacement</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="cervixDilationLabel">
+           <property name="text">
+            <string>Dilation</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetalStationLabel">
+           <property name="text">
+            <string>Fetal station</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="internalCervicalDilationLabel">
+           <property name="text">
+            <string>Internal cervical dilation</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="vaginalExaminationLabel">
+           <property name="text">
+            <string>vaginal examination</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLineEdit" name="externalCervicalDilationLineEdit"/>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="amnioticSacLabel">
+           <property name="text">
+            <string>Amniotic sac</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="2">
+          <widget class="QLineEdit" name="vaginalExaminationLineEdit"/>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="lowerUterineSegmentLabel">
+           <property name="text">
+            <string>Lower uterine segment</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <layout class="QHBoxLayout" name="cervixPositionRadioLayout"/>
+         </item>
+         <item row="1" column="2">
+          <layout class="QHBoxLayout" name="cervixConsistencyRadioLayout"/>
+         </item>
+         <item row="2" column="2">
+          <layout class="QHBoxLayout" name="cervixEffacementRadioLayout"/>
+         </item>
+         <item row="3" column="2">
+          <layout class="QHBoxLayout" name="cervixDilationRadioLayout"/>
+         </item>
+         <item row="4" column="2">
+          <layout class="QHBoxLayout" name="fetalStationRadioLayout"/>
+         </item>
+         <item row="8" column="2">
+          <widget class="QLineEdit" name="amnioticSacLineEdit"/>
+         </item>
+         <item row="9" column="2">
+          <layout class="QHBoxLayout" name="lowerUterineSegmentRadioLayout"/>
+         </item>
+         <item row="0" column="3" rowspan="2">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="internalCervicalDilationSpinBox">
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::UpDownArrows</enum>
+           </property>
+           <property name="showGroupSeparator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="suffix">
+            <string comment="centimeter">cm</string>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QSpinBox" name="externalCervicalDilationSpinBox">
+           <property name="suffix">
+            <string comment="centimeter">cm</string>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QGroupBox" name="objectiveUltrasoundGroupBox">
+     <property name="title">
+      <string>ultrasoundGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_12">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <widget class="QLabel" name="ultrasoundBipLabel">
+          <property name="text">
+           <string>BIP</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="ultrasoundBipDoubleSpinBox">
+          <property name="suffix">
+           <string comment="millimeter">mm</string>
+          </property>
+          <property name="decimals">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <double>200.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ultrasoundBipLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <item>
+         <widget class="QLabel" name="ultrasoundEfwLabel">
+          <property name="text">
+           <string>EFW</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="ultrasoundEfwSpinBox">
+          <property name="suffix">
+           <string comment="gram">g</string>
+          </property>
+          <property name="maximum">
+           <number>6000</number>
+          </property>
+          <property name="singleStep">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ultrasoundEfwLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLabel" name="ultrasoundAmnioticFluidLabel">
+          <property name="text">
+           <string>Amniotic fluid</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ultrasoundAmnioticFluidLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <item>
+         <widget class="QLabel" name="ultrasoundOtherFindingsLabel">
+          <property name="text">
+           <string>Other findings</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ultrasoundOtherFindingsLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="ultrasoundImpressionLayout">
+        <item>
+         <widget class="QLabel" name="ultrasoundImpressionLabel">
+          <property name="text">
+           <string>Impression</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="ultrasoundImpressionTexteditorLayout"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QGroupBox" name="poctTestGroupBox">
+     <property name="title">
+      <string>poctTestGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_20">
+      <item>
+       <widget class="QGroupBox" name="poctBloodGlucoseGroupBox">
+        <property name="title">
+         <string>poct blood glucose</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_15">
+         <item row="0" column="0">
+          <widget class="QLabel" name="bloodGlucoseLabel">
+           <property name="text">
+            <string>blood glucose level</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="Line" name="line_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="mgdlUnitLabel">
+           <property name="text">
+            <string>mg/dL</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QDoubleSpinBox" name="mgdlBloodGlucoseDoubleSpinBox"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="Line" name="line_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLabel" name="mmollUnitLabel">
+           <property name="text">
+            <string>mmol/L</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QDoubleSpinBox" name="mmollBloodGlucoseDoubleSpinBox"/>
+         </item>
+         <item row="0" column="7">
+          <widget class="Line" name="line_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="8">
+          <widget class="QLabel" name="bloodGlucoseDateLabel">
+           <property name="text">
+            <string>date</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="9">
+          <widget class="QDateEdit" name="bloodGlucoseDateEdit"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="urineTestStripGroupBox">
+        <property name="title">
+         <string>urine strip test</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <widget class="QLabel" name="leukocytesLabel">
+           <property name="text">
+            <string>leukocytes</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="leukocytesRadioLayout"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="nitriteLabel">
+           <property name="text">
+            <string>nitrite</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="nitriteRadioLayout"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="urobilinogenLabel">
+           <property name="text">
+            <string>urobilinogen</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="urobilinogenRadioLayout"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="proteinLabel">
+           <property name="text">
+            <string>protein</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="proteinRadioLayout"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="phLabel">
+           <property name="text">
+            <string>pH</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <layout class="QHBoxLayout" name="phRadioLayout"/>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="bloodLabel">
+           <property name="text">
+            <string>blood</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <layout class="QHBoxLayout" name="bloodRadioLayout"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="specificGravityLabel">
+           <property name="text">
+            <string>specific gravity</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <layout class="QHBoxLayout" name="specificGravityRadioLayout"/>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="ketoneLabel">
+           <property name="text">
+            <string>ketone</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <layout class="QHBoxLayout" name="ketoneGravityRadioLayout"/>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="bilirubinLabel">
+           <property name="text">
+            <string>bilirubin</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <layout class="QHBoxLayout" name="bilirubinRadioLayout"/>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="glucoseLabel">
+           <property name="text">
+            <string>glucose</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <layout class="QHBoxLayout" name="glucoseRadioLayout"/>
+         </item>
+         <item row="10" column="0" colspan="2">
+          <widget class="Line" name="line_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0" colspan="2">
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="QLabel" name="urineStripTestDateLabel">
+             <property name="text">
+              <string>date</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="urineStipTestDateEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0">
     <layout class="QGridLayout" name="fetusGridLayout">
      <item row="0" column="0">
       <widget class="QGroupBox" name="fetusGroupBox">
@@ -478,899 +1549,47 @@
      </item>
     </layout>
    </item>
-   <item row="1" column="0" colspan="2">
-    <widget class="QGroupBox" name="subjectiveGroupBox">
+   <item row="6" column="0">
+    <widget class="QGroupBox" name="assessmentGroupBox">
      <property name="title">
-      <string>subjectiveGroupBox</string>
+      <string>assessment</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="caseHistoryLabel">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>14</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>case History</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <layout class="QFormLayout" name="caseHistoryFormLayout">
-        <property name="fieldGrowthPolicy">
-         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-        </property>
-       </layout>
-      </item>
-      <item row="2" column="0">
-       <layout class="QHBoxLayout" name="fetalMovementHorizontalLayout">
-        <item>
-         <widget class="QLabel" name="fetalMovementLabel">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Fetal movement</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="fetalMovementRadioLayout"/>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </item>
-      <item row="3" column="0">
-       <widget class="QGroupBox" name="subjectiveFatigueScoreGroupBox">
-        <property name="title">
-         <string>fatigueScoreGroupBox</string>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_14">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_11">
-           <item>
-            <widget class="QCheckBox" name="standingCheck">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="industrialCheck">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="repetitiveCheck">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="physicalCheck">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="hardnessCheck">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_16">
-           <item>
-            <widget class="QLabel" name="fatigueScoreTotalLabel">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>TextLabel</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="fatigueScoreTotalLineEdit">
-             <property name="maximumSize">
-              <size>
-               <width>50</width>
-               <height>16777215</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_13">
-           <item>
-            <widget class="QLabel" name="fatigueScoreCommentLabel">
-             <property name="text">
-              <string>commentLabel</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="fatigueScoreCommentLayout"/>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="2" column="0" colspan="2">
-    <widget class="QGroupBox" name="objectiveGroup">
-     <property name="title">
-      <string>Objective</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_9">
-      <item row="7" column="0" colspan="4">
-       <widget class="QLabel" name="fundalHeightLabel">
-        <property name="text">
-         <string>Fundal height</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0" colspan="4">
-       <widget class="QLabel" name="varicoseVeinsLabel">
-        <property name="text">
-         <string>Varicose veins</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="temperatureLabel">
-        <property name="text">
-         <string>T</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1" colspan="5">
-       <layout class="QHBoxLayout" name="horizontalLayout_9">
-        <item>
-         <widget class="QDoubleSpinBox" name="temperatureValue">
-          <property name="decimals">
-           <number>1</number>
-          </property>
-          <property name="maximum">
-           <double>150.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="temperatureUnit"/>
-        </item>
-       </layout>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="bloodPressureLabel">
-        <property name="text">
-         <string>BP</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1" colspan="5">
-       <layout class="QHBoxLayout" name="horizontalLayout_6">
-        <item>
-         <widget class="QSpinBox" name="bloodPressureSystolicValue">
-          <property name="maximum">
-           <number>300</number>
-          </property>
-          <property name="singleStep">
-           <number>10</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSpinBox" name="bloodPressureDiastolicValue">
-          <property name="maximum">
-           <number>300</number>
-          </property>
-          <property name="singleStep">
-           <number>10</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="bloodPressurePulseValue">
-          <property name="text">
-           <string>PP</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="weightLabel">
-        <property name="text">
-         <string>W</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1" colspan="5">
-       <layout class="QHBoxLayout" name="horizontalLayout_7">
-        <item>
-         <widget class="QDoubleSpinBox" name="weightValue">
-          <property name="decimals">
-           <number>3</number>
-          </property>
-          <property name="maximum">
-           <double>1000000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="weightUnit"/>
-        </item>
-       </layout>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="prePregnancyWeightLabel">
-        <property name="text">
-         <string>PPW</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1" colspan="5">
-       <layout class="QHBoxLayout" name="prePregnancyWeightLayout">
-        <item>
-         <widget class="QDoubleSpinBox" name="prePregnancyWeightValue">
-          <property name="decimals">
-           <number>3</number>
-          </property>
-          <property name="maximum">
-           <double>1000000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="prePregnancyWeightUnit"/>
-        </item>
-       </layout>
-      </item>
-      <item row="4" column="0" colspan="2">
-       <widget class="QLabel" name="weightGainLabel">
-        <property name="text">
-         <string>WG L</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="2" colspan="3">
-       <widget class="QLabel" name="weightGainValue">
-        <property name="text">
-         <string>WG V</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="heightLabel">
-        <property name="text">
-         <string>H</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="1" colspan="5">
-       <layout class="QHBoxLayout" name="horizontalLayout_8">
-        <item>
-         <widget class="QDoubleSpinBox" name="heightValue">
-          <property name="maximum">
-           <double>1000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="heightUnit"/>
-        </item>
-       </layout>
-      </item>
-      <item row="6" column="0">
-       <widget class="QLabel" name="bmiLabel">
-        <property name="text">
-         <string>BMI</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="1" colspan="2">
-       <widget class="QLabel" name="bmiValue">
-        <property name="text">
-         <string>BMI</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="6">
-       <widget class="QLineEdit" name="peripheralEdemaLineEdit"/>
-      </item>
-      <item row="7" column="4" colspan="2">
-       <widget class="QSpinBox" name="fundalHeightSpinBox">
-        <property name="suffix">
-         <string notr="true" extracomment="centimeters">cm</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="0" colspan="5">
-       <widget class="QLabel" name="peripheralEdemaLabel">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Peripheral edema</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="5">
-       <layout class="QHBoxLayout" name="peripheralEdemaRadioLayout"/>
-      </item>
-      <item row="10" column="0" colspan="3">
-       <widget class="QLabel" name="pelvisLabel">
-        <property name="text">
-         <string>Pelvis</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="6">
-       <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
-      </item>
-      <item row="9" column="5">
-       <layout class="QHBoxLayout" name="varicoseVeinsRadioLayout"/>
-      </item>
-      <item row="10" column="3" colspan="4">
-       <layout class="QHBoxLayout" name="pelvisRadioLayout"/>
-      </item>
-      <item row="11" column="0" colspan="7">
-       <widget class="QGroupBox" name="objectiveCervixGroup">
-        <property name="title">
-         <string>Cervix</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_10">
-         <item row="1" column="0">
-          <widget class="QLabel" name="cervixConsistencyLabel">
-           <property name="text">
-            <string>Consistency</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="2">
-          <widget class="QLineEdit" name="internalCervicalDilationLineEdit"/>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="externalCervicalDilationLabel">
-           <property name="text">
-            <string>External cervical dilation</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="cervixPositionLabel">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Position</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="cervixEffacementLabel">
-           <property name="text">
-            <string>Effacement</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="cervixDilationLabel">
-           <property name="text">
-            <string>Dilation</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="fetalStationLabel">
-           <property name="text">
-            <string>Fetal station</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="internalCervicalDilationLabel">
-           <property name="text">
-            <string>Internal cervical dilation</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="vaginalExaminationLabel">
-           <property name="text">
-            <string>vaginal examination</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="2">
-          <widget class="QLineEdit" name="externalCervicalDilationLineEdit"/>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="amnioticSacLabel">
-           <property name="text">
-            <string>Amniotic sac</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="2">
-          <widget class="QLineEdit" name="vaginalExaminationLineEdit"/>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="lowerUterineSegmentLabel">
-           <property name="text">
-            <string>Lower uterine segment</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <layout class="QHBoxLayout" name="cervixPositionRadioLayout"/>
-         </item>
-         <item row="1" column="2">
-          <layout class="QHBoxLayout" name="cervixConsistencyRadioLayout"/>
-         </item>
-         <item row="2" column="2">
-          <layout class="QHBoxLayout" name="cervixEffacementRadioLayout"/>
-         </item>
-         <item row="3" column="2">
-          <layout class="QHBoxLayout" name="cervixDilationRadioLayout"/>
-         </item>
-         <item row="4" column="2">
-          <layout class="QHBoxLayout" name="fetalStationRadioLayout"/>
-         </item>
-         <item row="8" column="2">
-          <widget class="QLineEdit" name="amnioticSacLineEdit"/>
-         </item>
-         <item row="9" column="2">
-          <layout class="QHBoxLayout" name="lowerUterineSegmentRadioLayout"/>
-         </item>
-         <item row="0" column="3" rowspan="2">
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="5" column="1">
-          <widget class="QSpinBox" name="internalCervicalDilationSpinBox">
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::UpDownArrows</enum>
-           </property>
-           <property name="showGroupSeparator" stdset="0">
-            <bool>false</bool>
-           </property>
-           <property name="suffix">
-            <string comment="centimeter">cm</string>
-           </property>
-           <property name="maximum">
-            <number>10</number>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1">
-          <widget class="QSpinBox" name="externalCervicalDilationSpinBox">
-           <property name="suffix">
-            <string comment="centimeter">cm</string>
-           </property>
-           <property name="maximum">
-            <number>10</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="3" column="0" colspan="2">
-    <widget class="QGroupBox" name="objectiveUltrasoundGroupBox">
-     <property name="title">
-      <string>ultrasoundGroupBox</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_12">
+     <layout class="QVBoxLayout" name="verticalLayout_15">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <layout class="QVBoxLayout" name="diagnosisVerticalLayout">
         <item>
-         <widget class="QLabel" name="ultrasoundBipLabel">
+         <widget class="QLabel" name="assessmentDiagnosisLabel">
           <property name="text">
-           <string>BIP</string>
+           <string>diagnosis</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QDoubleSpinBox" name="ultrasoundBipDoubleSpinBox">
-          <property name="suffix">
-           <string comment="millimeter">mm</string>
-          </property>
-          <property name="decimals">
-           <number>1</number>
-          </property>
-          <property name="maximum">
-           <double>200.000000000000000</double>
-          </property>
-         </widget>
+         <widget class="QListView" name="assessmentDiagnosisListView"/>
         </item>
         <item>
-         <widget class="QLineEdit" name="ultrasoundBipLineEdit"/>
+         <widget class="QLineEdit" name="assessmentDiagnosisLineEdit"/>
         </item>
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <layout class="QVBoxLayout" name="problemsVerticalLayout">
         <item>
-         <widget class="QLabel" name="ultrasoundEfwLabel">
+         <widget class="QLabel" name="assessmentProblemsLabel">
           <property name="text">
-           <string>EFW</string>
+           <string>problems</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="ultrasoundEfwSpinBox">
-          <property name="suffix">
-           <string comment="gram">g</string>
-          </property>
-          <property name="maximum">
-           <number>6000</number>
-          </property>
-          <property name="singleStep">
-           <number>10</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="ultrasoundEfwLineEdit"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_10">
-        <item>
-         <widget class="QLabel" name="ultrasoundAmnioticFluidLabel">
-          <property name="text">
-           <string>Amniotic fluid</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="ultrasoundAmnioticFluidLineEdit"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_13">
-        <item>
-         <widget class="QLabel" name="ultrasoundOtherFindingsLabel">
-          <property name="text">
-           <string>Other findings</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="ultrasoundOtherFindingsLineEdit"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="ultrasoundImpressionLayout">
-        <item>
-         <widget class="QLabel" name="ultrasoundImpressionLabel">
-          <property name="text">
-           <string>Impression</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="ultrasoundImpressionTexteditorLayout"/>
+         <layout class="QHBoxLayout" name="assessmentProblemsTextEditorLayout"/>
         </item>
        </layout>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="0" column="0" colspan="2">
-    <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
-     <property name="title">
-      <string>obstetrical calendar</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_19">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_14">
-        <property name="spacing">
-         <number>1</number>
-        </property>
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_18">
-          <property name="spacing">
-           <number>8</number>
-          </property>
-          <property name="rightMargin">
-           <number>2</number>
-          </property>
-          <item>
-           <layout class="QHBoxLayout" name="lmpHorizontalLayout">
-            <item>
-             <widget class="QLabel" name="lastMenstrualPeriodLabel">
-              <property name="text">
-               <string>last menstrual period</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QDateEdit" name="lastMenstrualPeriodDateEdit">
-              <property name="locale">
-               <locale language="French" country="Madagascar"/>
-              </property>
-              <property name="correctionMode">
-               <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-              </property>
-              <property name="displayFormat">
-               <string>dd/MM/yyyy</string>
-              </property>
-              <property name="calendarPopup">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="conceptionHorizontalLayout">
-            <item>
-             <widget class="QLabel" name="conceptionDateLabel">
-              <property name="text">
-               <string>conception date</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QDateEdit" name="conceptionDateDateEdit">
-              <property name="locale">
-               <locale language="French" country="Madagascar"/>
-              </property>
-              <property name="showGroupSeparator" stdset="0">
-               <bool>false</bool>
-              </property>
-              <property name="minimumDate">
-               <date>
-                <year>1790</year>
-                <month>9</month>
-                <day>1</day>
-               </date>
-              </property>
-              <property name="displayFormat">
-               <string>dd/MM/yyyy</string>
-              </property>
-              <property name="calendarPopup">
-               <bool>true</bool>
-              </property>
-              <property name="currentSectionIndex">
-               <number>0</number>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <widget class="Line" name="line_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_17">
-          <property name="spacing">
-           <number>8</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="useLmpDateOfConceptionLabel">
-            <property name="text">
-             <string>use</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="useLmpCheck">
-            <property name="text">
-             <string>LMP</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="useDateOfConceptionCheck">
-            <property name="text">
-             <string>CD</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="Line" name="line">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_15">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMinimumSize</enum>
-        </property>
-        <item>
-         <widget class="QLabel" name="lmpDeterminedByLabel">
-          <property name="text">
-           <string>LMP determined by</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="lmpDeterminedByRadioLayout"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lmpDeterminedByLineEdit">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_17">
-        <item>
-         <widget class="QLabel" name="gestationalAgeHelpTextLabel">
-          <property name="text">
-           <string>gestational age</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksValueLabel">
-          <property name="text">
-           <string>weeksValue</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksLabel">
-          <property name="text">
-           <string>weeks</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysValueLabel">
-          <property name="text">
-           <string>daysValue</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysLabel">
-          <property name="text">
-           <string>days</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="eddHorizontalLayout">
-        <item>
-         <widget class="QLabel" name="eddLabel">
-          <property name="text">
-           <string>edd</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="eddValueLabel">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="7" column="0" colspan="2">
+   <item row="7" column="0">
     <widget class="QGroupBox" name="planGroupBox">
      <property name="title">
       <string>plan</string>
