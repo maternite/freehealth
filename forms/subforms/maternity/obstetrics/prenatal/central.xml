@@ -891,7 +891,7 @@
           <uilink widget="urineTestStripGroupBox" />
           <label lang="xx">Urine strip test</label>
           <label lang="fr">Bandelette urinaire</label>
-          <options>collapsible</options>
+          <options>collapsible;expanded</options>
 
             <Item type="radio" name="Urine::Leukocytes">
                 <uilink label="leukocytesLabel" widget="" layout="leukocytesRadioLayout" />
@@ -922,6 +922,303 @@
                   </value>
                   <options>compact</options>
                 </Item>
+            
+            <Item type="radio" name="Urine::Nitrite">
+                <uilink label="nitriteLabel" widget="" layout="nitriteRadioLayout" />
+                <label lang="xx">Nitrite</label>
+                <label lang="fr">Nitrite</label>
+                <value>
+                    <uuid id="0">Negative</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">Positive</uuid>
+                    <uuid id="2">Not done</uuid>
+
+                    <possible id="0" lang="xx">Negative</possible>
+                    <possible id="1" lang="xx">Positive</possible>
+                    <possible id="2" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">Négatif</possible>
+                    <possible id="1" lang="fr">Positif</possible>
+                    <possible id="2" lang="fr">ø</possible>
+                </value>
+                <options>compact</options>
+              </Item>
+
+              <Item type="radio" name="Urine::Urobilinogen">
+                <uilink label="urobilinogenLabel" widget="" layout="urobilinogenRadioLayout" />
+                <label lang="xx">Urobilinogen</label>
+                <label lang="fr">Urobilinogène</label>
+                <value>
+                    <uuid id="0">0.2</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">1</uuid>
+                    <uuid id="2">2</uuid>
+                    <uuid id="3">4</uuid>
+                    <uuid id="4">8</uuid>
+                    <uuid id="5">Not done</uuid>
+
+                    <possible id="0" lang="xx">0.2</possible>
+                    <possible id="1" lang="xx">1</possible>
+                    <possible id="2" lang="xx">2</possible>
+                    <possible id="3" lang="xx">4</possible>
+                    <possible id="4" lang="xx">8</possible>
+                    <possible id="5" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">0.2</possible>
+                    <possible id="1" lang="fr">1</possible>
+                    <possible id="2" lang="fr">2</possible>
+                    <possible id="3" lang="fr">4</possible>
+                    <possible id="4" lang="fr">8</possible>
+                    <possible id="5" lang="fr">ø</possible>
+                  </value>
+                  <options>compact</options>
+                </Item>
+    
+                <Item type="radio" name="Urine::Protein">
+                <uilink label="proteinLabel" widget="" layout="proteinRadioLayout" />
+                <label lang="xx">Protein</label>
+                <label lang="fr">Protéine</label>
+                <value>
+                    <uuid id="0">Negative</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">Trace</uuid>
+                    <uuid id="2">30</uuid>
+                    <uuid id="3">100</uuid>
+                    <uuid id="4">300</uuid>
+                    <uuid id="5">2000 or more</uuid>
+                    <uuid id="6">Not done</uuid>
+
+                    <possible id="0" lang="xx">Negative</possible>
+                    <possible id="1" lang="xx">Trace</possible>
+                    <possible id="2" lang="xx">+</possible>
+                    <possible id="3" lang="xx">++</possible>
+                    <possible id="4" lang="xx">+++</possible>
+                    <possible id="5" lang="xx">++++</possible>
+                    <possible id="6" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">Négatif</possible>
+                    <possible id="1" lang="fr">Trace</possible>
+                    <possible id="2" lang="fr">+</possible>
+                    <possible id="3" lang="fr">++</possible>
+                    <possible id="4" lang="fr">+++</possible>
+                    <possible id="5" lang="fr">++++</possible>
+                    <possible id="6" lang="fr">ø</possible>
+                  </value>
+                  <options>compact</options>
+                </Item>
+                
+                <Item type="radio" name="Urine::pH">
+                <uilink label="phLabel" widget="" layout="phRadioLayout" />
+                <label lang="xx">pH</label>
+                <label lang="fr">pH</label>
+                <value>
+                    <uuid id="0">5.0</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">6.0</uuid>
+                    <uuid id="2">6.5</uuid>
+                    <uuid id="3">7.0</uuid>
+                    <uuid id="4">7.5</uuid>
+                    <uuid id="5">8.0</uuid>
+                    <uuid id="6">8.5</uuid>
+                    <uuid id="7">Not done</uuid>
+
+                    <possible id="0" lang="xx">5.0</possible>
+                    <possible id="1" lang="xx">6.0</possible>
+                    <possible id="2" lang="xx">6.5</possible>
+                    <possible id="3" lang="xx">7.0</possible>
+                    <possible id="4" lang="xx">7.5</possible>
+                    <possible id="5" lang="xx">8.0</possible>
+                    <possible id="6" lang="xx">8.5</possible>
+                    <possible id="7" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">5.0</possible>
+                    <possible id="1" lang="fr">6.0</possible>
+                    <possible id="2" lang="fr">6.5</possible>
+                    <possible id="3" lang="fr">7.0</possible>
+                    <possible id="4" lang="fr">7.5</possible>
+                    <possible id="5" lang="fr">8.0</possible>
+                    <possible id="6" lang="fr">8.5</possible>
+                    <possible id="7" lang="fr">ø</possible>
+ 
+                  </value>
+                  <options>compact</options>
+                </Item>
+                
+                <Item type="radio" name="Urine::blood">
+                <uilink label="bloodLabel" widget="" layout="bloodRadioLayout" />
+                <label lang="xx">Blood</label>
+                <label lang="fr">Sang</label>
+                <value>
+                    <uuid id="0">Negative</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">Non-hemolyzed trace</uuid>
+                    <uuid id="2">Non-hemolyzed moderate</uuid>
+                    <uuid id="3">Hemolyzed trace</uuid>
+                    <uuid id="4">Small</uuid>
+                    <uuid id="5">Moderate</uuid>
+                    <uuid id="6">Large</uuid>
+                    <uuid id="7">Not done</uuid>
+
+                    <possible id="0" lang="xx">Negative</possible>
+                    <possible id="1" lang="xx">Non-hemolyzed trace</possible>
+                    <possible id="2" lang="xx">Non-hemolyzed moderate</possible>
+                    <possible id="3" lang="xx">Hemolyzed trace</possible>
+                    <possible id="4" lang="xx">+</possible>
+                    <possible id="5" lang="xx">++</possible>
+                    <possible id="6" lang="xx">+++</possible>
+                    <possible id="7" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">Négatif</possible>
+                    <possible id="1" lang="fr">Non hémolysé trace</possible>
+                    <possible id="2" lang="fr">Non hémolysé modéré</possible>
+                    <possible id="3" lang="fr">Hémolysé trace</possible>
+                    <possible id="4" lang="fr">+</possible>
+                    <possible id="5" lang="fr">++</possible>
+                    <possible id="6" lang="fr">+++</possible>
+                    <possible id="7" lang="fr">ø</possible>
+ 
+                  </value>
+                  <options>compact</options>
+                </Item>
+
+                <Item type="radio" name="Urine::Specific::gravity">
+                <uilink label="specificGravityLabel" widget="" layout="specificGravityRadioLayout" />
+                <label lang="xx">Specific gravity</label>
+                <label lang="fr">Densité</label>
+                <value>
+                    <uuid id="0">1.000</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">1.005</uuid>
+                    <uuid id="2">1.010</uuid>
+                    <uuid id="3">1.015</uuid>
+                    <uuid id="4">1.020</uuid>
+                    <uuid id="5">1.025</uuid>
+                    <uuid id="6">1.030</uuid>
+                    <uuid id="7">Not done</uuid>
+
+                    <possible id="0" lang="xx">1.000</possible>
+                    <possible id="1" lang="xx">1.005</possible>
+                    <possible id="2" lang="xx">1.010</possible>
+                    <possible id="3" lang="xx">1.015</possible>
+                    <possible id="4" lang="xx">1.020</possible>
+                    <possible id="5" lang="xx">1.025</possible>
+                    <possible id="6" lang="xx">1.030</possible>
+                    <possible id="7" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">1.000</possible>
+                    <possible id="1" lang="fr">1.005</possible>
+                    <possible id="2" lang="fr">1.010</possible>
+                    <possible id="3" lang="fr">1.015</possible>
+                    <possible id="4" lang="fr">1.020</possible>
+                    <possible id="5" lang="fr">1.025</possible>
+                    <possible id="6" lang="fr">1.030</possible>
+                    <possible id="7" lang="fr">ø</possible>
+                  </value>
+                  <options>compact</options>
+                </Item>
+
+                <Item type="radio" name="Urine::Ketone">
+                <uilink label="ketoneLabel" widget="" layout="ketoneRadioLayout" />
+                <label lang="xx">Ketone</label>
+                <label lang="fr">Corps cétoniques</label>
+                <value>
+                    <uuid id="0">Negative</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">Trace 5</uuid>
+                    <uuid id="2">Small 15</uuid>
+                    <uuid id="3">Moderate 40</uuid>
+                    <uuid id="4">Large 80</uuid>
+                    <uuid id="5">Large 160</uuid>
+                    <uuid id="6">Not done</uuid>
+
+                    <possible id="0" lang="xx">Negative</possible>
+                    <possible id="1" lang="xx">Trace 5</possible>
+                    <possible id="2" lang="xx">Small 15</possible>
+                    <possible id="3" lang="xx">Moderate 40</possible>
+                    <possible id="4" lang="xx">Large 80</possible>
+                    <possible id="5" lang="xx">Large 160</possible>
+                    <possible id="6" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">Négatif</possible>
+                    <possible id="1" lang="fr">Trace 5</possible>
+                    <possible id="2" lang="fr">Peu 15</possible>
+                    <possible id="3" lang="fr">Modéré 40</possible>
+                    <possible id="4" lang="fr">Beaucoup 80</possible>
+                    <possible id="5" lang="fr">Beaucoup 160</possible>
+                    <possible id="6" lang="fr">ø</possible>
+                  
+                  </value>
+                  <options>compact</options>
+                </Item> 
+
+                <Item type="radio" name="Urine::Bilirubin">
+                <uilink label="bilirubinLabel" widget="" layout="bilirubinRadioLayout" />
+                <label lang="xx">Bilirubin</label>
+                <label lang="fr">Bilirubine</label>
+                <value>
+                    <uuid id="0">Negative</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">small</uuid>
+                    <uuid id="2">moderate</uuid>
+                    <uuid id="3">large</uuid>
+                    <uuid id="4">Not done</uuid>
+
+                    <possible id="0" lang="xx">Negative</possible>
+                    <possible id="1" lang="xx">+</possible>
+                    <possible id="2" lang="xx">++</possible>
+                    <possible id="3" lang="xx">+++</possible>
+                    <possible id="4" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">Négatif</possible>
+                    <possible id="1" lang="fr">+</possible>
+                    <possible id="2" lang="fr">++</possible>
+                    <possible id="3" lang="fr">+++</possible>
+                    <possible id="4" lang="fr">ø</possible>
+                  </value>
+                  <options>compact</options>
+                </Item>
+
+                <Item type="radio" name="Urine::Glucose">
+                <uilink label="glucoseLabel" widget="" layout="glucoseRadioLayout" />
+                <label lang="xx">Glucose</label>
+                <label lang="fr">Glucose</label>
+                <value>
+                    <uuid id="0">Negative</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">100</uuid>
+                    <uuid id="2">250</uuid>
+                    <uuid id="3">500</uuid>
+                    <uuid id="4">1000</uuid>
+                    <uuid id="5">2000</uuid>
+                    <uuid id="6">Not done</uuid>
+
+                    <possible id="0" lang="xx">Negative</possible>
+                    <possible id="1" lang="xx">100</possible>
+                    <possible id="2" lang="xx">250</possible>
+                    <possible id="3" lang="xx">500</possible>
+                    <possible id="4" lang="xx">1000</possible>
+                    <possible id="5" lang="xx">2000</possible>
+                    <possible id="6" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">Négatif</possible>
+                    <possible id="1" lang="fr">100</possible>
+                    <possible id="2" lang="fr">250</possible>
+                    <possible id="3" lang="fr">500</possible>
+                    <possible id="4" lang="fr">1000</possible>
+                    <possible id="5" lang="fr">2000</possible>
+                    <possible id="6" lang="fr">ø</possible>
+
+                  </value>
+                  <options>compact</options>
+                </Item>
+
+                <Item type="date" name="Urine::date">                      
+                <uilink label="urineStripTestDateLabel" widget="urineStripTestDateEdit" />
+                <label lang="xx">Date</label>                                   
+                <label lang="fr">Date</label>                                   
+                <options>now</options>                                          
+            </Item> 
+
 
         </Item> <!-- end of group Urine strip test -->
 

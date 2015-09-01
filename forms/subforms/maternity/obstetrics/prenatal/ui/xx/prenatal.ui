@@ -1149,7 +1149,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QDateEdit" name="urineStipTestDateEdit">
+            <widget class="QDateEdit" name="urineStripTestDateEdit">
              <property name="displayFormat">
               <string>dd/MM/yyyy</string>
              </property>
