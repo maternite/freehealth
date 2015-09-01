@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jérôme Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-09-</cdate>
+    <lmdate>2015-09-</lmdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">Papanicolaou smear results</description>
+    <description lang="fr">Résultats de frottis de dépistage cervico-utérin</description>
+    <category lang="xx">Laboratory tests</category>
+    <category lang="en">Examens de laboratoire</category>
+    <specialties lang="xx">Gynecology</specialties>
+    <specialties lang="en">Gynécologie</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <!--<file type="script" name="onload">./scripts/xx/.js</file>-->
+
+<MedForm name="Maternity::Laboratory::tests::Papanicolaou::smear" uifilename="./ui/xx/pap_smear.ui">
+  <label lang="xx">Frottis de dépistage cervico-utérin</label>
+  <label lang="fr">Papanicolaou smear test</label>
+  <options>UseFormAsNameSpace</options>
+  <icon>__theme__/stethoscope.png</icon>
+
+  <Item type="date" name="Date::Specimen::obtained">
+    <uilink label="dateSpecimenLabel" widget="specimenDateEdit" layout="" />
+    <label lang="xx">Date specimen obtained</label>
+    <label lang="fr">Date de prélèvement</label>
+    <options></options>
+  </Item>
+
+  <Item type="date" name="Date::Reading">
+    <uilink label="dateReadingLabel" widget="readingDateEdit" layout="" />
+    <label lang="xx">Date of reading</label>
+    <label lang="fr">Date d'interprétation</label>
+    <options></options>
+  </Item>
+
+  <Item type="date" name="Date::Last::Menstrual::Period">
+    <uilink label="dateLmpLabel" widget="lmpDateEdit" layout="" />
+    <label lang="xx">Date of Last Menstrual Period preceding test</label>
+    <label lang="fr">Date des dernières règles précédant l'examen</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="General::Negative::Intraepithelial::Lesion::Malignancy">
+    <uilink label="" widget="negativeIntraepithelialLesionMalignancyCheckBox" layout="" />
+    <label lang="xx">Negative for intraepithelial lesion or malignancy</label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="General::Epithelial::Cell::Abnormality">
+    <uilink label="" widget="epithelialCellAbnormalityCheckBox" layout="" />
+    <label lang="xx">Epithelial cell abnormality</label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>
+
+  <Item type="" name="">
+    <uilink label="" widget="" layout="" />
+    <label lang="xx"></label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>
+
+</MedForm>
+
+</FreeMedForms>
