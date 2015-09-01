@@ -38,144 +38,144 @@
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 -->
-  <Item type="group" name="ObstetricalCalendar">                                         
-    <uilink label="" widget="obstetricalCalendarGroupBox" layout="" />                   
-    <label lang="xx">Obstetrical calendar</label>                                         
-    <label lang="fr">Calendrier obstétrical</label>                                          
+  <Item type="group" name="ObstetricalCalendar">
+    <uilink label="" widget="obstetricalCalendarGroupBox" layout="" />
+    <label lang="xx">Obstetrical calendar</label>
+    <label lang="fr">Calendrier obstétrical</label>
     <options>collapsible;expanded</options>
 
-      <Item type="date" name="ObstetricalCalendar::LastMentrualPeriod">                              
+      <Item type="date" name="ObstetricalCalendar::LastMentrualPeriod">
         <uilink label="lastMenstrualPeriodLabel" layout="" widget="lastMenstrualPeriodDateEdit"/>
-        <label lang="xx">Last Menstrual Period (LMP)</label>                    
-        <label lang="fr">Date des Dernières Règles (DDR)</label>                
-        <patientdata>LastMenstrualPeriod</patientdata>                          
+        <label lang="xx">Last Menstrual Period (LMP)</label>
+        <label lang="fr">Date des Dernières Règles (DDR)</label>
+        <patientdata>LastMenstrualPeriod</patientdata>
         <options>DontPrintEmptyValues</options>
         <script>
           <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.chooseDateToUse();</onValueChanged>
-        </script>      
-      </Item>                                                                   
-                                                                                
-      <Item type="date" name="ObstetricalCalendar::ConceptionDate">                                  
+        </script>
+      </Item>
+
+      <Item type="date" name="ObstetricalCalendar::ConceptionDate">
         <uilink label="conceptionDateLabel" layout="" widget="conceptionDateDateEdit"/>
-        <label lang="xx">Conception date</label>                                
-        <label lang="fr">Date de conception</label>                             
-        <patientdata>LastMenstrualPeriod</patientdata>                          
+        <label lang="xx">Conception date</label>
+        <label lang="fr">Date de conception</label>
+        <patientdata>LastMenstrualPeriod</patientdata>
         <options>DontPrintEmptyValues</options>
-        <script>                                                                
+        <script>
           <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.chooseDateToUse();</onValueChanged>
-        </script> 
+        </script>
       </Item>
 
-      <Item name="ObstetricalCalendar::UseLmpDateOfConceptionHelpText" type="helptext">   
-        <uilink label="useLmpDateOfConceptionLabel" layout="" widget=""/>       
-        <label lang="xx">Which date to use?</label>        
-        <label lang="fr">Quelle date utiliser?</label>      
-        <options>printable</options>                                            
-        <value>                                                                 
-          <default></default>                                  
-        </value>                                                                
+      <Item name="ObstetricalCalendar::UseLmpDateOfConceptionHelpText" type="helptext">
+        <uilink label="useLmpDateOfConceptionLabel" layout="" widget=""/>
+        <label lang="xx">Which date to use?</label>
+        <label lang="fr">Quelle date utiliser?</label>
+        <options>printable</options>
+        <value>
+          <default></default>
+        </value>
       </Item>
 
-      <Item type="check" name="ObstetricalCalendar::UseLMP::Check">                
-        <uilink widget="useLmpCheck"/>                                        
-        <options>DontPrintEmptyValues;OnLeft</options>                          
+      <Item type="check" name="ObstetricalCalendar::UseLMP::Check">
+        <uilink widget="useLmpCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
         <label lang="xx">LMP</label>
         <label lang="fr">DDR</label>
-        <value>                                                                 
-          <numerical id="0">0</numerical>                                       
-          <numerical id="1">1</numerical>                                       
+        <value>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
         </value>
         <script>
-          <onload>namespace.com.freemedforms.obstetrics.prenatal.setLmp();</onload>                                                            
+          <onload>namespace.com.freemedforms.obstetrics.prenatal.setLmp();</onload>
           <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.setLmp();</onValueChanged>
-        </script>                                                                
+        </script>
       </Item>
 
-      <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">             
-        <uilink widget="useDateOfConceptionCheck"/>                                          
-        <options>DontPrintEmptyValues;OnLeft</options>                          
-        <label lang="xx">Conception date (only in cas of ART or IUI)</label>                                            
-        <label lang="fr">Date de conception (uniquement en cas de procréation médicalement assistée)</label>                                            
-        <value>                                                                 
-          <numerical id="0">0</numerical>                                       
-          <numerical id="1">1</numerical>                                       
+      <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">
+        <uilink widget="useDateOfConceptionCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
+        <label lang="xx">Conception date (only in cas of ART or IUI)</label>
+        <label lang="fr">Date de conception (uniquement en cas de procréation médicalement assistée)</label>
+        <value>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
         </value>
-        <script>                                                                
+        <script>
           <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.setDateOfConception();</onValueChanged>
-        </script>                                                        
+        </script>
       </Item>
 
-      <Item type="radio" name="ObstetricalCalendar::LmpDeterminedBy::Radio">       
+      <Item type="radio" name="ObstetricalCalendar::LmpDeterminedBy::Radio">
           <uilink label="lmpDeterminedByLabel" widget="" layout="lmpDeterminedByRadioLayout"/>
-          <label lang="xx">LMP determined by</label>                             
+          <label lang="xx">LMP determined by</label>
           <label lang="fr">DDR déterminée par</label>
-          <options>compact</options>                                            
-          <value>                                                               
-            <uuid id="0">History taking</uuid>                                             
-            <!--<sctid id="0">84100007</sctid>-->                              
-            <uuid id="1">Ultrasound scan for fetal cephalometry</uuid>                                              
-            <!--<sctid id="1">169224002</sctid>-->                              
-            <uuid id="2">not done</uuid>                                        
-            <!--<sctid id="2">385660001</sctid>-->                              
-            <possible id="0" lang="xx">History taking</possible>                           
-            <possible id="1" lang="xx">Ultrasound scan (cephalometry)</possible>                            
-            <possible id="2" lang="xx">∅</possible>                             
-            <print id="0" lang="xx">History taking</print>                                 
-            <print id="1" lang="xx">Ultrasound scan (cephalometry)</print>                                  
-            <print id="2" lang="xx">Not evaluated</print>                       
-            <possible id="0" lang="fr">Anamnèse</possible>                           
-            <possible id="1" lang="fr">Échographie du 1er trimestre</possible>                           
-            <possible id="2" lang="fr">∅</possible>                             
-            <print id="0" lang="fr">Anamnèse</print>                                 
-            <print id="1" lang="fr">Échographie du 1er trimestre</print>                                 
-            <print id="2" lang="fr">Item non évalué</print>                     
-          </value>                                                              
+          <options>compact</options>
+          <value>
+            <uuid id="0">History taking</uuid>
+            <!--<sctid id="0">84100007</sctid>-->
+            <uuid id="1">Ultrasound scan for fetal cephalometry</uuid>
+            <!--<sctid id="1">169224002</sctid>-->
+            <uuid id="2">not done</uuid>
+            <!--<sctid id="2">385660001</sctid>-->
+            <possible id="0" lang="xx">History taking</possible>
+            <possible id="1" lang="xx">Ultrasound scan (cephalometry)</possible>
+            <possible id="2" lang="xx">∅</possible>
+            <print id="0" lang="xx">History taking</print>
+            <print id="1" lang="xx">Ultrasound scan (cephalometry)</print>
+            <print id="2" lang="xx">Not evaluated</print>
+            <possible id="0" lang="fr">Anamnèse</possible>
+            <possible id="1" lang="fr">Échographie du 1er trimestre</possible>
+            <possible id="2" lang="fr">∅</possible>
+            <print id="0" lang="fr">Anamnèse</print>
+            <print id="1" lang="fr">Échographie du 1er trimestre</print>
+            <print id="2" lang="fr">Item non évalué</print>
+          </value>
         </Item>
 
-      <Item type="shorttext" name="ObstetricalCalendar::LmpDeterminedBy::Comment">                  
-          <uilink label="" widget="lmpDeterminedByLineEdit" layout=""/>           
-          <label lang="xx"></label>                                         
-          <label lang="fr"></label>                                        
-          <tooltip lang="xx"></tooltip>                                         
+      <Item type="shorttext" name="ObstetricalCalendar::LmpDeterminedBy::Comment">
+          <uilink label="" widget="lmpDeterminedByLineEdit" layout=""/>
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <tooltip lang="xx"></tooltip>
           <tooltip lang="fr"></tooltip>
-          <placeholder lang="xx">Comment</placeholder>                          
-          <placeholder lang="fr">Commentaire</placeholder>                                         
-          <options>DontPrintEmptyValues;readonly;html</options>                 
+          <placeholder lang="xx">Comment</placeholder>
+          <placeholder lang="fr">Commentaire</placeholder>
+          <options>DontPrintEmptyValues;readonly;html</options>
       </Item>
 
-      <Item name="ObstetricalCalendar::gestationalAgeHelpText" type="helptext">                                    
-        <uilink label="gestationalAgeHelpTextLabel" layout="" widget=""/>       
-        <label lang="xx">Gestational age in weeks of amenorrhoea</label>        
-        <label lang="fr">Âge gestationnel en semaines d'aménorrhée</label>      
-        <options>printable</options>                                            
-        <value>                                                                 
-          <default>The default value</default>                                  
-        </value>                                                                
-      </Item>                                                                   
-                                                                                
-      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText">               
+      <Item name="ObstetricalCalendar::gestationalAgeHelpText" type="helptext">
+        <uilink label="gestationalAgeHelpTextLabel" layout="" widget=""/>
+        <label lang="xx">Gestational age in weeks of amenorrhoea</label>
+        <label lang="fr">Âge gestationnel en semaines d'aménorrhée</label>
+        <options>printable</options>
+        <value>
+          <default>The default value</default>
+        </value>
+      </Item>
+
+      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText">
         <uilink label="currentWeeksAmenorrhoeaWeeksLabel" layout="" widget=""/>
-        <label lang="xx">weeks</label>                                          
-        <label lang="fr">semaines</label>                                       
-        <options>DontPrintEmptyValues</options>                                 
-      </Item>                                                                   
-                                                                                
-      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText">                 
-        <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget=""/>
-        <label lang="xx">days</label>                                          
-        <label lang="fr">jours</label>                                        
-        <options>DontPrintEmptyValues</options>                                 
+        <label lang="xx">weeks</label>
+        <label lang="fr">semaines</label>
+        <options>DontPrintEmptyValues</options>
       </Item>
 
-      <Item type="helptext" name="ObstetricalCalendar::Edd::HelpText">                          
-          <uilink label="eddLabel" widget="" layout=""/>                    
-          <label lang="xx">Estimated date of delivery</label>                                         
-          <label lang="fr">Terme</label>                                        
-          <tooltip lang="xx"></tooltip>                                         
-          <tooltip lang="fr"></tooltip>                                         
-          <options>DontPrintEmptyValues;readonly;html</options>                 
+      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText">
+        <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget=""/>
+        <label lang="xx">days</label>
+        <label lang="fr">jours</label>
+        <options>DontPrintEmptyValues</options>
       </Item>
- 
+
+      <Item type="helptext" name="ObstetricalCalendar::Edd::HelpText">
+          <uilink label="eddLabel" widget="" layout=""/>
+          <label lang="xx">Estimated date of delivery</label>
+          <label lang="fr">Terme</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <options>DontPrintEmptyValues;readonly;html</options>
+      </Item>
+
   </Item> <!-- end of group obstetrical calendar -->
 
   <Item type="group" name="Subjective">
@@ -215,82 +215,82 @@
       </value>
     </Item>
 
-    <Item type="group" name="SubjectiveFatigueScore">                                         
-      <uilink label="" widget="subjectiveFatigueScoreGroupBox" layout="" />                   
-      <label lang="xx">Fatigue score</label>                                         
-      <label lang="fr">Score de fatigue</label>                                          
+    <Item type="group" name="SubjectiveFatigueScore">
+      <uilink label="" widget="subjectiveFatigueScoreGroupBox" layout="" />
+      <label lang="xx">Fatigue score</label>
+      <label lang="fr">Score de fatigue</label>
       <options>collapsible;expanded</options>
 
-      <Item type="check" name="Score::Fatigue::Check::Standing">                                 
-        <uilink widget="standingCheck"/>                                
-        <options>DontPrintEmptyValues;OnLeft</options>                  
+      <Item type="check" name="Score::Fatigue::Check::Standing">
+        <uilink widget="standingCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
         <label lang="xx">Standing up at work for more than 4 hours a day</label>
         <label lang="fr">Travail debout pendant plus de 4 heures par jour</label>
-        <value>                                                         
-          <numerical id="1">0</numerical>                             
-          <numerical id="0">1</numerical>                             
+        <value>
+          <numerical id="1">0</numerical>
+          <numerical id="0">1</numerical>
         </value>
       </Item>
 
-      <Item type="check" name="Score::Fatigue::Check::Industrial">                               
-        <uilink widget="industrialCheck"/>                              
-        <options>DontPrintEmptyValues;OnLeft</options>                  
-        <label lang="xx">Industrial machinery related work</label>      
-        <label lang="fr">Travail sur machine industrielle</label>       
-        <value>                                                         
-          <numerical id="0">1</numerical>                             
-          <numerical id="1">0</numerical>                             
-        </value>                                                        
+      <Item type="check" name="Score::Fatigue::Check::Industrial">
+        <uilink widget="industrialCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
+        <label lang="xx">Industrial machinery related work</label>
+        <label lang="fr">Travail sur machine industrielle</label>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">0</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Score::Fatigue::Check::Repetitive">                               
-        <uilink widget="repetitiveCheck"/>                              
-        <options>DontPrintEmptyValues;OnLeft</options>                  
-        <label lang="xx">Repetitive tasks</label>                       
-        <label lang="fr">Travail répétitif</label>                      
-        <value>                                                         
-          <numerical id="0">1</numerical>                             
-          <numerical id="1">0</numerical>                             
-        </value>                                                        
+      <Item type="check" name="Score::Fatigue::Check::Repetitive">
+        <uilink widget="repetitiveCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
+        <label lang="xx">Repetitive tasks</label>
+        <label lang="fr">Travail répétitif</label>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">0</numerical>
+        </value>
       </Item>
-                                                             
-      <Item type="check" name="Score::Fatigue::Check::Physical">                                 
-        <uilink widget="physicalCheck"/>                                
-        <options>DontPrintEmptyValues;OnLeft</options>                  
-        <label lang="xx">Physical work, heavy lifting </label>          
+
+      <Item type="check" name="Score::Fatigue::Check::Physical">
+        <uilink widget="physicalCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
+        <label lang="xx">Physical work, heavy lifting </label>
         <label lang="fr">Travail physique, port de charges lourdes</label>
-        <value>                                                         
-          <numerical id="0">1</numerical>                             
-          <numerical id="1">0</numerical>                             
-        </value>                                                        
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">0</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Score::Fatigue::Check::Hardness">                                 
-        <uilink widget="hardnessCheck"/>                                
-        <options>DontPrintEmptyValues;OnLeft</options>                  
-        <label lang="xx">Hard labor</label>                             
-        <label lang="fr">Pénibilité du poste de travail</label>         
-        <value>                                                         
-          <numerical id="0">1</numerical>                             
-          <numerical id="1">0</numerical>                             
-        </value>                                                        
+      <Item type="check" name="Score::Fatigue::Check::Hardness">
+        <uilink widget="hardnessCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
+        <label lang="xx">Hard labor</label>
+        <label lang="fr">Pénibilité du poste de travail</label>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">0</numerical>
+        </value>
       </Item>
 
-      <Item type="shorttext" name="Score::Fatigue::FinalScore">                                     
-        <uilink label="fatigueScoreTotalLabel" widget="fatigueScoreTotalLineEdit"/>                         
-        <label>Score = </label>                                             
+      <Item type="shorttext" name="Score::Fatigue::FinalScore">
+        <uilink label="fatigueScoreTotalLabel" widget="fatigueScoreTotalLineEdit"/>
+        <label>Score = </label>
         <options>DontPrintEmptyValues</options>
-      </Item>                                                                 
-                                                                                
-      <Item type="texteditor" name="Score::Fatigue::Comment">                                 
-        <uilink label="fatigueScoreCommentLabel" layout="fatigueScoreCommentLayout"/>                 
-        <label lang="xx">Comments</label>                                     
-        <label lang="fr">Remarques</label>                                    
-        <options>DontPrintEmptyValues</options>                               
+      </Item>
+
+      <Item type="texteditor" name="Score::Fatigue::Comment">
+        <uilink label="fatigueScoreCommentLabel" layout="fatigueScoreCommentLayout"/>
+        <label lang="xx">Comments</label>
+        <label lang="fr">Remarques</label>
+        <options>DontPrintEmptyValues</options>
       </Item>
     </Item> <!-- end of group subjective fatigue score -->
 
-  </Item>  <!-- end of group subjective --> 
+  </Item>  <!-- end of group subjective -->
 
     <Item type="group" name="Objective">
       <uilink label="" widget="objectiveGroup" />
@@ -679,40 +679,40 @@
         </value>
       </Item>
 
-      <Item type="radio" name="ObjectiveGroup::Cervix::FetalStation">               
-          <!--<sctid></sctid>-->                                                
+      <Item type="radio" name="ObjectiveGroup::Cervix::FetalStation">
+          <!--<sctid></sctid>-->
           <uilink label="fetalStationLabel" widget="" layout="fetalStationRadioLayout" />
-          <label lang="xx">Fetal station</label>                                     
+          <label lang="xx">Fetal station</label>
           <label lang="fr">Positionnement</label>
           <tooltip lang="xx">Position of the fetus' head in relation to the distance from the ischial spines</tooltip>
-          <tooltip lang="fr">Positionnement de la présentation fœtale par rapport aux épines sciatiques</tooltip>                             
-          <value>                                                               
-          <uuid id="0">−3</uuid>                                            
-          <!--<sctid id="0"></sctid>-->                                         
-          <uuid id="1">−2</uuid>                                             
-          <!--<sctid id="1"></sctid>-->                                         
-          <uuid id="2">−1, 0</uuid>                                             
-          <!--<sctid id="2"></sctid>-->                                         
-          <uuid id="3">+1, +2</uuid>                                              
-          <!--<sctid id="3"></sctid>-->                                         
-          <uuid id="4">not done</uuid>                                          
-          <!--<sctid id="4">385660001</sctid>-->                                
-          <possible id="0" lang="xx">−3</possible>                          
-          <possible id="1" lang="xx">−2</possible>                          
-          <possible id="2" lang="xx">−1, 0</possible>                          
-          <possible id="3" lang="xx">+1, +2</possible>                           
-          <possible id="4" lang="xx">ø</possible>                               
-          <possible id="0" lang="fr">Mobile</possible>                           
-          <possible id="1" lang="fr">Amorcée</possible>                        
-          <possible id="2" lang="fr">Fixée</possible>                        
-          <possible id="3" lang="fr">Engagée</possible>                
-          <possible id="4" lang="fr">ø</possible>                               
-          <numerical id="0">0</numerical>                                       
-          <numerical id="1">1</numerical>                                       
-          <numerical id="2">2</numerical>                                       
-          <numerical id="3">3</numerical>                                       
-          <numerical id="4">0</numerical>                                       
-          <options>compact</options>                                            
+          <tooltip lang="fr">Positionnement de la présentation fœtale par rapport aux épines sciatiques</tooltip>
+          <value>
+          <uuid id="0">−3</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">−2</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">−1, 0</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">+1, +2</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">−3</possible>
+          <possible id="1" lang="xx">−2</possible>
+          <possible id="2" lang="xx">−1, 0</possible>
+          <possible id="3" lang="xx">+1, +2</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Mobile</possible>
+          <possible id="1" lang="fr">Amorcée</possible>
+          <possible id="2" lang="fr">Fixée</possible>
+          <possible id="3" lang="fr">Engagée</possible>
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
+          <numerical id="3">3</numerical>
+          <numerical id="4">0</numerical>
+          <options>compact</options>
         </value>
       </Item>
 
@@ -728,7 +728,7 @@
         <placeholder lang="fr">Commentaire</placeholder>
       </Item>
 
-      <Item name="ObjectiveGroup::ExternalCervicalDilation::Value" type="spin"> 
+      <Item name="ObjectiveGroup::ExternalCervicalDilation::Value" type="spin">
         <uilink label="" widget="externalCervicalDilationSpinBox" layout="" />
       </Item>
 
@@ -786,18 +786,18 @@
 
       </Item> <!-- end of group Cervix -->
 
-      <Item type="group" name="Objective::Ultrasound">                                         
-        <uilink label="" widget="objectiveUltrasoundGroupBox" />                       
-        <label lang="xx">Ultrasound</label>                                         
-        <label lang="fr">Échographie</label>                                            
+      <Item type="group" name="Objective::Ultrasound">
+        <uilink label="" widget="objectiveUltrasoundGroupBox" />
+        <label lang="xx">Ultrasound</label>
+        <label lang="fr">Échographie</label>
         <options>collapsible;expanded</options>
 
-      <Item type="shorttext" name="Objective::Ultrasound::Bip::Comment">                                                 
-        <uilink label="ultrasoundBipLabel" widget="ultrasoundBipLineEdit" layout="" />                                 
-        <label lang="xx">BIP (biparietal diameter)</label>                                               
-        <label lang="fr">BIP (diamètre bipariétal)</label>                                               
-        <placeholder lang="xx">Comment</placeholder>                                   
-        <placeholder lang="fr">Commentaire</placeholder>                                   
+      <Item type="shorttext" name="Objective::Ultrasound::Bip::Comment">
+        <uilink label="ultrasoundBipLabel" widget="ultrasoundBipLineEdit" layout="" />
+        <label lang="xx">BIP (biparietal diameter)</label>
+        <label lang="fr">BIP (diamètre bipariétal)</label>
+        <placeholder lang="xx">Comment</placeholder>
+        <placeholder lang="fr">Commentaire</placeholder>
       </Item>
 
       <Item type="doublespin" name="Objective::Ultrasound::Bip::Value">
@@ -806,44 +806,127 @@
         <tooltip lang="fr">BIP (millimètre)</tooltip>
       </Item>
 
-      <Item type="shorttext" name="Objective::Ultrasound::EstimatedFetalWeight::Comment">        
+      <Item type="shorttext" name="Objective::Ultrasound::EstimatedFetalWeight::Comment">
         <uilink label="ultrasoundEfwLabel" widget="ultrasoundEfwLineEdit" layout="" />
-        <label lang="xx">EFW (estimated fetal weight)</label>                      
-        <label lang="fr">PFE (poids fœtal estimé)</label>                      
-        <placeholder lang="xx">Comment</placeholder>                            
-        <placeholder lang="fr">Commentaire</placeholder>                        
-      </Item>                                                                   
-                                                                                
-      <Item type="spin" name="Objective::Ultrasound::EstimatedFetalWeight::Value">         
-        <uilink label="" widget="ultrasoundEfwSpinBox" layout="" />       
-        <tooltip lang="xx">EFW (gram)</tooltip>                           
-        <tooltip lang="fr">PFE (gramme)</tooltip>                           
+        <label lang="xx">EFW (estimated fetal weight)</label>
+        <label lang="fr">PFE (poids fœtal estimé)</label>
+        <placeholder lang="xx">Comment</placeholder>
+        <placeholder lang="fr">Commentaire</placeholder>
+      </Item>
+
+      <Item type="spin" name="Objective::Ultrasound::EstimatedFetalWeight::Value">
+        <uilink label="" widget="ultrasoundEfwSpinBox" layout="" />
+        <tooltip lang="xx">EFW (gram)</tooltip>
+        <tooltip lang="fr">PFE (gramme)</tooltip>
       </Item>
 
       <Item type="shorttext" name="Objective::Ultrasound::AmnioticFluid::Findings">
         <uilink label="ultrasoundAmnioticFluidLabel" widget="ultrasoundAmnioticFluidLineEdit" layout="" />
-        <label lang="xx">Amniotic fluid</label>                   
-        <label lang="fr">Liquide amniotique</label>                       
-        <placeholder lang="xx"></placeholder>                            
-        <placeholder lang="fr"></placeholder>                        
+        <label lang="xx">Amniotic fluid</label>
+        <label lang="fr">Liquide amniotique</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
       </Item>
 
       <Item type="shorttext" name="Objective::Ultrasound::OtherFindings">
         <uilink label="ultrasoundOtherFindingsLabel" widget="ultrasoundOtherFindingsLineEdit" layout="" />
-        <label lang="xx">Other findings</label>                                 
-        <label lang="fr">Autres résultats</label>                             
-        <placeholder lang="xx"></placeholder>                                   
-        <placeholder lang="fr"></placeholder>                                   
+        <label lang="xx">Other findings</label>
+        <label lang="fr">Autres résultats</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
       </Item>
 
-      <Item type="texteditor" name="Objective::Ultrasound::Impression">                                 
+      <Item type="texteditor" name="Objective::Ultrasound::Impression">
       <uilink label="ultrasoundImpressionLabel" widget="" layout="ultrasoundImpressionTexteditorLayout" />
-      <label lang="xx">Impression</label>                                     
-      <label lang ="fr">Conclusion</label>                                        
-      <options>FullEditor</options>                                             
+      <label lang="xx">Impression</label>
+      <label lang ="fr">Conclusion</label>
+      <options>FullEditor</options>
     </Item>
-       
-      </Item> <!-- end of group Objective::Ultrasound -->
+
+    </Item> <!-- end of group Objective::Ultrasound -->
+
+    <Item type="group" name="Point::of::care::test">
+      <uilink widget="poctTestGroupBox" />
+      <label lang="xx">Point of care testing</label>
+      <label lang="fr">Analyses biologiques réalisées en consultation</label>
+      <options>collapsible;expanded</options>
+
+        <Item type="group" name="Blood::glucose">
+          <uilink widget="poctBloodGlucoseGroupBox" />
+          <label lang="xx">Blood glucose (cappilary blood)</label>
+          <label lang="fr">Glycémie capillaire</label>
+          <options>collapsible;expanded</options>
+
+            <Item type="helptext" name="Blood::glucose::label::Helptext">
+              <uilink widget="bloodGlucoseLabel"/>
+              <label lang="xx">Blood glucose level (capillary blood)</label>
+              <label lang="fr">Glycémie capillaire</label>
+              <options>printable</options>
+            </Item>
+
+            <Item type="doublespin" name="Blood::glucose::mmol::per::liter::value">
+              <uilink label="mmollUnitLabel" widget="mmollBloodGlucoseDoubleSpinBox" layout="" />
+              <label lang="xx">mmol/L</label>
+              <label lang="fr">mmol/L</label>
+              <options></options>
+            </Item>
+
+            <Item type="doublespin" name="Blood::glucose::mg::per::deciliter::value">
+              <uilink label="mgdlUnitLabel" widget="mgdlBloodGlucoseDoubleSpinBox" layout="" />
+              <label lang="xx">mg/dL</label>
+              <label lang="fr">mg/dL</label>
+              <options></options>
+            </Item>
+
+            <Item type="date" name="Blood::glucose::date">
+                <uilink label="bloodGlucoseDateLabel" widget="bloodGlucoseDateEdit" />
+                <label lang="xx">Date</label>
+                <label lang="fr">Date</label>
+                <options>now</options>
+            </Item>
+
+        </Item> <!-- end of group Blood glucose -->
+
+        <Item type="group" name="Urine::strip::test">
+          <uilink widget="urineTestStripGroupBox" />
+          <label lang="xx">Urine strip test</label>
+          <label lang="fr">Bandelette urinaire</label>
+          <options>collapsible</options>
+
+            <Item type="radio" name="Urine::Leukocytes">
+                <uilink label="leukocytesLabel" widget="" layout="leukocytesRadioLayout" />
+                <label lang="xx">Leukocytes</label>
+                <label lang="fr">Leucocytes</label>
+                <value>
+                    <uuid id="0">Negative</uuid>
+                    <!--<sctid></sctid>-->
+                    <uuid id="1">Trace</uuid>
+                    <uuid id="2">Small</uuid>
+                    <uuid id="3">Moderate</uuid>
+                    <uuid id="4">Large</uuid>
+                    <uuid id="5">Not done</uuid>
+
+                    <possible id="0" lang="xx">Negative</possible>
+                    <possible id="1" lang="xx">Trace</possible>
+                    <possible id="2" lang="xx">Small +</possible>
+                    <possible id="3" lang="xx">Moderate ++</possible>
+                    <possible id="4" lang="xx">Large +++</possible>
+                    <possible id="5" lang="xx">ø</possible>
+
+                    <possible id="0" lang="fr">Négatif</possible>
+                    <possible id="1" lang="fr">Trace</possible>
+                    <possible id="2" lang="fr">+</possible>
+                    <possible id="3" lang="fr">++</possible>
+                    <possible id="4" lang="fr">+++</possible>
+                    <possible id="5" lang="fr">ø</possible>
+                  </value>
+                  <options>compact</options>
+                </Item>
+
+        </Item> <!-- end of group Urine strip test -->
+
+      </Item> <!-- end of group Point of care test -->
+
 
     </Item> <!-- end of group Objective -->
 
@@ -1693,74 +1776,74 @@
 
         </Item> <!-- end of Fetus5GroupBox -->
 
-    <Item type="group" name="Assessment">                                         
-      <uilink label="" widget="assessmentGroupBox" layout="" />                   
-      <label lang="xx">Assessment</label>                                         
-      <label lang="fr">Analyse</label>                                          
+    <Item type="group" name="Assessment">
+      <uilink label="" widget="assessmentGroupBox" layout="" />
+      <label lang="xx">Assessment</label>
+      <label lang="fr">Analyse</label>
       <options>collapsible;expanded</options>
 
-      <Item type="uniquelist" name="Diagnosis::UniqueList">                        
+      <Item type="uniquelist" name="Diagnosis::UniqueList">
             <uilink label="assessmentDiagnosisLabel" widget="assessmentDiagnosisListView" layout=""/>
-            <label lang="xx">Diagnosis</label>                               
-            <label lang="fr">Diagnostic</label>                               
-            <value>                                                             
-            <uuid id="0">Normal pregnancy</uuid>                             
-            <!--<sctid id="0">72892002</sctid>-->                               
-            <uuid id="1">Term pregnancy</uuid>                       
+            <label lang="xx">Diagnosis</label>
+            <label lang="fr">Diagnostic</label>
+            <value>
+            <uuid id="0">Normal pregnancy</uuid>
+            <!--<sctid id="0">72892002</sctid>-->
+            <uuid id="1">Term pregnancy</uuid>
             <!--<sctid id="1">72892002</sctid>-->
-            <!--<sctid id="1">87527008</sctid>-->                               
-            <uuid id="2">Fetal growth retardation</uuid>                    
-            <!--<sctid id="2">22033007</sctid>-->                               
+            <!--<sctid id="1">87527008</sctid>-->
+            <uuid id="2">Fetal growth retardation</uuid>
+            <!--<sctid id="2">22033007</sctid>-->
             <uuid id="3">not done</uuid>
-            <!--<sctid id="3">385660001</sctid>-->                                               
-            <possible id="0">Normal pregnancy</possible>                                  
-            <possible id="1">Term pregnancy</possible>                            
-            <possible id="2">Fetal growth retardation</possible>                         
-            <possible id="3">ø</possible>                                       
-            <possible id="0" lang="fr">Grossesse normalement évolutive</possible>           
-            <possible id="1" lang="fr">Grossesse à terme normalement évolutive</possible>              
-            <possible id="2" lang="fr">Retard de croissance intra-utérin</possible>                 
-            <possible id="3" lang="fr">ø</possible>                             
-            </value>                                                            
-            <options>resizeToContent;DontPrintEmptyValue</options>              
-      </Item>   
+            <!--<sctid id="3">385660001</sctid>-->
+            <possible id="0">Normal pregnancy</possible>
+            <possible id="1">Term pregnancy</possible>
+            <possible id="2">Fetal growth retardation</possible>
+            <possible id="3">ø</possible>
+            <possible id="0" lang="fr">Grossesse normalement évolutive</possible>
+            <possible id="1" lang="fr">Grossesse à terme normalement évolutive</possible>
+            <possible id="2" lang="fr">Retard de croissance intra-utérin</possible>
+            <possible id="3" lang="fr">ø</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>
+      </Item>
 
-      <Item name="Diagnosis::ShortText" type="shorttext"> 
-          <uilink label="" widget="assessmentDiagnosisLineEdit" layout="" />        
-          <label lang="xx"></label>                                             
-          <label lang="fr"></label>                                             
-          <placeholder lang="xx">Other diagnosis</placeholder>                          
-          <placeholder lang="fr">Autre diagnostic</placeholder>                      
-      </Item> 
+      <Item name="Diagnosis::ShortText" type="shorttext">
+          <uilink label="" widget="assessmentDiagnosisLineEdit" layout="" />
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <placeholder lang="xx">Other diagnosis</placeholder>
+          <placeholder lang="fr">Autre diagnostic</placeholder>
+      </Item>
 
-      <Item type="texteditor" name="Problems::TextEditor">                                 
+      <Item type="texteditor" name="Problems::TextEditor">
         <uilink label="assessmentProblemsLabel" widget="" layout="assessmentProblemsTextEditorLayout" />
-        <label lang="xx">Problems</label>                                     
-        <label lang ="fr">Problèmes</label>                                        
-        <options>FullEditor</options>                                             
+        <label lang="xx">Problems</label>
+        <label lang ="fr">Problèmes</label>
+        <options>FullEditor</options>
       </Item>
 
     </Item> <!-- end of group assessment -->
 
-    <Item type="group" name="Plan">                                       
-      <uilink label="" widget="planGroupBox" layout="" />                 
-      <label lang="xx">Plan</label>                                       
-      <label lang="fr">Plan</label>                                            
-      <options>collapsible;expanded</options>                                   
-      
-      <Item type="texteditor" name="Plan::PlanOfCare::TextEditor">                      
+    <Item type="group" name="Plan">
+      <uilink label="" widget="planGroupBox" layout="" />
+      <label lang="xx">Plan</label>
+      <label lang="fr">Plan</label>
+      <options>collapsible;expanded</options>
+
+      <Item type="texteditor" name="Plan::PlanOfCare::TextEditor">
         <uilink label="planPlanOfCareLabel" widget="" layout="planPlanOfCareTextEditorLayout" />
-        <label lang="xx">Plan of care</label>                                       
-        <label lang ="fr">Conduite à tenir</label>                                     
-        <options>FullEditor</options>                                           
+        <label lang="xx">Plan of care</label>
+        <label lang ="fr">Conduite à tenir</label>
+        <options>FullEditor</options>
       </Item>
-      
+
       <Item type="helptext" name="Plan::PrescribedUltrasound::HelpText">
         <uilink label="prescribedUltrasoundLabel" />
-        <label lang="xx">Prescribed ultrasounds</label>                       
+        <label lang="xx">Prescribed ultrasounds</label>
         <label lang="fr">Échographies prescrites</label>
       </Item>
-  
+
       <Item type="check" name="Plan::PrescribedUltrasound::Trimester1::CheckBox">
         <uilink label="" widget="prescribedUltrasoundTrimester1CheckBox" layout="" />
         <label lang="xx">1st trimester ultrasound</label>
@@ -1769,51 +1852,51 @@
         <value>
           <numerical id="0">1</numerical>
           <numerical id="1">2</numerical>
-        </value> 
+        </value>
       </Item>
 
       <Item type="check" name="Plan::PrescribedUltrasound::Trimester2::CheckBox">
         <uilink label="" widget="prescribedUltrasoundTrimester2CheckBox" layout="" />
-        <label lang="xx">2nd trimester ultrasound</label>                       
-        <label lang="fr">Échographie du 2ème trimestre</label>                   
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <label lang="xx">2nd trimester ultrasound</label>
+        <label lang="fr">Échographie du 2ème trimestre</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
       <Item type="check" name="Plan::PrescribedUltrasound::Trimester3::CheckBox">
         <uilink label="" widget="prescribedUltrasoundTrimester3CheckBox" layout="" />
-        <label lang="xx">3rd trimester ultrasound</label>                       
-        <label lang="fr">Échographie du 3ème trimestre</label>                   
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <label lang="xx">3rd trimester ultrasound</label>
+        <label lang="fr">Échographie du 3ème trimestre</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
       <Item type="check" name="Plan::PrescribedUltrasound::Control::CheckBox">
         <uilink label="" widget="prescribedUltrasoundControlCheckBox" layout="" />
-        <label lang="xx">Control ultrasound</label>                       
-        <label lang="fr">Échographie de contrôle</label>                  
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <label lang="xx">Control ultrasound</label>
+        <label lang="fr">Échographie de contrôle</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
       <Item type="check" name="Plan::PrescribedUltrasound::Pelvic::CheckBox">
         <uilink label="" widget="prescribedUltrasoundPelvicCheckBox" layout="" />
-        <label lang="xx">Pelvic ultrasound</label>                       
-        <label lang="fr">Échographie pelvienne</label>                  
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <label lang="xx">Pelvic ultrasound</label>
+        <label lang="fr">Échographie pelvienne</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
       <!-- prescribed biology -->
@@ -1824,188 +1907,188 @@
         <label lang="fr">Analyses biologiques prescrites</label>
       </Item>
 
-      <Item type="helptext" name="Plan:PrescribedLabTest::Serology::HelpText">            
-        <uilink label="prescribedLabTestSerologyLabel" />                                 
-        <label lang="xx">Serology</label>                           
-        <label lang="fr">Sérologie</label>                
+      <Item type="helptext" name="Plan:PrescribedLabTest::Serology::HelpText">
+        <uilink label="prescribedLabTestSerologyLabel" />
+        <label lang="xx">Serology</label>
+        <label lang="fr">Sérologie</label>
       </Item>
 
-      <Item type="helptext" name="Plan:PrescribedLabTest::Hematology::HelpText">  
-        <uilink label="prescribedLabTestHematologyLabel" />                         
-        <label lang="xx">Hematology</label>                           
-        <label lang="fr">Hématologie</label>                
+      <Item type="helptext" name="Plan:PrescribedLabTest::Hematology::HelpText">
+        <uilink label="prescribedLabTestHematologyLabel" />
+        <label lang="xx">Hematology</label>
+        <label lang="fr">Hématologie</label>
       </Item>
 
-      <Item type="helptext" name="Plan:PrescribedLabTest::Biochemistry::HelpText"> 
-        <uilink label="prescribedLabTestBiochemistryLabel" />                       
-        <label lang="xx">Biochemistry</label>                                     
-        <label lang="fr">Biochimie</label>                                    
+      <Item type="helptext" name="Plan:PrescribedLabTest::Biochemistry::HelpText">
+        <uilink label="prescribedLabTestBiochemistryLabel" />
+        <label lang="xx">Biochemistry</label>
+        <label lang="fr">Biochimie</label>
       </Item>
 
-      <Item type="helptext" name="Plan:PrescribedLabTest::Bacteriology::HelpText"> 
-        <uilink label="prescribedLabTestBacteriologyLabel" />                       
-        <label lang="xx">Bacteriology</label>                           
-        <label lang="fr">Bactériologie</label>                
+      <Item type="helptext" name="Plan:PrescribedLabTest::Bacteriology::HelpText">
+        <uilink label="prescribedLabTestBacteriologyLabel" />
+        <label lang="xx">Bacteriology</label>
+        <label lang="fr">Bactériologie</label>
       </Item>
 
       <Item type="helptext" name="Plan:PrescribedLabTest::Other::HelpText">
-        <uilink label="prescribedLabTestOtherLabel" />                     
-        <label lang="xx">Other</label>                           
-        <label lang="fr">Autre</label>                
+        <uilink label="prescribedLabTestOtherLabel" />
+        <label lang="xx">Other</label>
+        <label lang="fr">Autre</label>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::Toxoplasmosis::CheckBox">   
+      <Item type="check" name="Plan::PrescribedLabTest::Toxoplasmosis::CheckBox">
         <uilink label="" widget="prescribedToxoplasmosisCheckBox" layout="" />
-        <label lang="xx">Toxoplasmosis</label>                              
-        <label lang="fr">Toxoplasmose</label>                          
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <label lang="xx">Toxoplasmosis</label>
+        <label lang="fr">Toxoplasmose</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::Measles::CheckBox">            
-        <uilink label="" widget="prescribedMeaslesCheckBox" layout="" />                
-        <label lang="xx">Measles</label>                                        
-        <label lang="fr">Rubéole</label>                                       
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::Measles::CheckBox">
+        <uilink label="" widget="prescribedMeaslesCheckBox" layout="" />
+        <label lang="xx">Measles</label>
+        <label lang="fr">Rubéole</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::HepatitisBVirus::CheckBox">       
-        <uilink label="" widget="prescribedHepatitisBVirusCheckBox" layout="" />         
-        <label lang="xx">Hepatitis B</label>                                           
-        <label lang="fr">Hépatite B</label>                                               
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::HepatitisBVirus::CheckBox">
+        <uilink label="" widget="prescribedHepatitisBVirusCheckBox" layout="" />
+        <label lang="xx">Hepatitis B</label>
+        <label lang="fr">Hépatite B</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::Syphilis::CheckBox">            
-        <uilink label="" widget="prescribedSyphilisCheckBox" layout="" />                
-        <label lang="xx">Syphilis</label>                                               
-        <label lang="fr">Syphilis</label>                                               
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::Syphilis::CheckBox">
+        <uilink label="" widget="prescribedSyphilisCheckBox" layout="" />
+        <label lang="xx">Syphilis</label>
+        <label lang="fr">Syphilis</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::HIV::CheckBox">            
-        <uilink label="" widget="prescribedHIVCheckBox" layout="" />                
-        <label lang="xx">HIV</label>                                               
-        <label lang="fr">HIV</label>                                               
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::HIV::CheckBox">
+        <uilink label="" widget="prescribedHIVCheckBox" layout="" />
+        <label lang="xx">HIV</label>
+        <label lang="fr">HIV</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::RBCAntibodyScreen::CheckBox">            
-        <uilink label="" widget="prescribedRBCAntibodyScreenCheckBox" layout="" />                
-        <label lang="xx">RBC antibody screen</label>                                               
-        <label lang="fr">RAI (Rech. agglutinines irrégulières)</label>                           
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::RBCAntibodyScreen::CheckBox">
+        <uilink label="" widget="prescribedRBCAntibodyScreenCheckBox" layout="" />
+        <label lang="xx">RBC antibody screen</label>
+        <label lang="fr">RAI (Rech. agglutinines irrégulières)</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::CompleteBloodCount::CheckBox">            
-        <uilink label="" widget="prescribedCBCCheckBox" layout="" />                
-        <label lang="xx">Complete Blood Count</label>                                               
-        <label lang="fr">Numération Formule Sanguine</label>                                           
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::CompleteBloodCount::CheckBox">
+        <uilink label="" widget="prescribedCBCCheckBox" layout="" />
+        <label lang="xx">Complete Blood Count</label>
+        <label lang="fr">Numération Formule Sanguine</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::SerumCreatinine::CheckBox">      
-        <uilink label="" widget="prescribedSerumCreatinineCheckBox" layout="" />         
-        <label lang="xx">Serum creatinine</label>                                        
-        <label lang="fr">Créatinine</label>                                    
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::SerumCreatinine::CheckBox">
+        <uilink label="" widget="prescribedSerumCreatinineCheckBox" layout="" />
+        <label lang="xx">Serum creatinine</label>
+        <label lang="fr">Créatinine</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::CRP::CheckBox">            
-        <uilink label="" widget="prescribedCRPCheckBox" layout="" />                
-        <label lang="xx">CRP</label>                                               
-        <label lang="fr">CRP</label>                                               
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::CRP::CheckBox">
+        <uilink label="" widget="prescribedCRPCheckBox" layout="" />
+        <label lang="xx">CRP</label>
+        <label lang="fr">CRP</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::SerumUricAcid::CheckBox">   
-        <uilink label="" widget="prescribedSerumUricAcidCheckBox" layout="" />           
-        <label lang="xx">Serum uric acide</label>                                      
-        <label lang="fr">Acide urique sérique</label>                                   
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::SerumUricAcid::CheckBox">
+        <uilink label="" widget="prescribedSerumUricAcidCheckBox" layout="" />
+        <label lang="xx">Serum uric acide</label>
+        <label lang="fr">Acide urique sérique</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
-      <Item type="check" name="Plan::PrescribedLabTest::UrineProteine24Hour::CheckBox"> 
-        <uilink label="" widget="prescribedUrineProtein24HourCheckBox" layout="" />     
-        <label lang="xx">Urine protein - 24 hour urine</label>                         
-        <label lang="fr">Protéinurie des 24 heures</label>                           
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+      <Item type="check" name="Plan::PrescribedLabTest::UrineProteine24Hour::CheckBox">
+        <uilink label="" widget="prescribedUrineProtein24HourCheckBox" layout="" />
+        <label lang="xx">Urine protein - 24 hour urine</label>
+        <label lang="fr">Protéinurie des 24 heures</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
       <Item type="check" name="Plan::PrescribedLabTest::UrineCulture::CheckBox">
         <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />
-        <label lang="xx">Urine culture</label>                  
-        <label lang="fr">ECBU</label>                      
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <label lang="xx">Urine culture</label>
+        <label lang="fr">ECBU</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
       <Item type="check" name="Plan::PrescribedLabTest::VaginalWetMount::CheckBox">
-        <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />   
-        <label lang="xx">Urine culture</label>                                  
-        <label lang="fr">ECBU</label>                                           
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />
+        <label lang="xx">Urine culture</label>
+        <label lang="fr">ECBU</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
       <Item type="check" name="Plan::PrescribedLabTest::UrineCulture::CheckBox">
-        <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />   
-        <label lang="xx">Urine culture</label>                                  
-        <label lang="fr">ECBU</label>                                           
-        <options>printonlychecked</options>                                     
-        <value>                                                                 
-          <numerical id="0">1</numerical>                                       
-          <numerical id="1">2</numerical>                                       
-        </value>                                                                
+        <uilink label="" widget="prescribedUrineCultureCheckBox" layout="" />
+        <label lang="xx">Urine culture</label>
+        <label lang="fr">ECBU</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
       </Item>
 
 

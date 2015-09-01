@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>671</width>
+    <width>764</width>
     <height>3900</height>
    </rect>
   </property>
@@ -385,6 +385,9 @@
                <width>50</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -917,64 +920,108 @@
         <property name="title">
          <string>poct blood glucose</string>
         </property>
-        <layout class="QGridLayout" name="gridLayout_15">
-         <item row="0" column="0">
-          <widget class="QLabel" name="bloodGlucoseLabel">
-           <property name="text">
-            <string>blood glucose level</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="Line" name="line_6">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="mgdlUnitLabel">
-           <property name="text">
-            <string>mg/dL</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QDoubleSpinBox" name="mgdlBloodGlucoseDoubleSpinBox"/>
-         </item>
-         <item row="0" column="4">
-          <widget class="Line" name="line_5">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="5">
-          <widget class="QLabel" name="mmollUnitLabel">
-           <property name="text">
-            <string>mmol/L</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="6">
-          <widget class="QDoubleSpinBox" name="mmollBloodGlucoseDoubleSpinBox"/>
-         </item>
-         <item row="0" column="7">
-          <widget class="Line" name="line_7">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="8">
-          <widget class="QLabel" name="bloodGlucoseDateLabel">
-           <property name="text">
-            <string>date</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="9">
-          <widget class="QDateEdit" name="bloodGlucoseDateEdit"/>
+        <layout class="QVBoxLayout" name="verticalLayout_21">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <widget class="QLabel" name="bloodGlucoseLabel">
+             <property name="text">
+              <string>blood glucose level</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="mgdlUnitLabel">
+             <property name="text">
+              <string>mg/dL</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="mgdlBloodGlucoseDoubleSpinBox">
+             <property name="suffix">
+              <string>mg/dL</string>
+             </property>
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <double>3000.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>10.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="mmollUnitLabel">
+             <property name="text">
+              <string>mmol/L</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="mmollBloodGlucoseDoubleSpinBox">
+             <property name="suffix">
+              <string>mmol/L</string>
+             </property>
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <double>150.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="bloodGlucoseDateLabel">
+             <property name="text">
+              <string>date</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="bloodGlucoseDateEdit">
+             <property name="displayFormat">
+              <string>dd/MM/yyyy</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </item>
         </layout>
        </widget>
@@ -1102,7 +1149,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QDateEdit" name="urineStipTestDateEdit"/>
+            <widget class="QDateEdit" name="urineStipTestDateEdit">
+             <property name="displayFormat">
+              <string>dd/MM/yyyy</string>
+             </property>
+            </widget>
            </item>
            <item>
             <spacer name="horizontalSpacer_5">
