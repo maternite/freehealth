@@ -58,20 +58,75 @@
   <Item type="check" name="General::Negative::Intraepithelial::Lesion::Malignancy">
     <uilink label="" widget="negativeIntraepithelialLesionMalignancyCheckBox" layout="" />
     <label lang="xx">Negative for intraepithelial lesion or malignancy</label>
-    <label lang="fr"></label>
+    <label lang="fr">Pas de lésion intraépithéliale ou de tumeur</label>
     <options></options>
   </Item>
 
   <Item type="check" name="General::Epithelial::Cell::Abnormality">
     <uilink label="" widget="epithelialCellAbnormalityCheckBox" layout="" />
     <label lang="xx">Epithelial cell abnormality</label>
+    <label lang="fr">Anomalie des cellules épithéliales</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="General::Other">
+    <uilink label="" widget="generalCategorizationOtherCheckBox" layout="" />
+    <label lang="xx">Other</label>
+    <label lang="fr">Autre</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Interpretation::Result::Label">
+    <uilink label="" widget="interpretationLabel" layout="" />
+    <label lang="xx">INTERPRETATION / RESULT</label>
+    <label lang="fr">INTERPRETATION / RESULTAT</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Interpretation::Result::Negative::Label">
+    <uilink label="" widget="negativeIntraepithelialLesionMalignancyLabel" layout="" />
+    <label lang="xx">Negative for Intraepithelial Lesion or Malignancy</label>
     <label lang="fr"></label>
     <options></options>
   </Item>
 
-  <Item type="" name="">
-    <uilink label="" widget="" layout="" />
-    <label lang="xx"></label>
+  <Item type="helptext" name="Interpretation::Result::Organisms::Label">
+    <uilink label="" widget="organismsLabel" layout="" />
+    <label lang="xx">Organisms</label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Trichomonas::vaginalis">
+    <uilink label="" widget="trichomonasVaginalisCheckBox" layout="" />
+    <label lang="xx">Trichomonas vaginalis</label>
+    <label lang="fr">Trichomonas vaginalis</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Candida">
+    <uilink label="" widget="candidaCheckBox" layout="" />
+    <label lang="xx">Fungal organisms morphologically consistent with Candida species</label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Vaginosis">
+    <uilink label="" widget="vaginosisCheckBox" layout="" />
+    <label lang="xx">Shift in flora suggestive of bacterial vaginosis</label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Actinomyces">
+    <uilink label="" widget="actinomycesCheckBox" layout="" />
+    <label lang="xx">Bacteria morphologically consistent with Actinomyces species</label>       <label lang="fr"></label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Hsv">
+    <uilink label="" widget="hsvCheckBox" layout="" />
+    <label lang="xx">Cellular changes consistent with herpes simplex virus</label>
     <label lang="fr"></label>
     <options></options>
   </Item>
