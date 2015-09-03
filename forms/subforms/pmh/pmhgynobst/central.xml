@@ -29,8 +29,8 @@
 <!--<file type="script" name="onload">./scripts/xx/pmhgynobst.js</file>-->
 
 <MedForm name="Maternity::Obstetrics::Past::Medical::History::Gynecology::Obstetrics" uifilename="./ui/xx/pmhgynobst.ui">
-<label lang="xx">PMH gynecology and obstetrics</label>
-<label lang="fr">ATCD gynécologie et obstétrique </label>
+<label lang="xx">Gynecology</label>
+<label lang="fr">Gynécologie</label>
 <options>unique;HideHeaderOnUniqueEpisode;UseFormAsNameSpace</options>
 <icon>__theme__/stethoscope.png</icon>
 
