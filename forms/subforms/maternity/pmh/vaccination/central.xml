@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jérôme Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-09-02</cdate>
+    <lmdate>2015-09-03</lmdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">Vaccination</description>
+    <description lang="fr">Vaccination</description>
+    <category lang="xx">Past Medical History</category>
+    <category lang="fr">Antécédents</category>
+    <specialties lang="xx">Generic</specialties>
+    <specialties lang="fr">Générique</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <!--<file type="script" name="onload">./scripts/xx/.js</file>-->
+
+<MedForm name="Maternity::Vaccination" uifilename="./ui/xx/vaccination.ui">
+  <label lang="xx">Vaccination</label>
+  <label lang="fr">Vaccination</label>
+  <options>UseFormAsNameSpace</options>
+  <icon>__theme__/stethoscope.png</icon>
+
+  
+</MedForm>
+
+</FreeMedForms>

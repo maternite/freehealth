@@ -17,9 +17,9 @@
     <description lang="xx">Papanicolaou smear results</description>
     <description lang="fr">Résultats de frottis de dépistage cervico-utérin</description>
     <category lang="xx">Laboratory tests</category>
-    <category lang="en">Examens de laboratoire</category>
+    <category lang="fr">Examens de laboratoire</category>
     <specialties lang="xx">Gynecology</specialties>
-    <specialties lang="en">Gynécologie</specialties>
+    <specialties lang="fr">Gynécologie</specialties>
 
     <updateinfo>
     </updateinfo>

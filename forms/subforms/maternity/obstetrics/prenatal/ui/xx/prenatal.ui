@@ -265,6 +265,13 @@
       <string>subjectiveGroupBox</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="0">
+       <widget class="QLabel" name="medicalRegimenLabel">
+        <property name="text">
+         <string>medical regimen</string>
+        </property>
+       </widget>
+      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="caseHistoryLabel">
         <property name="minimumSize">
@@ -285,7 +292,7 @@
         </property>
        </layout>
       </item>
-      <item row="2" column="0">
+      <item row="4" column="0">
        <layout class="QHBoxLayout" name="fetalMovementHorizontalLayout">
         <item>
          <widget class="QLabel" name="fetalMovementLabel">
@@ -318,7 +325,7 @@
         </item>
        </layout>
       </item>
-      <item row="3" column="0">
+      <item row="5" column="0">
        <widget class="QGroupBox" name="subjectiveFatigueScoreGroupBox">
         <property name="title">
          <string>fatigueScoreGroupBox</string>
@@ -422,6 +429,9 @@
          </item>
         </layout>
        </widget>
+      </item>
+      <item row="3" column="0">
+       <layout class="QFormLayout" name="medicalRegimenFormLayout"/>
       </item>
      </layout>
     </widget>
@@ -1110,7 +1120,7 @@
           </widget>
          </item>
          <item row="7" column="1">
-          <layout class="QHBoxLayout" name="ketoneGravityRadioLayout"/>
+          <layout class="QHBoxLayout" name="ketoneRadioLayout"/>
          </item>
          <item row="8" column="0">
           <widget class="QLabel" name="bilirubinLabel">

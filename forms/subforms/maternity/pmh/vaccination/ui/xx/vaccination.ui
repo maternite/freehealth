@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>558</width>
+    <height>1573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>bcgGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="mantouxLabel">
+        <property name="text">
+         <string>mantoux test</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="mantouxInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="mantouxLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="mantouxReadingDateLabel">
+          <property name="text">
+           <string>reading date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="mantouxResultLabel">
+          <property name="text">
+           <string>result</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="mantouxAdministeredLabel">
+          <property name="text">
+           <string>administered 
+ and read by</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="mantouxInjectionDateEdit"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="mantouxLotLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QDateEdit" name="mantouxReadingDateEdit"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QSpinBox" name="mantouxResultSpinBox">
+          <property name="suffix">
+           <string>mm</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="mantouxAdministeredLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="tbVaccinationLabel">
+        <property name="text">
+         <string>vaccination</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="3">
+         <widget class="QLabel" name="tbLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="tbAdministeredLabel">
+          <property name="text">
+           <string>administered by</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="tbVaccineNameLineEdit"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="tbVaccineNameLabel">
+          <property name="text">
+           <string>vaccine name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="tbLotLineEdit"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="tbAdministeredLineEdit"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="tbTypeLabel">
+          <property name="text">
+           <string>vaccine type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="tbInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="tbInjectionDateEdit"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="tbTypeComboBox"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="dtwpGroupBox">
+     <property name="title">
+      <string>dtwpGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="dtwpInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="dtwpTypeLabel">
+          <property name="text">
+           <string>vaccine type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="dtwpVaccineNameLabel">
+          <property name="text">
+           <string>vaccine name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="dtwpLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="dtwpAdministeredLabel">
+          <property name="text">
+           <string>administered by</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="dtwp1InjectionDateEdit"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="dtwp1TypeComboBox"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="dtwp1VaccineNameLineEdit"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="dtwp1LotLabelLineEdit"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="dtwp1AdministeredLineEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QDateEdit" name="dtwp2InjectionDateEdit"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="dtwp2TypeComboBox"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="dtwp2VaccineNameLineEdit"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="dtwp2LotLabelLineEdit"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="dtwp2AdministeredLineEdit"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDateEdit" name="dtwp3InjectionDateEdit"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="dtwp3TypeComboBox"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="dtwp3VaccineNameLineEdit"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="dtwp3LotLabelLineEdit"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="dtwp3AdministeredLineEdit"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="dtwpBoosterGroupBox">
+     <property name="title">
+      <string>dtwpBoosterGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit1"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit1"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit2"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit2"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit2"/>
+        </item>
+        <item row="8" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit8"/>
+        </item>
+        <item row="8" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit8"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit4"/>
+        </item>
+        <item row="4" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit4"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit5"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox5"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit5"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit5"/>
+        </item>
+        <item row="6" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit6"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit7"/>
+        </item>
+        <item row="7" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox7"/>
+        </item>
+        <item row="7" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit7"/>
+        </item>
+        <item row="7" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit7"/>
+        </item>
+        <item row="7" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit7"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit8"/>
+        </item>
+        <item row="9" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit9"/>
+        </item>
+        <item row="9" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox9"/>
+        </item>
+        <item row="9" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit9"/>
+        </item>
+        <item row="9" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit9"/>
+        </item>
+        <item row="9" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit9"/>
+        </item>
+        <item row="10" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit10"/>
+        </item>
+        <item row="10" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox10"/>
+        </item>
+        <item row="10" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit10"/>
+        </item>
+        <item row="10" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit10"/>
+        </item>
+        <item row="10" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit10"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox4"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit4"/>
+        </item>
+        <item row="8" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox8"/>
+        </item>
+        <item row="8" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit8"/>
+        </item>
+        <item row="5" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit5"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit6"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox6"/>
+        </item>
+        <item row="6" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit6"/>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit6"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit3"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit3"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit3"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit4"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox2"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="dtwpBoosterInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="dtwpBoosterTypeLabel">
+          <property name="text">
+           <string>vaccine type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="dtwpBoosterLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="dtwpBoosterVaccineNameLabel">
+          <property name="text">
+           <string>vaccine name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit1"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox1"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="dtwpBoosterTypeComboBox3"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit1"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit2"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDateEdit" name="dtwpBoosterInjectionDateEdit3"/>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="dtwpBoosterAdministeredLabel">
+          <property name="text">
+           <string>administered by</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="pneumoGroupBox">
+     <property name="title">
+      <string>pneumoGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="1">
+         <widget class="QComboBox" name="pneumoTypeComboBox1"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="pneumoVaccineNameLineEdit1"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="pneumoVaccineNameLineEdit2"/>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="pneumoAdministeredLabel">
+          <property name="text">
+           <string>administered by</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="pneumoAdministeredLineEdit1"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="pneumoTypeLabel">
+          <property name="text">
+           <string>vaccine type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="pneumoVaccineNameLabel">
+          <property name="text">
+           <string>vaccine name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="pneumoLotLineEdit2"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="pneumoTypeComboBox2"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDateEdit" name="pneumoInjectionDateEdit3"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="pneumoLotLineEdit1"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QDateEdit" name="pneumoInjectionDateEdit2"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="pneumoTypeComboBox4"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="pneumoVaccineNameLineEdit4"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="pneumoAdministeredLineEdit2"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="pneumoTypeComboBox3"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="pneumoVaccineNameLineEdit3"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="pneumoLotLineEdit3"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="pneumoAdministeredLineEdit3"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QDateEdit" name="pneumoInjectionDateEdit4"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="pneumoLotLineEdit4"/>
+        </item>
+        <item row="4" column="4">
+         <widget class="QLineEdit" name="pneumoAdministeredLineEdit4"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="pneumoInjectionDateEdit1"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="pneumoInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="pneumoLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="hepBGroupBox">
+     <property name="title">
+      <string>hepBGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="1" column="1">
+         <widget class="QComboBox" name="hepBTypeComboBox1"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="hepBVaccineNameLineEdit1"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="hepBVaccineNameLineEdit2"/>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="hepBAdministeredLabel">
+          <property name="text">
+           <string>administered by</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="hepBAdministeredLineEdit1"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="hepBTypeLabel">
+          <property name="text">
+           <string>vaccine type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="hepBVaccineNameLabel">
+          <property name="text">
+           <string>vaccine name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="hepBLotLineEdit2"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="hepBTypeComboBox2"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDateEdit" name="hepBInjectionDateEdit3"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="hepBLotLineEdit1"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QDateEdit" name="hepBInjectionDateEdit2"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="hepBTypeComboBox4"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="hepBVaccineNameLineEdit4"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="hepBAdministeredLineEdit2"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="hepBTypeComboBox3"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="hepBVaccineNameLineEdit3"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="hepBLotLineEdit3"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="hepBAdministeredLineEdit3"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QDateEdit" name="hepBInjectionDateEdit4"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="hepBLotLineEdit4"/>
+        </item>
+        <item row="4" column="4">
+         <widget class="QLineEdit" name="hepBAdministeredLineEdit4"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="hepBInjectionDateEdit1"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="hepBInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="hepBLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="mmrGroupBox">
+     <property name="title">
+      <string>mmrGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="1" column="1">
+         <widget class="QComboBox" name="mmrTypeComboBox1"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="mmrVaccineNameLineEdit1"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="mmrVaccineNameLineEdit2"/>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="mmrAdministeredLabel">
+          <property name="text">
+           <string>administered by</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="mmrAdministeredLineEdit1"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="mmrTypeLabel">
+          <property name="text">
+           <string>vaccine type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="mmrTypeComboBox2"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="mmrVaccineNameLabel">
+          <property name="text">
+           <string>vaccine name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="mmrLotLineEdit2"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDateEdit" name="mmrInjectionDateEdit3"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="mmrLotLineEdit1"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QDateEdit" name="mmrInjectionDateEdit2"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="mmrTypeComboBox3"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="mmrAdministeredLineEdit2"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="mmrVaccineNameLineEdit3"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="mmrLotLineEdit3"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="mmrAdministeredLineEdit3"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="mmrInjectionDateEdit1"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="mmrInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="mmrLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="otherGroupBox">
+     <property name="title">
+      <string>otherGroupBox</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit3"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="otherInjectionDateLabel">
+          <property name="text">
+           <string>injection date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="otherTypeLabel">
+          <property name="text">
+           <string>vaccine type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="otherVaccineNameLabel">
+          <property name="text">
+           <string>vaccine name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="otherLotLabel">
+          <property name="text">
+           <string>lot number</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="otherAdministeredLabel">
+          <property name="text">
+           <string>administered by</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit1"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit1"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox1"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit1"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit1"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit2"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit2"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox2"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit2"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit3"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit2"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox3"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit3"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit3"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit4"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox4"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit4"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit5"/>
+        </item>
+        <item row="4" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit4"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit4"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox5"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit5"/>
+        </item>
+        <item row="5" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit5"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit5"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox6"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit6"/>
+        </item>
+        <item row="6" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit6"/>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit6"/>
+        </item>
+        <item row="6" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit6"/>
+        </item>
+        <item row="7" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox7"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit7"/>
+        </item>
+        <item row="7" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit7"/>
+        </item>
+        <item row="7" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit7"/>
+        </item>
+        <item row="8" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox8"/>
+        </item>
+        <item row="7" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit7"/>
+        </item>
+        <item row="8" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit8"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit8"/>
+        </item>
+        <item row="8" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit8"/>
+        </item>
+        <item row="8" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit8"/>
+        </item>
+        <item row="9" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit9"/>
+        </item>
+        <item row="9" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox9"/>
+        </item>
+        <item row="9" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit9"/>
+        </item>
+        <item row="9" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit9"/>
+        </item>
+        <item row="9" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit9"/>
+        </item>
+        <item row="10" column="0">
+         <widget class="QDateEdit" name="otherInjectionDateEdit10"/>
+        </item>
+        <item row="10" column="2">
+         <widget class="QLineEdit" name="otherVaccineNameLineEdit10"/>
+        </item>
+        <item row="10" column="1">
+         <widget class="QComboBox" name="otherTypeComboBox10"/>
+        </item>
+        <item row="10" column="4">
+         <widget class="QLineEdit" name="otherAdministeredLineEdit10"/>
+        </item>
+        <item row="10" column="3">
+         <widget class="QLineEdit" name="otherLotLineEdit10"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

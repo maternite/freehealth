@@ -17,9 +17,9 @@
     <description lang="xx">Prenatal consultation</description>
     <description lang="fr">Consultation prénatale</description>
     <category lang="xx">Consultation</category>
-    <category lang="en">Consultation</category>
+    <category lang="fr">Consultation</category>
     <specialties lang="xx">Obstetrics</specialties>
-    <specialties lang="en">Obstétrique</specialties>
+    <specialties lang="fr">Obstétrique</specialties>
 
     <updateinfo>
     </updateinfo>
@@ -189,6 +189,13 @@
       <label lang="xx">Case history</label>
       <label lang ="fr">Anamnèse</label>
       <options>FullEditor</options>
+    </Item>
+
+    <Item type="texteditor" name="Medical::Regimen">                                 
+      <uilink label="medicalRegimenLabel" widget="" layout="medicalRegimenFormLayout" />
+      <label lang="xx">Medical regimen orders assessment</label>                                     
+      <label lang ="fr">Traitements médicamenteux ou non médicamenteux (phytothérapie, remèdes traditionnels améliorés) en cours</label>                                        
+      <options>FullEditor</options>                                             
     </Item>
 
     <Item type="radio" name="FetalMovement">

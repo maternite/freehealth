@@ -17,9 +17,9 @@
     <description lang="xx">Obstetrics Past Medical History: Pregnancy with Abortive Outcome</description>
     <description lang="fr">Antécédents obstétriques: grossesse interrompue</description>
     <category lang="xx">Past Medical History</category>
-    <category lang="en">Antécédents</category>
+    <category lang="fr">Antécédents</category>
     <specialties lang="xx">Obstetrics</specialties>
-    <specialties lang="en">Obstétrique</specialties>
+    <specialties lang="fr">Obstétrique</specialties>
 
     <updateinfo>
     </updateinfo>

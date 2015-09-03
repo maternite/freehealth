@@ -17,9 +17,9 @@
     <description lang="xx">Preoperative anesthesia consultation</description>
     <description lang="fr">Consultation préanesthésique</description>
     <category lang="xx">Consultation</category>
-    <category lang="en">Consultation</category>
+    <category lang="fr">Consultation</category>
     <specialties lang="xx">Anesthesiology</specialties>
-    <specialties lang="en">Anesthésie</specialties>
+    <specialties lang="fr">Anesthésie</specialties>
 
     <updateinfo>
     </updateinfo>
@@ -27,8 +27,8 @@
   </formdescription>
 
   <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiologymain.ui">
-    <label lang="xx">Consultation préanesthésique</label>
-    <label lang="en">Preoperative anesthesia consultation</label>
+    <label lang="xx">Preoperative anesthesia consultation</label>
+    <label lang="fr">Consultation préanesthésique</label>
     <options>UseFormAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
