@@ -29,8 +29,8 @@
   <!--<file type="script" name="onload">./scripts/xx/.js</file>-->
 
 <MedForm name="Maternity::Laboratory::tests::Papanicolaou::smear" uifilename="./ui/xx/pap_smear.ui">
-  <label lang="xx">Frottis de dépistage cervico-utérin</label>
-  <label lang="fr">Papanicolaou smear test</label>
+  <label lang="fr">Frottis de dépistage cervico-utérin</label>
+  <label lang="xx">Papanicolaou smear test</label>
   <options>UseFormAsNameSpace</options>
   <icon>__theme__/stethoscope.png</icon>
 
@@ -86,14 +86,14 @@
   <Item type="helptext" name="Interpretation::Result::Negative::Label">
     <uilink label="" widget="negativeIntraepithelialLesionMalignancyLabel" layout="" />
     <label lang="xx">Negative for Intraepithelial Lesion or Malignancy</label>
-    <label lang="fr"></label>
+    <label lang="fr">Absence de lésion malpighienne intra-épithéliale ou de signe de malignité</label>
     <options></options>
   </Item>
 
   <Item type="helptext" name="Interpretation::Result::Organisms::Label">
     <uilink label="" widget="organismsLabel" layout="" />
     <label lang="xx">Organisms</label>
-    <label lang="fr"></label>
+    <label lang="fr">Présence de micro-organismes</label>
     <options></options>
   </Item>
 
@@ -107,29 +107,306 @@
   <Item type="check" name="Candida">
     <uilink label="" widget="candidaCheckBox" layout="" />
     <label lang="xx">Fungal organisms morphologically consistent with Candida species</label>
-    <label lang="fr"></label>
+    <label lang="fr">Éléments  mycéliens, par exemple évoquant Candida</label>
     <options></options>
   </Item>
 
   <Item type="check" name="Vaginosis">
     <uilink label="" widget="vaginosisCheckBox" layout="" />
     <label lang="xx">Shift in flora suggestive of bacterial vaginosis</label>
-    <label lang="fr"></label>
+    <label lang="fr">Anomalies de la flore vaginale évoquant une vaginose bactérienne</label>
     <options></options>
   </Item>
 
   <Item type="check" name="Actinomyces">
     <uilink label="" widget="actinomycesCheckBox" layout="" />
-    <label lang="xx">Bacteria morphologically consistent with Actinomyces species</label>       <label lang="fr"></label>
+    <label lang="xx">Bacteria morphologically consistent with Actinomyces species</label>
+    <label lang="fr">Bactéries de type actinomyces</label>
     <options></options>
   </Item>
 
   <Item type="check" name="Hsv">
     <uilink label="" widget="hsvCheckBox" layout="" />
     <label lang="xx">Cellular changes consistent with herpes simplex virus</label>
-    <label lang="fr"></label>
+    <label lang="fr">Modifications  cellulaires  évoquant  un Herpès simplex</label>
     <options></options>
   </Item>
+
+  <Item type="helptext" name="Interpretation::Result::Other::Non::Neoplastic::Findings">
+    <uilink widget="otherNonNeoplasticFindingsLabel" />
+    <label lang="xx">Other non-neoplastic findings (Optional to report; list not comprehensive)</label>
+    <label lang="fr">Autres modifications non néoplasiques </label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Interpretation::Result::Reactive::Cellular::Changes">
+    <uilink widget="reactiveCellularChangesLabel" />
+    <label lang="xx">Reactive cellular changes associated with</label>
+    <label lang="fr">Modifications cellulaires réactionnelles associées à</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Interpretation::Result::Inflammation">
+    <uilink widget="inflammationCheckBox"/>
+    <label lang="xx">inflammation (includes typical repair)</label>
+    <label lang="fr">inflammation</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Interpretation::Result::Radiation">
+    <uilink widget="radiationCheckBox"/>
+    <label lang="xx">radiation</label>
+    <label lang="fr">radiation</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Interpretation::Result::Iud">
+    <uilink widget="IudCheckBox"/>
+    <label lang="xx">intrauterine contraceptive device</label>
+    <label lang="fr">présence d’un dispositif intra-utérin</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Interpretation::Result::Glandular::cell::status::posthysterectomy">
+    <uilink widget="posthysterectomyCheckBox"/>
+    <label lang="xx">Glandular cells status posthysterectomy</label>
+    <label lang="fr">Présence de cellules glandulaires bénignes post-hystérectomie</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Interpretation::Result::Atrophy">
+    <uilink widget="atrophyCheckBox"/>
+    <label lang="xx">Atrophy</label>
+    <label lang="fr">Atrophie</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Epithelial::Cell::Abnormalities">
+    <uilink widget="epithelialCellAbnormalitiesLabel" />
+    <label lang="xx">Epithelial Cell Abnormalities</label>
+    <label lang="fr">Anomalies des cellules épithéliales</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Squamous::cell">
+    <uilink widget="squamousCellLabel" />
+    <label lang="xx">Squamous cell</label>
+    <label lang="fr">Cellules malpighiennes</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="ASC">
+    <uilink widget="ascLabel" />
+    <label lang="xx">Atypical squamous cells (ASC)</label>
+    <label lang="fr">Atypies des cellules malpighienne (ASC)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="ASC-US">
+    <uilink widget="ascUsCheckBox"/>
+    <label lang="xx">of undetermined significance (ASC-US)</label>
+    <label lang="fr">de signification indéterminée (ASC-US)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="ASC-H">
+    <uilink widget="ascHCheckBox"/>
+    <label lang="xx">cannot exclude HSIL (ASC-H)</label>
+    <label lang="fr">ne permettant pas d’exclure une lésion malpighienne intra-épithéliale de haut grade (ASC-H)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="LSIL">
+    <uilink widget="lsilCheckBox" />
+    <label lang="xx">Low-grade squamous intraepithelial lesion (LSIL)</label>
+    <label lang="fr">Lésion malpighienne intra-épithéliale de bas grade (LSIL), regroupant koïlocytes/dysplasie légère/CIN 1</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="HPV::Mild::dysplasia::CIN1">
+    <uilink widget="hpvMildCin1Label" />
+    <label lang="xx">human papillomavirus / mild dysplasia / CIN1</label>
+    <label lang="fr">regroupant: koïlocytes / dysplasie légère / CIN 1</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="HSIL">
+    <uilink widget="hsilCheckBox" />
+    <label lang="xx">High-grade squamous intraepithelial lesion (HSIL)</label>
+    <label lang="fr">Lésion malpighienne intra-épithéliale de haut grade (HSIL)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="HSIL::Moderate::dysplasia::CIN2">
+    <uilink widget="cin2CheckBox" />
+    <label lang="xx">moderate dysplasia / CIN2</label>
+    <label lang="fr">dysplasie modérée / CIN 2</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="HSIL::Severe::dysplasia::CIN3::Carcinoma::in::situ">
+    <uilink widget="cin3CheckBox" />
+    <label lang="xx">severe dysplasia / CIN3 / carcinoma in situ (CIS)</label>
+    <label lang="fr">dysplasie sévère / CIN 3 / Carcinome in situ (CIS)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="HSIL::suspicious::invasion">
+    <uilink widget="invasionCheckBox" />
+    <label lang="xx">with features suspicious for invasion</label>
+    <label lang="fr">présence d’éléments faisant suspecter un processus invasif</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Squamous::cell::carcinoma">
+    <uilink widget="squamousCellCarcinomaCheckBox" />
+    <label lang="xx">Squamous cell carcinoma</label>
+    <label lang="fr">Carcinome malpighien</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Glandular::cell">
+    <uilink widget="glandularCellLabel" />
+    <label lang="xx">Glandular cell</label>
+    <label lang="fr">Anomalies des cellules glandulaires</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="AGC">
+    <uilink widget="atypicalGlandularCellLabel" />
+    <label lang="xx">Atypical glandular cells (AGC)</label>
+    <label lang="fr">Atypies des cellules glandulaires (AGC)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="AGC::endocervical">
+    <uilink widget="agcEndocervicalCheckBox" />
+    <label lang="xx">endocervical</label>
+    <label lang="fr">endocervicales</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="AGC::endometrial">
+    <uilink widget="agcEndometrialCheckBox" />
+    <label lang="xx">endometrial</label>
+    <label lang="fr">endometriales</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="AGC::NOS">
+    <uilink widget="agcNosCheckBox" />
+    <label lang="xx">Not otherwise specified (NOS)</label>
+    <label lang="fr">Sans autre précision (NOS)</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="AGC::favor::neoplastic">
+    <uilink widget="atypicalGlandularCellFavorNeoplasticLabel" />
+    <label lang="xx">Atypical glandular cells (AGC), favor neoplastic</label>
+    <label lang="fr">Atypies des cellules glandulaires (AGC), en faveur d’une néoplasie</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="AGC::favor::neoplastic::endocervical">
+    <uilink widget="agcNeoEndocervicalCheckBox" />
+    <label lang="xx">endocervical</label>
+    <label lang="fr">endocervicales</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="AGC::favor::neoplastic::endometrial">
+    <uilink widget="agcNeoEndometrialCheckBox" />
+    <label lang="xx">endometrial</label>
+    <label lang="fr">endométriales</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="AGC::favor::neoplastic::NOS">
+    <uilink widget="agcNeoNosCheckBox" />
+    <label lang="xx">Not otherwise specified (NOS)</label>
+    <label lang="fr">Sans autre précision (NOS)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="AIS">
+    <uilink widget="aisCheckBox" />
+    <label lang="xx">Endocervical adenocarcinoma in situ (AIS)</label>
+    <label lang="fr">Adénocarcinome endocervical in situ (AIS)</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Adenocarcinoma">
+    <uilink widget="adenocarcinomaLabel" />
+    <label lang="xx">Adenocarcinoma</label>
+    <label lang="fr">Adénocarcinome</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Adenocarcinoma::endocervical">
+    <uilink widget="adenocarcinomaEndocervicalCheckBox" />
+    <label lang="xx">endocervical</label>
+    <label lang="fr">endocervical</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Adenocarcinoma::endometrial">
+    <uilink widget="adenocarcinomaEndometrialCheckBox" />
+    <label lang="xx">endometrial</label>
+    <label lang="fr">endométrial</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Adenocarcinoma::extra::uterine">
+    <uilink widget="adenocarcinomaExtraUterineCheckBox" />
+    <label lang="xx">extra-uterine</label>
+    <label lang="fr">extra-utérin</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Adenocarcinoma::NOS">
+    <uilink widget="adenocarcinomaNosCheckBox" />
+    <label lang="xx">Not otherwise specified (NOS)</label>
+    <label lang="fr">Sans autre précision (NOS)</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Other">
+    <uilink widget="otherLabel" />
+    <label lang="xx">Other (List not comprehensive)</label>
+    <label lang="fr">Autres (liste non limitative)</label>
+    <options></options>
+  </Item>
+
+  <Item type="check" name="Endometrial::Cell::Age::40">
+    <uilink widget="endometrialCellAge40CheckBox" />
+    <label lang="xx">Endometrial cells in a woman 40 years of age or more</label>
+    <label lang="fr">Cellules endométriales chez une femme âgée de 40 ans ou plus</label>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Other::Malignant::Neoplasms::Helptext">
+    <uilink widget="otherMalignantNeoplasmsLabel" />
+    <label lang="xx">Other malignant neoplasms</label>
+    <label lang="fr">Autres tumeurs malignes</label>
+    <options></options>
+  </Item>
+
+  <Item type="shorttext" name="Other::Malignant::Neoplasms::Shorttext">
+    <uilink widget="otherMalignantNeoplasmsLineEdit"/>
+  </Item>
+
+  <Item type="longtext" name="Comment">
+    <uilink label="commentLabel" widget="commentTextEdit" />
+    <label lang="xx">Comment</label>
+    <label lang="fr">Commentaire</label>
+  </Item>
+ <!-- <Item type="helptext" name="">
+    <uilink widget="" />
+    <label lang="xx"></label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>-->
+
 
 </MedForm>
 

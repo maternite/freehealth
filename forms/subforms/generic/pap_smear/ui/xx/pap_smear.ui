@@ -14,14 +14,14 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="3">
+   <item row="0" column="0" colspan="2">
     <widget class="QLabel" name="dateSpecimenLabel">
      <property name="text">
       <string>Date specimen obtained</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="3" colspan="3">
+   <item row="0" column="3" colspan="2">
     <widget class="QDateEdit" name="specimenDateEdit">
      <property name="displayFormat">
       <string>dd/MM/yyyy</string>
@@ -35,28 +35,28 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="3" colspan="3">
+   <item row="1" column="3" colspan="2">
     <widget class="QDateEdit" name="readingDateEdit">
      <property name="displayFormat">
       <string>dd/MM/yyyy</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="0" colspan="4">
+   <item row="2" column="0" colspan="3">
     <widget class="QLabel" name="dateLmpLabel">
      <property name="text">
       <string>Date of Last Menstrual Period</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="5">
+   <item row="2" column="3" colspan="2">
     <widget class="QDateEdit" name="lmpDateEdit">
      <property name="displayFormat">
       <string>dd/MM/yyyy</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="0" colspan="6">
+   <item row="3" column="0" colspan="3">
     <widget class="QLabel" name="generalCategorizationLabel">
      <property name="font">
       <font>
@@ -70,14 +70,14 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="6">
+   <item row="4" column="0" colspan="4">
     <widget class="QCheckBox" name="negativeIntraepithelialLesionMalignancyCheckBox">
      <property name="text">
       <string>Negative for intraepithelial lesion or malignancy</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="0" colspan="6">
+   <item row="5" column="0" colspan="3">
     <widget class="QCheckBox" name="epithelialCellAbnormalityCheckBox">
      <property name="text">
       <string>Epithelial cell abnormality</string>
@@ -91,7 +91,7 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="0" colspan="6">
+   <item row="7" column="0" colspan="3">
     <widget class="QLabel" name="interpretationLabel">
      <property name="font">
       <font>
@@ -105,7 +105,7 @@
      </property>
     </widget>
    </item>
-   <item row="8" column="0" colspan="6">
+   <item row="8" column="0" colspan="5">
     <widget class="QLabel" name="negativeIntraepithelialLesionMalignancyLabel">
      <property name="font">
       <font>
@@ -119,7 +119,7 @@
      </property>
     </widget>
    </item>
-   <item row="9" column="0" colspan="3">
+   <item row="9" column="0">
     <widget class="QLabel" name="organismsLabel">
      <property name="font">
       <font>
@@ -131,42 +131,42 @@
      </property>
     </widget>
    </item>
-   <item row="10" column="2" colspan="4">
+   <item row="10" column="2" colspan="2">
     <widget class="QCheckBox" name="trichomonasVaginalisCheckBox">
      <property name="text">
       <string>Trichomonas vaginalis</string>
      </property>
     </widget>
    </item>
-   <item row="11" column="2" colspan="4">
+   <item row="11" column="2" colspan="3">
     <widget class="QCheckBox" name="candidaCheckBox">
      <property name="text">
       <string>Fungal oganisms morphologically consistent with Candida species</string>
      </property>
     </widget>
    </item>
-   <item row="12" column="2" colspan="4">
+   <item row="12" column="2" colspan="3">
     <widget class="QCheckBox" name="vaginosisCheckBox">
      <property name="text">
       <string>Shift in flora suggestive of bacterial vaginosis</string>
      </property>
     </widget>
    </item>
-   <item row="13" column="2" colspan="4">
+   <item row="13" column="2" colspan="3">
     <widget class="QCheckBox" name="actinomycesCheckBox">
      <property name="text">
       <string>Bacteria morphologically consistent with Actinomyces species</string>
      </property>
     </widget>
    </item>
-   <item row="14" column="2" colspan="4">
+   <item row="14" column="2" colspan="3">
     <widget class="QCheckBox" name="hsvCheckBox">
      <property name="text">
       <string>Cellular changes consistent with herpes simplex virus</string>
      </property>
     </widget>
    </item>
-   <item row="15" column="0" colspan="6">
+   <item row="15" column="0" colspan="5">
     <widget class="QLabel" name="otherNonNeoplasticFindingsLabel">
      <property name="font">
       <font>
@@ -178,49 +178,49 @@
      </property>
     </widget>
    </item>
-   <item row="16" column="2" colspan="4">
+   <item row="16" column="2" colspan="3">
     <widget class="QLabel" name="reactiveCellularChangesLabel">
      <property name="text">
       <string>Reactive cellular changes associated with</string>
      </property>
     </widget>
    </item>
-   <item row="17" column="3" colspan="3">
+   <item row="17" column="3" colspan="2">
     <widget class="QCheckBox" name="inflammationCheckBox">
      <property name="text">
       <string>inflammation (includes typical repair)</string>
      </property>
     </widget>
    </item>
-   <item row="18" column="3" colspan="3">
+   <item row="18" column="3">
     <widget class="QCheckBox" name="radiationCheckBox">
      <property name="text">
       <string>radiation</string>
      </property>
     </widget>
    </item>
-   <item row="19" column="3" colspan="3">
+   <item row="19" column="3" colspan="2">
     <widget class="QCheckBox" name="IudCheckBox">
      <property name="text">
       <string>intrauterine contraceptive device</string>
      </property>
     </widget>
    </item>
-   <item row="20" column="2" colspan="4">
+   <item row="20" column="2" colspan="3">
     <widget class="QCheckBox" name="posthysterectomyCheckBox">
      <property name="text">
       <string>Glandular cells status posthysterectomy</string>
      </property>
     </widget>
    </item>
-   <item row="21" column="2" colspan="4">
+   <item row="21" column="2">
     <widget class="QCheckBox" name="atrophyCheckBox">
      <property name="text">
       <string>Atrophy</string>
      </property>
     </widget>
    </item>
-   <item row="22" column="0" colspan="6">
+   <item row="22" column="0" colspan="3">
     <widget class="QLabel" name="epithelialCellAbnormalitiesLabel">
      <property name="font">
       <font>
@@ -234,7 +234,7 @@
      </property>
     </widget>
    </item>
-   <item row="23" column="0" colspan="4">
+   <item row="23" column="0" colspan="2">
     <widget class="QLabel" name="squamousCellLabel">
      <property name="font">
       <font>
@@ -246,84 +246,84 @@
      </property>
     </widget>
    </item>
-   <item row="24" column="2" colspan="4">
+   <item row="24" column="2" colspan="3">
     <widget class="QLabel" name="ascLabel">
      <property name="text">
       <string>Atypical squamous cells (ASC)</string>
      </property>
     </widget>
    </item>
-   <item row="25" column="4" colspan="2">
+   <item row="25" column="4">
     <widget class="QCheckBox" name="ascUsCheckBox">
      <property name="text">
       <string>of undetermined significance (ASC-US)</string>
      </property>
     </widget>
    </item>
-   <item row="26" column="4" colspan="2">
+   <item row="26" column="4">
     <widget class="QCheckBox" name="ascHCheckBox">
      <property name="text">
       <string>cannot exclude HSIL (ASC-H)</string>
      </property>
     </widget>
    </item>
-   <item row="27" column="2" colspan="4">
+   <item row="27" column="2" colspan="3">
     <widget class="QCheckBox" name="lsilCheckBox">
      <property name="text">
       <string>Low-grade squamous intraepithelial lesion (LSIL)</string>
      </property>
     </widget>
    </item>
-   <item row="28" column="1" colspan="5">
+   <item row="28" column="1">
     <widget class="QLabel" name="label_13">
      <property name="text">
       <string/>
      </property>
     </widget>
    </item>
-   <item row="29" column="5">
+   <item row="28" column="4">
     <widget class="QLabel" name="hpvMildCin1Label">
      <property name="text">
-      <string>human papillomavirus / mild dysplasia/ CIN1</string>
+      <string>human papillomavirus / mild dysplasia / CIN1</string>
      </property>
     </widget>
    </item>
-   <item row="30" column="2" colspan="4">
+   <item row="29" column="2" colspan="3">
     <widget class="QCheckBox" name="hsilCheckBox">
      <property name="text">
       <string>High-grade squamous intraepithelial lesion (HSIL)</string>
      </property>
     </widget>
    </item>
-   <item row="31" column="4" colspan="2">
+   <item row="30" column="4">
     <widget class="QCheckBox" name="cin2CheckBox">
      <property name="text">
       <string>moderate dysplasia / CIN2</string>
      </property>
     </widget>
    </item>
-   <item row="32" column="4" colspan="2">
+   <item row="31" column="4">
     <widget class="QCheckBox" name="cin3CheckBox">
      <property name="text">
       <string>severe dysplasia / CIN3 / carcinoma in situ</string>
      </property>
     </widget>
    </item>
-   <item row="33" column="4" colspan="2">
+   <item row="32" column="4">
     <widget class="QCheckBox" name="invasionCheckBox">
      <property name="text">
       <string>with features suspicious for invasion</string>
      </property>
     </widget>
    </item>
-   <item row="34" column="2" colspan="4">
+   <item row="33" column="2" colspan="3">
     <widget class="QCheckBox" name="squamousCellCarcinomaCheckBox">
      <property name="text">
       <string>Squamous cell carcinoma</string>
      </property>
     </widget>
    </item>
-   <item row="35" column="0" colspan="5">
+   <item row="34" column="0" colspan="2">
     <widget class="QLabel" name="glandularCellLabel">
      <property name="font">
       <font>
@@ -335,105 +335,105 @@
      </property>
     </widget>
    </item>
-   <item row="36" column="2" colspan="4">
+   <item row="35" column="2" colspan="3">
     <widget class="QLabel" name="atypicalGlandularCellLabel">
      <property name="text">
       <string>Atypical glandular cells (AGC)</string>
      </property>
     </widget>
    </item>
-   <item row="37" column="4" colspan="2">
+   <item row="36" column="4">
     <widget class="QCheckBox" name="agcEndocervicalCheckBox">
      <property name="text">
       <string>endocervical</string>
      </property>
     </widget>
    </item>
-   <item row="38" column="4" colspan="2">
+   <item row="37" column="4">
     <widget class="QCheckBox" name="agcEndometrialCheckBox">
      <property name="text">
       <string>endometrial</string>
      </property>
     </widget>
    </item>
-   <item row="39" column="4" colspan="2">
+   <item row="38" column="4">
     <widget class="QCheckBox" name="agcNosCheckBox">
      <property name="text">
       <string>not otherwise specified</string>
      </property>
     </widget>
    </item>
-   <item row="40" column="2" colspan="4">
+   <item row="39" column="2" colspan="3">
     <widget class="QLabel" name="atypicalGlandularCellFavorNeoplasticLabel">
      <property name="text">
       <string>Atypical glandular cells, favor neoplastic</string>
      </property>
     </widget>
    </item>
-   <item row="41" column="4" colspan="2">
+   <item row="40" column="4">
     <widget class="QCheckBox" name="agcNeoEndocervicalCheckBox">
      <property name="text">
       <string>endocervical</string>
      </property>
     </widget>
    </item>
-   <item row="42" column="4" colspan="2">
+   <item row="41" column="4">
     <widget class="QCheckBox" name="agcNeoEndometrialCheckBox">
      <property name="text">
       <string>endometrial</string>
      </property>
     </widget>
    </item>
-   <item row="43" column="4" colspan="2">
+   <item row="42" column="4">
     <widget class="QCheckBox" name="agcNeoNosCheckBox">
      <property name="text">
       <string>not otherwise specified</string>
      </property>
     </widget>
    </item>
-   <item row="44" column="2" colspan="4">
+   <item row="43" column="2" colspan="3">
     <widget class="QCheckBox" name="aisCheckBox">
      <property name="text">
       <string>Endocervical adenocarcinoma in situ (AIS)</string>
      </property>
     </widget>
    </item>
-   <item row="45" column="2" colspan="4">
-    <widget class="QCheckBox" name="adenocarcinomaCheckBox">
+   <item row="44" column="2" colspan="2">
+    <widget class="QLabel" name="adenocarcinomaLabel">
      <property name="text">
       <string>Adenocarcinoma</string>
      </property>
     </widget>
    </item>
-   <item row="46" column="4" colspan="2">
+   <item row="45" column="4">
     <widget class="QCheckBox" name="adenocarcinomaEndocervicalCheckBox">
      <property name="text">
       <string>endocervical</string>
      </property>
     </widget>
    </item>
-   <item row="47" column="4" colspan="2">
+   <item row="46" column="4">
     <widget class="QCheckBox" name="adenocarcinomaEndometrialCheckBox">
      <property name="text">
       <string>endometrial</string>
      </property>
     </widget>
    </item>
-   <item row="48" column="4" colspan="2">
+   <item row="47" column="4">
     <widget class="QCheckBox" name="adenocarcinomaExtraUterineCheckBox">
      <property name="text">
       <string>extra-uterine</string>
      </property>
     </widget>
    </item>
-   <item row="49" column="4" colspan="2">
+   <item row="48" column="4">
     <widget class="QCheckBox" name="adenocarcinomaNosCheckBox">
      <property name="text">
       <string>not otherwise specified</string>
      </property>
     </widget>
    </item>
-   <item row="50" column="0" colspan="6">
+   <item row="49" column="0" colspan="4">
     <widget class="QLabel" name="otherLabel">
      <property name="font">
       <font>
@@ -447,14 +447,14 @@
      </property>
     </widget>
    </item>
-   <item row="51" column="2" colspan="4">
+   <item row="50" column="2" colspan="3">
     <widget class="QCheckBox" name="endometrialCellAge40CheckBox">
      <property name="text">
       <string>Endometrial cells in a woman 40 years of age or more</string>
      </property>
     </widget>
    </item>
-   <item row="52" column="0" colspan="6">
+   <item row="51" column="0" colspan="3">
     <widget class="QLabel" name="otherMalignantNeoplasmsLabel">
      <property name="font">
       <font>
@@ -468,11 +468,24 @@
      </property>
     </widget>
    </item>
-   <item row="53" column="2" colspan="4">
-    <widget class="QLineEdit" name="otherMalignantNeoplasmsLineEdit"/>
+   <item row="53" column="0" colspan="2">
+    <widget class="QLabel" name="commentLabel">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Comment</string>
+     </property>
+    </widget>
    </item>
-   <item row="54" column="0" colspan="6">
+   <item row="54" column="0" colspan="5">
     <widget class="QTextEdit" name="commentTextEdit"/>
+   </item>
+   <item row="52" column="2" colspan="3">
+    <widget class="QLineEdit" name="otherMalignantNeoplasmsLineEdit"/>
    </item>
   </layout>
  </widget>

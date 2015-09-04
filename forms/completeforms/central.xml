@@ -9,7 +9,7 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-08-24</cdate>
-    <lmdate>2015-08-24</lmdate>
+    <lmdate>2015-09-04</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink></weblink>
     <bibliography/>
@@ -25,10 +25,10 @@
     <updateinfo>
         <updateversion from="0.8.4" to="0.9.6">
             <text lang="fr">
-            Réécriture du formulaire gp1_basic1_multimodes pour l'adapter à une maternité.
+            Réécriture du formulaire gp1_basic1_multimodes pour l'adapter à une maternité.L'auteur original est Eric Maeker.
             </text>
-            <text lang="fr">
-            Rewriting of gp1_basic1_multimodes form to adapt it to a maternity care center.
+            <text lang="xx">
+            Rewriting of gp1_basic1_multimodes form to adapt it to a maternity care center. Original author is Eric Maeker.
             </text>
         </updateversion>
         <updateversion from="0.8.2" to="0.8.4">
@@ -39,7 +39,7 @@
             Refonte de la partie consultation.
             Ajout des informations d'importation HPRIM.
             </text>
-            <text lang="en">
+            <text lang="xx">
             Adding modern HTML export and print masks.
             Adding patient file synthesis.
             Adding a button to easily navigate through the local files and to quickly include them in a text editor.
@@ -52,7 +52,7 @@
             Ajout des valeurs biométriques de base dans la partie POMR (en utilisant un sous-formulaire).
             Ajout de l'assistant de prescription d'examen biologique
             </text>
-            <text lang="en">
+            <text lang="xx">
             Defining user documents to use for the print process of the textual prescription text editor.
             Adding basic biometric measurements in the SOAP form (using a sub-form).
             Adding lab test prescription assistant
@@ -60,22 +60,38 @@
         </updateversion>
         <updateversion from="0.8.0" to="0.7.2">
             <text lang="fr">Faute de frappe dans les catégories des antécédents&lt;br />Ajout des identifiants aux catégories des antécédents.</text>
-            <text lang="en">Typo in PHMx categories&lt;br />Adding uuid to PMHx categories.</text>
+            <text lang="xx">Typo in PHMx categories&lt;br />Adding uuid to PMHx categories.</text>
         </updateversion>
     </updateinfo>
 
   </formdescription>
 
     <!-- Items for the HPRIM data importation -->
-    <hprim>Maternity::Consultation::Results::Textual;Maternity::Consultation::LabResults::Textual</hprim>
+    <!-- <hprim>Maternity::Consultation::Results::Textual;Maternity::Consultation::LabResults::Textual</hprim> -->
 
-  <MedForm name="Maternity::Pediatrics">
+<MedForm name="Maternity::PMH">
+  <label lang="xx">Past Medical History</label>
+  <label lang="fr">Antécédents</label>
+  <icon>__theme__/stethoscope.png</icon>
+  <options>NoEpisode;DontPrintEmptyValues</options>
+
+  <file>__subforms__/pmh/pmhgynobst/central.xml</file>
+
+  <file>__subforms__/pmh/pmhpregnancy/central.xml</file>
+
+  <file>__subforms__/pmh/pmhinterruptedpregnancy/central.xml</file>                        
+
+  <file>__subforms__/generic/pap_smear/central.xml</file>                        
+
+</MedForm>
+
+  <!-- <MedForm name="Maternity::Pediatrics">
     <label lang="xx">Pediatrics</label>
     <label lang="fr">Pédiatrie</label>
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <file>__subForms__/maternity/pediatrics/pediatrics_soap_with_biomeasurements/central.xml</file>
+    <file>__subForms__/pediatrics/pediatrics_soap_with_biomeasurements/central.xml</file>
 
     <MedForm name="Maternity::Pediatrics::Reports">
       <label lang="xx">Consultation reports</label>
@@ -117,7 +133,7 @@
 
       </MedForm>
 
-      <file>__subForms__/maternity/generic/labtest_results/central.xml</file>
+      <file>__subForms__/generic/labtest_results/central.xml</file>
 
     <MedForm name="Maternity::Pediatrics::Results">
       <label lang="xx">Various reports</label>
@@ -188,9 +204,9 @@
 
   </MedForm>
 
-  </MedForm> <!-- Pediatrics --> 
+  </MedForm> -->
 
-  <MedForm name="Maternity::Gynecology">
+  <!-- <MedForm name="Maternity::Gynecology">
     <label lang="xx">Gynecology</label>
     <label lang="fr">Gynécologie</label>
     <icon>__theme__/stethoscope.png</icon>
@@ -202,21 +218,22 @@
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
     </MedForm>
-  </MedForm>
+  </MedForm> -->
 
-  <MedForm name="Maternity::Anesthesiology">
+  <!-- <MedForm name="Maternity::Anesthesiology">
     <label lang="xx">Anesthesiology</label>
     <label lang="fr">Anesthésie</label>
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
-      <file>__subForms__/maternity/anesthesiology/central.xml</file>
-      <!--<MedForm name="Maternity::Anesthesiology::Consultation">
+      <file>__subForms__/anesthesiology/central.xml</file>
+      
+      <MedForm name="Maternity::Anesthesiology::Consultation">
         <label lang="xx">Consultations</label>
         <label lang="en">Consultations</label>
         <icon>__theme__/stethoscope.png</icon>
         <options>NoEpisode;DontPrintEmptyValues</options>
-      </MedForm>-->
-  </MedForm>
+      </MedForm>
+  </MedForm> -->
   
   <MedForm name="Maternity::Obstetrics">
     <label lang="xx">Obstetrics</label>
@@ -228,11 +245,11 @@
         <label lang="en">Consultations</label>
         <icon>__theme__/stethoscope.png</icon>
         <options>NoEpisode;DontPrintEmptyValues</options>
-          <file>__subForms__/maternity/obstetrics/prenatal/central.xml</file>
+          <file>__subForms__/obstetrics/prenatal/central.xml</file>
       </MedForm>
   </MedForm>
 
-  <MedForm name="Maternity::ICD10">                                             
+  <!-- <MedForm name="Maternity::ICD10">                                             
     <label lang="xx">ICD10 coding</label>                                       
     <label lang="fr">Codes CIM10</label>                                        
     <options>DontPrintEmptyValues</options>                                     
@@ -241,8 +258,8 @@
     <label lang="fr">Codes CIM10</label>                                      
     <options>DontPrintEmptyValues</options>                                   
     </Item>                                                                     
-  </MedForm>
+  </MedForm> -->
 
-  <file>__subForms__/maternity/generic/patientfilesynthesis/central.xml</file>            
+  <!-- <file>__subForms__/generic/patientfilesynthesis/central.xml</file> -->            
 
 </FreeMedForms>
