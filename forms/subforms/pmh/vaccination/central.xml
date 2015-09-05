@@ -34,7 +34,191 @@
   <options>UseFormAsNameSpace</options>
   <icon>__theme__/stethoscope.png</icon>
 
-  
+  <Item type="group" name="Vaccination::Tuberculosis">
+    <uilink widget="tuberculosisGroupBox"/>
+    <label lang="xx">Tuberculosis vaccines</label>
+    <label lang="fr">Vaccination antituberculeuse</label>
+    <options>collapsible;expanded</options>
+
+  <Item type="helptext" name="Mantoux::test">
+    <uilink widget="mantouxLabel" />
+    <label lang="xx">Mantoux test</label>
+    <label lang="fr">Intradermoréaction prévaccinale à la tuberculine</label>
+    <options></options>
+  </Item>
+
+  <Item type="date" name="Mantoux::injection::date">
+    <uilink label="mantouxInjectionDateLabel" widget="mantouxInjectionDateEdit" />
+    <label lang="xx">Injection date</label>
+    <label lang="fr">Date d'injection</label>
+    <options></options>
+  </Item>
+
+  <Item type="shorttext" name="Mantoux::Lot::number">
+    <uilink label="mantouxLotLabel" widget="mantouxLotLineEdit" />
+    <label lang="xx">Lot number</label>
+    <label lang="fr">Numéro de lot</label>
+    <options></options>
+  </Item>
+
+  <Item type="date" name="Mantoux::reading::date">
+    <uilink label="mantouxReadingDateLabel" widget="mantouxReadingDateEdit" />
+    <label lang="xx">Reading date</label>
+    <label lang="fr">Date de lecture</label>
+    <options></options>
+  </Item>
+
+  <Item type="spin" name="Mantoux::result">
+    <uilink label="mantouxResultLabel" widget="mantouxResultSpinBox" />
+    <label lang="xx">Result (diameter of induration)</label>
+    <label lang="fr">Résultat (en mm d'induration)</label>
+    <options></options>
+  </Item>
+
+  <Item type="shorttext" name="Mantoux::identity">
+    <uilink label="mantouxAdministeredLabel" widget="mantouxAdministeredLineEdit" />
+    <label lang="xx">Administered and read by</label>
+    <label lang="fr">Réalisé et lu par</label>
+    <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+    <options></options>
+  </Item>
+
+  <Item type="helptext" name="Tuberculosis::vaccine::label">
+    <uilink widget="tbVaccinationLabel" />
+    <label lang="xx">Vaccine</label>
+    <label lang="fr">Vaccin</label>
+    <options></options>
+  </Item>
+
+  <Item type="date" name="Tuberculosis::Vaccine::injection::date">
+    <uilink label="tbInjectionDateLabel" widget="tbInjectionDateEdit" />
+    <label lang="xx">Injection date</label>
+    <label lang="fr">Date d'injection</label>
+    <options></options>
+  </Item>
+
+  <Item type="combo" name="Tuberculosis::Vaccine::type">
+    <uilink label="tbTypeLabel" widget="tbTypeComboBox" />
+    <label lang="xx">Vaccine type</label>
+    <label lang="fr">Type de vaccin</label>
+    <value>
+      <uuid id="0">BCG</uuid>
+      <uuid id="1">not done</uuid>
+      <!--<sctid id="3">385660001</sctid>-->
+      <possible id="0" lang="xx">BCG</possible>
+      <possible id="1" lang="xx">ø</possible>
+      <possible id="0" lang="fr">BCG</possible>
+      <possible id="1" lang="fr">ø</possible>
+    </value>
+    <options></options>
+  </Item>
+
+  <Item type="shorttext" name="Tuberculosis::Vaccine::Name">
+    <uilink label="tbVaccineNameLabel" widget="tbVaccineNameLineEdit" />
+    <label lang="xx">Vaccine name</label>
+    <label lang="fr">Nom du vaccin</label>
+    <options></options>
+  </Item>
+
+  <Item type="shorttext" name="Tuberculosis::Vaccine::Lot">
+    <uilink label="tbLotLabel" widget="tbLotLineEdit" />
+    <label lang="xx">Lot number</label>
+    <label lang="fr">Numéro de lot</label>
+    <options></options>
+  </Item>
+
+  <Item type="shorttext" name="Tuberculosis::Vaccine::identity">
+    <uilink label="tbAdministeredLabel" widget="tbAdministeredLineEdit" />
+    <label lang="xx">Administered by</label>
+    <label lang="fr">Réalisé par</label>
+    <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+    <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+  </Item>
+
+  </Item> <!-- end of group tb -->
+
+  <Item type="group" name="Vaccination::DTwP">
+    <uilink widget="dtwpGroupBox"/>
+    <label lang="xx">DTwP</label>
+    <label lang="fr">Vaccination contre la diphtérie, le tétanos, la poliomyélite, la coqueluche (pertussis), l’Haemophilus influenzae b</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="date" name="DTwP::1::injection::date">
+      <uilink label="dtwpInjectionDateLabel" widget="dtwp1InjectionDateEdit" />
+      <label lang="xx">Injection date</label>
+      <label lang="fr">Date d'injection</label>
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::2::injection::date">
+      <uilink label="dtwpInjectionDateLabel" widget="dtwp2InjectionDateEdit" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::3::injection::date">
+      <uilink label="dtwpInjectionDateLabel" widget="dtwp3InjectionDateEdit" />
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Vaccine::type">
+      <uilink label="dtwpTypeLabel" widget="dtwp1TypeComboBox" />
+      <label lang="xx">Vaccine type</label>
+      <label lang="fr">Type de vaccin</label>
+      <value>
+        <uuid id="0">not done</uuid>                                           
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>                                
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="fr">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+  </Item> <!-- end of group DTwP -->
+
+<!-- <Item type="helptext" name="">
+    <uilink widget="" />
+    <label lang="xx"></label>
+    <label lang="fr"></label>
+    <options></options>
+  </Item>-->
+
 </MedForm>
 
 </FreeMedForms>
