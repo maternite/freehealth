@@ -1075,26 +1075,26 @@
     <label lang="fr">Vaccination contre les infections invasives à pneumocoque</label>
     <options>collapsible;expanded</options>
 
-    <Item type="date" name="Pneumo::1::injection::date">                 
+    <Item type="date" name="Pneumo::1::injection::date">
       <uilink label="pneumoInjectionDateLabel" widget="pneumoInjectionDateEdit1" />
-      <label lang="xx">Injection date</label>                                   
-      <label lang="fr">Date d'injection</label>                                 
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="date" name="Pneumo::2::injection::date">                 
-      <uilink widget="pneumoInjectionDateEdit2" />                         
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="date" name="Pneumo::3::injection::date">                 
-      <uilink widget="pneumoInjectionDateEdit3" />                         
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="date" name="Pneumo::4::injection::date">                 
-      <uilink widget="pneumoInjectionDateEdit4" />                         
-      <options></options>                                                       
+      <label lang="xx">Injection date</label>
+      <label lang="fr">Date d'injection</label>
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Pneumo::2::injection::date">
+      <uilink widget="pneumoInjectionDateEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Pneumo::3::injection::date">
+      <uilink widget="pneumoInjectionDateEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Pneumo::4::injection::date">
+      <uilink widget="pneumoInjectionDateEdit4" />
+      <options></options>
     </Item>
 
     <Item type="combo" name="Pneumo::1::Vaccine::type">
@@ -1119,141 +1119,2205 @@
       <options></options>
     </Item>
 
-    <Item type="combo" name="Pneumo::2::Vaccine::type">                         
-      <uilink widget="pneumoTypeComboBox2" />           
-      <value>                                                                   
-        <uuid id="0">not done</uuid>                                            
-        <!--<sctid id="3">385660001</sctid>-->                                  
-        <uuid id="1">PCV7</uuid>                                                
-        <uuid id="2">PCV13</uuid>                                               
-        <uuid id="3">PPSV23</uuid>                                              
-        <possible id="0" lang="xx">ø</possible>                                 
-        <possible id="1" lang="xx">PCV7</possible>                              
-        <possible id="2" lang="xx">PCV13</possible>                             
-        <possible id="3" lang="xx">PPSV23</possible>                            
-        <possible id="0" lang="fr">ø</possible>                                 
-        <possible id="1" lang="fr">Pn7</possible>                               
-        <possible id="2" lang="fr">Pn13</possible>                              
-        <possible id="3" lang="fr">Pn23</possible>                              
-      </value>                                                                  
-      <options></options>                                                       
+    <Item type="combo" name="Pneumo::2::Vaccine::type">
+      <uilink widget="pneumoTypeComboBox2" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">PCV7</uuid>
+        <uuid id="2">PCV13</uuid>
+        <uuid id="3">PPSV23</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">PCV7</possible>
+        <possible id="2" lang="xx">PCV13</possible>
+        <possible id="3" lang="xx">PPSV23</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Pn7</possible>
+        <possible id="2" lang="fr">Pn13</possible>
+        <possible id="3" lang="fr">Pn23</possible>
+      </value>
+      <options></options>
     </Item>
 
-    <Item type="combo" name="Pneumo::3::Vaccine::type">                         
-      <uilink widget="pneumoTypeComboBox3" />                                   
-      <value>                                                                   
-        <uuid id="0">not done</uuid>                                            
-        <!--<sctid id="3">385660001</sctid>-->                                  
-        <uuid id="1">PCV7</uuid>                                                
-        <uuid id="2">PCV13</uuid>                                               
-        <uuid id="3">PPSV23</uuid>                                              
-        <possible id="0" lang="xx">ø</possible>                                 
-        <possible id="1" lang="xx">PCV7</possible>                              
-        <possible id="2" lang="xx">PCV13</possible>                             
-        <possible id="3" lang="xx">PPSV23</possible>                            
-        <possible id="0" lang="fr">ø</possible>                                 
-        <possible id="1" lang="fr">Pn7</possible>                               
-        <possible id="2" lang="fr">Pn13</possible>                              
-        <possible id="3" lang="fr">Pn23</possible>                              
-      </value>                                                                  
-      <options></options>                                                       
+    <Item type="combo" name="Pneumo::3::Vaccine::type">
+      <uilink widget="pneumoTypeComboBox3" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">PCV7</uuid>
+        <uuid id="2">PCV13</uuid>
+        <uuid id="3">PPSV23</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">PCV7</possible>
+        <possible id="2" lang="xx">PCV13</possible>
+        <possible id="3" lang="xx">PPSV23</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Pn7</possible>
+        <possible id="2" lang="fr">Pn13</possible>
+        <possible id="3" lang="fr">Pn23</possible>
+      </value>
+      <options></options>
     </Item>
 
-    <Item type="combo" name="Pneumo::4::Vaccine::type">                         
-      <uilink widget="pneumoTypeComboBox4" />                                   
-      <value>                                                                   
-        <uuid id="0">not done</uuid>                                            
-        <!--<sctid id="3">385660001</sctid>-->                                  
-        <uuid id="1">PCV7</uuid>                                                
-        <uuid id="2">PCV13</uuid>                                               
-        <uuid id="3">PPSV23</uuid>                                              
-        <possible id="0" lang="xx">ø</possible>                                 
-        <possible id="1" lang="xx">PCV7</possible>                              
-        <possible id="2" lang="xx">PCV13</possible>                             
-        <possible id="3" lang="xx">PPSV23</possible>                            
-        <possible id="0" lang="fr">ø</possible>                                 
-        <possible id="1" lang="fr">Pn7</possible>                               
-        <possible id="2" lang="fr">Pn13</possible>                              
-        <possible id="3" lang="fr">Pn23</possible>                              
-      </value>                                                                  
-      <options></options>                                                       
+    <Item type="combo" name="Pneumo::4::Vaccine::type">
+      <uilink widget="pneumoTypeComboBox4" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">PCV7</uuid>
+        <uuid id="2">PCV13</uuid>
+        <uuid id="3">PPSV23</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">PCV7</possible>
+        <possible id="2" lang="xx">PCV13</possible>
+        <possible id="3" lang="xx">PPSV23</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Pn7</possible>
+        <possible id="2" lang="fr">Pn13</possible>
+        <possible id="3" lang="fr">Pn23</possible>
+      </value>
+      <options></options>
     </Item>
 
-    <Item type="shorttext" name="Pneumo::1::Vaccine::Name">              
+    <Item type="shorttext" name="Pneumo::1::Vaccine::Name">
       <uilink label="pneumoVaccineNameLabel" widget="pneumoVaccineNameLineEdit1" />
-      <label lang="xx">Vaccine name</label>                                     
-      <label lang="fr">Nom du vaccin</label>                                    
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::2::Vaccine::Name">              
-      <uilink widget="pneumoVaccineNameLineEdit2" />                       
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::3::Vaccine::Name">              
-      <uilink widget="pneumoVaccineNameLineEdit3" />                       
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::4::Vaccine::Name">              
-      <uilink widget="pneumoVaccineNameLineEdit4" />                       
-      <options></options>                                                       
+      <label lang="xx">Vaccine name</label>
+      <label lang="fr">Nom du vaccin</label>
+      <options></options>
     </Item>
 
-    <Item type="shorttext" name="Pneumo::1::Vaccine::Lot">               
-      <uilink label="pneumoLotLabel" widget="pneumoLotLineEdit1" />   
-      <label lang="xx">Lot number</label>                                       
-      <label lang="fr">Numéro de lot</label>                                    
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::2::Vaccine::Lot">               
-      <uilink widget="pneumoLotLineEdit2" />                               
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::3::Vaccine::Lot">               
-      <uilink widget="pneumoLotLineEdit3" />                               
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::4::Vaccine::Lot">               
-      <uilink widget="pneumoLotLineEdit4" />                               
-      <options></options>                                                       
+    <Item type="shorttext" name="Pneumo::2::Vaccine::Name">
+      <uilink widget="pneumoVaccineNameLineEdit2" />
+      <options></options>
     </Item>
 
-    <Item type="shorttext" name="Pneumo::1::Vaccine::Identity">          
+    <Item type="shorttext" name="Pneumo::3::Vaccine::Name">
+      <uilink widget="pneumoVaccineNameLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::4::Vaccine::Name">
+      <uilink widget="pneumoVaccineNameLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::1::Vaccine::Lot">
+      <uilink label="pneumoLotLabel" widget="pneumoLotLineEdit1" />
+      <label lang="xx">Lot number</label>
+      <label lang="fr">Numéro de lot</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::2::Vaccine::Lot">
+      <uilink widget="pneumoLotLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::3::Vaccine::Lot">
+      <uilink widget="pneumoLotLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::4::Vaccine::Lot">
+      <uilink widget="pneumoLotLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::1::Vaccine::Identity">
       <uilink label="pneumoAdministeredLabel" widget="pneumoAdministeredLineEdit1" />
-      <label lang="xx">Administered by</label>                                  
-      <label lang="fr">Réalisé par</label>                                      
+      <label lang="xx">Administered by</label>
+      <label lang="fr">Réalisé par</label>
       <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
       <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::2::Vaccine::Identity">          
-      <uilink widget="pneumoAdministeredLineEdit2" />                      
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::2::Vaccine::Identity">
+      <uilink widget="pneumoAdministeredLineEdit2" />
       <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
       <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::3::Vaccine::Identity">          
-      <uilink widget="pneumoAdministeredLineEdit3" />                      
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::3::Vaccine::Identity">
+      <uilink widget="pneumoAdministeredLineEdit3" />
       <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
       <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
-      <options></options>                                                       
-    </Item>                                                                     
-                                                                                
-    <Item type="shorttext" name="Pneumo::4::Vaccine::Identity">          
-      <uilink widget="pneumoAdministeredLineEdit4" />                      
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::4::Vaccine::Identity">
+      <uilink widget="pneumoAdministeredLineEdit4" />
       <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
       <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
-      <options></options>                                                       
+      <options></options>
     </Item>
 
   </Item> <!-- end of group pleumo -->
+
+
+  <Item type="group" name="Vaccination::HepB">
+    <uilink widget="hepBGroupBox"/>
+    <label lang="xx">Hepatitis B vaccine¹</label>
+    <label lang="fr">Vaccination contre l’hépatite B¹</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="helptext" name="HepB::Copy::Label">
+      <uilink widget="hepBCopyLabel" />
+      <label lang="xx">1. Hexavalent vaccine should be reported here for HepB valence.</label>
+      <label lang="fr">1. Une vaccination par vaccin hexavalent doit être reportée ici pour la valence hépatite B.</label>
+      <options></options>
+    </Item>
+
+    <Item type="date" name="HepB::1::injection::date">
+      <uilink label="hepBInjectionDateLabel" widget="hepBInjectionDateEdit1" />
+      <label lang="xx">Injection date</label>
+      <label lang="fr">Date d'injection</label>
+      <options></options>
+    </Item>
+
+    <Item type="date" name="HepB::2::injection::date">
+      <uilink widget="hepBInjectionDateEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="HepB::3::injection::date">
+      <uilink widget="hepBInjectionDateEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="HepB::4::injection::date">
+      <uilink widget="hepBInjectionDateEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="HepB::1::Vaccine::type">
+      <uilink label="hepBTypeLabel" widget="hepBTypeComboBox1" />
+      <label lang="xx">Vaccine type</label>
+      <label lang="fr">Type de vaccin</label>
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">HepB</uuid>
+        <uuid id="2">HepA-HepB</uuid>
+        <uuid id="3">DTaP-HepB-IPV</uuid>
+        <uuid id="4">Hib-HepB</uuid>
+        <uuid id="5">DTap-HepB-IPV/Hib</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">HepB</possible>
+        <possible id="2" lang="xx">HepA-HepB</possible>
+        <possible id="3" lang="xx">DTaP-HepB-IPV</possible>
+        <possible id="4" lang="xx">Hib-HepB</possible>
+        <possible id="5" lang="xx">DTap-HepB-IPV/Hib</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">HepB</possible>
+        <possible id="2" lang="fr">HepA-HepB</possible>
+        <possible id="3" lang="fr">DTCaP-HepB</possible>
+        <possible id="4" lang="fr">Hib-HepB</possible>
+        <possible id="5" lang="fr">DTCaP-HepB/Hib</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="HepB::2::Vaccine::type">
+      <uilink widget="hepBTypeComboBox2" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">HepB</uuid>
+        <uuid id="2">HepA-HepB</uuid>
+        <uuid id="3">DTaP-HepB-IPV</uuid>
+        <uuid id="4">Hib-HepB</uuid>
+        <uuid id="5">DTap-HepB-IPV/Hib</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">HepB</possible>
+        <possible id="2" lang="xx">HepA-HepB</possible>
+        <possible id="3" lang="xx">DTaP-HepB-IPV</possible>
+        <possible id="4" lang="xx">Hib-HepB</possible>
+        <possible id="5" lang="xx">DTap-HepB-IPV/Hib</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">HepB</possible>
+        <possible id="2" lang="fr">HepA-HepB</possible>
+        <possible id="3" lang="fr">DTCaP-HepB</possible>
+        <possible id="4" lang="fr">Hib-HepB</possible>
+        <possible id="5" lang="fr">DTCaP-HepB/Hib</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="HepB::2::Vaccine::type">
+      <uilink widget="hepBTypeComboBox2" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">HepB</uuid>
+        <uuid id="2">HepA-HepB</uuid>
+        <uuid id="3">DTaP-HepB-IPV</uuid>
+        <uuid id="4">Hib-HepB</uuid>
+        <uuid id="5">DTap-HepB-IPV/Hib</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">HepB</possible>
+        <possible id="2" lang="xx">HepA-HepB</possible>
+        <possible id="3" lang="xx">DTaP-HepB-IPV</possible>
+        <possible id="4" lang="xx">Hib-HepB</possible>
+        <possible id="5" lang="xx">DTap-HepB-IPV/Hib</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">HepB</possible>
+        <possible id="2" lang="fr">HepA-HepB</possible>
+        <possible id="3" lang="fr">DTCaP-HepB</possible>
+        <possible id="4" lang="fr">Hib-HepB</possible>
+        <possible id="5" lang="fr">DTCaP-HepB/Hib</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="HepB::3::Vaccine::type">
+      <uilink widget="hepBTypeComboBox3" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">HepB</uuid>
+        <uuid id="2">HepA-HepB</uuid>
+        <uuid id="3">DTaP-HepB-IPV</uuid>
+        <uuid id="4">Hib-HepB</uuid>
+        <uuid id="5">DTap-HepB-IPV/Hib</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">HepB</possible>
+        <possible id="2" lang="xx">HepA-HepB</possible>
+        <possible id="3" lang="xx">DTaP-HepB-IPV</possible>
+        <possible id="4" lang="xx">Hib-HepB</possible>
+        <possible id="5" lang="xx">DTap-HepB-IPV/Hib</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">HepB</possible>
+        <possible id="2" lang="fr">HepA-HepB</possible>
+        <possible id="3" lang="fr">DTCaP-HepB</possible>
+        <possible id="4" lang="fr">Hib-HepB</possible>
+        <possible id="5" lang="fr">DTCaP-HepB/Hib</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="HepB::4::Vaccine::type">
+      <uilink widget="hepBTypeComboBox4" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">HepB</uuid>
+        <uuid id="2">HepA-HepB</uuid>
+        <uuid id="3">DTaP-HepB-IPV</uuid>
+        <uuid id="4">Hib-HepB</uuid>
+        <uuid id="5">DTap-HepB-IPV/Hib</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">HepB</possible>
+        <possible id="2" lang="xx">HepA-HepB</possible>
+        <possible id="3" lang="xx">DTaP-HepB-IPV</possible>
+        <possible id="4" lang="xx">Hib-HepB</possible>
+        <possible id="5" lang="xx">DTap-HepB-IPV/Hib</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">HepB</possible>
+        <possible id="2" lang="fr">HepA-HepB</possible>
+        <possible id="3" lang="fr">DTCaP-HepB</possible>
+        <possible id="4" lang="fr">Hib-HepB</possible>
+        <possible id="5" lang="fr">DTCaP-HepB/Hib</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::1::Vaccine::Name">
+      <uilink label="hepBVaccineNameLabel" widget="hepBVaccineNameLineEdit1" />
+      <label lang="xx">Vaccine name</label>
+      <label lang="fr">Nom du vaccin</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::2::Vaccine::Name">
+      <uilink widget="hepBVaccineNameLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::3::Vaccine::Name">
+      <uilink widget="hepBVaccineNameLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::4::Vaccine::Name">
+      <uilink widget="hepBVaccineNameLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::1::Vaccine::Lot">
+      <uilink label="hepBLotLabel" widget="hepBLotLineEdit1" />
+      <label lang="xx">Lot number</label>
+      <label lang="fr">Numéro de lot</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::2::Vaccine::Lot">
+      <uilink widget="hepBLotLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::3::Vaccine::Lot">
+      <uilink widget="hepBLotLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::4::Vaccine::Lot">
+      <uilink widget="hepBLotLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::1::Vaccine::Identity">
+      <uilink label="hepBAdministeredLabel" widget="hepBAdministeredLineEdit1" />
+      <label lang="xx">Administered by</label>
+      <label lang="fr">Réalisé par</label>
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::2::Vaccine::Identity">
+      <uilink widget="hepBAdministeredLineEdit2" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::3::Vaccine::Identity">
+      <uilink widget="hepBAdministeredLineEdit3" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="HepB::4::Vaccine::Identity">
+      <uilink widget="hepBAdministeredLineEdit4" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+  </Item> <!-- end of group HepB -->
+
+  <Item type="group" name="MMR::Vaccination::Primary">
+    <uilink widget="mmrGroupBox"/>
+    <label lang="xx">MMR: Measles, Mumps, Rubella </label>
+    <label lang="fr">ROR: Rougeole, Oreillons, Rubéole</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="date" name="MMR::1::injection::date">
+      <uilink label="mmrInjectionDateLabel" widget="mmrInjectionDateEdit1" />
+      <label lang="xx">Injection date</label>
+      <label lang="fr">Date d'injection</label>
+      <options></options>
+    </Item>
+
+    <Item type="date" name="MMR::2::injection::date">
+      <uilink widget="mmrInjectionDateEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="MMR::3::injection::date">
+      <uilink widget="mmrInjectionDateEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="MMR::1::Vaccine::type">
+      <uilink label="mmrTypeLabel" widget="mmrTypeComboBox1" />
+      <label lang="xx">Vaccine type</label>
+      <label lang="fr">Type de vaccin</label>
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">MMR</uuid>
+        <uuid id="2">MMRV</uuid>
+        <uuid id="3">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">MMR</possible>
+        <possible id="2" lang="xx">MMRV</possible>
+        <possible id="3" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">ROR</possible>
+        <possible id="2" lang="fr">RORV</possible>
+        <possible id="3" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="MMR::2::Vaccine::type">
+      <uilink widget="mmrTypeComboBox2" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">MMR</uuid>
+        <uuid id="2">MMRV</uuid>
+        <uuid id="3">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">MMR</possible>
+        <possible id="2" lang="xx">MMRV</possible>
+        <possible id="3" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">ROR</possible>
+        <possible id="2" lang="fr">RORV</possible>
+        <possible id="3" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="MMR::3::Vaccine::type">
+      <uilink widget="mmrTypeComboBox3" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">MMR</uuid>
+        <uuid id="2">MMRV</uuid>
+        <uuid id="3">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">MMR</possible>
+        <possible id="2" lang="xx">MMRV</possible>
+        <possible id="3" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">ROR</possible>
+        <possible id="2" lang="fr">RORV</possible>
+        <possible id="3" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="MMR::1::Vaccine::Name">
+      <uilink label="mmrVaccineNameLabel" widget="mmrVaccineNameLineEdit1" />
+      <label lang="xx">Vaccine name</label>
+      <label lang="fr">Nom du vaccin</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="MMR::2::Vaccine::Name">
+      <uilink widget="mmrVaccineNameLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="MMR::3::Vaccine::Name">
+      <uilink widget="mmrVaccineNameLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="MMR::1::Vaccine::Lot">
+      <uilink label="mmrLotLabel" widget="mmrLotLineEdit1" />
+      <label lang="xx">Lot number</label>
+      <label lang="fr">Numéro de lot</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="MMR::2::Vaccine::Lot">
+      <uilink widget="mmrLotLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="MMR::3::Vaccine::Lot">
+      <uilink widget="mmrLotLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="MMR::1::Vaccine::identity">
+      <uilink label="mmrAdministeredLabel" widget="mmrAdministeredLineEdit1" />
+      <label lang="xx">Administered by</label>
+      <label lang="fr">Réalisé par</label>
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+    </Item>
+
+    <Item type="shorttext" name="MMR::2::Vaccine::identity">
+      <uilink widget="mmrAdministeredLineEdit2" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+    </Item>
+
+    <Item type="shorttext" name="MMR::3::Vaccine::identity">
+      <uilink widget="mmrAdministeredLineEdit3" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+    </Item>
+
+  </Item> <!-- end of group MMR -->
+
+
+  <Item type="group" name="Other::Vaccination">
+    <uilink widget="otherGroupBox"/>
+    <label lang="xx">Other vaccines</label>
+    <label lang="fr">Autres vaccins</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="date" name="Other::1::injection::date">
+      <uilink label="otherInjectionDateLabel" widget="otherInjectionDateEdit1" />
+      <label lang="xx">Injection date</label>
+      <label lang="fr">Date d'injection</label>
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::2::injection::date">
+      <uilink widget="otherInjectionDateEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::3::injection::date">
+      <uilink widget="otherInjectionDateEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::4::injection::date">
+      <uilink widget="otherInjectionDateEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::5::injection::date">
+      <uilink widget="otherInjectionDateEdit5" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::6::injection::date">
+      <uilink widget="otherInjectionDateEdit6" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::7::injection::date">
+      <uilink widget="otherInjectionDateEdit7" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::8::injection::date">
+      <uilink widget="otherInjectionDateEdit8" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::9::injection::date">
+      <uilink widget="otherInjectionDateEdit9" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="Other::10::injection::date">
+      <uilink widget="otherInjectionDateEdit10" />
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::1::Vaccine::type">
+      <uilink label="otherTypeLabel" widget="otherTypeComboBox1" />
+      <label lang="xx">Vaccine type</label>
+      <label lang="fr">Type de vaccin</label>
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+    
+    <Item type="combo" name="Other::2::Vaccine::type">
+      <uilink widget="otherTypeComboBox2" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::3::Vaccine::type">
+      <uilink widget="otherTypeComboBox3" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::4::Vaccine::type">
+      <uilink widget="otherTypeComboBox4" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::5::Vaccine::type">
+      <uilink widget="otherTypeComboBox5" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::6::Vaccine::type">
+      <uilink widget="otherTypeComboBox6" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+ 
+
+    <Item type="combo" name="Other::7::Vaccine::type">
+      <uilink widget="otherTypeComboBox7" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::8::Vaccine::type">
+      <uilink widget="otherTypeComboBox8" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::9::Vaccine::type">
+      <uilink widget="otherTypeComboBox9" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="Other::10::Vaccine::type">
+      <uilink widget="otherTypeComboBox10" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <uuid id="13">BCG</uuid>
+        <uuid id="14">PCV7</uuid>
+        <uuid id="15">PCV13</uuid>
+        <uuid id="16">PPSV23</uuid>
+        <uuid id="17">HepB</uuid>
+        <uuid id="18">HepA-HepB</uuid>
+        <uuid id="19">Hib-HepB</uuid>
+        <uuid id="20">Adenovirus</uuid>
+        <uuid id="21">AVA</uuid>
+        <uuid id="22">Hib</uuid>
+        <uuid id="23">Hib-MenCY</uuid>
+        <uuid id="24">HepA</uuid>
+        <uuid id="25">HZV</uuid>
+        <uuid id="26">HPV4</uuid>
+        <uuid id="27">HPV2</uuid>
+        <uuid id="28">IIV3</uuid>
+        <uuid id="29">IIV4</uuid>
+        <uuid id="30">RIV3</uuid>
+        <uuid id="31">ccIIV3</uuid>
+        <uuid id="32">LAIV4</uuid>
+        <uuid id="33">JE</uuid>
+        <uuid id="34">MMR</uuid>
+        <uuid id="35">MMRV</uuid>
+        <uuid id="36">MPSV4</uuid>
+        <uuid id="37">MCV4 MenACWY</uuid>
+        <uuid id="38">IPV</uuid>
+        <uuid id="39">RV5</uuid>
+        <uuid id="40">RV1</uuid>
+        <uuid id="41">VAR</uuid>
+        <uuid id="42">Vaccinia</uuid>
+        <uuid id="43">YF</uuid>
+        <uuid id="44">Other</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="13" lang="xx">BCG</possible>
+        <possible id="14" lang="xx">PCV7</possible>
+        <possible id="15" lang="xx">PCV13</possible>
+        <possible id="16" lang="xx">PPSV23</possible>
+        <possible id="17" lang="xx">HepB</possible>
+        <possible id="18" lang="xx">HepA-HepB</possible>
+        <possible id="19" lang="xx">Hib-HepB</possible>
+        <possible id="20" lang="xx">Adenovirus</possible>
+        <possible id="21" lang="xx">AVA</possible>
+        <possible id="22" lang="xx">Hib</possible>
+        <possible id="23" lang="xx">Hib-MenCY</possible>
+        <possible id="24" lang="xx">HepA</possible>
+        <possible id="25" lang="xx">HZV</possible>
+        <possible id="26" lang="xx">HPV4</possible>
+        <possible id="27" lang="xx">HPV2</possible>
+        <possible id="28" lang="xx">IIV3</possible>
+        <possible id="29" lang="xx">IIV4</possible>
+        <possible id="30" lang="xx">RIV3</possible>
+        <possible id="31" lang="xx">ccIIV3</possible>
+        <possible id="32" lang="xx">LAIV4</possible>
+        <possible id="33" lang="xx">JE</possible>
+        <possible id="34" lang="xx">MMR</possible>
+        <possible id="35" lang="xx">MMRV</possible>
+        <possible id="36" lang="xx">MPSV4</possible>
+        <possible id="37" lang="xx">MCV4 MenACWY</possible>
+        <possible id="38" lang="xx">IPV</possible>
+        <possible id="39" lang="xx">RV5</possible>
+        <possible id="40" lang="xx">RV1</possible>
+        <possible id="41" lang="xx">VAR</possible>
+        <possible id="42" lang="xx">Vaccinia</possible>
+        <possible id="43" lang="xx">YF</possible>
+        <possible id="44" lang="xx">Other</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTaP</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTPca</possible>
+        <possible id="6" lang="fr">dTPCa</possible>
+        <possible id="7" lang="fr">DTPca-HepB</possible>
+        <possible id="8" lang="fr">DTPCa/Hib</possible>
+        <possible id="9" lang="fr">DTPCa-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTca</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+        <possible id="13" lang="fr">BCG</possible>
+        <possible id="14" lang="fr">Pn7</possible>
+        <possible id="15" lang="fr">Pn13</possible>
+        <possible id="16" lang="fr">Pn23</possible>
+        <possible id="17" lang="fr">HepB</possible>
+        <possible id="18" lang="fr">HepA-HepB</possible>
+        <possible id="19" lang="fr">Hib-HepB</possible>
+        <possible id="20" lang="fr">Adenovirus</possible>
+        <possible id="21" lang="fr">AVA</possible>
+        <possible id="22" lang="fr">Hib</possible>
+        <possible id="23" lang="fr">Hib-MenCY</possible>
+        <possible id="24" lang="fr">HepA</possible>
+        <possible id="25" lang="fr">HZV</possible>
+        <possible id="26" lang="fr">HPV4</possible>
+        <possible id="27" lang="fr">HPV2</possible>
+        <possible id="28" lang="fr">IIV3</possible>
+        <possible id="29" lang="fr">IIV4</possible>
+        <possible id="30" lang="fr">RIV3</possible>
+        <possible id="31" lang="fr">ccIIV3</possible>
+        <possible id="32" lang="fr">LAIV4</possible>
+        <possible id="33" lang="fr">JE</possible>
+        <possible id="34" lang="fr">ROR</possible>
+        <possible id="35" lang="fr">RORV</possible>
+        <possible id="36" lang="fr">MPSV4</possible>
+        <possible id="37" lang="fr">MCV4 MenACWY</possible>
+        <possible id="38" lang="fr">IPV</possible>
+        <possible id="39" lang="fr">RV5</possible>
+        <possible id="40" lang="fr">RV1</possible>
+        <possible id="41" lang="fr">VAR</possible>
+        <possible id="42" lang="fr">Vaccine</possible>
+        <possible id="43" lang="fr">YF</possible>
+        <possible id="44" lang="fr">Autre</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::1::Vaccine::Name">
+      <uilink label="otherVaccineNameLabel" widget="otherVaccineNameLineEdit1" />
+      <label lang="xx">Vaccine name</label>
+      <label lang="fr">Nom du vaccin</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::2::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::3::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::4::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::5::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit5" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::6::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit6" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::7::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit7" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::8::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit8" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::9::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit9" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::10::Vaccine::Name">
+      <uilink widget="otherVaccineNameLineEdit10" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::1::Vaccine::Lot">
+      <uilink label="otherLotLabel" widget="otherLotLineEdit1" />
+      <label lang="xx">Lot number</label>
+      <label lang="fr">Numéro de lot</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::2::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::3::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::4::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::5::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit5" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::6::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit6" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::7::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit7" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::8::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit8" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::9::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit9" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::10::Vaccine::Lot">
+      <uilink widget="otherLotLineEdit10" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::1::Vaccine::Identity">
+      <uilink label="otherAdministeredLabel" widget="otherAdministeredLineEdit1" />
+      <label lang="xx">Administered by</label>
+      <label lang="fr">Réalisé par</label>
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::2::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit2" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::3::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit3" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::4::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit4" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::5::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit5" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::6::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit6" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::7::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit7" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::8::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit8" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::9::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit9" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="Other::10::Vaccine::Identity">
+      <uilink widget="otherAdministeredLineEdit10" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+  </Item> <!-- end of group Other -->
+
 
 <!-- <Item type="helptext" name="">
     <uilink widget="" />
