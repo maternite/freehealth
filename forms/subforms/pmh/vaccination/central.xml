@@ -31,7 +31,7 @@
 <MedForm name="Maternity::Vaccination" uifilename="./ui/xx/vaccination.ui">
   <label lang="xx">Vaccination</label>
   <label lang="fr">Vaccination</label>
-  <options>UseFormAsNameSpace</options>
+  <options>UseFormAsNameSpace;unique;HideHeaderOnUniqueEpisode</options>
   <icon>__theme__/stethoscope.png</icon>
 
   <Item type="group" name="Vaccination::Tuberculosis">
@@ -138,10 +138,10 @@
 
   </Item> <!-- end of group tb -->
 
-  <Item type="group" name="Vaccination::DTwP">
+  <Item type="group" name="DTwP::Vaccination::Primary">
     <uilink widget="dtwpGroupBox"/>
-    <label lang="xx">DTwP</label>
-    <label lang="fr">Vaccination contre la diphtérie, le tétanos, la poliomyélite, la coqueluche (pertussis), l’Haemophilus influenzae b</label>
+    <label lang="xx">DTwP: Primary Vaccination</label>
+    <label lang="fr">Diphtérie, tétanos, poliomyélite, coqueluche, Haemophilus influenzae b: primovaccination</label>
     <options>collapsible;expanded</options>
 
     <Item type="date" name="DTwP::1::injection::date">
@@ -152,21 +152,21 @@
     </Item>
 
     <Item type="date" name="DTwP::2::injection::date">
-      <uilink label="dtwpInjectionDateLabel" widget="dtwp2InjectionDateEdit" />
+      <uilink widget="dtwp2InjectionDateEdit" />
       <options></options>
     </Item>
 
     <Item type="date" name="DTwP::3::injection::date">
-      <uilink label="dtwpInjectionDateLabel" widget="dtwp3InjectionDateEdit" />
+      <uilink widget="dtwp3InjectionDateEdit" />
       <options></options>
     </Item>
 
-    <Item type="combo" name="DTwP::Vaccine::type">
+    <Item type="combo" name="DTwP::1::Vaccine::type">
       <uilink label="dtwpTypeLabel" widget="dtwp1TypeComboBox" />
       <label lang="xx">Vaccine type</label>
       <label lang="fr">Type de vaccin</label>
       <value>
-        <uuid id="0">not done</uuid>                                           
+        <uuid id="0">not done</uuid>
         <!--<sctid id="3">385660001</sctid>-->
         <uuid id="1">DTwP</uuid>
         <uuid id="2">DTaP</uuid>
@@ -180,13 +180,13 @@
         <uuid id="10">Tdap</uuid>
         <uuid id="11">Td</uuid>
         <uuid id="12">TT</uuid>
-        <possible id="0" lang="xx">ø</possible>                                
+        <possible id="0" lang="xx">ø</possible>
         <possible id="1" lang="xx">DTwp</possible>
         <possible id="2" lang="xx">DTaP</possible>
         <possible id="3" lang="xx">DT</possible>
         <possible id="4" lang="xx">dT-IPV</possible>
         <possible id="5" lang="xx">DTap-IPV</possible>
-        <possible id="6" lang="fr">dTaP-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
         <possible id="7" lang="xx">DTap-HepB-IPV</possible>
         <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
         <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
@@ -210,7 +210,1050 @@
       <options></options>
     </Item>
 
-  </Item> <!-- end of group DTwP -->
+    <Item type="combo" name="DTwP::2::Vaccine::type">
+      <uilink widget="dtwp2TypeComboBox" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::3::Vaccine::type">
+      <uilink widget="dtwp3TypeComboBox" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::1::Vaccine::Name">
+      <uilink label="dtwpVaccineNameLabel" widget="dtwp1VaccineNameLineEdit" />
+      <label lang="xx">Vaccine name</label>
+      <label lang="fr">Nom du vaccin</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::2::Vaccine::Name">
+      <uilink widget="dtwp2VaccineNameLineEdit" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::3::Vaccine::Name">
+      <uilink widget="dtwp3VaccineNameLineEdit" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::1::Vaccine::Lot">
+      <uilink label="dtwpLotLabel" widget="dtwp1LotLineEdit" />
+      <label lang="xx">Lot number</label>
+      <label lang="fr">Numéro de lot</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::2::Vaccine::Lot">
+      <uilink widget="dtwp2LotLineEdit" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::3::Vaccine::Lot">
+      <uilink widget="dtwp3LotLineEdit" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::1::Vaccine::identity">
+      <uilink label="dtwpAdministeredLabel" widget="dtwp1AdministeredLineEdit" />
+      <label lang="xx">Administered by</label>
+      <label lang="fr">Réalisé par</label>
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::2::Vaccine::identity">
+      <uilink widget="dtwp2AdministeredLineEdit" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::3::Vaccine::identity">
+      <uilink widget="dtwp3AdministeredLineEdit" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+    </Item>
+
+  </Item> <!-- end of group DTwP primary -->
+
+  <Item type="group" name="DTwP::Vaccination::Booster">
+    <uilink widget="dtwpBoosterGroupBox"/>
+    <label lang="xx">DTwP: Primary Vaccination</label>
+    <label lang="fr">Diphtérie, tétanos, poliomyélite, coqueluche, Haemophilus influenzae b: Rappels</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="date" name="DTwP::Booster::1::injection::date">
+      <uilink label="dtwpBoosterInjectionDateLabel" widget="dtwpBoosterInjectionDateEdit1" />
+      <label lang="xx">Injection date</label>
+      <label lang="fr">Date d'injection</label>
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::2::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::3::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::4::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::5::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit5" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::6::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit6" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::7::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit7" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::8::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit8" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::9::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit9" />
+      <options></options>
+    </Item>
+
+    <Item type="date" name="DTwP::Booster::10::injection::date">
+      <uilink widget="dtwpBoosterInjectionDateEdit10" />
+      <options></options>
+    </Item>
+
+
+    <Item type="combo" name="DTwP::Booster::1::Vaccine::type">
+      <uilink label="dtwpBoosterTypeLabel" widget="dtwpBoosterTypeComboBox1" />
+      <label lang="xx">Vaccine type</label>
+      <label lang="fr">Type de vaccin</label>
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::2::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox2" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::3::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox3" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::4::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox4" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::5::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox5" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::6::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox6" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::7::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox7" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::8::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox8" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::9::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox9" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="DTwP::Booster::10::Vaccine::type">
+      <uilink widget="dtwpBoosterTypeComboBox10" />
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">DTwP</uuid>
+        <uuid id="2">DTaP</uuid>
+        <uuid id="3">DT</uuid>
+        <uuid id="4">dT-IPV</uuid>
+        <uuid id="5">DTaP-IPV</uuid>
+        <uuid id="6">dTaP-IPV</uuid>
+        <uuid id="7">DTaP-HepB-IPV</uuid>
+        <uuid id="8">DTaP-IPV/Hib</uuid>
+        <uuid id="9">DTap-HepB-IPV/Hib</uuid>
+        <uuid id="10">Tdap</uuid>
+        <uuid id="11">Td</uuid>
+        <uuid id="12">TT</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">DTwp</possible>
+        <possible id="2" lang="xx">DTaP</possible>
+        <possible id="3" lang="xx">DT</possible>
+        <possible id="4" lang="xx">dT-IPV</possible>
+        <possible id="5" lang="xx">DTap-IPV</possible>
+        <possible id="6" lang="xx">dTaP-IPV</possible>
+        <possible id="7" lang="xx">DTap-HepB-IPV</possible>
+        <possible id="8" lang="xx">DTaP-IPV/Hib</possible>
+        <possible id="9" lang="xx">DTaP-HepB-IPV/Hib</possible>
+        <possible id="10" lang="xx">Tdap</possible>
+        <possible id="11" lang="xx">Td</possible>
+        <possible id="12" lang="xx">TT</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">DTwp</possible>
+        <possible id="2" lang="fr">DTCa</possible>
+        <possible id="3" lang="fr">DT</possible>
+        <possible id="4" lang="fr">dTP</possible>
+        <possible id="5" lang="fr">DTCaP</possible>
+        <possible id="6" lang="fr">dTCaP</possible>
+        <possible id="7" lang="fr">DTCaP-HepB</possible>
+        <possible id="8" lang="fr">DTCaP/Hib</possible>
+        <possible id="9" lang="fr">DTCaP-HepB/Hib</possible>
+        <possible id="10" lang="fr">dTCa</possible>
+        <possible id="11" lang="fr">dT</possible>
+        <possible id="12" lang="fr">Tétanos</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::1::Vaccine::Name">
+      <uilink label="dtwpBoosterVaccineNameLabel" widget="dtwpBoosterVaccineNameLineEdit1" />
+      <label lang="xx">Vaccine name</label>
+      <label lang="fr">Nom du vaccin</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::2::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::3::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::4::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::5::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit5" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::6::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit6" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::7::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit7" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::8::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit8" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::9::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit9" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::10::Vaccine::Name">
+      <uilink widget="dtwpBoosterVaccineNameLineEdit10" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::1::Vaccine::Lot">
+      <uilink label="dtwpBoosterLotLabel" widget="dtwpBoosterLotLineEdit1" />
+      <label lang="xx">Lot number</label>
+      <label lang="fr">Numéro de lot</label>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::2::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit2" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::3::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit3" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::4::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit4" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::5::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit5" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::6::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit6" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::7::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit7" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::8::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit8" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::9::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit9" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::10::Vaccine::Lot">
+      <uilink widget="dtwpBoosterLotLineEdit10" />
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::1::Vaccine::Identity">
+      <uilink label="dtwpBoosterAdministeredLabel" widget="dtwpBoosterAdministeredLineEdit1" />
+      <label lang="xx">Administered by</label>
+      <label lang="fr">Réalisé par</label>
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::2::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit2" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::3::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit3" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::4::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit4" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::5::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit5" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::6::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit6" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::7::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit7" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::8::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit8" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::9::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit9" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+    <Item type="shorttext" name="DTwP::Booster::10::Vaccine::Identity">
+      <uilink widget="dtwpBoosterAdministeredLineEdit10" />
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>
+    </Item>
+
+  </Item> <!-- end of group DTwP booster -->
+
+  <Item type="group" name="Vaccination::Pneumo">
+    <uilink widget="pneumoGroupBox"/>
+    <label lang="xx">Pneumococcal vaccine</label>
+    <label lang="fr">Vaccination contre les infections invasives à pneumocoque</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="date" name="Pneumo::1::injection::date">                 
+      <uilink label="pneumoInjectionDateLabel" widget="pneumoInjectionDateEdit1" />
+      <label lang="xx">Injection date</label>                                   
+      <label lang="fr">Date d'injection</label>                                 
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="date" name="Pneumo::2::injection::date">                 
+      <uilink widget="pneumoInjectionDateEdit2" />                         
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="date" name="Pneumo::3::injection::date">                 
+      <uilink widget="pneumoInjectionDateEdit3" />                         
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="date" name="Pneumo::4::injection::date">                 
+      <uilink widget="pneumoInjectionDateEdit4" />                         
+      <options></options>                                                       
+    </Item>
+
+    <Item type="combo" name="Pneumo::1::Vaccine::type">
+      <uilink label="pneumoTypeLabel" widget="pneumoTypeComboBox1" />
+      <label lang="xx">Vaccine type</label>
+      <label lang="fr">Type de vaccin</label>
+      <value>
+        <uuid id="0">not done</uuid>
+        <!--<sctid id="3">385660001</sctid>-->
+        <uuid id="1">PCV7</uuid>
+        <uuid id="2">PCV13</uuid>
+        <uuid id="3">PPSV23</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">PCV7</possible>
+        <possible id="2" lang="xx">PCV13</possible>
+        <possible id="3" lang="xx">PPSV23</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Pn7</possible>
+        <possible id="2" lang="fr">Pn13</possible>
+        <possible id="3" lang="fr">Pn23</possible>
+      </value>
+      <options></options>
+    </Item>
+
+    <Item type="combo" name="Pneumo::2::Vaccine::type">                         
+      <uilink widget="pneumoTypeComboBox2" />           
+      <value>                                                                   
+        <uuid id="0">not done</uuid>                                            
+        <!--<sctid id="3">385660001</sctid>-->                                  
+        <uuid id="1">PCV7</uuid>                                                
+        <uuid id="2">PCV13</uuid>                                               
+        <uuid id="3">PPSV23</uuid>                                              
+        <possible id="0" lang="xx">ø</possible>                                 
+        <possible id="1" lang="xx">PCV7</possible>                              
+        <possible id="2" lang="xx">PCV13</possible>                             
+        <possible id="3" lang="xx">PPSV23</possible>                            
+        <possible id="0" lang="fr">ø</possible>                                 
+        <possible id="1" lang="fr">Pn7</possible>                               
+        <possible id="2" lang="fr">Pn13</possible>                              
+        <possible id="3" lang="fr">Pn23</possible>                              
+      </value>                                                                  
+      <options></options>                                                       
+    </Item>
+
+    <Item type="combo" name="Pneumo::3::Vaccine::type">                         
+      <uilink widget="pneumoTypeComboBox3" />                                   
+      <value>                                                                   
+        <uuid id="0">not done</uuid>                                            
+        <!--<sctid id="3">385660001</sctid>-->                                  
+        <uuid id="1">PCV7</uuid>                                                
+        <uuid id="2">PCV13</uuid>                                               
+        <uuid id="3">PPSV23</uuid>                                              
+        <possible id="0" lang="xx">ø</possible>                                 
+        <possible id="1" lang="xx">PCV7</possible>                              
+        <possible id="2" lang="xx">PCV13</possible>                             
+        <possible id="3" lang="xx">PPSV23</possible>                            
+        <possible id="0" lang="fr">ø</possible>                                 
+        <possible id="1" lang="fr">Pn7</possible>                               
+        <possible id="2" lang="fr">Pn13</possible>                              
+        <possible id="3" lang="fr">Pn23</possible>                              
+      </value>                                                                  
+      <options></options>                                                       
+    </Item>
+
+    <Item type="combo" name="Pneumo::4::Vaccine::type">                         
+      <uilink widget="pneumoTypeComboBox4" />                                   
+      <value>                                                                   
+        <uuid id="0">not done</uuid>                                            
+        <!--<sctid id="3">385660001</sctid>-->                                  
+        <uuid id="1">PCV7</uuid>                                                
+        <uuid id="2">PCV13</uuid>                                               
+        <uuid id="3">PPSV23</uuid>                                              
+        <possible id="0" lang="xx">ø</possible>                                 
+        <possible id="1" lang="xx">PCV7</possible>                              
+        <possible id="2" lang="xx">PCV13</possible>                             
+        <possible id="3" lang="xx">PPSV23</possible>                            
+        <possible id="0" lang="fr">ø</possible>                                 
+        <possible id="1" lang="fr">Pn7</possible>                               
+        <possible id="2" lang="fr">Pn13</possible>                              
+        <possible id="3" lang="fr">Pn23</possible>                              
+      </value>                                                                  
+      <options></options>                                                       
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::1::Vaccine::Name">              
+      <uilink label="pneumoVaccineNameLabel" widget="pneumoVaccineNameLineEdit1" />
+      <label lang="xx">Vaccine name</label>                                     
+      <label lang="fr">Nom du vaccin</label>                                    
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::2::Vaccine::Name">              
+      <uilink widget="pneumoVaccineNameLineEdit2" />                       
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::3::Vaccine::Name">              
+      <uilink widget="pneumoVaccineNameLineEdit3" />                       
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::4::Vaccine::Name">              
+      <uilink widget="pneumoVaccineNameLineEdit4" />                       
+      <options></options>                                                       
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::1::Vaccine::Lot">               
+      <uilink label="pneumoLotLabel" widget="pneumoLotLineEdit1" />   
+      <label lang="xx">Lot number</label>                                       
+      <label lang="fr">Numéro de lot</label>                                    
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::2::Vaccine::Lot">               
+      <uilink widget="pneumoLotLineEdit2" />                               
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::3::Vaccine::Lot">               
+      <uilink widget="pneumoLotLineEdit3" />                               
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::4::Vaccine::Lot">               
+      <uilink widget="pneumoLotLineEdit4" />                               
+      <options></options>                                                       
+    </Item>
+
+    <Item type="shorttext" name="Pneumo::1::Vaccine::Identity">          
+      <uilink label="pneumoAdministeredLabel" widget="pneumoAdministeredLineEdit1" />
+      <label lang="xx">Administered by</label>                                  
+      <label lang="fr">Réalisé par</label>                                      
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::2::Vaccine::Identity">          
+      <uilink widget="pneumoAdministeredLineEdit2" />                      
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::3::Vaccine::Identity">          
+      <uilink widget="pneumoAdministeredLineEdit3" />                      
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>                                                       
+    </Item>                                                                     
+                                                                                
+    <Item type="shorttext" name="Pneumo::4::Vaccine::Identity">          
+      <uilink widget="pneumoAdministeredLineEdit4" />                      
+      <placeholder lang="xx">Name of healthcare provider and/or facility</placeholder>
+      <placeholder lang="fr">Nom du soignant et/ou de l'institution</placeholder>
+      <options></options>                                                       
+    </Item>
+
+  </Item> <!-- end of group pleumo -->
 
 <!-- <Item type="helptext" name="">
     <uilink widget="" />

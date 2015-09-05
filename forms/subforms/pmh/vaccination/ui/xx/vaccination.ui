@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>558</width>
+    <width>572</width>
     <height>1573</height>
    </rect>
   </property>
@@ -241,7 +241,7 @@
          <widget class="QLineEdit" name="dtwp1VaccineNameLineEdit"/>
         </item>
         <item row="1" column="3">
-         <widget class="QLineEdit" name="dtwp1LotLabelLineEdit"/>
+         <widget class="QLineEdit" name="dtwp1LotLineEdit"/>
         </item>
         <item row="1" column="4">
          <widget class="QLineEdit" name="dtwp1AdministeredLineEdit"/>
@@ -256,7 +256,7 @@
          <widget class="QLineEdit" name="dtwp2VaccineNameLineEdit"/>
         </item>
         <item row="2" column="3">
-         <widget class="QLineEdit" name="dtwp2LotLabelLineEdit"/>
+         <widget class="QLineEdit" name="dtwp2LotLineEdit"/>
         </item>
         <item row="2" column="4">
          <widget class="QLineEdit" name="dtwp2AdministeredLineEdit"/>
@@ -271,7 +271,7 @@
          <widget class="QLineEdit" name="dtwp3VaccineNameLineEdit"/>
         </item>
         <item row="3" column="3">
-         <widget class="QLineEdit" name="dtwp3LotLabelLineEdit"/>
+         <widget class="QLineEdit" name="dtwp3LotLineEdit"/>
         </item>
         <item row="3" column="4">
          <widget class="QLineEdit" name="dtwp3AdministeredLineEdit"/>
@@ -293,10 +293,10 @@
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit1"/>
         </item>
         <item row="1" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit1"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit1"/>
         </item>
         <item row="2" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit2"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit2"/>
         </item>
         <item row="2" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit2"/>
@@ -305,13 +305,13 @@
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit2"/>
         </item>
         <item row="8" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit8"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit8"/>
         </item>
         <item row="8" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit8"/>
         </item>
         <item row="4" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit4"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit4"/>
         </item>
         <item row="4" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit4"/>
@@ -326,7 +326,7 @@
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit5"/>
         </item>
         <item row="5" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit5"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit5"/>
         </item>
         <item row="6" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit6"/>
@@ -341,7 +341,7 @@
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit7"/>
         </item>
         <item row="7" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit7"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit7"/>
         </item>
         <item row="7" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit7"/>
@@ -359,7 +359,7 @@
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit9"/>
         </item>
         <item row="9" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit9"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit9"/>
         </item>
         <item row="9" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit9"/>
@@ -374,7 +374,7 @@
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit10"/>
         </item>
         <item row="10" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit10"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit10"/>
         </item>
         <item row="10" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit10"/>
@@ -404,13 +404,13 @@
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit6"/>
         </item>
         <item row="6" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit6"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit6"/>
         </item>
         <item row="3" column="2">
          <widget class="QLineEdit" name="dtwpBoosterVaccineNameLineEdit3"/>
         </item>
         <item row="3" column="3">
-         <widget class="QLineEdit" name="dtwpBoosterLotLabelLineEdit3"/>
+         <widget class="QLineEdit" name="dtwpBoosterLotLineEdit3"/>
         </item>
         <item row="3" column="4">
          <widget class="QLineEdit" name="dtwpBoosterAdministeredLineEdit3"/>
