@@ -28,7 +28,7 @@
 
   <file type="script" name="onload">./scripts/xx/pmhpregnancy.js</file>
 
-<MedForm name="Maternity::Obstetrics::PastMedicalHistory::Pregnancy" uifilename="./ui/xx/pmhpregnancy.ui">
+<MedForm name="Maternity::Pmh::Pregnancy" uifilename="./ui/xx/pmhpregnancy.ui">
     <label lang="xx">Completed pregnancy</label>
     <label lang="fr">Grossesse menée à terme</label>
     <options>UseFormAsNameSpace</options>
@@ -327,9 +327,6 @@
           <min>1</min>
           <max>6</max>
           <step>1</step>
-          <!--<script>
-          <onValueChanged>com.freemedforms.obstetrics.prenatal.hideFetusGroupBox();</onValueChanged>
-          </script>-->
         </Item>
 
     </Item> <!-- end of Fetus group -->
@@ -435,10 +432,17 @@
       <possible id="2" lang="fr">Césarienne en urgence</possible>
       <possible id="3" lang="fr">Césarienne programmée</possible>
       <possible id="4" lang="fr">ø</possible>
+
+      <numerical id="0">0</numerical>                                       
+      <numerical id="1">1</numerical>
+      <numerical id="2">2</numerical>                                           
+      <numerical id="3">3</numerical>
+      <numerical id="4">4</numerical>
     </value>
+
     <options>DontPrintEmptyValues;resizeToContent</options>
     <script>
-      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f1HideCesareanReason()</onValueChanged>
+      <onValueChanged>namespace.com.freemedforms.pmh.pregnancy.hideCesareanReason();</onValueChanged>
     </script>
   </Item>
 
@@ -621,10 +625,17 @@
       <possible id="2" lang="fr">Césarienne en urgence</possible>
       <possible id="3" lang="fr">Césarienne programmée</possible>
       <possible id="4" lang="fr">ø</possible>
+
+      <numerical id="0">0</numerical>                                           
+      <numerical id="1">1</numerical>                                           
+      <numerical id="2">2</numerical>                                           
+      <numerical id="3">3</numerical>                                           
+      <numerical id="4">4</numerical>
+
     </value>
     <options>DontPrintEmptyValues;resizeToContent</options>
     <script>
-      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f2HideCesareanReason()</onValueChanged>
+      <onValueChanged>namespace.com.freemedforms.pmh.pregnancy.hideCesareanReason();</onValueChanged>
     </script>
   </Item>
 
@@ -807,10 +818,17 @@
       <possible id="2" lang="fr">Césarienne en urgence</possible>
       <possible id="3" lang="fr">Césarienne programmée</possible>
       <possible id="4" lang="fr">ø</possible>
+
+      <numerical id="0">0</numerical>                                           
+      <numerical id="1">1</numerical>                                           
+      <numerical id="2">2</numerical>                                           
+      <numerical id="3">3</numerical>                                           
+      <numerical id="4">4</numerical>
+
     </value>
     <options>DontPrintEmptyValues;resizeToContent</options>
     <script>
-      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f3HideCesareanReason()</onValueChanged>
+      <onValueChanged>namespace.com.freemedforms.pmh.pregnancy.hideCesareanReason();</onValueChanged>
     </script>
   </Item>
 
@@ -993,10 +1011,17 @@
       <possible id="2" lang="fr">Césarienne en urgence</possible>
       <possible id="3" lang="fr">Césarienne programmée</possible>
       <possible id="4" lang="fr">ø</possible>
+
+      <numerical id="0">0</numerical>                                           
+      <numerical id="1">1</numerical>                                           
+      <numerical id="2">2</numerical>                                           
+      <numerical id="3">3</numerical>                                           
+      <numerical id="4">4</numerical>
+
     </value>
     <options>DontPrintEmptyValues;resizeToContent</options>
     <script>
-      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f4HideCesareanReason()</onValueChanged>
+      <onValueChanged>namespace.com.freemedforms.pmh.pregnancy.hideCesareanReason();</onValueChanged>
     </script>
   </Item>
 
@@ -1179,10 +1204,17 @@
       <possible id="2" lang="fr">Césarienne en urgence</possible>
       <possible id="3" lang="fr">Césarienne programmée</possible>
       <possible id="4" lang="fr">ø</possible>
+
+      <numerical id="0">0</numerical>                                           
+      <numerical id="1">1</numerical>                                           
+      <numerical id="2">2</numerical>                                           
+      <numerical id="3">3</numerical>                                           
+      <numerical id="4">4</numerical>
+
     </value>
     <options>DontPrintEmptyValues;resizeToContent</options>
     <script>
-      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f5HideCesareanReason()</onValueChanged>
+      <onValueChanged>namespace.com.freemedforms.pmh.pregnancy.hideCesareanReason();</onValueChanged>
     </script>
   </Item>
 
@@ -1365,10 +1397,17 @@
       <possible id="2" lang="fr">Césarienne en urgence</possible>
       <possible id="3" lang="fr">Césarienne programmée</possible>
       <possible id="4" lang="fr">ø</possible>
+
+      <numerical id="0">0</numerical>                                           
+      <numerical id="1">1</numerical>                                           
+      <numerical id="2">2</numerical>                                           
+      <numerical id="3">3</numerical>                                           
+      <numerical id="4">4</numerical>
+
     </value>
     <options>DontPrintEmptyValues;resizeToContent</options>
     <script>
-      <onValueChanged>namespace.com.freemedforms.maternity.obstetrics.pastmedicalhistory.pregnancy.f6HideCesareanReason()</onValueChanged>
+      <onValueChanged>namespace.com.freemedforms.pmh.pregnancy.hideCesareanReason();</onValueChanged>
     </script>
   </Item>
 

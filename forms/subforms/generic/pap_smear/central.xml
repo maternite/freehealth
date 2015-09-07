@@ -48,6 +48,13 @@
     <options></options>
   </Item>
 
+  <Item type="helptext" name="General::Categorization::Label">                   
+    <uilink label="" widget="generalCategorizationLabel" layout="" />                  
+    <label lang="xx">GENERAL CATEGORIZATION</label>                            
+    <label lang="fr">CATÉGORISATION GÉNÉRALE</label>                          
+    <options></options>                                                         
+  </Item>
+
   <Item type="date" name="Date::Last::Menstrual::Period">
     <uilink label="dateLmpLabel" widget="lmpDateEdit" layout="" />
     <label lang="xx">Date of Last Menstrual Period preceding test</label>

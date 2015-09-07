@@ -8,7 +8,7 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-06-24</cdate>
-    <lmdate>2015-06-24</lmdate>
+    <lmdate>2015-09-07</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -191,11 +191,11 @@
       <options>FullEditor</options>
     </Item>
 
-    <Item type="texteditor" name="Medical::Regimen">                                 
+    <Item type="texteditor" name="Medical::Regimen">
       <uilink label="medicalRegimenLabel" widget="" layout="medicalRegimenFormLayout" />
-      <label lang="xx">Medical regimen orders assessment</label>                                     
-      <label lang ="fr">Traitements médicamenteux ou non médicamenteux (phytothérapie, remèdes traditionnels améliorés) en cours</label>                                        
-      <options>FullEditor</options>                                             
+      <label lang="xx">Medical regimen orders assessment</label>
+      <label lang ="fr">Traitements médicamenteux ou non médicamenteux (phytothérapie, remèdes traditionnels améliorés) en cours</label>
+      <options>FullEditor</options>
     </Item>
 
     <Item type="radio" name="FetalMovement">
@@ -929,7 +929,7 @@
                   </value>
                   <options>compact</options>
                 </Item>
-            
+
             <Item type="radio" name="Urine::Nitrite">
                 <uilink label="nitriteLabel" widget="" layout="nitriteRadioLayout" />
                 <label lang="xx">Nitrite</label>
@@ -980,7 +980,7 @@
                   </value>
                   <options>compact</options>
                 </Item>
-    
+
                 <Item type="radio" name="Urine::Protein">
                 <uilink label="proteinLabel" widget="" layout="proteinRadioLayout" />
                 <label lang="xx">Protein</label>
@@ -1013,7 +1013,7 @@
                   </value>
                   <options>compact</options>
                 </Item>
-                
+
                 <Item type="radio" name="Urine::pH">
                 <uilink label="phLabel" widget="" layout="phRadioLayout" />
                 <label lang="xx">pH</label>
@@ -1046,11 +1046,11 @@
                     <possible id="5" lang="fr">8.0</possible>
                     <possible id="6" lang="fr">8.5</possible>
                     <possible id="7" lang="fr">ø</possible>
- 
+
                   </value>
                   <options>compact</options>
                 </Item>
-                
+
                 <Item type="radio" name="Urine::blood">
                 <uilink label="bloodLabel" widget="" layout="bloodRadioLayout" />
                 <label lang="xx">Blood</label>
@@ -1083,7 +1083,7 @@
                     <possible id="5" lang="fr">++</possible>
                     <possible id="6" lang="fr">+++</possible>
                     <possible id="7" lang="fr">ø</possible>
- 
+
                   </value>
                   <options>compact</options>
                 </Item>
@@ -1153,10 +1153,10 @@
                     <possible id="4" lang="fr">Beaucoup 80</possible>
                     <possible id="5" lang="fr">Beaucoup 160</possible>
                     <possible id="6" lang="fr">ø</possible>
-                  
+
                   </value>
                   <options>compact</options>
-                </Item> 
+                </Item>
 
                 <Item type="radio" name="Urine::Bilirubin">
                 <uilink label="bilirubinLabel" widget="" layout="bilirubinRadioLayout" />
@@ -1219,12 +1219,12 @@
                   <options>compact</options>
                 </Item>
 
-                <Item type="date" name="Urine::date">                      
+                <Item type="date" name="Urine::date">
                 <uilink label="urineStripTestDateLabel" widget="urineStripTestDateEdit" />
-                <label lang="xx">Date</label>                                   
-                <label lang="fr">Date</label>                                   
-                <options>now</options>                                          
-            </Item> 
+                <label lang="xx">Date</label>
+                <label lang="fr">Date</label>
+                <options>now</options>
+            </Item>
 
 
         </Item> <!-- end of group Urine strip test -->
@@ -2395,6 +2395,105 @@
         </value>
       </Item>
 
+      <Item type="check" name="Plan::PrescribedLabTest::Screening::glucose::challenge::test::CheckBox">
+        <!--<sct>Measurement of glucose 1 hour after glucose challenge for glucose tolerance test (procedure)</sct>-->
+        <uilink label="" widget="oSullivanCheckBox" layout="" />
+        <label lang="xx">Screening glucose challenge test (O'Sullivan)</label>
+        <label lang="fr">Test de O'Sullivan</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
+      </Item>
+
+      <Item type="helptext" name="Plan::Prescribed::Tetanus::Vaccine::Label">
+        <uilink widget="tetanusVaccineLabel" />
+        <label lang="xx">Tetanus vaccine</label>
+        <label lang="fr">Vaccination anti-tétanique (VAT)</label>
+      </Item>
+
+      <Item type="radio" name="Plan::Prescribed::Tetanus::Dose::Radio">
+        <uilink label="tetanusPrescribedLabel" widget="" layout="tetanusPrescribedLayout" />
+        <label lang="xx">Prescribed dose(s)</label>
+        <label lang="fr">Dose(s) prescrites</label>
+        <value>
+          <uuid id="0">Not done</uuid>
+          <!--<sctid id="3">385660001</sctid>-->
+          <uuid id="1">2 doses of TT/Td</uuid>
+          <uuid id="2">1 dose of TT/Td</uuid>
+          <uuid id="3">None</uuid>
+          <possible id="0" lang="xx">ø</possible>
+          <possible id="1" lang="xx">2 doses of TT/Td (min.4 weeks interval between doses)</possible>
+          <possible id="2" lang="xx">1 dose of TT/Td</possible>
+          <possible id="3" lang="xx">None</possible>
+          <possible id="0" lang="fr">ø</possible>
+          <possible id="1" lang="fr">2 doses de VAT (minimum 4 semaines d'intervalle)</possible>
+          <possible id="2" lang="fr">1 dose de VAT</possible>
+          <possible id="3" lang="fr">Aucune</possible>
+        </value>
+      </Item>
+
+      <Item type="helptext" name="Plan::Prescribed::Tetanus::Vaccine::Number::Label">
+        <uilink widget="tetanusPrescribedNumberLabel" />
+        <label lang="xx">Prescribed TT dose(s) / TT vaccine number equivalence</label>
+        <label lang="fr">Correspondance dose(s) prescrites / numéro VAT</label>
+      </Item>
+
+      <Item type="check" name="Plan::Prescribed::Tetanus::Dose::1">
+        <uilink label="" widget="tetanus1CheckBox" layout="" />
+        <label lang="xx">TT vaccine #1</label>
+        <label lang="fr">VAT N°1</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
+      </Item>
+
+      <Item type="check" name="Plan::Prescribed::Tetanus::Dose::2">
+        <uilink label="" widget="tetanus2CheckBox" layout="" />
+        <label lang="xx">TT vaccine #2</label>
+        <label lang="fr">VAT N°2</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
+      </Item>
+
+      <Item type="check" name="Plan::Prescribed::Tetanus::Dose::3">
+        <uilink label="" widget="tetanus3CheckBox" layout="" />
+        <label lang="xx">TT vaccine #3</label>
+        <label lang="fr">VAT N°3</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
+      </Item>
+
+      <Item type="check" name="Plan::Prescribed::Tetanus::Dose::4">
+        <uilink label="" widget="tetanus4CheckBox" layout="" />
+        <label lang="xx">TT vaccine #4</label>
+        <label lang="fr">VAT N°4</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
+      </Item>
+
+      <Item type="check" name="Plan::Prescribed::Tetanus::Dose::5">
+        <uilink label="" widget="tetanus5CheckBox" layout="" />
+        <label lang="xx">TT vaccine #5</label>
+        <label lang="fr">VAT N°5</label>
+        <options>printonlychecked</options>
+        <value>
+          <numerical id="0">1</numerical>
+          <numerical id="1">2</numerical>
+        </value>
+      </Item>
 
     </Item> <!-- end of group Plan -->
 

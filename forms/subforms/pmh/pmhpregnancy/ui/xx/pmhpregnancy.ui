@@ -452,7 +452,7 @@
          <item row="0" column="1">
           <widget class="QSpinBox" name="fetusNumberSpinBox">
            <property name="minimum">
-            <number>0</number>
+            <number>1</number>
            </property>
            <property name="maximum">
             <number>6</number>
@@ -636,6 +636,9 @@
          </item>
          <item>
           <widget class="QGroupBox" name="f1CesareanSectionReasonGroupBox">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="title">
             <string>cesareanSectionReasonGroupBox</string>
            </property>
@@ -893,6 +896,9 @@
          </item>
          <item>
           <widget class="QGroupBox" name="f2CesareanSectionReasonGroupBox">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="title">
             <string>cesareanSectionReasonGroupBox</string>
            </property>
@@ -1150,6 +1156,9 @@
          </item>
          <item>
           <widget class="QGroupBox" name="f3CesareanSectionReasonGroupBox">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="title">
             <string>cesareanSectionReasonGroupBox</string>
            </property>
@@ -1407,6 +1416,9 @@
          </item>
          <item>
           <widget class="QGroupBox" name="f4CesareanSectionReasonGroupBox">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="title">
             <string>cesareanSectionReasonGroupBox</string>
            </property>
@@ -1664,6 +1676,9 @@
          </item>
          <item>
           <widget class="QGroupBox" name="f5CesareanSectionReasonGroupBox">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="title">
             <string>cesareanSectionReasonGroupBox</string>
            </property>
@@ -1921,6 +1936,9 @@
          </item>
          <item>
           <widget class="QGroupBox" name="f6CesareanSectionReasonGroupBox">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="title">
             <string>cesareanSectionReasonGroupBox</string>
            </property>
