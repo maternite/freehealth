@@ -35,8 +35,10 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
         fetusGroup6 = formUi.findChild("fetus6GroupBox");
         defaultHideFetusGroupBox();
 
-        f1CesareanGroup = formUi.findChild("f1CesareanSectionReasonGroupBox");  
+        f1CesareanGroup = formUi.findChild("f1CesareanSectionReasonGroupBox");
+        //freemedforms.forms.namespaceInUse = "Maternity::Pmh::Pregnancy";  
         f1DeliveryModeItem = freemedforms.forms.item("F1::Delivery::procedure::uniquelist");
+        //freemedforms.forms.namespaceInUse = "";
         f1DeliveryModeUi = formUi.findChild("f1ModeOfDeliveryListView");        
                                                                                 
         f2CesareanGroup = formUi.findChild("f2CesareanSectionReasonGroupBox");  
@@ -151,8 +153,14 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
 
     function hideCesareanReason() {                                           
                                                                                 
-        print("function f1HideCesareanReason()");                               
+        print("function hideCesareanReason()");                               
         print("f1DeliveryModeItem.currentValue :" + f1DeliveryModeItem.currentValue);
+        print("f2DeliveryModeItem.currentValue :" + f2DeliveryModeItem.currentValue);
+        print("f3DeliveryModeItem.currentValue :" + f3DeliveryModeItem.currentValue);
+        print("f4DeliveryModeItem.currentValue :" + f4DeliveryModeItem.currentValue);
+        print("f5DeliveryModeItem.currentValue :" + f5DeliveryModeItem.currentValue);
+        print("f5DeliveryModeItem.currentValue :" + f6DeliveryModeItem.currentValue);
+
                                                                                 
         var electiveCesareanFr = "Césarienne programmée";                       
         var emergencyCesareanFr = "Césarienne en urgence";                      
@@ -162,7 +170,7 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
             f1DeliveryModeItem.currentValue == emergencyCesareanXx ||           
             f1DeliveryModeItem.currentValue == electiveCesareanFr ||            
             f1DeliveryModeItem.currentValue == electiveCesareanXx) {            
-            print("Inside of if");                                              
+            print("Inside of if 1");                                              
             f1CesareanGroup.visible = true;                                     
             f1CesareanGroup.checked = true;                                     
         }                                                                       
@@ -174,7 +182,7 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
             f2DeliveryModeItem.currentValue == emergencyCesareanXx ||           
             f2DeliveryModeItem.currentValue == electiveCesareanFr ||            
             f2DeliveryModeItem.currentValue == electiveCesareanXx) {            
-            print("Inside of if");                                              
+            print("Inside of if 2");                                              
             f2CesareanGroup.visible = true;                                     
             f2CesareanGroup.checked = true;                                     
         }                                                                       
@@ -186,7 +194,7 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
             f3DeliveryModeItem.currentValue == emergencyCesareanXx ||           
             f3DeliveryModeItem.currentValue == electiveCesareanFr ||            
             f3DeliveryModeItem.currentValue == electiveCesareanXx) {            
-            print("Inside of if");                                              
+            print("Inside of if 3");                                              
             f3CesareanGroup.visible = true;                                     
             f3CesareanGroup.checked = true;                                     
         }                                                                       
@@ -198,7 +206,7 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
             f4DeliveryModeItem.currentValue == emergencyCesareanXx ||           
             f4DeliveryModeItem.currentValue == electiveCesareanFr ||            
             f4DeliveryModeItem.currentValue == electiveCesareanXx) {            
-            print("Inside of if");                                              
+            print("Inside of if 4");                                              
             f4CesareanGroup.visible = true;                                     
             f4CesareanGroup.checked = true;                                     
         }                                                                       
@@ -210,7 +218,7 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
             f5DeliveryModeItem.currentValue == emergencyCesareanXx ||           
             f5DeliveryModeItem.currentValue == electiveCesareanFr ||            
             f5DeliveryModeItem.currentValue == electiveCesareanXx) {            
-            print("Inside of if");                                              
+            print("Inside of if 5");                                              
             f5CesareanGroup.visible = true;                                     
             f5CesareanGroup.checked = true;                                     
         }                                                                       
@@ -222,7 +230,7 @@ namespace.module('com.freemedforms.pmh.pregnancy', function (exports, require) {
             f6DeliveryModeItem.currentValue == emergencyCesareanXx ||           
             f6DeliveryModeItem.currentValue == electiveCesareanFr ||            
             f6DeliveryModeItem.currentValue == electiveCesareanXx) {            
-            print("Inside of if");                                              
+            print("Inside of if 6");                                              
             f6CesareanGroup.visible = true;                                     
             f6CesareanGroup.checked = true;                                     
         }                                                                       

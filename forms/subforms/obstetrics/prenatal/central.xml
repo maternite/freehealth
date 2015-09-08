@@ -616,7 +616,7 @@
         </value>
       </Item>
 
-      <Item type="radio" name="ObjectiveGroup::Cervix::Position">
+      <Item type="radio" name="ObjectiveGroup::Cervix::Effacement">
           <!--<sctid></sctid>-->
           <uilink label="cervixEffacementLabel" widget="" layout="cervixEffacementRadioLayout" />
           <label lang="xx">Effacement</label>
@@ -2393,6 +2393,20 @@
           <numerical id="0">1</numerical>
           <numerical id="1">2</numerical>
         </value>
+      </Item>
+
+      <Item type="check" name="Plan::Prescribed::Lab::Test::Vaginal::Wet::Mount">
+        <!--<sct>Microbiologic smear with interpretation, wet mount with simple stain (procedure)</sct>--> 
+        <!--<sct>Vaginal swab taken (situation)</sct>-->
+        <!--<sct>Microscopic examination of vaginal vault smear (procedure)</sct>-->
+        <uilink label="" widget="vaginalWetMountCheckBox" layout="" />   
+        <label lang="xx">Vaginal wet mount</label>                                  
+        <label lang="fr">Prélèvement bactériologique vaginal</label>                                           
+        <options>printonlychecked</options>                                     
+        <value>                                                                 
+          <numerical id="0">1</numerical>                                       
+          <numerical id="1">2</numerical>                                       
+        </value>                                                                
       </Item>
 
       <Item type="check" name="Plan::PrescribedLabTest::Screening::glucose::challenge::test::CheckBox">

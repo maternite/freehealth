@@ -69,33 +69,30 @@
     <!-- Items for the HPRIM data importation -->
     <!-- <hprim>Maternity::Consultation::Results::Textual;Maternity::Consultation::LabResults::Textual</hprim> -->
 
-<MedForm name="Maternity::PMH::GynObst">
+<MedForm name="Maternity::PMH">
   <label lang="xx">Past Medical History</label>
   <label lang="fr">Antécédents</label>
   <icon>__theme__/stethoscope.png</icon>
   <options>NoEpisode;DontPrintEmptyValues</options>
 
-  <file>__subforms__/pmh/pmhgynobst/central.xml</file>
+  <file>__subForms__/pmh/pmhgynobst/central.xml</file>
 
-  <file>__subforms__/pmh/pmhinterruptedpregnancy/central.xml</file>             
+  <file>__subForms__/pmh/pmhinterruptedpregnancy/central.xml</file>             
                                                                                 
-  <file>__subforms__/generic/pap_smear/central.xml</file>
+  <file>__subForms__/generic/pap_smear/central.xml</file>
+
+  <file>__subForms__/pmh/vaccination/central.xml</file>
+
 </MedForm>
 
 
-<MedForm name="Maternity::PMH">                                        
-    <label lang="xx">PMH</label>                                         
-    <label lang="fr">ATCD</label>                                        
-    <icon>__theme__/stethoscope.png</icon>                                      
+<MedForm name="Maternity::Lab::Results">                                        
+    <label lang="xx">Lab Test Results</label>                                         
+    <label lang="fr">Résultats d'analyses biologiques</label>                                        
+    <icon>__theme__/labtests.png</icon>                                      
     <options>NoEpisode;DontPrintEmptyValues</options>                           
-      <MedForm name="Maternity::PMH::Obstetrics">                      
-        <label lang="xx">Completed pregnancy</label>                                  
-        <label lang="en">Grossesse menée à terme</label>                                  
-        <icon>__theme__/stethoscope.png</icon>                                  
-        <options>NoEpisode;DontPrintEmptyValues</options>                       
-          <file>__subForms__/pmh/pmhpregnancy/central.xml</file>             
-      </MedForm>                                                                
-  </MedForm>
+          <file>__subForms__/generic/labtest_result/central.xml</file>             
+</MedForm>
 
 
   <!-- <MedForm name="Maternity::Pediatrics">

@@ -5,13 +5,13 @@
 
   <formdescription>
     <!-- Non translatable values -->
-    <authors>Eric Maeker, MD</authors>
+    <authors>Jerome Pinguet</authors>
     <version>test</version>
-    <fmfv>0.8.2</fmfv>
+    <fmfv>0.9.6</fmfv>
     <cdate>2013-02-27</cdate>
-    <lmdate>2013-02-27</lmdate>
+    <lmdate>2015-09-08</lmdate>
     <icon>__theme__/labtests.png</icon>
-    <weblink></weblink>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliography/>
 
     <!-- Translatable values -->
@@ -20,12 +20,14 @@
     <description lang="fr">Résultats de biologie</description>
     <category lang="xx">Generic tools</category>
     <category lang="fr">Outils généraux</category>
-    <category lang="de">Allgemeine Tools</category>
     <specialties lang="xx">Tools</specialties>
     <specialties lang="fr">Outils</specialties>
-    <specialties lang="de">Tools</specialties>
 
     <updateinfo>
+      <updateversion from="0.8.2" to="0.9.6">
+        <text lang="fr">Adaptation à une maternité de Madagascar (Pavillon Sainte Fleur). Formulaire d'origine écrite par Eric Maeker</text>
+        <text lang="xx">Adaptation to a maternity care center based in Madagascar (Pavillon Sainte Fleur). Original form written by Eric Maeker</text>
+      </updateversion>
       <updateversion from="" to="0.8.2">
         <text lang="fr">Première version</text>
         <text lang="xx">First version</text>
@@ -251,7 +253,46 @@
                 <tooltip lang="fr"></tooltip>
             </Item>
 
-        </Item>
+        </Item> <!-- end of detailswidget CBC -->
+
+        <Item type="detailswidget" name="Serology" uifilename="./ui/xx/serology.ui">
+          <uilink label="" widget="" layout="mainLayout"/>
+          <label lang="xx">Serology</label>
+          <label lang="fr">Sérologie</label>
+          <options>SummaryFontBold;expanded</options>
+
+            <Item type="helptext" name="Serology::Toxoplasmosis::Label">
+              <uilink widget="toxoplasmosisLabel"/>
+              <label lang="xx">Toxoplasmosis</label>
+              <label lang="fr">Toxoplasmose</label>
+              <options>printable</options>
+            </Item>
+
+            <Item type="radio" name="Serology::Toxoplasmosis::IgG::Radio">
+              <uilink label="toxoplasmosisIggLabel" widget="" layout="toxoplasmosisIggRadioLayout" />
+              <label lang="xx">Ig G Antibodies</label>
+              <label lang="fr">Anticorps Ig G</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of detailswidget serology -->
 
         <Item type="detailswidget" name="Kidney" uifilename="./ui/xx/kidney.ui">
             <uilink label="" widget="" layout="mainLayout"/>

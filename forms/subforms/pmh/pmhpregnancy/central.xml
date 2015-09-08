@@ -14,7 +14,7 @@
     <bibliograpy/>
 
     <license>GPLv3</license>
-    <description lang="xx">Obstetrics Past Medical History: completed pregnancy</description>
+    <description lang="xx">Obstetrics Past Medical History: Completed Pregnancy</description>
     <description lang="fr">Antécédents obstétriques: grossesse menée à terme</description>
     <category lang="xx">Past Medical History</category>
     <category lang="fr">Antécédents</category>
@@ -75,7 +75,7 @@
     <possible id="11" lang="xx">11</possible>
     <possible id="12" lang="xx">12</possible>
     <possible id="13" lang="xx">13</possible>
-    <possible id="14" lang="xx">13</possible>
+    <possible id="14" lang="xx">14</possible>
     <possible id="15" lang="xx">15</possible>
     <possible id="16" lang="xx">16</possible>
     <possible id="17" lang="xx">17</possible>
@@ -405,6 +405,7 @@
 
 
   <Item type="uniquelist" name="F1::Delivery::procedure::uniquelist">
+  <!--<Item type="uniquelist" name="Maternity::Pmh::Pregnancy::F1::Delivery::procedure::uniquelist">-->
     <!--<sctid>236973005</sctid>-->
     <uilink label="f1ModeOfDeliveryLabel" widget="f1ModeOfDeliveryListView" layout="" />
     <label lang="xx">Mode of delivery</label>

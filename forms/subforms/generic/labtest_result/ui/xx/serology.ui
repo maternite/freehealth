@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>661</width>
+    <height>175</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="toxoplasmosisLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>toxoplasmosis</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="toxoplasmosisIggLabel">
+       <property name="text">
+        <string>igG antibodies</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="toxoplasmosisIggRadioLayout"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDoubleSpinBox" name="toxoplasmosisIggDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QComboBox" name="toxoplasmosisIggComboBox"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="toxoplasmosisIgmMethod1Label">
+       <property name="text">
+        <string>igM antibodies method 1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="toxoplasmosisIgmMethod1RadioLayout"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QDoubleSpinBox" name="toxoplasmosisIgmMethod1DoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QComboBox" name="toxoplasmosisIgmMethod1ComboBox"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="toxoplasmosisIgmMethod2Label">
+       <property name="text">
+        <string>igM antibodies method 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="toxoplasmosisIgmMethod2RadioLayout"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QDoubleSpinBox" name="toxoplasmosisIgmMethod2DoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QComboBox" name="toxoplasmosisIgmMethod2ComboBox"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="toxoplasmosisInterpretationLabel">
+       <property name="text">
+        <string>Interpretation</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="3">
+      <widget class="QLineEdit" name="toxoplasmosisInterpretationLineEdit"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
