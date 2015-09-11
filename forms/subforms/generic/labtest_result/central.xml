@@ -349,33 +349,33 @@
 
             <Item type="doublespin" name="Serology::Toxoplasmosis:IgM::Method1::Doublespin">
               <uilink label="" widget="toxoplasmosisIgmMethod1DoubleSpinBox" layout="" />
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <options></options>                                               
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
             </Item>
 
-            <Item type="combo" name="Serology::Toxoplasmosis:IgM::Method1::Unit::Combo"> 
-              <uilink label="" widget="toxoplasmosisIgmMethod1ComboBox" layout="" />   
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+            <Item type="combo" name="Serology::Toxoplasmosis:IgM::Method1::Unit::Combo">
+              <uilink label="" widget="toxoplasmosisIgmMethod1ComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="radio" name="Serology::Toxoplasmosis::IgM::Method2::Radio">
@@ -404,33 +404,33 @@
 
             <Item type="doublespin" name="Serology::Toxoplasmosis:IgM::Method2::Doublespin">
               <uilink label="" widget="toxoplasmosisIgmMethod2DoubleSpinBox" layout="" />
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <options></options>                                               
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
             </Item>
 
             <Item type="combo" name="Serology::Toxoplasmosis:IgM::Method2::Unit::Combo">
               <uilink label="" widget="toxoplasmosisIgmMethod2ComboBox" layout="" />
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="shorttext" name="Serology::Toxoplasmosis::Interpretation">
@@ -441,129 +441,136 @@
               <placeholder lang="fr"></placeholder>
             </Item>
 
-            <Item type="helptext" name="Serology::Rubella::Label">        
-              <uilink widget="rubellaLabel"/>                             
-              <label lang="xx">Rubella</label>                            
-              <label lang="fr">Rubéole</label>                             
-              <options>printable</options>                                      
+            <Item type="helptext" name="Serology::Rubella::Label">
+              <uilink widget="rubellaLabel"/>
+              <label lang="xx">Rubella</label>
+              <label lang="fr">Rubéole</label>
+              <options>printable</options>
             </Item>
 
-            <Item type="radio" name="Serology::Rubella::IgG::Radio">      
+            <Item type="radio" name="Serology::Rubella::IgG::Radio">
               <uilink label="rubellaIggLabel" widget="" layout="rubellaIggRadioLayout" />
-              <label lang="xx">Ig G Antibodies</label>                          
-              <label lang="fr">Anticorps Ig G</label>                           
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">Positive</uuid>                                    
-                <uuid id="2">Equivocal</uuid>                                   
-                <uuid id="3">Negative</uuid>                                    
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">Positive</possible>                  
-                <possible id="2" lang="xx">Equivocal</possible>                 
-                <possible id="3" lang="xx">Negative</possible>                  
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">Positif</possible>                   
-                <possible id="2" lang="fr">Douteux</possible>                   
-                <possible id="3" lang="fr">Négatif</possible>                   
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <label lang="xx">Ig G Antibodies</label>
+              <label lang="fr">Anticorps Ig G</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="doublespin" name="Serology::Rubella:IgG::Doublespin">
               <uilink label="" widget="rubellaIggDoubleSpinBox" layout="" />
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <options></options>                                               
-            </Item>                                                             
-                                                                                
-            <Item type="combo" name="Serology::Rubella:IgG::Unit::Combo"> 
-              <uilink label="" widget="rubellaIggComboBox" layout="" />   
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
             </Item>
 
-            <Item type="radio" name="Serology::Rubella::IgM::Radio">            
+            <Item type="combo" name="Serology::Rubella:IgG::Unit::Combo">
+              <uilink label="" widget="rubellaIggComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::Rubella::IgM::Radio">
               <uilink label="rubellaIgmLabel" widget="" layout="rubellaIgmRadioLayout" />
-              <label lang="xx">Ig M Antibodies</label>                          
-              <label lang="fr">Anticorps Ig M</label>                           
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">Positive</uuid>                                    
-                <uuid id="2">Equivocal</uuid>                                   
-                <uuid id="3">Negative</uuid>                                    
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">Positive</possible>                  
-                <possible id="2" lang="xx">Equivocal</possible>                 
-                <possible id="3" lang="xx">Negative</possible>                  
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">Positif</possible>                   
-                <possible id="2" lang="fr">Douteux</possible>                   
-                <possible id="3" lang="fr">Négatif</possible>                   
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <label lang="xx">Ig M Antibodies</label>
+              <label lang="fr">Anticorps Ig M</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
-            <Item type="doublespin" name="Serology::Rubella:IgM::Doublespin">   
-              <uilink label="" widget="rubellaIgmDoubleSpinBox" layout="" />    
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <options></options>                                               
-            </Item>                                                             
-                                                                                
-            <Item type="combo" name="Serology::Rubella:IgM::Unit::Combo">       
-              <uilink label="" widget="rubellaIgmComboBox" layout="" />         
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+            <Item type="doublespin" name="Serology::Rubella:IgM::Doublespin">
+              <uilink label="" widget="rubellaIgmDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::Rubella:IgM::Unit::Combo">
+              <uilink label="" widget="rubellaIgmComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="shorttext" name="Serology::Rubella::Interpretation">
               <uilink label="rubellaInterpretationLabel" widget="rubellaInterpretationLineEdit" layout="" />
-              <label lang="xx">Interpretation</label>                           
-              <label lang="fr">Interprétation</label>                           
-              <placeholder lang="xx"></placeholder>                             
-              <placeholder lang="fr"></placeholder>                             
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
+
+            <Item type="helptext" name="Serology::Hepatitis::B::Label">
+              <uilink widget="hepatitisBLabel"/>
+              <label lang="xx">Hepatitis B</label>
+              <label lang="fr">Hépatite B</label>
+              <options>printable</options>
             </Item>
 
         </Item> <!-- end of detailswidget serology -->
@@ -1036,7 +1043,7 @@
 
         </Item>
 
-        
+
         <Item type="detailswidget" name="Thyroid" uifilename="./ui/xx/thyroid.ui">
             <uilink label="" widget="" layout="mainLayout"/>
             <label lang="xx">Thyroid</label>
