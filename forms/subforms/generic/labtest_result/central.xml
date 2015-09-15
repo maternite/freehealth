@@ -573,6 +573,472 @@
               <options>printable</options>
             </Item>
 
+            <Item type="radio" name="Serology::Hepatitis::B::HBsAg::Radio">
+              <uilink label="hBsAgLabel" widget="" layout="hBsAgRadioLayout" />
+              <label lang="xx">HBsAg</label>
+              <label lang="fr">Antigènes HBs</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::Hepatitis::B::HBsAg::Doublespin">
+              <uilink label="" widget="hBsAgDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::Hepatitis::B::HBsAg::Unit::Combo">
+              <uilink label="" widget="hBsAgComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::Hepatitis::B::AntiHBs::Radio">
+              <uilink label="antiHBsLabel" widget="" layout="antiHBsRadioLayout" />
+              <label lang="xx">Anti-HBs</label>
+              <label lang="fr">Anticorps Anti-HBs</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::Hepatitis::B::AntiHBs::Doublespin">
+              <uilink label="" widget="antiHBsDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::Hepatitis::B::AntiHBs::Unit::Combo">
+              <uilink label="" widget="antiHBsComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::Hepatitis::B::AntiHBc::Radio">
+              <uilink label="antiHBcLabel" widget="" layout="antiHBcRadioLayout" />
+              <label lang="xx">Anti-HBc</label>
+              <label lang="fr">Anticorps Anti-HBc</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::Hepatitis::B::AntiHBc::Doublespin">
+              <uilink label="" widget="antiHBcDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::Hepatitis::B::AntiHBc::Unit::Combo">
+              <uilink label="" widget="antiHBcComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::Hepatitis::B::IgMAntiHBc::Radio">
+              <uilink label="igMantiHBcLabel" widget="" layout="igMantiHBcRadioLayout" />
+              <label lang="xx">Ig M Anti-HBc</label>
+              <label lang="fr">Anticorps IgM Anti-HBc</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::Hepatitis::B::IgMAntiHBc::Doublespin">
+              <uilink label="" widget="igMantiHBcDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::Hepatitis::B::IgMAntiHBc::Unit::Combo">
+              <uilink label="" widget="igMantiHBcComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="shorttext" name="Serology::Hepatitis::B::Interpretation">
+              <uilink label="hepatitisBInterpretationLabel" widget="hepatitisBInterpretationLineEdit" layout="" />
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
+
+            <Item type="helptext" name="Serology::HIV::Label">
+              <uilink widget="hivLabel"/>
+              <label lang="xx">HIV</label>
+              <label lang="fr">VIH</label>
+              <options>printable</options>
+            </Item>
+
+            <Item type="radio" name="Serology::HIV::ELISA::Radio">
+              <uilink label="hivAntibodiesElisaLabel" widget="" layout="hivAntibodiesElisaRadioLayout" />
+              <label lang="xx">HIV Antibodies (ELISA)</label>
+              <label lang="fr">Anticorps VIH (ELISA)</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::HIV::ELISA::Doublespin">
+              <uilink label="" widget="hivAntibodiesElisaDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::HIV::ELISA::Unit::Combo">
+              <uilink label="" widget="igMantiHBcComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+                <uuid id="4">Optical Density Ratio</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+                <possible id="4" lang="xx">OD ratio</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+                <possible id="4" lang="fr">DO</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::HIV::Western::Blot::Radio">
+              <uilink label="hivAntibodiesWesternBlotLabel" widget="" layout="hivAntibodiesWesternBlotRadioLayout" />
+              <label lang="xx">HIV Antibodies (Western Blot)</label>
+              <label lang="fr">Anticorps VIH (Western Blot)</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::HIV::p24::Radio">
+              <uilink label="p24Label" widget="" layout="p24RadioLayout" />
+              <label lang="xx">p24</label>
+              <label lang="fr">Anticorps VIH (Western Blot)</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::HIV::p24::Doublespin">
+              <uilink label="" widget="p24DoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::HIV::p24::Unit::Combo">
+              <uilink label="" widget="p24ComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">pg/mL</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">pg/mL</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">pg/mL</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::HIV::RNA::Radio">
+              <uilink label="hivRnaLabel" widget="" layout="hivRnaRadioLayout" />
+              <label lang="xx">RNA viral load</label>
+              <label lang="fr">charge virale ARN</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::HIV::RNA::Doublespin">
+              <uilink label="" widget="hivRnaDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::HIV::RNA::Unit::Combo">
+              <uilink label="" widget="hivRnaComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">copies/mL</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">copies/mL</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">copies/mL</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Serology::HIV::DNA::Radio">
+              <uilink label="hivDnaLabel" widget="" layout="hivDnaRadioLayout" />
+              <label lang="xx">DNA viral load</label>
+              <label lang="fr">charge virale ADN</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">Positive</uuid>
+                <uuid id="2">Equivocal</uuid>
+                <uuid id="3">Negative</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Positive</possible>
+                <possible id="2" lang="xx">Equivocal</possible>
+                <possible id="3" lang="xx">Negative</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Positif</possible>
+                <possible id="2" lang="fr">Douteux</possible>
+                <possible id="3" lang="fr">Négatif</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="doublespin" name="Serology::HIV::DNA::Doublespin">
+              <uilink label="" widget="hivDnaDoubleSpinBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <options></options>
+            </Item>
+
+            <Item type="combo" name="Serology::HIV::DNA::Unit::Combo">
+              <uilink label="" widget="hivDnaComboBox" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">copies/mL</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">copies/mL</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">copies/mL</possible>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="shorttext" name="Serology::HIV::Interpretation">
+              <uilink label="hivInterpretationLabel" widget="hivInterpretationLineEdit" layout="" />
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
+
+
         </Item> <!-- end of detailswidget serology -->
 
         <Item type="detailswidget" name="Kidney" uifilename="./ui/xx/kidney.ui">
