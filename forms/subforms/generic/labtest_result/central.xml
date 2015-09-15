@@ -837,7 +837,7 @@
             </Item>
 
             <Item type="combo" name="Serology::HIV::ELISA::Unit::Combo">
-              <uilink label="" widget="igMantiHBcComboBox" layout="" />
+              <uilink label="" widget="hivAntibodiesElisaComboBox" layout="" />
               <label lang="xx"></label>
               <label lang="fr"></label>
               <value>
@@ -888,8 +888,8 @@
 
             <Item type="radio" name="Serology::HIV::p24::Radio">
               <uilink label="p24Label" widget="" layout="p24RadioLayout" />
-              <label lang="xx">p24</label>
-              <label lang="fr">Anticorps VIH (Western Blot)</label>
+              <label lang="xx">p24 Antigen</label>
+              <label lang="fr">Antigénémie p24</label>
               <value>
                 <uuid id="0">Not done</uuid>
                 <!--<sctid>385660001</sctid>-->
@@ -937,7 +937,7 @@
             <Item type="radio" name="Serology::HIV::RNA::Radio">
               <uilink label="hivRnaLabel" widget="" layout="hivRnaRadioLayout" />
               <label lang="xx">RNA viral load</label>
-              <label lang="fr">charge virale ARN</label>
+              <label lang="fr">Charge virale ARN</label>
               <value>
                 <uuid id="0">Not done</uuid>
                 <!--<sctid>385660001</sctid>-->
@@ -985,7 +985,7 @@
             <Item type="radio" name="Serology::HIV::DNA::Radio">
               <uilink label="hivDnaLabel" widget="" layout="hivDnaRadioLayout" />
               <label lang="xx">DNA viral load</label>
-              <label lang="fr">charge virale ADN</label>
+              <label lang="fr">Charge virale ADN</label>
               <value>
                 <uuid id="0">Not done</uuid>
                 <!--<sctid>385660001</sctid>-->
