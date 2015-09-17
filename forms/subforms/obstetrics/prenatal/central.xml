@@ -94,7 +94,7 @@
       <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">
         <uilink widget="useDateOfConceptionCheck"/>
         <options>DontPrintEmptyValues;OnLeft</options>
-        <label lang="xx">Conception date (only in cas of ART or IUI)</label>
+        <label lang="xx">Conception date (only in case of ART or IUI)</label>
         <label lang="fr">Date de conception (uniquement en cas de procréation médicalement assistée)</label>
         <value>
           <numerical id="0">0</numerical>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>819</width>
-    <height>769</height>
+    <width>579</width>
+    <height>761</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -389,6 +389,71 @@
         <double>100000.000000000000000</double>
        </property>
       </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <widget class="QLabel" name="syphilisLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>syphilis</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="nonTreponemalLabel">
+       <property name="text">
+        <string>non treponemal test</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="nonTreponemalTypeComboBox"/>
+     </item>
+     <item row="1" column="2">
+      <layout class="QHBoxLayout" name="nonTreponemalRadioLayout"/>
+     </item>
+     <item row="1" column="3">
+      <widget class="QDoubleSpinBox" name="nonTreponemalDoubleSpinBox"/>
+     </item>
+     <item row="1" column="4">
+      <widget class="QComboBox" name="nonTreponemalUnitComboBox"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="treponemalLabel">
+       <property name="text">
+        <string>treponemal test</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="treponemalTypeComboBox"/>
+     </item>
+     <item row="2" column="2">
+      <layout class="QHBoxLayout" name="treponemalRadioLayout"/>
+     </item>
+     <item row="2" column="3">
+      <widget class="QDoubleSpinBox" name="treponemalDoubleSpinBox"/>
+     </item>
+     <item row="2" column="4">
+      <widget class="QComboBox" name="treponemalUnitComboBox"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="syphilisInterpretationLabel">
+       <property name="text">
+        <string>interpretation</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="4">
+      <widget class="QLineEdit" name="syphilisInterpretationLineEdit"/>
      </item>
     </layout>
    </item>
