@@ -6,78 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>579</width>
-    <height>761</height>
+    <width>946</width>
+    <height>1122</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="2" column="3">
-      <widget class="QComboBox" name="toxoplasmosisIgmMethod1ComboBox"/>
-     </item>
-     <item row="2" column="2">
-      <widget class="QDoubleSpinBox" name="toxoplasmosisIgmMethod1DoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <layout class="QHBoxLayout" name="toxoplasmosisIgmMethod1RadioLayout"/>
-     </item>
-     <item row="1" column="3">
-      <widget class="QComboBox" name="toxoplasmosisIggComboBox"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="toxoplasmosisIgmMethod1Label">
-       <property name="text">
-        <string>igM antibodies method 1</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QDoubleSpinBox" name="toxoplasmosisIggDoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <layout class="QHBoxLayout" name="toxoplasmosisIgmMethod2RadioLayout"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="toxoplasmosisIgmMethod2Label">
-       <property name="text">
-        <string>igM antibodies method 2</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="3">
-      <widget class="QComboBox" name="toxoplasmosisIgmMethod2ComboBox"/>
-     </item>
-     <item row="3" column="2">
-      <widget class="QDoubleSpinBox" name="toxoplasmosisIgmMethod2DoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="toxoplasmosisIggLabel">
-       <property name="text">
-        <string>igG antibodies</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <layout class="QHBoxLayout" name="toxoplasmosisIggRadioLayout"/>
-     </item>
+    <layout class="QGridLayout" name="gridLayout_5">
      <item row="0" column="0">
-      <widget class="QLabel" name="toxoplasmosisLabel">
+      <widget class="QLabel" name="syphilisLabel">
        <property name="font">
         <font>
          <weight>75</weight>
@@ -85,193 +25,57 @@
         </font>
        </property>
        <property name="text">
-        <string>toxoplasmosis</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1" colspan="3">
-      <widget class="QLineEdit" name="toxoplasmosisInterpretationLineEdit"/>
-     </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="toxoplasmosisInterpretationLabel">
-       <property name="text">
-        <string>interpretation</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="2" column="3">
-      <widget class="QComboBox" name="rubellaIgmComboBox"/>
-     </item>
-     <item row="2" column="1">
-      <layout class="QHBoxLayout" name="rubellaIgmRadioLayout"/>
-     </item>
-     <item row="2" column="2">
-      <widget class="QDoubleSpinBox" name="rubellaIgmDoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="QComboBox" name="rubellaIggComboBox"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="rubellaIgmLabel">
-       <property name="text">
-        <string>igM antibodies</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QDoubleSpinBox" name="rubellaIggDoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
+        <string>syphilis</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="rubellaIggLabel">
+      <widget class="QLabel" name="nonTreponemalLabel">
        <property name="text">
-        <string>igG antibodies</string>
+        <string>non treponemal test</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <layout class="QHBoxLayout" name="rubellaIggRadioLayout"/>
+      <widget class="QComboBox" name="nonTreponemalTypeComboBox"/>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="rubellaLabel">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
+     <item row="1" column="2">
+      <layout class="QHBoxLayout" name="nonTreponemalRadioLayout"/>
+     </item>
+     <item row="1" column="3">
+      <widget class="QDoubleSpinBox" name="nonTreponemalDoubleSpinBox"/>
+     </item>
+     <item row="1" column="4">
+      <widget class="QComboBox" name="nonTreponemalUnitComboBox"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="treponemalLabel">
        <property name="text">
-        <string>rubella</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1" colspan="3">
-      <widget class="QLineEdit" name="rubellaInterpretationLineEdit"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="rubellaInterpretationLabel">
-       <property name="text">
-        <string>interpretation</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QGridLayout" name="gridLayout_3">
-     <item row="2" column="3">
-      <widget class="QComboBox" name="antiHBsComboBox"/>
-     </item>
-     <item row="2" column="2">
-      <widget class="QDoubleSpinBox" name="antiHBsDoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
+        <string>treponemal test</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
-      <layout class="QHBoxLayout" name="antiHBsRadioLayout"/>
+      <widget class="QComboBox" name="treponemalTypeComboBox"/>
      </item>
-     <item row="1" column="3">
-      <widget class="QComboBox" name="hBsAgComboBox"/>
+     <item row="2" column="2">
+      <layout class="QHBoxLayout" name="treponemalRadioLayout"/>
      </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="antiHBsLabel">
-       <property name="text">
-        <string>anti-HBs</string>
-       </property>
-      </widget>
+     <item row="2" column="3">
+      <widget class="QDoubleSpinBox" name="treponemalDoubleSpinBox"/>
      </item>
-     <item row="1" column="2">
-      <widget class="QDoubleSpinBox" name="hBsAgDoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <layout class="QHBoxLayout" name="antiHBcRadioLayout"/>
+     <item row="2" column="4">
+      <widget class="QComboBox" name="treponemalUnitComboBox"/>
      </item>
      <item row="3" column="0">
-      <widget class="QLabel" name="antiHBcLabel">
-       <property name="text">
-        <string>anti-HBc</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="3">
-      <widget class="QComboBox" name="antiHBcComboBox"/>
-     </item>
-     <item row="3" column="2">
-      <widget class="QDoubleSpinBox" name="antiHBcDoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="hBsAgLabel">
-       <property name="text">
-        <string>hBsAg</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <layout class="QHBoxLayout" name="hBsAgRadioLayout"/>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="hepatitisBLabel">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>hepatitis B</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1" colspan="3">
-      <widget class="QLineEdit" name="hepatitisBInterpretationLineEdit"/>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="hepatitisBInterpretationLabel">
+      <widget class="QLabel" name="syphilisInterpretationLabel">
        <property name="text">
         <string>interpretation</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="igMantiHBcLabel">
-       <property name="text">
-        <string>igM anti-HBc</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <layout class="QHBoxLayout" name="igMantiHBcRadioLayout"/>
-     </item>
-     <item row="4" column="2">
-      <widget class="QDoubleSpinBox" name="igMantiHBcDoubleSpinBox">
-       <property name="maximum">
-        <double>100000.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="3">
-      <widget class="QComboBox" name="igMantiHBcComboBox"/>
+     <item row="3" column="1" colspan="4">
+      <widget class="QLineEdit" name="syphilisInterpretationLineEdit"/>
      </item>
     </layout>
    </item>
@@ -393,9 +197,69 @@
     </layout>
    </item>
    <item>
-    <layout class="QGridLayout" name="gridLayout_5">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="2" column="3">
+      <widget class="QComboBox" name="antiHBsComboBox"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QDoubleSpinBox" name="antiHBsDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="antiHBsRadioLayout"/>
+     </item>
+     <item row="1" column="3">
+      <widget class="QComboBox" name="hBsAgComboBox"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="antiHBsLabel">
+       <property name="text">
+        <string>anti-HBs</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDoubleSpinBox" name="hBsAgDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="antiHBcRadioLayout"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="antiHBcLabel">
+       <property name="text">
+        <string>anti-HBc</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QComboBox" name="antiHBcComboBox"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QDoubleSpinBox" name="antiHBcDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="hBsAgLabel">
+       <property name="text">
+        <string>hBsAg</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="hBsAgRadioLayout"/>
+     </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="syphilisLabel">
+      <widget class="QLabel" name="hepatitisBLabel">
        <property name="font">
         <font>
          <weight>75</weight>
@@ -403,57 +267,385 @@
         </font>
        </property>
        <property name="text">
-        <string>syphilis</string>
+        <string>hepatitis B</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="nonTreponemalLabel">
-       <property name="text">
-        <string>non treponemal test</string>
-       </property>
-      </widget>
+     <item row="5" column="1" colspan="3">
+      <widget class="QLineEdit" name="hepatitisBInterpretationLineEdit"/>
      </item>
-     <item row="1" column="1">
-      <widget class="QComboBox" name="nonTreponemalTypeComboBox"/>
-     </item>
-     <item row="1" column="2">
-      <layout class="QHBoxLayout" name="nonTreponemalRadioLayout"/>
-     </item>
-     <item row="1" column="3">
-      <widget class="QDoubleSpinBox" name="nonTreponemalDoubleSpinBox"/>
-     </item>
-     <item row="1" column="4">
-      <widget class="QComboBox" name="nonTreponemalUnitComboBox"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="treponemalLabel">
-       <property name="text">
-        <string>treponemal test</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QComboBox" name="treponemalTypeComboBox"/>
-     </item>
-     <item row="2" column="2">
-      <layout class="QHBoxLayout" name="treponemalRadioLayout"/>
-     </item>
-     <item row="2" column="3">
-      <widget class="QDoubleSpinBox" name="treponemalDoubleSpinBox"/>
-     </item>
-     <item row="2" column="4">
-      <widget class="QComboBox" name="treponemalUnitComboBox"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="syphilisInterpretationLabel">
+     <item row="5" column="0">
+      <widget class="QLabel" name="hepatitisBInterpretationLabel">
        <property name="text">
         <string>interpretation</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="1" colspan="4">
-      <widget class="QLineEdit" name="syphilisInterpretationLineEdit"/>
+     <item row="4" column="0">
+      <widget class="QLabel" name="igMantiHBcLabel">
+       <property name="text">
+        <string>igM anti-HBc</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <layout class="QHBoxLayout" name="igMantiHBcRadioLayout"/>
+     </item>
+     <item row="4" column="2">
+      <widget class="QDoubleSpinBox" name="igMantiHBcDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QComboBox" name="igMantiHBcComboBox"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="2" column="3">
+      <widget class="QComboBox" name="rubellaIgmComboBox"/>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="rubellaIgmRadioLayout"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QDoubleSpinBox" name="rubellaIgmDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QComboBox" name="rubellaIggComboBox"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="rubellaIgmLabel">
+       <property name="text">
+        <string>igM antibodies</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDoubleSpinBox" name="rubellaIggDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="rubellaIggLabel">
+       <property name="text">
+        <string>igG antibodies</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="rubellaIggRadioLayout"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="rubellaLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>rubella</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="3">
+      <widget class="QLineEdit" name="rubellaInterpretationLineEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="rubellaInterpretationLabel">
+       <property name="text">
+        <string>interpretation</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="3">
+      <widget class="QComboBox" name="toxoplasmosisIgmMethod1ComboBox"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QDoubleSpinBox" name="toxoplasmosisIgmMethod1DoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="toxoplasmosisIgmMethod1RadioLayout"/>
+     </item>
+     <item row="1" column="3">
+      <widget class="QComboBox" name="toxoplasmosisIggComboBox"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="toxoplasmosisIgmMethod1Label">
+       <property name="text">
+        <string>igM antibodies method 1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDoubleSpinBox" name="toxoplasmosisIggDoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="toxoplasmosisIgmMethod2RadioLayout"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="toxoplasmosisIgmMethod2Label">
+       <property name="text">
+        <string>igM antibodies method 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QComboBox" name="toxoplasmosisIgmMethod2ComboBox"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QDoubleSpinBox" name="toxoplasmosisIgmMethod2DoubleSpinBox">
+       <property name="maximum">
+        <double>100000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="toxoplasmosisIggLabel">
+       <property name="text">
+        <string>igG antibodies</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="toxoplasmosisIggRadioLayout"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="toxoplasmosisLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>toxoplasmosis</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="3">
+      <widget class="QLineEdit" name="toxoplasmosisInterpretationLineEdit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="toxoplasmosisInterpretationLabel">
+       <property name="text">
+        <string>interpretation</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="otherLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>other</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="otherGroupBox1">
+       <property name="title">
+        <string>serology 1</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="otherSerologyLineEdit1"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="otherRadioLayout1"/>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox1">
+          <property name="maximum">
+           <double>100000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="otherComboBox1"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="otherInterpretationLabel1">
+          <property name="text">
+           <string>interpretation</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="otherInterpretationLineEdit1"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="otherGroupBox2">
+       <property name="title">
+        <string>serology 2</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLineEdit" name="otherSerologyLineEdit2"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="otherRadioLayout2"/>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox2">
+          <property name="maximum">
+           <double>100000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="otherComboBox2"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="otherInterpretationLabel2">
+          <property name="text">
+           <string>interpretation</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="otherInterpretationLineEdit2"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="otherGroupBox3">
+       <property name="title">
+        <string>serology 3</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="otherSerologyLineEdit3"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="otherRadioLayout3"/>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox3">
+          <property name="maximum">
+           <double>100000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="otherComboBox3"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="otherInterpretationLabel3">
+          <property name="text">
+           <string>interpretation</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="otherInterpretationLineEdit3"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="otherGroupBox4">
+       <property name="title">
+        <string>serology 4</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLineEdit" name="otherSerologyLineEdit4"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="otherRadioLayout4"/>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox4">
+          <property name="maximum">
+           <double>100000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="otherComboBox4"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="otherInterpretationLabel4">
+          <property name="text">
+           <string>interpretation</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="otherInterpretationLineEdit4"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="otherGroupBox5">
+       <property name="title">
+        <string>serology 5</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLineEdit" name="otherSerologyLineEdit5"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="otherRadioLayout5"/>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox5">
+          <property name="maximum">
+           <double>100000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="otherComboBox5"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="otherInterpretationLabel5">
+          <property name="text">
+           <string>interpretation</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="otherInterpretationLineEdit5"/>
+        </item>
+       </layout>
+      </widget>
      </item>
     </layout>
    </item>

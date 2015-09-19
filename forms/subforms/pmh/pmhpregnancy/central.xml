@@ -5,10 +5,10 @@
 
   <formdescription>
     <authors>Jérôme Pinguet</authors>
-    <version>test</version>
+    <version>1.0</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-08-26</cdate>
-    <lmdate>2015-08-26</lmdate>
+    <lmdate>2015-09-17</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
