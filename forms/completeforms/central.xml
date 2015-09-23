@@ -96,12 +96,21 @@
   <label lang="fr">Obstétrique</label>
   <icon>__theme__/stethoscope.png</icon>
   <options>NoEpisode;DontPrintEmptyValues</options>
+
   <MedForm name="Maternity::Obstetrics::Consultation">
     <label lang="xx">Consultations</label>
     <label lang="en">Consultations</label>
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
     <file>__subForms__/obstetrics/prenatal/central.xml</file>
+  </MedForm>
+
+  <MedForm name="Maternity::Obstetrics::Prescription">                          
+    <label lang="xx">Prescriptions</label>                                      
+    <label lang="en">Prescriptions</label>                                      
+    <icon>__theme__/stethoscope.png</icon>                                      
+    <options>NoEpisode;DontPrintEmptyValues</options>                           
+    <file>__subForms__/obstetrics/prescription/central.xml</file>                   
   </MedForm>
 </MedForm>
 
