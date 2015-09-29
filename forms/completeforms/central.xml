@@ -72,23 +72,55 @@
   <icon>__theme__/stethoscope.png</icon>
   <options>NoEpisode;DontPrintEmptyValues</options>
 
-  <file>__subForms__/pmh/pmhgynobst/central.xml</file>
+  <MedForm name="Maternity::PMH::Preventive::Healthcare">
+    <label lang="xx">Preventive healthcare</label>
+    <label lang="fr">Prévention</label>
+    <icon>__theme__/stethoscope.png</icon>
+    <options>NoEpisode;DontPrintEmptyValues</options>
 
-  <file>__subForms__/pmh/pmhinterruptedpregnancy/central.xml</file>             
-                                                                                
-  <file>__subForms__/generic/pap_smear/central.xml</file>
+    <file>__subForms__/pmh/vaccination/central.xml</file>
 
-  <file>__subForms__/pmh/vaccination/central.xml</file>
+  </MedForm>
+
+  <MedForm name="Maternity::PMH::Blood">
+    <label lang="xx">Blood</label>
+    <label lang="fr">Sang</label>
+    <icon>__theme__/stethoscope.png</icon>
+    <options>NoEpisode;DontPrintEmptyValues</options>
+    <file>__subForms__/generic/blood_type/central.xml</file>
+  </MedForm>
+
+  <MedForm name="Maternity::PMH::Gynecology">
+    <label lang="xx">Gynecology</label>
+    <label lang="fr">Gynécologie</label>
+    <icon>__theme__/stethoscope.png</icon>
+    <options>NoEpisode;DontPrintEmptyValues</options>
+
+    <file>__subForms__/pmh/pmhgynobst/central.xml</file>
+    <file>__subForms__/generic/pap_smear/central.xml</file>
+
+  </MedForm>
+
+  <MedForm name="Maternity::PMH::Obstetrics">
+    <label lang="xx">Obstetrics</label>
+    <label lang="fr">Obstétrique</label>
+    <icon>__theme__/stethoscope.png</icon>
+    <options>NoEpisode;DontPrintEmptyValues</options>
+
+    <file>__subForms__/pmh/pmhinterruptedpregnancy/central.xml</file>
+
+  </MedForm>
+
 
 </MedForm>
 
 
-<MedForm name="Maternity::Lab::Results">                                        
-    <label lang="xx">Lab Test Results</label>                                         
-    <label lang="fr">Résultats d'analyses biologiques</label>                                        
-    <icon>__theme__/labtests.png</icon>                                      
-    <options>NoEpisode;DontPrintEmptyValues</options>                           
-          <file>__subForms__/generic/labtest_result/central.xml</file>             
+<MedForm name="Maternity::Lab::Results">
+    <label lang="xx">Lab Test Results</label>
+    <label lang="fr">Résultats d'analyses biologiques</label>
+    <icon>__theme__/labtests.png</icon>
+    <options>NoEpisode;DontPrintEmptyValues</options>
+          <file>__subForms__/generic/labtest_result/central.xml</file>
 </MedForm>
 
 <MedForm name="Maternity::Obstetrics">
@@ -99,18 +131,18 @@
 
   <MedForm name="Maternity::Obstetrics::Consultation">
     <label lang="xx">Consultations</label>
-    <label lang="en">Consultations</label>
+    <label lang="fr">Consultations</label>
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
     <file>__subForms__/obstetrics/prenatal/central.xml</file>
   </MedForm>
 
-  <MedForm name="Maternity::Obstetrics::Prescription">                          
-    <label lang="xx">Prescriptions</label>                                      
-    <label lang="en">Prescriptions</label>                                      
-    <icon>__theme__/stethoscope.png</icon>                                      
-    <options>NoEpisode;DontPrintEmptyValues</options>                           
-    <file>__subForms__/obstetrics/prescription/central.xml</file>                   
+  <MedForm name="Maternity::Obstetrics::Prescription">
+    <label lang="xx">Prescriptions</label>
+    <label lang="en">Prescriptions</label>
+    <icon>__theme__/stethoscope.png</icon>
+    <options>NoEpisode;DontPrintEmptyValues</options>
+    <file>__subForms__/obstetrics/prescription/central.xml</file>
   </MedForm>
 </MedForm>
 

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+<formdescription>
+<authors>Jérôme Pinguet</authors>
+<version>1.0</version>
+<fmfv>0.9.6</fmfv>
+<cdate>2015-09-29</cdate>
+<lmdate>2015-09-29</lmdate>
+<icon>__theme__stethoscope.png</icon>
+<weblink>https://github.com/maternite/freemedforms</weblink>
+<bibliograpy/>
+
+<license>GPLv3</license>
+<description lang="xx">Blood type identification</description>
+<description lang="fr">Groupe sanguin</description>
+<category lang="xx">Past Medical History</category>
+<category lang="fr">Antécédents</category>
+<specialties lang="xx">Generic</specialties>
+<specialties lang="fr">Generic</specialties>
+
+<updateinfo>
+</updateinfo>
+
+</formdescription>
+
+<MedForm name="Maternity::Generic::Past::Medical::History::Blood::Type::Identification" uifilename="./ui/xx/bloodtype.ui">
+  <label lang="xx">Blood type</label>
+  <label lang="fr">Groupe sanguin</label>
+  <options>unique;HideHeaderOnUniqueEpisode;UseFormAsNameSpace</options>
+  <icon>__theme__/stethoscope.png</icon>
+
+  <Item type="shorttext" name="Patient::Name">
+    <uilink label="nameLabel" widget="nameLineEdit" layout="" />
+    <label lang="xx">Patient's full name</label>
+    <label lang="fr">Nom complet du patient</label>
+    <options></options>
+  </Item>
+
+  <Item type="date" name="Patient::DoB">
+    <uilink label="dobLabel" widget="dobDateEdit" layout="" />
+    <label lang="xx">Date of birth</label>
+    <label lang="fr">Date de naissance</label>
+    <options></options>
+  </Item>
+
+  <Item type="combo" name="Blood::Type::ABO">
+    <uilink label="bloodGroupLabel" widget="bloodGroupComboBox" layout="" />
+    <label lang="xx">Blood type</label>
+    <label lang="fr">Groupe sanguin</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">O</uuid>
+      <uuid id="2">A</uuid>
+      <uuid id="3">B</uuid>
+      <uuid id="4">AB</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">O</possible>
+      <possible id="2" lang="xx">A</possible>
+      <possible id="3" lang="xx">B</possible>
+      <possible id="4" lang="xx">AB</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">O</possible>
+      <possible id="2" lang="fr">A</possible>
+      <possible id="3" lang="fr">B</possible>
+      <possible id="4" lang="fr">AB</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="combo" name="Rh::Blood::Group::System::Rh::factor">
+    <uilink label="rhLabel" widget="rhComboBox" layout="" />
+    <label lang="xx">Rh factor</label>
+    <label lang="fr">Rhésus</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">Positive</uuid>
+      <uuid id="2">Negative</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">Positive</possible>
+      <possible id="2" lang="xx">Negative</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">Positif</possible>
+      <possible id="2" lang="fr">Négatif</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="helptext" name="Rh::Blood::Group::System::Label">
+    <uilink widget="phenotypeLabel" />
+    <label lang="xx">Rh blood group system (other antigens)</label>
+    <label lang="fr">Système Rhésus (autres antigènes)</label>
+  </Item>
+
+  <Item type="combo" name="Rh::Blood::Group::System::antigen::D">
+    <uilink label="phenotypeDLabel" widget="phenotypeDComboBox" layout="" />
+    <label lang="xx">D</label>
+    <label lang="fr">D</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">Positive</uuid>
+      <uuid id="2">Negative</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">+</possible>
+      <possible id="2" lang="xx">−</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">+</possible>
+      <possible id="2" lang="fr">−</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="combo" name="Rh::Blood::Group::System::antigen::C">
+    <uilink label="phenotypeCLabel" widget="phenotypeCComboBox" layout="" />
+    <label lang="xx">C</label>
+    <label lang="fr">C</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">Positive</uuid>
+      <uuid id="2">Negative</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">+</possible>
+      <possible id="2" lang="xx">−</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">+</possible>
+      <possible id="2" lang="fr">−</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="combo" name="Rh::Blood::Group::System::antigen::E">
+    <uilink label="phenotypeELabel" widget="phenotypeEComboBox" layout="" />
+    <label lang="xx">E</label>
+    <label lang="fr">E</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">Positive</uuid>
+      <uuid id="2">Negative</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">+</possible>
+      <possible id="2" lang="xx">−</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">+</possible>
+      <possible id="2" lang="fr">−</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+<Item type="combo" name="Rh::Blood::Group::System::antigen::c">
+    <uilink label="phenotypecLabel" widget="phenotypecComboBox" layout="" />
+    <label lang="xx">c</label>
+    <label lang="fr">c</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">Positive</uuid>
+      <uuid id="2">Negative</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">+</possible>
+      <possible id="2" lang="xx">−</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">+</possible>
+      <possible id="2" lang="fr">−</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="combo" name="Rh::Blood::Group::System::antigen::e">
+    <uilink label="phenotypeeLabel" widget="phenotypeeComboBox" layout="" />
+    <label lang="xx">e</label>
+    <label lang="fr">e</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">Positive</uuid>
+      <uuid id="2">Negative</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">+</possible>
+      <possible id="2" lang="xx">−</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">+</possible>
+      <possible id="2" lang="fr">−</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="combo" name="Rh::Blood::Group::System::antigen::K">
+    <uilink label="phenotypeKLabel" widget="phenotypeKComboBox" layout="" />
+    <label lang="xx">K</label>
+    <label lang="fr">K</label>
+    <value>
+      <uuid id="0">Not done</uuid>
+      <!--<sctid>385660001</sctid>-->
+      <uuid id="1">Positive</uuid>
+      <uuid id="2">Negative</uuid>
+
+      <possible id="0" lang="xx">ø</possible>
+      <possible id="1" lang="xx">+</possible>
+      <possible id="2" lang="xx">−</possible>
+
+      <possible id="0" lang="fr">ø</possible>
+      <possible id="1" lang="fr">+</possible>
+      <possible id="2" lang="fr">−</possible>
+    </value>
+    <options>DontPrintEmptyValues</options>
+  </Item>
+
+  <Item type="shorttext" name="Blood::Type::Identification::Delivered::By::Name">
+    <uilink label="deliveredLabel" widget="deliveredLineEdit" layout="" />
+    <label lang="xx">Blood type identification by</label>
+    <label lang="fr">Groupe sanguin détérminé par</label>
+    <placeholder lang="xx">Name of laboratory or healthcare provider</placeholder>
+    <placeholder lang="fr">Nom du laboratoire ou du centre de soin</placeholder>
+    <options></options>
+  </Item>
+
+  <Item type="date" name="Blood::Type::Determination::Date::1">                        
+    <uilink label="deter1Label" widget="deter1DateEdit" layout="" />                  
+    <label lang="xx">1st determination</label>                                      
+    <label lang="fr">1ère détermination</label>                                  
+    <options></options>                                                         
+  </Item>
+
+  <Item type="date" name="Blood::Type::Determination::Date::2">                       
+    <uilink label="deter2Label" widget="deter2DateEdit" layout="" />            
+    <label lang="xx">2nd determination</label>                                  
+    <label lang="fr">2ème détermination</label>                                                    <options></options>                                                         
+  </Item>
+
+  <Item type="shorttext" name="Blood::Type::Identification::Transcripted::By::Name">
+    <uilink label="transcriptLabel" widget="transcriptLineEdit" layout="" />      
+    <label lang="xx">Transcripted by</label>                       
+    <label lang="fr">Transcription réalisée par</label>                       
+    <placeholder lang="xx">Name of healthcare provider filling the form</placeholder>
+    <placeholder lang="fr">Nom du soignant ayant rempli ce formulaire</placeholder>
+    <options></options>                                                         
+  </Item>
+
+</MedForm>
+</FreeMedForms>

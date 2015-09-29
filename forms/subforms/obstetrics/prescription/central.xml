@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>                                          
+<!DOCTYPE FreeMedForms>                                                         
+                                                                                
+<FreeMedForms>                                                                  
+                                                                                
+  <formdescription>                                                             
+    <authors>Jérôme Pinguet</authors>                                           
+    <version>1.0</version>                                                     
+    <fmfv>0.9.6</fmfv>                                                          
+    <cdate>2015-09-22</cdate>                                                   
+    <lmdate>2015-09-22</lmdate>                                                 
+    <icon>__theme__stethoscope.png</icon>                                       
+    <weblink>https://github.com/maternite/freemedforms</weblink>                
+    <bibliograpy/>                                                              
+                                                                                
+    <license>GPLv3</license>                                                    
+    <description lang="xx">Obstetrics textual prescription</description>                  
+    <description lang="fr">Prescription textuelle obstétrique</description>                 
+    <category lang="xx">Prescription</category>                                 
+    <category lang="fr">Prescription</category>                                 
+    <specialties lang="xx">Obstetrics</specialties>                             
+    <specialties lang="fr">Obstétrique</specialties>                            
+                                                                                
+    <updateinfo>                                                                
+    </updateinfo>                                                               
+                                                                                
+  </formdescription>
+
+<MedForm name="Maternity::Obstetrics::Prescription::Text">                                    
+      <label lang="xx">Textual prescription</label>                            
+      <label lang="fr">Prescription textuelle</label>                         
+      <icon>__theme__/edit.png</icon>                                           
+      <options>DontPrintEmptyValues</options>                                   
+      <file type="htmlprintmask">./html/xx/padtools_textual_prescription_mask.html</file>
+      <file type="htmlexportmask">./html/xx/padtools_textual_prescription_mask.html</file>
+                                                                                
+      <Item name="FileNavigationButton" type="buttonmenupath">                  
+        <label lang="xx">Select a file (replacement with confirmation).</label>  
+        <label lang="fr">Sélectionnez un fichier (remplacement avec confirmation).</label>
+        <tooltip lang="xx">Select a file. Its content will be included in the text editor.</tooltip>
+        <tooltip lang="fr">Sélectionnez un fichier et son contenu sera inséré dans l'éditeur de texte.</tooltip>
+        <icon>__theme__/fileopen.png</icon>                                     
+        <path>__userDocuments__</path>                                          
+        <filter>*.htm;*.html;*.txt;*.rtf</filter>                               
+        <populate>Maternity::Obstetrics::Prescription::Text::Content</populate>                   
+      </Item>                                                                   
+                                                                                
+      <Item type="texteditor" name="Maternity::Obstetrics::Prescription::Text::Content">          
+        <label lang="xx">Textual prescription</label>                           
+        <label lang="fr">Prescription textuelle</label>                         
+        <options>FullEditor;DontPrintEmptyValues;PrintDuplicata;expanded</options>
+        <papers>Prescription</papers>                                           
+      </Item>                                                                   
+</MedForm>
+
+</FreeMedForms>
