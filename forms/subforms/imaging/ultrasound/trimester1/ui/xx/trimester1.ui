@@ -128,14 +128,14 @@
        <item>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label">
+          <widget class="QLabel" name="fetus1MeanSacDiameterLabel">
            <property name="text">
             <string>mean sac diameter</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QSpinBox" name="spinBox">
+          <widget class="QSpinBox" name="fetus1MeanSacDiameterSpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -152,38 +152,38 @@
           </widget>
          </item>
          <item row="0" column="3">
-          <widget class="QSpinBox" name="spinBox_2"/>
+          <widget class="QSpinBox" name="fetus1MeanSacDiameterWeekSpinBox"/>
          </item>
          <item row="0" column="4">
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="fetus1MeanSacDiameterWeekLabel">
            <property name="text">
-            <string>sa</string>
+            <string>wa</string>
            </property>
           </widget>
          </item>
          <item row="0" column="5">
-          <widget class="QSpinBox" name="spinBox_3">
+          <widget class="QSpinBox" name="fetus1MeanSacDiameterDaySpinBox">
            <property name="maximum">
             <number>6</number>
            </property>
           </widget>
          </item>
          <item row="0" column="6">
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="fetus1MeanSacDiameterDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label_2">
+          <widget class="QLabel" name="fetus1CRLLabel">
            <property name="text">
             <string>crown-rump length</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QSpinBox" name="spinBox_4">
+          <widget class="QSpinBox" name="fetus1CRLSpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -200,38 +200,38 @@
           </widget>
          </item>
          <item row="1" column="3">
-          <widget class="QSpinBox" name="spinBox_5"/>
+          <widget class="QSpinBox" name="fetus1CRLWeekSpinBox"/>
          </item>
          <item row="1" column="4">
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="fetus1CRLWeekLabel">
            <property name="text">
-            <string>sa</string>
+            <string>wa</string>
            </property>
           </widget>
          </item>
          <item row="1" column="5">
-          <widget class="QSpinBox" name="spinBox_6">
+          <widget class="QSpinBox" name="fetus1CRLDaySpinBox">
            <property name="maximum">
             <number>6</number>
            </property>
           </widget>
          </item>
          <item row="1" column="6">
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="fetus1CRLDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label_3">
+          <widget class="QLabel" name="fetus1BPDLabel">
            <property name="text">
             <string>biparietal diameter</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QSpinBox" name="spinBox_7">
+          <widget class="QSpinBox" name="fetus1BPDSpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -248,17 +248,17 @@
           </widget>
          </item>
          <item row="2" column="3">
-          <widget class="QSpinBox" name="spinBox_8"/>
+          <widget class="QSpinBox" name="fetus1BPDWeekSpinBox"/>
          </item>
          <item row="2" column="4">
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="fetus1BPDWeekLabel">
            <property name="text">
-            <string>sa</string>
+            <string>wa</string>
            </property>
           </widget>
          </item>
          <item row="2" column="5">
-          <widget class="QSpinBox" name="spinBox_9">
+          <widget class="QSpinBox" name="fetus1BPDDaySpinBox">
            <property name="maximum">
             <number>6</number>
            </property>
@@ -272,14 +272,14 @@
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label_4">
+          <widget class="QLabel" name="fetus1HeadCircumferenceLabel">
            <property name="text">
             <string>head circumference</string>
            </property>
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QSpinBox" name="spinBox_10">
+          <widget class="QSpinBox" name="fetus1HeadCircumferenceSpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -296,38 +296,38 @@
           </widget>
          </item>
          <item row="3" column="3">
-          <widget class="QSpinBox" name="spinBox_11"/>
+          <widget class="QSpinBox" name="fetus1HeadCircumferenceWeekSpinBox"/>
          </item>
          <item row="3" column="4">
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="fetus1HeadCircumferenceWeekLabel">
            <property name="text">
-            <string>sa</string>
+            <string>wa</string>
            </property>
           </widget>
          </item>
          <item row="3" column="5">
-          <widget class="QSpinBox" name="spinBox_12">
+          <widget class="QSpinBox" name="fetus1HeadCircumferenceDaysSpinBox">
            <property name="maximum">
             <number>6</number>
            </property>
           </widget>
          </item>
          <item row="3" column="6">
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="fetus1HeadCircumferenceDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
           </widget>
          </item>
          <item row="4" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label_5">
+          <widget class="QLabel" name="fetus1AbdominalCircumferenceLabel">
            <property name="text">
             <string>abdominal circumference</string>
            </property>
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QSpinBox" name="spinBox_13">
+          <widget class="QSpinBox" name="fetus1AbdominalCircumferenceSpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -344,38 +344,38 @@
           </widget>
          </item>
          <item row="4" column="3">
-          <widget class="QSpinBox" name="spinBox_14"/>
+          <widget class="QSpinBox" name="fetus1AbdominalCircumferenceWeekSpinBox"/>
          </item>
          <item row="4" column="4">
-          <widget class="QLabel" name="label_9">
+          <widget class="QLabel" name="fetus1AbdominalCircumferenceWeekLabel">
            <property name="text">
-            <string>sa</string>
+            <string>wa</string>
            </property>
           </widget>
          </item>
          <item row="4" column="5">
-          <widget class="QSpinBox" name="spinBox_15">
+          <widget class="QSpinBox" name="fetus1AbdominalCircumferenceDaySpinBox">
            <property name="maximum">
             <number>6</number>
            </property>
           </widget>
          </item>
          <item row="4" column="6">
-          <widget class="QLabel" name="label_10">
+          <widget class="QLabel" name="fetus1AbdominalCircumferenceDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label_6">
+          <widget class="QLabel" name="fetus1TADLabel">
            <property name="text">
             <string>transverse abdominal diameter</string>
            </property>
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QSpinBox" name="spinBox_16">
+          <widget class="QSpinBox" name="fetus1TADSpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -392,38 +392,38 @@
           </widget>
          </item>
          <item row="5" column="3">
-          <widget class="QSpinBox" name="spinBox_17"/>
+          <widget class="QSpinBox" name="fetus1TADWeekSpinBox"/>
          </item>
          <item row="5" column="4">
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="fetus1TADWeekLabel">
            <property name="text">
-            <string>sa</string>
+            <string>wa</string>
            </property>
           </widget>
          </item>
          <item row="5" column="5">
-          <widget class="QSpinBox" name="spinBox_18">
+          <widget class="QSpinBox" name="fetus1TADDaySpinBox">
            <property name="maximum">
             <number>6</number>
            </property>
           </widget>
          </item>
          <item row="5" column="6">
-          <widget class="QLabel" name="label_12">
+          <widget class="QLabel" name="fetus1TADDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
           </widget>
          </item>
          <item row="6" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label_7">
+          <widget class="QLabel" name="fetus1FLLabel">
            <property name="text">
             <string>femur length</string>
            </property>
           </widget>
          </item>
          <item row="6" column="1">
-          <widget class="QSpinBox" name="spinBox_19">
+          <widget class="QSpinBox" name="fetus1FLSpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -440,38 +440,38 @@
           </widget>
          </item>
          <item row="6" column="3">
-          <widget class="QSpinBox" name="spinBox_20"/>
+          <widget class="QSpinBox" name="fetus1FLWeekSpinBox"/>
          </item>
          <item row="6" column="4">
-          <widget class="QLabel" name="label_13">
+          <widget class="QLabel" name="fetus1FLWeekLabel">
            <property name="text">
-            <string>sa</string>
+            <string>wa</string>
            </property>
           </widget>
          </item>
          <item row="6" column="5">
-          <widget class="QSpinBox" name="spinBox_21">
+          <widget class="QSpinBox" name="fetus1FLDaySpinBox">
            <property name="maximum">
             <number>6</number>
            </property>
           </widget>
          </item>
          <item row="6" column="6">
-          <widget class="QLabel" name="label_14">
+          <widget class="QLabel" name="fetus1FLDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
           </widget>
          </item>
          <item row="7" column="0">
-          <widget class="QLabel" name="prenatalHeartbeatF1Label_8">
+          <widget class="QLabel" name="fetus1NuchalTranslucencyLabel">
            <property name="text">
             <string>nuchal translucency</string>
            </property>
           </widget>
          </item>
          <item row="7" column="1">
-          <widget class="QSpinBox" name="spinBox_22">
+          <widget class="QSpinBox" name="fetus1NuchalTranslucencySpinBox">
            <property name="suffix">
             <string>mm</string>
            </property>
@@ -485,14 +485,14 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLabel" name="presentationF1Label">
+          <widget class="QLabel" name="fetus1BiometryCommentLabel">
            <property name="text">
             <string>comment</string>
            </property>
           </widget>
          </item>
          <item>
-          <layout class="QFormLayout" name="formLayout"/>
+          <layout class="QFormLayout" name="fetus1BiometryCommentFormLayout"/>
          </item>
         </layout>
        </item>
@@ -500,7 +500,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_2">
+     <widget class="QGroupBox" name="fetus1MorphologyGroupBox">
       <property name="title">
        <string>morphologyGroupBox</string>
       </property>
@@ -508,109 +508,109 @@
        <item>
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
-          <widget class="QLabel" name="label_15">
+          <widget class="QLabel" name="fetus1CranialStructureLabel">
            <property name="text">
             <string>cranial structure</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout"/>
+          <layout class="QHBoxLayout" name="fetus1CranialStructureRadioLayout"/>
          </item>
          <item row="0" column="2">
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="fetus1CranialStructureLineEdit"/>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="label_16">
+          <widget class="QLabel" name="fetus1IntracranialStructureLabel">
            <property name="text">
             <string>intracranial structure</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+          <layout class="QHBoxLayout" name="fetus1IntracranialStructureRadioLayout"/>
          </item>
          <item row="1" column="2">
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="fetus1IntracranialStructureLineEdit"/>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="label_17">
+          <widget class="QLabel" name="fetus1StomachPositionLabel">
            <property name="text">
             <string>stomach position</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+          <layout class="QHBoxLayout" name="fetus1StomachPositionRadioLayout"/>
          </item>
          <item row="2" column="2">
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="fetus1StomachPositionLineEdit"/>
          </item>
          <item row="3" column="0">
-          <widget class="QLabel" name="label_18">
+          <widget class="QLabel" name="fetus1AbdominalWallLabel">
            <property name="text">
             <string>abdominal wall</string>
            </property>
           </widget>
          </item>
          <item row="3" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+          <layout class="QHBoxLayout" name="fetus1AbdominalWallRadioLayout"/>
          </item>
          <item row="3" column="2">
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="fetus1AbdominalWallLineEdit"/>
          </item>
          <item row="4" column="0">
-          <widget class="QLabel" name="label_19">
+          <widget class="QLabel" name="fetus1RachisLabel">
            <property name="text">
             <string>rachis</string>
            </property>
           </widget>
          </item>
          <item row="4" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout_5"/>
+          <layout class="QHBoxLayout" name="fetus1RachisRadioLayout"/>
          </item>
          <item row="4" column="2">
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="fetus1RachisLineEdit"/>
          </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="label_20">
+          <widget class="QLabel" name="fetus1BladderLabel">
            <property name="text">
             <string>bladder</string>
            </property>
           </widget>
          </item>
          <item row="5" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+          <layout class="QHBoxLayout" name="fetus1BladderRadioLayout"/>
          </item>
          <item row="5" column="2">
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="fetus1BladderLineEdit"/>
          </item>
          <item row="6" column="0">
-          <widget class="QLabel" name="label_21">
+          <widget class="QLabel" name="fetus1LimbsLabel">
            <property name="text">
             <string>4 limbs 3 segments</string>
            </property>
           </widget>
          </item>
          <item row="6" column="1">
-          <layout class="QHBoxLayout" name="horizontalLayout_7"/>
+          <layout class="QHBoxLayout" name="fetus1LimbsRadioLayout"/>
          </item>
          <item row="6" column="2">
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="fetus1LimbsLineEdit"/>
          </item>
         </layout>
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QLabel" name="positionF1Label">
+          <widget class="QLabel" name="fetus1MorphologyCommentLabel">
            <property name="text">
             <string>comment</string>
            </property>
           </widget>
          </item>
          <item>
-          <layout class="QFormLayout" name="formLayout_2"/>
+          <layout class="QFormLayout" name="fetus1MorphologyCommentFormLayout"/>
          </item>
         </layout>
        </item>
@@ -620,35 +620,27 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_18">
       <item>
-       <widget class="QLabel" name="gestationalAgeHelpTextLabel_2">
+       <widget class="QLabel" name="fetus1UsGestationalAgeHelpTextLabel">
         <property name="text">
          <string>gestational age</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksValueLabel_2">
-        <property name="text">
-         <string>weeksValue</string>
-        </property>
-       </widget>
+       <widget class="QSpinBox" name="fetus1UsGestationalAgeWeekSpinBox"/>
       </item>
       <item>
-       <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksLabel_2">
+       <widget class="QLabel" name="fetus1UsGestationalAgeWeekLabel">
         <property name="text">
          <string>weeks</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysValueLabel_2">
-        <property name="text">
-         <string>daysValue</string>
-        </property>
-       </widget>
+       <widget class="QSpinBox" name="fetus1UsGestationalAgeDaySpinBox"/>
       </item>
       <item>
-       <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysLabel_2">
+       <widget class="QLabel" name="fetus1UsGestationalAgeDayLabel">
         <property name="text">
          <string>days</string>
         </property>
@@ -1066,7 +1058,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QGroupBox" name="groupBox_4">
+  <widget class="QGroupBox" name="impressionGroupBox">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -1080,38 +1072,38 @@
    </property>
    <layout class="QGridLayout" name="gridLayout_7">
     <item row="0" column="0" colspan="2">
-     <layout class="QFormLayout" name="formLayout_3"/>
+     <layout class="QFormLayout" name="impressionFormLayout"/>
     </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label_25">
+     <widget class="QLabel" name="usDueDateLabel">
       <property name="text">
        <string>ultrasound due date</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QDateEdit" name="dateEdit">
+     <widget class="QDateEdit" name="usDueDateDateEdit">
       <property name="displayFormat">
        <string>dd/MM/yyyy</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QLabel" name="label_26">
+     <widget class="QLabel" name="nextUsLabel">
       <property name="text">
        <string>next ultrasound</string>
       </property>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QDateEdit" name="dateEdit_2">
+     <widget class="QDateEdit" name="nextUsDateEdit">
       <property name="displayFormat">
        <string>dd/MM/yyyy</string>
       </property>
      </widget>
     </item>
     <item row="3" column="0" colspan="2">
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="informedConsentCheckBox">
       <property name="text">
        <string>informed consent</string>
       </property>
