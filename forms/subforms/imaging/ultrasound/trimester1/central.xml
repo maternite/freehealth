@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jérôme Pinguet</authors>
+    <version>1.0</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-10-01</cdate>
+    <lmdate>2015-10-01</lmdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">First Trimester Ultrasound</description>
+    <description lang="fr">Échographie du 1er trimestre</description>
+    <category lang="xx">Imaging</category>
+    <category lang="fr">Imagerie</category>
+    <specialties lang="xx">Obstetrics</specialties>
+    <specialties lang="fr">Obstétrique</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <file type="script" name="onload">./scripts/xx/trimester1.js</file>
+
+  <MedForm name="Maternity::Imaging::Ultrasound::Trimester1" uifilename="./ui/xx/trimester1.ui">
+    <label lang="xx">First Trimester Ultrasound</label>
+    <label lang="fr">Échographie du 1er trimestre</label>
+    <options>UseFormAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+<!--
+    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
+    <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
+-->
+  <Item type="group" name="ObstetricalCalendar">
+    <uilink label="" widget="obstetricalCalendarGroupBox" layout="" />
+    <label lang="xx">Obstetrical calendar</label>
+    <label lang="fr">Calendrier obstétrical</label>
+    <options>collapsible;expanded</options>
+
+      <Item type="date" name="ObstetricalCalendar::LastMentrualPeriod">
+        <uilink label="lastMenstrualPeriodLabel" layout="" widget="lastMenstrualPeriodDateEdit"/>
+        <label lang="xx">Last Menstrual Period (LMP)</label>
+        <label lang="fr">Date des Dernières Règles (DDR)</label>
+        <patientdata>LastMenstrualPeriod</patientdata>
+        <options>DontPrintEmptyValues</options>
+        <script>
+          <onValueChanged>namespace.com.freemedforms.imaging.ultrasound.trimester1.chooseDateToUse();</onValueChanged>
+        </script>
+      </Item>
+
+      <Item type="date" name="ObstetricalCalendar::ConceptionDate">
+        <uilink label="conceptionDateLabel" layout="" widget="conceptionDateDateEdit"/>
+        <label lang="xx">Conception date</label>
+        <label lang="fr">Date de conception</label>
+        <patientdata>LastMenstrualPeriod</patientdata>
+        <options>DontPrintEmptyValues</options>
+        <script>
+          <onValueChanged>namespace.com.freemedforms.imaging.ultrasound.trimester1.chooseDateToUse();</onValueChanged>
+        </script>
+      </Item>
+
+      <Item name="ObstetricalCalendar::UseLmpDateOfConceptionHelpText" type="helptext">
+        <uilink label="useLmpDateOfConceptionLabel" layout="" widget=""/>
+        <label lang="xx">Which date to use?</label>
+        <label lang="fr">Quelle date utiliser?</label>
+        <options>printable</options>
+        <value>
+          <default></default>
+        </value>
+      </Item>
+
+      <Item type="check" name="ObstetricalCalendar::UseLMP::Check">
+        <uilink widget="useLmpCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
+        <label lang="xx">LMP</label>
+        <label lang="fr">DDR</label>
+        <value>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+        </value>
+        <script>
+          <onload>namespace.com.freemedforms.imaging.ultrasound.trimester1.setLmp();</onload>
+          <onValueChanged>namespace.com.freemedforms.imaging.ultrasound.trimester1.setLmp();</onValueChanged>
+        </script>
+      </Item>
+
+      <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">
+        <uilink widget="useDateOfConceptionCheck"/>
+        <options>DontPrintEmptyValues;OnLeft</options>
+        <label lang="xx">Conception date (only in case of ART or IUI)</label>
+        <label lang="fr">Date de conception (uniquement en cas de procréation médicalement assistée)</label>
+        <value>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+        </value>
+        <script>
+          <onValueChanged>namespace.com.freemedforms.imaging.ultrasound.trimester1.setDateOfConception();</onValueChanged>
+        </script>
+      </Item>
+
+      <Item type="radio" name="ObstetricalCalendar::LmpDeterminedBy::Radio">
+          <uilink label="lmpDeterminedByLabel" widget="" layout="lmpDeterminedByRadioLayout"/>
+          <label lang="xx">LMP determined by</label>
+          <label lang="fr">DDR déterminée par</label>
+          <options>compact</options>
+          <value>
+            <uuid id="0">History taking</uuid>
+            <!--<sctid id="0">84100007</sctid>-->
+            <uuid id="1">Ultrasound scan for fetal cephalometry</uuid>
+            <!--<sctid id="1">169224002</sctid>-->
+            <uuid id="2">not done</uuid>
+            <!--<sctid id="2">385660001</sctid>-->
+            <possible id="0" lang="xx">History taking</possible>
+            <possible id="1" lang="xx">Ultrasound scan (cephalometry)</possible>
+            <possible id="2" lang="xx">∅</possible>
+            <print id="0" lang="xx">History taking</print>
+            <print id="1" lang="xx">Ultrasound scan (cephalometry)</print>
+            <print id="2" lang="xx">Not evaluated</print>
+            <possible id="0" lang="fr">Anamnèse</possible>
+            <possible id="1" lang="fr">Échographie du 1er trimestre</possible>
+            <possible id="2" lang="fr">∅</possible>
+            <print id="0" lang="fr">Anamnèse</print>
+            <print id="1" lang="fr">Échographie du 1er trimestre</print>
+            <print id="2" lang="fr">Item non évalué</print>
+          </value>
+        </Item>
+
+      <Item type="shorttext" name="ObstetricalCalendar::LmpDeterminedBy::Comment">
+          <uilink label="" widget="lmpDeterminedByLineEdit" layout=""/>
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <placeholder lang="xx">Comment</placeholder>
+          <placeholder lang="fr">Commentaire</placeholder>
+          <options>DontPrintEmptyValues;readonly;html</options>
+      </Item>
+
+      <Item name="ObstetricalCalendar::gestationalAgeHelpText" type="helptext">
+        <uilink label="gestationalAgeHelpTextLabel" layout="" widget=""/>
+        <label lang="xx">Gestational age in weeks of amenorrhoea</label>
+        <label lang="fr">Âge gestationnel en semaines d'aménorrhée</label>
+        <options>printable</options>
+        <value>
+          <default>The default value</default>
+        </value>
+      </Item>
+
+      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText">
+        <uilink label="currentWeeksAmenorrhoeaWeeksLabel" layout="" widget=""/>
+        <label lang="xx">weeks</label>
+        <label lang="fr">semaines</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText">
+        <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget=""/>
+        <label lang="xx">days</label>
+        <label lang="fr">jours</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="helptext" name="ObstetricalCalendar::Edd::HelpText">
+          <uilink label="eddLabel" widget="" layout=""/>
+          <label lang="xx">Estimated date of delivery</label>
+          <label lang="fr">Terme</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <options>DontPrintEmptyValues;readonly;html</options>
+      </Item>
+
+  </Item> <!-- end of group obstetrical calendar -->
+
+  <Item type="group" name="Subjective">
+    <uilink label="" widget="subjectiveGroupBox" layout="" />
+    <label lang="xx">Subjective</label>
+    <label lang="fr">Subjectif</label>
+    <options>collapsible;expanded</options>
+
+    <Item type="texteditor" name="ClinicalData">
+      <uilink label="clinicalDataLabel" widget="" layout="clinicalDataFormLayout" />
+      <label lang="xx">Clinical data</label>
+      <label lang ="fr">Renseignement clinique</label>
+      <options>FullEditor</options>
+    </Item>
+
+  </Item> <!-- end of Subjective group -->
+
+
+  <Item type="group" name="Device::GroupBox">
+      <uilink label="" widget="deviceGroupBox" />
+      <label lang="xx">Device</label>
+      <label lang="fr">Appareil</label>
+      <options>collapsible;expanded</options>
+
+       <Item type="shorttext" name="Ultrasound::Device">
+          <uilink label="deviceLabel" widget="deviceLineEdit" layout=""/>
+          <label lang="xx">Ultrasound Device</label>
+          <label lang="fr">Appareil d'échographie</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <default lang="xx">CHISON IVIS 60 Expert</default>
+          <default lang="xx">CHISON IVIS 60 Expert</default>
+      </Item>
+
+   </Item> <!-- end of group Device -->
+
+   <Item type="group" name="Fetus">
+
+      <uilink label="" widget="fetusGroupBox" layout="" />
+      <label lang="xx">Fetus number</label>
+      <label lang="fr">Nombre de fœtus</label>
+      <options>collapsible;expanded</options>
+
+        <Item type="spin" name="FetusNumber">
+          <uilink label="fetusNumberLabel" widget="fetusNumberSpinBox" layout="" />
+          <label lang="xx">Number of fetus</label>
+          <label lang="fr">Nombre de fœtus</label>
+          <min>1</min>
+          <max>6</max>
+          <step>1</step>
+        </Item>
+
+    </Item>
+
+    <Item type="group" name="Chorionicity">
+      <uilink label="" widget="chorionicityGroupBox" layout="" />
+      <label lang="xx">Chorionicity</label>
+      <label lang="fr">Chorionicité</label>
+      <options>collapsible;expanded</options>
+
+        <Item type="shortext" name="Chorionicity">
+          <uilink label="chorionicityLabel" widget="chorionicityLineEdit" layout="" />
+          <label lang="xx">Chorionicity</label>
+          <label lang="fr">Chorionicité</label>
+        </Item>
+
+        <Item type="shortext" name="Amnionicity">
+          <uilink label="amnionicityLabel" widget="amnionicityLineEdit" layout="" />
+          <label lang="xx">Amnionicity</label>
+          <label lang="fr">Amnionicité</label>
+        </Item>
+
+    </Item> <!-- end of group Chorionicity -->
+
+      <Item type="group" name="Fetus1GroupBox">
+        <uilink widget="fetus1GroupBox"/>
+        <label lang="xx">Fetus 1</label>
+        <label lang="fr">Fœtus 1</label>
+        <options>DontPrintEmptyValues;collapsible;expanded</options>
+
+        <Item type="group" name="Fetus1::Fetal::Vitality::GroupBox">
+          <uilink widget="fetus1FetalVitalityGroupBox"/>
+          <label lang="xx">Vitality</label>
+          <label lang="fr">Vitalité</label>
+          <options>DontPrintEmptyValues;collapsible;expanded</options>
+
+          <Item type="radio" name="Fetus1::Fetal::Vitality::Pregnancy::Radio">
+            <uilink label="fetus1PregnancyLabel" widget="" layout="fetus1PregnancyRadioLayout"/>
+              <label lang="xx">Pregnancy</label>
+              <label lang="fr">Grossesse</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">intrauterine</uuid>
+                <uuid id="2">ectopic</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">intrauterine</possible>
+                <possible id="2" lang="xx">ectopic</possible>
+                <print id="0" lang="xx">∅</print>
+                <print id="1" lang="xx">Intrauterine pregnancy</print>
+                <print id="2" lang="xx">Ectopic pregnancy</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">intra-utérine</possible>
+                <possible id="2" lang="fr">extra-utérine</possible>
+                <print id="0" lang="fr">∅</print>
+                <print id="1" lang="fr">Grossesse intra-utérine</print>
+                <print id="2" lang="fr">Grossesse extra-utérine</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1::Fetal::Vitality::Pregnancy::Comment" type="shorttext">
+            <uilink label="" widget="fetus1PregnancyLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1::Fetal::Vitality::Pregnancy::Fetal::Movement::Radio">
+            <uilink label="fetus1FetalMovementLabel" widget="" layout="fetus1FetalMovementRadioLayout"/>
+            <label lang="xx">Fetal movement</label>
+            <label lang="fr">Mobilité fœtale</label>
+            <value>
+            <uuid id="0">ø</uuid>
+            <!--<sctid id="0"></sctid>-->
+            <uuid id="1">normal</uuid>
+            <!--<sctid id="1"></sctid>-->
+            <uuid id="2">diminished</uuid>
+            <!--<sctid id="2"></sctid>-->
+            <uuid id="3">absent</uuid>
+            <!--<sctid id="3"></sctid>-->
+            <possible id="0" lang="xx">ø</possible>
+            <possible id="1" lang="xx">normal</possible>
+            <possible id="2" lang="xx">diminished</possible>
+            <possible id="3" lang="xx">absent</possible>
+            <possible id="0" lang="fr">ø</possible>
+            <possible id="1" lang="fr">normale</possible>
+            <possible id="2" lang="fr">diminuée</possible>
+            <possible id="3" lang="fr">absente</possible>
+            </value>
+            <options>resizeToContent;DontPrintEmptyValue</options>
+          </Item>
+
+          <Item name="Fetus1::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
+            <uilink label="" widget="fetus1FetalMovementLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="spin" name="Fetus1::Fetal::Vitality::Fetal::Heart::Rate::SpinBox">
+            <uilink label="fetus1FhrLabel" widget="fetus1FhrSpinBox" layout=""/>
+            <label lang="xx">Fetal Heart Rate</label>
+            <label lang="fr">Fréquence cardiaque fœtale</label>
+          </Item>
+
+          <Item name="Fetus1::Fetal::Vitality::Fetal::Heart::Rate::Comment" type="shorttext">
+            <uilink label="" widget="fetus1FhrLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+        </Item> <!-- end of Fetal Vitality group -->
+
+
+
+      <Item type="group" name="Fetus1::Biometry::GroupBox">
+        <uilink widget="fetus1BiometryGroupBox"/>
+        <label lang="xx">Biometry</label>
+        <label lang="fr">Biométrie</label>
+        <options>DontPrintEmptyValues;collapsible</options>
+
+        <Item type="spin" name="Fetus1::Biometry::Mean::Sac::Diameter::SpinBox">
+            <uilink label="fetus1MeanSacDiameterLabel" widget="fetus1MeanSacDiameterSpinBox" layout=""/>
+            <label lang="xx">MSD (Mean Sac Diameter)</label>
+            <label lang="fr">SG (Sac gestationnel)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Mean::Sac::Diameter::Week::SpinBox">
+            <uilink label="fetus1MeanSacDiameterWeekLabel" widget="fetus1MeanSacDiameterWeekSpinBox" layout=""/>
+            <label lang="xx">Week(s)</label>
+            <label lang="fr">semaine(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Mean::Sac::Diameter::Day::SpinBox">
+            <uilink label="fetus1MeanSacDiameterDayLabel" widget="fetus1MeanSacDiameterDaySpinBox" layout=""/>
+            <label lang="xx">Day(s)</label>
+            <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Crown::Rump::Length::SpinBox">
+            <uilink label="fetus1CRLLabel" widget="fetus1CRLSpinBox" layout=""/>
+            <label lang="xx">CRL (Crown Rump Length)</label>
+            <label lang="fr">LCC (Longueur cranio-caudale)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Crown::Rump::Length::Week::SpinBox">
+            <uilink label="fetus1CRLWeekLabel" widget="fetus1CRLWeekSpinBox" layout=""/>
+            <label lang="xx">Week(s)</label>
+            <label lang="fr">semaine(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Crown::Rump::Length::Day::SpinBox">
+            <uilink label="fetus1CRLDayLabel" widget="fetus1CRLDaySpinBox" layout=""/>
+            <label lang="xx">Day(s)</label>
+            <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Biparietal::Diameter::SpinBox">
+            <uilink label="fetus1BPDLabel" widget="fetus1BPDSpinBox" layout=""/>
+            <label lang="xx">BIP (Biparietal diameter)</label>
+            <label lang="fr">BIP (Diamètre bipariétal)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Biparietal::Diameter::Week::SpinBox">
+            <uilink label="fetus1BPDWeekLabel" widget="fetus1BPDWeekSpinBox" layout=""/>
+            <label lang="xx">Week(s)</label>
+            <label lang="fr">semaine(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Biparietal::Diameter::Day::SpinBox">
+            <uilink label="fetus1BPDDayLabel" widget="fetus1BPDDaySpinBox" layout=""/>
+            <label lang="xx">Day(s)</label>
+            <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Head::Circumference::SpinBox">
+            <uilink label="fetus1HeadCircumferenceLabel" widget="fetus1HeadCircumferenceSpinBox" layout=""/>
+            <label lang="xx">HC (Head Circumference)</label>
+            <label lang="fr">PC (Périmètre céphalique)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::::Head::Circumference::Week::SpinBox">
+            <uilink label="fetus1HeadCircumferenceWeekLabel" widget="fetus1HeadCircumferenceWeekSpinBox" layout=""/>
+            <label lang="xx">Week(s)</label>
+            <label lang="fr">semaine(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Head::Circumference::Day::SpinBox">
+            <uilink label="fetus1HeadCircumferenceDayLabel" widget="fetus1HeadCircumferenceDaysSpinBox" layout=""/>
+            <label lang="xx">Day(s)</label>
+            <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Abdominal::Circumference::SpinBox">
+            <uilink label="fetus1AbdominalCircumferenceLabel" widget="fetus1AbdominalCircumferenceSpinBox" layout=""/>
+            <label lang="xx">AC (Abdominal circumference)</label>
+            <label lang="fr">CA (Circonférence abdominale)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Abdominal::Circumference::Week::SpinBox">
+            <uilink label="fetus1AbdominalCircumferenceWeekLabel" widget="fetus1AbdominalCircumferenceWeekSpinBox" layout=""/>
+            <label lang="xx">Week(s)</label>
+            <label lang="fr">semaine(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Abdominal::Circumference::Day::SpinBox">
+            <uilink label="fetus1AbdominalCircumferenceDayLabel" widget="fetus1AbdominalCircumferenceDaySpinBox" layout=""/>
+            <label lang="xx">Day(s)</label>
+            <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Transverse::Abdominal::Diameter::SpinBox">
+            <uilink label="fetus1TADLabel" widget="fetus1TADSpinBox"/>
+            <label lang="xx">TAD (Transverse Abdominal Diameter)</label>
+            <label lang="fr"></label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Transverse::Abdominal::Diameter::Week::SpinBox">
+            <uilink label="fetus1TADWeekLabel" widget="fetus1TADWeekSpinBox"/>
+            <label lang="xx">Week(s)</label>
+            <label lang="fr">semaines(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Transverse::Abdominal::Diameter::Day::SpinBox">
+            <uilink label="fetus1TADDayLabel" widget="fetus1TADDaySpinBox"/>
+            <label lang="xx">Day(s)</label>
+            <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Femur::Length::SpinBox">
+            <uilink label="fetus1FLLabel" widget="fetus1FLSpinBox"/>
+            <label lang="xx">FL (Femur Length)</label>
+            <label lang="fr">FL (Longueur du fémur)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Femur::Length::Week::SpinBox">
+            <uilink label="fetus1FLWeekLabel" widget="fetus1FLWeekSpinBox"/>
+            <label lang="xx">Week(s)</label>
+            <label lang="fr">semaine(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Femur::Length::Day::SpinBox">
+            <uilink label="fetus1FLDayLabel" widget="fetus1FLDaySpinBox"/>
+            <label lang="xx">Day(s)</label>
+            <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Nuchal::Translucency::SpinBox">
+            <uilink label="fetus1NuchalTranslucencyLabel" widget="fetus1NuchalTranslucencySpinBox"/>
+            <label lang="xx">Nuchal Translucency</label>
+            <label lang="fr">Clarté nuchale</label>
+        </Item>
+
+        <Item name="Fetus1::Biometry::Comment" type="texteditor">
+            <uilink label="fetus1BiometryCommentLabel" widget="" layout="fetus1BiometryCommentFormLayout" />
+            <label lang="xx">Comment</label>
+            <label lang="fr">Commentaire</label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+            <options>FullEditor</options>
+          </Item>
+
+
+      </Item> <!-- End Of Fetus1 Biometry GroupBox -->
+
+      <Item type="group" name="Fetus1::Morphology::GroupBox">
+        <uilink widget="fetus1MorphologyGroupBox"/>
+        <label lang="xx">Morphology</label>
+        <label lang="fr">Morphologie</label>
+        <options>DontPrintEmptyValues;collapsible</options>
+
+          <Item type="radio" name="Fetus1:Morphology::Cranial::Structure::Radio">
+            <uilink label="fetus1CranialStructureLabel" widget="" layout="fetus1CranialStructureRadioLayout"/>
+              <label lang="xx">Cranial structure</label>
+              <label lang="fr">Contour de la boîte crânienne</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Cranial::Structure::Comment" type="shorttext">
+            <uilink label="" widget="fetus1CranialStructureLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+            
+          <Item type="radio" name="Fetus1:Morphology::Intracranial::Structure::Radio">
+            <uilink label="fetus1IntracranialStructureLabel" widget="" layout="fetus1IntracranialStructureRadioLayout"/>
+              <label lang="xx">Intracranial structure</label>                        
+              <label lang="fr">Contenu céphalique</label>            
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Normal for term</uuid>                                      
+                <uuid id="2">Abnormal for term</uuid>                                    
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Normal for term</possible>                    
+                <possible id="2" lang="xx">Abnormal for term</possible>                  
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Normal for term</print>                          
+                <print id="2" lang="xx">Abnormal for term</print>                        
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Normal pour le terme</possible>                    
+                <possible id="2" lang="fr">Anormal pour le terme</possible>                   
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Normal pour le terme</print>                          
+                <print id="2" lang="fr">Anormal pour le terme</print>                         
+              </value>                                                          
+          </Item>
+
+          <Item name="Fetus1:Morphology::Intracranial::Structure::Comment" type="shorttext">
+            <uilink label="" widget="fetus1IntracranialStructureLineEdit" layout="" />
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Stomach::Position::Radio">
+            <uilink label="fetus1StomachPositionLabel" widget="" layout="fetus1StomachPositionRadioLayout"/>
+              <label lang="xx">Stomach position</label>                        
+              <label lang="fr">Estomac en position</label>            
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Normal</uuid>                                      
+                <uuid id="2">Abnormal</uuid>                                    
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Normal</possible>                    
+                <possible id="2" lang="xx">Abnormal</possible>                  
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Normal</print>                          
+                <print id="2" lang="xx">Abnormal</print>                        
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Normale</possible>                    
+                <possible id="2" lang="fr">Anormale</possible>                   
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Normale</print>                          
+                <print id="2" lang="fr">Anormale</print>                         
+              </value>                                                          
+          </Item>
+
+          <Item name="Fetus1:Morphology::Stomach::Position::Comment" type="shorttext">
+            <uilink label="" widget="fetus1StomachPositionLineEdit" layout="" />
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Abdominal::Wall::Radio">
+            <uilink label="fetus1AbdominalWallLabel" widget="" layout="fetus1AbdominalWallRadioLayout"/>
+              <label lang="xx">Abdominal wall</label>                        
+              <label lang="fr">Paroi abdominale</label>            
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Normal</uuid>                                      
+                <uuid id="2">Abnormal</uuid>                                    
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Normal</possible>                    
+                <possible id="2" lang="xx">Abnormal</possible>                  
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Normal</print>                          
+                <print id="2" lang="xx">Abnormal</print>                        
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Intègre</possible>                    
+                <possible id="2" lang="fr">Non intègre</possible>                   
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Intègre</print>                          
+                <print id="2" lang="fr">Non intègre</print>                         
+              </value>                                                          
+          </Item>
+
+          <Item name="Fetus1:Morphology::Abdominal::Wall::Comment" type="shorttext">
+            <uilink label="" widget="fetus1AbdominalWallLineEdit" layout="" />
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Rachis::Radio">
+            <uilink label="fetus1RachisLabel" widget="" layout="fetus1RachisRadioLayout"/>
+              <label lang="xx">Rachis</label>                   
+              <label lang="fr">Rachis</label>                       
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Normal for term</uuid>                             
+                <uuid id="2">Abnormal for term</uuid>                           
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Normal for term</possible>           
+                <possible id="2" lang="xx">Abnormal for term</possible>         
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Normal for term</print>                 
+                <print id="2" lang="xx">Abnormal for term</print>               
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Normal pour le terme</possible>      
+                <possible id="2" lang="fr">Anormal pour le terme</possible>     
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Normal pour le terme</print>            
+                <print id="2" lang="fr">Anormal pour le terme</print>           
+              </value>                                                          
+          </Item>
+
+          <Item name="Fetus1:Morphology::Rachis::Comment" type="shorttext">     
+            <uilink label="" widget="fetus1RachisLineEdit" layout="" />  
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item> 
+
+          <Item type="radio" name="Fetus1:Morphology::Bladder::Radio">  
+            <uilink label="fetus1BladderLabel" widget="" layout="fetus1BladderRadioLayout"/>
+              <label lang="xx">Bladder</label>                           
+              <label lang="fr">Vessie</label>                         
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Normal</uuid>                                      
+                <uuid id="2">Abnormal</uuid>                                    
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Normal</possible>                    
+                <possible id="2" lang="xx">Abnormal</possible>                  
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Normal</print>                          
+                <print id="2" lang="xx">Abnormal</print>                        
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Normale</possible>                   
+                <possible id="2" lang="fr">Anormale</possible>               
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Normale</print>                         
+                <print id="2" lang="fr">Anormale</print>                     
+              </value>                                                          
+          </Item>                                                               
+                                                                                
+          <Item name="Fetus1:Morphology::Bladder::Comment" type="shorttext">
+            <uilink label="" widget="fetus1BladderLineEdit" layout="" />  
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Limbs::Radio">          
+            <uilink label="fetus1LimbsLabel" widget="" layout="fetus1LimbsRadioLayout"/>
+              <label lang="xx">4 limbs of 3 segments each</label>                                  
+              <label lang="fr">4 membres comportant 3 segments chacun</label>                                   
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Yes</uuid>                                      
+                <uuid id="2">No</uuid>                                    
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Yes</possible>                    
+                <possible id="2" lang="xx">No</possible>                  
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Yes</print>                          
+                <print id="2" lang="xx">No</print>                        
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Oui</possible>                   
+                <possible id="2" lang="fr">Non</possible>                  
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Oui</print>                         
+                <print id="2" lang="fr">Non</print>                        
+              </value>                                                          
+          </Item>                                                               
+                                                                                
+          <Item name="Fetus1:Morphology::Limbs::Comment" type="shorttext">    
+            <uilink label="" widget="fetus1LimbsLineEdit" layout="" />        
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>
+
+          <Item name="Fetus1::Morphology::Comment" type="texteditor">               
+            <uilink label="fetus1MorphologyCommentLabel" widget="" layout="fetus1MorphologyCommentFormLayout" />
+            <label lang="xx">Comment</label>                                    
+            <label lang="fr">Commentaire</label>                                
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+            <options>FullEditor</options>                                       
+          </Item>
+
+        </Item> <!-- End Of Fetus1 Morphology GroupBox -->
+
+        <Item type="helptext" name="Fetus1::Gestational::Age:HelpText">
+          <uilink widget="fetus1UsGestationalAgeHelpTextLabel" />
+          <label lang="xx">Gestational age determined by ultrasound</label>
+          <label lang="fr">Âge gestationnel déterminé par échographie</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Gestational::Age::Week::SpinBox">
+            <uilink label="fetus1UsGestationalAgeWeekLabel" widget="fetus1UsGestationalAgeWeekSpinBox"/>    
+            <label lang="xx">Week(s)</label>                                    
+            <label lang="fr">semaine(s)</label>                                 
+        </Item>                                                                 
+                                                                                
+        <Item type="spin" name="Fetus1::Gestational::Age::Day::SpinBox"> 
+            <uilink label="fetus1UsGestationalAgeDayLabel" widget="fetus1UsGestationalAgeDaySpinBox"/>      
+            <label lang="xx">Day(s)</label>                                     
+            <label lang="fr">jour(s)</label>                                    
+        </Item> 
+        
+    </Item> <!-- end of Fetus1 group -->
+      
+    <Item type="group" name="Impression">
+      <uilink label="" widget="impressionGroupBox" layout="" />
+      <label lang="xx">Impression</label>
+      <label lang="fr">Conclusion</label>
+      <options>collapsible;expanded</options>
+
+     
+      <Item name="Impression::TextEditor" type="texteditor">
+
+          <uilink label="" widget="" layout="impressionFormLayout" />
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <placeholder lang="xx">xxx</placeholder>
+          <placeholder lang="fr">xxx</placeholder>
+      </Item>
+
+      <Item type="date" name="Ultrasound::Due::Date">
+        <uilink label="usDueDateLabel" widget="usDueDateDateEdit" />
+        <label lang="xx">Ultrasound due date</label>
+        <label lang="fr">Terme estimé par échographie</label>
+      </Item>
+
+      <Item type="date" name="Ultrasound::Next:Ultrasound">                           
+        <uilink label="nextUsLabel" widget="nextUsDateEdit" />            
+        <label lang="xx">Next ultrasound</label>                            
+        <label lang="fr">Prochaine échographie</label>                   
+      </Item>
+
+      <Item type="check" name="Informed::Consent::Checkbox">
+        <uilink widget="informedConsentCheckBox" />
+        <label lang="xx">Patient has been informed that not all anomalies can be detected.</label>
+        <label lang="fr">La patiente a été informée que l'examen échographique ne permet pas de dépister toutes les anomalies fœtales ce jour.</label>
+        <options>printonlychecked</options>
+      </Item>
+
+    </Item> <!-- end of group Impression -->
+
+  </MedForm>
+
+</FreeMedForms>

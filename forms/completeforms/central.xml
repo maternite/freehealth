@@ -123,6 +123,22 @@
           <file>__subForms__/generic/labtest_result/central.xml</file>
 </MedForm>
 
+<MedForm name="Maternity::Imaging">                                        
+    <label lang="xx">Imaging</label>                                   
+    <label lang="fr">Imagerie</label>                   
+    <icon>__theme__/labtests.png</icon>                                         
+    <options>NoEpisode;DontPrintEmptyValues</options>
+   
+    <MedForm name="Maternity::Imaging::Ultrasound">                                        
+    <label lang="xx">Ultrasound</label>                                   
+    <label lang="fr">Échographie</label>                   
+    <icon>__theme__/labtests.png</icon>                                         
+    <options>NoEpisode;DontPrintEmptyValues</options>                           
+          <file>__subForms__/imaging/ultrasound/trimester1/central.xml</file>          
+    </MedForm>                        
+
+</MedForm> <!-- end of Imaging -->
+
 <MedForm name="Maternity::Obstetrics">
   <label lang="xx">Obstetrics</label>
   <label lang="fr">Obstétrique</label>
