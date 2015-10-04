@@ -23,11 +23,11 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
 
     function setupUi() {
 
-        print("com.freemedforms.obstetrics.prenatal Setup UI");                 
+        print("com.freemedforms.imaging.utrasound.trimester1 Setup UI");                 
                                                                                 
         // Get items to work with                                               
         freemedforms.forms.namespaceInUse = "";                                 
-        var formItem = freemedforms.forms.item("Maternity::Obstetrics::Prenatal");   
+        var formItem = freemedforms.forms.item("Maternity::Imaging::Ultrasound::Trimester1");   
         print(formItem);                                                        
         formUi = formItem.ui();
 
@@ -38,25 +38,8 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
         fetusGroup3 = formUi.findChild("fetus3GroupBox");                                   
         fetusGroup4 = formUi.findChild("fetus4GroupBox");
         fetusGroup5 = formUi.findChild("fetus5GroupBox");
+        fetusGroup6 = formUi.findChild("fetus6GroupBox");
         defaultHideFetusGroupBox();
-
-        // pulse
-        syst = formUi.findChild("bloodPressureSystolicValue");                                      
-        diast = formUi.findChild("bloodPressureDiastolicValue");                                    
-        pulse = formUi.findChild("bloodPressurePulseValue");
-
-        // weight
-        weight = formUi.findChild("weightValue");
-        weightPrePregnancy = formUi.findChild("prePregnancyWeightValue");
-        weightGain = formUi.findChild("weightGainValue");
-
-        // fatigue score
-        standing = formUi.findChild("standingCheck");
-        industrial = formUi.findChild("industrialCheck");
-        repetitive = formUi.findChild("repetitiveCheck");
-        physical = formUi.findChild("physicalCheck");
-        hardness = formUi.findChild("hardnessCheck");
-        fatigueScoreLineEdit = formUi.findChild("fatigueScoreTotalLineEdit");
 
         // obstetrical calendar
         lastMenstrualPeriodUi = formUi.findChild("lastMenstrualPeriodDateEdit");
@@ -75,21 +58,6 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
 
         // fetus connection
         fetusNumber['valueChanged(int)'].connect(this, hideFetusGroupBox);
-
-        // pulse connection
-        syst['valueChanged(int)'].connect(this, computePulsePressure);          
-        diast['valueChanged(int)'].connect(this, computePulsePressure);
-        
-        // weight connection
-        weight['valueChanged(double)'].connect(this, computeWeightGain);          
-        weightPrePregnancy['valueChanged(double)'].connect(this, computeWeightGain);
-        
-        // fatigue score connection
-        standing['stateChanged(int)'].connect(this, computeFatigueScore);
-        industrial['stateChanged(int)'].connect(this, computeFatigueScore);
-        repetitive['stateChanged(int)'].connect(this, computeFatigueScore);
-        physical['stateChanged(int)'].connect(this, computeFatigueScore);
-        hardness['stateChanged(int)'].connect(this, computeFatigueScore);
 
         // obstetrical calendar connection
         //useLmp['stateChanged(int)'].connect(this, chooseDateToUse);
@@ -127,6 +95,7 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
             fetusGroup3.visible = false;
             fetusGroup4.visible = false;                                         
             fetusGroup5.visible = false;
+            fetusGroup6.visible = false;
         }
         else if (fetusNumber.value == 2) {
             print("if = 2");                                                
@@ -134,7 +103,8 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
             fetusGroup2.visible = true;                                   
             fetusGroup3.visible = false;
             fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;                                      
+            fetusGroup5.visible = false;
+            fetusGroup6.visible = false;                                      
         }  
         else if (fetusNumber.value == 3) {
             print("if = 3");                                                
@@ -142,7 +112,8 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
             fetusGroup2.visible = true;                                      
             fetusGroup3.visible = true;
             fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;                                     
+            fetusGroup5.visible = false;
+            fetusGroup6.visible = false;                                     
         }
         else if (fetusNumber.value == 4) {                                      
             print("if = 4");                                                    
@@ -150,7 +121,8 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
             fetusGroup2.visible = true;                                         
             fetusGroup3.visible = true;
             fetusGroup4.visible = true;
-            fetusGroup5.visible = false;                                         
+            fetusGroup5.visible = false;
+            fetusGroup6.visible = false;                                         
         }
         else if (fetusNumber.value == 5) {                                      
             print("if = 5");                                                    
@@ -158,36 +130,23 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
             fetusGroup2.visible = true;                                         
             fetusGroup3.visible = true;                                         
             fetusGroup4.visible = true;                                         
-            fetusGroup5.visible = true;                                        
+            fetusGroup5.visible = true;
+            fetusGroup6.visible = false;                                        
         }
+        else if (fetusNumber.value == 6) {                                      
+            print("if = 6");                                                    
+            fetusGroup1.visible = true;                                         
+            fetusGroup2.visible = true;                                         
+            fetusGroup3.visible = true;                                         
+            fetusGroup4.visible = true;                                         
+            fetusGroup5.visible = true;
+            fetusGroup6.visible = true;                                         
+        }    
         else {
             print("not coded yet sorry");
         }
     }
 
-    // pulse function
-
-    function computePulsePressure() {                                           
-        var text = syst.value - diast.value;                                    
-        pulse.setText(text);                                                    
-    }
-
-    // weight gain function
-
-    function computeWeightGain() {
-        print("computeWeightGain()");                                           
-        var text = weight.value - weightPrePregnancy.value;                                    
-        weightGain.setText(text);
-        print("computeWeightGain() gain = " + text);                                                   
-    }
-
-    // fatigue score function
-
-    function computeFatigueScore() {
-        print("computeFatigueScore()");
-        fatigueScore = (standing.checked == true) + (industrial.checked == true) + (repetitive.checked == true) + (physical.checked == true) + (hardness.checked == true);
-        fatigueScoreLineEdit.setText(fatigueScore);
-    }
 
     // obstetrical calendar functions
 

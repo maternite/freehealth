@@ -377,17 +377,17 @@
          <widget class="QLineEdit" name="placentalGradingLineEdit"/>
         </item>
         <item row="3" column="0">
-         <widget class="QLabel" name="placentalLocalisationLabel">
+         <widget class="QLabel" name="placentalLocationLabel">
           <property name="text">
            <string>placental localisation</string>
           </property>
          </widget>
         </item>
         <item row="3" column="1">
-         <layout class="QHBoxLayout" name="placentalLocalisationRadioLayout"/>
+         <layout class="QHBoxLayout" name="placentalLocationRadioLayout"/>
         </item>
         <item row="3" column="2">
-         <widget class="QLineEdit" name="placentalLocalisationLineEdit"/>
+         <widget class="QLineEdit" name="placentalLocationLineEdit"/>
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="adnexaLabel">
@@ -426,7 +426,7 @@
          <number>1</number>
         </property>
         <property name="maximum">
-         <number>5</number>
+         <number>6</number>
         </property>
         <property name="value">
          <number>1</number>
