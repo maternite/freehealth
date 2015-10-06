@@ -134,7 +134,6 @@
     <label lang="fr">Échographie</label>                   
     <icon>__theme__/labtests.png</icon>                                         
     <options>NoEpisode;DontPrintEmptyValues</options>                           
-          <file>__subForms__/imaging/ultrasound/trimester1/central.xml</file>          
     </MedForm>                        
 
 </MedForm> <!-- end of Imaging -->

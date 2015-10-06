@@ -1,95 +1,97 @@
 namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, require) {
 
     exports.extend({
-        'setupUi': setupUi,
-        'setDefaults': setDefaults,
-        'hideFetusGroupBox': hideFetusGroupBox,
-        'computePulsePressure': computePulsePressure,
-        'computeWeightGain': computeWeightGain,
-        'computeFatigueScore': computeFatigueScore,
-        'chooseDateToUse': chooseDateToUse,
-        'computeEstimatedDueDate': computeEstimatedDueDate,
-        'computeGestationalAge': computeGestationalAge,
-        'setLmp': setLmp,
-        'setDateOfConception': setDateOfConception,
-        'setLmpDefault': setLmpDefault
+        'prenatal_setupUi': prenatal_setupUi,
+        'prenatal_setDefaults': prenatal_setDefaults,
+        'prenatal_hideFetusGroupBox': prenatal_hideFetusGroupBox,
+        'prenatal_computePulsePressure': prenatal_computePulsePressure,
+        'prenatal_computeWeightGain': prenatal_computeWeightGain,
+        'prenatal_computeFatigueScore': prenatal_computeFatigueScore,
+        'prenatal_chooseDateToUse': prenatal_chooseDateToUse,
+        'prenatal_computeEstimatedDueDate': prenatal_computeEstimatedDueDate,
+        'prenatal_computeGestationalAge': prenatal_computeGestationalAge,
+        'prenatal_setLmp': prenatal_setLmp,
+        'prenatal_setDateOfConception': prenatal_setDateOfConception,
+        'prenatal_setLmpDefault': prenatal_setLmpDefault
     });
 
-    var fetusNumber, fetusGroup1, fetusGroup2, fetusGroup3, fetusGroup4, fetusGroup5;
-    var syst, diast, pulse;
-    var weight, weightPrePregnancy, weightGain;
-    var fatigueScore, fatigueScoreLineEdit, standing, industrial, repetitive, physical, hardness;
-    var gestationalAge, dateToUse, estimatedDueDate, lastMenstrualPeriodUi, lastMenstrualPeriodItem, conceptionDateUi, conceptionDateItem, useLmp, useLmpItem, useDateOfConception, useDateOfConceptionItem;
+    var prenatal_fetusNumber, prenatal_fetusGroup1, prenatal_fetusGroup2, prenatal_fetusGroup3, prenatal_fetusGroup4, prenatal_fetusGroup5, prenatal_fetusGroup6;
+    var prenatal_syst, prenatal_diast, prenatal_pulse;
+    var prenatal_weight, prenatal_weightPrePregnancy, prenatal_weightGain;
+    var prenatal_fatigueScore, prenatal_fatigueScoreLineEdit, prenatal_standing, prenatal_industrial, prenatal_repetitive, prenatal_physical, prenatal_hardness;
+    var prenatal_gestationalAge, prenatal_dateToUse, prenatal_estimatedDueDate, prenatal_lastMenstrualPeriodUi, prenatal_lastMenstrualPeriodItem, prenatal_conceptionDateUi, prenatal_conceptionDateItem, prenatal_useLmp, prenatal_useLmpItem, prenatal_useDateOfConception, prenatal_useDateOfConceptionItem;
 
-    function setupUi() {
+    function prenatal_setupUi() {
 
         print("com.freemedforms.obstetrics.prenatal Setup UI");                 
                                                                                 
         // Get items to work with                                               
         freemedforms.forms.namespaceInUse = "";                                 
-        var formItem = freemedforms.forms.item("Maternity::Obstetrics::Prenatal");   
-        print(formItem);                                                        
-        formUi = formItem.ui();
+        var prenatal_formItem = freemedforms.forms.item("Maternity::Obstetrics::Prenatal");   
+        print(prenatal_formItem);                                                        
+        prenatal_formUi = prenatal_formItem.ui();
 
         // fetus                                                 
-        fetusNumber = formUi.findChild("fetusNumberSpinBox");                                      
-        fetusGroup1 = formUi.findChild("fetus1GroupBox"); 
-        fetusGroup2 = formUi.findChild("fetus2GroupBox");
-        fetusGroup3 = formUi.findChild("fetus3GroupBox");                                   
-        fetusGroup4 = formUi.findChild("fetus4GroupBox");
-        fetusGroup5 = formUi.findChild("fetus5GroupBox");
-        defaultHideFetusGroupBox();
+        prenatal_fetusNumber = prenatal_formUi.findChild("fetusNumberSpinBox");                                      
+        prenatal_fetusGroup1 = prenatal_formUi.findChild("fetus1GroupBox"); 
+        prenatal_fetusGroup2 = prenatal_formUi.findChild("fetus2GroupBox");
+        prenatal_fetusGroup3 = prenatal_formUi.findChild("fetus3GroupBox");                                   
+        prenatal_fetusGroup4 = prenatal_formUi.findChild("fetus4GroupBox");
+        prenatal_fetusGroup5 = prenatal_formUi.findChild("fetus5GroupBox");
+        prenatal_fetusGroup6 = prenatal_formUi.findChild("fetus6GroupBox");
+        prenatal_defaultHideFetusGroupBox();
 
         // pulse
-        syst = formUi.findChild("bloodPressureSystolicValue");                                      
-        diast = formUi.findChild("bloodPressureDiastolicValue");                                    
-        pulse = formUi.findChild("bloodPressurePulseValue");
+        prenatal_syst = prenatal_formUi.findChild("bloodPressureSystolicValue");                                      
+        prenatal_diast = prenatal_formUi.findChild("bloodPressureDiastolicValue");                                    
+        prenatal_pulse = prenatal_formUi.findChild("bloodPressurePulseValue");
 
         // weight
-        weight = formUi.findChild("weightValue");
-        weightPrePregnancy = formUi.findChild("prePregnancyWeightValue");
-        weightGain = formUi.findChild("weightGainValue");
+        prenatal_weight = prenatal_formUi.findChild("weightValue");
+        prenatal_weightPrePregnancy = prenatal_formUi.findChild("prePregnancyWeightValue");
+        prenatal_weightGain = prenatal_formUi.findChild("weightGainValue");
 
         // fatigue score
-        standing = formUi.findChild("standingCheck");
-        industrial = formUi.findChild("industrialCheck");
-        repetitive = formUi.findChild("repetitiveCheck");
-        physical = formUi.findChild("physicalCheck");
-        hardness = formUi.findChild("hardnessCheck");
-        fatigueScoreLineEdit = formUi.findChild("fatigueScoreTotalLineEdit");
+        prenatal_standing = prenatal_formUi.findChild("standingCheck");
+        prenatal_industrial = prenatal_formUi.findChild("industrialCheck");
+        prenatal_repetitive = prenatal_formUi.findChild("repetitiveCheck");
+        prenatal_physical = prenatal_formUi.findChild("physicalCheck");
+        prenatal_hardness = prenatal_formUi.findChild("hardnessCheck");
+        prenatal_fatigueScoreLineEdit = prenatal_formUi.findChild("fatigueScoreTotalLineEdit");
 
         // obstetrical calendar
-        lastMenstrualPeriodUi = formUi.findChild("lastMenstrualPeriodDateEdit");
-        lastMenstrualPeriodItem = freemedforms.forms.item("ObstetricalCalendar::LastMentrualPeriod");
-        conceptionDateUi = formUi.findChild("conceptionDateDateEdit");
-        conceptionDateItem = freemedforms.forms.item("ObstetricalCalendar::ConceptionDate");
-        useLmp = formUi.findChild("useLmpCheck");
-        useLmpItem = freemedforms.forms.item("ObstetricalCalendar::UseLMP::Check");
-        useDateOfConception = formUi.findChild("useDateOfConceptionCheck");
-        useDateOfConceptionItem = freemedforms.forms.item("ObstetricalCalendar::UseConceptionDate::Check");        
-        currentWeeksAmenorrhoeaWeeksValue = formUi.findChild("currentWeeksAmenorrhoeaWeeksValueLabel");        
-        currentWeeksAmenorrhoeaDaysValue = formUi.findChild("currentWeeksAmenorrhoeaDaysValueLabel");       
-        estimatedDueDate = formUi.findChild("eddValueLabel");
-        setDefaults();
-        setLmpDefault();
+        prenatal_lastMenstrualPeriodUi = prenatal_formUi.findChild("lastMenstrualPeriodDateEdit");
+        prenatal_lastMenstrualPeriodItem = freemedforms.forms.item("ObstetricalCalendar::LastMentrualPeriod");
+        prenatal_conceptionDateUi = prenatal_formUi.findChild("conceptionDateDateEdit");
+        prenatal_conceptionDateItem = freemedforms.forms.item("ObstetricalCalendar::ConceptionDate");
+        prenatal_useLmp = prenatal_formUi.findChild("useLmpCheck");
+        prenatal_useLmpItem = freemedforms.forms.item("ObstetricalCalendar::UseLMP::Check");
+        prenatal_useDateOfConception = prenatal_formUi.findChild("useDateOfConceptionCheck");
+        prenatal_useDateOfConceptionItem = freemedforms.forms.item("ObstetricalCalendar::UseConceptionDate::Check");        
+        prenatal_currentWeeksAmenorrhoeaWeeksValue = prenatal_formUi.findChild("currentWeeksAmenorrhoeaWeeksValueLabel");        
+        prenatal_currentWeeksAmenorrhoeaDaysValue = prenatal_formUi.findChild("currentWeeksAmenorrhoeaDaysValueLabel");       
+        prenatal_estimatedDueDate = prenatal_formUi.findChild("eddValueLabel");
+        prenatal_setDefaults();
+        prenatal_setLmpDefault();
+        prenatal_computeGestationalAge();
 
         // fetus connection
-        fetusNumber['valueChanged(int)'].connect(this, hideFetusGroupBox);
+        prenatal_fetusNumber['valueChanged(int)'].connect(this, prenatal_hideFetusGroupBox);
 
         // pulse connection
-        syst['valueChanged(int)'].connect(this, computePulsePressure);          
-        diast['valueChanged(int)'].connect(this, computePulsePressure);
+        prenatal_syst['valueChanged(int)'].connect(this, prenatal_computePulsePressure);          
+        prenatal_diast['valueChanged(int)'].connect(this, prenatal_computePulsePressure);
         
         // weight connection
-        weight['valueChanged(double)'].connect(this, computeWeightGain);          
-        weightPrePregnancy['valueChanged(double)'].connect(this, computeWeightGain);
+        prenatal_weight['valueChanged(double)'].connect(this, prenatal_computeWeightGain);          
+        prenatal_weightPrePregnancy['valueChanged(double)'].connect(this, prenatal_computeWeightGain);
         
         // fatigue score connection
-        standing['stateChanged(int)'].connect(this, computeFatigueScore);
-        industrial['stateChanged(int)'].connect(this, computeFatigueScore);
-        repetitive['stateChanged(int)'].connect(this, computeFatigueScore);
-        physical['stateChanged(int)'].connect(this, computeFatigueScore);
-        hardness['stateChanged(int)'].connect(this, computeFatigueScore);
+        prenatal_standing['stateChanged(int)'].connect(this, prenatal_computeFatigueScore);
+        prenatal_industrial['stateChanged(int)'].connect(this, prenatal_computeFatigueScore);
+        prenatal_repetitive['stateChanged(int)'].connect(this, prenatal_computeFatigueScore);
+        prenatal_physical['stateChanged(int)'].connect(this, prenatal_computeFatigueScore);
+        prenatal_hardness['stateChanged(int)'].connect(this, prenatal_computeFatigueScore);
 
         // obstetrical calendar connection
         //useLmp['stateChanged(int)'].connect(this, chooseDateToUse);
@@ -101,64 +103,80 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
     
     // fetus functions
 
-    function defaultHideFetusGroupBox() {
+    function prenatal_defaultHideFetusGroupBox() {
             print("default to 1 visible fetusGroup");                                                    
-            fetusGroup1.visible = true;                                         
-            fetusGroup2.visible = false;                                        
-            fetusGroup3.visible = false;                                        
-            fetusGroup4.visible = false;                                        
-            fetusGroup5.visible = false;                                        
+            prenatal_fetusGroup1.visible = true;                                         
+            prenatal_fetusGroup2.visible = false;                                        
+            prenatal_fetusGroup3.visible = false;                                        
+            prenatal_fetusGroup4.visible = false;                                        
+            prenatal_fetusGroup5.visible = false;
+            prenatal_fetusGroup6.visible = false;                                        
         }
 
-    function hideFetusGroupBox() {
-            print("fetusNumber = " + fetusNumber.value);
-        if (fetusNumber.value == 0) {
+    function prenatal_hideFetusGroupBox() {
+            print("fetusNumber = " + prenatal_fetusNumber.value);
+        if (prenatal_fetusNumber.value == 0) {
             print("if = 0");
-            fetusGroup1.visible = false;
-            fetusGroup2.visible = false;
-            fetusGroup3.visible = false;
-            fetusGroup4.visible = false;                                        
-            fetusGroup5.visible = false;
+            prenatal_fetusGroup1.visible = false;
+            prenatal_fetusGroup2.visible = false;
+            prenatal_fetusGroup3.visible = false;
+            prenatal_fetusGroup4.visible = false;                                        
+            prenatal_fetusGroup5.visible = false;
+            prenatal_fetusGroup6.visible = false;
         }
-        else if (fetusNumber.value == 1) {
+        else if (prenatal_fetusNumber.value == 1) {
             print("if = 1");
-            fetusGroup1.visible = true;                                      
-            fetusGroup2.visible = false;                                      
-            fetusGroup3.visible = false;
-            fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;
+            prenatal_fetusGroup1.visible = true;                                      
+            prenatal_fetusGroup2.visible = false;                                      
+            prenatal_fetusGroup3.visible = false;
+            prenatal_fetusGroup4.visible = false;                                         
+            prenatal_fetusGroup5.visible = false;
+            prenatal_fetusGroup6.visible = false;
         }
-        else if (fetusNumber.value == 2) {
+        else if (prenatal_fetusNumber.value == 2) {
             print("if = 2");                                                
-            fetusGroup1.visible = true;                                       
-            fetusGroup2.visible = true;                                   
-            fetusGroup3.visible = false;
-            fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;                                      
+            prenatal_fetusGroup1.visible = true;                                       
+            prenatal_fetusGroup2.visible = true;                                   
+            prenatal_fetusGroup3.visible = false;
+            prenatal_fetusGroup4.visible = false;                                         
+            prenatal_fetusGroup5.visible = false;
+            prenatal_fetusGroup6.visible = false;                                      
         }  
-        else if (fetusNumber.value == 3) {
+        else if (prenatal_fetusNumber.value == 3) {
             print("if = 3");                                                
-            fetusGroup1.visible = true;                                       
-            fetusGroup2.visible = true;                                      
-            fetusGroup3.visible = true;
-            fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;                                     
+            prenatal_fetusGroup1.visible = true;                                       
+            prenatal_fetusGroup2.visible = true;                                      
+            prenatal_fetusGroup3.visible = true;
+            prenatal_fetusGroup4.visible = false;                                         
+            prenatal_fetusGroup5.visible = false;
+            prenatal_fetusGroup6.visible = false;                                     
         }
-        else if (fetusNumber.value == 4) {                                      
+        else if (prenatal_fetusNumber.value == 4) {                                      
             print("if = 4");                                                    
-            fetusGroup1.visible = true;                                         
-            fetusGroup2.visible = true;                                         
-            fetusGroup3.visible = true;
-            fetusGroup4.visible = true;
-            fetusGroup5.visible = false;                                         
+            prenatal_fetusGroup1.visible = true;                                         
+            prenatal_fetusGroup2.visible = true;                                         
+            prenatal_fetusGroup3.visible = true;
+            prenatal_fetusGroup4.visible = true;
+            prenatal_fetusGroup5.visible = false;
+            prenatal_fetusGroup6.visible = false;                                         
         }
-        else if (fetusNumber.value == 5) {                                      
+        else if (prenatal_fetusNumber.value == 5) {                                      
             print("if = 5");                                                    
-            fetusGroup1.visible = true;                                         
-            fetusGroup2.visible = true;                                         
-            fetusGroup3.visible = true;                                         
-            fetusGroup4.visible = true;                                         
-            fetusGroup5.visible = true;                                        
+            prenatal_fetusGroup1.visible = true;                                         
+            prenatal_fetusGroup2.visible = true;                                         
+            prenatal_fetusGroup3.visible = true;                                         
+            prenatal_fetusGroup4.visible = true;                                         
+            prenatal_fetusGroup5.visible = true;
+            prenatal_fetusGroup6.visible = false;                                        
+        }
+        else if (prenatal_fetusNumber.value == 6) {                             
+            print("if = 6");                                                    
+            prenatal_fetusGroup1.visible = true;                                
+            prenatal_fetusGroup2.visible = true;                                
+            prenatal_fetusGroup3.visible = true;                                
+            prenatal_fetusGroup4.visible = true;                                
+            prenatal_fetusGroup5.visible = true;                                
+            prenatal_fetusGroup6.visible = true;                               
         }
         else {
             print("not coded yet sorry");
@@ -167,140 +185,128 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
 
     // pulse function
 
-    function computePulsePressure() {                                           
-        var text = syst.value - diast.value;                                    
-        pulse.setText(text);                                                    
+    function prenatal_computePulsePressure() {                                           
+        var prenatal_text = prenatal_syst.value - prenatal_diast.value;                                    
+        prenatal_pulse.setText(text);                                                    
     }
 
     // weight gain function
 
-    function computeWeightGain() {
-        print("computeWeightGain()");                                           
-        var text = weight.value - weightPrePregnancy.value;                                    
-        weightGain.setText(text);
-        print("computeWeightGain() gain = " + text);                                                   
+    function prenatal_computeWeightGain() {
+        print("prenatal_computeWeightGain()");                                           
+        var prenatal_text = prenatal_weight.value - prenatal_weightPrePregnancy.value;                                    
+        prenatal_weightGain.setText(prenatal_text);
+        print("prenatal_computeWeightGain() gain = " + prenatal_text);                                                   
     }
 
     // fatigue score function
 
-    function computeFatigueScore() {
+    function prenatal_computeFatigueScore() {
         print("computeFatigueScore()");
-        fatigueScore = (standing.checked == true) + (industrial.checked == true) + (repetitive.checked == true) + (physical.checked == true) + (hardness.checked == true);
-        fatigueScoreLineEdit.setText(fatigueScore);
+        prenatal_fatigueScore = (prenatal_standing.checked == true) + (prenatal_industrial.checked == true) + (prenatal_repetitive.checked == true) + (prenatal_physical.checked == true) + (prenatal_hardness.checked == true);
+        prenatal_fatigueScoreLineEdit.setText(prenatal_fatigueScore);
     }
 
     // obstetrical calendar functions
 
-    function chooseDateToUse() {
-        print("chooseDateToUse()");
-        var empty = "";
-        estimatedDueDate.setText(empty);
-
-        if (!useLmpItem.checked && !useDateOfConceptionItem.checked) {
-        setLmpDefault();
-        return;
+    function prenatal_chooseDateToUse() {
+        print("prenatal_chooseDateToUse()");
+        var prenatal_empty = "";
+        prenatal_estimatedDueDate.setText(prenatal_empty);
+        prenatal_currentWeeksAmenorrhoeaWeeksValue.setText(prenatal_empty);
+        prenatal_currentWeeksAmenorrhoeaDaysValue.setText(prenatal_empty);
+        if (!prenatal_useLmpItem.checked && !prenatal_useDateOfConceptionItem.checked) {
+        prenatal_setLmpDefault();
         }
-        computeEstimatedDueDate();
-        computeGestationalAge();
-        return;
+        prenatal_computeEstimatedDueDate();
+        prenatal_computeGestationalAge();
     }
 
-    function computeEstimatedDueDate() {
-        var empty = "";
-        estimatedDueDate.setText(empty);
-        currentWeeksAmenorrhoeaWeeksValue.setText(empty);                     
-        currentWeeksAmenorrhoeaDaysValue.setText(empty);
-        if (freemedforms.tools.dateToString(lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
+    function prenatal_computeEstimatedDueDate() {
+        var prenatal_empty = "";
+        prenatal_estimatedDueDate.setText(prenatal_empty);
+        prenatal_currentWeeksAmenorrhoeaWeeksValue.setText(prenatal_empty);                     
+        prenatal_currentWeeksAmenorrhoeaDaysValue.setText(prenatal_empty);
+        if (freemedforms.tools.dateToString(prenatal_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
             print("inside computeEstimatedDueDate()-> lmp=01/01/2000 -> return");
             return;
         }
-        print("computeEstimatedDueDate()");
-        var edd = freemedforms.tools.addWeeks(lastMenstrualPeriodItem.currentValue, 40);                   
-        var edd = freemedforms.tools.dateToString(edd, "ddd dd MMM yyyy");
-        var eddText = "<b>";
-        eddText += edd;
-        eddText += "</b>";
-        estimatedDueDate.setText(eddText);        
+        print("prenatal_computeEstimatedDueDate()");
+        var prenatal_edd = freemedforms.tools.addWeeks(prenatal_lastMenstrualPeriodItem.currentValue, 40);                   
+        var prenatal_edd = freemedforms.tools.dateToString(prenatal_edd, "ddd dd MMM yyyy");
+        var prenatal_eddText = "<b>";
+        prenatal_eddText += prenatal_edd;
+        prenatal_eddText += "</b>";
+        prenatal_estimatedDueDate.setText(prenatal_eddText);        
 
     }
 
-    function computeGestationalAge() {
-        var emptyGA = "";
-        currentWeeksAmenorrhoeaWeeksValue.setText(emptyGA);                     
-        currentWeeksAmenorrhoeaDaysValue.setText(emptyGA);
-        if (freemedforms.tools.dateToString(lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
-            print("inside computeGestationalAge()-> lmp=01/01/2000 -> return");
+    function prenatal_computeGestationalAge() {
+        var prenatal_emptyGA = "";
+        prenatal_currentWeeksAmenorrhoeaWeeksValue.setText(prenatal_emptyGA);                     
+        prenatal_currentWeeksAmenorrhoeaDaysValue.setText(prenatal_emptyGA);
+        if (freemedforms.tools.dateToString(prenatal_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
+            print("inside prenatal_computeGestationalAge()-> lmp=01/01/2000 -> return");
             return;                                                             
         }                                        
-        print("computeGestationalAge()");
-        var edd = freemedforms.tools.addWeeks(lastMenstrualPeriodItem.currentValue, 40);
-        var days = freemedforms.tools.daysTo(new Date(), edd);
-        var GAdays = (280 - days);
-        var GAweeks = (GAdays - GAdays%7) / 7;
-        var GAdays = GAdays%7;
-        var GAweeksText = "<b>";
-        GAweeksText += GAweeks;
-        GAweeksText += "</b>";
-        var GAdaysText = "<b>";                                                
-        GAdaysText += GAdays;                                                 
-        GAdaysText += "</b>";
-        currentWeeksAmenorrhoeaWeeksValue.setText(GAweeksText);
-        currentWeeksAmenorrhoeaDaysValue.setText(GAdaysText);
+        print("prenatal_computeGestationalAge()");
+        var prenatal_edd = freemedforms.tools.addWeeks(prenatal_lastMenstrualPeriodItem.currentValue, 40);
+        var prenatal_days = freemedforms.tools.daysTo(new Date(), prenatal_edd);
+        var prenatal_GAdays = (280 - prenatal_days);
+        var prenatal_GAweeks = (prenatal_GAdays - prenatal_GAdays%7) / 7;
+        var prenatal_GAdays = prenatal_GAdays%7;
+        var prenatal_GAweeksText = "<b>";
+        prenatal_GAweeksText += prenatal_GAweeks;
+        prenatal_GAweeksText += "</b>";
+        var prenatal_GAdaysText = "<b>";                                                
+        prenatal_GAdaysText += prenatal_GAdays;                                                 
+        prenatal_GAdaysText += "</b>";
+        prenatal_currentWeeksAmenorrhoeaWeeksValue.setText(prenatal_GAweeksText);
+        prenatal_currentWeeksAmenorrhoeaDaysValue.setText(prenatal_GAdaysText);
+         print("prenatal_ComputeGestationalAge() end");
     }
 
-    function setLmpDefault() {
-        print("setLmpDefault");
-        useLmpItem.checked = true;
+    function prenatal_setLmpDefault() {
+        print("prenatal_setLmpDefault");
+        prenatal_useLmpItem.checked = true;
         return;
     }
 
-    function setDefaults() {                                                  
-        print("setDefaults");                                                 
-        lastMenstrualPeriodItem.currentValue = (new Date());                    
-        estimatedDueDate.setText("");                                           
+    function prenatal_setDefaults() {                                                  
+        print("prenatal_setDefaults");                                                 
+        prenatal_lastMenstrualPeriodItem.currentValue = (new Date());                    
+        prenatal_estimatedDueDate.setText("");                                           
         return;                                                                 
     }
 
-    function setLmp() {
-        if (useLmpItem.checked && !useDateOfConceptionItem.checked) return;
+    function prenatal_setLmp() {
+        if (prenatal_useLmpItem.checked && !prenatal_useDateOfConceptionItem.checked) return;
         
-        print("setLmp()");
-        
-        if (useLmpItem.checked && useDateOfConceptionItem.checked) {
-        useDateOfConceptionItem.checked = false;
+        if (prenatal_useLmpItem.checked && prenatal_useDateOfConceptionItem.checked) {
+            prenatal_useDateOfConceptionItem.checked = false;
         }
-        if (!useLmpItem.checked && !useDateOfConceptionItem.checked) {            
-        useDateOfConceptionItem.checked = true;                                
+        if (!prenatal_useLmpItem.checked && !prenatal_useDateOfConceptionItem.checked) {            
+            prenatal_useDateOfConceptionItem.checked = true;
         }
         
-        print("useLmpItem.checked = " + useLmpItem.checked);
-        print("useDateOfConceptionItem.checked = " + useDateOfConceptionItem.checked);
-        
-        computeEstimatedDueDate();
-        computeGestationalAge();
+        prenatal_computeEstimatedDueDate();
+        prenatal_computeGestationalAge();
     }
 
-    function setDateOfConception() {
-        if (useDateOfConception.checked && !useLmpItem.checked) return;                                                         
-        
-        print("useDateOfConception()");
-        
-        if (useLmpItem.checked && useDateOfConceptionItem.checked) {
-            useLmpItem.checked = false;
+    function prenatal_setDateOfConception() {
+        if (prenatal_useDateOfConception.checked && !prenatal_useLmpItem.checked) return;                                                         
+                
+        if (prenatal_useLmpItem.checked && prenatal_useDateOfConceptionItem.checked) {
+            prenatal_useLmpItem.checked = false;
         }
-        if (!useLmpItem.checked && !useDateOfConceptionItem.checked) {            
-            useLmpItem.checked = true;                                         
+        if (!prenatal_useLmpItem.checked && !prenatal_useDateOfConceptionItem.checked) {            
+            prenatal_useLmpItem.checked = true;
         }                                                                                  
-        print("useLmpItem.checked = " + useLmpItem.checked);
-        print("useDateOfConceptionItem.checked = " + useDateOfConceptionItem.checked);
-
-        print("LMP current value :" + lastMenstrualPeriodItem.currentValue);
-     
-        computeEstimatedDueDate();                                              
-        computeGestationalAge();                         
+        prenatal_computeEstimatedDueDate();                                              
+        prenatal_computeGestationalAge();
     }
 
 });
 
-namespace.com.freemedforms.obstetrics.prenatal.setupUi();
-namespace.com.freemedforms.obstetrics.prenatal.setDefaults();
+namespace.com.freemedforms.obstetrics.prenatal.prenatal_setupUi();
+namespace.com.freemedforms.obstetrics.prenatal.prenatal_setDefaults();

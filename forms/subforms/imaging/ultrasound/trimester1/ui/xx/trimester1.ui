@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_36">
+  <layout class="QVBoxLayout" name="verticalLayout_37">
    <item>
     <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
      <property name="title">
@@ -189,7 +189,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksValueLabel">
+         <widget class="QLabel" name="trimester1CurrentWeeksAmenorrhoeaWeeksValueLabel">
           <property name="text">
            <string>weeksValue</string>
           </property>
@@ -203,7 +203,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="currentWeeksAmenorrhoeaDaysValueLabel">
+         <widget class="QLabel" name="trimester1CurrentWeeksAmenorrhoeaDaysValueLabel">
           <property name="text">
            <string>daysValue</string>
           </property>
@@ -432,6 +432,19 @@
          <number>1</number>
         </property>
        </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_10">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </widget>
@@ -4154,39 +4167,89 @@
      <property name="title">
       <string>impressionGroupBox</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_7">
-      <item row="0" column="0" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_36">
+      <item>
+       <layout class="QVBoxLayout" name="impressionRadioLayout"/>
+      </item>
+      <item>
        <layout class="QFormLayout" name="impressionFormLayout"/>
       </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="usDueDateLabel">
-        <property name="text">
-         <string>ultrasound due date</string>
+      <item>
+       <widget class="Line" name="line_45">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QDateEdit" name="usDueDateDateEdit">
-        <property name="displayFormat">
-         <string>dd/MM/yyyy</string>
-        </property>
-       </widget>
+      <item>
+       <layout class="QVBoxLayout" name="impressionMorphologyRadioLayout"/>
       </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="nextUsLabel">
-        <property name="text">
-         <string>next ultrasound</string>
-        </property>
-       </widget>
+      <item>
+       <layout class="QFormLayout" name="impressionMorphologyFormLayout"/>
       </item>
-      <item row="2" column="1">
-       <widget class="QDateEdit" name="nextUsDateEdit">
-        <property name="displayFormat">
-         <string>dd/MM/yyyy</string>
-        </property>
-       </widget>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="usDueDateLabel">
+          <property name="text">
+           <string>ultrasound due date</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="usDueDateDateEdit">
+          <property name="displayFormat">
+           <string>dd/MM/yyyy</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
-      <item row="3" column="0" colspan="2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="nextUsLabel">
+          <property name="text">
+           <string>next ultrasound</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="nextUsDateEdit">
+          <property name="displayFormat">
+           <string>dd/MM/yyyy</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_12">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
        <widget class="QCheckBox" name="informedConsentCheckBox">
         <property name="text">
          <string>informed consent</string>

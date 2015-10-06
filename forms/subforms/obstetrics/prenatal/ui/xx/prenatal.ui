@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>764</width>
-    <height>3900</height>
+    <height>4095</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string/>
   </property>
-  <layout class="QGridLayout" name="gridLayout_16">
-   <item row="0" column="0">
+  <layout class="QVBoxLayout" name="verticalLayout_24">
+   <item>
     <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
      <property name="title">
       <string>obstetrical calendar</string>
@@ -259,7 +259,7 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item>
     <widget class="QGroupBox" name="subjectiveGroupBox">
      <property name="title">
       <string>subjectiveGroupBox</string>
@@ -436,7 +436,7 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="0">
+   <item>
     <widget class="QGroupBox" name="objectiveGroup">
      <property name="title">
       <string>Objective</string>
@@ -814,7 +814,7 @@
      </layout>
     </widget>
    </item>
-   <item row="3" column="0">
+   <item>
     <widget class="QGroupBox" name="objectiveUltrasoundGroupBox">
      <property name="title">
       <string>ultrasoundGroupBox</string>
@@ -919,7 +919,7 @@
      </layout>
     </widget>
    </item>
-   <item row="4" column="0">
+   <item>
     <widget class="QGroupBox" name="poctTestGroupBox">
      <property name="title">
       <string>poctTestGroupBox</string>
@@ -1186,7 +1186,7 @@
      </layout>
     </widget>
    </item>
-   <item row="5" column="0">
+   <item>
     <layout class="QGridLayout" name="fetusGridLayout">
      <item row="0" column="0">
       <widget class="QGroupBox" name="fetusGroupBox">
@@ -1610,7 +1610,7 @@
      </item>
     </layout>
    </item>
-   <item row="6" column="0">
+   <item>
     <widget class="QGroupBox" name="assessmentGroupBox">
      <property name="title">
       <string>assessment</string>
@@ -1650,7 +1650,87 @@
      </layout>
     </widget>
    </item>
-   <item row="7" column="0">
+   <item>
+    <widget class="QGroupBox" name="fetus6GroupBox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Fetus6GroupBox</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_15">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_22">
+        <item>
+         <widget class="QLabel" name="prenatalHeartbeatF6Label">
+          <property name="text">
+           <string>prenatal heartbeat</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="prenatalHeartbeatF6RadioLayout">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>9</number>
+          </property>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="prenatalHeartbeatF6LineEdit">
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_22">
+        <item>
+         <widget class="QLabel" name="presentationF6Label">
+          <property name="text">
+           <string>presentation</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="presentationF6ListView"/>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_23">
+        <item>
+         <widget class="QLabel" name="positionF6Label">
+          <property name="text">
+           <string>position</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="positionF6ListView"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="planGroupBox">
      <property name="title">
       <string>plan</string>

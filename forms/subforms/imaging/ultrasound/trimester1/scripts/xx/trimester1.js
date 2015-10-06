@@ -1,63 +1,57 @@
 namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exports, require) {
 
     exports.extend({
-        'setupUi': setupUi,
-        'setDefaults': setDefaults,
-        'hideFetusGroupBox': hideFetusGroupBox,
-        'computePulsePressure': computePulsePressure,
-        'computeWeightGain': computeWeightGain,
-        'computeFatigueScore': computeFatigueScore,
-        'chooseDateToUse': chooseDateToUse,
-        'computeEstimatedDueDate': computeEstimatedDueDate,
-        'computeGestationalAge': computeGestationalAge,
-        'setLmp': setLmp,
-        'setDateOfConception': setDateOfConception,
-        'setLmpDefault': setLmpDefault
+        'trimester1_setupUi': trimester1_setupUi,
+        'trimester1_setDefaults': trimester1_setDefaults,
+        'trimester1_hideFetusGroupBox': trimester1_hideFetusGroupBox,
+        'trimester1_chooseDateToUse': trimester1_chooseDateToUse,
+        'trimester1_computeEstimatedDueDate': trimester1_computeEstimatedDueDate,
+        'trimester1_computeGestationalAge': trimester1_computeGestationalAge,
+        'trimester1_setLmp': trimester1_setLmp,
+        'trimester1_setDateOfConception': trimester1_setDateOfConception,
+        'trimester1_setLmpDefault': trimester1_setLmpDefault
     });
 
-    var fetusNumber, fetusGroup1, fetusGroup2, fetusGroup3, fetusGroup4, fetusGroup5;
-    var syst, diast, pulse;
-    var weight, weightPrePregnancy, weightGain;
-    var fatigueScore, fatigueScoreLineEdit, standing, industrial, repetitive, physical, hardness;
-    var gestationalAge, dateToUse, estimatedDueDate, lastMenstrualPeriodUi, lastMenstrualPeriodItem, conceptionDateUi, conceptionDateItem, useLmp, useLmpItem, useDateOfConception, useDateOfConceptionItem;
+    var trimester1_fetusNumber, trimester1_fetusGroup1, trimester1_fetusGroup2, trimester1_fetusGroup3, trimester1_fetusGroup4, trimester1_fetusGroup5, trimester1_fetusGroup6;
+    var trimester1_gestationalAge, trimester1_dateToUse, trimester1_estimatedDueDate, trimester1_lastMenstrualPeriodUi, trimester1_lastMenstrualPeriodItem, trimester1_conceptionDateUi, trimester1_conceptionDateItem, trimester1_useLmp, trimester1_useLmpItem, trimester1_useDateOfConception, trimester1_useDateOfConceptionItem;
 
-    function setupUi() {
+    function trimester1_setupUi() {
 
         print("com.freemedforms.imaging.utrasound.trimester1 Setup UI");                 
                                                                                 
         // Get items to work with                                               
         freemedforms.forms.namespaceInUse = "";                                 
-        var formItem = freemedforms.forms.item("Maternity::Imaging::Ultrasound::Trimester1");   
-        print(formItem);                                                        
-        formUi = formItem.ui();
+        var trimester1_formItem = freemedforms.forms.item("Maternity::Imaging::Ultrasound::Trimester1");   
+        print(trimester1_formItem);                                                        
+        trimester1_formUi = trimester1_formItem.ui();
 
         // fetus                                                 
-        fetusNumber = formUi.findChild("fetusNumberSpinBox");                                      
-        fetusGroup1 = formUi.findChild("fetus1GroupBox"); 
-        fetusGroup2 = formUi.findChild("fetus2GroupBox");
-        fetusGroup3 = formUi.findChild("fetus3GroupBox");                                   
-        fetusGroup4 = formUi.findChild("fetus4GroupBox");
-        fetusGroup5 = formUi.findChild("fetus5GroupBox");
-        fetusGroup6 = formUi.findChild("fetus6GroupBox");
-        defaultHideFetusGroupBox();
+        trimester1_fetusNumber = trimester1_formUi.findChild("fetusNumberSpinBox");                                      
+        trimester1_fetusGroup1 = trimester1_formUi.findChild("fetus1GroupBox"); 
+        trimester1_fetusGroup2 = trimester1_formUi.findChild("fetus2GroupBox");
+        trimester1_fetusGroup3 = trimester1_formUi.findChild("fetus3GroupBox");                                   
+        trimester1_fetusGroup4 = trimester1_formUi.findChild("fetus4GroupBox");
+        trimester1_fetusGroup5 = trimester1_formUi.findChild("fetus5GroupBox");
+        trimester1_fetusGroup6 = trimester1_formUi.findChild("fetus6GroupBox");
+        trimester1_defaultHideFetusGroupBox();
 
         // obstetrical calendar
-        lastMenstrualPeriodUi = formUi.findChild("lastMenstrualPeriodDateEdit");
-        lastMenstrualPeriodItem = freemedforms.forms.item("ObstetricalCalendar::LastMentrualPeriod");
-        conceptionDateUi = formUi.findChild("conceptionDateDateEdit");
-        conceptionDateItem = freemedforms.forms.item("ObstetricalCalendar::ConceptionDate");
-        useLmp = formUi.findChild("useLmpCheck");
-        useLmpItem = freemedforms.forms.item("ObstetricalCalendar::UseLMP::Check");
-        useDateOfConception = formUi.findChild("useDateOfConceptionCheck");
-        useDateOfConceptionItem = freemedforms.forms.item("ObstetricalCalendar::UseConceptionDate::Check");        
-        currentWeeksAmenorrhoeaWeeksValue = formUi.findChild("currentWeeksAmenorrhoeaWeeksValueLabel");        
-        currentWeeksAmenorrhoeaDaysValue = formUi.findChild("currentWeeksAmenorrhoeaDaysValueLabel");       
-        estimatedDueDate = formUi.findChild("eddValueLabel");
-        setDefaults();
-        setLmpDefault();
+        trimester1_lastMenstrualPeriodUi = trimester1_formUi.findChild("lastMenstrualPeriodDateEdit");
+        trimester1_lastMenstrualPeriodItem = freemedforms.forms.item("Trimester1::ObstetricalCalendar::LastMenstrualPeriod");
+        trimester1_conceptionDateUi = trimester1_formUi.findChild("conceptionDateDateEdit");
+        trimester1_conceptionDateItem = freemedforms.forms.item("Trimester1::ObstetricalCalendar::ConceptionDate");
+        trimester1_useLmp = trimester1_formUi.findChild("useLmpCheck");
+        trimester1_useLmpItem = freemedforms.forms.item("Trimester1::ObstetricalCalendar::UseLMP::Check");
+        trimester1_useDateOfConception = trimester1_formUi.findChild("useDateOfConceptionCheck");
+        trimester1_useDateOfConceptionItem = freemedforms.forms.item("Trimester1::ObstetricalCalendar::UseConceptionDate::Check");        
+        trimester1_currentWeeksAmenorrhoeaWeeksValue = trimester1_formUi.findChild("trimester1CurrentWeeksAmenorrhoeaWeeksValueLabel");        
+        trimester1_currentWeeksAmenorrhoeaDaysValue = trimester1_formUi.findChild("trimester1CurrentWeeksAmenorrhoeaDaysValueLabel");       
+        trimester1_estimatedDueDate = trimester1_formUi.findChild("eddValueLabel");
+        trimester1_setDefaults();
+        trimester1_setLmpDefault();
 
         // fetus connection
-        fetusNumber['valueChanged(int)'].connect(this, hideFetusGroupBox);
+        trimester1_fetusNumber['valueChanged(int)'].connect(this, trimester1_hideFetusGroupBox);
 
         // obstetrical calendar connection
         //useLmp['stateChanged(int)'].connect(this, chooseDateToUse);
@@ -69,78 +63,80 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
     
     // fetus functions
 
-    function defaultHideFetusGroupBox() {
+    function trimester1_defaultHideFetusGroupBox() {
             print("default to 1 visible fetusGroup");                                                    
-            fetusGroup1.visible = true;                                         
-            fetusGroup2.visible = false;                                        
-            fetusGroup3.visible = false;                                        
-            fetusGroup4.visible = false;                                        
-            fetusGroup5.visible = false;                                        
+            trimester1_fetusGroup1.visible = true;                                         
+            trimester1_fetusGroup2.visible = false;                                        
+            trimester1_fetusGroup3.visible = false;                                        
+            trimester1_fetusGroup4.visible = false;                                        
+            trimester1_fetusGroup5.visible = false;
+            trimester1_fetusGroup6.visible = false;                                        
         }
 
-    function hideFetusGroupBox() {
-            print("fetusNumber = " + fetusNumber.value);
-        if (fetusNumber.value == 0) {
+    function trimester1_hideFetusGroupBox() {
+            print("trimester1_fetusNumber = " + trimester1_fetusNumber.value);
+        if (trimester1_fetusNumber.value == 0) {
             print("if = 0");
-            fetusGroup1.visible = false;
-            fetusGroup2.visible = false;
-            fetusGroup3.visible = false;
-            fetusGroup4.visible = false;                                        
-            fetusGroup5.visible = false;
+            trimester1_fetusGroup1.visible = false;
+            trimester1_fetusGroup2.visible = false;
+            trimester1_fetusGroup3.visible = false;
+            trimester1_fetusGroup4.visible = false;                                        
+            trimester1_fetusGroup5.visible = false;
+            trimester1_fetusGroup6.visible = false;
         }
-        else if (fetusNumber.value == 1) {
+        else if (trimester1_fetusNumber.value == 1) {
             print("if = 1");
-            fetusGroup1.visible = true;                                      
-            fetusGroup2.visible = false;                                      
-            fetusGroup3.visible = false;
-            fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;
-            fetusGroup6.visible = false;
+            trimester1_fetusGroup1.visible = true;                                      
+            trimester1_fetusGroup2.visible = false;                                      
+            trimester1_fetusGroup3.visible = false;
+            trimester1_fetusGroup4.visible = false;                                         
+            trimester1_fetusGroup5.visible = false;
+            trimester1_fetusGroup6.visible = false;
         }
-        else if (fetusNumber.value == 2) {
+        else if (trimester1_fetusNumber.value == 2) {
             print("if = 2");                                                
-            fetusGroup1.visible = true;                                       
-            fetusGroup2.visible = true;                                   
-            fetusGroup3.visible = false;
-            fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;
-            fetusGroup6.visible = false;                                      
+            trimester1_fetusGroup1.visible = true;                                       
+            trimester1_fetusGroup2.visible = true;                                   
+            trimester1_fetusGroup3.visible = false;
+            trimester1_fetusGroup4.visible = false;                                         
+            trimester1_fetusGroup5.visible = false;
+            trimester1_fetusGroup6.visible = false;                                      
         }  
-        else if (fetusNumber.value == 3) {
+        else if (trimester1_fetusNumber.value == 3) {
             print("if = 3");                                                
-            fetusGroup1.visible = true;                                       
-            fetusGroup2.visible = true;                                      
-            fetusGroup3.visible = true;
-            fetusGroup4.visible = false;                                         
-            fetusGroup5.visible = false;
-            fetusGroup6.visible = false;                                     
+            trimester1_fetusGroup1.visible = true;                                       
+            trimester1_fetusGroup2.visible = true;                                      
+            trimester1_fetusGroup3.visible = true;
+            trimester1_fetusGroup4.visible = false;                                         
+            trimester1_fetusGroup5.visible = false;
+            trimester1_fetusGroup6.visible = false;                                     
         }
-        else if (fetusNumber.value == 4) {                                      
+        else if (trimester1_fetusNumber.value == 4) {                                      
             print("if = 4");                                                    
-            fetusGroup1.visible = true;                                         
-            fetusGroup2.visible = true;                                         
-            fetusGroup3.visible = true;
-            fetusGroup4.visible = true;
-            fetusGroup5.visible = false;
-            fetusGroup6.visible = false;                                         
+            trimester1_fetusGroup1.visible = true;                                         
+            trimester1_fetusGroup2.visible = true;                                         
+            trimester1_fetusGroup3.visible = true;
+            trimester1_fetusGroup4.visible = true;
+            trimester1_fetusGroup5.visible = false;
+            trimester1_fetusGroup6.visible = false;                                         
         }
-        else if (fetusNumber.value == 5) {                                      
+        else if (trimester1_fetusNumber.value == 5) {                                      
             print("if = 5");                                                    
-            fetusGroup1.visible = true;                                         
-            fetusGroup2.visible = true;                                         
-            fetusGroup3.visible = true;                                         
-            fetusGroup4.visible = true;                                         
-            fetusGroup5.visible = true;
-            fetusGroup6.visible = false;                                        
+            trimester1_fetusGroup1.visible = true;                                         
+            trimester1_fetusGroup2.visible = true;                                         
+            trimester1_fetusGroup3.visible = true;                                         
+            trimester1_fetusGroup4.visible = true;                                         
+            trimester1_fetusGroup5.visible = true;
+            trimester1_fetusGroup6.visible = false;                                        
         }
-        else if (fetusNumber.value == 6) {                                      
+        else if (trimester1_fetusNumber.value == 6) {                                      
             print("if = 6");                                                    
-            fetusGroup1.visible = true;                                         
-            fetusGroup2.visible = true;                                         
-            fetusGroup3.visible = true;                                         
-            fetusGroup4.visible = true;                                         
-            fetusGroup5.visible = true;
-            fetusGroup6.visible = true;                                         
+            trimester1_fetusGroup1.visible = true;                                         
+            trimester1_fetusGroup2.visible = true;                                         
+            trimester1_fetusGroup3.visible = true;                                         
+            trimester1_fetusGroup4.visible = true;                                         
+            trimester1_fetusGroup5.visible = true;
+            trimester1_fetusGroup6.visible = true;                                         
         }    
         else {
             print("not coded yet sorry");
@@ -150,116 +146,106 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
 
     // obstetrical calendar functions
 
-    function chooseDateToUse() {
-        print("chooseDateToUse()");
-        var empty = "";
-        estimatedDueDate.setText(empty);
+    function trimester1_chooseDateToUse() {
+        print("trimester1_chooseDateToUse()");
+        var trimester1_empty = "";
+        trimester1_estimatedDueDate.setText(trimester1_empty);
 
-        if (!useLmpItem.checked && !useDateOfConceptionItem.checked) {
-        setLmpDefault();
+        if (!trimester1_useLmpItem.checked && !trimester1_useDateOfConceptionItem.checked) {
+        trimester1_setLmpDefault();
         return;
         }
-        computeEstimatedDueDate();
-        computeGestationalAge();
+        trimester1_computeEstimatedDueDate();
+        trimester1_computeGestationalAge();
         return;
     }
 
-    function computeEstimatedDueDate() {
-        var empty = "";
-        estimatedDueDate.setText(empty);
-        currentWeeksAmenorrhoeaWeeksValue.setText(empty);                     
-        currentWeeksAmenorrhoeaDaysValue.setText(empty);
-        if (freemedforms.tools.dateToString(lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
-            print("inside computeEstimatedDueDate()-> lmp=01/01/2000 -> return");
+    function trimester1_computeEstimatedDueDate() {
+        var trimester1_empty = "";
+        trimester1_estimatedDueDate.setText(trimester1_empty);
+        trimester1_currentWeeksAmenorrhoeaWeeksValue.setText(trimester1_empty);                     
+        trimester1_currentWeeksAmenorrhoeaDaysValue.setText(trimester1_empty);
+        if (freemedforms.tools.dateToString(trimester1_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
+            print("inside trimester1_computeEstimatedDueDate()-> lmp=01/01/2000 -> return");
             return;
         }
-        print("computeEstimatedDueDate()");
-        var edd = freemedforms.tools.addWeeks(lastMenstrualPeriodItem.currentValue, 40);                   
-        var edd = freemedforms.tools.dateToString(edd, "ddd dd MMM yyyy");
-        var eddText = "<b>";
-        eddText += edd;
-        eddText += "</b>";
-        estimatedDueDate.setText(eddText);        
+        print("trimester1_computeEstimatedDueDate()");
+        var trimester1_edd = freemedforms.tools.addWeeks(trimester1_lastMenstrualPeriodItem.currentValue, 40);                   
+        var trimester1_edd = freemedforms.tools.dateToString(trimester1_edd, "ddd dd MMM yyyy");
+        var trimester1_eddText = "<b>";
+        trimester1_eddText += trimester1_edd;
+        trimester1_eddText += "</b>";
+        trimester1_estimatedDueDate.setText(trimester1_eddText);        
 
     }
 
-    function computeGestationalAge() {
-        var emptyGA = "";
-        currentWeeksAmenorrhoeaWeeksValue.setText(emptyGA);                     
-        currentWeeksAmenorrhoeaDaysValue.setText(emptyGA);
-        if (freemedforms.tools.dateToString(lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
-            print("inside computeGestationalAge()-> lmp=01/01/2000 -> return");
+    function trimester1_computeGestationalAge() {
+        var trimester1_emptyGA = "";
+        trimester1_currentWeeksAmenorrhoeaWeeksValue.setText(trimester1_emptyGA);                     
+        trimester1_currentWeeksAmenorrhoeaDaysValue.setText(trimester1_emptyGA);
+        if (freemedforms.tools.dateToString(trimester1_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
+            print("inside trimester1_computeGestationalAge()-> lmp=01/01/2000 -> return");
             return;                                                             
         }                                        
         print("computeGestationalAge()");
-        var edd = freemedforms.tools.addWeeks(lastMenstrualPeriodItem.currentValue, 40);
-        var days = freemedforms.tools.daysTo(new Date(), edd);
-        var GAdays = (280 - days);
-        var GAweeks = (GAdays - GAdays%7) / 7;
-        var GAdays = GAdays%7;
-        var GAweeksText = "<b>";
-        GAweeksText += GAweeks;
-        GAweeksText += "</b>";
-        var GAdaysText = "<b>";                                                
-        GAdaysText += GAdays;                                                 
-        GAdaysText += "</b>";
-        currentWeeksAmenorrhoeaWeeksValue.setText(GAweeksText);
-        currentWeeksAmenorrhoeaDaysValue.setText(GAdaysText);
+        var trimester1_edd = freemedforms.tools.addWeeks(trimester1_lastMenstrualPeriodItem.currentValue, 40);
+        var trimester1_days = freemedforms.tools.daysTo(new Date(), trimester1_edd);
+        var trimester1_GAdays = (280 - trimester1_days);
+        var trimester1_GAweeks = (trimester1_GAdays - trimester1_GAdays%7) / 7;
+        var trimester1_GAdays = trimester1_GAdays%7;
+        var trimester1_GAweeksText = "<b>";
+        trimester1_GAweeksText += trimester1_GAweeks;
+        trimester1_GAweeksText += "</b>";
+        var trimester1_GAdaysText = "<b>";                                                
+        trimester1_GAdaysText += trimester1_GAdays;                                                 
+        trimester1_GAdaysText += "</b>";
+        trimester1_currentWeeksAmenorrhoeaWeeksValue.setText(trimester1_GAweeksText);
+        trimester1_currentWeeksAmenorrhoeaDaysValue.setText(trimester1_GAdaysText);
     }
 
-    function setLmpDefault() {
-        print("setLmpDefault");
-        useLmpItem.checked = true;
+    function trimester1_setLmpDefault() {
+        print("trimester1_setLmpDefault");
+        trimester1_useLmpItem.checked = true;
         return;
     }
 
-    function setDefaults() {                                                  
-        print("setDefaults");                                                 
-        lastMenstrualPeriodItem.currentValue = (new Date());                    
-        estimatedDueDate.setText("");                                           
+    function trimester1_setDefaults() {                                                  
+        print("trimester1_setDefaults");                                                 
+        trimester1_lastMenstrualPeriodItem.currentValue = (new Date());                    
+        trimester1_estimatedDueDate.setText("");                                           
         return;                                                                 
     }
 
-    function setLmp() {
-        if (useLmpItem.checked && !useDateOfConceptionItem.checked) return;
+    function trimester1_setLmp() {
+        if (trimester1_useLmpItem.checked && !trimester1_useDateOfConceptionItem.checked) return;
         
-        print("setLmp()");
+        print("trimester1_setLmp()");
         
-        if (useLmpItem.checked && useDateOfConceptionItem.checked) {
-        useDateOfConceptionItem.checked = false;
+        if (trimester1_useLmpItem.checked && trimester1_useDateOfConceptionItem.checked) {
+        trimester1_useDateOfConceptionItem.checked = false;
         }
-        if (!useLmpItem.checked && !useDateOfConceptionItem.checked) {            
-        useDateOfConceptionItem.checked = true;                                
+        if (!trimester1_useLmpItem.checked && !trimester1_useDateOfConceptionItem.checked) {            
+        trimester1_useDateOfConceptionItem.checked = true;                                
         }
         
-        print("useLmpItem.checked = " + useLmpItem.checked);
-        print("useDateOfConceptionItem.checked = " + useDateOfConceptionItem.checked);
-        
-        computeEstimatedDueDate();
-        computeGestationalAge();
+        trimester1_computeEstimatedDueDate();
+        trimester1_computeGestationalAge();
     }
 
-    function setDateOfConception() {
-        if (useDateOfConception.checked && !useLmpItem.checked) return;                                                         
-        
-        print("useDateOfConception()");
-        
-        if (useLmpItem.checked && useDateOfConceptionItem.checked) {
-            useLmpItem.checked = false;
+    function trimester1_setDateOfConception() {
+        if (trimester1_useDateOfConception.checked && !trimester1_useLmpItem.checked) return;                                                         
+        if (trimester1_useLmpItem.checked && trimester1_useDateOfConceptionItem.checked) {
+            trimester1_useLmpItem.checked = false;
         }
-        if (!useLmpItem.checked && !useDateOfConceptionItem.checked) {            
-            useLmpItem.checked = true;                                         
+        if (!trimester1_useLmpItem.checked && !trimester1_useDateOfConceptionItem.checked) {            
+            trimester1_useLmpItem.checked = true;                                         
         }                                                                                  
-        print("useLmpItem.checked = " + useLmpItem.checked);
-        print("useDateOfConceptionItem.checked = " + useDateOfConceptionItem.checked);
-
-        print("LMP current value :" + lastMenstrualPeriodItem.currentValue);
      
-        computeEstimatedDueDate();                                              
-        computeGestationalAge();                         
+        trimester1_computeEstimatedDueDate();                                              
+        trimester1_computeGestationalAge();                         
     }
 
 });
 
-namespace.com.freemedforms.imaging.ultrasound.trimester1.setupUi();
-namespace.com.freemedforms.imaging.ultrasound.trimester1.setDefaults();
+namespace.com.freemedforms.imaging.ultrasound.trimester1.trimester1_setupUi();
+namespace.com.freemedforms.imaging.ultrasound.trimester1.trimester1_setDefaults();
