@@ -1207,12 +1207,25 @@
            <number>1</number>
           </property>
           <property name="maximum">
-           <number>5</number>
+           <number>6</number>
           </property>
           <property name="value">
            <number>1</number>
           </property>
          </widget>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -1611,46 +1624,6 @@
     </layout>
    </item>
    <item>
-    <widget class="QGroupBox" name="assessmentGroupBox">
-     <property name="title">
-      <string>assessment</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_15">
-      <item>
-       <layout class="QVBoxLayout" name="diagnosisVerticalLayout">
-        <item>
-         <widget class="QLabel" name="assessmentDiagnosisLabel">
-          <property name="text">
-           <string>diagnosis</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QListView" name="assessmentDiagnosisListView"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="assessmentDiagnosisLineEdit"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="problemsVerticalLayout">
-        <item>
-         <widget class="QLabel" name="assessmentProblemsLabel">
-          <property name="text">
-           <string>problems</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="assessmentProblemsTextEditorLayout"/>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <widget class="QGroupBox" name="fetus6GroupBox">
      <property name="enabled">
       <bool>true</bool>
@@ -1724,6 +1697,46 @@
         </item>
         <item>
          <widget class="QListView" name="positionF6ListView"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="assessmentGroupBox">
+     <property name="title">
+      <string>assessment</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_15">
+      <item>
+       <layout class="QVBoxLayout" name="diagnosisVerticalLayout">
+        <item>
+         <widget class="QLabel" name="assessmentDiagnosisLabel">
+          <property name="text">
+           <string>diagnosis</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="assessmentDiagnosisListView"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="assessmentDiagnosisLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="problemsVerticalLayout">
+        <item>
+         <widget class="QLabel" name="assessmentProblemsLabel">
+          <property name="text">
+           <string>problems</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="assessmentProblemsTextEditorLayout"/>
         </item>
        </layout>
       </item>
