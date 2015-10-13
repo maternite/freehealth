@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>525</width>
+    <width>571</width>
     <height>4095</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_37">
+  <layout class="QVBoxLayout" name="verticalLayout_39">
    <item>
     <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
      <property name="title">
@@ -262,6 +262,40 @@
         </item>
        </layout>
       </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="eddUsLabel">
+          <property name="text">
+           <string>edd US</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="eddUsDateEdit">
+          <property name="displayFormat">
+           <string>dd/MM/yyyy</string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_13">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
      </layout>
     </widget>
    </item>
@@ -334,75 +368,134 @@
      <property name="title">
       <string>adnexaGroupBox</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
-      <item>
-       <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0">
-         <widget class="QLabel" name="amnioticFluidVolumeLabel">
-          <property name="text">
-           <string>amniotic fluid volume</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <layout class="QHBoxLayout" name="amnioticFluidVolumeRadioLayout"/>
-        </item>
-        <item row="0" column="2">
-         <widget class="QLineEdit" name="amnioticFluidVolumeLineEdit"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="placentaEchostructureLabel">
-          <property name="text">
-           <string>placenta echotexture</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <layout class="QHBoxLayout" name="placentaEchostructureRadioLayout"/>
-        </item>
-        <item row="1" column="2">
-         <widget class="QLineEdit" name="placentaEchostructureLineEdit"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="placentalGradingLabel">
-          <property name="text">
-           <string>placental grading</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <layout class="QHBoxLayout" name="placentalGradingRadioLayout"/>
-        </item>
-        <item row="2" column="2">
-         <widget class="QLineEdit" name="placentalGradingLineEdit"/>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="placentalLocationLabel">
-          <property name="text">
-           <string>placental localisation</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <layout class="QHBoxLayout" name="placentalLocationRadioLayout"/>
-        </item>
-        <item row="3" column="2">
-         <widget class="QLineEdit" name="placentalLocationLineEdit"/>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="adnexaLabel">
-          <property name="text">
-           <string>adnexa</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <layout class="QHBoxLayout" name="adnexaRadioLayout"/>
-        </item>
-        <item row="4" column="2">
-         <widget class="QLineEdit" name="adnexaLineEdit"/>
-        </item>
-       </layout>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="amnioticFluidVolumeLineEdit"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="nuchalCordLabel">
+        <property name="text">
+         <string>nuchal cord</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="amnioticFluidIndexLabel">
+        <property name="text">
+         <string>amniotic fluid index</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QDoubleSpinBox" name="amnioticFluidIndexDoubleSpinBox">
+        <property name="suffix">
+         <string comment="centimeter">cm</string>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="amnioticFluidIndexLineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="deepestVerticalPocketLabel">
+        <property name="text">
+         <string>deepest vertical pocket</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="deepestVerticalPocketDoubleSpinBox">
+        <property name="suffix">
+         <string comment="centimeter">cm</string>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="deepestVerticalPocketLineEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="amnioticFluidVolumeLabel">
+        <property name="text">
+         <string>amniotic fluid volume</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <layout class="QHBoxLayout" name="amnioticFluidVolumeRadioLayout"/>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="placentalGradingLineEdit"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="placentalGradingLabel">
+        <property name="text">
+         <string>placental grading</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <layout class="QHBoxLayout" name="placentalGradingRadioLayout"/>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLineEdit" name="placentalLocationLineEdit"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="placentalLocationLabel">
+        <property name="text">
+         <string>placental location</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <layout class="QHBoxLayout" name="placentalLocationRadioLayout"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="placentaCervixDistanceLabel">
+        <property name="text">
+         <string>placenta lower edge - cervix internal os</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLineEdit" name="placentaCervixDistanceLineEdit"/>
+      </item>
+      <item row="5" column="1">
+       <widget class="QDoubleSpinBox" name="placentaCervixDistanceDoubleSpinBox">
+        <property name="suffix">
+         <string>cm</string>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QLineEdit" name="umbilicalCordLineEdit"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="umbilicalCordLabel">
+        <property name="text">
+         <string>umbilical cord with 3 blood vessels: 2 arteries &amp; 1 vein</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <layout class="QHBoxLayout" name="umbilicalCordRadioLayout"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QLineEdit" name="nuchalCordLineEdit"/>
+      </item>
+      <item row="7" column="1">
+       <layout class="QHBoxLayout" name="nuchalCordRadioLayout"/>
       </item>
      </layout>
     </widget>
@@ -495,7 +588,44 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_7">
+     <layout class="QVBoxLayout" name="verticalLayout_50">
+      <item>
+       <widget class="QGroupBox" name="fetus1PresentationPositionGroupBox">
+        <property name="title">
+         <string>presentation position GroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_54">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="presentationF1Label">
+             <property name="text">
+              <string>presentation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="presentationF1ListView"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QLabel" name="positionF1Label">
+             <property name="text">
+              <string>position</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="positionF1ListView"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item>
        <widget class="QGroupBox" name="fetus1FetalVitalityGroupBox">
         <property name="title">
@@ -503,39 +633,26 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="0" column="0">
-          <widget class="QLabel" name="fetus1PregnancyLabel">
-           <property name="text">
-            <string>pregnancy</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <layout class="QHBoxLayout" name="fetus1PregnancyRadioLayout"/>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="fetus1PregnancyLineEdit"/>
-         </item>
-         <item row="1" column="0">
           <widget class="QLabel" name="fetus1FetalMovementLabel">
            <property name="text">
             <string>fetal movement</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="0" column="1">
           <layout class="QHBoxLayout" name="fetus1FetalMovementRadioLayout"/>
          </item>
-         <item row="1" column="2">
+         <item row="0" column="2" rowspan="2">
           <widget class="QLineEdit" name="fetus1FetalMovementLineEdit"/>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0" rowspan="2">
           <widget class="QLabel" name="fetus1FhrLabel">
            <property name="text">
             <string>fetal heart rate</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="1" rowspan="2">
           <widget class="QSpinBox" name="fetus1FhrSpinBox">
            <property name="suffix">
             <string>bpm</string>
@@ -547,6 +664,32 @@
          </item>
          <item row="2" column="2">
           <widget class="QLineEdit" name="fetus1FhrLineEdit"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus1HeartRythmLabel">
+           <property name="text">
+            <string>fetal heart rythm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="fetus1HeartRythmRadioLayout"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="fetus1HeartRythmLineEdit"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus1RespiratoryLabel">
+           <property name="text">
+            <string>respiratory movements</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <layout class="QHBoxLayout" name="fetus1RespiratoryRadioLayout"/>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="fetus1RespiratoryLineEdit"/>
          </item>
         </layout>
        </widget>
@@ -1115,45 +1258,69 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_8">
       <item>
+       <widget class="QGroupBox" name="fetus2PresentationPositionGroupBox">
+        <property name="title">
+         <string>presentation position GroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_49">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_51">
+           <item>
+            <widget class="QLabel" name="presentationF2Label">
+             <property name="text">
+              <string>presentation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="presentationF2ListView"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_52">
+           <item>
+            <widget class="QLabel" name="positionF2Label">
+             <property name="text">
+              <string>position</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="positionF2ListView"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
        <widget class="QGroupBox" name="fetus2FetalVitalityGroupBox">
         <property name="title">
          <string>fetalVitalityGroupBox</string>
         </property>
-        <layout class="QGridLayout" name="gridLayout_9">
+        <layout class="QGridLayout" name="gridLayout_7">
          <item row="0" column="0">
-          <widget class="QLabel" name="fetus2PregnancyLabel">
-           <property name="text">
-            <string>pregnancy</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <layout class="QHBoxLayout" name="fetus2PregnancyRadioLayout"/>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="fetus2PregnancyLineEdit"/>
-         </item>
-         <item row="1" column="0">
           <widget class="QLabel" name="fetus2FetalMovementLabel">
            <property name="text">
             <string>fetal movement</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="0" column="1">
           <layout class="QHBoxLayout" name="fetus2FetalMovementRadioLayout"/>
          </item>
-         <item row="1" column="2">
+         <item row="0" column="2">
           <widget class="QLineEdit" name="fetus2FetalMovementLineEdit"/>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="fetus2FhrLabel">
            <property name="text">
             <string>fetal heart rate</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="1">
           <widget class="QSpinBox" name="fetus2FhrSpinBox">
            <property name="suffix">
             <string>bpm</string>
@@ -1163,8 +1330,34 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
+         <item row="1" column="2">
           <widget class="QLineEdit" name="fetus2FhrLineEdit"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus2HeartRythmLabel">
+           <property name="text">
+            <string>fetal heart rythm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="fetus2HeartRythmRadioLayout"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="fetus2HeartRythmLineEdit"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus2RespiratoryLabel">
+           <property name="text">
+            <string>respiratory movements</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="fetus2RespiratoryRadioLayout"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="fetus2RespiratoryLineEdit"/>
          </item>
         </layout>
        </widget>
@@ -1725,7 +1918,44 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_13">
+     <layout class="QVBoxLayout" name="verticalLayout_42">
+      <item>
+       <widget class="QGroupBox" name="fetus3PresentationPositionGroupBox">
+        <property name="title">
+         <string>presentation position GroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_48">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QLabel" name="presentationF3Label">
+             <property name="text">
+              <string>presentation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="presentationF3ListView"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_46">
+           <item>
+            <widget class="QLabel" name="positionF3Label">
+             <property name="text">
+              <string>position</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="positionF3ListView"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item>
        <widget class="QGroupBox" name="fetus3FetalVitalityGroupBox">
         <property name="title">
@@ -1733,39 +1963,26 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_12">
          <item row="0" column="0">
-          <widget class="QLabel" name="fetus3PregnancyLabel">
-           <property name="text">
-            <string>pregnancy</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <layout class="QHBoxLayout" name="fetus3PregnancyRadioLayout"/>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="fetus3PregnancyLineEdit"/>
-         </item>
-         <item row="1" column="0">
           <widget class="QLabel" name="fetus3FetalMovementLabel">
            <property name="text">
             <string>fetal movement</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="0" column="1">
           <layout class="QHBoxLayout" name="fetus3FetalMovementRadioLayout"/>
          </item>
-         <item row="1" column="2">
+         <item row="0" column="2">
           <widget class="QLineEdit" name="fetus3FetalMovementLineEdit"/>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="fetus3FhrLabel">
            <property name="text">
             <string>fetal heart rate</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="1">
           <widget class="QSpinBox" name="fetus3FhrSpinBox">
            <property name="suffix">
             <string>bpm</string>
@@ -1775,8 +1992,34 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
+         <item row="1" column="2">
           <widget class="QLineEdit" name="fetus3FhrLineEdit"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus3HeartRythmLabel">
+           <property name="text">
+            <string>fetal heart rythm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="fetus3HeartRythmRadioLayout"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="fetus3HeartRythmLineEdit"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus3RespiratoryLabel">
+           <property name="text">
+            <string>respiratory movements</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="fetus3RespiratoryRadioLayout"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="fetus3RespiratoryLineEdit"/>
          </item>
         </layout>
        </widget>
@@ -2337,7 +2580,44 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_21">
+     <layout class="QVBoxLayout" name="verticalLayout_45">
+      <item>
+       <widget class="QGroupBox" name="fetus4PresentationPositionGroupBox">
+        <property name="title">
+         <string>presentation position GroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_44">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QLabel" name="presentationF4Label">
+             <property name="text">
+              <string>presentation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="presentationF4ListView"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_43">
+           <item>
+            <widget class="QLabel" name="positionF4Label">
+             <property name="text">
+              <string>position</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="positionF4ListView"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item>
        <widget class="QGroupBox" name="fetus4FetalVitalityGroupBox">
         <property name="title">
@@ -2389,6 +2669,32 @@
          </item>
          <item row="2" column="2">
           <widget class="QLineEdit" name="fetus4FhrLineEdit"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus4HeartRythmLabel">
+           <property name="text">
+            <string>fetal heart rythm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="fetus4HeartRythmRadioLayout"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="fetus4HeartRythmLineEdit"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus4RespiratoryLabel">
+           <property name="text">
+            <string>respiratory movements</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <layout class="QHBoxLayout" name="fetus4RespiratoryRadioLayout"/>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="fetus4RespiratoryLineEdit"/>
          </item>
         </layout>
        </widget>
@@ -2949,7 +3255,44 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_26">
+     <layout class="QVBoxLayout" name="verticalLayout_53">
+      <item>
+       <widget class="QGroupBox" name="fetus5PresentationPositionGroupBox">
+        <property name="title">
+         <string>presentation position GroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_41">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_26">
+           <item>
+            <widget class="QLabel" name="presentationF5Label">
+             <property name="text">
+              <string>presentation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="presentationF5ListView"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_40">
+           <item>
+            <widget class="QLabel" name="positionF5Label">
+             <property name="text">
+              <string>position</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="positionF5ListView"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item>
        <widget class="QGroupBox" name="fetus5FetalVitalityGroupBox">
         <property name="title">
@@ -2957,39 +3300,26 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_18">
          <item row="0" column="0">
-          <widget class="QLabel" name="fetus5PregnancyLabel">
-           <property name="text">
-            <string>pregnancy</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <layout class="QHBoxLayout" name="fetus5PregnancyRadioLayout"/>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="fetus5PregnancyLineEdit"/>
-         </item>
-         <item row="1" column="0">
           <widget class="QLabel" name="fetus5FetalMovementLabel">
            <property name="text">
             <string>fetal movement</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="0" column="1">
           <layout class="QHBoxLayout" name="fetus5FetalMovementRadioLayout"/>
          </item>
-         <item row="1" column="2">
+         <item row="0" column="2">
           <widget class="QLineEdit" name="fetus5FetalMovementLineEdit"/>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="fetus5FhrLabel">
            <property name="text">
             <string>fetal heart rate</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="1">
           <widget class="QSpinBox" name="fetus5FhrSpinBox">
            <property name="suffix">
             <string>bpm</string>
@@ -2999,8 +3329,34 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
+         <item row="1" column="2">
           <widget class="QLineEdit" name="fetus5FhrLineEdit"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus5HeartRythmLabel">
+           <property name="text">
+            <string>fetal heart rythm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="fetus5HeartRythmRadioLayout"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="fetus5HeartRythmLineEdit"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus5RespiratoryLabel">
+           <property name="text">
+            <string>respiratory movements</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="fetus5RespiratoryRadioLayout"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="fetus5RespiratoryLineEdit"/>
          </item>
         </layout>
        </widget>
@@ -3561,47 +3917,71 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_31">
+     <layout class="QVBoxLayout" name="verticalLayout_47">
+      <item>
+       <widget class="QGroupBox" name="fetus6PresentationPositionGroupBox">
+        <property name="title">
+         <string>presentation position GroupBox</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_38">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_31">
+           <item>
+            <widget class="QLabel" name="presentationF6Label">
+             <property name="text">
+              <string>presentation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="presentationF6ListView"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_37">
+           <item>
+            <widget class="QLabel" name="positionF6Label">
+             <property name="text">
+              <string>position</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="positionF6ListView"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
       <item>
        <widget class="QGroupBox" name="fetus6FetalVitalityGroupBox">
         <property name="title">
          <string>fetalVitalityGroupBox</string>
         </property>
-        <layout class="QGridLayout" name="gridLayout_21">
+        <layout class="QGridLayout" name="gridLayout_9">
          <item row="0" column="0">
-          <widget class="QLabel" name="fetus6PregnancyLabel">
-           <property name="text">
-            <string>pregnancy</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <layout class="QHBoxLayout" name="fetus6PregnancyRadioLayout"/>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="fetus6PregnancyLineEdit"/>
-         </item>
-         <item row="1" column="0">
           <widget class="QLabel" name="fetus6FetalMovementLabel">
            <property name="text">
             <string>fetal movement</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="0" column="1">
           <layout class="QHBoxLayout" name="fetus6FetalMovementRadioLayout"/>
          </item>
-         <item row="1" column="2">
+         <item row="0" column="2">
           <widget class="QLineEdit" name="fetus6FetalMovementLineEdit"/>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="fetus6FhrLabel">
            <property name="text">
             <string>fetal heart rate</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="1">
           <widget class="QSpinBox" name="fetus6FhrSpinBox">
            <property name="suffix">
             <string>bpm</string>
@@ -3611,8 +3991,34 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
+         <item row="1" column="2">
           <widget class="QLineEdit" name="fetus6FhrLineEdit"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus6HeartRythmLabel">
+           <property name="text">
+            <string>fetal heart rythm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="fetus6HeartRythmRadioLayout"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="fetus6HeartRythmLineEdit"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus6RespiratoryLabel">
+           <property name="text">
+            <string>respiratory movements</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="fetus6RespiratoryRadioLayout"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="fetus6RespiratoryLineEdit"/>
          </item>
         </layout>
        </widget>
