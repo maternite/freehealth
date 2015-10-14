@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>571</width>
+    <width>624</width>
     <height>4095</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_39">
+  <layout class="QVBoxLayout" name="verticalLayout_32">
    <item>
     <widget class="QGroupBox" name="obstetricalCalendarGroupBox">
      <property name="title">
@@ -588,7 +588,7 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_50">
+     <layout class="QVBoxLayout" name="verticalLayout_8">
       <item>
        <widget class="QGroupBox" name="fetus1PresentationPositionGroupBox">
         <property name="title">
@@ -705,365 +705,315 @@
         <property name="title">
          <string>biometryGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <layout class="QGridLayout" name="gridLayout_2">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus1MeanSacDiameterLabel">
-             <property name="text">
-              <string>mean sac diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSpinBox" name="fetus1MeanSacDiameterSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="Line" name="line_3">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QSpinBox" name="fetus1MeanSacDiameterWeekSpinBox"/>
-           </item>
-           <item row="0" column="4">
-            <widget class="QLabel" name="fetus1MeanSacDiameterWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="5">
-            <widget class="QSpinBox" name="fetus1MeanSacDiameterDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="6">
-            <widget class="QLabel" name="fetus1MeanSacDiameterDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus1CRLLabel">
-             <property name="text">
-              <string>crown-rump length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSpinBox" name="fetus1CRLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="Line" name="line_4">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QSpinBox" name="fetus1CRLWeekSpinBox"/>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLabel" name="fetus1CRLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5">
-            <widget class="QSpinBox" name="fetus1CRLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="6">
-            <widget class="QLabel" name="fetus1CRLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus1BPDLabel">
-             <property name="text">
-              <string>biparietal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSpinBox" name="fetus1BPDSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="Line" name="line_5">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QSpinBox" name="fetus1BPDWeekSpinBox"/>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLabel" name="fetus1BPDWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QSpinBox" name="fetus1BPDDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="6">
-            <widget class="QLabel" name="fetus1BPDDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus1HeadCircumferenceLabel">
-             <property name="text">
-              <string>head circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QSpinBox" name="fetus1HeadCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="Line" name="line_6">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QSpinBox" name="fetus1HeadCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="3" column="4">
-            <widget class="QLabel" name="fetus1HeadCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QSpinBox" name="fetus1HeadCircumferenceDaysSpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="6">
-            <widget class="QLabel" name="fetus1HeadCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus1AbdominalCircumferenceLabel">
-             <property name="text">
-              <string>abdominal circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QSpinBox" name="fetus1AbdominalCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="Line" name="line_7">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QSpinBox" name="fetus1AbdominalCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="fetus1AbdominalCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QSpinBox" name="fetus1AbdominalCircumferenceDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="6">
-            <widget class="QLabel" name="fetus1AbdominalCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus1TADLabel">
-             <property name="text">
-              <string>transverse abdominal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QSpinBox" name="fetus1TADSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="Line" name="line_8">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="3">
-            <widget class="QSpinBox" name="fetus1TADWeekSpinBox"/>
-           </item>
-           <item row="5" column="4">
-            <widget class="QLabel" name="fetus1TADWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QSpinBox" name="fetus1TADDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="6">
-            <widget class="QLabel" name="fetus1TADDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus1FLLabel">
-             <property name="text">
-              <string>femur length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QSpinBox" name="fetus1FLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="Line" name="line_9">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="3">
-            <widget class="QSpinBox" name="fetus1FLWeekSpinBox"/>
-           </item>
-           <item row="6" column="4">
-            <widget class="QLabel" name="fetus1FLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QSpinBox" name="fetus1FLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="6">
-            <widget class="QLabel" name="fetus1FLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="fetus1NuchalTranslucencyLabel">
-             <property name="text">
-              <string>nuchal translucency</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QSpinBox" name="fetus1NuchalTranslucencySpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-          </layout>
+        <layout class="QGridLayout" name="gridLayout_21">
+         <item row="0" column="0">
+          <widget class="QLabel" name="fetus1BPDLabel">
+           <property name="text">
+            <string>biparietal diameter</string>
+           </property>
+          </widget>
          </item>
-         <item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="fetus1BPDSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="Line" name="line_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QSpinBox" name="fetus1BPDWeekSpinBox"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="fetus1BPDWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QSpinBox" name="fetus1BPDDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLabel" name="fetus1BPDDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="7">
+          <widget class="QSpinBox" name="fetus1BipPercentileSpinBox"/>
+         </item>
+         <item row="0" column="8">
+          <widget class="QLabel" name="fetus1BipPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="fetus1HeadCircumferenceLabel">
+           <property name="text">
+            <string>head circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="fetus1HeadCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="Line" name="line_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QSpinBox" name="fetus1HeadCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLabel" name="fetus1HeadCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QSpinBox" name="fetus1HeadCircumferenceDaysSpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLabel" name="fetus1HeadCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QSpinBox" name="fetus1HcPercentileSpinBox"/>
+         </item>
+         <item row="1" column="8">
+          <widget class="QLabel" name="fetus1HcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus1AbdominalCircumferenceLabel">
+           <property name="text">
+            <string>abdominal circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="fetus1AbdominalCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="Line" name="line_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QSpinBox" name="fetus1AbdominalCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="2" column="4">
+          <widget class="QLabel" name="fetus1AbdominalCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QSpinBox" name="fetus1AbdominalCircumferenceDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6">
+          <widget class="QLabel" name="fetus1AbdominalCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7">
+          <widget class="QSpinBox" name="fetus1AcPercentileSpinBox"/>
+         </item>
+         <item row="2" column="8">
+          <widget class="QLabel" name="fetus1AcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus1TADLabel">
+           <property name="text">
+            <string>transverse abdominal diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="fetus1TADSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="Line" name="line_8">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QSpinBox" name="fetus1TADWeekSpinBox"/>
+         </item>
+         <item row="3" column="4">
+          <widget class="QLabel" name="fetus1TADWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QSpinBox" name="fetus1TADDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QLabel" name="fetus1TADDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="7">
+          <widget class="QSpinBox" name="fetus1TadPercentileSpinBox"/>
+         </item>
+         <item row="3" column="8">
+          <widget class="QLabel" name="fetus1TadPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus1FLLabel">
+           <property name="text">
+            <string>femur length</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="fetus1FLSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="Line" name="line_9">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QSpinBox" name="fetus1FLWeekSpinBox"/>
+         </item>
+         <item row="4" column="4">
+          <widget class="QLabel" name="fetus1FLWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="5">
+          <widget class="QSpinBox" name="fetus1FLDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="6">
+          <widget class="QLabel" name="fetus1FLDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
+          <widget class="QSpinBox" name="fetus1FlPercentileSpinBox"/>
+         </item>
+         <item row="4" column="8">
+          <widget class="QLabel" name="fetus1FlPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="fetus1EfwLabel">
+           <property name="text">
+            <string>estimated fetal weight</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="fetus1EfwSpinBox">
+           <property name="suffix">
+            <string comment="gram">g</string>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
             <widget class="QLabel" name="fetus1BiometryCommentLabel">
@@ -1256,7 +1206,7 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_8">
+     <layout class="QVBoxLayout" name="verticalLayout_9">
       <item>
        <widget class="QGroupBox" name="fetus2PresentationPositionGroupBox">
         <property name="title">
@@ -1367,365 +1317,315 @@
         <property name="title">
          <string>biometryGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_9">
-         <item>
-          <layout class="QGridLayout" name="gridLayout_10">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus2MeanSacDiameterLabel">
-             <property name="text">
-              <string>mean sac diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSpinBox" name="fetus2MeanSacDiameterSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="Line" name="line_10">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QSpinBox" name="fetus2MeanSacDiameterWeekSpinBox"/>
-           </item>
-           <item row="0" column="4">
-            <widget class="QLabel" name="fetus2MeanSacDiameterWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="5">
-            <widget class="QSpinBox" name="fetus2MeanSacDiameterDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="6">
-            <widget class="QLabel" name="fetus2MeanSacDiameterDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus2CRLLabel">
-             <property name="text">
-              <string>crown-rump length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSpinBox" name="fetus2CRLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="Line" name="line_11">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QSpinBox" name="fetus2CRLWeekSpinBox"/>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLabel" name="fetus2CRLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5">
-            <widget class="QSpinBox" name="fetus2CRLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="6">
-            <widget class="QLabel" name="fetus2CRLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus2BPDLabel">
-             <property name="text">
-              <string>biparietal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSpinBox" name="fetus2BPDSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="Line" name="line_12">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QSpinBox" name="fetus2BPDWeekSpinBox"/>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLabel" name="fetus2BPDWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QSpinBox" name="fetus2BPDDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="6">
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus2HeadCircumferenceLabel">
-             <property name="text">
-              <string>head circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QSpinBox" name="fetus2HeadCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="Line" name="line_13">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QSpinBox" name="fetus2HeadCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="3" column="4">
-            <widget class="QLabel" name="fetus2HeadCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QSpinBox" name="fetus2HeadCircumferenceDaysSpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="6">
-            <widget class="QLabel" name="fetus2HeadCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus2AbdominalCircumferenceLabel">
-             <property name="text">
-              <string>abdominal circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QSpinBox" name="fetus2AbdominalCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="Line" name="line_14">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QSpinBox" name="fetus2AbdominalCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="fetus2AbdominalCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QSpinBox" name="fetus2AbdominalCircumferenceDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="6">
-            <widget class="QLabel" name="fetus2AbdominalCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus2TADLabel">
-             <property name="text">
-              <string>transverse abdominal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QSpinBox" name="fetus2TADSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="Line" name="line_15">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="3">
-            <widget class="QSpinBox" name="fetus2TADWeekSpinBox"/>
-           </item>
-           <item row="5" column="4">
-            <widget class="QLabel" name="fetus2TADWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QSpinBox" name="fetus2TADDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="6">
-            <widget class="QLabel" name="fetus2TADDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus2FLLabel">
-             <property name="text">
-              <string>femur length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QSpinBox" name="fetus2FLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="Line" name="line_16">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="3">
-            <widget class="QSpinBox" name="fetus2FLWeekSpinBox"/>
-           </item>
-           <item row="6" column="4">
-            <widget class="QLabel" name="fetus2FLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QSpinBox" name="fetus2FLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="6">
-            <widget class="QLabel" name="fetus2FLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="fetus2NuchalTranslucencyLabel">
-             <property name="text">
-              <string>nuchal translucency</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QSpinBox" name="fetus2NuchalTranslucencySpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-          </layout>
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="0" column="0">
+          <widget class="QLabel" name="fetus2BPDLabel">
+           <property name="text">
+            <string>biparietal diameter</string>
+           </property>
+          </widget>
          </item>
-         <item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="fetus2BPDSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="Line" name="line_12">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QSpinBox" name="fetus2BPDWeekSpinBox"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="fetus2BPDWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QSpinBox" name="fetus2BPDDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="7">
+          <widget class="QSpinBox" name="fetus2BipPercentileSpinBox"/>
+         </item>
+         <item row="0" column="8">
+          <widget class="QLabel" name="fetus2BipPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="fetus2HeadCircumferenceLabel">
+           <property name="text">
+            <string>head circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="fetus2HeadCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="Line" name="line_13">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QSpinBox" name="fetus2HeadCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLabel" name="fetus2HeadCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QSpinBox" name="fetus2HeadCircumferenceDaysSpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLabel" name="fetus2HeadCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QSpinBox" name="fetus2HcPercentileSpinBox"/>
+         </item>
+         <item row="1" column="8">
+          <widget class="QLabel" name="fetus2HcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus2AbdominalCircumferenceLabel">
+           <property name="text">
+            <string>abdominal circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="fetus2AbdominalCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="Line" name="line_14">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QSpinBox" name="fetus2AbdominalCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="2" column="4">
+          <widget class="QLabel" name="fetus2AbdominalCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QSpinBox" name="fetus2AbdominalCircumferenceDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6">
+          <widget class="QLabel" name="fetus2AbdominalCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7">
+          <widget class="QSpinBox" name="fetus2AcPercentileSpinBox"/>
+         </item>
+         <item row="2" column="8">
+          <widget class="QLabel" name="fetus2AcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus2TADLabel">
+           <property name="text">
+            <string>transverse abdominal diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="fetus2TADSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="Line" name="line_15">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QSpinBox" name="fetus2TADWeekSpinBox"/>
+         </item>
+         <item row="3" column="4">
+          <widget class="QLabel" name="fetus2TADWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QSpinBox" name="fetus2TADDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QLabel" name="fetus2TADDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="7">
+          <widget class="QSpinBox" name="fetus2TadPercentileSpinBox"/>
+         </item>
+         <item row="3" column="8">
+          <widget class="QLabel" name="fetus2TadPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus2FLLabel">
+           <property name="text">
+            <string>femur length</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="fetus2FLSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="Line" name="line_16">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QSpinBox" name="fetus2FLWeekSpinBox"/>
+         </item>
+         <item row="4" column="4">
+          <widget class="QLabel" name="fetus2FLWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="5">
+          <widget class="QSpinBox" name="fetus2FLDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="6">
+          <widget class="QLabel" name="fetus2FLDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
+          <widget class="QSpinBox" name="fetus2FlPercentileSpinBox"/>
+         </item>
+         <item row="4" column="8">
+          <widget class="QLabel" name="fetus2FlPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="fetus2EfwLabel">
+           <property name="text">
+            <string>estimated fetal weight</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="fetus2EfwSpinBox">
+           <property name="suffix">
+            <string comment="gram">g</string>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout_10">
            <item>
             <widget class="QLabel" name="fetus2BiometryCommentLabel">
@@ -1918,7 +1818,7 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_42">
+     <layout class="QVBoxLayout" name="verticalLayout_14">
       <item>
        <widget class="QGroupBox" name="fetus3PresentationPositionGroupBox">
         <property name="title">
@@ -2029,365 +1929,315 @@
         <property name="title">
          <string>biometryGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_14">
-         <item>
-          <layout class="QGridLayout" name="gridLayout_13">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus3MeanSacDiameterLabel">
-             <property name="text">
-              <string>mean sac diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSpinBox" name="fetus3MeanSacDiameterSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="Line" name="line_17">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QSpinBox" name="fetus3MeanSacDiameterWeekSpinBox"/>
-           </item>
-           <item row="0" column="4">
-            <widget class="QLabel" name="fetus3MeanSacDiameterWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="5">
-            <widget class="QSpinBox" name="fetus3MeanSacDiameterDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="6">
-            <widget class="QLabel" name="fetus3MeanSacDiameterDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus3CRLLabel">
-             <property name="text">
-              <string>crown-rump length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSpinBox" name="fetus3CRLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="Line" name="line_18">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QSpinBox" name="fetus3CRLWeekSpinBox"/>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLabel" name="fetus3CRLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5">
-            <widget class="QSpinBox" name="fetus3CRLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="6">
-            <widget class="QLabel" name="fetus3CRLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus3BPDLabel">
-             <property name="text">
-              <string>biparietal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSpinBox" name="fetus3BPDSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="Line" name="line_19">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QSpinBox" name="fetus3BPDWeekSpinBox"/>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLabel" name="fetus3BPDWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QSpinBox" name="fetus3BPDDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="6">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus3HeadCircumferenceLabel">
-             <property name="text">
-              <string>head circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QSpinBox" name="fetus3HeadCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="Line" name="line_20">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QSpinBox" name="fetus3HeadCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="3" column="4">
-            <widget class="QLabel" name="fetus3HeadCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QSpinBox" name="fetus3HeadCircumferenceDaysSpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="6">
-            <widget class="QLabel" name="fetus3HeadCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus3AbdominalCircumferenceLabel">
-             <property name="text">
-              <string>abdominal circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QSpinBox" name="fetus3AbdominalCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="Line" name="line_21">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QSpinBox" name="fetus3AbdominalCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="fetus3AbdominalCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QSpinBox" name="fetus3AbdominalCircumferenceDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="6">
-            <widget class="QLabel" name="fetus3AbdominalCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus3TADLabel">
-             <property name="text">
-              <string>transverse abdominal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QSpinBox" name="fetus3TADSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="Line" name="line_22">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="3">
-            <widget class="QSpinBox" name="fetus3TADWeekSpinBox"/>
-           </item>
-           <item row="5" column="4">
-            <widget class="QLabel" name="fetus3TADWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QSpinBox" name="fetus3TADDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="6">
-            <widget class="QLabel" name="fetus3TADDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus3FLLabel">
-             <property name="text">
-              <string>femur length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QSpinBox" name="fetus3FLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="Line" name="line_23">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="3">
-            <widget class="QSpinBox" name="fetus3FLWeekSpinBox"/>
-           </item>
-           <item row="6" column="4">
-            <widget class="QLabel" name="fetus3FLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QSpinBox" name="fetus3FLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="6">
-            <widget class="QLabel" name="fetus3FLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="fetus3NuchalTranslucencyLabel">
-             <property name="text">
-              <string>nuchal translucency</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QSpinBox" name="fetus3NuchalTranslucencySpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-          </layout>
+        <layout class="QGridLayout" name="gridLayout_13">
+         <item row="0" column="0">
+          <widget class="QLabel" name="fetus3BPDLabel">
+           <property name="text">
+            <string>biparietal diameter</string>
+           </property>
+          </widget>
          </item>
-         <item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="fetus3BPDSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="Line" name="line_19">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QSpinBox" name="fetus3BPDWeekSpinBox"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="fetus3BPDWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QSpinBox" name="fetus3BPDDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="7">
+          <widget class="QSpinBox" name="fetus3BipPercentileSpinBox"/>
+         </item>
+         <item row="0" column="8">
+          <widget class="QLabel" name="fetus3BipPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="fetus3HeadCircumferenceLabel">
+           <property name="text">
+            <string>head circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="fetus3HeadCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="Line" name="line_20">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QSpinBox" name="fetus3HeadCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLabel" name="fetus3HeadCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QSpinBox" name="fetus3HeadCircumferenceDaysSpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLabel" name="fetus3HeadCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QSpinBox" name="fetus3HcPercentileSpinBox"/>
+         </item>
+         <item row="1" column="8">
+          <widget class="QLabel" name="fetus3HcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus3AbdominalCircumferenceLabel">
+           <property name="text">
+            <string>abdominal circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="fetus3AbdominalCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="Line" name="line_21">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QSpinBox" name="fetus3AbdominalCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="2" column="4">
+          <widget class="QLabel" name="fetus3AbdominalCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QSpinBox" name="fetus3AbdominalCircumferenceDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6">
+          <widget class="QLabel" name="fetus3AbdominalCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7">
+          <widget class="QSpinBox" name="fetus3AcPercentileSpinBox"/>
+         </item>
+         <item row="2" column="8">
+          <widget class="QLabel" name="fetus3AcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus3TADLabel">
+           <property name="text">
+            <string>transverse abdominal diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="fetus3TADSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="Line" name="line_22">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QSpinBox" name="fetus3TADWeekSpinBox"/>
+         </item>
+         <item row="3" column="4">
+          <widget class="QLabel" name="fetus3TADWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QSpinBox" name="fetus3TADDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QLabel" name="fetus3TADDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="7">
+          <widget class="QSpinBox" name="fetus3TadPercentileSpinBox"/>
+         </item>
+         <item row="3" column="8">
+          <widget class="QLabel" name="fetus3TadPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus3FLLabel">
+           <property name="text">
+            <string>femur length</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="fetus3FLSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="Line" name="line_23">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QSpinBox" name="fetus3FLWeekSpinBox"/>
+         </item>
+         <item row="4" column="4">
+          <widget class="QLabel" name="fetus3FLWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="5">
+          <widget class="QSpinBox" name="fetus3FLDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="6">
+          <widget class="QLabel" name="fetus3FLDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
+          <widget class="QSpinBox" name="fetus3FlPercentileSpinBox"/>
+         </item>
+         <item row="4" column="8">
+          <widget class="QLabel" name="fetus3FlPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="fetus3EfwLabel">
+           <property name="text">
+            <string>estimated fetal weight</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="fetus3EfwSpinBox">
+           <property name="suffix">
+            <string comment="gram">g</string>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
           <layout class="QVBoxLayout" name="verticalLayout_15">
            <item>
             <widget class="QLabel" name="fetus3BiometryCommentLabel">
@@ -2580,7 +2430,7 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_45">
+     <layout class="QVBoxLayout" name="verticalLayout_22">
       <item>
        <widget class="QGroupBox" name="fetus4PresentationPositionGroupBox">
         <property name="title">
@@ -2704,365 +2554,315 @@
         <property name="title">
          <string>biometryGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_22">
-         <item>
-          <layout class="QGridLayout" name="gridLayout_16">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus4MeanSacDiameterLabel">
-             <property name="text">
-              <string>mean sac diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSpinBox" name="fetus4MeanSacDiameterSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="Line" name="line_24">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QSpinBox" name="fetus4MeanSacDiameterWeekSpinBox"/>
-           </item>
-           <item row="0" column="4">
-            <widget class="QLabel" name="fetus4MeanSacDiameterWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="5">
-            <widget class="QSpinBox" name="fetus4MeanSacDiameterDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="6">
-            <widget class="QLabel" name="fetus4MeanSacDiameterDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus4CRLLabel">
-             <property name="text">
-              <string>crown-rump length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSpinBox" name="fetus4CRLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="Line" name="line_25">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QSpinBox" name="fetus4CRLWeekSpinBox"/>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLabel" name="fetus4CRLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5">
-            <widget class="QSpinBox" name="fetus4CRLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="6">
-            <widget class="QLabel" name="fetus4CRLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus4BPDLabel">
-             <property name="text">
-              <string>biparietal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSpinBox" name="fetus4BPDSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="Line" name="line_26">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QSpinBox" name="fetus4BPDWeekSpinBox"/>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLabel" name="fetus4BPDWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QSpinBox" name="fetus4BPDDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="6">
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus4HeadCircumferenceLabel">
-             <property name="text">
-              <string>head circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QSpinBox" name="fetus4HeadCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="Line" name="line_27">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QSpinBox" name="fetus4HeadCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="3" column="4">
-            <widget class="QLabel" name="fetus4HeadCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QSpinBox" name="fetus4HeadCircumferenceDaysSpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="6">
-            <widget class="QLabel" name="fetus4HeadCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus4AbdominalCircumferenceLabel">
-             <property name="text">
-              <string>abdominal circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QSpinBox" name="fetus4AbdominalCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="Line" name="line_28">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QSpinBox" name="fetus4AbdominalCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="fetus4AbdominalCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QSpinBox" name="fetus4AbdominalCircumferenceDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="6">
-            <widget class="QLabel" name="fetus4AbdominalCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus4TADLabel">
-             <property name="text">
-              <string>transverse abdominal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QSpinBox" name="fetus4TADSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="Line" name="line_29">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="3">
-            <widget class="QSpinBox" name="fetus4TADWeekSpinBox"/>
-           </item>
-           <item row="5" column="4">
-            <widget class="QLabel" name="fetus4TADWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QSpinBox" name="fetus4TADDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="6">
-            <widget class="QLabel" name="fetus4TADDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus4FLLabel">
-             <property name="text">
-              <string>femur length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QSpinBox" name="fetus4FLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="Line" name="line_30">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="3">
-            <widget class="QSpinBox" name="fetus4FLWeekSpinBox"/>
-           </item>
-           <item row="6" column="4">
-            <widget class="QLabel" name="fetus4FLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QSpinBox" name="fetus4FLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="6">
-            <widget class="QLabel" name="fetus4FLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="fetus4NuchalTranslucencyLabel">
-             <property name="text">
-              <string>nuchal translucency</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QSpinBox" name="fetus4NuchalTranslucencySpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-          </layout>
+        <layout class="QGridLayout" name="gridLayout_16">
+         <item row="0" column="0" rowspan="2">
+          <widget class="QLabel" name="fetus4BPDLabel">
+           <property name="text">
+            <string>biparietal diameter</string>
+           </property>
+          </widget>
          </item>
-         <item>
+         <item row="0" column="2" rowspan="3" colspan="2">
+          <widget class="Line" name="line_26">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4" rowspan="2">
+          <widget class="QLabel" name="fetus4BPDWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6" rowspan="2">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="7" rowspan="2">
+          <widget class="QSpinBox" name="fetus4BipPercentileSpinBox"/>
+         </item>
+         <item row="0" column="8" rowspan="2">
+          <widget class="QLabel" name="fetus4BipPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="fetus4BPDSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QSpinBox" name="fetus4BPDWeekSpinBox"/>
+         </item>
+         <item row="1" column="5">
+          <widget class="QSpinBox" name="fetus4BPDDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7" rowspan="2">
+          <widget class="QSpinBox" name="fetus4HcPercentileSpinBox"/>
+         </item>
+         <item row="2" column="8" rowspan="2">
+          <widget class="QLabel" name="fetus4HcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus4HeadCircumferenceLabel">
+           <property name="text">
+            <string>head circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="fetus4HeadCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="Line" name="line_27">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QSpinBox" name="fetus4HeadCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="3" column="4">
+          <widget class="QLabel" name="fetus4HeadCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QSpinBox" name="fetus4HeadCircumferenceDaysSpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QLabel" name="fetus4HeadCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus4AbdominalCircumferenceLabel">
+           <property name="text">
+            <string>abdominal circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="fetus4AbdominalCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="Line" name="line_28">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QSpinBox" name="fetus4AbdominalCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="4" column="4">
+          <widget class="QLabel" name="fetus4AbdominalCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="5">
+          <widget class="QSpinBox" name="fetus4AbdominalCircumferenceDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="6">
+          <widget class="QLabel" name="fetus4AbdominalCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
+          <widget class="QSpinBox" name="fetus4AcPercentileSpinBox"/>
+         </item>
+         <item row="4" column="8">
+          <widget class="QLabel" name="fetus4AcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="fetus4TADLabel">
+           <property name="text">
+            <string>transverse abdominal diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="fetus4TADSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="Line" name="line_29">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QSpinBox" name="fetus4TADWeekSpinBox"/>
+         </item>
+         <item row="5" column="4">
+          <widget class="QLabel" name="fetus4TADWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="5">
+          <widget class="QSpinBox" name="fetus4TADDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="6">
+          <widget class="QLabel" name="fetus4TADDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="7">
+          <widget class="QSpinBox" name="fetus4TadPercentileSpinBox"/>
+         </item>
+         <item row="5" column="8">
+          <widget class="QLabel" name="fetus4TadPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="fetus4FLLabel">
+           <property name="text">
+            <string>femur length</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QSpinBox" name="fetus4FLSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="Line" name="line_30">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QSpinBox" name="fetus4FLWeekSpinBox"/>
+         </item>
+         <item row="6" column="4">
+          <widget class="QLabel" name="fetus4FLWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="5">
+          <widget class="QSpinBox" name="fetus4FLDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="6">
+          <widget class="QLabel" name="fetus4FLDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="7">
+          <widget class="QSpinBox" name="fetus4FlPercentileSpinBox"/>
+         </item>
+         <item row="6" column="8">
+          <widget class="QLabel" name="fetus4FlPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="fetus4EfwLabel">
+           <property name="text">
+            <string>estimated fetal weight</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QSpinBox" name="fetus4EfwSpinBox">
+           <property name="suffix">
+            <string comment="gram">g</string>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout_23">
            <item>
             <widget class="QLabel" name="fetus4BiometryCommentLabel">
@@ -3255,7 +3055,7 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_53">
+     <layout class="QVBoxLayout" name="verticalLayout_27">
       <item>
        <widget class="QGroupBox" name="fetus5PresentationPositionGroupBox">
         <property name="title">
@@ -3366,365 +3166,322 @@
         <property name="title">
          <string>biometryGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_27">
-         <item>
-          <layout class="QGridLayout" name="gridLayout_19">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus5MeanSacDiameterLabel">
-             <property name="text">
-              <string>mean sac diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSpinBox" name="fetus5MeanSacDiameterSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="Line" name="line_31">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QSpinBox" name="fetus5MeanSacDiameterWeekSpinBox"/>
-           </item>
-           <item row="0" column="4">
-            <widget class="QLabel" name="fetus5MeanSacDiameterWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="5">
-            <widget class="QSpinBox" name="fetus5MeanSacDiameterDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="6">
-            <widget class="QLabel" name="fetus5MeanSacDiameterDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus5CRLLabel">
-             <property name="text">
-              <string>crown-rump length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSpinBox" name="fetus5CRLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="Line" name="line_32">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QSpinBox" name="fetus5CRLWeekSpinBox"/>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLabel" name="fetus5CRLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5">
-            <widget class="QSpinBox" name="fetus5CRLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="6">
-            <widget class="QLabel" name="fetus5CRLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus5BPDLabel">
-             <property name="text">
-              <string>biparietal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSpinBox" name="fetus5BPDSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="Line" name="line_33">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QSpinBox" name="fetus5BPDWeekSpinBox"/>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLabel" name="fetus5BPDWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QSpinBox" name="fetus5BPDDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="6">
-            <widget class="QLabel" name="label_10">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus5HeadCircumferenceLabel">
-             <property name="text">
-              <string>head circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QSpinBox" name="fetus5HeadCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="Line" name="line_34">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QSpinBox" name="fetus5HeadCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="3" column="4">
-            <widget class="QLabel" name="fetus5HeadCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QSpinBox" name="fetus5HeadCircumferenceDaysSpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="6">
-            <widget class="QLabel" name="fetus5HeadCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus5AbdominalCircumferenceLabel">
-             <property name="text">
-              <string>abdominal circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QSpinBox" name="fetus5AbdominalCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="Line" name="line_35">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QSpinBox" name="fetus5AbdominalCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="fetus5AbdominalCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QSpinBox" name="fetus5AbdominalCircumferenceDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="6">
-            <widget class="QLabel" name="fetus5AbdominalCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus5TADLabel">
-             <property name="text">
-              <string>transverse abdominal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QSpinBox" name="fetus5TADSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="Line" name="line_36">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="3">
-            <widget class="QSpinBox" name="fetus5TADWeekSpinBox"/>
-           </item>
-           <item row="5" column="4">
-            <widget class="QLabel" name="fetus5TADWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QSpinBox" name="fetus5TADDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="6">
-            <widget class="QLabel" name="fetus5TADDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus5FLLabel">
-             <property name="text">
-              <string>femur length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QSpinBox" name="fetus5FLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="Line" name="line_37">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="3">
-            <widget class="QSpinBox" name="fetus5FLWeekSpinBox"/>
-           </item>
-           <item row="6" column="4">
-            <widget class="QLabel" name="fetus5FLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QSpinBox" name="fetus5FLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="6">
-            <widget class="QLabel" name="fetus5FLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="fetus5NuchalTranslucencyLabel">
-             <property name="text">
-              <string>nuchal translucency</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QSpinBox" name="fetus5NuchalTranslucencySpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-          </layout>
+        <layout class="QGridLayout" name="gridLayout_19">
+         <item row="0" column="2" colspan="2">
+          <widget class="Line" name="line_31">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
          </item>
-         <item>
+         <item row="0" column="8" rowspan="2">
+          <widget class="QSpinBox" name="fetus5BipPercentileSpinBox"/>
+         </item>
+         <item row="0" column="9" rowspan="2">
+          <widget class="QLabel" name="fetus5BipPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="fetus5BPDLabel">
+           <property name="text">
+            <string>biparietal diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="fetus5BPDSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2" colspan="2">
+          <widget class="Line" name="line_33">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QSpinBox" name="fetus5BPDWeekSpinBox"/>
+         </item>
+         <item row="1" column="5">
+          <widget class="QLabel" name="fetus5BPDWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QSpinBox" name="fetus5BPDDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus5HeadCircumferenceLabel">
+           <property name="text">
+            <string>head circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="fetus5HeadCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="Line" name="line_34">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3" colspan="2">
+          <widget class="QSpinBox" name="fetus5HeadCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="2" column="5">
+          <widget class="QLabel" name="fetus5HeadCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6">
+          <widget class="QSpinBox" name="fetus5HeadCircumferenceDaysSpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7">
+          <widget class="QLabel" name="fetus5HeadCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="8">
+          <widget class="QSpinBox" name="fetus5HcPercentileSpinBox"/>
+         </item>
+         <item row="2" column="9">
+          <widget class="QLabel" name="fetus5HcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus5AbdominalCircumferenceLabel">
+           <property name="text">
+            <string>abdominal circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="fetus5AbdominalCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="Line" name="line_35">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3" colspan="2">
+          <widget class="QSpinBox" name="fetus5AbdominalCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="3" column="5">
+          <widget class="QLabel" name="fetus5AbdominalCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QSpinBox" name="fetus5AbdominalCircumferenceDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="7">
+          <widget class="QLabel" name="fetus5AbdominalCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="8">
+          <widget class="QSpinBox" name="fetus5AcPercentileSpinBox"/>
+         </item>
+         <item row="3" column="9">
+          <widget class="QLabel" name="fetus5AcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus5TADLabel">
+           <property name="text">
+            <string>transverse abdominal diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="fetus5TADSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="Line" name="line_36">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3" colspan="2">
+          <widget class="QSpinBox" name="fetus5TADWeekSpinBox"/>
+         </item>
+         <item row="4" column="5">
+          <widget class="QLabel" name="fetus5TADWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="6">
+          <widget class="QSpinBox" name="fetus5TADDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
+          <widget class="QLabel" name="fetus5TADDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="8">
+          <widget class="QSpinBox" name="fetus5TadPercentileSpinBox"/>
+         </item>
+         <item row="4" column="9">
+          <widget class="QLabel" name="fetus5TadPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="fetus5FLLabel">
+           <property name="text">
+            <string>femur length</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="fetus5FLSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="Line" name="line_37">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3" colspan="2">
+          <widget class="QSpinBox" name="fetus5FLWeekSpinBox"/>
+         </item>
+         <item row="5" column="5">
+          <widget class="QLabel" name="fetus5FLWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="6">
+          <widget class="QSpinBox" name="fetus5FLDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="7">
+          <widget class="QLabel" name="fetus5FLDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="8">
+          <widget class="QSpinBox" name="fetus5FlPercentileSpinBox"/>
+         </item>
+         <item row="5" column="9">
+          <widget class="QLabel" name="fetus5FlPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="fetus5EfwLabel">
+           <property name="text">
+            <string>estimated fetal weight</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QSpinBox" name="fetus5EfwSpinBox">
+           <property name="suffix">
+            <string comment="gram">g</string>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="10">
           <layout class="QVBoxLayout" name="verticalLayout_28">
            <item>
             <widget class="QLabel" name="fetus5BiometryCommentLabel">
@@ -3917,7 +3674,7 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_47">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QGroupBox" name="fetus6PresentationPositionGroupBox">
         <property name="title">
@@ -4028,365 +3785,315 @@
         <property name="title">
          <string>biometryGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_32">
-         <item>
-          <layout class="QGridLayout" name="gridLayout_22">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus6MeanSacDiameterLabel">
-             <property name="text">
-              <string>mean sac diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSpinBox" name="fetus6MeanSacDiameterSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="Line" name="line_38">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QSpinBox" name="fetus6MeanSacDiameterWeekSpinBox"/>
-           </item>
-           <item row="0" column="4">
-            <widget class="QLabel" name="fetus6MeanSacDiameterWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="5">
-            <widget class="QSpinBox" name="fetus6MeanSacDiameterDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="6">
-            <widget class="QLabel" name="fetus6MeanSacDiameterDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus6CRLLabel">
-             <property name="text">
-              <string>crown-rump length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSpinBox" name="fetus6CRLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="Line" name="line_39">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QSpinBox" name="fetus6CRLWeekSpinBox"/>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLabel" name="fetus6CRLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5">
-            <widget class="QSpinBox" name="fetus6CRLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="6">
-            <widget class="QLabel" name="fetus6CRLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus6BPDLabel">
-             <property name="text">
-              <string>biparietal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSpinBox" name="fetus6BPDSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="Line" name="line_40">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QSpinBox" name="fetus6BPDWeekSpinBox"/>
-           </item>
-           <item row="2" column="4">
-            <widget class="QLabel" name="fetus6BPDWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QSpinBox" name="fetus6BPDDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="6">
-            <widget class="QLabel" name="label_11">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus6HeadCircumferenceLabel">
-             <property name="text">
-              <string>head circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QSpinBox" name="fetus6HeadCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="Line" name="line_41">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QSpinBox" name="fetus6HeadCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="3" column="4">
-            <widget class="QLabel" name="fetus6HeadCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QSpinBox" name="fetus6HeadCircumferenceDaysSpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="6">
-            <widget class="QLabel" name="fetus6HeadCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus6AbdominalCircumferenceLabel">
-             <property name="text">
-              <string>abdominal circumference</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QSpinBox" name="fetus6AbdominalCircumferenceSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="Line" name="line_42">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QSpinBox" name="fetus6AbdominalCircumferenceWeekSpinBox"/>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="fetus6AbdominalCircumferenceWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QSpinBox" name="fetus6AbdominalCircumferenceDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="6">
-            <widget class="QLabel" name="fetus6AbdominalCircumferenceDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus6TADLabel">
-             <property name="text">
-              <string>transverse abdominal diameter</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QSpinBox" name="fetus6TADSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="Line" name="line_43">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="3">
-            <widget class="QSpinBox" name="fetus6TADWeekSpinBox"/>
-           </item>
-           <item row="5" column="4">
-            <widget class="QLabel" name="fetus6TADWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QSpinBox" name="fetus6TADDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="6">
-            <widget class="QLabel" name="fetus6TADDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus6FLLabel">
-             <property name="text">
-              <string>femur length</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QSpinBox" name="fetus6FLSpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="Line" name="line_44">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="3">
-            <widget class="QSpinBox" name="fetus6FLWeekSpinBox"/>
-           </item>
-           <item row="6" column="4">
-            <widget class="QLabel" name="fetus6FLWeekLabel">
-             <property name="text">
-              <string>wa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QSpinBox" name="fetus6FLDaySpinBox">
-             <property name="maximum">
-              <number>6</number>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="6">
-            <widget class="QLabel" name="fetus6FLDayLabel">
-             <property name="text">
-              <string>day(s)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="fetus6NuchalTranslucencyLabel">
-             <property name="text">
-              <string>nuchal translucency</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QSpinBox" name="fetus6NuchalTranslucencySpinBox">
-             <property name="suffix">
-              <string>mm</string>
-             </property>
-             <property name="maximum">
-              <number>999</number>
-             </property>
-            </widget>
-           </item>
-          </layout>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="fetus6BPDLabel">
+           <property name="text">
+            <string>biparietal diameter</string>
+           </property>
+          </widget>
          </item>
-         <item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="fetus6BPDSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="Line" name="line_40">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QSpinBox" name="fetus6BPDWeekSpinBox"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="fetus6BPDWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QSpinBox" name="fetus6BPDDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="7">
+          <widget class="QSpinBox" name="fetus6BipPercentileSpinBox"/>
+         </item>
+         <item row="0" column="8">
+          <widget class="QLabel" name="fetus6BipPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="fetus6HeadCircumferenceLabel">
+           <property name="text">
+            <string>head circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="fetus6HeadCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="Line" name="line_41">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QSpinBox" name="fetus6HeadCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLabel" name="fetus6HeadCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QSpinBox" name="fetus6HeadCircumferenceDaysSpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLabel" name="fetus6HeadCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QSpinBox" name="fetus6HcPercentileSpinBox"/>
+         </item>
+         <item row="1" column="8">
+          <widget class="QLabel" name="fetus6HcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus6AbdominalCircumferenceLabel">
+           <property name="text">
+            <string>abdominal circumference</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="fetus6AbdominalCircumferenceSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="Line" name="line_42">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QSpinBox" name="fetus6AbdominalCircumferenceWeekSpinBox"/>
+         </item>
+         <item row="2" column="4">
+          <widget class="QLabel" name="fetus6AbdominalCircumferenceWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QSpinBox" name="fetus6AbdominalCircumferenceDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6">
+          <widget class="QLabel" name="fetus6AbdominalCircumferenceDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7">
+          <widget class="QSpinBox" name="fetus6AcPercentileSpinBox"/>
+         </item>
+         <item row="2" column="8">
+          <widget class="QLabel" name="fetus6AcPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fetus6TADLabel">
+           <property name="text">
+            <string>transverse abdominal diameter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="fetus6TADSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="Line" name="line_43">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QSpinBox" name="fetus6TADWeekSpinBox"/>
+         </item>
+         <item row="3" column="4">
+          <widget class="QLabel" name="fetus6TADWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QSpinBox" name="fetus6TADDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QLabel" name="fetus6TADDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="7">
+          <widget class="QSpinBox" name="fetus6TadPercentileSpinBox"/>
+         </item>
+         <item row="3" column="8">
+          <widget class="QLabel" name="fetus6TadPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fetus6FLLabel">
+           <property name="text">
+            <string>femur length</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="fetus6FLSpinBox">
+           <property name="suffix">
+            <string>mm</string>
+           </property>
+           <property name="maximum">
+            <number>999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="Line" name="line_44">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QSpinBox" name="fetus6FLWeekSpinBox"/>
+         </item>
+         <item row="4" column="4">
+          <widget class="QLabel" name="fetus6FLWeekLabel">
+           <property name="text">
+            <string>wa</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="5">
+          <widget class="QSpinBox" name="fetus6FLDaySpinBox">
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="6">
+          <widget class="QLabel" name="fetus6FLDayLabel">
+           <property name="text">
+            <string>day(s)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
+          <widget class="QSpinBox" name="fetus6FlPercentileSpinBox"/>
+         </item>
+         <item row="4" column="8">
+          <widget class="QLabel" name="fetus6FlPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="fetus6EfwLabel">
+           <property name="text">
+            <string>estimated fetal weight</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="fetus6EfwSpinBox">
+           <property name="suffix">
+            <string comment="gram">g</string>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout_33">
            <item>
             <widget class="QLabel" name="fetus6BiometryCommentLabel">
