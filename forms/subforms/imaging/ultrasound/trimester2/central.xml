@@ -246,6 +246,34 @@
       <label lang="fr">Annexes</label>
       <options>collapsible;expanded</options>
 
+      <Item type="doublespin" name="Adnexa::Amniotic::Fluid::Index">
+        <uilink label="amnioticFluidIndexLabel" widget="amnioticFluidIndexDoubleSpinBox" />
+        <label lang="xx">Amniotic Fluid Index</label>
+        <label lang="fr">Indice de Phélan</label>
+        <options></options>
+      </Item>
+
+      <Item type="shorttext" name="Adnexa::Amniotic::Fluid::Index::Comment::shorttext">
+        <uilink widget="amnioticFluidIndexLineEdit" />
+        <placeholder lang="xx">Comment</placeholder>
+      <placeholder lang="fr">Commentaire</placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="doublespin" name="Adnexa::Amniotic::Fluid::Deepest::Vertical::Pocket::doublespin">
+        <uilink label="deepestVerticalPocketLabel" widget="deepestVerticalPocketDoubleSpinBox" />
+        <label lang="xx">Deepest Vertical Pocket</label>
+        <label lang="fr">Grande citerne</label>
+        <options></options>
+      </Item>
+
+      <Item type="shorttext" name="Adnexa::Amniotic::Fluid::Deepest::Vertical::Pocket::Comment::shorttext">
+        <uilink widget="deepestVerticalPocketLineEdit" />
+        <placeholder lang="xx">Comment</placeholder>
+      <placeholder lang="fr">Commentaire</placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
       <Item type="radio" name="Adnexa::Amniotic::Fluid::Radio">
             <uilink label="amnioticFluidVolumeLabel" widget="" layout="amnioticFluidVolumeRadioLayout"/>
               <label lang="xx">Amniotic fluid volume</label>
@@ -254,19 +282,29 @@
               <value>
                 <uuid id="0">∅</uuid>
                 <uuid id="1">Normal</uuid>
-                <uuid id="2">Abnormal</uuid>
+                <uuid id="2">Oligohydramnios</uuid>
+                <uuid id="3">Polyhydramnios</uuid>
+                <uuid id="4">Anhydramnios</uuid>
                 <possible id="0" lang="xx">∅</possible>
                 <possible id="1" lang="xx">Normal</possible>
-                <possible id="2" lang="xx">Abnormal</possible>
+                <possible id="2" lang="xx">Oligohydramnios</possible>
+                <possible id="3" lang="xx">Polyhydramnios</possible>
+                <possible id="4" lang="xx">Anhydramnios</possible>
                 <print id="0" lang="xx">Not evaluated</print>
                 <print id="1" lang="xx">Normal</print>
-                <print id="2" lang="xx">Abnormal</print>
+                <print id="2" lang="xx">Oligohydramnios</print>
+                <print id="3" lang="xx">Polyhydramnios</print>
+                <print id="4" lang="xx">Anhydramnios</print>
                 <possible id="0" lang="fr">∅</possible>
                 <possible id="1" lang="fr">Normal</possible>
-                <possible id="2" lang="fr">Anormal</possible>
+                <possible id="2" lang="fr">Oligoamnios</possible>
+                <possible id="3" lang="fr">Hydramnios</possible>            
+                <possible id="4" lang="fr">Anamnios</possible>
                 <print id="0" lang="fr">Non évalué</print>
                 <print id="1" lang="fr">Normal</print>
-                <print id="2" lang="fr">Anormal</print>
+                <print id="2" lang="fr">Oligoamnios</print>
+                <print id="3" lang="fr">Hydramnios</print>                  
+                <print id="4" lang="fr">Anamnios</print>
               </value>
           </Item>
 
@@ -352,86 +390,115 @@
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
-          <Item type="radio" name="Adnexa::Placenta::Location::Radio">
-            <uilink label="placentalLocationLabel" widget="" layout="placentalLocationRadioLayout"/>
-              <label lang="xx">Placental location</label>
+          <Item type="radio" name="Adnexa::Placenta::Localization::Radio">
+            <uilink label="placentalLocalizationLabel" widget="" layout="placentalLocalizationRadioLayout"/>
+              <label lang="xx">Placental localization</label>
               <label lang="fr">Localisation du placenta</label>
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Anterior</uuid>
-                <uuid id="2">Posterior</uuid>
-                <uuid id="3">Fundal</uuid>
-                <uuid id="4">Circumferential</uuid>
-                <uuid id="5">Lateral</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Placenta previa</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Anterior</possible>
-                <possible id="2" lang="xx">Posterior</possible>
-                <possible id="3" lang="xx">Fundal</possible>
-                <possible id="4" lang="xx">Circumferential</possible>
-                <possible id="5" lang="xx">Lateral</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Placenta previa</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Anterior</print>
-                <print id="2" lang="xx">Posterior</print>
-                <print id="3" lang="xx">Fundal</print>
-                <print id="4" lang="xx">Circumferential</print>
-                <print id="5" lang="xx">Lateral</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Placenta previa</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Antérieur</possible>
-                <possible id="2" lang="fr">Postérieur</possible>
-                <possible id="3" lang="fr">Fundique</possible>
-                <possible id="4" lang="fr">Circonférentiel</possible>
-                <possible id="5" lang="fr">Latéral</possible>
+                <possible id="1" lang="fr">Normale</possible>
+                <possible id="2" lang="fr">Placenta inséré bas</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Antérieur</print>
-                <print id="2" lang="fr">Postérieur</print>
-                <print id="3" lang="fr">Fundique</print>
-                <print id="4" lang="fr">Circonférentiel</print>
-                <print id="5" lang="fr">Latéral</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Placenta inséré bas</print>
               </value>
           </Item>
 
-          <Item name="Adnexa::Placenta::Location::ShortText" type="shorttext">
-            <uilink label="" widget="placentalLocationLineEdit" layout="" />
+          <Item name="Adnexa::Placenta::Localization::ShortText" type="shorttext">
+            <uilink label="" widget="placentalLocalizationLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
-          <Item type="radio" name="Adnexa::Adnexa::Radio">
-            <uilink label="adnexaLabel" widget="" layout="adnexaRadioLayout"/>
-              <label lang="xx">Adnexa</label>
-              <label lang="fr">Aspect des annexes</label>
+          <Item type="doublespin" name="Adnexa::Placenta::Cervix::Distance::doublespin">
+        <uilink label="placentaCervixDistanceLabel" widget="placentaCervixDistanceDoubleSpinBox" />
+        <label lang="xx">Placenta - cervical os distance</label>
+        <label lang="fr">Distance placenta - orifice interne du col</label>
+        <options></options>
+      </Item>
+
+      <Item type="shorttext" name="Adnexa::Placenta::Cervix::Distance::Comment::shorttext">
+        <uilink widget="placentaCervixDistanceLineEdit" />
+        <placeholder lang="xx">Comment</placeholder>
+      <placeholder lang="fr">Commentaire</placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+          <Item type="radio" name="Adnexa::Umbilical::Cord::radio">
+            <uilink label="umbilicalCordLabel" layout="umbilicalCordRadioLayout" />
+              <label lang="xx">Umbilical cord with 3 vessels (2 arteries and 1 vein)</label>
+              <label lang="fr">Cordon ombilical avec 3 vaisseaux (2 artères et 1 veine)</label>
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Normal</uuid>
-                <uuid id="2">Abnormal</uuid>
+                <uuid id="1">Yes</uuid>
+                <uuid id="2">No</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal</possible>
-                <possible id="2" lang="xx">Abnormal</possible>
+                <possible id="1" lang="xx">Yes</possible>
+                <possible id="2" lang="xx">No</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal</print>
-                <print id="2" lang="xx">Abnormal</print>
+                <print id="1" lang="xx">Yes</print>
+                <print id="2" lang="xx">No</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal</possible>
-                <possible id="2" lang="fr">Anormal</possible>
+                <possible id="1" lang="fr">Oui</possible>
+                <possible id="2" lang="fr">Non</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal</print>
-                <print id="2" lang="fr">Anormal</print>
+                <print id="1" lang="fr">Oui</print>
+                <print id="2" lang="fr">Non</print>
               </value>
           </Item>
 
-          <Item name="Adnexa::Adnexa::ShortText" type="shorttext">
-            <uilink label="" widget="adnexaLineEdit" layout="" />
+          <Item name="Adnexa::Umbilical::Cord::shorttext" type="shorttext">
+            <uilink label="" widget="umbilicalCordLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
+          <Item type="radio" name="Adnexa::Nuchal::Cord::radio">             
+            <uilink label="nuchalCordLabel" layout="nuchalCordRadioLayout" />
+              <label lang="xx">Nuchal cord</label>
+              <label lang="fr">Circulaire visualisée ce jour</label>
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Yes</uuid>                                         
+                <uuid id="2">No</uuid>                                          
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Yes</possible>                       
+                <possible id="2" lang="xx">No</possible>                        
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Yes</print>                             
+                <print id="2" lang="xx">No</print>                              
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Oui</possible>                       
+                <possible id="2" lang="fr">Non</possible>                       
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Oui</print>                             
+                <print id="2" lang="fr">Non</print>                             
+              </value>                                                          
+          </Item>
 
+          <Item name="Adnexa::Nuchal::Cord::shorttext" type="shorttext">     
+            <uilink label="" widget="nuchalCordLineEdit" layout="" />        
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>
 
   </Item> <!-- end of group Adnexa -->
 
@@ -451,27 +518,7 @@
           <step>1</step>
         </Item>
 
-    </Item>
-
-    <Item type="group" name="Chorionicity::GroupBox">
-      <uilink label="" widget="chorionicityGroupBox" layout="" />
-      <label lang="xx">Chorionicity</label>
-      <label lang="fr">Chorionicité</label>
-      <options>collapsible;expanded</options>
-
-        <Item type="shorttext" name="Chorionicity">
-          <uilink label="chorionicityLabel" widget="chorionicityLineEdit" layout="" />
-          <label lang="xx">Chorionicity</label>
-          <label lang="fr">Chorionicité</label>
-        </Item>
-
-        <Item type="shorttext" name="Amnionicity">
-          <uilink label="amnionicityLabel" widget="amnionicityLineEdit" layout="" />
-          <label lang="xx">Amnionicity</label>
-          <label lang="fr">Amnionicité</label>
-        </Item>
-
-    </Item> <!-- end of group Chorionicity -->
+    </Item> <!-- end of Fetus group -->
 
       <Item type="group" name="Fetus1GroupBox">
         <uilink widget="fetus1GroupBox"/>
@@ -485,32 +532,32 @@
           <label lang="fr">Vitalité</label>
           <options>DontPrintEmptyValues;collapsible;expanded</options>
 
-          <Item type="radio" name="Fetus1::Fetal::Vitality::Pregnancy::Radio">
-            <uilink label="fetus1PregnancyLabel" widget="" layout="fetus1PregnancyRadioLayout"/>
-              <label lang="xx">Pregnancy</label>
-              <label lang="fr">Grossesse</label>
+          <Item type="radio" name="Fetus1::Fetal::Vitality::Respiratory::Movement::Radio">
+            <uilink label="fetus1RespiratoryLabel" widget="" layout="fetus1RespiratoryRadioLayout"/>
+              <label lang="xx">Respiratory movements</label>
+              <label lang="fr">Mouvements respiratoires</label>
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">intrauterine</uuid>
-                <uuid id="2">ectopic</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">intrauterine</possible>
-                <possible id="2" lang="xx">ectopic</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
                 <print id="0" lang="xx">∅</print>
-                <print id="1" lang="xx">Intrauterine pregnancy</print>
-                <print id="2" lang="xx">Ectopic pregnancy</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">intra-utérine</possible>
-                <possible id="2" lang="fr">extra-utérine</possible>
+                <possible id="1" lang="fr">Normaux</possible>
+                <possible id="2" lang="fr">Anormaux</possible>
                 <print id="0" lang="fr">∅</print>
-                <print id="1" lang="fr">Grossesse intra-utérine</print>
-                <print id="2" lang="fr">Grossesse extra-utérine</print>
+                <print id="1" lang="fr">Normaux</print>
+                <print id="2" lang="fr">Anormaux</print>
               </value>
           </Item>
 
-          <Item name="Fetus1::Fetal::Vitality::Pregnancy::Comment" type="shorttext">
-            <uilink label="" widget="fetus1PregnancyLineEdit" layout="" />
+          <Item name="Fetus1::Fetal::Vitality::Respiratory::Movement::Comment" type="shorttext">
+            <uilink label="" widget="fetus1RespiratoryLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
@@ -539,7 +586,7 @@
             <possible id="2" lang="fr">diminuée</possible>
             <possible id="3" lang="fr">absente</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>
+            <options>compact;DontPrintEmptyValue</options>
           </Item>
 
           <Item name="Fetus1::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
@@ -554,6 +601,7 @@
             <uilink label="fetus1FhrLabel" widget="fetus1FhrSpinBox" layout=""/>
             <label lang="xx">Fetal Heart Rate</label>
             <label lang="fr">Fréquence cardiaque fœtale</label>
+            <options>compact</options>
           </Item>
 
           <Item name="Fetus1::Fetal::Vitality::Fetal::Heart::Rate::Comment" type="shorttext">
@@ -562,6 +610,38 @@
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1::Fetal::Vitality::Heart::Rhythm::radio">
+            <uilink label="fetus1HeartRhythmLabel" widget="" layout="fetus1HeartRhythmRadioLayout"/>
+              <label lang="xx">Fetal heart rhythm</label>                    
+              <label lang="fr">Rythme cardiaque fœtal</label>                 
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Regular</uuid>                                      
+                <uuid id="2">Irregular</uuid>                                    
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Regular</possible>                    
+                <possible id="2" lang="xx">Irregular</possible>                  
+                <print id="0" lang="xx">∅</print>                               
+                <print id="1" lang="xx">Régulier</print>                          
+                <print id="2" lang="xx">Irrégulier</print>                        
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Régulier</possible>                   
+                <possible id="2" lang="fr">Irrégulier</possible>                  
+                <print id="0" lang="fr">∅</print>                               
+                <print id="1" lang="fr">Régulier</print>                         
+                <print id="2" lang="fr">Irrégulier</print>                        
+              </value>                                                          
+          </Item>
+
+          <Item name="Fetus1::Fetal::Vitality::Heart::Rhythm::Comment" type="shorttext">
+            <uilink label="" widget="fetus1HeartRhythmLineEdit" layout="" />            
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
           </Item>
 
         </Item> <!-- end of Fetal Vitality group -->
