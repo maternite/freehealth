@@ -8,7 +8,7 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-10-01</cdate>
-    <lmdate>2015-10-05</lmdate>
+    <lmdate>2015-11-02</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -239,76 +239,17 @@
 
    </Item> <!-- end of group Device -->
 
-  <Item type="group" name="Fetus">
+  <Item type="group" name="Uterus">
 
-      <uilink label="" widget="adnexaGroupBox" layout="" />
-      <label lang="xx">Adnexa</label>
-      <label lang="fr">Annexes</label>
+      <uilink label="" widget="uterusGroupBox" layout="" />
+      <label lang="xx">Uterus</label>
+      <label lang="fr">Uterus</label>
       <options>collapsible;expanded</options>
 
-      <Item type="doublespin" name="Adnexa::Amniotic::Fluid::Index">
-        <uilink label="amnioticFluidIndexLabel" widget="amnioticFluidIndexDoubleSpinBox" />
-        <label lang="xx">Amniotic Fluid Index</label>
-        <label lang="fr">Indice de Phélan</label>
-        <options></options>
-      </Item>
-
-      <Item type="shorttext" name="Adnexa::Amniotic::Fluid::Index::Comment::shorttext">
-        <uilink widget="amnioticFluidIndexLineEdit" />
-        <placeholder lang="xx">Comment</placeholder>
-      <placeholder lang="fr">Commentaire</placeholder>
-        <options>DontPrintEmptyValues</options>
-      </Item>
-
-      <Item type="doublespin" name="Adnexa::Amniotic::Fluid::Deepest::Vertical::Pocket::doublespin">
-        <uilink label="deepestVerticalPocketLabel" widget="deepestVerticalPocketDoubleSpinBox" />
-        <label lang="xx">Deepest Vertical Pocket</label>
-        <label lang="fr">Grande citerne</label>
-        <options></options>
-      </Item>
-
-      <Item type="shorttext" name="Adnexa::Amniotic::Fluid::Deepest::Vertical::Pocket::Comment::shorttext">
-        <uilink widget="deepestVerticalPocketLineEdit" />
-        <placeholder lang="xx">Comment</placeholder>
-      <placeholder lang="fr">Commentaire</placeholder>
-        <options>DontPrintEmptyValues</options>
-      </Item>
-
-      <Item type="radio" name="Adnexa::Amniotic::Fluid::Radio">
-            <uilink label="amnioticFluidVolumeLabel" widget="" layout="amnioticFluidVolumeRadioLayout"/>
-              <label lang="xx">Amniotic fluid volume</label>
-              <label lang="fr">Volume du liquide amniotique</label>
-              <options>compact</options>
-              <value>
-                <uuid id="0">∅</uuid>
-                <uuid id="1">Normal</uuid>
-                <uuid id="2">Oligohydramnios</uuid>
-                <uuid id="3">Polyhydramnios</uuid>
-                <uuid id="4">Anhydramnios</uuid>
-                <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal</possible>
-                <possible id="2" lang="xx">Oligohydramnios</possible>
-                <possible id="3" lang="xx">Polyhydramnios</possible>
-                <possible id="4" lang="xx">Anhydramnios</possible>
-                <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal</print>
-                <print id="2" lang="xx">Oligohydramnios</print>
-                <print id="3" lang="xx">Polyhydramnios</print>
-                <print id="4" lang="xx">Anhydramnios</print>
-                <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal</possible>
-                <possible id="2" lang="fr">Oligoamnios</possible>
-                <possible id="3" lang="fr">Hydramnios</possible>            
-                <possible id="4" lang="fr">Anamnios</possible>
-                <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal</print>
-                <print id="2" lang="fr">Oligoamnios</print>
-                <print id="3" lang="fr">Hydramnios</print>                  
-                <print id="4" lang="fr">Anamnios</print>
-              </value>
-          </Item>
-
-          <Item name="Adnexa::Amniotic::Fluid::Volume::ShortText" type="shorttext">
+      
+      
+      
+          <Item name="Fetus::Amniotic::Fluid::Volume::ShortText" type="shorttext">
             <uilink label="" widget="amnioticFluidVolumeLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
@@ -316,39 +257,8 @@
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
-          <Item type="radio" name="Adnexa::Placenta::Echostructure::Radio">
-            <uilink label="placentaEchostructureLabel" widget="" layout="placentaEchostructureRadioLayout"/>
-              <label lang="xx">Placental echostructure</label>
-              <label lang="fr">Échostructure du placenta</label>
-              <options>compact</options>
-              <value>
-                <uuid id="0">∅</uuid>
-                <uuid id="1">Normal</uuid>
-                <uuid id="2">Abnormal</uuid>
-                <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal</possible>
-                <possible id="2" lang="xx">Abnormal</possible>
-                <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal</print>
-                <print id="2" lang="xx">Abnormal</print>
-                <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal</possible>
-                <possible id="2" lang="fr">Anormal</possible>
-                <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal</print>
-                <print id="2" lang="fr">Anormal</print>
-              </value>
-          </Item>
 
-          <Item name="Adnexa::Placenta::Echostructure::ShortText" type="shorttext">
-            <uilink label="" widget="placentaEchostructureLineEdit" layout="" />
-            <label lang="xx"></label>
-            <label lang="fr"></label>
-            <placeholder lang="xx">Comment</placeholder>
-            <placeholder lang="fr">Commentaire</placeholder>
-          </Item>
-
-          <Item type="radio" name="Adnexa::Placenta::Grade::Radio">
+          <Item type="radio" name="Uterus::Placenta::Grade::Radio">
             <uilink label="placentalGradingLabel" widget="" layout="placentalGradingRadioLayout"/>
               <label lang="xx">Placental grading (Grannum classification)</label>
               <label lang="fr">Grade de maturité placentaire (d'après Grannum)</label>
@@ -382,7 +292,7 @@
               </value>
           </Item>
 
-          <Item name="Adnexa::Placenta::Grade::ShortText" type="shorttext">
+          <Item name="Uterus::Placenta::Grade::ShortText" type="shorttext">
             <uilink label="" widget="placentalGradingLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
@@ -390,7 +300,7 @@
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
-          <Item type="radio" name="Adnexa::Placenta::Localization::Radio">
+          <Item type="radio" name="Uterus::Placenta::Localization::Radio">
             <uilink label="placentalLocalizationLabel" widget="" layout="placentalLocalizationRadioLayout"/>
               <label lang="xx">Placental localization</label>
               <label lang="fr">Localisation du placenta</label>
@@ -414,7 +324,7 @@
               </value>
           </Item>
 
-          <Item name="Adnexa::Placenta::Localization::ShortText" type="shorttext">
+          <Item name="Uterus::Placenta::Localization::ShortText" type="shorttext">
             <uilink label="" widget="placentalLocalizationLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
@@ -422,85 +332,62 @@
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
-          <Item type="doublespin" name="Adnexa::Placenta::Cervix::Distance::doublespin">
-        <uilink label="placentaCervixDistanceLabel" widget="placentaCervixDistanceDoubleSpinBox" />
-        <label lang="xx">Placenta - cervical os distance</label>
-        <label lang="fr">Distance placenta - orifice interne du col</label>
-        <options></options>
-      </Item>
-
-      <Item type="shorttext" name="Adnexa::Placenta::Cervix::Distance::Comment::shorttext">
-        <uilink widget="placentaCervixDistanceLineEdit" />
-        <placeholder lang="xx">Comment</placeholder>
-      <placeholder lang="fr">Commentaire</placeholder>
-        <options>DontPrintEmptyValues</options>
-      </Item>
-
-          <Item type="radio" name="Adnexa::Umbilical::Cord::radio">
-            <uilink label="umbilicalCordLabel" layout="umbilicalCordRadioLayout" />
-              <label lang="xx">Umbilical cord with 3 vessels (2 arteries and 1 vein)</label>
-              <label lang="fr">Cordon ombilical avec 3 vaisseaux (2 artères et 1 veine)</label>
-              <options>compact</options>
-              <value>
-                <uuid id="0">∅</uuid>
-                <uuid id="1">Yes</uuid>
-                <uuid id="2">No</uuid>
-                <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Yes</possible>
-                <possible id="2" lang="xx">No</possible>
-                <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Yes</print>
-                <print id="2" lang="xx">No</print>
-                <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Oui</possible>
-                <possible id="2" lang="fr">Non</possible>
-                <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Oui</print>
-                <print id="2" lang="fr">Non</print>
-              </value>
+          <Item type="doublespin" name="Uterus::Placenta::Cervix::Distance::doublespin">
+            <uilink label="placentaCervixDistanceLabel" widget="placentaCervixDistanceDoubleSpinBox" />
+            <label lang="xx">Placenta - cervical os distance</label>
+            <label lang="fr">Distance placenta - orifice interne du col</label>
+            <options></options>
           </Item>
 
-          <Item name="Adnexa::Umbilical::Cord::shorttext" type="shorttext">
-            <uilink label="" widget="umbilicalCordLineEdit" layout="" />
-            <label lang="xx"></label>
-            <label lang="fr"></label>
+          <Item type="shorttext" name="Uterus::Placenta::Cervix::Distance::Comment::shorttext">
+            <uilink widget="placentaCervixDistanceLineEdit" />
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
+            <options>DontPrintEmptyValues</options>
           </Item>
 
-          <Item type="radio" name="Adnexa::Nuchal::Cord::radio">             
-            <uilink label="nuchalCordLabel" layout="nuchalCordRadioLayout" />
-              <label lang="xx">Nuchal cord</label>
-              <label lang="fr">Circulaire visualisée ce jour</label>
-              <options>compact</options>                                        
-              <value>                                                           
-                <uuid id="0">∅</uuid>                                           
-                <uuid id="1">Yes</uuid>                                         
-                <uuid id="2">No</uuid>                                          
-                <possible id="0" lang="xx">∅</possible>                         
-                <possible id="1" lang="xx">Yes</possible>                       
-                <possible id="2" lang="xx">No</possible>                        
-                <print id="0" lang="xx">Not evaluated</print>                   
-                <print id="1" lang="xx">Yes</print>                             
-                <print id="2" lang="xx">No</print>                              
-                <possible id="0" lang="fr">∅</possible>                         
-                <possible id="1" lang="fr">Oui</possible>                       
-                <possible id="2" lang="fr">Non</possible>                       
-                <print id="0" lang="fr">Non évalué</print>                      
-                <print id="1" lang="fr">Oui</print>                             
-                <print id="2" lang="fr">Non</print>                             
-              </value>                                                          
+           <Item type="doublespin" name="Uterus::Right::Uterine::Artery::Resistance::Index">
+            <uilink label="rightUterineArteryLabel" widget="rightUterineArteryDoubleSpinBox" />
+            <label lang="xx">Right uterine artery resistance index"</label>
+            <label lang="fr">Indice de Résistance - artère utérine droite</label>
+            <options>DontPrintEmptyValues</options>
           </Item>
 
-          <Item name="Adnexa::Nuchal::Cord::shorttext" type="shorttext">     
-            <uilink label="" widget="nuchalCordLineEdit" layout="" />        
-            <label lang="xx"></label>                                           
-            <label lang="fr"></label>                                           
-            <placeholder lang="xx">Comment</placeholder>                        
-            <placeholder lang="fr">Commentaire</placeholder>                    
+          <Item type="check" name="Uterus::Right::Uterine::Artery::Notch">
+            <uilink widget="rightUterineArteryNotchCheckBox"/>
+            <label lang="xx">Notch</label>
+            <label lang="fr">Notch</label>
+            <options>printonlychecked</options>
           </Item>
 
-  </Item> <!-- end of group Adnexa -->
+          <Item type="shorttext" name="Uterus::Right::Uterine::Artery::Comment::shorttext">
+            <uilink widget="rightUterineArteryLineEdit" />
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+            <options>DontPrintEmptyValues</options>
+          </Item>
+
+          <Item type="doublespin" name="Uterus::Left::Uterine::Artery::Resistance::Index">
+            <uilink label="leftUterineArteryLabel" widget="leftUterineArteryDoubleSpinBox" />
+            <label lang="xx">Left uterine artery resistance index"</label>
+            <label lang="fr">Indice de Résistance - artère utérine gauche</label>
+            <options>DontPrintEmptyValues</options>
+          </Item>
+
+          <Item type="check" name="Uterus::Left::Uterine::Artery::Notch">
+            <uilink widget="leftUterineArteryNotchCheckBox"/>
+            <label lang="xx">Notch</label>
+            <label lang="fr">Notch</label>
+            <options>printonlychecked</options>
+          </Item>
+
+          <Item type="shorttext" name="Uterus::Left::Uterine::Artery::Comment::shorttext">
+            <uilink widget="leftUterineArteryLineEdit" />
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+            <options>DontPrintEmptyValues</options>
+          </Item>
+  </Item> <!-- end of group Uterus -->
 
    <Item type="group" name="Fetus">
 
@@ -614,34 +501,34 @@
 
           <Item type="radio" name="Fetus1::Fetal::Vitality::Heart::Rhythm::radio">
             <uilink label="fetus1HeartRhythmLabel" widget="" layout="fetus1HeartRhythmRadioLayout"/>
-              <label lang="xx">Fetal heart rhythm</label>                    
-              <label lang="fr">Rythme cardiaque fœtal</label>                 
-              <options>compact</options>                                        
-              <value>                                                           
-                <uuid id="0">∅</uuid>                                           
-                <uuid id="1">Regular</uuid>                                      
-                <uuid id="2">Irregular</uuid>                                    
-                <possible id="0" lang="xx">∅</possible>                         
-                <possible id="1" lang="xx">Regular</possible>                    
-                <possible id="2" lang="xx">Irregular</possible>                  
-                <print id="0" lang="xx">∅</print>                               
-                <print id="1" lang="xx">Régulier</print>                          
-                <print id="2" lang="xx">Irrégulier</print>                        
-                <possible id="0" lang="fr">∅</possible>                         
-                <possible id="1" lang="fr">Régulier</possible>                   
-                <possible id="2" lang="fr">Irrégulier</possible>                  
-                <print id="0" lang="fr">∅</print>                               
-                <print id="1" lang="fr">Régulier</print>                         
-                <print id="2" lang="fr">Irrégulier</print>                        
-              </value>                                                          
+              <label lang="xx">Fetal heart rhythm</label>
+              <label lang="fr">Rythme cardiaque fœtal</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Regular</uuid>
+                <uuid id="2">Irregular</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Regular</possible>
+                <possible id="2" lang="xx">Irregular</possible>
+                <print id="0" lang="xx">∅</print>
+                <print id="1" lang="xx">Régulier</print>
+                <print id="2" lang="xx">Irrégulier</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Régulier</possible>
+                <possible id="2" lang="fr">Irrégulier</possible>
+                <print id="0" lang="fr">∅</print>
+                <print id="1" lang="fr">Régulier</print>
+                <print id="2" lang="fr">Irrégulier</print>
+              </value>
           </Item>
 
           <Item name="Fetus1::Fetal::Vitality::Heart::Rhythm::Comment" type="shorttext">
-            <uilink label="" widget="fetus1HeartRhythmLineEdit" layout="" />            
-            <label lang="xx"></label>                                           
-            <label lang="fr"></label>                                           
-            <placeholder lang="xx">Comment</placeholder>                        
-            <placeholder lang="fr">Commentaire</placeholder>                    
+            <uilink label="" widget="fetus1HeartRhythmLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
         </Item> <!-- end of Fetal Vitality group -->
@@ -1057,6 +944,187 @@
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
         </Item>
+
+      <Item type="group" name="Fetus1::Circulation::GroupBox">
+        <uilink widget="fetus1CirculationGroupBox"/>
+        <label lang="xx">Circulation & umbilical cord</label>
+        <label lang="fr">Circulation et cordon ombilical</label>
+        <options>DontPrintEmptyValues</options>
+
+        <Item type="radio" name="Fetus1::Umbilical::Cord::radio">
+            <uilink label="fetus1UmbilicalCordLabel" layout="fetus1UmbilicalCordRadioLayout" />
+              <label lang="xx">Umbilical cord with 3 vessels (2 arteries and 1 vein)</label>
+              <label lang="fr">Cordon ombilical avec 3 vaisseaux (2 artères et 1 veine)</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Yes</uuid>
+                <uuid id="2">No</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Yes</possible>
+                <possible id="2" lang="xx">No</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Yes</print>
+                <print id="2" lang="xx">No</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Oui</possible>
+                <possible id="2" lang="fr">Non</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Oui</print>
+                <print id="2" lang="fr">Non</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1::Umbilical::Cord::shorttext" type="shorttext">
+            <uilink label="" widget="fetus1UmbilicalCordLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="doublespin" name="Fetus1::Umbilical::Artery::Resistance::Index">
+            <uilink label="fetus1UmbilicalArteryLabel" widget="fetus1UmbilicalArteryDoubleSpinBox" />
+            <label lang="xx">Umbilical artery resistance index</label>
+            <label lang="fr">Artère ombilicale - Indice de Résistance</label>
+            <options>DontPrintEmptyValues</options>
+          </Item>
+
+          <Item name="Fetus1::Umbilical::Artery::Resistance::Index::shorttext" type="shorttext">
+            <uilink widget="fetus1UmbilicalArteryLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="doublespin" name="Fetus1::Cerebral::Artery::Resistance::Index">
+            <uilink label="fetus1CerebralArteryLabel" widget="fetus1CerebralArteryDoubleSpinBox" />
+            <label lang="xx">Cerebral artery resistance index</label>
+            <label lang="fr">Artère cérébrale - Indice de Résistance</label>
+            <options>DontPrintEmptyValues</options>
+          </Item>
+
+          <Item name="Fetus1::Cerebral::Artery::Resistance::Index::shorttext" type="shorttext">
+            <uilink label="" widget="fetus1CerebralArteryLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1::Nuchal::Cord::radio">
+            <uilink label="fetus1NuchalCordLabel" layout="fetus1NuchalCordRadioLayout" />
+              <label lang="xx">Nuchal cord</label>
+              <label lang="fr">Circulaire visualisée ce jour</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Yes</uuid>
+                <uuid id="2">No</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Yes</possible>
+                <possible id="2" lang="xx">No</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Yes</print>
+                <print id="2" lang="xx">No</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Oui</possible>
+                <possible id="2" lang="fr">Non</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Oui</print>
+                <print id="2" lang="fr">Non</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1::Nuchal::Cord::shorttext" type="shorttext">
+            <uilink label="" widget="fetus1NuchalCordLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+      </Item> <!-- end of Fetus1 Circulation group -->
+
+      <Item type="group" name="Fetus1::Amniotic::Fluid::GroupBox">                  
+        <uilink widget="fetus1AmnioticFluidGroupBox"/>
+        <label lang="xx">Amniotic fluid</label>
+        <label lang="fr">Liquide amniotique</label>                            
+        <options>DontPrintEmptyValues</options>
+
+        <Item type="doublespin" name="Fetus1::Amniotic::Fluid::Index">             
+          <uilink label="fetus1AmnioticFluidIndexLabel" widget="fetus1AmnioticFluidIndexDoubleSpinBox" />
+          <label lang="xx">Amniotic Fluid Index</label>                           
+          <label lang="fr">Indice de Phélan</label>                               
+          <options></options>                                                     
+        </Item>                                                                   
+                                                                                
+        <Item type="shorttext" name="Fetus1::Amniotic::Fluid::Index::Comment::shorttext">
+          <uilink widget="fetus1AmnioticFluidIndexLineEdit" />                          
+          <placeholder lang="xx">Comment</placeholder>                            
+          <placeholder lang="fr">Commentaire</placeholder>                          
+          <options>DontPrintEmptyValues</options>                                 
+        </Item>                                                                   
+                                                                                
+      <Item type="doublespin" name="Fetus1::Amniotic::Fluid::Deepest::Vertical::Pocket::doublespin">
+        <uilink label="fetus1DeepestVerticalPocketLabel" widget="fetus1DeepestVerticalPocketDoubleSpinBox" />
+        <label lang="xx">Deepest Vertical Pocket</label>                        
+        <label lang="fr">Grande citerne</label>                                 
+        <options></options>                                                     
+      </Item>                                                                   
+                                                                                
+      <Item type="shorttext" name="Fetus1::Amniotic::Fluid::Deepest::Vertical::Pocket::Comment::shorttext">
+        <uilink widget="fetus1DeepestVerticalPocketLineEdit" />                       
+        <placeholder lang="xx">Comment</placeholder>                            
+        <placeholder lang="fr">Commentaire</placeholder>                          
+        <options>DontPrintEmptyValues</options>                                 
+      </Item>
+
+      <Item type="radio" name="Fetus1::Amniotic::Fluid::Radio">                  
+            <uilink label="fetus1AmnioticFluidVolumeLabel" widget="" layout="fetus1AmnioticFluidVolumeRadioLayout"/>
+              <label lang="xx">Amniotic fluid volume</label>                    
+              <label lang="fr">Volume du liquide amniotique</label>             
+              <options>compact</options>                                        
+              <value>                                                           
+                <uuid id="0">∅</uuid>                                           
+                <uuid id="1">Normal</uuid>                                      
+                <uuid id="2">Oligohydramnios</uuid>                             
+                <uuid id="3">Polyhydramnios</uuid>                              
+                <uuid id="4">Anhydramnios</uuid>                                
+                <possible id="0" lang="xx">∅</possible>                         
+                <possible id="1" lang="xx">Normal</possible>                    
+                <possible id="2" lang="xx">Oligohydramnios</possible>           
+                <possible id="3" lang="xx">Polyhydramnios</possible>            
+                <possible id="4" lang="xx">Anhydramnios</possible>              
+                <print id="0" lang="xx">Not evaluated</print>                   
+                <print id="1" lang="xx">Normal</print>                          
+                <print id="2" lang="xx">Oligohydramnios</print>                 
+                <print id="3" lang="xx">Polyhydramnios</print>                  
+                <print id="4" lang="xx">Anhydramnios</print>                    
+                <possible id="0" lang="fr">∅</possible>                         
+                <possible id="1" lang="fr">Normal</possible>                    
+                <possible id="2" lang="fr">Oligoamnios</possible>               
+                <possible id="3" lang="fr">Hydramnios</possible>                
+                <possible id="4" lang="fr">Anamnios</possible>                  
+                <print id="0" lang="fr">Non évalué</print>                      
+                <print id="1" lang="fr">Normal</print>                          
+                <print id="2" lang="fr">Oligoamnios</print>                     
+                <print id="3" lang="fr">Hydramnios</print>                      
+                <print id="4" lang="fr">Anamnios</print>                        
+              </value>                                                          
+          </Item>
+
+          <Item name="Fetus1::Amniotic::Fluid::Volume::ShortText" type="shorttext">
+            <uilink label="" widget="fetus1AmnioticFluidVolumeLineEdit" layout="" />  
+            <label lang="xx"></label>                                           
+            <label lang="fr"></label>                                           
+            <placeholder lang="xx">Comment</placeholder>                        
+            <placeholder lang="fr">Commentaire</placeholder>                    
+          </Item>  
+
+
+      </Item> <!-- end of Fetus1 AmnioticFluid group -->
 
     </Item> <!-- end of Fetus1 group -->
 
