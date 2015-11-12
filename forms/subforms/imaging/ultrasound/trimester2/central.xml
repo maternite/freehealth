@@ -673,42 +673,6 @@
         <label lang="fr">Biométrie</label>
         <options>DontPrintEmptyValues;collapsible;expanded</options>
 
-        <Item type="spin" name="Fetus1::Biometry::Mean::Sac::Diameter::SpinBox">
-            <uilink label="fetus1MeanSacDiameterLabel" widget="fetus1MeanSacDiameterSpinBox" layout=""/>
-            <label lang="xx">MSD (Mean Sac Diameter)</label>
-            <label lang="fr">SG (Sac gestationnel)</label>
-        </Item>
-
-        <Item type="spin" name="Fetus1::Biometry::Mean::Sac::Diameter::Week::SpinBox">
-            <uilink label="fetus1MeanSacDiameterWeekLabel" widget="fetus1MeanSacDiameterWeekSpinBox" layout=""/>
-            <label lang="xx">Week(s)</label>
-            <label lang="fr">semaine(s)</label>
-        </Item>
-
-        <Item type="spin" name="Fetus1::Biometry::Mean::Sac::Diameter::Day::SpinBox">
-            <uilink label="fetus1MeanSacDiameterDayLabel" widget="fetus1MeanSacDiameterDaySpinBox" layout=""/>
-            <label lang="xx">Day(s)</label>
-            <label lang="fr">jour(s)</label>
-        </Item>
-
-        <Item type="spin" name="Fetus1::Biometry::Crown::Rump::Length::SpinBox">
-            <uilink label="fetus1CRLLabel" widget="fetus1CRLSpinBox" layout=""/>
-            <label lang="xx">CRL (Crown Rump Length)</label>
-            <label lang="fr">LCC (Longueur cranio-caudale)</label>
-        </Item>
-
-        <Item type="spin" name="Fetus1::Biometry::Crown::Rump::Length::Week::SpinBox">
-            <uilink label="fetus1CRLWeekLabel" widget="fetus1CRLWeekSpinBox" layout=""/>
-            <label lang="xx">Week(s)</label>
-            <label lang="fr">semaine(s)</label>
-        </Item>
-
-        <Item type="spin" name="Fetus1::Biometry::Crown::Rump::Length::Day::SpinBox">
-            <uilink label="fetus1CRLDayLabel" widget="fetus1CRLDaySpinBox" layout=""/>
-            <label lang="xx">Day(s)</label>
-            <label lang="fr">jour(s)</label>
-        </Item>
-
         <Item type="spin" name="Fetus1::Biometry::Biparietal::Diameter::SpinBox">
             <uilink label="fetus1BPDLabel" widget="fetus1BPDSpinBox" layout=""/>
             <label lang="xx">BIP (Biparietal diameter)</label>
@@ -725,6 +689,12 @@
             <uilink label="fetus1BPDDayLabel" widget="fetus1BPDDaySpinBox" layout=""/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Biparietal::Diameter::Percentile::SpinBox">
+            <uilink label="fetus1BipPercentileLabel" widget="fetus1BipPercentileSpinBox" layout=""/>
+            <label lang="xx">Percentile</label>
+            <label lang="fr">Percentile</label>
         </Item>
 
         <Item type="spin" name="Fetus1::Biometry::Head::Circumference::SpinBox">
@@ -745,6 +715,12 @@
             <label lang="fr">jour(s)</label>
         </Item>
 
+        <Item type="spin" name="Fetus1::Biometry::Head::Circumference::Percentile::SpinBox">
+            <uilink label="fetus1HcPercentileLabel" widget="fetus1HcPercentileSpinBox" layout=""/>
+            <label lang="xx">Percentile</label>
+            <label lang="fr">Percentile</label>
+        </Item>
+
         <Item type="spin" name="Fetus1::Biometry::Abdominal::Circumference::SpinBox">
             <uilink label="fetus1AbdominalCircumferenceLabel" widget="fetus1AbdominalCircumferenceSpinBox" layout=""/>
             <label lang="xx">AC (Abdominal circumference)</label>
@@ -761,6 +737,12 @@
             <uilink label="fetus1AbdominalCircumferenceDayLabel" widget="fetus1AbdominalCircumferenceDaySpinBox" layout=""/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Abdominal::Circumference::Percentile::SpinBox">
+            <uilink label="fetus1AcPercentileLabel" widget="fetus1AcPercentileSpinBox" layout=""/>
+            <label lang="xx">Percentile</label>
+            <label lang="fr">Percentile</label>
         </Item>
 
         <Item type="spin" name="Fetus1::Biometry::Transverse::Abdominal::Diameter::SpinBox">
@@ -781,6 +763,12 @@
             <label lang="fr">jour(s)</label>
         </Item>
 
+        <Item type="spin" name="Fetus1::Biometry::Transverse::Abdominal::Diameter::Percentile::SpinBox">
+            <uilink label="fetus1TadPercentileLabel" widget="fetus1TadPercentileSpinBox"/>
+            <label lang="xx">Percentile</label>
+            <label lang="fr">Percentile</label>
+        </Item>
+
         <Item type="spin" name="Fetus1::Biometry::Femur::Length::SpinBox">
             <uilink label="fetus1FLLabel" widget="fetus1FLSpinBox"/>
             <label lang="xx">FL (Femur Length)</label>
@@ -799,10 +787,10 @@
             <label lang="fr">jour(s)</label>
         </Item>
 
-        <Item type="spin" name="Fetus1::Biometry::Nuchal::Translucency::SpinBox">
-            <uilink label="fetus1NuchalTranslucencyLabel" widget="fetus1NuchalTranslucencySpinBox"/>
-            <label lang="xx">Nuchal Translucency</label>
-            <label lang="fr">Clarté nuchale</label>
+        <Item type="spin" name="Fetus1::Biometry::Femur::Length::Percentile::SpinBox">
+            <uilink label="fetus1FlPercentileLabel" widget="fetus1FlPercentileSpinBox"/>
+            <label lang="xx">Percentile</label>
+            <label lang="fr">Percentile</label>
         </Item>
 
         <Item name="Fetus1::Biometry::Comment" type="texteditor">
@@ -818,6 +806,12 @@
             <uilink label="fetus1EfwLabel" widget="fetus1EfwSpinBox"/>
             <label lang="xx">Estimated fetal weight</label>
             <label lang="fr">Poids fœtal estimé</label>
+        </Item>
+
+        <Item type="spin" name="Fetus1::Biometry::Estimated::Fetal::Weight::Percentile::SpinBox">
+            <uilink label="fetus1EfwPercentileLabel" widget="fetus1EfwPercentileSpinBox"/>          
+            <label lang="xx">Percentile</label>                     
+            <label lang="fr">Percentile</label>                         
         </Item>
 
 
@@ -875,20 +869,20 @@
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Normal for term</uuid>
-                <uuid id="2">Abnormal for term</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal for term</possible>
-                <possible id="2" lang="xx">Abnormal for term</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal for term</print>
-                <print id="2" lang="xx">Abnormal for term</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal pour le terme</possible>
-                <possible id="2" lang="fr">Anormal pour le terme</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal pour le terme</print>
-                <print id="2" lang="fr">Anormal pour le terme</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
               </value>
           </Item>
 
@@ -907,20 +901,20 @@
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Normal for term</uuid>
-                <uuid id="2">Abnormal for term</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal for term</possible>
-                <possible id="2" lang="xx">Abnormal for term</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal for term</print>
-                <print id="2" lang="xx">Abnormal for term</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal pour le terme</possible>
-                <possible id="2" lang="fr">Anormal pour le terme</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal pour le terme</print>
-                <print id="2" lang="fr">Anormal pour le terme</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
               </value>
           </Item>
 
@@ -939,20 +933,20 @@
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Normal for term</uuid>
-                <uuid id="2">Abnormal for term</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal for term</possible>
-                <possible id="2" lang="xx">Abnormal for term</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal for term</print>
-                <print id="2" lang="xx">Abnormal for term</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal pour le terme</possible>
-                <possible id="2" lang="fr">Anormal pour le terme</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal pour le terme</print>
-                <print id="2" lang="fr">Anormal pour le terme</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
               </value>
           </Item>
 
@@ -971,20 +965,20 @@
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Normal for term</uuid>
-                <uuid id="2">Abnormal for term</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal for term</possible>
-                <possible id="2" lang="xx">Abnormal for term</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal for term</print>
-                <print id="2" lang="xx">Abnormal for term</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal pour le terme</possible>
-                <possible id="2" lang="fr">Anormal pour le terme</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal pour le terme</print>
-                <print id="2" lang="fr">Anormal pour le terme</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
               </value>
           </Item>
 
@@ -1003,20 +997,20 @@
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Normal for term</uuid>
-                <uuid id="2">Abnormal for term</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal for term</possible>
-                <possible id="2" lang="xx">Abnormal for term</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal for term</print>
-                <print id="2" lang="xx">Abnormal for term</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal pour le terme</possible>
-                <possible id="2" lang="fr">Anormal pour le terme</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal pour le terme</print>
-                <print id="2" lang="fr">Anormal pour le terme</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
               </value>
           </Item>
 
@@ -1166,34 +1160,34 @@
 
           <Item type="radio" name="Fetus1:Morphology::Thorax::Great::Vessels::Radio">
             <uilink label="fetus1GreatVesselsLabel" widget="" layout="fetus1GreatVesselsRadioLayout"/>
-              <label lang="xx">Great vessels</label>                  
-              <label lang="fr">Gros vaisseaux</label>                
-              <options>compact</options>                                        
-              <value>                                                           
-                <uuid id="0">∅</uuid>                                           
-                <uuid id="1">Normal</uuid>                                      
-                <uuid id="2">Abnormal</uuid>                                    
-                <possible id="0" lang="xx">∅</possible>                         
-                <possible id="1" lang="xx">Normal</possible>                    
-                <possible id="2" lang="xx">Abnormal</possible>                  
-                <print id="0" lang="xx">Not evaluated</print>                   
-                <print id="1" lang="xx">Normal</print>                          
-                <print id="2" lang="xx">Abnormal</print>                        
-                <possible id="0" lang="fr">∅</possible>                         
-                <possible id="1" lang="fr">Normaux</possible>                   
-                <possible id="2" lang="fr">Anormaux</possible>                  
-                <print id="0" lang="fr">Non évalué</print>                      
-                <print id="1" lang="fr">Normaux</print>                         
-                <print id="2" lang="fr">Anormaux</print>                        
-              </value>                                                          
+              <label lang="xx">Great vessels</label>
+              <label lang="fr">Gros vaisseaux</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normaux</possible>
+                <possible id="2" lang="fr">Anormaux</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Normaux</print>
+                <print id="2" lang="fr">Anormaux</print>
+              </value>
           </Item>
 
           <Item name="Fetus1:Morphology::Thorax::Great::Vessels::Comment" type="shorttext">
-            <uilink label="" widget="fetus1GreatVesselsLineEdit" layout="" />            
-            <label lang="xx"></label>                                           
-            <label lang="fr"></label>                                           
-            <placeholder lang="xx">Comment</placeholder>                        
-            <placeholder lang="fr">Commentaire</placeholder>                    
+            <uilink label="" widget="fetus1GreatVesselsLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
         </Item> <!-- end of group Thorax -->
@@ -1204,7 +1198,39 @@
           <label lang="fr">Abdomen</label>
           <options>DontPrintEmptyValues;collapsible;expanded</options>
 
-          <Item type="radio" name="Fetus1:Morphology::Stomach::Position::Radio">
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Diaphragm::Radio">
+            <uilink label="fetus1DiaphragmLabel" widget="" layout="fetus1DiaphragmRadioLayout"/>
+              <label lang="xx">Diaphragm</label>
+              <label lang="fr">Interface thoraco-abdominale</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Visualized</uuid>
+                <uuid id="2">Not visualized</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Visualized</possible>
+                <possible id="2" lang="xx">Not visualized</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Visualized</print>
+                <print id="2" lang="xx">Not visualized</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Vue</possible>
+                <possible id="2" lang="fr">Non vue</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Vue</print>
+                <print id="2" lang="fr">Non vue</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Abdomen::Diaphragm::Comment" type="shorttext">
+            <uilink label="" widget="fetus1DiaphragmLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Stomach::Position::Radio">
             <uilink label="fetus1StomachPositionLabel" widget="" layout="fetus1StomachPositionRadioLayout"/>
               <label lang="xx">Stomach position</label>
               <label lang="fr">Estomac en position</label>
@@ -1228,13 +1254,79 @@
               </value>
           </Item>
 
-          <Item name="Fetus1:Morphology::Stomach::Position::Comment" type="shorttext">
+          <Item name="Fetus1:Morphology::Abdomen::Stomach::Position::Comment" type="shorttext">
             <uilink label="" widget="fetus1StomachPositionLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Gall::Bladder::Liver::Position::Radio">
+            <uilink label="fetus1GallBladderLiverPositionLabel" widget="" layout="fetus1GallBladderLiverPositionRadioLayout"/>
+              <label lang="xx">Gall bladder and liver position</label>
+              <label lang="fr">Position du foie et de la vésicule biliaire</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normale</possible>
+                <possible id="2" lang="fr">Anormale</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Normale</print>
+                <print id="2" lang="fr">Anormale</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Abdomen::Gall::Bladder::Liver::Position::Comment" type="shorttext">
+            <uilink label="" widget="fetus1GallBladderLiverPositionLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Bowel::Echogenicity::Liver::Position::Radio">
+            <uilink label="fetus1BowelEchogenicityLabel" widget="" layout="fetus1BowelEchogenicityRadioLayout"/>
+              <label lang="xx">Gall bladder and liver position</label>
+              <label lang="fr">Position du foie et de la vésicule biliaire</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normale</possible>
+                <possible id="2" lang="fr">Anormale</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Normale</print>
+                <print id="2" lang="fr">Anormale</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Abdomen::Bowel::Echogenicity::Comment" type="shorttext">
+            <uilink label="" widget="fetus1BowelEchogenicityLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+
 
           <Item type="radio" name="Fetus1:Morphology::Abdominal::Wall::Radio">
             <uilink label="fetus1AbdominalWallLabel" widget="" layout="fetus1AbdominalWallRadioLayout"/>
@@ -1268,39 +1360,71 @@
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
-          <Item type="radio" name="Fetus1:Morphology::Rachis::Radio">
-            <uilink label="fetus1RachisLabel" widget="" layout="fetus1RachisRadioLayout"/>
-              <label lang="xx">Rachis</label>
-              <label lang="fr">Rachis</label>
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Kidney::Right::Radio">
+            <uilink label="fetus1RightKidneyLabel" widget="" layout="fetus1RightKidneyRadioLayout"/>
+              <label lang="xx">Right kidney</label>
+              <label lang="fr">Rein droit</label>
               <options>compact</options>
               <value>
                 <uuid id="0">∅</uuid>
-                <uuid id="1">Normal for term</uuid>
-                <uuid id="2">Abnormal for term</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
                 <possible id="0" lang="xx">∅</possible>
-                <possible id="1" lang="xx">Normal for term</possible>
-                <possible id="2" lang="xx">Abnormal for term</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
                 <print id="0" lang="xx">Not evaluated</print>
-                <print id="1" lang="xx">Normal for term</print>
-                <print id="2" lang="xx">Abnormal for term</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
                 <possible id="0" lang="fr">∅</possible>
-                <possible id="1" lang="fr">Normal pour le terme</possible>
-                <possible id="2" lang="fr">Anormal pour le terme</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
                 <print id="0" lang="fr">Non évalué</print>
-                <print id="1" lang="fr">Normal pour le terme</print>
-                <print id="2" lang="fr">Anormal pour le terme</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
               </value>
           </Item>
 
-          <Item name="Fetus1:Morphology::Rachis::Comment" type="shorttext">
-            <uilink label="" widget="fetus1RachisLineEdit" layout="" />
+          <Item name="Fetus1:Morphology::Abdomen::Kidney::Right::Comment" type="shorttext">
+            <uilink label="" widget="fetus1RightKidneyLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
           </Item>
 
-          <Item type="radio" name="Fetus1:Morphology::Bladder::Radio">
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Kidney::Left::Radio">
+            <uilink label="fetus1LeftKidneyLabel" widget="" layout="fetus1LeftKidneyRadioLayout"/>
+              <label lang="xx">Left kidney</label>
+              <label lang="fr">Rein gauche</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Abdomen::Kidney::Left::Comment" type="shorttext">
+            <uilink label="" widget="fetus1LeftKidneyLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Bladder::Radio">
             <uilink label="fetus1BladderLabel" widget="" layout="fetus1BladderRadioLayout"/>
               <label lang="xx">Bladder</label>
               <label lang="fr">Vessie</label>
@@ -1324,8 +1448,72 @@
               </value>
           </Item>
 
-          <Item name="Fetus1:Morphology::Bladder::Comment" type="shorttext">
+          <Item name="Fetus1:Morphology::Abdomen::Bladder::Comment" type="shorttext">
             <uilink label="" widget="fetus1BladderLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Rachis::Radio">
+            <uilink label="fetus1RachisLabel" widget="" layout="fetus1RachisRadioLayout"/>
+              <label lang="xx">Rachis</label>
+              <label lang="fr">Rachis</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Rachis::Comment" type="shorttext">
+            <uilink label="" widget="fetus1RachisLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Abdomen::Rachis::Posterior::Skin::Radio">
+            <uilink label="fetus1RachisSkinLabel" widget="" layout="fetus1RachisSkinRadioLayout"/>
+              <label lang="xx">Rachis posterior skin</label>
+              <label lang="fr">Revêtement cutané postérieur</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normal</possible>
+                <possible id="2" lang="fr">Anormal</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Normal</print>
+                <print id="2" lang="fr">Anormal</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Abdomen::Rachis::Posterior::Skin::Comment" type="shorttext">
+            <uilink label="" widget="fetus1RachisSkinLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
@@ -1366,6 +1554,43 @@
 
           <Item name="Fetus1:Morphology::Limbs::Comment" type="shorttext">
             <uilink label="" widget="fetus1LimbsLineEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx">Comment</placeholder>
+            <placeholder lang="fr">Commentaire</placeholder>
+          </Item>
+
+          <Item type="radio" name="Fetus1:Morphology::Limbs::Sex::Radio">
+            <uilink label="fetus1SexLabel" widget="" layout="fetus1SexRadioLayout"/>
+              <label lang="xx">Sex</label>
+              <label lang="fr">Sexe</label>
+              <options>compact</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Female</uuid>
+                <uuid id="2">Male</uuid>
+                <uuid id="3">Indeterminate</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Female</possible>
+                <possible id="2" lang="xx">Male</possible>
+                <possible id="3" lang="xx">Indeterminate</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Female</print>
+                <print id="2" lang="xx">Male</print>
+                <print id="3" lang="xx">Indeterminate</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Féminin</possible>
+                <possible id="2" lang="fr">Masculin</possible>
+                <possible id="3" lang="fr">Indéterminé</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Féminin</print>
+                <print id="2" lang="fr">Masculin</print>
+                <print id="3" lang="fr">Indéterminé</print>
+              </value>
+          </Item>
+
+          <Item name="Fetus1:Morphology::Limbs::Sex::Comment" type="shorttext">
+            <uilink label="" widget="fetus1SexLineEdit" layout="" />
             <label lang="xx"></label>
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>

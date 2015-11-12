@@ -1040,7 +1040,38 @@
            </property>
           </widget>
          </item>
+         <item row="5" column="2">
+          <widget class="Line" name="line_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QSpinBox" name="fetus1EfwPercentileSpinBox"/>
+         </item>
+         <item row="5" column="4" colspan="2">
+          <widget class="QLabel" name="fetus1EfwPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
          <item row="6" column="0" colspan="9">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="fetus1BiometryCommentLabel">
+             <property name="text">
+              <string>comment</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="fetus1BiometryCommentFormLayout"/>
+           </item>
+          </layout>
+         </item>
+         <item row="7" column="0" colspan="9">
           <layout class="QHBoxLayout" name="horizontalLayout_18">
            <item>
             <widget class="QLabel" name="fetus1UsGestationalAgeHelpTextLabel">
@@ -1081,20 +1112,6 @@
               </size>
              </property>
             </spacer>
-           </item>
-          </layout>
-         </item>
-         <item row="7" column="0" colspan="9">
-          <layout class="QVBoxLayout" name="verticalLayout">
-           <item>
-            <widget class="QLabel" name="fetus1BiometryCommentLabel">
-             <property name="text">
-              <string>comment</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <layout class="QFormLayout" name="fetus1BiometryCommentFormLayout"/>
            </item>
           </layout>
          </item>
@@ -1346,7 +1363,7 @@
             <item row="3" column="0">
              <widget class="QLabel" name="fetus1BowelEchogenicityLabel">
               <property name="text">
-               <string>fetal bowel echogenicity</string>
+               <string>bowel echogenicity</string>
               </property>
              </widget>
             </item>
@@ -1377,7 +1394,7 @@
              </widget>
             </item>
             <item row="5" column="1">
-             <layout class="QHBoxLayout" name="fetus1RightKIdneyRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus1RightKidneyRadioLayout"/>
             </item>
             <item row="5" column="2">
              <widget class="QLineEdit" name="fetus1RightKidneyLineEdit"/>
@@ -1390,7 +1407,7 @@
              </widget>
             </item>
             <item row="6" column="1">
-             <layout class="QHBoxLayout" name="fetus1LeftKIdneyRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus1LeftKidneyRadioLayout"/>
             </item>
             <item row="6" column="2">
              <widget class="QLineEdit" name="fetus1LeftKidneyLineEdit"/>
@@ -2188,6 +2205,23 @@
            </property>
           </widget>
          </item>
+         <item row="5" column="2">
+          <widget class="Line" name="line_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QSpinBox" name="fetus2EfwPercentileSpinBox"/>
+         </item>
+         <item row="5" column="4" colspan="2">
+          <widget class="QLabel" name="fetus2EfwPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
          <item row="6" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout_10">
            <item>
@@ -2202,7 +2236,7 @@
            </item>
           </layout>
          </item>
-         <item row="7" column="0" colspan="9">
+         <item row="7" column="0" colspan="4">
           <layout class="QHBoxLayout" name="horizontalLayout_19">
            <item>
             <widget class="QLabel" name="fetus2UsGestationalAgeHelpTextLabel">
@@ -2954,6 +2988,23 @@
            </property>
           </widget>
          </item>
+         <item row="5" column="2">
+          <widget class="Line" name="line_10">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QSpinBox" name="fetus3EfwPercentileSpinBox"/>
+         </item>
+         <item row="5" column="4" colspan="2">
+          <widget class="QLabel" name="fetus3EfwPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
          <item row="6" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout_15">
            <item>
@@ -2968,7 +3019,7 @@
            </item>
           </layout>
          </item>
-         <item row="7" column="0" colspan="8">
+         <item row="7" column="0" colspan="4">
           <layout class="QHBoxLayout" name="horizontalLayout_20">
            <item>
             <widget class="QLabel" name="fetus3UsGestationalAgeHelpTextLabel">
@@ -3725,6 +3776,23 @@
            </property>
           </widget>
          </item>
+         <item row="6" column="2">
+          <widget class="Line" name="line_11">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QSpinBox" name="fetus4EfwPercentileSpinBox"/>
+         </item>
+         <item row="6" column="4" colspan="2">
+          <widget class="QLabel" name="fetus4EfwPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
          <item row="7" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout_23">
            <item>
@@ -3739,7 +3807,7 @@
            </item>
           </layout>
          </item>
-         <item row="8" column="0" colspan="9">
+         <item row="8" column="0" colspan="4">
           <layout class="QHBoxLayout" name="horizontalLayout_21">
            <item>
             <widget class="QLabel" name="fetus4UsGestationalAgeHelpTextLabel">
@@ -4498,6 +4566,23 @@
            </property>
           </widget>
          </item>
+         <item row="6" column="2">
+          <widget class="Line" name="line_17">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3" colspan="2">
+          <widget class="QSpinBox" name="fetus5EfwPercentileSpinBox"/>
+         </item>
+         <item row="6" column="5" colspan="2">
+          <widget class="QLabel" name="fetus5EfwPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
          <item row="7" column="0" colspan="10">
           <layout class="QVBoxLayout" name="verticalLayout_28">
            <item>
@@ -4512,7 +4597,7 @@
            </item>
           </layout>
          </item>
-         <item row="8" column="0" colspan="10">
+         <item row="8" column="0" colspan="5">
           <layout class="QHBoxLayout" name="horizontalLayout_22">
            <item>
             <widget class="QLabel" name="fetus5UsGestationalAgeHelpTextLabel">
@@ -5540,6 +5625,23 @@
            </property>
           </widget>
          </item>
+         <item row="5" column="2">
+          <widget class="Line" name="line_18">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QSpinBox" name="fetus6EfwPercentileSpinBox"/>
+         </item>
+         <item row="5" column="4" colspan="2">
+          <widget class="QLabel" name="fetus6EfwPercentileLabel">
+           <property name="text">
+            <string>percentile</string>
+           </property>
+          </widget>
+         </item>
          <item row="6" column="0" colspan="9">
           <layout class="QVBoxLayout" name="verticalLayout_33">
            <item>
@@ -5554,7 +5656,7 @@
            </item>
           </layout>
          </item>
-         <item row="7" column="0" colspan="9">
+         <item row="7" column="0" colspan="4">
           <layout class="QHBoxLayout" name="horizontalLayout_23">
            <item>
             <widget class="QLabel" name="fetus6UsGestationalAgeHelpTextLabel">
