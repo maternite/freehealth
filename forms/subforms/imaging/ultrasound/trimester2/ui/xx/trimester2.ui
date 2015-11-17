@@ -410,17 +410,17 @@
        <widget class="QLineEdit" name="placentalGradingLineEdit"/>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="placentalLocalizationLabel">
+       <widget class="QLabel" name="placentaLocalizationLabel">
         <property name="text">
-         <string>placental location</string>
+         <string>placenta location</string>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
-       <layout class="QHBoxLayout" name="placentalLocalizationRadioLayout"/>
+       <layout class="QHBoxLayout" name="placentaLocalizationRadioLayout"/>
       </item>
       <item row="1" column="3">
-       <widget class="QLineEdit" name="placentalLocalizationLineEdit"/>
+       <widget class="QLineEdit" name="placentaLocalizationLineEdit"/>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="placentaCervixDistanceLabel">
@@ -1786,7 +1786,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="presentationF2ListView">
+            <widget class="QListView" name="presentationFetus2ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1810,7 +1810,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="positionF2ListView">
+            <widget class="QListView" name="positionFetus2ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1864,17 +1864,17 @@
           <widget class="QLineEdit" name="fetus2FhrLineEdit"/>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="fetus2HeartRythmLabel">
+          <widget class="QLabel" name="fetus2HeartRhythmLabel">
            <property name="text">
             <string>fetal heart rythm</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <layout class="QHBoxLayout" name="fetus2HeartRythmRadioLayout"/>
+          <layout class="QHBoxLayout" name="fetus2HeartRhythmRadioLayout"/>
          </item>
          <item row="2" column="2">
-          <widget class="QLineEdit" name="fetus2HeartRythmLineEdit"/>
+          <widget class="QLineEdit" name="fetus2HeartRhythmLineEdit"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="fetus2RespiratoryLabel">
@@ -1940,7 +1940,7 @@
           </widget>
          </item>
          <item row="0" column="6">
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="fetus2BPDDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
@@ -2288,101 +2288,371 @@
         <property name="title">
          <string>morphologyGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_11">
+        <layout class="QVBoxLayout" name="verticalLayout_16">
          <item>
-          <layout class="QGridLayout" name="gridLayout_11">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus2CranialStructureLabel">
-             <property name="text">
-              <string>cranial structure</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <layout class="QHBoxLayout" name="fetus2CranialStructureRadioLayout"/>
-           </item>
-           <item row="0" column="2">
-            <widget class="QLineEdit" name="fetus2CranialStructureLineEdit"/>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus2IntracranialStructureLabel">
-             <property name="text">
-              <string>intracranial structure</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <layout class="QHBoxLayout" name="fetus2IntracranialStructureRadioLayout"/>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLineEdit" name="fetus2IntracranialStructureLineEdit"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus2StomachPositionLabel">
-             <property name="text">
-              <string>stomach position</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <layout class="QHBoxLayout" name="fetus2StomachPositionRadioLayout"/>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLineEdit" name="fetus2StomachPositionLineEdit"/>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus2AbdominalWallLabel">
-             <property name="text">
-              <string>abdominal wall</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <layout class="QHBoxLayout" name="fetus2AbdominalWallRadioLayout"/>
-           </item>
-           <item row="3" column="2">
-            <widget class="QLineEdit" name="fetus2AbdominalWallLineEdit"/>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus2RachisLabel">
-             <property name="text">
-              <string>rachis</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <layout class="QHBoxLayout" name="fetus2RachisRadioLayout"/>
-           </item>
-           <item row="4" column="2">
-            <widget class="QLineEdit" name="fetus2RachisLineEdit"/>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus2BladderLabel">
-             <property name="text">
-              <string>bladder</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <layout class="QHBoxLayout" name="fetus2BladderRadioLayout"/>
-           </item>
-           <item row="5" column="2">
-            <widget class="QLineEdit" name="fetus2BladderLineEdit"/>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus2LimbsLabel">
-             <property name="text">
-              <string>4 limbs 3 segments</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <layout class="QHBoxLayout" name="fetus2LimbsRadioLayout"/>
-           </item>
-           <item row="6" column="2">
-            <widget class="QLineEdit" name="fetus2LimbsLineEdit"/>
-           </item>
-          </layout>
+          <widget class="QGroupBox" name="fetus2MorphologyCraniofacialGroupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>craniofacial</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_11">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus2CranialStructureLabel">
+              <property name="text">
+               <string>cranial structure</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus2CranialStructureRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus2CranialStructureLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus2LateralVentriclesLabel">
+              <property name="text">
+               <string>lateral ventricles</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus2LateralVentriclesRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus2LateralVentriclesLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus2MidlineCerebralStructuresLabel">
+              <property name="text">
+               <string>midline cerebral structures</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus2MidlineCerebralStructuresRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus2MidlineCerebralStructuresLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus2CerebellumLabel">
+              <property name="text">
+               <string>cerebellum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus2CerebellumRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus2CerebellumLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus2PosteriorCranialFossaLabel">
+              <property name="text">
+               <string>posterior cranial fossa</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus2PosteriorCranialFossaRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus2PosteriorCranialFossaLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="fetus2FaceLabel">
+              <property name="text">
+               <string>face</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <layout class="QHBoxLayout" name="fetus2FaceRadioLayout"/>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLineEdit" name="fetus2FaceLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus2MorphologyThoraxGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>175</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>thorax</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_43">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus2LungsLabel">
+              <property name="text">
+               <string>lungs</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus2LungsRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus2LungsLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus2CardiacPositionLabel">
+              <property name="text">
+               <string>cardiac position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus2CardiacPositionRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus2CardiacPositionLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus2Cardiac4ChambersLabel">
+              <property name="text">
+               <string>4 chambers RV LV RA LA</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus2Cardiac4ChambersRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus2Cardiac4ChambersLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus2IvsLabel">
+              <property name="text">
+               <string>interventricular septum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus2IvsRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus2IvsLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus2GreatVesselsLabel">
+              <property name="text">
+               <string>great vessels</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus2GreatVesselsRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus2GreatVesselsLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus2MorphologyAbdomenGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>abdomen</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_44">
+            <item row="6" column="2">
+             <widget class="QLineEdit" name="fetus2LeftKidneyLineEdit"/>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLineEdit" name="fetus2RightKidneyLineEdit"/>
+            </item>
+            <item row="6" column="1">
+             <layout class="QHBoxLayout" name="fetus2LeftKidneyRadioLayout"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="fetus2LeftKidneyLabel">
+              <property name="text">
+               <string>left kidney</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <layout class="QHBoxLayout" name="fetus2BladderRadioLayout"/>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="fetus2RachisLabel">
+              <property name="text">
+               <string>rachis</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="2">
+             <widget class="QLineEdit" name="fetus2RachisLineEdit"/>
+            </item>
+            <item row="8" column="1">
+             <layout class="QHBoxLayout" name="fetus2RachisRadioLayout"/>
+            </item>
+            <item row="9" column="2">
+             <widget class="QLineEdit" name="fetus2RachisSkinLineEdit"/>
+            </item>
+            <item row="9" column="1">
+             <layout class="QHBoxLayout" name="fetus2RachisSkinRadioLayout"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus2DiaphragmLabel">
+              <property name="text">
+               <string>diaphragm</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus2DiaphragmRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus2DiaphragmLineEdit"/>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus2StomachPositionRadioLayout"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus2StomachPositionLabel">
+              <property name="text">
+               <string>stomach position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus2StomachPositionLineEdit"/>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus2GallBladderLiverPositionRadioLayout"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus2GallBladderLiverPositionLabel">
+              <property name="text">
+               <string>gall bladder liver position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus2BowelEchogenicityLineEdit"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus2GallBladderLiverPositionLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus2BowelEchogenicityLabel">
+              <property name="text">
+               <string>bowel echogenicity</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus2BowelEchogenicityRadioLayout"/>
+            </item>
+            <item row="5" column="1">
+             <layout class="QHBoxLayout" name="fetus2RightKidneyRadioLayout"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="fetus2RightKidneyLabel">
+              <property name="text">
+               <string>right kidney</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus2AbdominalWallLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus2AbdominalWallLabel">
+              <property name="text">
+               <string>abdominal wall</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="2">
+             <widget class="QLineEdit" name="fetus2BladderLineEdit"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="fetus2BladderLabel">
+              <property name="text">
+               <string>bladder</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus2AbdominalWallRadioLayout"/>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="fetus2RachisSkinLabel">
+              <property name="text">
+               <string>rachis posterior skin</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus2MorphologyLimbsGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>limbs</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_45">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus2LimbsLabel">
+              <property name="text">
+               <string>4 limbs 3 segments</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus2LimbsRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus2LimbsLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus2SexLabel">
+              <property name="text">
+               <string>sex</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus2SexRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus2SexLineEdit"/>
+            </item>
+           </layout>
+          </widget>
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -2572,7 +2842,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="presentationF3ListView">
+            <widget class="QListView" name="presentationFetus3ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -2593,7 +2863,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="positionF3ListView">
+            <widget class="QListView" name="positionFetus3ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -2647,17 +2917,17 @@
           <widget class="QLineEdit" name="fetus3FhrLineEdit"/>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="fetus3HeartRythmLabel">
+          <widget class="QLabel" name="fetus3HeartRhythmLabel">
            <property name="text">
             <string>fetal heart rythm</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <layout class="QHBoxLayout" name="fetus3HeartRythmRadioLayout"/>
+          <layout class="QHBoxLayout" name="fetus3HeartRhythmRadioLayout"/>
          </item>
          <item row="2" column="2">
-          <widget class="QLineEdit" name="fetus3HeartRythmLineEdit"/>
+          <widget class="QLineEdit" name="fetus3HeartRhythmLineEdit"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="fetus3RespiratoryLabel">
@@ -2723,7 +2993,7 @@
           </widget>
          </item>
          <item row="0" column="6">
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="fetus3BPDDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
@@ -3071,101 +3341,371 @@
         <property name="title">
          <string>morphologyGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_16">
+        <layout class="QVBoxLayout" name="verticalLayout_11">
          <item>
-          <layout class="QGridLayout" name="gridLayout_14">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus3CranialStructureLabel">
-             <property name="text">
-              <string>cranial structure</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <layout class="QHBoxLayout" name="fetus3CranialStructureRadioLayout"/>
-           </item>
-           <item row="0" column="2">
-            <widget class="QLineEdit" name="fetus3CranialStructureLineEdit"/>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus3IntracranialStructureLabel">
-             <property name="text">
-              <string>intracranial structure</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <layout class="QHBoxLayout" name="fetus3IntracranialStructureRadioLayout"/>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLineEdit" name="fetus3IntracranialStructureLineEdit"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus3StomachPositionLabel">
-             <property name="text">
-              <string>stomach position</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <layout class="QHBoxLayout" name="fetus3StomachPositionRadioLayout"/>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLineEdit" name="fetus3StomachPositionLineEdit"/>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus3AbdominalWallLabel">
-             <property name="text">
-              <string>abdominal wall</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <layout class="QHBoxLayout" name="fetus3AbdominalWallRadioLayout"/>
-           </item>
-           <item row="3" column="2">
-            <widget class="QLineEdit" name="fetus3AbdominalWallLineEdit"/>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus3RachisLabel">
-             <property name="text">
-              <string>rachis</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <layout class="QHBoxLayout" name="fetus3RachisRadioLayout"/>
-           </item>
-           <item row="4" column="2">
-            <widget class="QLineEdit" name="fetus3RachisLineEdit"/>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus3BladderLabel">
-             <property name="text">
-              <string>bladder</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <layout class="QHBoxLayout" name="fetus3BladderRadioLayout"/>
-           </item>
-           <item row="5" column="2">
-            <widget class="QLineEdit" name="fetus3BladderLineEdit"/>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus3LimbsLabel">
-             <property name="text">
-              <string>4 limbs 3 segments</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <layout class="QHBoxLayout" name="fetus3LimbsRadioLayout"/>
-           </item>
-           <item row="6" column="2">
-            <widget class="QLineEdit" name="fetus3LimbsLineEdit"/>
-           </item>
-          </layout>
+          <widget class="QGroupBox" name="fetus3MorphologyCraniofacialGroupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>craniofacial</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus3CranialStructureLabel">
+              <property name="text">
+               <string>cranial structure</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus3CranialStructureRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus3CranialStructureLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus3LateralVentriclesLabel">
+              <property name="text">
+               <string>lateral ventricles</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus3LateralVentriclesRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus3LateralVentriclesLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus3MidlineCerebralStructuresLabel">
+              <property name="text">
+               <string>midline cerebral structures</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus3MidlineCerebralStructuresRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus3MidlineCerebralStructuresLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus3CerebellumLabel">
+              <property name="text">
+               <string>cerebellum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus3CerebellumRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus3CerebellumLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus3PosteriorCranialFossaLabel">
+              <property name="text">
+               <string>posterior cranial fossa</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus3PosteriorCranialFossaRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus3PosteriorCranialFossaLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="fetus3FaceLabel">
+              <property name="text">
+               <string>face</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <layout class="QHBoxLayout" name="fetus3FaceRadioLayout"/>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLineEdit" name="fetus3FaceLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus3MorphologyThoraxGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>175</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>thorax</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_47">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus3LungsLabel">
+              <property name="text">
+               <string>lungs</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus3LungsRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus3LungsLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus3CardiacPositionLabel">
+              <property name="text">
+               <string>cardiac position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus3CardiacPositionRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus3CardiacPositionLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus3Cardiac4ChambersLabel">
+              <property name="text">
+               <string>4 chambers RV LV RA LA</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus3Cardiac4ChambersRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus3Cardiac4ChambersLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus3IvsLabel">
+              <property name="text">
+               <string>interventricular septum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus3IvsRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus3IvsLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus3GreatVesselsLabel">
+              <property name="text">
+               <string>great vessels</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus3GreatVesselsRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus3GreatVesselsLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus3MorphologyAbdomenGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>abdomen</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_48">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus3DiaphragmLabel">
+              <property name="text">
+               <string>diaphragm</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus3DiaphragmRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus3DiaphragmLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus3StomachPositionLabel">
+              <property name="text">
+               <string>stomach position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus3StomachPositionRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus3StomachPositionLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus3GallBladderLiverPositionLabel">
+              <property name="text">
+               <string>gall bladder liver position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus3GallBladderLiverPositionRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus3GallBladderLiverPositionLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus3BowelEchogenicityLabel">
+              <property name="text">
+               <string>bowel echogenicity</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus3BowelEchogenicityRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus3BowelEchogenicityLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus3AbdominalWallLabel">
+              <property name="text">
+               <string>abdominal wall</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus3AbdominalWallRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus3AbdominalWallLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="fetus3RightKidneyLabel">
+              <property name="text">
+               <string>right kidney</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <layout class="QHBoxLayout" name="fetus3RightKidneyRadioLayout"/>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLineEdit" name="fetus3RightKidneyLineEdit"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="fetus3LeftKidneyLabel">
+              <property name="text">
+               <string>left kidney</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <layout class="QHBoxLayout" name="fetus3LeftKidneyRadioLayout"/>
+            </item>
+            <item row="6" column="2">
+             <widget class="QLineEdit" name="fetus3LeftKidneyLineEdit"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="fetus3BladderLabel">
+              <property name="text">
+               <string>bladder</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <layout class="QHBoxLayout" name="fetus3BladderRadioLayout"/>
+            </item>
+            <item row="7" column="2">
+             <widget class="QLineEdit" name="fetus3BladderLineEdit"/>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="fetus3RachisLabel">
+              <property name="text">
+               <string>rachis</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <layout class="QHBoxLayout" name="fetus3RachisRadioLayout"/>
+            </item>
+            <item row="8" column="2">
+             <widget class="QLineEdit" name="fetus3RachisLineEdit"/>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="fetus3RachisSkinLabel">
+              <property name="text">
+               <string>rachis posterior skin</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <layout class="QHBoxLayout" name="fetus3RachisSkinRadioLayout"/>
+            </item>
+            <item row="9" column="2">
+             <widget class="QLineEdit" name="fetus3RachisSkinLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus3MorphologyLimbsGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>limbs</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_49">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus3LimbsLabel">
+              <property name="text">
+               <string>4 limbs 3 segments</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus3LimbsRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus3LimbsLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus3SexLabel">
+              <property name="text">
+               <string>sex</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus3SexRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus3SexLineEdit"/>
+            </item>
+           </layout>
+          </widget>
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_20">
@@ -3353,7 +3893,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QListView" name="presentationF4ListView">
+          <widget class="QListView" name="presentationFetus4ListView">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -3370,7 +3910,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QListView" name="positionF4ListView">
+          <widget class="QListView" name="positionFetus4ListView">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -3389,39 +3929,29 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_15">
          <item row="0" column="0">
-          <widget class="QLabel" name="fetus4PregnancyLabel">
-           <property name="text">
-            <string>pregnancy</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <layout class="QHBoxLayout" name="fetus4PregnancyRadioLayout"/>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="fetus4PregnancyLineEdit"/>
-         </item>
-         <item row="1" column="0">
           <widget class="QLabel" name="fetus4FetalMovementLabel">
            <property name="text">
             <string>fetal movement</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="0" column="1">
           <layout class="QHBoxLayout" name="fetus4FetalMovementRadioLayout"/>
          </item>
-         <item row="1" column="2">
+         <item row="0" column="2">
           <widget class="QLineEdit" name="fetus4FetalMovementLineEdit"/>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="fetus4FhrLabel">
            <property name="text">
             <string>fetal heart rate</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="fetus4FhrLineEdit"/>
+         </item>
+         <item row="1" column="1">
           <widget class="QSpinBox" name="fetus4FhrSpinBox">
            <property name="suffix">
             <string>bpm</string>
@@ -3432,33 +3962,30 @@
           </widget>
          </item>
          <item row="2" column="2">
-          <widget class="QLineEdit" name="fetus4FhrLineEdit"/>
+          <widget class="QLineEdit" name="fetus4HeartRhythmLineEdit"/>
          </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="fetus4HeartRythmLabel">
+         <item row="2" column="0">
+          <widget class="QLabel" name="fetus4HeartRhythmLabel">
            <property name="text">
             <string>fetal heart rythm</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="1">
-          <layout class="QHBoxLayout" name="fetus4HeartRythmRadioLayout"/>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="fetus4HeartRhythmRadioLayout"/>
          </item>
          <item row="3" column="2">
-          <widget class="QLineEdit" name="fetus4HeartRythmLineEdit"/>
+          <widget class="QLineEdit" name="fetus4RespiratoryLineEdit"/>
          </item>
-         <item row="4" column="0">
+         <item row="3" column="0">
           <widget class="QLabel" name="fetus4RespiratoryLabel">
            <property name="text">
             <string>respiratory movements</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
+         <item row="3" column="1">
           <layout class="QHBoxLayout" name="fetus4RespiratoryRadioLayout"/>
-         </item>
-         <item row="4" column="2">
-          <widget class="QLineEdit" name="fetus4RespiratoryLineEdit"/>
          </item>
         </layout>
        </widget>
@@ -3491,7 +4018,7 @@
           </widget>
          </item>
          <item row="0" column="6" rowspan="2">
-          <widget class="QLabel" name="label_9">
+          <widget class="QLabel" name="fetus4BPDDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
@@ -3859,104 +4386,374 @@
         <property name="title">
          <string>morphologyGroupBox</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_24">
+        <layout class="QVBoxLayout" name="verticalLayout_25">
          <item>
-          <layout class="QGridLayout" name="gridLayout_17">
-           <item row="0" column="0">
-            <widget class="QLabel" name="fetus4CranialStructureLabel">
-             <property name="text">
-              <string>cranial structure</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <layout class="QHBoxLayout" name="fetus4CranialStructureRadioLayout"/>
-           </item>
-           <item row="0" column="2">
-            <widget class="QLineEdit" name="fetus4CranialStructureLineEdit"/>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="fetus4IntracranialStructureLabel">
-             <property name="text">
-              <string>intracranial structure</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <layout class="QHBoxLayout" name="fetus4IntracranialStructureRadioLayout"/>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLineEdit" name="fetus4IntracranialStructureLineEdit"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fetus4StomachPositionLabel">
-             <property name="text">
-              <string>stomach position</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <layout class="QHBoxLayout" name="fetus4StomachPositionRadioLayout"/>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLineEdit" name="fetus4StomachPositionLineEdit"/>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="fetus4AbdominalWallLabel">
-             <property name="text">
-              <string>abdominal wall</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <layout class="QHBoxLayout" name="fetus4AbdominalWallRadioLayout"/>
-           </item>
-           <item row="3" column="2">
-            <widget class="QLineEdit" name="fetus4AbdominalWallLineEdit"/>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fetus4RachisLabel">
-             <property name="text">
-              <string>rachis</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <layout class="QHBoxLayout" name="fetus4RachisRadioLayout"/>
-           </item>
-           <item row="4" column="2">
-            <widget class="QLineEdit" name="fetus4RachisLineEdit"/>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="fetus4BladderLabel">
-             <property name="text">
-              <string>bladder</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <layout class="QHBoxLayout" name="fetus4BladderRadioLayout"/>
-           </item>
-           <item row="5" column="2">
-            <widget class="QLineEdit" name="fetus4BladderLineEdit"/>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="fetus4LimbsLabel">
-             <property name="text">
-              <string>4 limbs 3 segments</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <layout class="QHBoxLayout" name="fetus4LimbsRadioLayout"/>
-           </item>
-           <item row="6" column="2">
-            <widget class="QLineEdit" name="fetus4LimbsLineEdit"/>
-           </item>
-          </layout>
+          <widget class="QGroupBox" name="fetus4MorphologyCraniofacialGroupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>craniofacial</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_17">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus4CranialStructureLabel">
+              <property name="text">
+               <string>cranial structure</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus4CranialStructureRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus4CranialStructureLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus4LateralVentriclesLabel">
+              <property name="text">
+               <string>lateral ventricles</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus4LateralVentriclesRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus4LateralVentriclesLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus4MidlineCerebralStructuresLabel">
+              <property name="text">
+               <string>midline cerebral structures</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus4MidlineCerebralStructuresRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus4MidlineCerebralStructuresLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus4CerebellumLabel">
+              <property name="text">
+               <string>cerebellum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus4CerebellumRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus4CerebellumLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus4PosteriorCranialFossaLabel">
+              <property name="text">
+               <string>posterior cranial fossa</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus4PosteriorCranialFossaRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus4PosteriorCranialFossaLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="fetus4FaceLabel">
+              <property name="text">
+               <string>face</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <layout class="QHBoxLayout" name="fetus4FaceRadioLayout"/>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLineEdit" name="fetus4FaceLineEdit"/>
+            </item>
+           </layout>
+          </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_25">
+          <widget class="QGroupBox" name="fetus4MorphologyThoraxGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>175</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>thorax</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_46">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus4LungsLabel">
+              <property name="text">
+               <string>lungs</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus4LungsRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus4LungsLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus4CardiacPositionLabel">
+              <property name="text">
+               <string>cardiac position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus4CardiacPositionRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus4CardiacPositionLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus4Cardiac4ChambersLabel">
+              <property name="text">
+               <string>4 chambers RV LV RA LA</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus4Cardiac4ChambersRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus4Cardiac4ChambersLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus4IvsLabel">
+              <property name="text">
+               <string>interventricular septum</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus4IvsRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus4IvsLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus4GreatVesselsLabel">
+              <property name="text">
+               <string>great vessels</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus4GreatVesselsRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus4GreatVesselsLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus4MorphologyAbdomenGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>abdomen</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_50">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus4DiaphragmLabel">
+              <property name="text">
+               <string>diaphragm</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus4DiaphragmRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus4DiaphragmLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus4StomachPositionLabel">
+              <property name="text">
+               <string>stomach position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus4StomachPositionRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus4StomachPositionLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="fetus4GallBladderLiverPositionLabel">
+              <property name="text">
+               <string>gall bladder liver position</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="fetus4GallBladderLiverPositionRadioLayout"/>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLineEdit" name="fetus4GallBladderLiverPositionLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="fetus4BowelEchogenicityLabel">
+              <property name="text">
+               <string>bowel echogenicity</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <layout class="QHBoxLayout" name="fetus4BowelEchogenicityRadioLayout"/>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLineEdit" name="fetus4BowelEchogenicityLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="fetus4AbdominalWallLabel">
+              <property name="text">
+               <string>abdominal wall</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="fetus4AbdominalWallRadioLayout"/>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLineEdit" name="fetus4AbdominalWallLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="fetus4RightKidneyLabel">
+              <property name="text">
+               <string>right kidney</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <layout class="QHBoxLayout" name="fetus4RightKidneyRadioLayout"/>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLineEdit" name="fetus4RightKidneyLineEdit"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="fetus4LeftKidneyLabel">
+              <property name="text">
+               <string>left kidney</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <layout class="QHBoxLayout" name="fetus4LeftKidneyRadioLayout"/>
+            </item>
+            <item row="6" column="2">
+             <widget class="QLineEdit" name="fetus4LeftKidneyLineEdit"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="fetus4BladderLabel">
+              <property name="text">
+               <string>bladder</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <layout class="QHBoxLayout" name="fetus4BladderRadioLayout"/>
+            </item>
+            <item row="7" column="2">
+             <widget class="QLineEdit" name="fetus4BladderLineEdit"/>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="fetus4RachisLabel">
+              <property name="text">
+               <string>rachis</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <layout class="QHBoxLayout" name="fetus4RachisRadioLayout"/>
+            </item>
+            <item row="8" column="2">
+             <widget class="QLineEdit" name="fetus4RachisLineEdit"/>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="fetus4RachisSkinLabel">
+              <property name="text">
+               <string>rachis posterior skin</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <layout class="QHBoxLayout" name="fetus4RachisSkinRadioLayout"/>
+            </item>
+            <item row="9" column="2">
+             <widget class="QLineEdit" name="fetus4RachisSkinLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus4MorphologyLimbsGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>limbs</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_51">
+            <item row="0" column="0">
+             <widget class="QLabel" name="fetus4LimbsLabel">
+              <property name="text">
+               <string>4 limbs 3 segments</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="fetus4LimbsRadioLayout"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLineEdit" name="fetus4LimbsLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="fetus4SexLabel">
+              <property name="text">
+               <string>sex</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="fetus4SexRadioLayout"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="fetus4SexLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_24">
            <item>
             <widget class="QLabel" name="fetus4MorphologyCommentLabel">
              <property name="text">
@@ -4143,7 +4940,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="presentationF5ListView">
+            <widget class="QListView" name="presentationFetus5ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -4164,7 +4961,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="positionF5ListView">
+            <widget class="QListView" name="positionFetus5ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -4218,17 +5015,17 @@
           <widget class="QLineEdit" name="fetus5FhrLineEdit"/>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="fetus5HeartRythmLabel">
+          <widget class="QLabel" name="fetus5HeartRhythmLabel">
            <property name="text">
             <string>fetal heart rythm</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <layout class="QHBoxLayout" name="fetus5HeartRythmRadioLayout"/>
+          <layout class="QHBoxLayout" name="fetus5HeartRhythmRadioLayout"/>
          </item>
          <item row="2" column="2">
-          <widget class="QLineEdit" name="fetus5HeartRythmLineEdit"/>
+          <widget class="QLineEdit" name="fetus5HeartRhythmLineEdit"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="fetus5RespiratoryLabel">
@@ -4311,7 +5108,7 @@
           </widget>
          </item>
          <item row="1" column="7">
-          <widget class="QLabel" name="label_10">
+          <widget class="QLabel" name="fetus5BPDDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
@@ -4688,17 +5485,17 @@
              <widget class="QLineEdit" name="fetus5CranialStructureLineEdit"/>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="fetus5LateralVentriculesLabel">
+             <widget class="QLabel" name="fetus5LateralVentriclesLabel">
               <property name="text">
                <string>lateral ventricles</string>
               </property>
              </widget>
             </item>
             <item row="1" column="1">
-             <layout class="QHBoxLayout" name="fetus5LateralVentriculesRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus5LateralVentriclesRadioLayout"/>
             </item>
             <item row="1" column="2">
-             <widget class="QLineEdit" name="fetus5LateralVentriculesLineEdit"/>
+             <widget class="QLineEdit" name="fetus5LateralVentriclesLineEdit"/>
             </item>
             <item row="2" column="0">
              <widget class="QLabel" name="fetus5MidlineCerebralStructuresLabel">
@@ -4737,7 +5534,7 @@
              <layout class="QHBoxLayout" name="fetus5PosteriorCranialFossaRadioLayout"/>
             </item>
             <item row="4" column="2">
-             <widget class="QLineEdit" name="lineEdit_3"/>
+             <widget class="QLineEdit" name="fetus5PosteriorCranialFossaLineEdit"/>
             </item>
             <item row="5" column="0">
              <widget class="QLabel" name="fetus5FaceLabel">
@@ -4920,7 +5717,7 @@
              </widget>
             </item>
             <item row="5" column="1">
-             <layout class="QHBoxLayout" name="fetus5RightKIdneyRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus5RightKidneyRadioLayout"/>
             </item>
             <item row="5" column="2">
              <widget class="QLineEdit" name="fetus5RightKidneyLineEdit"/>
@@ -4933,7 +5730,7 @@
              </widget>
             </item>
             <item row="6" column="1">
-             <layout class="QHBoxLayout" name="fetus5LeftKIdneyRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus5LeftKidneyRadioLayout"/>
             </item>
             <item row="6" column="2">
              <widget class="QLineEdit" name="fetus5LeftKidneyLineEdit"/>
@@ -5209,7 +6006,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="presentationF6ListView">
+            <widget class="QListView" name="presentationFetus6ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -5230,7 +6027,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListView" name="positionF6ListView">
+            <widget class="QListView" name="positionFetus6ListView">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -5284,17 +6081,17 @@
           <widget class="QLineEdit" name="fetus6FhrLineEdit"/>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="fetus6HeartRythmLabel">
+          <widget class="QLabel" name="fetus6HeartRhythmLabel">
            <property name="text">
             <string>fetal heart rythm</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <layout class="QHBoxLayout" name="fetus6HeartRythmRadioLayout"/>
+          <layout class="QHBoxLayout" name="fetus6HeartRhythmRadioLayout"/>
          </item>
          <item row="2" column="2">
-          <widget class="QLineEdit" name="fetus6HeartRythmLineEdit"/>
+          <widget class="QLineEdit" name="fetus6HeartRhythmLineEdit"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="fetus6RespiratoryLabel">
@@ -5360,7 +6157,7 @@
           </widget>
          </item>
          <item row="0" column="6">
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="fetus6BPDDayLabel">
            <property name="text">
             <string>day(s)</string>
            </property>
@@ -5747,17 +6544,17 @@
              <widget class="QLineEdit" name="fetus6CranialStructureLineEdit"/>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="fetus6LateralVentriculesLabel">
+             <widget class="QLabel" name="fetus6LateralVentriclesLabel">
               <property name="text">
                <string>lateral ventricles</string>
               </property>
              </widget>
             </item>
             <item row="1" column="1">
-             <layout class="QHBoxLayout" name="fetus6LateralVentriculesRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus6LateralVentriclesRadioLayout"/>
             </item>
             <item row="1" column="2">
-             <widget class="QLineEdit" name="fetus6LateralVentriculesLineEdit"/>
+             <widget class="QLineEdit" name="fetus6LateralVentriclesLineEdit"/>
             </item>
             <item row="2" column="0">
              <widget class="QLabel" name="fetus6MidlineCerebralStructuresLabel">
@@ -5796,7 +6593,7 @@
              <layout class="QHBoxLayout" name="fetus6PosteriorCranialFossaRadioLayout"/>
             </item>
             <item row="4" column="2">
-             <widget class="QLineEdit" name="lineEdit_2"/>
+             <widget class="QLineEdit" name="fetus6PosteriorCranialFossaLineEdit"/>
             </item>
             <item row="5" column="0">
              <widget class="QLabel" name="fetus6FaceLabel">
@@ -5979,7 +6776,7 @@
              </widget>
             </item>
             <item row="5" column="1">
-             <layout class="QHBoxLayout" name="fetus6RightKIdneyRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus6RightKidneyRadioLayout"/>
             </item>
             <item row="5" column="2">
              <widget class="QLineEdit" name="fetus6RightKidneyLineEdit"/>
@@ -5992,7 +6789,7 @@
              </widget>
             </item>
             <item row="6" column="1">
-             <layout class="QHBoxLayout" name="fetus6LeftKIdneyRadioLayout"/>
+             <layout class="QHBoxLayout" name="fetus6LeftKidneyRadioLayout"/>
             </item>
             <item row="6" column="2">
              <widget class="QLineEdit" name="fetus6LeftKidneyLineEdit"/>
