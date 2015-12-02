@@ -532,7 +532,7 @@
             <possible id="2" lang="fr">diminuée</possible>
             <possible id="3" lang="fr">absente</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>
+            <options>resizeToContent;DontPrintEmptyValues</options>
           </Item>
 
           <Item name="Fetus1::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
@@ -1039,7 +1039,7 @@
             <possible id="2" lang="fr">diminuée</possible>
             <possible id="3" lang="fr">absente</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>
+            <options>resizeToContent;DontPrintEmptyValues</options>
           </Item>
 
           <Item name="Fetus2::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
@@ -1546,7 +1546,7 @@
             <possible id="2" lang="fr">diminuée</possible>
             <possible id="3" lang="fr">absente</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>
+            <options>resizeToContent;DontPrintEmptyValues</options>
           </Item>
 
           <Item name="Fetus3::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
@@ -2053,7 +2053,7 @@
             <possible id="2" lang="fr">diminuée</possible>
             <possible id="3" lang="fr">absente</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>
+            <options>resizeToContent;DontPrintEmptyValues</options>
           </Item>
 
           <Item name="Fetus4::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
@@ -2560,7 +2560,7 @@
             <possible id="2" lang="fr">diminuée</possible>
             <possible id="3" lang="fr">absente</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>
+            <options>resizeToContent;DontPrintEmptyValues</options>
           </Item>
 
           <Item name="Fetus5::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
@@ -3067,7 +3067,7 @@
             <possible id="2" lang="fr">diminuée</possible>
             <possible id="3" lang="fr">absente</possible>
             </value>
-            <options>resizeToContent;DontPrintEmptyValue</options>
+            <options>resizeToContent;DontPrintEmptyValues</options>
           </Item>
 
           <Item name="Fetus6::Fetal::Vitality::Fetal::Movement::Comment" type="shorttext">
