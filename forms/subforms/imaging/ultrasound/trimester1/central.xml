@@ -85,7 +85,7 @@
           <numerical id="1">1</numerical>
         </value>
         <script>
-          <onload>namespace.com.freemedforms.imaging.ultrasound.trimester1.setLmp();</onload>
+          <onload>namespace.com.freemedforms.imaging.ultrasound.trimester1.trimester1_setLmp();</onload>
           <onValueChanged>namespace.com.freemedforms.imaging.ultrasound.trimester1.trimester1_setLmp();</onValueChanged>
         </script>
       </Item>

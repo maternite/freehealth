@@ -5,10 +5,10 @@
 
   <formdescription>
     <authors>Jérôme Pinguet</authors>
-    <version>1.0</version>
+    <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-10-01</cdate>
-    <lmdate>2015-11-17</lmdate>
+    <lmdate>2015-12-06</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -31,10 +31,12 @@
   <MedForm name="Maternity::Imaging::Ultrasound::Trimester2" uifilename="./ui/xx/trimester2.ui">
     <label lang="xx">Second Trimester Ultrasound</label>
     <label lang="fr">Échographie du 2ème trimestre</label>
-    <options>UseFormAsNameSpace</options>
+    <options>UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
 <!--
-    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
+    <file type="htmlprintmask">./html/xx/printmask.html</file>
+-->
+<!--
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 -->
   <Item type="group" name="ObstetricalCalendar">
@@ -75,7 +77,7 @@
         </value>
       </Item>
 
-      <Item type="check" name="Trimester2::ObstetricalCalendar::UseLMP::Check">
+      <Item type="check" name="ObstetricalCalendar::UseLMP::Check">
         <uilink widget="useLmpCheck"/>
         <options>DontPrintEmptyValues;OnLeft</options>
         <label lang="xx">LMP</label>
@@ -85,12 +87,12 @@
           <numerical id="1">1</numerical>
         </value>
         <script>
-          <onload>namespace.com.freemedforms.imaging.ultrasound.trimester2.setLmp();</onload>
+          <onload>namespace.com.freemedforms.imaging.ultrasound.trimester2.trimester2_setLmp();</onload>
           <onValueChanged>namespace.com.freemedforms.imaging.ultrasound.trimester2.trimester2_setLmp();</onValueChanged>
         </script>
       </Item>
 
-      <Item type="check" name="Trimester2::ObstetricalCalendar::UseConceptionDate::Check">
+      <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">
         <uilink widget="useDateOfConceptionCheck"/>
         <options>DontPrintEmptyValues;OnLeft</options>
         <label lang="xx">Conception date (only in case of ART or IUI)</label>
@@ -172,6 +174,11 @@
           <tooltip lang="fr"></tooltip>
           <options>DontPrintEmptyValues;readonly;html</options>
       </Item>
+    
+      <Item type="shorttext" name="ObstetricalCalendar::Edd::ShortText">
+        <uilink widget="eddValueLineEdit"/>
+        <options>DontPrintEmptValues;html</options>
+      </Item>    
 
       <Item type="date" name="ObstetricalCalendar::Edd::Ultrasound">
         <uilink label="eddUsLabel" layout="" widget="eddUsDateEdit"/>
@@ -1623,22 +1630,23 @@
 
       </Item> <!-- End Of Fetus1 Morphology GroupBox -->
 
-        <Item type="helptext" name="Fetus1::Gestational::Age:HelpText">
-          <uilink widget="fetus1UsGestationalAgeHelpTextLabel" />
+        <Item type="group" name="Fetus1::Gestational::Age:Group">
+          <uilink widget="fetus1GestationalAgeGroupBox" />
           <label lang="xx">Gestational age determined by ultrasound</label>
           <label lang="fr">Âge gestationnel déterminé par échographie</label>
-        </Item>
-
-        <Item type="spin" name="Fetus1::Gestational::Age::Week::SpinBox">
+          <options>DontPrintEmptyValues</options>
+        
+          <Item type="spin" name="Fetus1::Gestational::Age::Week::SpinBox">
             <uilink label="fetus1UsGestationalAgeWeekLabel" widget="fetus1UsGestationalAgeWeekSpinBox"/>
             <label lang="xx">Week(s)</label>
             <label lang="fr">semaine(s)</label>
-        </Item>
+          </Item>
 
-        <Item type="spin" name="Fetus1::Gestational::Age::Day::SpinBox">
+          <Item type="spin" name="Fetus1::Gestational::Age::Day::SpinBox">
             <uilink label="fetus1UsGestationalAgeDayLabel" widget="fetus1UsGestationalAgeDaySpinBox"/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
+          </Item>
         </Item>
 
       <Item type="group" name="Fetus1::Circulation::GroupBox">
@@ -1709,6 +1717,7 @@
             <label lang="fr"></label>
             <placeholder lang="xx">Comment</placeholder>
             <placeholder lang="fr">Commentaire</placeholder>
+            <options>DontPrintEmptyValues</options>
           </Item>
 
           <Item type="radio" name="Fetus1::Nuchal::Cord::radio">
