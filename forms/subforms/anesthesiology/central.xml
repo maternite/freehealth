@@ -29,7 +29,7 @@
   <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiologymain.ui">
     <label lang="xx">Preoperative anesthesia consultation</label>
     <label lang="fr">Consultation préanesthésique</label>
-    <options>UseFormAsNameSpace</options>
+    <options>UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>

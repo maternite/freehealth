@@ -34,7 +34,7 @@
   <MedForm name="Maternity::Pediatrics::Consultation" uifilename="./ui/xx/pediatrics.ui">
     <label lang="xx">Pediatrics form with biometrics</label>
     <label lang="fr">Formulaire pédiatrique avec biométrie</label>
-    <options>DontPrintEmptyValues;UseFormAsNameSpace</options>
+    <options>DontPrintEmptyValues;UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
     <file type="htmlprintmask">./html/xx/new_mask.html</file>
     <file type="htmlexportmask">./html/xx/new_mask.html</file>

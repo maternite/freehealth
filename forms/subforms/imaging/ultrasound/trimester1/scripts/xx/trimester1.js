@@ -165,8 +165,8 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
         trimester1_estimatedDueDate.setText(trimester1_empty);
         trimester1_currentWeeksAmenorrhoeaWeeksValue.setText(trimester1_empty);                     
         trimester1_currentWeeksAmenorrhoeaDaysValue.setText(trimester1_empty);
-        if (freemedforms.tools.dateToString(trimester1_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
-            print("inside trimester1_computeEstimatedDueDate()-> lmp=01/01/2000 -> return");
+        if (freemedforms.tools.dateToString(trimester1_lastMenstrualPeriodItem.currentValue, "dd MM yyyy") == "01 01 1900") {
+            print("inside trimester1_computeEstimatedDueDate()-> lmp=01/01/1900 -> return");
             return;
         }
         print("trimester1_computeEstimatedDueDate()");
@@ -183,8 +183,8 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester1', function (exp
         var trimester1_emptyGA = "";
         trimester1_currentWeeksAmenorrhoeaWeeksValue.setText(trimester1_emptyGA);                     
         trimester1_currentWeeksAmenorrhoeaDaysValue.setText(trimester1_emptyGA);
-        if (freemedforms.tools.dateToString(trimester1_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
-            print("inside trimester1_computeGestationalAge()-> lmp=01/01/2000 -> return");
+        if (freemedforms.tools.dateToString(trimester1_lastMenstrualPeriodItem.currentValue, "dd MM yyyy") == "01 01 1900") {
+            print("inside trimester1_computeGestationalAge()-> lmp=01/01/1900 -> return");
             return;                                                             
         }                                        
         print("computeGestationalAge()");
