@@ -5,10 +5,10 @@
 
 <formdescription>
 <authors>Jérôme Pinguet</authors>
-<version>1.0</version>
+<version>1.1</version>
 <fmfv>0.9.6</fmfv>
 <cdate>2015-09-29</cdate>
-<lmdate>2015-09-29</lmdate>
+<lmdate>2015-12-17</lmdate>
 <icon>__theme__stethoscope.png</icon>
 <weblink>https://github.com/maternite/freemedforms</weblink>
 <bibliograpy/>
@@ -26,10 +26,28 @@
 
 </formdescription>
 
+<fieldequivalence>
+    <equivalent old="Patient::Name" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Patient::Name" setInVersion=""/>
+    <equivalent old="Patient::DoB" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Patient::DoB" setInVersion=""/>
+    <equivalent old="Blood::Type::ABO" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Blood::Type::ABO" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::Rh::factor" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::Rh::factor" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::Label" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::Label" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::antigen::D" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::antigen::D" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::antigen::C" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::antigen::C" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::antigen::E" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::antigen::E" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::antigen::c" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::antigen::c" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::antigen::e" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::antigen::e" setInVersion=""/>
+    <equivalent old="Rh::Blood::Group::System::antigen::K" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Rh::Blood::Group::System::antigen::K" setInVersion=""/>
+    <equivalent old="Blood::Type::Identification::Delivered::By::Name" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Blood::Type::Identification::Delivered::By::Name" setInVersion="" />
+    <equivalent old="Blood::Type::Determination::Date::1" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Blood::Type::Determination::Date::1" setInVersion=""/>
+    <equivalent old="Blood::Type::Determination::Date::2" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Blood::Type::Determination::Date::2" setInVersion=""/>
+    <equivalent old="Blood::Type::Identification::Transcripted::By::Name" new="Maternity::Generic::Past::Medical::History::Blood::Type::Identification::Blood::Type::Identification::Transcripted::By::Name" setInVersion=""/>
+</fieldequivalence>
+
 <MedForm name="Maternity::Generic::Past::Medical::History::Blood::Type::Identification" uifilename="./ui/xx/bloodtype.ui">
   <label lang="xx">Blood type</label>
   <label lang="fr">Groupe sanguin</label>
-  <options>unique;HideHeaderOnUniqueEpisode;UseFormAsNameSpace</options>
+  <options>unique;HideHeaderOnUniqueEpisode;UseFormNameAsNameSpace</options>
   <icon>__theme__/stethoscope.png</icon>
 
   <Item type="shorttext" name="Patient::Name">
