@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jérôme Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.7</fmfv>
+    <cdate>2015-12-18</cdate>
+    <lmdate>2015-12-18</lmdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">Pelvic Ultrasound</description>
+    <description lang="fr">Échographie pelvienne</description>
+    <category lang="xx">Imaging</category>
+    <category lang="fr">Imagerie</category>
+    <specialties lang="xx">Gynecology</specialties>
+    <specialties lang="fr">Gynécologie</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <MedForm name="Maternity::Imaging::Ultrasound::Pelvic" uifilename="./ui/xx/pelvic.ui">
+    <label lang="xx">Pelvic Ultrasound</label>
+    <label lang="fr">Échographie pelvienne</label>
+    <options>UseFormNameAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+
+    <Item type="group" name="Subjective">
+      <uilink label="" widget="subjectiveGroupBox" layout="" />
+      <label lang="xx">Subjective</label>
+      <label lang="fr">Subjectif</label>
+      <options>DontPrintEmptyValues</options>
+
+      <Item type="texteditor" name="ClinicalData">
+        <uilink label="clinicalDataLabel" widget="" layout="clinicalDataFormLayout" />
+        <label lang="xx">Clinical data</label>
+        <label lang ="fr">Renseignements cliniques</label>
+        <options>FullEditor;DontPrintEmptyValues</options>
+      </Item>
+
+    </Item> <!-- end of Subjective group -->
+
+    <Item type="group" name="Device::GroupBox">
+      <uilink label="" widget="deviceGroupBox" />
+      <label lang="xx">Device</label>
+      <label lang="fr">Appareil</label>
+      <options>DontPrintEmptyValues</options>
+
+       <Item type="radio" name="Ultrasound::Device">
+          <uilink label="deviceLabel" widget="" layout="deviceRadioLayout"/>
+          <label lang="xx">Ultrasound Device</label>
+          <label lang="fr">Appareil d'échographie</label>
+          <tooltip lang="xx"></tooltip>
+          <tooltip lang="fr"></tooltip>
+          <value>
+            <uuid id="0">Not evaluated</uuid>
+            <uuid id="1">CHISON IVIS 60 Expert</uuid>
+            <uuid id="2">Other</uuid>
+            <possible id="0" lang="xx">∅</possible>
+            <possible id="1" lang="xx">CHISON IVIS 60 Expert</possible>
+            <possible id="2" lang="xx">Other:</possible>
+            <possible id="0" lang="fr">∅</possible>
+            <possible id="1" lang="fr">CHISON IVIS 60 Expert</possible>
+            <possible id="2" lang="fr">Autre:</possible>
+            <default>CHISON IVIS 60 Expert</default>
+          </value>
+          <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="shorttext" name="Ultrasound::Device::Other">
+          <uilink label="" widget="otherDeviceLineEdit" layout=""/>
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <placeholder lang="xx">Name of ultrasound device</placeholder>
+          <placeholder lang="fr">Nom de l'appareil d'échographie</placeholder>
+          <options>DontPrintEmptyValues</options>
+      </Item>
+
+    </Item> <!-- end of group Device -->
+
+    <Item type="group" name="Uterus::GroupBox">
+      <uilink label="" widget="uterusGroupBox" />
+      <label lang="xx">Uterus</label>
+      <label lang="fr">Uterus</label>
+      <options>DontPrintEmptyValues</options>
+
+      <Item type="uniquelist" name="Uterus::Position::UniqueList">
+        <uilink label="uterusPositionLabel" widget="uterusPositionListView"/>
+          <label lang="xx">Position</label>
+          <label lang="fr">Position</label>
+          <value>
+            <uuid id="0">Not done</uuid>
+            <uuid id="1">Anteverted</uuid>
+            <uuid id="2">Intermediary</uuid>
+            <uuid id="3">Retroverted</uuid>
+
+            <possible id="0" lang="xx">ø</possible>
+            <possible id="1" lang="xx">Anteverted</possible>
+            <possible id="2" lang="xx">Intermediary</possible>
+            <possible id="3" lang="xx">Retroverted</possible>
+
+            <possible id="0" lang="fr">ø</possible>
+            <possible id="1" lang="fr">Antéversé</possible>
+            <possible id="2" lang="fr">Intermédiaire</possible>
+            <possible id="3" lang="fr">Retroversé</possible>
+          </value>
+          <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="helptext" name="Uterus::Dimension::HelpText">
+        <uilink label="uterusDimensionLabel" />
+        <label lang="xx">Dimension</label>
+        <label lang="fr">Dimension</label>
+        <options>printable</options>
+      </Item>
+
+      <Item type="spin" name="Uterus::Length::Spin">
+        <uilink label="uterusLengthLabel" widget="uterusLengthSpinBox" layout="" />
+        <label lang="xx">Length</label>
+        <label lang="fr">Longueur</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="spin" name="Uterus::Height::Spin">
+        <uilink label="uterusHeightLabel" widget="uterusHeightSpinBox" layout="" />
+        <label lang="xx">Height</label>
+        <label lang="fr">Hauteur</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="spin" name="Uterus::Thickness::Spin">
+        <uilink label="uterusThicknessLabel" widget="uterusThicknessSpinBox" layout="" />
+        <label lang="xx">Thickness</label>
+        <label lang="fr">Épaisseur</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="radio" name="Uterus::Contour::Radio">
+        <uilink label="uterusContourLabel" layout="uterusContourRadioLayout"/>
+        <label lang="xx">Contour</label>
+        <label lang="fr">Contour</label>
+        <value>
+        <uuid id="0">Not done</uuid>
+        <uuid id="1">Regular</uuid>
+        <uuid id="2">Irregular</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">Regular</possible>
+        <possible id="2" lang="xx">Irregular</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Régulier</possible>
+        <possible id="2" lang="fr">Irrégulier</possible>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="radio" name="Uterus::Myometrium::Radio">
+        <uilink label="uterusMyometriumLabel" layout="uterusMyometriumRadioLayout"/>
+        <label lang="xx">Myometrium</label>
+        <label lang="fr">Myomètre</label>
+        <value>
+        <uuid id="0">Not done</uuid>
+        <uuid id="1">Homogeneous</uuid>
+        <uuid id="2">Heterogeneous</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">Homogeneous</possible>
+        <possible id="2" lang="xx">Heterogeneous</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Homogène</possible>
+        <possible id="2" lang="fr">Hétérogène</possible>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+    </Item> <!-- end of group uterus -->
+
+    <Item type="group" name="Ovaries::GroupBox">
+      <uilink label="" widget="ovariesGroupBox" />
+      <label lang="xx">Ovaries</label>
+      <label lang="fr">Ovaires</label>
+      <options>DontPrintEmptyValues</options>
+
+      <Item type="group" name="Right::Ovary::GroupBox">
+        <uilink label="" widget="rightOvaryGroupBox" />
+        <label lang="xx">Right ovary</label>
+        <label lang="fr">Ovaire droit</label>
+        <options>DontPrintEmptyValues</options>
+
+        <Item type="helptext" name="Right::Ovary::Dimension::HelpText">
+        <uilink label="rightOvaryDimensionLabel" />
+        <label lang="xx">Dimension</label>
+        <label lang="fr">Dimension</label>
+        <options>printable</options>
+      </Item>
+
+      <Item type="spin" name="Right::Ovary::Length::Spin">
+        <uilink label="rightOvaryLengthLabel" widget="rightOvaryLengthSpinBox" layout="" />
+        <label lang="xx">Length</label>
+        <label lang="fr">Longueur</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="spin" name="Right::Ovary::Height::Spin">
+        <uilink label="rightOvaryHeightLabel" widget="rightOvaryHeightSpinBox" layout="" />
+        <label lang="xx">Height</label>
+        <label lang="fr">Hauteur</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="spin" name="Right::Ovary::Width::Spin">
+        <uilink label="rightOvaryWidthLabel" widget="rightOvaryWidthSpinBox" layout="" />
+        <label lang="xx">Width</label>
+        <label lang="fr">Largeur</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="shorttext" name="Right::Ovary::Echotexture">
+        <uilink label="rightOvaryEchotextureLabel" widget="rightOvaryEchotextureLineEdit" layout=""/>
+        <label lang="xx">Echotexture</label>
+        <label lang="fr">Échostructure</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="shorttext" name="Right::Ovary::Follicles">
+        <uilink label="rightOvaryFolliclesLabel" widget="rightOvaryFolliclesLineEdit" layout=""/>
+        <label lang="xx">Follicles</label>
+        <label lang="fr">Follicules</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      </Item> <!-- end of right ovary group -->
+
+      <Item type="group" name="Left::Ovary::GroupBox">
+        <uilink label="" widget="leftOvaryGroupBox" />
+        <label lang="xx">Left ovary</label>
+        <label lang="fr">Ovaire gauche</label>
+        <options>DontPrintEmptyValues</options>
+
+        <Item type="helptext" name="Left::Ovary::Dimension::HelpText">
+          <uilink label="leftOvaryDimensionLabel" />
+          <label lang="xx">Dimension</label>
+          <label lang="fr">Dimension</label>
+          <options>printable</options>
+        </Item>
+
+        <Item type="spin" name="Left::Ovary::Length::Spin">
+          <uilink label="leftOvaryLengthLabel" widget="leftOvaryLengthSpinBox" layout="" />
+          <label lang="xx">Length</label>
+          <label lang="fr">Longueur</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="spin" name="Left::Ovary::Height::Spin">
+          <uilink label="leftOvaryHeightLabel" widget="leftOvaryHeightSpinBox" layout="" />
+          <label lang="xx">Height</label>
+          <label lang="fr">Hauteur</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="spin" name="Left::Ovary::Width::Spin">
+          <uilink label="leftOvaryWidthLabel" widget="leftOvaryWidthSpinBox" layout="" />
+          <label lang="xx">Width</label>
+          <label lang="fr">Largeur</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="shorttext" name="Left::Ovary::Echotexture">
+          <uilink label="leftOvaryEchotextureLabel" widget="leftOvaryEchotextureLineEdit" layout=""/>
+          <label lang="xx">Echotexture</label>
+          <label lang="fr">Échostructure</label>
+          <placeholder lang="xx"></placeholder>
+          <placeholder lang="fr"></placeholder>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="shorttext" name="Left::Ovary::Follicles">
+          <uilink label="leftOvaryFolliclesLabel" widget="leftOvaryFolliclesLineEdit" layout=""/>
+          <label lang="xx">Follicles</label>
+          <label lang="fr">Follicules</label>
+          <placeholder lang="xx"></placeholder>
+          <placeholder lang="fr"></placeholder>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+      </Item> <!-- end of left ovary group -->
+
+    </Item> <!-- end of ovary group -->
+
+    <Item type="group" name="Adnexa::Group">
+      <uilink label="" widget="adnexaGroupBox" layout="" />
+      <label lang="xx">Other adnexa of uterus</label>
+      <label lang="fr">Autres structures annexielles</label>
+      <options>DontPrintEmptyValues</options>
+
+      <Item type="texteditor" name="Adnexa::TextEditor">
+        <uilink layout="adnexaFormLayout" />
+        <label lang="xx"></label>
+        <label lang ="fr"></label>
+        <options>FullEditor;DontPrintEmptyValues</options>
+      </Item>
+
+    </Item> <!-- end of Adnexa group -->
+
+    <Item type="group" name="Recto::Uterine::Pouch::Group">
+      <uilink label="" widget="rectoUterinePouchGroupBox" layout="" />
+      <label lang="xx">Recto-uterine pouch</label>
+      <label lang="fr">Cul-de-sac de Douglas</label>
+      <options>DontPrintEmptyValues</options>
+
+      <Item type="radio" name="Recto::Uterine::Pouch::Radio">
+        <uilink label="rectoUterinePouchLabel" layout="rectoUterinePouchRadioLayout"/>
+        <label lang="xx">Presence of free fluid</label>
+        <label lang="fr">Épanchement</label>
+        <value>
+        <uuid id="0">Not done</uuid>
+        <uuid id="1">Yes</uuid>
+        <uuid id="2">No</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">Yes</possible>
+        <possible id="2" lang="xx">No</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Oui</possible>
+        <possible id="2" lang="fr">Non</possible>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="shorttext" name="Recto::Uterine::Pouch::ShortText">
+          <uilink widget="rectoUterinePouchLineEdit" layout=""/>
+          <placeholder lang="xx">Comments</placeholder>
+          <placeholder lang="fr">Commentaires</placeholder>
+          <options>DontPrintEmptyValues</options>
+      </Item>
+
+    </Item> <!-- end of rectoUterinePouch group -->
+
+    <Item type="group" name="Impression::Group">
+      <uilink label="" widget="impressionGroupBox" layout="" />
+      <label lang="xx">Impression</label>
+      <label lang="fr">Conclusion</label>
+      <options>DontPrintEmptyValues</options>
+
+      <Item type="radio" name="Impression::Radio">
+        <uilink label="impressionLabel" layout="impressionRadioLayout"/>
+        <label lang="fr">Échographie pelvienne</label>
+        <label lang="xx">Pelvic ultrasound</label>
+        <value>
+        <uuid id="0">Not done</uuid>
+        <uuid id="1">Normal</uuid>
+        <uuid id="2">Abnormal</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">normal</possible>
+        <possible id="2" lang="xx">abnormal</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">normale</possible>
+        <possible id="2" lang="fr">anormale</possible>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="texteditor" name="Impression::TextEdit">
+        <uilink widget="" layout="impressionFormLayout" />
+        <label lang="xx">Clinical data</label>
+        <label lang ="fr">Renseignements cliniques</label>
+        <options>FullEditor;DontPrintEmptyValues</options>
+      </Item>
+   
+    </Item> <!-- end of group Impression -->
+
+  </MedForm>
+
+</FreeMedForms>

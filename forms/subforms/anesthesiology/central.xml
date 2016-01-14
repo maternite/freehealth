@@ -469,7 +469,7 @@
             <possible id="5" lang="fr">Degré 5: Trop essoufflé pour quitter la maison, ou dyspnée lors de l’habillement.</possible>
           </value>
         </Item>
- 
+
         <Item type="combo" name="Assessment::Score::ASA::Physical::Status::Classification::System::Combo">
           <uilink label="asaClassificationLabel" widget="asaClassificationCombo" layout=""/>
           <label lang="xx">ASA</label>
@@ -509,7 +509,7 @@
       <label lang="fr">Plan: prescription</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="Plan::Preoperative::Fasting">
+        <Item type="texteditor" name="Plan::Preoperative::Fasting::Texteditor">
           <uilink label="preoperativeFastingLabel" layout="preoperativeFastingTextEditLayout"/>
           <label lang="xx">Preoperative fasting</label>
           <label lang="fr">Jeûne pré-opératoire</label>
@@ -517,7 +517,7 @@
           <papers>Prescription</papers>
         </Item>
 
-        <Item type="texteditor" name="Plan::Preoperative::Prescription">
+        <Item type="texteditor" name="Plan::Preoperative::Prescription::Texteditor">
           <uilink label="preoperativePrescriptionLabel" layout="preoperativePrescriptionTextEditLayout"/>
           <label lang="xx">Preoperative prescription</label>
           <label lang="fr">Prescription pré-opératoire</label>
@@ -525,7 +525,7 @@
           <papers>Prescription</papers>
         </Item>
 
-        <Item type="texteditor" name="Plan::Premedication">
+        <Item type="texteditor" name="Plan::Premedication::Texteditor">
           <uilink label="premedicationLabel" layout="premedicationTextEditLayout"/>
           <label lang="xx">Premedication</label>
           <label lang="fr">Prémedication</label>
@@ -533,7 +533,7 @@
           <papers>Prescription</papers>
         </Item>
 
-        <Item type="texteditor" name="Plan::Antibiotic::Prophylaxis">
+        <Item type="texteditor" name="Plan::Antibiotic::Prophylaxis::Texteditor">
           <uilink label="antibioticProphylaxisLabel" layout="antibioticProphylaxisTextEditLayout"/>
           <label lang="xx">Preoperative fasting</label>
           <label lang="fr">Jeûne pré-opératoire</label>
@@ -580,8 +580,84 @@
           <options>compact</options>
         </Item>
 
+        <Item type="group" name="Plan::Anesthesia::Protocol::Group">
+          <uilink label="" widget="anesthesiaProtocolGroupBox"/>
+          <label lang="xx">Anesthesia protocol</label>
+          <label lang="fr">Protocole d'anesthésie</label>
+          <options>DontPrintEmptyValues</options>
 
+          <Item type="group" name="Plan::Anesthesia::Protocol::General::Anesthesia::Group">
+            <uilink label="" widget="generalAnesthesiaGroupBox"/>
+            <label lang="xx">General anesthesia</label>
+            <label lang="fr">Anesthésie générale</label>
+            <options>DontPrintEmptyValues;collapsible</options>
 
+            <Item type="radio" name="Plan::Anesthesia::Protocol::General::Anesthesia::Intubation::Radio">
+              <uilink label="intubationLabel" layout="intubationRadioLayout"/>
+              <label lang="xx">Intubation</label>
+              <label lang="fr">Intubation</label>
+              <value>
+                <uuid id="0">Not evaluated</uuid>
+                <uuid id="1">Yes</uuid>
+                <uuid id="2">No</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Yes</possible>
+                <possible id="2" lang="xx">No</possible>
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Oui</possible>
+                <possible id="2" lang="fr">Non</possible>
+              </value>
+              <options>compact;DontPrintEmptyValues</options>
+            </Item>
+
+          </Item> <!-- end of group Plan::Anesthesia::Protocol::General::Anesthesia::Group -->
+
+          <Item type="group" name="Plan::Anesthesia::Protocol::Locoregional::Anesthesia::Group">
+            <uilink label="" widget="locoregionalAnesthesiaGroupBox"/>
+            <label lang="xx">Locoregional anesthesia</label>
+            <label lang="fr">Anesthésie locorégionale</label>
+            <options>DontPrintEmptyValues;collapsible</options>
+
+            <Item type="radio" name="Plan::Anesthesia::Protocol::Locoregional::Anesthesia::Neuroleptanalgesia::Radio">
+              <uilink label="neuroleptanalgesiaLabel" layout="neuroleptanalgesiaRadioLayout"/>
+              <label lang="xx">Neuroleptanalgesia</label>
+              <label lang="fr">Neuroleptanalgésie</label>
+              <value>
+                <uuid id="0">Not evaluated</uuid>
+                <uuid id="1">Yes</uuid>
+                <uuid id="2">No</uuid>
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Yes</possible>
+                <possible id="2" lang="xx">No</possible>
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Oui</possible>
+                <possible id="2" lang="fr">Non</possible>
+              </value>
+              <options>compact;DontPrintEmptyValues</options>
+            </Item>
+
+          </Item> <!-- end of group Plan::Anesthesia::Protocol::Locoregional::Anesthesia::Group -->
+
+          <Item name="Plan::Anesthesia::Protocol::Local::Anesthesia::Check" type="check">
+            <uilink widget="localAnesthesiaCheckBox"/>
+            <label lang="xx">Local anesthesia</label>
+            <label lang="fr">Anesthésie locale</label>
+            <options>printonlychecked</options>
+            <value>
+            <numerical id="0">0</numerical>
+            <numerical id="1">1</numerical>
+            </value>
+          </Item>
+
+        </Item> <!-- end of group Plan::Anesthesia::Protocol::Group -->
+
+        <Item type="texteditor" name="Plan::Anesthesia::Protocol::Postoperative::Analgesia::Texteditor">           
+          <uilink label="postoperativeAnalgesiaLabel" layout="postoperativeAnalgesiaTextEditLayout"/>
+          <label lang="xx">Postoperative analgesia</label>                         
+          <label lang="fr">Protocole analgésique post-opératoire</label>                         
+          <options>DontPrintEmptyValues</options>                               
+          <papers>Prescription</papers>                                         
+        </Item>
 
     </Item> <!-- end of group Plan::Group -->
 

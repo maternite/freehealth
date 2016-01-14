@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_6">
+  <layout class="QVBoxLayout" name="verticalLayout_7">
    <item>
     <widget class="QGroupBox" name="airwayAssessmentEvaluationGroupBox">
      <property name="sizePolicy">
@@ -524,7 +524,7 @@
      <property name="title">
       <string>plan</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
+     <layout class="QVBoxLayout" name="verticalLayout_6">
       <item>
        <widget class="QLabel" name="preoperativeFastingLabel">
         <property name="text">
@@ -618,6 +618,96 @@
          </spacer>
         </item>
        </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="anesthesiaProtocolGroupBox">
+        <property name="title">
+         <string>anesthesia protocol</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QGroupBox" name="generalAnesthesiaGroupBox">
+           <property name="title">
+            <string>general anesthesia</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <widget class="QLabel" name="intubationLabel">
+              <property name="text">
+               <string>intubation</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="intubationRadioLayout"/>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>321</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="locoregionalAnesthesiaGroupBox">
+           <property name="title">
+            <string>locoregional anesthesia</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <item>
+             <widget class="QLabel" name="neuroleptanalgesiaLabel">
+              <property name="text">
+               <string>neuroleptanalgesia</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="neuroleptanalgesiaRadioLayout"/>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="localAnesthesiaCheckBox">
+           <property name="text">
+            <string>local anesthesia</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="postoperativeAnalgesiaLabel">
+        <property name="text">
+         <string>postoperative analgesia</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="postoperativeAnalgesiaTextEditLayout"/>
       </item>
      </layout>
     </widget>
