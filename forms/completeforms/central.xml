@@ -6,10 +6,10 @@
 <formdescription>
     <!-- Non translatable values -->
     <authors>Eric Maeker, MD</authors>
-    <version>test</version>
-    <fmfv>0.9.6</fmfv>
+    <version>1.0</version>
+    <fmfv>0.9.7</fmfv>
     <cdate>2015-08-24</cdate>
-    <lmdate>2015-09-04</lmdate>
+    <lmdate>2016-01-07</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink></weblink>
     <bibliography/>
@@ -137,6 +137,30 @@
     </MedForm>                        
 
 </MedForm> <!-- end of Imaging -->
+
+<MedForm name="Maternity::Anesthesiology">                                          
+  <label lang="xx">Anesthesiology</label>                                           
+  <label lang="fr">Anesthésie</label>                                          
+  <icon>__theme__/stethoscope.png</icon>                                        
+  <options>NoEpisode;DontPrintEmptyValues</options>                             
+                                                                                
+  <MedForm name="Maternity::Anesthesiology::Consultation">                          
+    <label lang="xx">Consultations</label>                                      
+    <label lang="fr">Consultations</label>                                      
+    <icon>__theme__/stethoscope.png</icon>                                      
+    <options>NoEpisode;DontPrintEmptyValues</options>                           
+    <file>__subForms__/anesthesiology/central.xml</file>                   
+  </MedForm>                                                                    
+<!--                                                                                
+  <MedForm name="Maternity::Anesthesiology::Prescription">                          
+    <label lang="xx">Prescriptions</label>                                      
+    <label lang="en">Prescriptions</label>                                      
+    <icon>__theme__/stethoscope.png</icon>                                      
+    <options>NoEpisode;DontPrintEmptyValues</options>                           
+    <file>__subForms__/obstetrics/prescription/central.xml</file>               
+  </MedForm>                                                                    
+-->
+</MedForm>
 
 <MedForm name="Maternity::Obstetrics">
   <label lang="xx">Obstetrics</label>

@@ -44,7 +44,7 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester2', function (exp
         trimester2_defaultHideFetusGroupBox();
 
         // obstetrical calendar
-        defaultDate = "01011900"
+        defaultDate = "01011900";
         trimester2_lastMenstrualPeriodUi = trimester2_formUi.findChild("lastMenstrualPeriodDateEdit");
         trimester2_lastMenstrualPeriodItem = freemedforms.forms.item("Maternity::Imaging::Ultrasound::Trimester2::Trimester2::ObstetricalCalendar::LastMenstrualPeriod");
         trimester2_conceptionDateUi = trimester2_formUi.findChild("conceptionDateDateEdit");

@@ -5,10 +5,10 @@
 
   <formdescription>
     <authors>Jérôme Pinguet</authors>
-    <version>test</version>
+    <version>1.0</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-10-01</cdate>
-    <lmdate>2015-12-06</lmdate>
+    <lmdate>2015-12-18</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -43,7 +43,7 @@
     <uilink label="" widget="obstetricalCalendarGroupBox" layout="" />
     <label lang="xx">Obstetrical calendar</label>
     <label lang="fr">Calendrier obstétrical</label>
-    <options>collapsible;expanded</options>
+    <options>collapsible;expanded;DontPrintEmptyValues</options>
 
       <Item type="date" name="Trimester2::ObstetricalCalendar::LastMenstrualPeriod">
         <uilink label="lastMenstrualPeriodLabel" layout="" widget="lastMenstrualPeriodDateEdit"/>
@@ -79,7 +79,7 @@
 
       <Item type="check" name="ObstetricalCalendar::UseLMP::Check">
         <uilink widget="useLmpCheck"/>
-        <options>DontPrintEmptyValues;OnLeft</options>
+        <options>DontPrintEmptyValues;OnLeft;printonlychecked</options>
         <label lang="xx">LMP</label>
         <label lang="fr">DDR</label>
         <value>
@@ -94,7 +94,7 @@
 
       <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">
         <uilink widget="useDateOfConceptionCheck"/>
-        <options>DontPrintEmptyValues;OnLeft</options>
+        <options>DontPrintEmptyValues;OnLeft;printonlychecked</options>
         <label lang="xx">Conception date (only in case of ART or IUI)</label>
         <label lang="fr">Date de conception (uniquement en cas de procréation médicalement assistée)</label>
         <value>
@@ -147,9 +147,6 @@
         <label lang="xx">Gestational age in weeks of amenorrhoea</label>
         <label lang="fr">Âge gestationnel en semaines d'aménorrhée</label>
         <options>printable</options>
-        <value>
-          <default>The default value</default>
-        </value>
       </Item>
 
       <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText">
@@ -177,7 +174,7 @@
     
       <Item type="shorttext" name="ObstetricalCalendar::Edd::ShortText">
         <uilink widget="eddValueLineEdit"/>
-        <options>DontPrintEmptValues;html</options>
+        <options>DontPrintEmptyValues;html</options>
       </Item>    
 
       <Item type="date" name="ObstetricalCalendar::Edd::Ultrasound">
@@ -193,7 +190,7 @@
     <uilink label="" widget="subjectiveGroupBox" layout="" />
     <label lang="xx">Subjective</label>
     <label lang="fr">Subjectif</label>
-    <options>collapsible;expanded</options>
+    <options>collapsible;expanded;DontPrintEmptyValues</options>
 
     <Item type="texteditor" name="ClinicalData">
       <uilink label="clinicalDataLabel" widget="" layout="clinicalDataFormLayout" />
@@ -209,7 +206,7 @@
       <uilink label="" widget="deviceGroupBox" />
       <label lang="xx">Device</label>
       <label lang="fr">Appareil</label>
-      <options>collapsible;expanded</options>
+      <options>collapsible;expanded;DontPrintEmptyValues</options>
 
        <Item type="radio" name="Ultrasound::Device">
           <uilink label="deviceLabel" widget="" layout="deviceRadioLayout"/>
@@ -248,7 +245,7 @@
       <uilink label="" widget="uterusGroupBox" layout="" />
       <label lang="xx">Uterus</label>
       <label lang="fr">Uterus</label>
-      <options>collapsible;expanded</options>
+      <options>collapsible;expanded;DontPrintEmptyValues</options>
 
           <Item type="radio" name="Uterus::Placenta::Grade::Radio">
             <uilink label="placentalGradingLabel" widget="" layout="placentalGradingRadioLayout"/>
@@ -330,7 +327,7 @@
             <uilink label="placentaCervixDistanceLabel" widget="placentaCervixDistanceDoubleSpinBox" />
             <label lang="xx">Placenta - cervical os distance</label>
             <label lang="fr">Distance placenta - orifice interne du col</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
           </Item>
 
           <Item type="shorttext" name="Uterus::Placenta::Cervix::Distance::Comment::shorttext">
@@ -1630,7 +1627,7 @@
 
       </Item> <!-- End Of Fetus1 Morphology GroupBox -->
 
-        <Item type="group" name="Fetus1::Gestational::Age:Group">
+        <Item type="group" name="Fetus1::Gestational::Age::Group">
           <uilink widget="fetus1GestationalAgeGroupBox" />
           <label lang="xx">Gestational age determined by ultrasound</label>
           <label lang="fr">Âge gestationnel déterminé par échographie</label>
@@ -1841,7 +1838,7 @@
         <uilink widget="fetus2GroupBox"/>
         <label lang="xx">Fetus 2</label>
         <label lang="fr">Fœtus 2</label>
-        <options>DontPrintEmptyValues;collapsible</options>
+        <options>DontPrintEmptyValues;collapsible;expanded</options>
 
         <Item type="group" name="Fetus2PresentationPositionGroupBox">
           <uilink widget="fetus2PresentationPositionGroupBox"/>
@@ -3088,25 +3085,26 @@
 
       </Item> <!-- End Of Fetus2 Morphology GroupBox -->
 
-        <Item type="helptext" name="Fetus2::Gestational::Age:HelpText">
-          <uilink widget="fetus2UsGestationalAgeHelpTextLabel" />
+        <Item type="group" name="Fetus2::Gestational::Age::Group">
+          <uilink widget="fetus2GestationalAgeGroupBox" />
           <label lang="xx">Gestational age determined by ultrasound</label>
           <label lang="fr">Âge gestationnel déterminé par échographie</label>
           <options>DontPrintEmptyValues</options>
-        </Item>
 
-        <Item type="spin" name="Fetus2::Gestational::Age::Week::SpinBox">
+          <Item type="spin" name="Fetus2::Gestational::Age::Week::SpinBox">
             <uilink label="fetus2UsGestationalAgeWeekLabel" widget="fetus2UsGestationalAgeWeekSpinBox"/>
             <label lang="xx">Week(s)</label>
             <label lang="fr">semaine(s)</label>
             <options>DontPrintEmptyValues</options>
-        </Item>
+          </Item>
 
-        <Item type="spin" name="Fetus2::Gestational::Age::Day::SpinBox">
+          <Item type="spin" name="Fetus2::Gestational::Age::Day::SpinBox">
             <uilink label="fetus2UsGestationalAgeDayLabel" widget="fetus2UsGestationalAgeDaySpinBox"/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
             <options>DontPrintEmptyValues</options>
+          </Item>
+
         </Item>
 
       <Item type="group" name="Fetus2::Circulation::GroupBox">
@@ -4548,24 +4546,26 @@
 
       </Item> <!-- End Of Fetus3 Morphology GroupBox -->
 
-        <Item type="helptext" name="Fetus3::Gestational::Age:HelpText">
-          <uilink widget="fetus3UsGestationalAgeHelpTextLabel" />
+        <Item type="group" name="Fetus3::Gestational::Age::Group">
+          <uilink widget="fetus3GestationalAgeGroupBox" />
           <label lang="xx">Gestational age determined by ultrasound</label>
           <label lang="fr">Âge gestationnel déterminé par échographie</label>
-        </Item>
+          <options>DontPrintEmptyValues</options>
 
-        <Item type="spin" name="Fetus3::Gestational::Age::Week::SpinBox">
+          <Item type="spin" name="Fetus3::Gestational::Age::Week::SpinBox">
             <uilink label="fetus3UsGestationalAgeWeekLabel" widget="fetus3UsGestationalAgeWeekSpinBox"/>
             <label lang="xx">Week(s)</label>
             <label lang="fr">semaine(s)</label>
             <options>DontPrintEmptyValues</options>
-        </Item>
+          </Item>
 
-        <Item type="spin" name="Fetus3::Gestational::Age::Day::SpinBox">
+          <Item type="spin" name="Fetus3::Gestational::Age::Day::SpinBox">
             <uilink label="fetus3UsGestationalAgeDayLabel" widget="fetus3UsGestationalAgeDaySpinBox"/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
             <options>DontPrintEmptyValues</options>
+          </Item>
+
         </Item>
 
       <Item type="group" name="Fetus3::Circulation::GroupBox">
@@ -6007,24 +6007,26 @@
 
       </Item> <!-- End Of Fetus4 Morphology GroupBox -->
 
-        <Item type="helptext" name="Fetus4::Gestational::Age:HelpText">
-          <uilink widget="fetus4UsGestationalAgeHelpTextLabel" />
+        <Item type="group" name="Fetus4::Gestational::Age::Group">
+          <uilink widget="fetus4GestationalAgeGroupBox" />
           <label lang="xx">Gestational age determined by ultrasound</label>
           <label lang="fr">Âge gestationnel déterminé par échographie</label>
-        </Item>
+          <options>DontPrintEmptyValues</options>
 
-        <Item type="spin" name="Fetus4::Gestational::Age::Week::SpinBox">
+          <Item type="spin" name="Fetus4::Gestational::Age::Week::SpinBox">
             <uilink label="fetus4UsGestationalAgeWeekLabel" widget="fetus4UsGestationalAgeWeekSpinBox"/>
             <label lang="xx">Week(s)</label>
             <label lang="fr">semaine(s)</label>
             <options>DontPrintEmptyValues</options>
-        </Item>
+          </Item>
 
-        <Item type="spin" name="Fetus4::Gestational::Age::Day::SpinBox">
+          <Item type="spin" name="Fetus4::Gestational::Age::Day::SpinBox">
             <uilink label="fetus4UsGestationalAgeDayLabel" widget="fetus4UsGestationalAgeDaySpinBox"/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
             <options>DontPrintEmptyValues</options>
+          </Item>
+
         </Item>
 
       <Item type="group" name="Fetus4::Circulation::GroupBox">
@@ -7466,24 +7468,26 @@
 
       </Item> <!-- End Of Fetus5 Morphology GroupBox -->
 
-        <Item type="helptext" name="Fetus5::Gestational::Age:HelpText">
-          <uilink widget="fetus5UsGestationalAgeHelpTextLabel" />
+        <Item type="group" name="Fetus5::Gestational::Age::Group">
+          <uilink widget="fetus5GestationalAgeGroupBox" />
           <label lang="xx">Gestational age determined by ultrasound</label>
           <label lang="fr">Âge gestationnel déterminé par échographie</label>
-        </Item>
+          <options>DontPrintEmptyValues</options>
 
-        <Item type="spin" name="Fetus5::Gestational::Age::Week::SpinBox">
+          <Item type="spin" name="Fetus5::Gestational::Age::Week::SpinBox">
             <uilink label="fetus5UsGestationalAgeWeekLabel" widget="fetus5UsGestationalAgeWeekSpinBox"/>
             <label lang="xx">Week(s)</label>
             <label lang="fr">semaine(s)</label>
             <options>DontPrintEmptyValues</options> 
-        </Item>
+          </Item>
 
-        <Item type="spin" name="Fetus5::Gestational::Age::Day::SpinBox">
+          <Item type="spin" name="Fetus5::Gestational::Age::Day::SpinBox">
             <uilink label="fetus5UsGestationalAgeDayLabel" widget="fetus5UsGestationalAgeDaySpinBox"/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
             <options>DontPrintEmptyValues</options> 
+          </Item>
+
         </Item>
 
       <Item type="group" name="Fetus5::Circulation::GroupBox">
@@ -8925,25 +8929,27 @@
 
       </Item> <!-- End Of Fetus6 Morphology GroupBox -->
 
-        <Item type="helptext" name="Fetus6::Gestational::Age:HelpText">
-          <uilink widget="fetus6UsGestationalAgeHelpTextLabel" />
+        <Item type="group" name="Fetus6::Gestational::Age::Group">
+          <uilink widget="fetus6GestationalAgeGroupBox" />
           <label lang="xx">Gestational age determined by ultrasound</label>
           <label lang="fr">Âge gestationnel déterminé par échographie</label>
-        </Item>
+          <options>DontPrintEmptyValues</options>
 
-        <Item type="spin" name="Fetus6::Gestational::Age::Week::SpinBox">
+          <Item type="spin" name="Fetus6::Gestational::Age::Week::SpinBox">
             <uilink label="fetus6UsGestationalAgeWeekLabel" widget="fetus6UsGestationalAgeWeekSpinBox"/>
             <label lang="xx">Week(s)</label>
             <label lang="fr">semaine(s)</label>
             <options>DontPrintEmptyValues</options> 
-        </Item>
+          </Item>
 
-        <Item type="spin" name="Fetus6::Gestational::Age::Day::SpinBox">
+          <Item type="spin" name="Fetus6::Gestational::Age::Day::SpinBox">
             <uilink label="fetus6UsGestationalAgeDayLabel" widget="fetus6UsGestationalAgeDaySpinBox"/>
             <label lang="xx">Day(s)</label>
             <label lang="fr">jour(s)</label>
             <options>DontPrintEmptyValues</options> 
-        </Item>
+          </Item>
+
+      </Item>
 
       <Item type="group" name="Fetus6::Circulation::GroupBox">
         <uilink widget="fetus6CirculationGroupBox"/>

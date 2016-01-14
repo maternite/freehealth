@@ -8,7 +8,7 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-05-06</cdate>
-    <lmdate>2015-05-09</lmdate>
+    <lmdate>2016-01-08</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -26,155 +26,161 @@
 
   </formdescription>
 
-  <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiologymain.ui">
+  <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiology.ui">
     <label lang="xx">Preoperative anesthesia consultation</label>
     <label lang="fr">Consultation préanesthésique</label>
     <options>UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
-    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>              
+    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 
 <!--    <file>./airway.xml</file> -->
 
 <!-- Preoperative anesthesia consultation -->
 <!-- Airway assessment evaluation detailswidget  -->
-<Item type="detailswidget" name="AirwayAssessmentEvaluation" uifilename="./ui/xx/anesthesiologyairway.ui">
-  <uilink label="" widget="" layout="mainLayout"/>
+<Item type="group" name="Airway::Assessment::Evaluation::Group">
+  <uilink label="" widget="airwayAssessmentEvaluationGroupBox" layout=""/>
   <label lang="xx">Airway assessment evaluation</label>
   <label lang="fr">Evaluation des voies aériennes</label>
   <options>SummaryFontBold;expanded</options>
 
-    <Item type="combo" name="Airway::MallampatiScore">
+    <Item type="combo" name="Airway::Mallampati::Score::Combo">
       <uilink label="mallampatiScoreLabel" widget="mallampatiScoreCombo" layout=""/>
       <label lang="xx">Mallampati Score</label>
       <label lang="fr">Score de Mallampati</label>
       <value>
-        <uuid id="0">MallampatiClass1</uuid>
-        <uuid id="1">MallampatiClass2</uuid>
-        <uuid id="2">MallampatiClass3</uuid>
-        <uuid id="3">MallampatiClass4</uuid>
-        <possible id="0" lang="xx">Class I: Soft palate, uvula, fauces, pillars visible.</possible>
-        <possible id="1" lang="xx">Class II: Soft palate, uvula, fauces visible</possible>
-        <possible id="2" lang="xx">Class III: Soft palate, base of uvula visible</possible>
-        <possible id="3" lang="xx">Class IV: Only hard palate visible</possible>
-        <possible id="0" lang="fr">Classe 1 : toute la luette et les loges amygdaliennes sont visibles</possible>
-        <possible id="1" lang="fr">classe 2 : la luette est partiellement visible</possible>
-        <possible id="2" lang="fr">classe 3 : le palais membraneux est visible</possible>
-        <possible id="3" lang="fr">classe 4 : seul le palais osseux est visible</possible>
+        <uuid id="0">Not evaluated</uuid>
+        <uuid id="1">MallampatiClass1</uuid>
+        <uuid id="2">MallampatiClass2</uuid>
+        <uuid id="3">MallampatiClass3</uuid>
+        <uuid id="4">MallampatiClass4</uuid>
+        <possible id="0" lang="xx">∅</possible>
+        <possible id="1" lang="xx">Class I: Soft palate, uvula, fauces, pillars visible.</possible>
+        <possible id="2" lang="xx">Class II: Soft palate, uvula, fauces visible</possible>
+        <possible id="3" lang="xx">Class III: Soft palate, base of uvula visible</possible>
+        <possible id="4" lang="xx">Class IV: Only hard palate visible</possible>
+        <possible id="0" lang="fr">∅</possible>
+        <possible id="1" lang="fr">Classe 1 : toute la luette et les loges amygdaliennes sont visibles</possible>
+        <possible id="2" lang="fr">classe 2 : la luette est partiellement visible</possible>
+        <possible id="3" lang="fr">classe 3 : le palais membraneux est visible</possible>
+        <possible id="4" lang="fr">classe 4 : seul le palais osseux est visible</possible>
       </value>
     </Item>
-    
-    <Item type="shorttext" name="Airway::StateOfDentitionReview">
+
+    <Item type="shorttext" name="Airway::State::Of::Dentition::Review::Shorttext">
       <uilink label="stateOfDentitionReviewLabel" widget="stateOfDentitionReviewLineEdit" layout=""/>
       <label lang="xx">State of dentition review</label>
       <label lang="fr">État dentaire</label>
     </Item>
-    <Item type="group" name="IntraoralProsthesis">
+
+    <Item type="radio" name="Airway::History::Of::Difficult::Airway::Radio">
+      <uilink label="historyOfDifficultAirwayLabel" layout="historyOfDifficultAirwayLayout"/>
+      <label lang="xx">History of difficult airway</label>
+      <label lang="fr">Antécédent d'intubation difficile</label>
+        <value>
+          <uuid id="0">Not evaluated</uuid>
+          <uuid id="1">Yes</uuid>
+          <uuid id="2">No</uuid>
+          <possible id="0" lang="xx">ø</possible>
+          <possible id="1" lang="xx">Yes</possible>
+          <possible id="2" lang="xx">No</possible>
+          <possible id="0" lang="fr">ø</possible>
+          <possible id="1" lang="fr">Oui</possible>
+          <possible id="2" lang="fr">Non</possible>
+        </value>
+        <options>compact</options>
+    </Item>
+
+    <Item type="group" name="Intraoral::Prosthesis::Group">
       <uilink widget="intraoralProsthesisGroupBox"/>
       <label lang="xx">Intraoral prosthesis</label>
       <label lang="fr">Prothèse dentaire</label>
-       
-        <Item type="radio" name="IntraoralProsthesisPresence">
+
+        <Item type="radio" name="Intraoral::Prosthesis::Presence::Radio">
           <uilink label="intraoralProsthesisPresenceLabel" widget="" layout="intraoralProsthesisPresenceLayout"/>
           <label lang="xx">Presence of intraoral prosthesis</label>
           <label lang="fr">Présence d'une prothèse dentaire</label>
-          <value>                                                                   
-            <uuid id="0">IntraoralProsthesisYes</uuid>                                               
+          <value>
+            <uuid id="0">IntraoralProsthesisYes</uuid>
             <uuid id="1">IntraoralProsthesisNo</uuid>
             <possible id="0" lang="xx">Yes</possible>
             <possible id="1" lang="xx">No</possible>
             <possible id="0" lang="fr">Oui</possible>
             <possible id="1" lang="fr">Non</possible>
           </value>
+          <options>compact</options>
         </Item>
-        <Item type="radio" name="IntraoralProsthesisMobility">
-          <uilink label="intraoralProsthesisMobilityLabel" widget="" layout="intraoralProsthesisMobilityLayout"/>                  
-          <label lang="xx">Mobility</label>             
-          <label lang="fr">Mobilité</label>             
-          <value>                                                               
-            <uuid id="0">IntraoralProsthesisMobile</uuid>                          
-            <uuid id="1">IntraoralProsthesisFixed</uuid>                           
-            <possible id="0" lang="xx">Mobile</possible>                           
-            <possible id="1" lang="xx">Fixed</possible>                            
-            <possible id="0" lang="fr">Mobile</possible>                           
+        <Item type="radio" name="Intraoral::Prosthesis::Mobility::Radio">
+          <uilink label="intraoralProsthesisMobilityLabel" widget="" layout="intraoralProsthesisMobilityLayout"/>
+          <label lang="xx">Mobility</label>
+          <label lang="fr">Mobilité</label>
+          <value>
+            <uuid id="0">IntraoralProsthesisMobile</uuid>
+            <uuid id="1">IntraoralProsthesisFixed</uuid>
+            <possible id="0" lang="xx">Mobile</possible>
+            <possible id="1" lang="xx">Fixed</possible>
+            <possible id="0" lang="fr">Mobile</possible>
             <possible id="1" lang="fr">Fixe</possible>
-          </value>                           
+          </value>
+          <options>compact</options>
         </Item>
-        <Item type="radio" name="IntraoralProsthesisType">                  
+        <Item type="radio" name="Intraoral::Prosthesis::Type::Radio">
           <uilink label="intraoralProsthesisTypeLabel" widget="" layout="intraoralProsthesisTypeLayout"/>
-          <label lang="xx">Type</label>                                     
-          <label lang="fr">Type</label>                                     
-          <value>                                                               
-            <uuid id="0">IntraoralProsthesisDenture</uuid>                       
-            <uuid id="1">IntraoralProsthesisOrthodonticAppliance</uuid>                        
-            <possible id="0" lang="xx">Denture</possible>                        
-            <possible id="1" lang="xx">Orthondontic appliance</possible>                         
-            <possible id="0" lang="fr">Dentier</possible>                        
-            <possible id="1" lang="fr">Appareil orthodontique</possible>                          
-          </value>                                                              
-        </Item>   
-    </Item>
-</Item>
-
-    <Item type="detailswidget" name="SOAP" uifilename="./ui/xx/anesthesiologysoap.ui">
-      <uilink label="" widget="" layout="mainLayout"/>
-      <label lang="xx">SOAP</label>
-      <label lang="fr">SOAP</label>
-      <options>SummaryFontBold;expanded</options>    
-
-        <Item type="group" name="SubjectiveGroup">
-          <uilink widget="subjectiveGroup"/>
-          <label lang="xx">Subjective</label>
-          <label lang="fr">Subjectif (plainte du patient ou des parents)</label>
-          <options>DontPrintEmptyValues</options>
-
-            <Item type="texteditor" name="SubjectiveGroup::Subjective">
-              <uilink label="" widget="" layout="subjectiveLayout"/>
-              <tooltip lang="xx">Subjective</tooltip>
-              <tooltip lang="fr">Subjectif (plainte du patient ou des parents)</tooltip>
-              <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues</options>
-              <papers>Generic</papers>
-            </Item>
+          <label lang="xx">Type</label>
+          <label lang="fr">Type</label>
+          <value>
+            <uuid id="0">IntraoralProsthesisDenture</uuid>
+            <uuid id="1">IntraoralProsthesisOrthodonticAppliance</uuid>
+            <possible id="0" lang="xx">Denture</possible>
+            <possible id="1" lang="xx">Orthondontic appliance</possible>
+            <possible id="0" lang="fr">Dentier</possible>
+            <possible id="1" lang="fr">Appareil orthodontique</possible>
+          </value>
+          <options>compact</options>
         </Item>
+    </Item> <!-- end of group Intraoral::Prosthesis::Group -->
 
-    <Item type="group" name="ObjectiveGroup">
-      <uilink widget="objectiveGroup"/>
+    <Item type="longtext" name="Airway::Pertinent::Findings">
+      <uilink label="pertinentFindingsLabel" widget="pertinentFindingsEdit"/>
+      <label lang="xx">Pertinent findings</label>
+      <label lang="fr">Constatations pertinentes</label>
+    </Item>
+
+  </Item> <!-- end of group Airway::Assessment::Evaluation::Group -->
+
+    <Item type="group" name="Objective::Group">
+      <uilink label="" widget="objectiveGroup"/>
       <label lang="xx">Objective</label>
       <label lang="fr">Objectif (examen clinique)</label>
       <options>DontPrintEmptyValues</options>
-
+<!--
         <Item type="texteditor" name="ObjectiveGroup::Objective">
           <uilink label="" widget="" layout="objectiveLayout"/>
           <tooltip lang="xx">Objective: your physical examination</tooltip>
           <tooltip lang="fr">Objectif: votre examen clinique</tooltip>
           <options>DontPrintEmptyValues</options>
         </Item>
-<!--
-        <Item type="measurement" name="ObjectiveGroup::Temperature::TemperatureValue">
-          <uilink label="temperatureLabel" widget="temperatureValue;temperatureUnit" layout=""/>
+-->
+        <Item type="doublespin" name="ObjectiveGroup::Temperature::Value::Doublespin">
+          <uilink label="temperatureLabel" widget="temperatureValue" layout=""/>
           <label lang="xx">T°</label>
           <label lang="fr">T°</label>
-          <tooltip lang="xx">Temperature</label>
-          <tooltip lang="fr">Température</label>
-          <options>DontPrintEmptyValues;Temperature</options>
-          <default>temperature</default>
-          <patientdata>TemperatureInCelsius</patientdata>  
-        </Item>
--->
-
-        <Item type="helptext" name="ObjectiveGroup::Temperature::TemperatureLabel">
-          <uilink label="temperatureLabel" widget="" layout=""/>
-          <label lang="xx">Temperature</label>                                           
-          <label lang="fr">Température</label>                                           
-          <tooltip lang="xx">Temperature</tooltip>                                
+          <tooltip lang="xx">Temperature</tooltip>
           <tooltip lang="fr">Température</tooltip>
+          <options>DontPrintEmptyValues</options>
         </Item>
 
-        <Item type="doublespin" name="ObjectiveGroup::Temperature::TemperatureValue">
-          <uilink label="" widget="temperatureValue" layout=""/>
-          <tooltip lang="xx">Temperature</tooltip>                                
-          <tooltip lang="fr">Température</tooltip>                                
-          <options>DontPrintEmptyValues</options>                               
+        <Item type="combo" name="ObjectiveGroup::Temperature::Unit::Combo">
+          <uilink label="" widget="temperatureUnit" layout=""/>
+          <value>
+              <uuid id="0">celsius</uuid>
+              <uuid id="1">fahrenheit</uuid>
+              <possible id="0" lang="xx">°Celsius</possible>
+              <possible id="1" lang="xx">°Fahrenheit</possible>
+              <possible id="0" lang="fr">°Celsius</possible>
+              <possible id="1" lang="fr">°Fahrenheit</possible>
+              <default>celsius</default>
+          </value>
         </Item>
 
         <Item type="spin" name="ObjectiveGroup::HeartRate::HeatRateValue">
@@ -182,19 +188,6 @@
           <label lang="xx">Heart rate</label>
           <label lang="fr">Fréquence cardiaque</label>
           <options>DontPrintEmptyValues</options>
-        </Item>
-
-        <Item type="combo" name="ObjectiveGroup::Temperature::TemperatureUnit">
-          <uilink label="" widget="temperatureUnit" layout=""/>
-          <value>
-              <uuid id="0">celsius</uuid>
-              <uuid id="1">fahrenheit</uuid>
-              <possible id="0" lang="xx">°Celsius</possible>
-              <possible id="1" lang="xx">°Fahrenheit</possible>
-              <possible id="0" lang="fr">°Celsius</possible>                    
-              <possible id="1" lang="fr">°Fahrenheit</possible>
-              <default>celsius</default>
-          </value>
         </Item>
 
         <Item type="helptext" name="ObjectiveGroup::BloodPressure::UiLabel">
@@ -274,9 +267,325 @@
           <options>DontPrintEmptyValues</options>
         </Item>
 
+        <Item type="group" name="Objective::Cardiovascular::Group">
+          <uilink label="" widget="objectiveCardiovascularGroupBox"/>
+          <label lang="xx">Cardiovascular</label>
+          <label lang="fr">Cardio-vasculaire</label>
+          <options>DontPrintEmptyValues</options>
 
-    </Item>
+            <Item type="radio" name="Objective::Cardiovascular::Heart::Sounds::Radio">
+            <uilink label="heartSoundsLabel" widget="" layout="heartSoundsRadioLayout"/>
+              <label lang="xx">Heart sounds</label>
+              <label lang="fr">Bruits du cœur</label>
+              <options>compact;DontPrintEmptyValues</options>
+              <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Normal</uuid>
+                <uuid id="2">Abnormal</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Normal</possible>
+                <possible id="2" lang="xx">Abnormal</possible>
+                <print id="0" lang="xx">∅</print>
+                <print id="1" lang="xx">Normal</print>
+                <print id="2" lang="xx">Abnormal</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Normaux</possible>
+                <possible id="2" lang="fr">Anormaux</possible>
+                <print id="0" lang="fr">∅</print>
+                <print id="1" lang="fr">Normaux</print>
+                <print id="2" lang="fr">Anormaux</print>
+              </value>
+          </Item>
 
+            <Item type="radio" name="Objective::Cardiovascular::Heart::Murmurs::Radio">
+            <uilink label="heartMurmursLabel" widget="" layout="heartMurmursRadioLayout"/>
+              <label lang="xx">Heart sounds</label>
+              <label lang="fr">Bruits surajoutés</label>
+              <options>compact;DontPrintEmptyValues</options>
+              <value>
+                <uuid id="0">Not evaluated</uuid>
+                <uuid id="1">Yes</uuid>
+                <uuid id="2">No</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Yes</possible>
+                <possible id="2" lang="xx">No</possible>
+                <print id="0" lang="xx">∅</print>
+                <print id="1" lang="xx">Yes</print>
+                <print id="2" lang="xx">No</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Oui</possible>
+                <possible id="2" lang="fr">Non</possible>
+                <print id="0" lang="fr">∅</print>
+                <print id="1" lang="fr">Oui</print>
+                <print id="2" lang="fr">Non</print>
+              </value>
+          </Item>
+
+          <Item type="shorttext" name="Objective::Cardiovascular::Heart::Murmurs::Shorttext">
+            <uilink widget="cardiovascularHeartMurmursLineEdit"/>
+            <options>DontPrintEmptyValues</options>
+            <placeholder lang="xx">Comments</placeholder>
+            <placeholder lang="fr">Commentaires</placeholder>
+          </Item>
+
+          <Item type="radio" name="Objective::Cardiovascular::Peripheral::Venous::Access::Radio">
+            <uilink label="peripheralVenousAccessLabel" widget="" layout="peripheralVenousAccessRadioLayout"/>
+              <label lang="xx">Peripheral venous access</label>
+              <label lang="fr">Accès veineux périphérique</label>
+              <options>compact;DontPrintEmptyValues</options>
+              <value>
+                <uuid id="0">Not evaluated</uuid>
+                <uuid id="1">Easy</uuid>
+                <uuid id="2">Difficult</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Easy</possible>
+                <possible id="2" lang="xx">Difficult</possible>
+                <print id="0" lang="xx">∅</print>
+                <print id="1" lang="xx">Easy</print>
+                <print id="2" lang="xx">Difficult</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Facile</possible>
+                <possible id="2" lang="fr">Difficile</possible>
+                <print id="0" lang="fr">∅</print>
+                <print id="1" lang="fr">Facile</print>
+                <print id="2" lang="fr">Difficile</print>
+              </value>
+          </Item>
+
+        </Item> <!-- end of group Objective::Cardiovascular::Group -->
+
+        <Item type="group" name="Objective::Pulmonary::Group">
+          <uilink label="" widget="objectivePulmonaryGroupBox"/>
+          <label lang="xx">Pulmonary</label>
+          <label lang="fr">Pulmonaire</label>
+          <options>DontPrintEmptyValues</options>
+
+          <Item type="radio" name="Objective::Pulmonary::Breath::Sounds::Radio">
+            <uilink label="breathSoundsLabel" widget="" layout="breathSoundsRadioLayout"/>
+              <label lang="xx">Clear to auscultation bilaterally</label>
+              <label lang="fr">Ausculation: murmure vésiculaire bilatéral normal</label>
+              <options>compact;DontPrintEmptyValues</options>
+              <value>
+                <uuid id="0">Not evaluated</uuid>
+                <uuid id="1">Normal breath sounds</uuid>
+                <uuid id="2">Abnormal breath sounds</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Yes</possible>
+                <possible id="2" lang="xx">No</possible>
+                <print id="0" lang="xx">∅</print>
+                <print id="1" lang="xx">Yes</print>
+                <print id="2" lang="xx">No</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Oui</possible>
+                <possible id="2" lang="fr">Non</possible>
+                <print id="0" lang="fr">∅</print>
+                <print id="1" lang="fr">Oui</print>
+                <print id="2" lang="fr">Non</print>
+              </value>
+          </Item>
+
+          <Item type="shorttext" name="Objective::Pulmonary::Comments::Shorttext">
+            <uilink widget="pulmonaryCommentsLineEdit"/>
+            <options>DontPrintEmptyValues</options>
+            <placeholder lang="xx">Comments</placeholder>
+            <placeholder lang="fr">Commentaires</placeholder>
+          </Item>
+
+        </Item> <!-- end of group Objective::Pulmonary::Group -->
+
+        <Item type="group" name="Objective::Neurological::Group">
+          <uilink label="" widget="objectiveNeurologicalGroupBox"/>
+          <label lang="xx">Neurological</label>
+          <label lang="fr">Neurologique</label>
+          <options>DontPrintEmptyValues</options>
+
+           <Item type="longtext" name="Objective::Neurological::Examinationo:Shorttext">
+            <uilink label="" widget="neurologyTextEdit" layout="" />
+            <label lang="xx"></label>
+            <label lang="fr"></label>
+            <placeholder lang="xx"></placeholder>
+            <placeholder lang="fr"></placeholder>
+          </Item>
+
+        </Item> <!-- end of group Objective::Neurological::Group -->
+
+    </Item> <!-- end of group Objective::Group -->
+
+    <Item type="group" name="Objective::Assessment::Score::Group">
+      <uilink label="" widget="assessmentScoreGroupBox"/>
+      <label lang="xx">Assessment: scoring</label>
+      <label lang="fr">Analyses: scores</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="combo" name="Objective::Assessment::Score::NYHA::Combo">
+          <uilink label="nyhaClassificationLabel" widget="nyhaClassificationCombo" layout=""/>
+          <label lang="xx">NYHA</label>
+          <label lang="fr">NYHA</label>
+          <tooltip lang="xx">New York Heart Association Functional Classification</tooltip>
+          <tooltip lang="fr">Classification fonctionnelle de la New York Heart Association</tooltip>
+          <value>
+            <uuid id="0">Not evaluated</uuid>
+            <uuid id="1">NYHA Class 1</uuid>
+            <uuid id="2">NYHA Class 2</uuid>
+            <uuid id="3">NYHA Class 3</uuid>
+            <uuid id="4">NYHA Class 4</uuid>
+            <possible id="0" lang="xx">∅</possible>
+            <possible id="1" lang="xx">Class I: No limitation of physical activity. Ordinary physical activity does not cause undue fatigue, palpitation, dyspnea.</possible>
+            <possible id="2" lang="xx">Class II: Slight limitation of physical activity. Comfortable at rest. Ordinary physical activity results in fatigue, palpitation, dyspnea.</possible>
+            <possible id="3" lang="xx">Class III: Marked limitation of physical activity. Comfortable at rest. Less than ordinary activity causes fatigue, palpitation, or dyspnea.</possible>
+            <possible id="4" lang="xx">Class IV: Unable to carry on any physical activity without discomfort. Symptoms of heart failure at rest.  If any physical activity is undertaken, discomfort increases.</possible>
+            <possible id="0" lang="fr">∅</possible>
+            <possible id="1" lang="fr">Classe I : Dyspnée pour des efforts importants inhabituels: le patient n'a aucune gêne dans la vie courante</possible>
+            <possible id="2" lang="fr">classe II : Dyspnée pour des efforts importants habituels tels que marche rapide ou en côte, montée des escaliers (> 2 étages).</possible>
+            <possible id="3" lang="fr">classe III : Dyspnée pour des efforts peu intenses de la vie courante tels que marche normale en terrain plat, montée des escaliers (=2 étages).</possible>
+            <possible id="4" lang="fr">classe IV : Dyspnée permanente de repos.</possible>
+          </value>
+        </Item>
+
+       <Item type="combo" name="Objective::Assessment::Score::MRC::Breathlessness::Scale::Combo">
+          <uilink label="breathlessnessScaleLabel" widget="breathlessnessScaleCombo" layout=""/>
+          <label lang="xx">MRC breathlessness scale</label>
+          <label lang="fr">Échelle de dyspnée du MRC</label>
+          <tooltip lang="xx">MRC breathlessness scale</tooltip>
+          <tooltip lang="fr">Échelle de dyspnée du MRC</tooltip>
+          <value>
+            <uuid id="0">Not evaluated</uuid>
+            <uuid id="1">MRC Grade 1</uuid>
+            <uuid id="2">MRC Grade 2</uuid>
+            <uuid id="3">MRC Grade 3</uuid>
+            <uuid id="4">MRC Grade 4</uuid>
+            <uuid id="5">MRC Grade 5</uuid>
+            <possible id="0" lang="xx">∅</possible>
+            <possible id="1" lang="xx">MRC Grade 1: Not troubled by breathless except on strenuous exercise</possible>
+            <possible id="2" lang="xx">MRC Grade 2: Short of breath when hurrying on a level or when walking up a slight hill</possible>
+            <possible id="3" lang="xx">MRC Grade 3: Walks slower than most people on the level, stops after a mile or so, or stops after 15 minutes walking at own pace</possible>
+            <possible id="4" lang="xx">MRC Grade 4: Stops for breath after walking 100 yards (90 meters), or after a few minutes on level ground</possible>
+            <possible id="5" lang="xx">MRC Grade 5: Too breathless to leave the house, or breathless when dressing/undressing</possible>
+            <possible id="0" lang="fr">∅</possible>
+            <possible id="1" lang="fr">Degré 1: Patient avec dyspnée lors d’un exercice intense.</possible>
+            <possible id="2" lang="fr">Degré 2: Dyspnée lors d’une marche rapide sur terrain plat ou en montant une pente légère.</possible>
+            <possible id="3" lang="fr">Degré 3: Marche plus lentement que les personnes de son âge sur terrain plat, ou doit s’arrêter pour respirer lorsqu’il marche à son propre rythme sur terrain plat.</possible>
+            <possible id="4" lang="fr">Degré 4: Doit s’arrêter pour respirer après une marche d’environ 90 mètres.</possible>
+            <possible id="5" lang="fr">Degré 5: Trop essoufflé pour quitter la maison, ou dyspnée lors de l’habillement.</possible>
+          </value>
+        </Item>
+ 
+        <Item type="combo" name="Assessment::Score::ASA::Physical::Status::Classification::System::Combo">
+          <uilink label="asaClassificationLabel" widget="asaClassificationCombo" layout=""/>
+          <label lang="xx">ASA</label>
+          <label lang="fr">ASA</label>
+          <tooltip lang="xx">ASA Physical Status Classification System</tooltip>
+          <tooltip lang="fr">ASA Physical Status Classification System</tooltip>
+          <value>
+            <uuid id="0">Not evaluated</uuid>
+            <uuid id="1">ASA I</uuid>
+            <uuid id="2">ASA II</uuid>
+            <uuid id="3">ASA III</uuid>
+            <uuid id="4">ASA IV</uuid>
+            <uuid id="5">ASA V</uuid>
+            <uuid id="6">ASA VI</uuid>
+            <possible id="0" lang="xx">∅</possible>
+            <possible id="1" lang="xx">ASA I: A normal healthy patient</possible>
+            <possible id="2" lang="xx">ASA II: A patient with mild systemic disease</possible>
+            <possible id="3" lang="xx">ASA III: A patient with severe systemic disease</possible>
+            <possible id="4" lang="xx">ASA IV: A patient with severe systemic disease that is a constant threat to life</possible>
+            <possible id="5" lang="xx">ASA V: A moribund patient who is not expected to survive without the operation</possible>
+            <possible id="6" lang="xx">ASA VI: A declared brain-dead patient whose organs are being removed for donor purposes</possible>
+            <possible id="0" lang="fr">∅</possible>
+            <possible id="1" lang="fr">ASA I: Patient sain, en bonne santé.</possible>
+            <possible id="2" lang="fr">ASA II: Maladie systémique légère, patient présentant une atteinte modérée d'une grande fonction.</possible>
+            <possible id="3" lang="fr">ASA III: Maladie systémique sévère ou invalidante, patient présentant une atteinte sévère d'une grande fonction qui n'entraine pas d'incapacité.</possible>
+            <possible id="4" lang="fr">ASA IV: Patient présentant une atteinte sévère d'une grande fonction, invalidante, et qui met en jeu le pronostic vital.</possible>
+            <possible id="5" lang="fr">ASA V: Patient moribond dont la survie est improbable sans l'intervention.</possible>
+            <possible id="6" lang="fr">ASA VI: Patient en état de mort cérébrale, candidat potentiel au don d'organes.</possible>
+          </value>
+        </Item>
+
+    </Item> <!-- end of group Objective::Assessment::Score::Group -->
+
+    <Item type="group" name="Plan::Group">
+      <uilink label="" widget="planGroupBox"/>
+      <label lang="xx">Plan</label>
+      <label lang="fr">Plan: prescription</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Plan::Preoperative::Fasting">
+          <uilink label="preoperativeFastingLabel" layout="preoperativeFastingTextEditLayout"/>
+          <label lang="xx">Preoperative fasting</label>
+          <label lang="fr">Jeûne pré-opératoire</label>
+          <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
+        </Item>
+
+        <Item type="texteditor" name="Plan::Preoperative::Prescription">
+          <uilink label="preoperativePrescriptionLabel" layout="preoperativePrescriptionTextEditLayout"/>
+          <label lang="xx">Preoperative prescription</label>
+          <label lang="fr">Prescription pré-opératoire</label>
+          <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
+        </Item>
+
+        <Item type="texteditor" name="Plan::Premedication">
+          <uilink label="premedicationLabel" layout="premedicationTextEditLayout"/>
+          <label lang="xx">Premedication</label>
+          <label lang="fr">Prémedication</label>
+          <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
+        </Item>
+
+        <Item type="texteditor" name="Plan::Antibiotic::Prophylaxis">
+          <uilink label="antibioticProphylaxisLabel" layout="antibioticProphylaxisTextEditLayout"/>
+          <label lang="xx">Preoperative fasting</label>
+          <label lang="fr">Jeûne pré-opératoire</label>
+          <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
+        </Item>
+
+        <Item type="radio" name="Plan::Intervention::Urgency::Radio">
+          <uilink label="interventionTimingLabel" layout="interventionTimingLayout"/>
+          <label lang="xx">Intervention</label>
+          <label lang="fr">Intervention</label>
+          <value>
+            <uuid id="0">Not evaluated</uuid>
+            <uuid id="1">Elective</uuid>
+            <uuid id="2">Emergent</uuid>
+            <uuid id="3">Not planned</uuid>
+            <possible id="0" lang="xx">ø</possible>
+            <possible id="1" lang="xx">Elective</possible>
+            <possible id="2" lang="xx">Emergent</possible>
+            <possible id="3" lang="xx">Not planned</possible>
+            <possible id="0" lang="fr">ø</possible>
+            <possible id="1" lang="fr">Réglée</possible>
+            <possible id="2" lang="fr">En urgence</possible>
+            <possible id="3" lang="fr">Non programmée</possible>
+          </value>
+          <options>compact</options>
+        </Item>
+
+        <Item type="radio" name="Plan::Intervention::Hospital::Status::Radio">
+          <uilink label="hospitalStatusLabel" layout="hospitalStatusRadioLayout"/>
+          <label lang="xx">Hospital status</label>
+          <label lang="fr">Hospitalisation</label>
+          <value>
+            <uuid id="0">Not evaluated</uuid>
+            <uuid id="1">Outpatient</uuid>
+            <uuid id="2">Inpatient</uuid>
+            <possible id="0" lang="xx">ø</possible>
+            <possible id="1" lang="xx">Outpatient</possible>
+            <possible id="2" lang="xx">Inpatient</possible>
+            <possible id="0" lang="fr">ø</possible>
+            <possible id="1" lang="fr">Ambulatoire</possible>
+            <possible id="2" lang="fr">Hospitalisation classique</possible>
+          </value>
+          <options>compact</options>
+        </Item>
+
+
+
+
+    </Item> <!-- end of group Plan::Group -->
+
+<!--
     <Item type="group" name="AssessmentPlanGroup">
       <uilink widget="assessmentPlanGroup"/>
       <label lang="xx">Assessment and plan</label>
@@ -313,6 +622,7 @@
     <tabstop>AssessmentPlanGroup::Assessment</tabstop>
     <tabstop>AssessmentPlanGroup::Plan</tabstop>
     </tabstops>
+-->
 
   </MedForm>
 

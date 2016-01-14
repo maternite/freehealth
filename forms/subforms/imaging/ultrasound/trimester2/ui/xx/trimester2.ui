@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>744</width>
-    <height>16113</height>
+    <height>16148</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1115,13 +1115,6 @@
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_18">
-              <item>
-               <widget class="QLabel" name="fetus1UsGestationalAgeHelpTextLabel">
-                <property name="text">
-                 <string>gestational age</string>
-                </property>
-               </widget>
-              </item>
               <item>
                <widget class="QSpinBox" name="fetus1UsGestationalAgeWeekSpinBox"/>
               </item>
@@ -2281,49 +2274,51 @@
            </item>
           </layout>
          </item>
-         <item row="7" column="0" colspan="4">
-          <layout class="QHBoxLayout" name="horizontalLayout_19">
-           <item>
-            <widget class="QLabel" name="fetus2UsGestationalAgeHelpTextLabel">
-             <property name="text">
-              <string>gestational age</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus2UsGestationalAgeWeekSpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus2UsGestationalAgeWeekLabel">
-             <property name="text">
-              <string>weeks</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus2UsGestationalAgeDaySpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus2UsGestationalAgeDayLabel">
-             <property name="text">
-              <string>days</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+         <item row="7" column="0" colspan="9">
+          <widget class="QGroupBox" name="fetus2GestationalAgeGroupBox">
+           <property name="title">
+            <string>gestationalAgeGroupBox</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_42">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_19">
+              <item>
+               <widget class="QSpinBox" name="fetus2UsGestationalAgeWeekSpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus2UsGestationalAgeWeekLabel">
+                <property name="text">
+                 <string>weeks</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus2UsGestationalAgeDaySpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus2UsGestationalAgeDayLabel">
+                <property name="text">
+                 <string>days</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -3334,49 +3329,51 @@
            </item>
           </layout>
          </item>
-         <item row="7" column="0" colspan="4">
-          <layout class="QHBoxLayout" name="horizontalLayout_20">
-           <item>
-            <widget class="QLabel" name="fetus3UsGestationalAgeHelpTextLabel">
-             <property name="text">
-              <string>gestational age</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus3UsGestationalAgeWeekSpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus3UsGestationalAgeWeekLabel">
-             <property name="text">
-              <string>weeks</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus3UsGestationalAgeDaySpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus3UsGestationalAgeDayLabel">
-             <property name="text">
-              <string>days</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_6">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+         <item row="7" column="0" colspan="9">
+          <widget class="QGroupBox" name="fetus3GestationalAgeGroupBox">
+           <property name="title">
+            <string>GroupBox</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_43">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_20">
+              <item>
+               <widget class="QSpinBox" name="fetus3UsGestationalAgeWeekSpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus3UsGestationalAgeWeekLabel">
+                <property name="text">
+                 <string>weeks</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus3UsGestationalAgeDaySpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus3UsGestationalAgeDayLabel">
+                <property name="text">
+                 <string>days</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -4379,49 +4376,51 @@
            </item>
           </layout>
          </item>
-         <item row="8" column="0" colspan="4">
-          <layout class="QHBoxLayout" name="horizontalLayout_21">
-           <item>
-            <widget class="QLabel" name="fetus4UsGestationalAgeHelpTextLabel">
-             <property name="text">
-              <string>gestational age</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus4UsGestationalAgeWeekSpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus4UsGestationalAgeWeekLabel">
-             <property name="text">
-              <string>weeks</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus4UsGestationalAgeDaySpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus4UsGestationalAgeDayLabel">
-             <property name="text">
-              <string>days</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+         <item row="8" column="0" colspan="9">
+          <widget class="QGroupBox" name="fetus4GestationalAgeGroupBox">
+           <property name="title">
+            <string>GroupBox</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_44">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_21">
+              <item>
+               <widget class="QSpinBox" name="fetus4UsGestationalAgeWeekSpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus4UsGestationalAgeWeekLabel">
+                <property name="text">
+                 <string>weeks</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus4UsGestationalAgeDaySpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus4UsGestationalAgeDayLabel">
+                <property name="text">
+                 <string>days</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -5439,49 +5438,51 @@
            </item>
           </layout>
          </item>
-         <item row="8" column="0" colspan="5">
-          <layout class="QHBoxLayout" name="horizontalLayout_22">
-           <item>
-            <widget class="QLabel" name="fetus5UsGestationalAgeHelpTextLabel">
-             <property name="text">
-              <string>gestational age</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus5UsGestationalAgeWeekSpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus5UsGestationalAgeWeekLabel">
-             <property name="text">
-              <string>weeks</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus5UsGestationalAgeDaySpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus5UsGestationalAgeDayLabel">
-             <property name="text">
-              <string>days</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_8">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+         <item row="8" column="0" colspan="10">
+          <widget class="QGroupBox" name="fetus5GestationalAgeGroupBox">
+           <property name="title">
+            <string>GroupBox</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_45">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <item>
+               <widget class="QSpinBox" name="fetus5UsGestationalAgeWeekSpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus5UsGestationalAgeWeekLabel">
+                <property name="text">
+                 <string>weeks</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus5UsGestationalAgeDaySpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus5UsGestationalAgeDayLabel">
+                <property name="text">
+                 <string>days</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -6498,49 +6499,51 @@
            </item>
           </layout>
          </item>
-         <item row="7" column="0" colspan="4">
-          <layout class="QHBoxLayout" name="horizontalLayout_23">
-           <item>
-            <widget class="QLabel" name="fetus6UsGestationalAgeHelpTextLabel">
-             <property name="text">
-              <string>gestational age</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus6UsGestationalAgeWeekSpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus6UsGestationalAgeWeekLabel">
-             <property name="text">
-              <string>weeks</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="fetus6UsGestationalAgeDaySpinBox"/>
-           </item>
-           <item>
-            <widget class="QLabel" name="fetus6UsGestationalAgeDayLabel">
-             <property name="text">
-              <string>days</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_9">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+         <item row="7" column="0" colspan="9">
+          <widget class="QGroupBox" name="fetus6GestationalAgeGroupBox">
+           <property name="title">
+            <string>GroupBox</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_47">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_23">
+              <item>
+               <widget class="QSpinBox" name="fetus6UsGestationalAgeWeekSpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus6UsGestationalAgeWeekLabel">
+                <property name="text">
+                 <string>weeks</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus6UsGestationalAgeDaySpinBox"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="fetus6UsGestationalAgeDayLabel">
+                <property name="text">
+                 <string>days</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>

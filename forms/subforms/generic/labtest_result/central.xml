@@ -1289,12 +1289,11 @@
               <placeholder lang="fr"></placeholder>
             </Item>
 
-            <Item type="helptext" name="Serology::Other::Label">
-              <uilink widget="otherLabel"/>
-              <label lang="xx">Other</label>
-              <label lang="fr">Autre</label>
-              <options>printable</options>
-            </Item>
+            <Item type="group" name="Serology::Other::Group">                  
+            <uilink widget="otherGroupBox"/>                                   
+            <label lang="xx">Serology: other</label>                                 
+            <label lang="fr">Sérologie: autre</label>                                
+            <options>collapsible;SummaryFontBold;DontPrintEmptyValues</options>
 
             <Item type="group" name="Serology::Other::Group1">
             <uilink widget="otherGroupBox1"/>
@@ -1341,40 +1340,40 @@
               </Item>
 
               <Item type="combo" name="Serology::Other::1::Unit::Combo">
-              <uilink label="" widget="otherComboBox1" layout="" />     
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                <uuid id="4">Optical Density Ratio</uuid>                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                <possible id="4" lang="xx">OD ratio</possible>                  
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-                <possible id="4" lang="fr">DO</possible>                        
-                <default></default>                                        
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <uilink label="" widget="otherComboBox1" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+                <uuid id="4">Optical Density Ratio</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+                <possible id="4" lang="xx">OD ratio</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+                <possible id="4" lang="fr">DO</possible>
+                <default></default>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
-            <Item type="shorttext" name="Serology::Other::1::Interpretation">   
+            <Item type="shorttext" name="Serology::Other::1::Interpretation">
               <uilink label="otherInterpretationLabel1" widget="otherInterpretationLineEdit1" layout="" />
-              <label lang="xx">Interpretation</label>                           
-              <label lang="fr">Interprétation</label>                           
-              <placeholder lang="xx"></placeholder>                             
-              <placeholder lang="fr"></placeholder>                             
-            </Item> 
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
 
           </Item> <!--end of group serology other 1 -->
 
@@ -1423,40 +1422,40 @@
               </Item>
 
               <Item type="combo" name="Serology::Other::2::Unit::Combo">
-              <uilink label="" widget="otherComboBox2" layout="" />     
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                <uuid id="4">Optical Density Ratio</uuid>                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                <possible id="4" lang="xx">OD ratio</possible>                  
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-                <possible id="4" lang="fr">DO</possible>                        
-                <default></default>                                        
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <uilink label="" widget="otherComboBox2" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+                <uuid id="4">Optical Density Ratio</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+                <possible id="4" lang="xx">OD ratio</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+                <possible id="4" lang="fr">DO</possible>
+                <default></default>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
-            <Item type="shorttext" name="Serology::Other::2::Interpretation">   
+            <Item type="shorttext" name="Serology::Other::2::Interpretation">
               <uilink label="otherInterpretationLabel2" widget="otherInterpretationLineEdit2" layout="" />
-              <label lang="xx">Interpretation</label>                           
-              <label lang="fr">Interprétation</label>                           
-              <placeholder lang="xx"></placeholder>                             
-              <placeholder lang="fr"></placeholder>                             
-            </Item> 
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
 
             </Item> <!--end of group serology other 2 -->
 
@@ -1505,40 +1504,40 @@
               </Item>
 
               <Item type="combo" name="Serology::Other::3::Unit::Combo">
-              <uilink label="" widget="otherComboBox3" layout="" />     
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                <uuid id="4">Optical Density Ratio</uuid>                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                <possible id="4" lang="xx">OD ratio</possible>                  
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-                <possible id="4" lang="fr">DO</possible>                        
-                <default></default>                                        
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <uilink label="" widget="otherComboBox3" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+                <uuid id="4">Optical Density Ratio</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+                <possible id="4" lang="xx">OD ratio</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+                <possible id="4" lang="fr">DO</possible>
+                <default></default>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
-            <Item type="shorttext" name="Serology::Other::3::Interpretation">   
+            <Item type="shorttext" name="Serology::Other::3::Interpretation">
               <uilink label="otherInterpretationLabel3" widget="otherInterpretationLineEdit3" layout="" />
-              <label lang="xx">Interpretation</label>                           
-              <label lang="fr">Interprétation</label>                           
-              <placeholder lang="xx"></placeholder>                             
-              <placeholder lang="fr"></placeholder>                             
-            </Item> 
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
 
           </Item> <!--end of group serology other 3 -->
 
@@ -1587,40 +1586,40 @@
               </Item>
 
               <Item type="combo" name="Serology::Other::4::Unit::Combo">
-              <uilink label="" widget="otherComboBox4" layout="" />     
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                <uuid id="4">Optical Density Ratio</uuid>                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                <possible id="4" lang="xx">OD ratio</possible>                  
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-                <possible id="4" lang="fr">DO</possible>                        
-                <default></default>                                        
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <uilink label="" widget="otherComboBox4" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+                <uuid id="4">Optical Density Ratio</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+                <possible id="4" lang="xx">OD ratio</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+                <possible id="4" lang="fr">DO</possible>
+                <default></default>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
-            <Item type="shorttext" name="Serology::Other::4::Interpretation">   
+            <Item type="shorttext" name="Serology::Other::4::Interpretation">
               <uilink label="otherInterpretationLabel4" widget="otherInterpretationLineEdit4" layout="" />
-              <label lang="xx">Interpretation</label>                           
-              <label lang="fr">Interprétation</label>                           
-              <placeholder lang="xx"></placeholder>                             
-              <placeholder lang="fr"></placeholder>                             
-            </Item> 
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
 
           </Item> <!--end of group serology other 4 -->
 
@@ -1669,45 +1668,441 @@
               </Item>
 
               <Item type="combo" name="Serology::Other::5::Unit::Combo">
-              <uilink label="" widget="otherComboBox5" layout="" />     
-              <label lang="xx"></label>                                         
-              <label lang="fr"></label>                                         
-              <value>                                                           
-                <uuid id="0">Not done</uuid>                                    
-                <!--<sctid>385660001</sctid>-->                                 
-                <uuid id="1">IU/mL</uuid>                                       
-                <uuid id="2">Index</uuid>                                       
-                <uuid id="3">Titer</uuid>                                       
-                <uuid id="4">Optical Density Ratio</uuid>                       
-                                                                                
-                <possible id="0" lang="xx">ø</possible>                         
-                <possible id="1" lang="xx">IU/mL</possible>                     
-                <possible id="2" lang="xx">Index</possible>                     
-                <possible id="3" lang="xx">Titer</possible>                     
-                <possible id="4" lang="xx">OD ratio</possible>                  
-                                                                                
-                <possible id="0" lang="fr">ø</possible>                         
-                <possible id="1" lang="fr">UI/mL</possible>                     
-                <possible id="2" lang="fr">Indice</possible>                    
-                <possible id="3" lang="fr">Titre</possible>                     
-                <possible id="4" lang="fr">DO</possible>                        
-                <default></default>                                        
-              </value>                                                          
-              <options>DontPrintEmptyValues</options>                           
+              <uilink label="" widget="otherComboBox5" layout="" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">IU/mL</uuid>
+                <uuid id="2">Index</uuid>
+                <uuid id="3">Titer</uuid>
+                <uuid id="4">Optical Density Ratio</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">IU/mL</possible>
+                <possible id="2" lang="xx">Index</possible>
+                <possible id="3" lang="xx">Titer</possible>
+                <possible id="4" lang="xx">OD ratio</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">UI/mL</possible>
+                <possible id="2" lang="fr">Indice</possible>
+                <possible id="3" lang="fr">Titre</possible>
+                <possible id="4" lang="fr">DO</possible>
+                <default></default>
+              </value>
+              <options>DontPrintEmptyValues</options>
             </Item>
 
-            <Item type="shorttext" name="Serology::Other::5::Interpretation">   
+            <Item type="shorttext" name="Serology::Other::5::Interpretation">
               <uilink label="otherInterpretationLabel5" widget="otherInterpretationLineEdit5" layout="" />
-              <label lang="xx">Interpretation</label>                           
-              <label lang="fr">Interprétation</label>                           
-              <placeholder lang="xx"></placeholder>                             
-              <placeholder lang="fr"></placeholder>                             
-            </Item> 
+              <label lang="xx">Interpretation</label>
+              <label lang="fr">Interprétation</label>
+              <placeholder lang="xx"></placeholder>
+              <placeholder lang="fr"></placeholder>
+            </Item>
 
           </Item> <!--end of group serology other 5 -->
-
+        
+          </Item> <!-- end of group serology other -->            
 
         </Item> <!-- end of detailswidget serology -->
+
+        <Item type="detailswidget" name="Hemostasis" uifilename="./ui/xx/hemostasis.ui">
+          <uilink label="" widget="" layout="mainLayout"/>
+          <label lang="xx">Hemostasis</label>
+          <label lang="fr">Hémostase</label>
+          <options>SummaryFontBold;expanded</options>
+
+            <Item type="spin" name="Hemostasis::Bleeding::Time::Spin">
+                <uilink label="bleedingTimeLabel" widget="bleedingTimeSpinBox"/>
+                <label lang="xx">Bleeding time</label>
+                <label lang="fr">Temps de saignement</label>
+                <tooltip lang="xx"></tooltip>
+                <tooltip lang="fr"></tooltip>
+            </Item>
+
+            <Item type="shorttext" name="Hemostasis::Bleeding::Time::Shorttext">
+                <uilink label="bleedingTimeMethodLabel" widget="bleedingTimeMethodLineEdit"/>
+                <label lang="xx">Method</label>
+                <label lang="fr">Méthode</label>
+                <tooltip lang="xx"></tooltip>
+                <tooltip lang="fr"></tooltip>
+            </Item>
+
+            <Item type="spin" name="Hemostasis::Prothrombin::Time::Spin">
+                <uilink label="prothrombinTimeLabel" widget="prothrombinTimeSpinBox"/>
+                <label lang="xx">Prothrombin time (PT)</label>
+                <label lang="fr">Temps de Quick (TP)</label>
+                <tooltip lang="xx"></tooltip>
+                <tooltip lang="fr"></tooltip>
+            </Item>
+
+            <Item type="doublespin" name="Hemostasis::INR::Doublespin">
+                <uilink label="inrLabel" widget="inrDoubleSpinBox"/>
+                <label lang="xx">INR</label>
+                <label lang="fr">INR</label>
+                <tooltip lang="xx">International Normalized Ratio</tooltip>
+                <tooltip lang="fr">International Normalized Ratio</tooltip>
+            </Item>
+
+            <Item type="spin" name="Hemostasis::Activated::Partial::Thromboplastin::Time::Spin">       
+                <uilink label="apttLabel" widget="apttSpinBox"/>
+                <label lang="xx">Activated partial thromboplastin time (aPTT)</label>                  
+                <label lang="fr">Temps de céphaline activée (TCA)</label>                    
+                <tooltip lang="xx"></tooltip>                                   
+                <tooltip lang="fr"></tooltip>                                   
+            </Item>
+
+            <Item type="spin" name="Hemostasis::Thrombin::Time::Spin">       
+                <uilink label="thrombinTimeLabel" widget="thrombinTimeSpinBox"/>
+                <label lang="xx">Thrombin time (TT)</label>                  
+                <label lang="fr">Temps de thrombine (TT)</label>                    
+                <tooltip lang="xx"></tooltip>                                   
+                <tooltip lang="fr"></tooltip>                                   
+            </Item>
+
+            <Item type="group" name="Hemostasis::Other::Group">                
+              <uilink widget="hemostasisOtherGroupBox"/>                       
+              <label lang="xx">Hemostasis: other</label>                             
+              <label lang="fr">Hémostase: autre</label>                              
+              <options>collapsible;SummaryFontBold;DontPrintEmptyValues</options>
+
+            <Item type="group" name="Hemostasis::Other::Group1">                  
+              <uilink widget="hemostasisOtherGroupBox1"/>                                   
+              <label lang="xx">Hemostasis 1</label>                                 
+              <label lang="fr">Hémostase 1</label>                                
+              <options>collapsible;SummaryFontBold;DontPrintEmptyValues</options> 
+                                                                                
+                <Item type="shorttext" name="Hemostasis::Other::1::Test">           
+                  <uilink label="" widget="hemostasisOtherTestLineEdit1" layout="" />   
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <placeholder lang="xx">Test name</placeholder>                  
+                  <placeholder lang="fr">Nom du test</placeholder>                
+                </Item>
+
+                <Item type="doublespin" name="Hemostasis::Other::1::Doublespin">    
+                  <uilink label="" widget="hemostasisOtherDoubleSpinBox1" layout="" />      
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <options></options>                                             
+                </Item>
+
+                <Item type="combo" name="Hemostasis::Other::1::Unit::Combo">        
+                  <uilink label="" widget="hemostasisOtherComboBox1" layout="" />             
+                  <label lang="xx"></label>                                         
+                  <label lang="fr"></label>                                         
+                  <value>                                                           
+                    <uuid id="0">Not done</uuid>                                    
+                    <!--<sctid>385660001</sctid>-->                                 
+                    <uuid id="1">IU/mL</uuid>                                       
+                    <uuid id="2">Index</uuid>                                       
+                    <uuid id="3">Titer</uuid>                                       
+                    <uuid id="4">Optical Density Ratio</uuid>
+                    <uuid id="5">Second</uuid>                       
+                    <uuid id="6">Percentage</uuid>
+                                                                  
+                    <possible id="0" lang="xx">ø</possible>                         
+                    <possible id="1" lang="xx">IU/mL</possible>                     
+                    <possible id="2" lang="xx">Index</possible>                     
+                    <possible id="3" lang="xx">Titer</possible>                     
+                    <possible id="4" lang="xx">OD ratio</possible>
+                    <possible id="5" lang="xx">s</possible>
+                    <possible id="6" lang="xx">%</possible>                  
+                                                                                
+                    <possible id="0" lang="fr">ø</possible>                         
+                    <possible id="1" lang="fr">UI/mL</possible>                     
+                    <possible id="2" lang="fr">Indice</possible>                    
+                    <possible id="3" lang="fr">Titre</possible>                     
+                    <possible id="4" lang="fr">DO</possible>
+                    <possible id="5" lang="fr">s</possible>
+                    <possible id="6" lang="fr">%</possible>
+                       
+                    <default></default>                                             
+                  </value>                                                          
+                  <options>DontPrintEmptyValues</options>                           
+                </Item>
+
+                <Item type="shorttext" name="Hemostasis::Other::1::Comment">       
+                  <uilink label="" widget="hemostasisOtherCommentLineEdit1" layout="" />
+                  <label lang="xx"></label>                                     
+                  <label lang="fr"></label>                                     
+                  <placeholder lang="xx">Comment, other unit</placeholder>                
+                  <placeholder lang="fr">Commentaire, autre unité</placeholder>              
+                </Item>
+
+              </Item> end of group hemostasis other 1
+               
+            <Item type="group" name="Hemostasis::Other::Group2">                  
+              <uilink widget="hemostasisOtherGroupBox2"/>                                   
+              <label lang="xx">Hemostasis 2</label>                                 
+              <label lang="fr">Hémostase 2</label>                                
+              <options>collapsible;SummaryFontBold;DontPrintEmptyValues</options> 
+                                                                                
+                <Item type="shorttext" name="Hemostasis::Other::2::Test">           
+                  <uilink label="" widget="hemostasisOtherTestLineEdit2" layout="" />   
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <placeholder lang="xx">Test name</placeholder>                  
+                  <placeholder lang="fr">Nom du test</placeholder>                
+                </Item>
+
+                <Item type="doublespin" name="Hemostasis::Other::2::Doublespin">    
+                  <uilink label="" widget="hemostasisOtherDoubleSpinBox2" layout="" />      
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <options></options>                                             
+                </Item>
+
+                <Item type="combo" name="Hemostasis::Other::2::Unit::Combo">        
+                  <uilink label="" widget="hemostasisOtherComboBox2" layout="" />             
+                  <label lang="xx"></label>                                         
+                  <label lang="fr"></label>                                         
+                  <value>                                                           
+                    <uuid id="0">Not done</uuid>                                    
+                    <!--<sctid>385660001</sctid>-->                                 
+                    <uuid id="1">IU/mL</uuid>                                       
+                    <uuid id="2">Index</uuid>                                       
+                    <uuid id="3">Titer</uuid>                                       
+                    <uuid id="4">Optical Density Ratio</uuid>
+                    <uuid id="5">Second</uuid>                       
+                    <uuid id="6">Percentage</uuid>
+                                                                  
+                    <possible id="0" lang="xx">ø</possible>                         
+                    <possible id="1" lang="xx">IU/mL</possible>                     
+                    <possible id="2" lang="xx">Index</possible>                     
+                    <possible id="3" lang="xx">Titer</possible>                     
+                    <possible id="4" lang="xx">OD ratio</possible>
+                    <possible id="5" lang="xx">s</possible>
+                    <possible id="6" lang="xx">%</possible>                  
+                                                                                
+                    <possible id="0" lang="fr">ø</possible>                         
+                    <possible id="1" lang="fr">UI/mL</possible>                     
+                    <possible id="2" lang="fr">Indice</possible>                    
+                    <possible id="3" lang="fr">Titre</possible>                     
+                    <possible id="4" lang="fr">DO</possible>
+                    <possible id="5" lang="fr">s</possible>
+                    <possible id="6" lang="fr">%</possible>
+                       
+                    <default></default>                                             
+                  </value>                                                          
+                  <options>DontPrintEmptyValues</options>                           
+                </Item>
+
+                <Item type="shorttext" name="Hemostasis::Other::2::Comment">       
+                  <uilink label="" widget="hemostasisOtherCommentLineEdit2" layout="" />
+                  <label lang="xx"></label>                                     
+                  <label lang="fr"></label>                                     
+                  <placeholder lang="xx">Comment, other unit</placeholder>                
+                  <placeholder lang="fr">Commentaire, autre unité</placeholder>              
+                </Item>
+
+              </Item> end of group hemostasis other 2
+
+              <Item type="group" name="Hemostasis::Other::Group3">                  
+              <uilink widget="hemostasisOtherGroupBox3"/>                                   
+              <label lang="xx">Hemostasis 3</label>                                 
+              <label lang="fr">Hémostase 3</label>                                
+              <options>collapsible;SummaryFontBold;DontPrintEmptyValues</options> 
+                                                                                
+                <Item type="shorttext" name="Hemostasis::Other::3::Test">           
+                  <uilink label="" widget="hemostasisOtherTestLineEdit3" layout="" />   
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <placeholder lang="xx">Test name</placeholder>                  
+                  <placeholder lang="fr">Nom du test</placeholder>                
+                </Item>
+
+                <Item type="doublespin" name="Hemostasis::Other::3::Doublespin">    
+                  <uilink label="" widget="hemostasisOtherDoubleSpinBox3" layout="" />      
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <options></options>                                             
+                </Item>
+
+                <Item type="combo" name="Hemostasis::Other::3::Unit::Combo">        
+                  <uilink label="" widget="hemostasisOtherComboBox3" layout="" />             
+                  <label lang="xx"></label>                                         
+                  <label lang="fr"></label>                                         
+                  <value>                                                           
+                    <uuid id="0">Not done</uuid>                                    
+                    <!--<sctid>385660001</sctid>-->                                 
+                    <uuid id="1">IU/mL</uuid>                                       
+                    <uuid id="2">Index</uuid>                                       
+                    <uuid id="3">Titer</uuid>                                       
+                    <uuid id="4">Optical Density Ratio</uuid>
+                    <uuid id="5">Second</uuid>                       
+                    <uuid id="6">Percentage</uuid>
+                                                                  
+                    <possible id="0" lang="xx">ø</possible>                         
+                    <possible id="1" lang="xx">IU/mL</possible>                     
+                    <possible id="2" lang="xx">Index</possible>                     
+                    <possible id="3" lang="xx">Titer</possible>                     
+                    <possible id="4" lang="xx">OD ratio</possible>
+                    <possible id="5" lang="xx">s</possible>
+                    <possible id="6" lang="xx">%</possible>                  
+                                                                                
+                    <possible id="0" lang="fr">ø</possible>                         
+                    <possible id="1" lang="fr">UI/mL</possible>                     
+                    <possible id="2" lang="fr">Indice</possible>                    
+                    <possible id="3" lang="fr">Titre</possible>                     
+                    <possible id="4" lang="fr">DO</possible>
+                    <possible id="5" lang="fr">s</possible>
+                    <possible id="6" lang="fr">%</possible>
+                       
+                    <default></default>                                             
+                  </value>                                                          
+                  <options>DontPrintEmptyValues</options>                           
+                </Item>
+
+                <Item type="shorttext" name="Hemostasis::Other::3::Comment">       
+                  <uilink label="" widget="hemostasisOtherCommentLineEdit3" layout="" />
+                  <label lang="xx"></label>                                     
+                  <label lang="fr"></label>                                     
+                  <placeholder lang="xx">Comment, other unit</placeholder>                
+                  <placeholder lang="fr">Commentaire, autre unité</placeholder>              
+                </Item>
+
+              </Item> end of group hemostasis other 3
+
+              <Item type="group" name="Hemostasis::Other::Group4">                  
+              <uilink widget="hemostasisOtherGroupBox4"/>                                   
+              <label lang="xx">Hemostasis 4</label>                                 
+              <label lang="fr">Hémostase 4</label>                                
+              <options>collapsible;SummaryFontBold;DontPrintEmptyValues</options> 
+                                                                                
+                <Item type="shorttext" name="Hemostasis::Other::4::Test">           
+                  <uilink label="" widget="hemostasisOtherTestLineEdit4" layout="" />   
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <placeholder lang="xx">Test name</placeholder>                  
+                  <placeholder lang="fr">Nom du test</placeholder>                
+                </Item>
+
+                <Item type="doublespin" name="Hemostasis::Other::4::Doublespin">    
+                  <uilink label="" widget="hemostasisOtherDoubleSpinBox4" layout="" />      
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <options></options>                                             
+                </Item>
+
+                <Item type="combo" name="Hemostasis::Other::4::Unit::Combo">        
+                  <uilink label="" widget="hemostasisOtherComboBox4" layout="" />             
+                  <label lang="xx"></label>                                         
+                  <label lang="fr"></label>                                         
+                  <value>                                                           
+                    <uuid id="0">Not done</uuid>                                    
+                    <!--<sctid>385660001</sctid>-->                                 
+                    <uuid id="1">IU/mL</uuid>                                       
+                    <uuid id="2">Index</uuid>                                       
+                    <uuid id="3">Titer</uuid>                                       
+                    <uuid id="4">Optical Density Ratio</uuid>
+                    <uuid id="5">Second</uuid>                       
+                    <uuid id="6">Percentage</uuid>
+                                                                  
+                    <possible id="0" lang="xx">ø</possible>                         
+                    <possible id="1" lang="xx">IU/mL</possible>                     
+                    <possible id="2" lang="xx">Index</possible>                     
+                    <possible id="3" lang="xx">Titer</possible>                     
+                    <possible id="4" lang="xx">OD ratio</possible>
+                    <possible id="5" lang="xx">s</possible>
+                    <possible id="6" lang="xx">%</possible>                  
+                                                                                
+                    <possible id="0" lang="fr">ø</possible>                         
+                    <possible id="1" lang="fr">UI/mL</possible>                     
+                    <possible id="2" lang="fr">Indice</possible>                    
+                    <possible id="3" lang="fr">Titre</possible>                     
+                    <possible id="4" lang="fr">DO</possible>
+                    <possible id="5" lang="fr">s</possible>
+                    <possible id="6" lang="fr">%</possible>
+                       
+                    <default></default>                                             
+                  </value>                                                          
+                  <options>DontPrintEmptyValues</options>                           
+                </Item>
+
+                <Item type="shorttext" name="Hemostasis::Other::4::Comment">       
+                  <uilink label="" widget="hemostasisOtherCommentLineEdit4" layout="" />
+                  <label lang="xx"></label>                                     
+                  <label lang="fr"></label>                                     
+                  <placeholder lang="xx">Comment, other unit</placeholder>                
+                  <placeholder lang="fr">Commentaire, autre unité</placeholder>              
+                </Item>
+
+              </Item> end of group hemostasis other 4
+
+              <Item type="group" name="Hemostasis::Other::Group5">                  
+              <uilink widget="hemostasisOtherGroupBox5"/>                                   
+              <label lang="xx">Hemostasis 5</label>                                 
+              <label lang="fr">Hémostase 5</label>                                
+              <options>collapsible;SummaryFontBold;DontPrintEmptyValues</options> 
+                                                                                
+                <Item type="shorttext" name="Hemostasis::Other::5::Test">           
+                  <uilink label="" widget="hemostasisOtherTestLineEdit5" layout="" />   
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <placeholder lang="xx">Test name</placeholder>                  
+                  <placeholder lang="fr">Nom du test</placeholder>                
+                </Item>
+
+                <Item type="doublespin" name="Hemostasis::Other::5::Doublespin">    
+                  <uilink label="" widget="hemostasisOtherDoubleSpinBox5" layout="" />      
+                  <label lang="xx"></label>                                       
+                  <label lang="fr"></label>                                       
+                  <options></options>                                             
+                </Item>
+
+                <Item type="combo" name="Hemostasis::Other::5::Unit::Combo">        
+                  <uilink label="" widget="hemostasisOtherComboBox5" layout="" />             
+                  <label lang="xx"></label>                                         
+                  <label lang="fr"></label>                                         
+                  <value>                                                           
+                    <uuid id="0">Not done</uuid>                                    
+                    <!--<sctid>385660001</sctid>-->                                 
+                    <uuid id="1">IU/mL</uuid>                                       
+                    <uuid id="2">Index</uuid>                                       
+                    <uuid id="3">Titer</uuid>                                       
+                    <uuid id="4">Optical Density Ratio</uuid>
+                    <uuid id="5">Second</uuid>                       
+                    <uuid id="6">Percentage</uuid>
+                                                                  
+                    <possible id="0" lang="xx">ø</possible>                         
+                    <possible id="1" lang="xx">IU/mL</possible>                     
+                    <possible id="2" lang="xx">Index</possible>                     
+                    <possible id="3" lang="xx">Titer</possible>                     
+                    <possible id="4" lang="xx">OD ratio</possible>
+                    <possible id="5" lang="xx">s</possible>
+                    <possible id="6" lang="xx">%</possible>                  
+                                                                                
+                    <possible id="0" lang="fr">ø</possible>                         
+                    <possible id="1" lang="fr">UI/mL</possible>                     
+                    <possible id="2" lang="fr">Indice</possible>                    
+                    <possible id="3" lang="fr">Titre</possible>                     
+                    <possible id="4" lang="fr">DO</possible>
+                    <possible id="5" lang="fr">s</possible>
+                    <possible id="6" lang="fr">%</possible>
+                       
+                    <default></default>                                             
+                  </value>                                                          
+                  <options>DontPrintEmptyValues</options>                           
+                </Item>
+
+                <Item type="shorttext" name="Hemostasis::Other::5::Comment">       
+                  <uilink label="" widget="hemostasisOtherCommentLineEdit5" layout="" />
+                  <label lang="xx"></label>                                     
+                  <label lang="fr"></label>                                     
+                  <placeholder lang="xx">Comment, other unit</placeholder>                
+                  <placeholder lang="fr">Commentaire, autre unité</placeholder>              
+                </Item>
+
+              </Item> end of group hemostasis other 5
+
+              </Item> end of group other hemostasis
+
+
+        </Item> <!-- end of detailswidget hemostasis -->
 
         <!--<Item type="detailswidget" name="Kidney" uifilename="./ui/xx/kidney.ui">
             <uilink label="" widget="" layout="mainLayout"/>

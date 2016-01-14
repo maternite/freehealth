@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>946</width>
-    <height>1122</height>
+    <height>1338</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -458,196 +458,185 @@
     </layout>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="otherLabel">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>other</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="otherGroupBox1">
-       <property name="title">
-        <string>serology 1</string>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLineEdit" name="otherSerologyLineEdit1"/>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="otherRadioLayout1"/>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox1">
-          <property name="maximum">
-           <double>100000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="otherComboBox1"/>
-        </item>
-        <item>
-         <widget class="QLabel" name="otherInterpretationLabel1">
-          <property name="text">
-           <string>interpretation</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="otherInterpretationLineEdit1"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="otherGroupBox2">
-       <property name="title">
-        <string>serology 2</string>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <widget class="QLineEdit" name="otherSerologyLineEdit2"/>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="otherRadioLayout2"/>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox2">
-          <property name="maximum">
-           <double>100000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="otherComboBox2"/>
-        </item>
-        <item>
-         <widget class="QLabel" name="otherInterpretationLabel2">
-          <property name="text">
-           <string>interpretation</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="otherInterpretationLineEdit2"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="otherGroupBox3">
-       <property name="title">
-        <string>serology 3</string>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QLineEdit" name="otherSerologyLineEdit3"/>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="otherRadioLayout3"/>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox3">
-          <property name="maximum">
-           <double>100000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="otherComboBox3"/>
-        </item>
-        <item>
-         <widget class="QLabel" name="otherInterpretationLabel3">
-          <property name="text">
-           <string>interpretation</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="otherInterpretationLineEdit3"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="otherGroupBox4">
-       <property name="title">
-        <string>serology 4</string>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <widget class="QLineEdit" name="otherSerologyLineEdit4"/>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="otherRadioLayout4"/>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox4">
-          <property name="maximum">
-           <double>100000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="otherComboBox4"/>
-        </item>
-        <item>
-         <widget class="QLabel" name="otherInterpretationLabel4">
-          <property name="text">
-           <string>interpretation</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="otherInterpretationLineEdit4"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="otherGroupBox5">
-       <property name="title">
-        <string>serology 5</string>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <widget class="QLineEdit" name="otherSerologyLineEdit5"/>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="otherRadioLayout5"/>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="otherDoubleSpinBox5">
-          <property name="maximum">
-           <double>100000.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="otherComboBox5"/>
-        </item>
-        <item>
-         <widget class="QLabel" name="otherInterpretationLabel5">
-          <property name="text">
-           <string>interpretation</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="otherInterpretationLineEdit5"/>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QGroupBox" name="otherGroupBox">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="otherGroupBox1">
+        <property name="title">
+         <string>serology 1</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="otherSerologyLineEdit1"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="otherRadioLayout1"/>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="otherDoubleSpinBox1">
+           <property name="maximum">
+            <double>100000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="otherComboBox1"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="otherInterpretationLabel1">
+           <property name="text">
+            <string>interpretation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="otherInterpretationLineEdit1"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="otherGroupBox2">
+        <property name="title">
+         <string>serology 2</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLineEdit" name="otherSerologyLineEdit2"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="otherRadioLayout2"/>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="otherDoubleSpinBox2">
+           <property name="maximum">
+            <double>100000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="otherComboBox2"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="otherInterpretationLabel2">
+           <property name="text">
+            <string>interpretation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="otherInterpretationLineEdit2"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="otherGroupBox3">
+        <property name="title">
+         <string>serology 3</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="otherSerologyLineEdit3"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="otherRadioLayout3"/>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="otherDoubleSpinBox3">
+           <property name="maximum">
+            <double>100000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="otherComboBox3"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="otherInterpretationLabel3">
+           <property name="text">
+            <string>interpretation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="otherInterpretationLineEdit3"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="otherGroupBox4">
+        <property name="title">
+         <string>serology 4</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLineEdit" name="otherSerologyLineEdit4"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="otherRadioLayout4"/>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="otherDoubleSpinBox4">
+           <property name="maximum">
+            <double>100000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="otherComboBox4"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="otherInterpretationLabel4">
+           <property name="text">
+            <string>interpretation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="otherInterpretationLineEdit4"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="otherGroupBox5">
+        <property name="title">
+         <string>serology 5</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLineEdit" name="otherSerologyLineEdit5"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="otherRadioLayout5"/>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="otherDoubleSpinBox5">
+           <property name="maximum">
+            <double>100000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="otherComboBox5"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="otherInterpretationLabel5">
+           <property name="text">
+            <string>interpretation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="otherInterpretationLineEdit5"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>

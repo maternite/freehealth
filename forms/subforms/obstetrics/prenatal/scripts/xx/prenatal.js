@@ -19,7 +19,7 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
     var prenatal_syst, prenatal_diast, prenatal_pulse;
     var prenatal_weight, prenatal_weightPrePregnancy, prenatal_weightGain;
     var prenatal_fatigueScore, prenatal_fatigueScoreLineEdit, prenatal_standing, prenatal_industrial, prenatal_repetitive, prenatal_physical, prenatal_hardness;
-    var prenatal_gestationalAge, prenatal_dateToUse, prenatal_estimatedDueDate, prenatal_lastMenstrualPeriodUi, prenatal_lastMenstrualPeriodItem, prenatal_conceptionDateUi, prenatal_conceptionDateItem, prenatal_useLmp, prenatal_useLmpItem, prenatal_useDateOfConception, prenatal_useDateOfConceptionItem;
+    var prenatal_gestationalAge, prenatal_dateToUse, prenatal_estimatedDueDate, prenatal_lastMenstrualPeriodUi, prenatal_lastMenstrualPeriodItem, prenatal_conceptionDateUi, prenatal_conceptionDateItem, prenatal_useLmp, prenatal_useLmpItem, prenatal_useDateOfConception, prenatal_useDateOfConceptionItem, defaultDate;
 
     function prenatal_setupUi() {
 
@@ -60,6 +60,7 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         prenatal_fatigueScoreLineEdit = prenatal_formUi.findChild("fatigueScoreTotalLineEdit");
 
         // obstetrical calendar
+        defaultDate = "01011900";
         prenatal_lastMenstrualPeriodUi = prenatal_formUi.findChild("lastMenstrualPeriodDateEdit");
         prenatal_lastMenstrualPeriodItem = freemedforms.forms.item("ObstetricalCalendar::LastMentrualPeriod");
         prenatal_conceptionDateUi = prenatal_formUi.findChild("conceptionDateDateEdit");
@@ -227,8 +228,8 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         prenatal_estimatedDueDate.setText(prenatal_empty);
         prenatal_currentWeeksAmenorrhoeaWeeksValue.setText(prenatal_empty);                     
         prenatal_currentWeeksAmenorrhoeaDaysValue.setText(prenatal_empty);
-        if (freemedforms.tools.dateToString(prenatal_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
-            print("inside computeEstimatedDueDate()-> lmp=01/01/2000 -> return");
+        if (freemedforms.tools.dateToString(prenatal_lastMenstrualPeriodItem.currentValue, "ddMMyyyy") == defaultDate) {
+            print("inside computeEstimatedDueDate()-> lmp=01/01/1900 -> return");
             return;
         }
         print("prenatal_computeEstimatedDueDate()");
@@ -245,8 +246,8 @@ namespace.module('com.freemedforms.obstetrics.prenatal', function (exports, requ
         var prenatal_emptyGA = "";
         prenatal_currentWeeksAmenorrhoeaWeeksValue.setText(prenatal_emptyGA);                     
         prenatal_currentWeeksAmenorrhoeaDaysValue.setText(prenatal_emptyGA);
-        if (freemedforms.tools.dateToString(prenatal_lastMenstrualPeriodItem.currentValue, "ddd dd MMM yyyy") == "Sat 01 Jan 2000") {
-            print("inside prenatal_computeGestationalAge()-> lmp=01/01/2000 -> return");
+        if (freemedforms.tools.dateToString(prenatal_lastMenstrualPeriodItem.currentValue, "ddMMyyyy") == defaultDate) {
+            print("inside prenatal_computeGestationalAge()-> lmp=01/01/1900 -> return");
             return;                                                             
         }                                        
         print("prenatal_computeGestationalAge()");
