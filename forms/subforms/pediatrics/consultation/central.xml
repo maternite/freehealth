@@ -10,15 +10,15 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-01-19</cdate>
-    <lmdate>2015-04-30</lmdate>
+    <lmdate>2016-01-19</lmdate>
     <icon>__theme__/stethoscope.png</icon>
     <weblink></weblink>
     <bibliography/>
 
     <!-- Translatable values -->
     <license>GPLv3</license>
-    <description lang="xx">Pediatrics form with biometrics</description>
-    <description lang="fr">Formulaire pédiatrique avec biométrie</description>
+    <description lang="xx">Pediatrics form</description>
+    <description lang="fr">Formulaire pédiatrique</description>
     <category lang="xx">Pediatrics</category>
     <category lang="fr">Pédiatrie</category>
     <specialties lang="xx">Tools</specialties>
@@ -32,12 +32,12 @@
   <file type="script" name="onload">./scripts/xx/pediatrics.js</file>
 
   <MedForm name="Maternity::Pediatrics::Consultation" uifilename="./ui/xx/pediatrics.ui">
-    <label lang="xx">Pediatrics form with biometrics</label>
-    <label lang="fr">Formulaire pédiatrique avec biométrie</label>
+    <label lang="xx">Pediatrics form</label>
+    <label lang="fr">Formulaire pédiatrique</label>
     <options>DontPrintEmptyValues;UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
-    <file type="htmlprintmask">./html/xx/new_mask.html</file>
-    <file type="htmlexportmask">./html/xx/new_mask.html</file>
+    <!--<file type="htmlprintmask">./html/xx/new_mask.html</file>
+    <file type="htmlexportmask">./html/xx/new_mask.html</file>-->
 
     <Item type="group" name="SubjectiveGroup">
       <uilink widget="subjectiveGroup"/>
@@ -61,13 +61,7 @@
       <label lang="fr">Objectif (examen clinique)</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="ObjectiveGroup::Objective">
-          <uilink label="" widget="" layout="objectiveLayout"/>
-          <tooltip lang="xx">Objective: your physical examination</tooltip>
-          <tooltip lang="fr">Objectif: votre examen clinique</tooltip>
-          <options>DontPrintEmptyValues</options>
-        </Item>
-<!--
+        <!--
         <Item type="measurement" name="ObjectiveGroup::Temperature::TemperatureValue">
           <uilink label="temperatureLabel" widget="temperatureValue;temperatureUnit" layout=""/>
           <label lang="xx">T°</label>
@@ -189,30 +183,71 @@
 	  <patientdata>HeadCircumferenceInCentimeters</patientdata>
 	</Item>
 
+        <Item type="texteditor" name="ObjectiveGroup::Objective::Physical::Examination">
+          <uilink label="physicalExaminationLabel" widget="" layout="physicalExaminationTexteditorLayout"/>
+          <label lang="xx">Physical examination</label>
+          <label lang="fr">Examen clinique</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
 
-    </Item>
+        <Item type="texteditor" name="ObjectiveGroup::Objective::Psychomotor::Development">
+          <uilink label="psychomotorDevelopmentLabel" widget="" layout="psychomotorDevelopmentTexteditorLayout"/>
+          <label lang="xx">Psychomotor development</label>
+          <label lang="fr">Développement psychomoteur</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
 
-    <Item type="group" name="AssessmentPlanGroup">
-      <uilink widget="assessmentPlanGroup"/>
-      <label lang="xx">Assessment and plan</label>
-      <label lang="fr">Analyse et prise en charge</label>
+
+
+
+    </Item> <!-- end of group Objective -->
+
+    <Item type="group" name="Assessment::Group">
+      <uilink widget="assessmentGroup"/>
+      <label lang="xx">Assessment</label>
+      <label lang="fr">Analyse</label>
       <options>DontPrintEmptyValues</options>
 
-        <Item type="texteditor" name="AssessmentPlanGroup::Assessment">
-          <uilink label="" widget="" layout="assessmentLayout"/>
+        <Item type="texteditor" name="Assessment::Group::Assessment::Texteditor">
+          <uilink label="" widget="" layout="assessmentTexteditorLayout"/>
           <options>DontPrintEmptyValues</options>
           <tooltip lang="xx">Assessment</tooltip>
           <tooltip lang="fr">Analyse</tooltip>
         </Item>
 
-        <Item type="texteditor" name="AssessmentPlanGroup::Plan">
-          <uilink label="" widget="" layout="planLayout"/>
-          <tooltip lang="xx">Plan</tooltip>
-          <tooltip lang="fr">Prise en charge</tooltip>
+    </Item> <!-- end of group Assessment -->
+
+    <Item type="group" name="Plan::Group">
+      <uilink widget="planGroup"/>
+      <label lang="xx">Plan</label>
+      <label lang="fr">Plan</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Plan::Group::Advice::Texteditor">
+          <uilink label="adviceLabel" widget="" layout="adviceTexteditorLayout"/>
+          <label lang="xx">Advice</label>
+          <label lang="fr">Conseils et recommendations</label>
           <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
         </Item>
 
-    </Item>
+        <Item type="texteditor" name="Plan::Group::Prescription::Texteditor">
+          <uilink label="prescriptionLabel" widget="" layout="prescriptionTexteditorLayout"/>
+          <label lang="xx">Prescription</label>
+          <label lang="fr">Prescription</label>
+          <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
+        </Item>
+
+        <Item type="date" name="Plan::Next::Appointment::Date">
+          <uilink label="appointmentlabel" widget="appointmentDateEdit" layout="" />
+          <label lang="xx">Next appointement</label>
+          <label lang="fr">Prochain rendez-vous</label>
+          <options></options>
+        </Item>
+
+
+    </Item> <!-- end of group Plan -->
 
     <tabstops ns="Maternity::Pediatrics::Consultation">
     <tabstop>SubjectiveGroup::Subjective</tabstop>
