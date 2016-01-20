@@ -31,13 +31,10 @@
     <label lang="fr">Consultation préanesthésique</label>
     <options>UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
-    <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
-    <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
+    <!--<file type="htmlprintmask">./html/xx/padtools_mask.html</file>
+    <file type="htmlexportmask">./html/xx/padtools_mask.html</file>-->
 
-<!--    <file>./airway.xml</file> -->
 
-<!-- Preoperative anesthesia consultation -->
-<!-- Airway assessment evaluation detailswidget  -->
 <Item type="group" name="Airway::Assessment::Evaluation::Group">
   <uilink label="" widget="airwayAssessmentEvaluationGroupBox" layout=""/>
   <label lang="xx">Airway assessment evaluation</label>
