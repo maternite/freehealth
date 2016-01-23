@@ -8,7 +8,7 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-05-06</cdate>
-    <lmdate>2016-01-08</lmdate>
+    <lmdate>2016-01-21</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -26,6 +26,8 @@
 
   </formdescription>
 
+  <file type="script" name="onload">./scripts/xx/anesthesiology.js</file> 
+
   <MedForm name="Maternity::Anesthesiology::Consultation" uifilename="./ui/xx/anesthesiology.ui">
     <label lang="xx">Preoperative anesthesia consultation</label>
     <label lang="fr">Consultation préanesthésique</label>
@@ -39,12 +41,13 @@
   <uilink label="" widget="airwayAssessmentEvaluationGroupBox" layout=""/>
   <label lang="xx">Airway assessment evaluation</label>
   <label lang="fr">Evaluation des voies aériennes</label>
-  <options>SummaryFontBold;expanded</options>
+  <options>SummaryFontBold;expanded;DontPrintEmptyValues</options>
 
     <Item type="combo" name="Airway::Mallampati::Score::Combo">
       <uilink label="mallampatiScoreLabel" widget="mallampatiScoreCombo" layout=""/>
       <label lang="xx">Mallampati Score</label>
       <label lang="fr">Score de Mallampati</label>
+      <options>DontPrintEmptyValues</options>
       <value>
         <uuid id="0">Not evaluated</uuid>
         <uuid id="1">MallampatiClass1</uuid>
@@ -68,6 +71,7 @@
       <uilink label="stateOfDentitionReviewLabel" widget="stateOfDentitionReviewLineEdit" layout=""/>
       <label lang="xx">State of dentition review</label>
       <label lang="fr">État dentaire</label>
+      <options>DontPrintEmptyValues</options>
     </Item>
 
     <Item type="radio" name="Airway::History::Of::Difficult::Airway::Radio">
@@ -85,13 +89,14 @@
           <possible id="1" lang="fr">Oui</possible>
           <possible id="2" lang="fr">Non</possible>
         </value>
-        <options>compact</options>
+        <options>compact;DontPrintEmptyValues</options>
     </Item>
 
     <Item type="group" name="Intraoral::Prosthesis::Group">
       <uilink widget="intraoralProsthesisGroupBox"/>
       <label lang="xx">Intraoral prosthesis</label>
       <label lang="fr">Prothèse dentaire</label>
+      <options>DontPrintEmptyValues</options>
 
         <Item type="radio" name="Intraoral::Prosthesis::Presence::Radio">
           <uilink label="intraoralProsthesisPresenceLabel" widget="" layout="intraoralProsthesisPresenceLayout"/>
@@ -105,7 +110,7 @@
             <possible id="0" lang="fr">Oui</possible>
             <possible id="1" lang="fr">Non</possible>
           </value>
-          <options>compact</options>
+          <options>compact;DontPrintEmptyValues</options>
         </Item>
         <Item type="radio" name="Intraoral::Prosthesis::Mobility::Radio">
           <uilink label="intraoralProsthesisMobilityLabel" widget="" layout="intraoralProsthesisMobilityLayout"/>
@@ -119,7 +124,7 @@
             <possible id="0" lang="fr">Mobile</possible>
             <possible id="1" lang="fr">Fixe</possible>
           </value>
-          <options>compact</options>
+          <options>compact;DontPrintEmptyValues</options>
         </Item>
         <Item type="radio" name="Intraoral::Prosthesis::Type::Radio">
           <uilink label="intraoralProsthesisTypeLabel" widget="" layout="intraoralProsthesisTypeLayout"/>
@@ -133,7 +138,7 @@
             <possible id="0" lang="fr">Dentier</possible>
             <possible id="1" lang="fr">Appareil orthodontique</possible>
           </value>
-          <options>compact</options>
+          <options>compact;DontPrintEmptyValues</options>
         </Item>
     </Item> <!-- end of group Intraoral::Prosthesis::Group -->
 
@@ -141,6 +146,7 @@
       <uilink label="pertinentFindingsLabel" widget="pertinentFindingsEdit"/>
       <label lang="xx">Pertinent findings</label>
       <label lang="fr">Constatations pertinentes</label>
+      <options>DontPrintEmptyValues</options>
     </Item>
 
   </Item> <!-- end of group Airway::Assessment::Evaluation::Group -->
@@ -169,6 +175,7 @@
 
         <Item type="combo" name="ObjectiveGroup::Temperature::Unit::Combo">
           <uilink label="" widget="temperatureUnit" layout=""/>
+          <options>DontPrintEmptyValues;notprintable</options>
           <value>
               <uuid id="0">celsius</uuid>
               <uuid id="1">fahrenheit</uuid>
@@ -193,7 +200,7 @@
           <label lang="fr">Pression artérielle (mmHg)</label>
           <tooltip lang="xx">Blood pressure (mmHg)</tooltip>
           <tooltip lang="fr">Pression artérielle (mmHg)</tooltip>
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;notprintable</options>
         </Item>
 
         <Item type="spin" name="ObjectiveGroup::BloodPressure::Syst">
@@ -247,14 +254,21 @@
           <label lang="fr">IMC</label>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;notprintable</options>
         </Item>
 
-        <Item type="helptext" name="ObjectiveGroup::BMI::Value">
-          <uilink label="" widget="bmiValue" layout=""/>
+        <Item type="helptext" name="ObjectiveGroup::BMI::Value::Label">
+          <uilink label="" widget="bmiValueLabel" layout=""/>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;notprintable</options>
+        </Item>
+
+        <Item type="shorttext" name="ObjectiveGroup::BMI::Value::Shorttext">
+          <uilink widget="bmiValueLineEdit"/>               
+          <options>DontPrintEmptyValues</options>                             
+          <placeholder lang="xx"></placeholder>                       
+          <placeholder lang="fr"></placeholder>                   
         </Item>
 
         <Item type="spin" name="ObjectiveGroup::OxygenSaturation::Value">
@@ -402,6 +416,7 @@
             <label lang="fr"></label>
             <placeholder lang="xx"></placeholder>
             <placeholder lang="fr"></placeholder>
+            <options>DontPrintEmptyValues</options>
           </Item>
 
         </Item> <!-- end of group Objective::Neurological::Group -->
@@ -420,6 +435,7 @@
           <label lang="fr">NYHA</label>
           <tooltip lang="xx">New York Heart Association Functional Classification</tooltip>
           <tooltip lang="fr">Classification fonctionnelle de la New York Heart Association</tooltip>
+          <options>DontPrintEmptyValues</options>
           <value>
             <uuid id="0">Not evaluated</uuid>
             <uuid id="1">NYHA Class 1</uuid>
@@ -445,6 +461,7 @@
           <label lang="fr">Échelle de dyspnée du MRC</label>
           <tooltip lang="xx">MRC breathlessness scale</tooltip>
           <tooltip lang="fr">Échelle de dyspnée du MRC</tooltip>
+          <options>DontPrintEmptyValues</options>
           <value>
             <uuid id="0">Not evaluated</uuid>
             <uuid id="1">MRC Grade 1</uuid>
@@ -473,6 +490,7 @@
           <label lang="fr">ASA</label>
           <tooltip lang="xx">ASA Physical Status Classification System</tooltip>
           <tooltip lang="fr">ASA Physical Status Classification System</tooltip>
+          <options>DontPrintEmptyValues</options>
           <value>
             <uuid id="0">Not evaluated</uuid>
             <uuid id="1">ASA I</uuid>
@@ -532,8 +550,8 @@
 
         <Item type="texteditor" name="Plan::Antibiotic::Prophylaxis::Texteditor">
           <uilink label="antibioticProphylaxisLabel" layout="antibioticProphylaxisTextEditLayout"/>
-          <label lang="xx">Preoperative fasting</label>
-          <label lang="fr">Jeûne pré-opératoire</label>
+          <label lang="xx">Antibiotic prophylaxis</label>
+          <label lang="fr">Antibioprophylaxie</label>
           <options>DontPrintEmptyValues</options>
           <papers>Prescription</papers>
         </Item>
@@ -556,7 +574,7 @@
             <possible id="2" lang="fr">En urgence</possible>
             <possible id="3" lang="fr">Non programmée</possible>
           </value>
-          <options>compact</options>
+          <options>compact;DontPrintEmptyValues</options>
         </Item>
 
         <Item type="radio" name="Plan::Intervention::Hospital::Status::Radio">
@@ -574,7 +592,7 @@
             <possible id="1" lang="fr">Ambulatoire</possible>
             <possible id="2" lang="fr">Hospitalisation classique</possible>
           </value>
-          <options>compact</options>
+          <options>compact;DontPrintEmptyValues</options>
         </Item>
 
         <Item type="group" name="Plan::Anesthesia::Protocol::Group">

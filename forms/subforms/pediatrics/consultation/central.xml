@@ -10,15 +10,15 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2015-01-19</cdate>
-    <lmdate>2016-01-19</lmdate>
+    <lmdate>2016-01-21</lmdate>
     <icon>__theme__/stethoscope.png</icon>
     <weblink></weblink>
     <bibliography/>
 
     <!-- Translatable values -->
     <license>GPLv3</license>
-    <description lang="xx">Pediatrics form</description>
-    <description lang="fr">Formulaire pédiatrique</description>
+    <description lang="xx">Pediatric consultation</description>
+    <description lang="fr">Consultation pédiatrique</description>
     <category lang="xx">Pediatrics</category>
     <category lang="fr">Pédiatrie</category>
     <specialties lang="xx">Tools</specialties>
@@ -32,8 +32,8 @@
   <file type="script" name="onload">./scripts/xx/pediatrics.js</file>
 
   <MedForm name="Maternity::Pediatrics::Consultation" uifilename="./ui/xx/pediatrics.ui">
-    <label lang="xx">Pediatrics form</label>
-    <label lang="fr">Formulaire pédiatrique</label>
+    <label lang="xx">Pediatric consultation</label>
+    <label lang="fr">Consultation pédiatrique</label>
     <options>DontPrintEmptyValues;UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
     <!--<file type="htmlprintmask">./html/xx/new_mask.html</file>
@@ -156,20 +156,29 @@
           <patientdata>HeightInCentimeters</patientdata>
         </Item>
 
-        <Item type="helptext" name="ObjectiveGroup::BMI::Label">
+        <Item type="helptext" name="ObjectiveGroup::BMI::Label::Helptext">
           <uilink widget="bmiLabel"/>
           <label lang="xx">BMI</label>
           <label lang="fr">IMC</label>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;notprintable</options>
         </Item>
 
-        <Item type="helptext" name="ObjectiveGroup::BMI::Value">
-          <uilink label="" widget="bmiValue" layout=""/>
+        <Item type="helptext" name="ObjectiveGroup::BMI::Value::Helptext">
+          <uilink label="" widget="bmiValueLabel" layout=""/>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;notprintable</options>
+        </Item>
+
+        <Item type="shorttext" name="ObjectiveGroup::BMI::Value::Shorttext">                
+          <uilink label="bmiLabel" widget="bmiValueLineEdit" layout=""/>
+          <label lang="xx">BMI</label>                                          
+          <label lang="fr">IMC</label>                        
+          <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
+          <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>DontPrintEmptyValues</options>                               
         </Item>
 
         <Item type="measurement" name="ObjectiveGroup::HeadCircumference::Value">

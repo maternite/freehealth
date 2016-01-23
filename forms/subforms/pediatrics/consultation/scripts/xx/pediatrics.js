@@ -1,4 +1,4 @@
-namespace.module('com.freemedforms.generic.anesthesiology', function (exports, require) {
+namespace.module('com.freemedforms.pediatrics.consultation', function (exports, require) {
 
     exports.extend({
                        'setupUi': setupUi,
@@ -8,23 +8,25 @@ namespace.module('com.freemedforms.generic.anesthesiology', function (exports, r
 
     // Ui vars (retrieved from the ui)
     var syst, diast, pulse;
-    var weight, weightUnit, height, heightUnit, bmi;
+    var weight, weightUnit, weightUnitItem, height, heightUnit, bmiValueLabel, bmiValueLineEdit;
 
     function setupUi() {
-        print("com.freemedforms.generic.anesthesiology Setup UI");
+        print("com.freemedforms.pediatric.consultation Setup UI");
         freemedforms.forms.namespaceInUse = "";
-        var formItem = freemedforms.forms.item("Maternity::Anesthesiology::Consultation");
+        var formItem = freemedforms.forms.item("Maternity::Pediatrics::Consultation");
         print(formItem);
         formUi = formItem.ui();
         syst = formUi.findChild("bloodPressureSystolicValue");
         diast = formUi.findChild("bloodPressureDiastolicValue");
         pulse = formUi.findChild("bloodPressurePulseValue");
-        bmi = formUi.findChild("bmiValue");
+        bmiValueLabel = formUi.findChild("bmiValueLabel");
+        bmiValueLineEdit = formUi.findChild("bmiValueLineEdit");
         weight = formUi.findChild("weightValue");
         weightUnit = formUi.findChild("weightUnit");
+        weightUnitItem = freemedforms.forms.item("Maternity::Pediatrics::Consultation::ObjectiveGroup::Weight::Value");
         height = formUi.findChild("heightValue");
         heightUnit = formUi.findChild("heightUnit");
-
+        heightUnitItem = freemedforms.forms.item("Maternity::Pediatrics::Consultation::ObjectiveGroup::Height::Value");
         populateCombos();
 
         // connect data changed on spins
@@ -35,6 +37,9 @@ namespace.module('com.freemedforms.generic.anesthesiology', function (exports, r
         height['valueChanged(double)'].connect(this, computeBMI);
         weightUnit['currentIndexChanged(int)'].connect(this, computeBMI);
         heightUnit['currentIndexChanged(int)'].connect(this, computeBMI);
+
+        // hide bmiValueLineEdit
+        bmiValueLineEdit.visible = false;
 
     }
 
@@ -58,11 +63,77 @@ namespace.module('com.freemedforms.generic.anesthesiology', function (exports, r
         pulse.setText(text);
     }
 
+    function roundToOne(num) {    
+        return +(Math.round(num + "e+1")  + "e-1");
+    }
+
+    function weightToKilogram(weightUnit, weightValue) {
+        print(weightUnit,weightValue);
+        var ounceToKilogram = 0.028349523125; //International avoirdupois ounce
+        var poundToKilogram = 0.45359237; //International avoirdupois pound
+        var gramToKilogram = 0.001;                            
+        var kilogram = "Kilogram";                                              
+        var gram = "Gram";                                                      
+        var ounce = "Ounce";                                                    
+        var pound = "Pound";
+        if (~weightUnit.indexOf(gram)) {
+            print("gram to kg", weightValue*gramToKilogram);
+            return weightValue*gramToKilogram;
+        } else if (~weightUnit.indexOf(kilogram)) {
+            return weightValue;
+        } else if (~weightUnit.indexOf(ounce)) {
+            return weightValue*ounceToKilogram;
+        } else if (~weightUnit.indexOf(pound)) {
+            return weightValue*poundToKilogram;
+        }
+    }
+
+    function heightToMeter(heightUnit, heightValue) {                        
+        var centimeterToMeter = 0.01;                                   
+        var inchToMeter = 0.0254;                                       
+        var footToMeter = 0.3048;                                             
+        var centimeter = "Centimeter";
+        var meter = "Meter";                                              
+        var inch = "Inch";                                                      
+        var foot = "Foot";                                                    
+        if (~heightUnit.indexOf(centimeter)) {                                        
+            return heightValue*centimeterToMeter;                                  
+        } else if (~heightUnit.indexOf(meter)) {                             
+            return heightValue;                                                 
+        } else if (~heightUnit.indexOf(inch)) {                                
+            return heightValue*inchToMeter;                                 
+        } else if (~heightUnit.indexOf(foot)) {                                
+            return heightValue*footToMeter;                                 
+        }                                                                       
+    }
+
     function computeBMI() {
-        var textbmi  = (weight.value) / ((height.value) * (height.value));
-        bmi.setText(textbmi);
+        //Number.prototype.round = function(places) {                                 
+        //return +(Math.round(this + "e+" + places)  + "e-" + places);            
+        //}
+        var bmi = Number(textbmi);
+        // weight unit kilogram
+        // height unit meter
+        var weightUnit = weightUnitItem.currentText;
+        var weightValue = Number(weight.value);
+        weightKilogram = weightToKilogram(weightUnit, weightValue);    
+
+        var heightUnit = heightUnitItem.currentText;                            
+        var heightValue = Number(height.value);                                 
+        heightMeter = heightToMeter(heightUnit, heightValue);        
+
+        var bmi  = (weightKilogram) / ((heightMeter) * (heightMeter));
+        bmi = roundToOne(bmi);
+        var textbmi = bmi.toString();
+        if (!isNaN(bmi)) {
+        bmiValueLineEdit.setText(textbmi);
+        bmiValueLabel.setText(textbmi);
+        } else {
+        bmiValueLineEdit.setText("");                                      
+        bmiValueLabel.setText("");
+        }
     }
 
 });
 
-namespace.com.freemedforms.generic.anesthesiology.setupUi();
+namespace.com.freemedforms.pediatrics.consultation.setupUi();

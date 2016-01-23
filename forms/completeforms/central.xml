@@ -5,8 +5,8 @@
 
 <formdescription>
     <!-- Non translatable values -->
-    <authors>Eric Maeker, MD</authors>
-    <version>1.0</version>
+    <authors>Jerome Pinguet</authors>
+    <version>test</version>
     <fmfv>0.9.7</fmfv>
     <cdate>2015-08-24</cdate>
     <lmdate>2016-01-07</lmdate>
@@ -183,6 +183,16 @@
     <options>NoEpisode;DontPrintEmptyValues</options>
     <file>__subForms__/obstetrics/prescription/central.xml</file>
   </MedForm>
+</MedForm>
+
+<MedForm name="Maternity::Pediatrics">                                          
+  <label lang="xx">Pediatrics</label>                                           
+  <label lang="fr">Pédiatrie</label>                                          
+  <icon>__theme__/stethoscope.png</icon>                                        
+  <options>NoEpisode;DontPrintEmptyValues</options>
+
+  <!--<file>__subForms__/pediatrics/consultation/central.xml</file>-->
+
 </MedForm>
 
 </FreeMedForms>

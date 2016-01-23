@@ -178,26 +178,13 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
-       <layout class="QFormLayout" name="formLayout">
-        <property name="fieldGrowthPolicy">
-         <enum>QFormLayout::FieldsStayAtSizeHint</enum>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLabel" name="temperatureLabel">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="6" column="0">
+         <widget class="QLabel" name="oxygenSaturationLabel">
           <property name="text">
-           <string>T</string>
+           <string>SpO2</string>
           </property>
          </widget>
-        </item>
-        <item row="0" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QDoubleSpinBox" name="temperatureValue"/>
-          </item>
-          <item>
-           <widget class="QComboBox" name="temperatureUnit"/>
-          </item>
-         </layout>
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="heartRateLabel">
@@ -206,31 +193,13 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0">
-          <item>
-           <widget class="QSpinBox" name="heartRateValue">
-            <property name="suffix">
-             <string>bpm</string>
-            </property>
-            <property name="maximum">
-             <number>220</number>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="bloodPressureLabel">
-          <property name="text">
-           <string>BP</string>
-          </property>
-         </widget>
-        </item>
         <item row="2" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
            <widget class="QSpinBox" name="bloodPressureSystolicValue">
+            <property name="suffix">
+             <string comment="millimeter of mercury">mmHg</string>
+            </property>
             <property name="maximum">
              <number>300</number>
             </property>
@@ -241,6 +210,9 @@
           </item>
           <item>
            <widget class="QSpinBox" name="bloodPressureDiastolicValue">
+            <property name="suffix">
+             <string comment="millimeter of mercury">mmHg</string>
+            </property>
             <property name="maximum">
              <number>300</number>
             </property>
@@ -258,12 +230,15 @@
           </item>
          </layout>
         </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="weightLabel">
-          <property name="text">
-           <string>W</string>
-          </property>
-         </widget>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QDoubleSpinBox" name="temperatureValue"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="temperatureUnit"/>
+          </item>
+         </layout>
         </item>
         <item row="3" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -279,10 +254,45 @@
           </item>
          </layout>
         </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="heightLabel">
+        <item row="5" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <item>
+           <widget class="QLabel" name="bmiValueLabel">
+            <property name="text">
+             <string>bmi</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="bmiValueLineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QSpinBox" name="oxygenSaturationValue">
+            <property name="suffix">
+             <string>%</string>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="bloodPressureLabel">
           <property name="text">
-           <string>H</string>
+           <string>BP</string>
           </property>
          </widget>
         </item>
@@ -300,6 +310,13 @@
           </item>
          </layout>
         </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="temperatureLabel">
+          <property name="text">
+           <string>T</string>
+          </property>
+         </widget>
+        </item>
         <item row="5" column="0">
          <widget class="QLabel" name="bmiLabel">
           <property name="text">
@@ -307,33 +324,42 @@
           </property>
          </widget>
         </item>
-        <item row="5" column="1">
-         <widget class="QLabel" name="bmiValue">
+        <item row="4" column="0">
+         <widget class="QLabel" name="heightLabel">
           <property name="text">
-           <string>BMI</string>
+           <string>H</string>
           </property>
          </widget>
         </item>
-        <item row="6" column="0">
-         <widget class="QLabel" name="oxygenSaturationLabel">
+        <item row="3" column="0">
+         <widget class="QLabel" name="weightLabel">
           <property name="text">
-           <string>SpO2</string>
+           <string>W</string>
           </property>
          </widget>
         </item>
-        <item row="6" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_9">
-          <item>
-           <widget class="QSpinBox" name="oxygenSaturationValue">
-            <property name="suffix">
-             <string>%</string>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item row="3" column="2">
+         <spacer name="horizontalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="heartRateValue">
+          <property name="suffix">
+           <string>bpm</string>
+          </property>
+          <property name="maximum">
+           <number>220</number>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

@@ -17,7 +17,7 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester2', function (exp
     var trimester2_gestationalAge, trimester2_dateToUse, trimester2_estimatedDueDate, trimester2_lastMenstrualPeriodUi, trimester2_lastMenstrualPeriodItem, trimester2_conceptionDateUi, trimester2_conceptionDateItem, trimester2_useLmp, trimester2_useLmpItem, trimester2_useDateOfConception, trimester2_useDateOfConceptionItem, trimester2_currentWeeksAmenorrhoeaWeeksValueLineEdit, trimester2_currentWeeksAmenorrhoeaDaysValueLineEdit, defaultDate;
 
     (function () {
-    var x = "Hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+    var x = "Hello!!!!!!!!!!!!!!!!!!!!!!!!!!";
     print(x);      // I will invoke myself
     trimester2_setupUi();
     hideCalendarLineEdit();

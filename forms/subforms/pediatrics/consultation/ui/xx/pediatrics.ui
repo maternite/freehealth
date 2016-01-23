@@ -41,65 +41,10 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QDoubleSpinBox" name="temperatureValue">
-            <property name="decimals">
-             <number>1</number>
-            </property>
-            <property name="maximum">
-             <double>150.000000000000000</double>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="temperatureUnit"/>
-          </item>
-         </layout>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="bloodPressureLabel">
+        <item row="5" column="0">
+         <widget class="QLabel" name="headCircumferenceLabel">
           <property name="text">
-           <string>BP</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QSpinBox" name="bloodPressureSystolicValue">
-            <property name="maximum">
-             <number>300</number>
-            </property>
-            <property name="singleStep">
-             <number>10</number>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="bloodPressureDiastolicValue">
-            <property name="maximum">
-             <number>300</number>
-            </property>
-            <property name="singleStep">
-             <number>10</number>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="bloodPressurePulseValue">
-            <property name="text">
-             <string>PP</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="weightLabel">
-          <property name="text">
-           <string>W</string>
+           <string>HC</string>
           </property>
          </widget>
         </item>
@@ -138,33 +83,36 @@
           </item>
          </layout>
         </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="bmiLabel">
-          <property name="text">
-           <string>BMI</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QLabel" name="bmiValueLabel">
-            <property name="text">
-             <string>BMI</string>
+           <widget class="QSpinBox" name="bloodPressureSystolicValue">
+            <property name="maximum">
+             <number>300</number>
+            </property>
+            <property name="singleStep">
+             <number>10</number>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="bmiLineEdit"/>
+           <widget class="QSpinBox" name="bloodPressureDiastolicValue">
+            <property name="maximum">
+             <number>300</number>
+            </property>
+            <property name="singleStep">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="bloodPressurePulseValue">
+            <property name="text">
+             <string>PP</string>
+            </property>
+           </widget>
           </item>
          </layout>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="headCircumferenceLabel">
-          <property name="text">
-           <string>HC</string>
-          </property>
-         </widget>
         </item>
         <item row="5" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -175,6 +123,71 @@
            <widget class="QComboBox" name="headCircumferenceUnit"/>
           </item>
          </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QDoubleSpinBox" name="temperatureValue">
+            <property name="decimals">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <double>150.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="temperatureUnit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="bmiLabel">
+          <property name="text">
+           <string>BMI</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="bloodPressureLabel">
+          <property name="text">
+           <string>BP</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="weightLabel">
+          <property name="text">
+           <string>W</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="bmiValueLabel">
+            <property name="text">
+             <string>bmi</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="bmiValueLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
