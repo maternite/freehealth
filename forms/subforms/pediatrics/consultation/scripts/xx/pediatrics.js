@@ -8,7 +8,7 @@ namespace.module('com.freemedforms.pediatrics.consultation', function (exports, 
 
     // Ui vars (retrieved from the ui)
     var syst, diast, pulse;
-    var weight, weightUnit, weightUnitItem, height, heightUnit, bmiValueLabel, bmiValueLineEdit;
+    var weight, weightUnit, weightUnitItem, height, heightUnit, heightUnitItem, bmiValueLabel, bmiValueLineEdit;
 
     function setupUi() {
         print("com.freemedforms.pediatric.consultation Setup UI");

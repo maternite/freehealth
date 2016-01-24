@@ -265,7 +265,9 @@
         </Item>
 
         <Item type="shorttext" name="ObjectiveGroup::BMI::Value::Shorttext">
-          <uilink widget="bmiValueLineEdit"/>               
+          <uilink label="bmiLabel" widget="bmiValueLineEdit"/>
+          <label lang="xx">BMI</label>                                          
+          <label lang="fr">IMC</label>               
           <options>DontPrintEmptyValues</options>                             
           <placeholder lang="xx"></placeholder>                       
           <placeholder lang="fr"></placeholder>                   
