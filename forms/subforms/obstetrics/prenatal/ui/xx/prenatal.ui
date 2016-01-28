@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>821</width>
-    <height>4095</height>
+    <height>4797</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -442,6 +442,16 @@
       <string>Objective</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_9">
+      <item row="6" column="4">
+       <widget class="QLineEdit" name="bmiValueLineEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
       <item row="7" column="0" colspan="4">
        <widget class="QLabel" name="fundalHeightLabel">
         <property name="text">
@@ -573,13 +583,6 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="2" colspan="3">
-       <widget class="QLabel" name="weightGainValue">
-        <property name="text">
-         <string>WG V</string>
-        </property>
-       </widget>
-      </item>
       <item row="5" column="0">
        <widget class="QLabel" name="heightLabel">
         <property name="text">
@@ -601,6 +604,9 @@
         </item>
        </layout>
       </item>
+      <item row="8" column="6">
+       <widget class="QLineEdit" name="peripheralEdemaLineEdit"/>
+      </item>
       <item row="6" column="0">
        <widget class="QLabel" name="bmiLabel">
         <property name="text">
@@ -609,14 +615,11 @@
        </widget>
       </item>
       <item row="6" column="1" colspan="2">
-       <widget class="QLabel" name="bmiValue">
+       <widget class="QLabel" name="bmiValueLabel">
         <property name="text">
          <string>BMI</string>
         </property>
        </widget>
-      </item>
-      <item row="8" column="6">
-       <widget class="QLineEdit" name="peripheralEdemaLineEdit"/>
       </item>
       <item row="7" column="4" colspan="2">
        <widget class="QSpinBox" name="fundalHeightSpinBox">
@@ -625,21 +628,8 @@
         </property>
        </widget>
       </item>
-      <item row="8" column="0" colspan="5">
-       <widget class="QLabel" name="peripheralEdemaLabel">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Peripheral edema</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="5">
-       <layout class="QHBoxLayout" name="peripheralEdemaRadioLayout"/>
+      <item row="9" column="6">
+       <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
       </item>
       <item row="10" column="0" colspan="3">
        <widget class="QLabel" name="pelvisLabel">
@@ -648,8 +638,8 @@
         </property>
        </widget>
       </item>
-      <item row="9" column="6">
-       <widget class="QLineEdit" name="varicoseVeinsLineEdit"/>
+      <item row="8" column="5">
+       <layout class="QHBoxLayout" name="peripheralEdemaRadioLayout"/>
       </item>
       <item row="9" column="5">
        <layout class="QHBoxLayout" name="varicoseVeinsRadioLayout"/>
@@ -663,6 +653,13 @@
          <string>Cervix</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_10">
+         <item row="7" column="0">
+          <widget class="QLabel" name="vaginalExaminationLabel">
+           <property name="text">
+            <string>vaginal examination</string>
+           </property>
+          </widget>
+         </item>
          <item row="1" column="0">
           <widget class="QLabel" name="cervixConsistencyLabel">
            <property name="text">
@@ -700,6 +697,13 @@
            </property>
           </widget>
          </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="internalCervicalDilationLabel">
+           <property name="text">
+            <string>Internal cervical dilation</string>
+           </property>
+          </widget>
+         </item>
          <item row="3" column="0">
           <widget class="QLabel" name="cervixDilationLabel">
            <property name="text">
@@ -714,22 +718,11 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="internalCervicalDilationLabel">
-           <property name="text">
-            <string>Internal cervical dilation</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="vaginalExaminationLabel">
-           <property name="text">
-            <string>vaginal examination</string>
-           </property>
-          </widget>
-         </item>
          <item row="6" column="2">
           <widget class="QLineEdit" name="externalCervicalDilationLineEdit"/>
+         </item>
+         <item row="7" column="2">
+          <widget class="QLineEdit" name="vaginalExaminationLineEdit"/>
          </item>
          <item row="8" column="0">
           <widget class="QLabel" name="amnioticSacLabel">
@@ -738,8 +731,8 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="2">
-          <widget class="QLineEdit" name="vaginalExaminationLineEdit"/>
+         <item row="8" column="2">
+          <widget class="QLineEdit" name="amnioticSacLineEdit"/>
          </item>
          <item row="9" column="0">
           <widget class="QLabel" name="lowerUterineSegmentLabel">
@@ -763,24 +756,15 @@
          <item row="4" column="2">
           <layout class="QHBoxLayout" name="fetalStationRadioLayout"/>
          </item>
-         <item row="8" column="2">
-          <widget class="QLineEdit" name="amnioticSacLineEdit"/>
-         </item>
-         <item row="9" column="2">
-          <layout class="QHBoxLayout" name="lowerUterineSegmentRadioLayout"/>
-         </item>
-         <item row="0" column="3" rowspan="2">
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+         <item row="6" column="1">
+          <widget class="QSpinBox" name="externalCervicalDilationSpinBox">
+           <property name="suffix">
+            <string comment="centimeter">cm</string>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
+           <property name="maximum">
+            <number>10</number>
            </property>
-          </spacer>
+          </widget>
          </item>
          <item row="5" column="1">
           <widget class="QSpinBox" name="internalCervicalDilationSpinBox">
@@ -798,17 +782,53 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
-          <widget class="QSpinBox" name="externalCervicalDilationSpinBox">
-           <property name="suffix">
-            <string comment="centimeter">cm</string>
-           </property>
-           <property name="maximum">
-            <number>10</number>
-           </property>
-          </widget>
+         <item row="9" column="2">
+          <layout class="QHBoxLayout" name="lowerUterineSegmentRadioLayout"/>
          </item>
         </layout>
+       </widget>
+      </item>
+      <item row="8" column="7">
+       <spacer name="horizontalSpacer_12">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="8" column="0" colspan="5">
+       <widget class="QLabel" name="peripheralEdemaLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Peripheral edema</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2" colspan="2">
+       <widget class="QLabel" name="weightGainValue">
+        <property name="text">
+         <string>WG V</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QLineEdit" name="weightGainValueLineEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
        </widget>
       </item>
      </layout>

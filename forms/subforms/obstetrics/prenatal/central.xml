@@ -25,13 +25,173 @@
     </updateinfo>
 
   </formdescription>
+  
+  <fieldequivalence>
+	<equivalent old="ObstetricalCalendar" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::LastMentrualPeriod" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::LastMentrualPeriod" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::ConceptionDate" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::ConceptionDate" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::UseLmpDateOfConceptionHelpText" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::UseLmpDateOfConceptionHelpText" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::UseLMP::Check" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::UseLMP::Check" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::UseConceptionDate::Check" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::UseConceptionDate::Check" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::LmpDeterminedBy::Radio" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::LmpDeterminedBy::Radio" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::LmpDeterminedBy::Comment" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::LmpDeterminedBy::Comment" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::gestationalAgeHelpText" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::gestationalAgeHelpText" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText" setInVersion=""/>
+	<equivalent old="ObstetricalCalendar::Edd::HelpText" new="Maternity::Obstetrics::Prenatal::ObstetricalCalendar::Edd::HelpText" setInVersion=""/>
+	<equivalent old="Subjective" new="Maternity::Obstetrics::Prenatal::Subjective" setInVersion=""/>
+	<equivalent old="CaseHistory" new="Maternity::Obstetrics::Prenatal::CaseHistory" setInVersion=""/>
+	<equivalent old="Medical::Regimen" new="Maternity::Obstetrics::Prenatal::Medical::Regimen" setInVersion=""/>
+	<equivalent old="FetalMovement" new="Maternity::Obstetrics::Prenatal::FetalMovement" setInVersion=""/>
+	<equivalent old="SubjectiveFatigueScore" new="Maternity::Obstetrics::Prenatal::SubjectiveFatigueScore" setInVersion=""/>
+	<equivalent old="Score::Fatigue::Check::Standing" new="Maternity::Obstetrics::Prenatal::Score::Fatigue::Check::Standing" setInVersion=""/>
+	<equivalent old="Score::Fatigue::Check::Industrial" new="Maternity::Obstetrics::Prenatal::Score::Fatigue::Check::Industrial" setInVersion=""/>
+	<equivalent old="Score::Fatigue::Check::Repetitive" new="Maternity::Obstetrics::Prenatal::Score::Fatigue::Check::Repetitive" setInVersion=""/>
+	<equivalent old="Score::Fatigue::Check::Physical" new="Maternity::Obstetrics::Prenatal::Score::Fatigue::Check::Physical" setInVersion=""/>
+	<equivalent old="Score::Fatigue::Check::Hardness" new="Maternity::Obstetrics::Prenatal::Score::Fatigue::Check::Hardness" setInVersion=""/>
+	<equivalent old="Score::Fatigue::FinalScore" new="Maternity::Obstetrics::Prenatal::Score::Fatigue::FinalScore" setInVersion=""/>
+	<equivalent old="Score::Fatigue::Comment" new="Maternity::Obstetrics::Prenatal::Score::Fatigue::Comment" setInVersion=""/>
+	<equivalent old="Objective" new="Maternity::Obstetrics::Prenatal::Objective" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Temperature::Label" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Temperature::Label" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Temperature::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Temperature::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Temperature::Unit" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Temperature::Unit" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::BloodPressure::Label" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::BloodPressure::Label" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::BloodPressure::Syst" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::BloodPressure::Syst" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::BloodPressure::Diast" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::BloodPressure::Diast" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::BloodPressure::Pulse" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::BloodPressure::Pulse" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Weight::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Weight::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::PrePregnancyWeight::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::PrePregnancyWeight::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::WeightGain::Label" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::WeightGain::Label" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::WeightGain::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::WeightGain::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Height::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Height::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::BMI::Label" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::BMI::Label" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::BMI::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::BMI::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::BMI::Value::Shorttext" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::BMI::Value::Shorttext" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::FundalHeight::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::FundalHeight::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::PeripheralEdema::Radio" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::PeripheralEdema::Radio" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::PeripheralEdema::Comment" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::PeripheralEdema::Comment" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::VaricoseVeins::Radio" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::VaricoseVeins::Radio" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::VaricoseVeins::Comment" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::VaricoseVeins::Comment" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Pelvis::Radio" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Pelvis::Radio" setInVersion=""/>
+	<equivalent old="Objective::Cervix" new="Maternity::Obstetrics::Prenatal::Objective::Cervix" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Cervix::Position" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Cervix::Position" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Cervix::Consistency" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Cervix::Consistency" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Cervix::Effacement" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Cervix::Effacement" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Cervix::Dilation" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Cervix::Dilation" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::Cervix::FetalStation" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::Cervix::FetalStation" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::InternalCervicalDilation::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::InternalCervicalDilation::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::InternalCervicalDilation::Comment" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::InternalCervicalDilation::Comment" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::ExternalCervicalDilation::Value" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::ExternalCervicalDilation::Value" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::ExternalCervicalDilation::Comment" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::ExternalCervicalDilation::Comment" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::VaginalExamination::Comment" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::VaginalExamination::Comment" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::AmnioticSacStatus" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::AmnioticSacStatus" setInVersion=""/>
+	<equivalent old="ObjectiveGroup::LowerUterineSegment::Distension" new="Maternity::Obstetrics::Prenatal::ObjectiveGroup::LowerUterineSegment::Distension" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound::Bip::Comment" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound::Bip::Comment" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound::Bip::Value" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound::Bip::Value" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound::EstimatedFetalWeight::Comment" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound::EstimatedFetalWeight::Comment" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound::EstimatedFetalWeight::Value" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound::EstimatedFetalWeight::Value" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound::AmnioticFluid::Findings" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound::AmnioticFluid::Findings" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound::OtherFindings" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound::OtherFindings" setInVersion=""/>
+	<equivalent old="Objective::Ultrasound::Impression" new="Maternity::Obstetrics::Prenatal::Objective::Ultrasound::Impression" setInVersion=""/>
+	<equivalent old="Point::of::care::test" new="Maternity::Obstetrics::Prenatal::Point::of::care::test" setInVersion=""/>
+	<equivalent old="Blood::glucose" new="Maternity::Obstetrics::Prenatal::Blood::glucose" setInVersion=""/>
+	<equivalent old="Blood::glucose::label::Helptext" new="Maternity::Obstetrics::Prenatal::Blood::glucose::label::Helptext" setInVersion=""/>
+	<equivalent old="Blood::glucose::mmol::per::liter::value" new="Maternity::Obstetrics::Prenatal::Blood::glucose::mmol::per::liter::value" setInVersion=""/>
+	<equivalent old="Blood::glucose::mg::per::deciliter::value" new="Maternity::Obstetrics::Prenatal::Blood::glucose::mg::per::deciliter::value" setInVersion=""/>
+	<equivalent old="Blood::glucose::date" new="Maternity::Obstetrics::Prenatal::Blood::glucose::date" setInVersion=""/>
+	<equivalent old="Urine::strip::test" new="Maternity::Obstetrics::Prenatal::Urine::strip::test" setInVersion=""/>
+	<equivalent old="Urine::Leukocytes" new="Maternity::Obstetrics::Prenatal::Urine::Leukocytes" setInVersion=""/>
+	<equivalent old="Urine::Nitrite" new="Maternity::Obstetrics::Prenatal::Urine::Nitrite" setInVersion=""/>
+	<equivalent old="Urine::Urobilinogen" new="Maternity::Obstetrics::Prenatal::Urine::Urobilinogen" setInVersion=""/>
+	<equivalent old="Urine::Protein" new="Maternity::Obstetrics::Prenatal::Urine::Protein" setInVersion=""/>
+	<equivalent old="Urine::pH" new="Maternity::Obstetrics::Prenatal::Urine::pH" setInVersion=""/>
+	<equivalent old="Urine::blood" new="Maternity::Obstetrics::Prenatal::Urine::blood" setInVersion=""/>
+	<equivalent old="Urine::Specific::gravity" new="Maternity::Obstetrics::Prenatal::Urine::Specific::gravity" setInVersion=""/>
+	<equivalent old="Urine::Ketone" new="Maternity::Obstetrics::Prenatal::Urine::Ketone" setInVersion=""/>
+	<equivalent old="Urine::Bilirubin" new="Maternity::Obstetrics::Prenatal::Urine::Bilirubin" setInVersion=""/>
+	<equivalent old="Urine::Glucose" new="Maternity::Obstetrics::Prenatal::Urine::Glucose" setInVersion=""/>
+	<equivalent old="Urine::date" new="Maternity::Obstetrics::Prenatal::Urine::date" setInVersion=""/>
+	<equivalent old="Fetus" new="Maternity::Obstetrics::Prenatal::Fetus" setInVersion=""/>
+	<equivalent old="FetusNumber" new="Maternity::Obstetrics::Prenatal::FetusNumber" setInVersion=""/>
+	<equivalent old="Fetus1GroupBox" new="Maternity::Obstetrics::Prenatal::Fetus1GroupBox" setInVersion=""/>
+	<equivalent old="Fetus1::PrenatalHeartbeat::Radio" new="Maternity::Obstetrics::Prenatal::Fetus1::PrenatalHeartbeat::Radio" setInVersion=""/>
+	<equivalent old="Fetus1::PrenatalHeartbeat::Comment" new="Maternity::Obstetrics::Prenatal::Fetus1::PrenatalHeartbeat::Comment" setInVersion=""/>
+	<equivalent old="F1Presentation" new="Maternity::Obstetrics::Prenatal::F1Presentation" setInVersion=""/>
+	<equivalent old="F1Position" new="Maternity::Obstetrics::Prenatal::F1Position" setInVersion=""/>
+	<equivalent old="Fetus2GroupBox" new="Maternity::Obstetrics::Prenatal::Fetus2GroupBox" setInVersion=""/>
+	<equivalent old="Fetus2::PrenatalHeartbeat::Radio" new="Maternity::Obstetrics::Prenatal::Fetus2::PrenatalHeartbeat::Radio" setInVersion=""/>
+	<equivalent old="Fetus2::PrenatalHeartbeat::Comment" new="Maternity::Obstetrics::Prenatal::Fetus2::PrenatalHeartbeat::Comment" setInVersion=""/>
+	<equivalent old="F2Presentation" new="Maternity::Obstetrics::Prenatal::F2Presentation" setInVersion=""/>
+	<equivalent old="F2Position" new="Maternity::Obstetrics::Prenatal::F2Position" setInVersion=""/>
+	<equivalent old="Fetus3GroupBox" new="Maternity::Obstetrics::Prenatal::Fetus3GroupBox" setInVersion=""/>
+	<equivalent old="Fetus3::PrenatalHeartbeat::Radio" new="Maternity::Obstetrics::Prenatal::Fetus3::PrenatalHeartbeat::Radio" setInVersion=""/>
+	<equivalent old="Fetus3::PrenatalHeartbeat::Comment" new="Maternity::Obstetrics::Prenatal::Fetus3::PrenatalHeartbeat::Comment" setInVersion=""/>
+	<equivalent old="F3Presentation" new="Maternity::Obstetrics::Prenatal::F3Presentation" setInVersion=""/>
+	<equivalent old="F3Position" new="Maternity::Obstetrics::Prenatal::F3Position" setInVersion=""/>
+	<equivalent old="Fetus4GroupBox" new="Maternity::Obstetrics::Prenatal::Fetus4GroupBox" setInVersion=""/>
+	<equivalent old="Fetus4::PrenatalHeartbeat::Radio" new="Maternity::Obstetrics::Prenatal::Fetus4::PrenatalHeartbeat::Radio" setInVersion=""/>
+	<equivalent old="Fetus4::PrenatalHeartbeat::Comment" new="Maternity::Obstetrics::Prenatal::Fetus4::PrenatalHeartbeat::Comment" setInVersion=""/>
+	<equivalent old="F4Presentation" new="Maternity::Obstetrics::Prenatal::F4Presentation" setInVersion=""/>
+	<equivalent old="F4Position" new="Maternity::Obstetrics::Prenatal::F4Position" setInVersion=""/>
+	<equivalent old="Fetus5GroupBox" new="Maternity::Obstetrics::Prenatal::Fetus5GroupBox" setInVersion=""/>
+	<equivalent old="Fetus5::PrenatalHeartbeat::Radio" new="Maternity::Obstetrics::Prenatal::Fetus5::PrenatalHeartbeat::Radio" setInVersion=""/>
+	<equivalent old="Fetus5::PrenatalHeartbeat::Comment" new="Maternity::Obstetrics::Prenatal::Fetus5::PrenatalHeartbeat::Comment" setInVersion=""/>
+	<equivalent old="F5Presentation" new="Maternity::Obstetrics::Prenatal::F5Presentation" setInVersion=""/>
+	<equivalent old="F5Position" new="Maternity::Obstetrics::Prenatal::F5Position" setInVersion=""/>
+	<equivalent old="Fetus6GroupBox" new="Maternity::Obstetrics::Prenatal::Fetus6GroupBox" setInVersion=""/>
+	<equivalent old="Fetus6::PrenatalHeartbeat::Radio" new="Maternity::Obstetrics::Prenatal::Fetus6::PrenatalHeartbeat::Radio" setInVersion=""/>
+	<equivalent old="Fetus6::PrenatalHeartbeat::Comment" new="Maternity::Obstetrics::Prenatal::Fetus6::PrenatalHeartbeat::Comment" setInVersion=""/>
+	<equivalent old="F6Presentation" new="Maternity::Obstetrics::Prenatal::F6Presentation" setInVersion=""/>
+	<equivalent old="F6Position" new="Maternity::Obstetrics::Prenatal::F6Position" setInVersion=""/>
+	<equivalent old="Assessment" new="Maternity::Obstetrics::Prenatal::Assessment" setInVersion=""/>
+	<equivalent old="Diagnosis::UniqueList" new="Maternity::Obstetrics::Prenatal::Diagnosis::UniqueList" setInVersion=""/>
+	<equivalent old="Diagnosis::ShortText" new="Maternity::Obstetrics::Prenatal::Diagnosis::ShortText" setInVersion=""/>
+	<equivalent old="Problems::TextEditor" new="Maternity::Obstetrics::Prenatal::Problems::TextEditor" setInVersion=""/>
+	<equivalent old="Plan" new="Maternity::Obstetrics::Prenatal::Plan" setInVersion=""/>
+	<equivalent old="Plan::PlanOfCare::TextEditor" new="Maternity::Obstetrics::Prenatal::Plan::PlanOfCare::TextEditor" setInVersion=""/>
+	<equivalent old="Plan::PrescribedUltrasound::HelpText" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedUltrasound::HelpText" setInVersion=""/>
+	<equivalent old="Plan::PrescribedUltrasound::Trimester1::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedUltrasound::Trimester1::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedUltrasound::Trimester2::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedUltrasound::Trimester2::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedUltrasound::Trimester3::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedUltrasound::Trimester3::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedUltrasound::Control::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedUltrasound::Control::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedUltrasound::Pelvic::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedUltrasound::Pelvic::CheckBox" setInVersion=""/>
+	<equivalent old="Plan:PrescribedLabTest::Title::HelpText" new="Maternity::Obstetrics::Prenatal::Plan:PrescribedLabTest::Title::HelpText" setInVersion=""/>
+	<equivalent old="Plan:PrescribedLabTest::Serology::HelpText" new="Maternity::Obstetrics::Prenatal::Plan:PrescribedLabTest::Serology::HelpText" setInVersion=""/>
+	<equivalent old="Plan:PrescribedLabTest::Hematology::HelpText" new="Maternity::Obstetrics::Prenatal::Plan:PrescribedLabTest::Hematology::HelpText" setInVersion=""/>
+	<equivalent old="Plan:PrescribedLabTest::Biochemistry::HelpText" new="Maternity::Obstetrics::Prenatal::Plan:PrescribedLabTest::Biochemistry::HelpText" setInVersion=""/>
+	<equivalent old="Plan:PrescribedLabTest::Bacteriology::HelpText" new="Maternity::Obstetrics::Prenatal::Plan:PrescribedLabTest::Bacteriology::HelpText" setInVersion=""/>
+	<equivalent old="Plan:PrescribedLabTest::Other::HelpText" new="Maternity::Obstetrics::Prenatal::Plan:PrescribedLabTest::Other::HelpText" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::Toxoplasmosis::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::Toxoplasmosis::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::Measles::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::Measles::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::HepatitisBVirus::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::HepatitisBVirus::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::Syphilis::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::Syphilis::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::HIV::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::HIV::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::RBCAntibodyScreen::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::RBCAntibodyScreen::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::CompleteBloodCount::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::CompleteBloodCount::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::SerumCreatinine::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::SerumCreatinine::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::CRP::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::CRP::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::SerumUricAcid::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::SerumUricAcid::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::UrineProteine24Hour::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::UrineProteine24Hour::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::UrineCulture::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::UrineCulture::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Lab::Test::Vaginal::Wet::Mount" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Lab::Test::Vaginal::Wet::Mount" setInVersion=""/>
+	<equivalent old="Plan::PrescribedLabTest::Screening::glucose::challenge::test::CheckBox" new="Maternity::Obstetrics::Prenatal::Plan::PrescribedLabTest::Screening::glucose::challenge::test::CheckBox" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Vaccine::Label" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Vaccine::Label" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Dose::Radio" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Dose::Radio" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Vaccine::Number::Label" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Vaccine::Number::Label" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Dose::1" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Dose::1" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Dose::2" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Dose::2" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Dose::3" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Dose::3" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Dose::4" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Dose::4" setInVersion=""/>
+	<equivalent old="Plan::Prescribed::Tetanus::Dose::5" new="Maternity::Obstetrics::Prenatal::Plan::Prescribed::Tetanus::Dose::5" setInVersion=""/>
+</fieldequivalence>
 
   <file type="script" name="onload">./scripts/xx/prenatal.js</file>
 
   <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/prenatal.ui">
     <label lang="xx">Prenatal consultation</label>
     <label lang="fr">Consultation prénatale</label>
-    <options>UseFormAsNameSpace</options>
+    <options>UseFormNameAsNameSpace</options>
     <icon>__theme__/stethoscope.png</icon>
 <!--
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
@@ -407,6 +567,13 @@
           <options>DontPrintEmptyValues</options>
         </Item>
 
+        <Item type="shorttext" name="ObjectiveGroup::WeightGain::Value::Shorttext">         
+          <uilink label="weightGainLabel" widget="weightGainValueLineEdit" layout=""/>
+          <label lang="xx">Weight gain</label>                                  
+          <label lang="fr">Prise de poids</label>                 
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+
         <Item type="measurement" name="ObjectiveGroup::Height::Value">
           <uilink label="heightLabel" widget="heightValue;heightUnit" layout=""/>
           <label lang="xx">Height</label>
@@ -424,13 +591,23 @@
           <label lang="fr">IMC</label>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>notprintable</options>
         </Item>
 
         <Item type="helptext" name="ObjectiveGroup::BMI::Value">
-          <uilink label="" widget="bmiValue" layout=""/>
+          <uilink label="" widget="bmiValueLabel" layout=""/>
           <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
           <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;notprintable</options>
+        </Item>
+
+        <Item type="shorttext" name="ObjectiveGroup::BMI::Value::Shorttext">    
+          <uilink label="bmiLabel" widget="bmiValueLineEdit" layout=""/>        
+          <label lang="xx">BMI</label>                                          
+          <label lang="fr">IMC</label>                                          
+          <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
+          <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>DontPrintEmptyValues</options>                               
         </Item>
 
         <Item type="spin" name="ObjectiveGroup::FundalHeight::Value">

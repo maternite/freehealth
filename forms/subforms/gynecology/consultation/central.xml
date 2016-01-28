@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <!-- Based on form "POMR with biometrics" by Eric Maeker MD -->
+    <!-- Non translatable values -->
+    <authors>Jerome Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.6</fmfv>
+    <cdate>2015-01-27</cdate>
+    <lmdate>2016-01-27</lmdate>
+    <icon>__theme__/stethoscope.png</icon>
+    <weblink></weblink>
+    <bibliography/>
+
+    <!-- Translatable values -->
+    <license>GPLv3</license>
+    <description lang="xx">Gynecologic consultation</description>
+    <description lang="fr">Consultation gynécologique</description>
+    <category lang="xx">Consultation</category>
+    <category lang="fr">Consultation</category>
+    <specialties lang="xx">Gynecology</specialties>
+    <specialties lang="fr">Gynécologie</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <file type="script" name="onload">./scripts/xx/gynecology.js</file>
+
+  <MedForm name="Maternity::Gynecology::Consultation" uifilename="./ui/xx/gynecology.ui">
+    <label lang="xx">Gynecologic consultation</label>
+    <label lang="fr">Consultation gynécologique</label>
+    <options>DontPrintEmptyValues;UseFormNameAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+    <!--<file type="htmlprintmask">./html/xx/new_mask.html</file>
+    <file type="htmlexportmask">./html/xx/new_mask.html</file>-->
+
+    <Item type="group" name="SubjectiveGroup">
+      <uilink widget="subjectiveGroup"/>
+      <label lang="xx">Subjective</label>
+      <label lang="fr">Subjectif (plainte du patient)</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="SubjectiveGroup::Subjective">
+          <uilink label="" widget="" layout="subjectiveLayout"/>
+          <tooltip lang="xx">Subjective</tooltip>
+          <tooltip lang="fr">Subjectif (plainte du patient)</tooltip>
+          <options>FullEditor;WithIO;WithTable;Expanded;DontPrintEmptyValues</options>
+          <papers>Generic</papers>
+        </Item>
+
+    </Item>
+
+    <Item type="group" name="ObjectiveGroup">
+      <uilink widget="objectiveGroup"/>
+      <label lang="xx">Objective</label>
+      <label lang="fr">Objectif (examen clinique)</label>
+      <options>DontPrintEmptyValues</options>
+
+        <!--
+        <Item type="measurement" name="ObjectiveGroup::Temperature::TemperatureValue">
+          <uilink label="temperatureLabel" widget="temperatureValue;temperatureUnit" layout=""/>
+          <label lang="xx">T°</label>
+          <label lang="fr">T°</label>
+          <tooltip lang="xx">Temperature</label>
+          <tooltip lang="fr">Température</label>
+          <options>DontPrintEmptyValues;Temperature</options>
+          <default>temperature</default>
+          <patientdata>TemperatureInCelsius</patientdata>  
+        </Item>
+-->
+
+        <Item type="helptext" name="ObjectiveGroup::Temperature::TemperatureLabel">
+          <uilink label="temperatureLabel" widget="" layout=""/>
+          <label lang="xx">T°</label>                                           
+          <label lang="fr">T°</label>                                           
+          <tooltip lang="xx">Temperature</tooltip>                                
+          <tooltip lang="fr">Température</tooltip>
+        </Item>
+
+        <Item type="doublespin" name="ObjectiveGroup::Temperature::TemperatureValue">
+          <uilink label="" widget="temperatureValue" layout=""/>
+          <tooltip lang="xx">Temperature</tooltip>                                
+          <tooltip lang="fr">Température</tooltip>                                
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+
+        <Item type="combo" name="ObjectiveGroup::Temperature::TemperatureUnit">
+          <uilink label="" widget="temperatureUnit" layout=""/>
+          <value>
+              <uuid id="0">celsius</uuid>
+              <uuid id="1">fahrenheit</uuid>
+              <possible id="0" lang="xx">°Celsius</possible>
+              <possible id="1" lang="xx">°Fahrenheit</possible>
+              <possible id="0" lang="fr">°Celsius</possible>                    
+              <possible id="1" lang="fr">°Fahrenheit</possible>
+              <default>celsius</default>
+          </value>
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::BloodPressure::UiLabel">
+          <uilink label="" widget="bloodPressureLabel" layout=""/>
+          <label lang="xx">BP (mmHg)</label>
+          <label lang="fr">TA (mmHg)</label>
+          <tooltip lang="xx">Blood pressure (mmHg)</tooltip>
+          <tooltip lang="fr">Tension artérielle (mmHg)</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="spin" name="ObjectiveGroup::BloodPressure::Syst">
+          <uilink label="" widget="bloodPressureSystolicValue" layout=""/>
+          <tooltip lang="xx">Systolic</tooltip>
+          <tooltip lang="fr">Systolique</tooltip>
+          <options>DontPrintEmptyValues</options>
+          <patientdata>SystolicBloodPressure</patientdata>
+        </Item>
+
+        <Item type="spin" name="ObjectiveGroup::BloodPressure::Diast">
+          <uilink label="" widget="bloodPressureDiastolicValue" layout=""/>
+          <tooltip lang="xx">Diastolic</tooltip>
+          <tooltip lang="fr">Diastolique</tooltip>
+          <options>DontPrintEmptyValues</options>
+          <patientdata>DiastolicBloodPressure</patientdata>
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::BloodPressure::Pulse">
+          <uilink label="" widget="bloodPressurePulseValue" layout=""/>
+          <tooltip lang="xx">Pulse pressure</tooltip>
+          <tooltip lang="fr">Différentielle</tooltip>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="measurement" name="ObjectiveGroup::Weight::Value">
+          <uilink label="weightLabel" widget="weightValue;weightUnit" layout=""/>
+          <label lang="xx">Weight</label>
+          <label lang="fr">Poids</label>
+          <tooltip lang="xx">Weight</tooltip>
+          <tooltip lang="fr">Poids</tooltip>
+          <options>DontPrintEmptyValues;Weight</options>
+          <default>kilogram</default>
+          <patientdata>WeightInGrams</patientdata>
+        </Item>
+
+        <Item type="measurement" name="ObjectiveGroup::Height::Value">
+          <uilink label="heightLabel" widget="heightValue;heightUnit" layout=""/>
+          <label lang="xx">Height</label>
+          <label lang="fr">Taille</label>
+          <tooltip lang="xx">Height</tooltip>
+          <tooltip lang="fr">Taille</tooltip>
+          <options>DontPrintEmptyValues;Length</options>
+          <default>centimeter</default>
+          <patientdata>HeightInCentimeters</patientdata>
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::BMI::Label::Helptext">
+          <uilink widget="bmiLabel"/>
+          <label lang="xx">BMI</label>
+          <label lang="fr">IMC</label>
+          <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
+          <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>DontPrintEmptyValues;notprintable</options>
+        </Item>
+
+        <Item type="helptext" name="ObjectiveGroup::BMI::Value::Helptext">
+          <uilink label="" widget="bmiValueLabel" layout=""/>
+          <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
+          <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>DontPrintEmptyValues;notprintable</options>
+        </Item>
+
+        <Item type="shorttext" name="ObjectiveGroup::BMI::Value::Shorttext">                
+          <uilink label="bmiLabel" widget="bmiValueLineEdit" layout=""/>
+          <label lang="xx">BMI</label>                                          
+          <label lang="fr">IMC</label>                        
+          <tooltip lang="xx">Body Mass Index (kg/m2)&lt;br />BMI=Height (cm) / (Weight (kg) ^2)</tooltip>
+          <tooltip lang="fr">Index de masse corporelle (kg/m2)&lt;br />BMI=Taille (cm) / (Poids (kg) ^2)</tooltip>
+          <options>DontPrintEmptyValues</options>                               
+        </Item>
+
+        <Item type="texteditor" name="ObjectiveGroup::Objective::Breast::Examination::Texteditor">
+          <uilink label="breastExaminationLabel" widget="" layout="breastExaminationTexteditorLayout"/>
+          <label lang="xx">Breast examination</label>
+          <label lang="fr">Examen sénologique</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="texteditor" name="ObjectiveGroup::Objective::Abdominal::Examination::Texteditor">
+          <uilink label="abdominalExaminationLabel" widget="" layout="abdominalExaminationTexteditorLayout"/>
+          <label lang="xx">Abdominal examination</label>
+          <label lang="fr">Examen abdominal</label>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="texteditor" name="ObjectiveGroup::Objective::Perineal::Examination::Texteditor">
+          <uilink label="perinealExaminationLabel" widget="" layout="perinealExaminationTexteditorLayout"/>
+          <label lang="xx">Perineal examination</label>                        
+          <label lang="fr">Examen périneal</label>                             
+          <options>DontPrintEmptyValues</options>                               
+        </Item> 
+
+        <Item type="group" name="Objective::Pelvic">
+        <uilink label="" widget="objectivePelvicGroup" />
+        <label lang="xx">Pelvic examination</label>
+        <label lang="fr">Examen pelvien</label>
+        <options>DontPrintEmptyValues</options>
+
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Position">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixPositionLabel" widget="" layout="cervixPositionRadioLayout" />
+          <label lang="xx">Position</label>
+          <label lang="fr">Position</label>
+          <value>
+          <uuid id="0">Posterior</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">Middle</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">Anterior</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">Lateral</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">Posterior</possible>
+          <possible id="1" lang="xx">Middle</possible>
+          <possible id="2" lang="xx">Anterior</possible>
+          <possible id="3" lang="xx">Lateral</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Postérieur</possible>
+          <possible id="1" lang="fr">Intermédiaire</possible>
+          <possible id="2" lang="fr">Centré</possible>
+          <possible id="3" lang="fr">Latéro-dévié</possible>
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
+          <numerical id="3">2</numerical>
+          <numerical id="4">0</numerical>
+        </value>
+          <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Consistency">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixConsistencyLabel" widget="" layout="cervixConsistencyRadioLayout" />
+          <label lang="xx">Consistency</label>
+          <label lang="fr">Consistance</label>
+          <value>
+          <uuid id="0">Firm</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">Medium</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">Soft</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">not done</uuid>
+          <!--<sctid id="3">385660001</sctid>-->
+          <possible id="0" lang="xx">Firm</possible>
+          <possible id="1" lang="xx">Medium</possible>
+          <possible id="2" lang="xx">Soft</possible>
+          <possible id="3" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Ferme</possible>
+          <possible id="1" lang="fr">Moyen</possible>
+          <possible id="2" lang="fr">Mou</possible>
+          <possible id="3" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
+          <numerical id="3">0</numerical>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Effacement">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixEffacementLabel" widget="" layout="cervixEffacementRadioLayout" />
+          <label lang="xx">Effacement</label>
+          <label lang="fr">Effacement</label>
+          <value>
+          <uuid id="0">0-30%</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">40-50%</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">60-70%</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">80+%</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">0-30%</possible>
+          <possible id="1" lang="xx">40-50%</possible>
+          <possible id="2" lang="xx">60-70%</possible>
+          <possible id="3" lang="xx">80+%</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Long à mi-long (0-30%)</possible>
+          <possible id="1" lang="fr">Court (40-50%)</possible>
+          <possible id="2" lang="fr">En voie d'effacement (60-70%)</possible>
+          <possible id="3" lang="fr">Effacé (+80%)</possible>
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
+          <numerical id="3">3</numerical>
+          <numerical id="4">0</numerical>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::Dilation">
+          <!--<sctid></sctid>-->
+          <uilink label="cervixDilationLabel" widget="" layout="cervixDilationRadioLayout" />
+          <label lang="xx">Dilation</label>
+          <label lang="fr">Dilatation</label>
+          <value>
+          <uuid id="0">Closed</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">1-2cm</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">3-4cm</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">5+cm</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">Closed</possible>
+          <possible id="1" lang="xx">1-2 cm</possible>
+          <possible id="2" lang="xx">3-4 cm</possible>
+          <possible id="3" lang="xx">5+ cm</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Fermé</possible>
+          <possible id="1" lang="fr">1 à 2 cm</possible>
+          <possible id="2" lang="fr">3 à 4 cm</possible>
+          <possible id="3" lang="fr">Supérieur à 5 cm</possible>
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
+          <numerical id="3">3</numerical>
+          <numerical id="4">0</numerical>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="radio" name="ObjectiveGroup::Cervix::FetalStation">
+          <!--<sctid></sctid>-->
+          <uilink label="fetalStationLabel" widget="" layout="fetalStationRadioLayout" />
+          <label lang="xx">Fetal station</label>
+          <label lang="fr">Positionnement</label>
+          <tooltip lang="xx">Position of the fetus' head in relation to the distance from the ischial spines</tooltip>
+          <tooltip lang="fr">Positionnement de la présentation fœtale par rapport aux épines sciatiques</tooltip>
+          <value>
+          <uuid id="0">−3</uuid>
+          <!--<sctid id="0"></sctid>-->
+          <uuid id="1">−2</uuid>
+          <!--<sctid id="1"></sctid>-->
+          <uuid id="2">−1, 0</uuid>
+          <!--<sctid id="2"></sctid>-->
+          <uuid id="3">+1, +2</uuid>
+          <!--<sctid id="3"></sctid>-->
+          <uuid id="4">not done</uuid>
+          <!--<sctid id="4">385660001</sctid>-->
+          <possible id="0" lang="xx">−3</possible>
+          <possible id="1" lang="xx">−2</possible>
+          <possible id="2" lang="xx">−1, 0</possible>
+          <possible id="3" lang="xx">+1, +2</possible>
+          <possible id="4" lang="xx">ø</possible>
+          <possible id="0" lang="fr">Mobile</possible>
+          <possible id="1" lang="fr">Amorcée</possible>
+          <possible id="2" lang="fr">Fixée</possible>
+          <possible id="3" lang="fr">Engagée</possible>
+          <possible id="4" lang="fr">ø</possible>
+          <numerical id="0">0</numerical>
+          <numerical id="1">1</numerical>
+          <numerical id="2">2</numerical>
+          <numerical id="3">3</numerical>
+          <numerical id="4">0</numerical>
+        </value>
+        <options>compact;DontPrintEmptyValues</options>
+      </Item>
+
+      <Item name="ObjectiveGroup::InternalCervicalDilation::Value" type="spin">
+        <uilink label="" widget="internalCervicalDilationSpinBox" layout="" />
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item name="ObjectiveGroup::InternalCervicalDilation::Comment" type="shorttext">
+        <uilink label="internalCervicalDilationLabel" widget="internalCervicalDilationLineEdit" layout="" />
+        <label lang="xx">Internal cervical dilation</label>
+        <label lang="fr">Dilatation de l'orifice interne du col</label>
+        <placeholder lang="xx">Comment</placeholder>
+        <placeholder lang="fr">Commentaire</placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item name="ObjectiveGroup::ExternalCervicalDilation::Value" type="spin">
+        <uilink label="" widget="externalCervicalDilationSpinBox" layout="" />
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item name="ObjectiveGroup::ExternalCervicalDilation::Comment" type="shorttext">
+        <uilink label="externalCervicalDilationLabel" widget="externalCervicalDilationLineEdit" layout="" />
+        <label lang="xx">External cervical dilation</label>
+        <label lang="fr">Dilatation de l'orifice externe du col</label>
+        <placeholder lang="xx">Comment</placeholder>
+        <placeholder lang="fr">Commentaire</placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item name="ObjectiveGroup::VaginalExamination::Comment" type="shorttext">
+        <uilink label="vaginalExaminationLabel" widget="vaginalExaminationLineEdit" layout="" />
+        <label lang="xx">Vaginal examination</label>
+        <label lang="fr">Doigté (Toucher vaginal)</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item name="ObjectiveGroup::AmnioticSacStatus" type="shorttext">
+        <uilink label="amnioticSacLabel" widget="amnioticSacLineEdit" layout="" />
+        <label lang="xx">Amniotic sac status</label>
+        <label lang="fr">État de la poche des eaux</label>
+        <placeholder lang="xx"></placeholder>
+        <placeholder lang="fr"></placeholder>
+        <options>DontPrintEmptyValues</options>
+      </Item>
+
+     <Item type="radio" name="ObjectiveGroup::LowerUterineSegment::Distension">
+          <uilink label="lowerUterineSegmentLabel" widget="" layout="lowerUterineSegmentRadioLayout"/>
+          <label lang="xx">(Distention of) Lower uterine segment</label>
+          <label lang="fr">(Ampliation du) Segment inférieur</label>
+          <options>compact;DontPrintEmptyValues</options>
+          <value>
+            <uuid id="0">Distended</uuid>
+            <!--<sctid id="0"></sctid>-->
+            <uuid id="1">Not distended</uuid>
+            <!--<sctid id="1"></sctid>-->
+            <uuid id="2">not done</uuid>
+            <!--<sctid id="2">385660001</sctid>-->
+            <possible id="0" lang="xx">Distended</possible>
+            <possible id="1" lang="xx">Not distended</possible>
+            <possible id="2" lang="xx">∅</possible>
+            <print id="0" lang="xx">Distended</print>
+            <print id="1" lang="xx">Not distended</print>
+            <print id="2" lang="xx">Not evaluated</print>
+            <possible id="0" lang="fr">Amplié</possible>
+            <possible id="1" lang="fr">Non amplié</possible>
+            <possible id="2" lang="fr">∅</possible>
+            <print id="0" lang="fr">Amplié</print>
+            <print id="1" lang="fr">Non amplié</print>
+            <print id="2" lang="fr">Item non évalué</print>
+          </value>
+        </Item>
+
+
+      </Item> <!-- end of group Pelvic examination -->
+
+
+
+
+    </Item> <!-- end of group Objective -->
+
+    <Item type="group" name="Assessment::Group">
+      <uilink widget="assessmentGroup"/>
+      <label lang="xx">Assessment</label>
+      <label lang="fr">Analyse</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Assessment::Group::Assessment::Texteditor">
+          <uilink label="" widget="" layout="assessmentTexteditorLayout"/>
+          <options>DontPrintEmptyValues</options>
+          <tooltip lang="xx">Assessment</tooltip>
+          <tooltip lang="fr">Analyse</tooltip>
+        </Item>
+
+    </Item> <!-- end of group Assessment -->
+
+    <Item type="group" name="Plan::Group">
+      <uilink widget="planGroup"/>
+      <label lang="xx">Plan</label>
+      <label lang="fr">Plan</label>
+      <options>DontPrintEmptyValues</options>
+
+        <Item type="texteditor" name="Plan::Group::Advice::Texteditor">
+          <uilink label="adviceLabel" widget="" layout="adviceTexteditorLayout"/>
+          <label lang="xx">Advice</label>
+          <label lang="fr">Conseils et recommendations</label>
+          <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
+        </Item>
+
+        <Item type="texteditor" name="Plan::Group::Prescription::Texteditor">
+          <uilink label="prescriptionLabel" widget="" layout="prescriptionTexteditorLayout"/>
+          <label lang="xx">Prescription</label>
+          <label lang="fr">Prescription</label>
+          <options>DontPrintEmptyValues</options>
+          <papers>Prescription</papers>
+        </Item>
+
+        <Item type="date" name="Plan::Next::Appointment::Date">
+          <uilink label="appointmentlabel" widget="appointmentDateEdit" layout="" />
+          <label lang="xx">Next appointement</label>
+          <label lang="fr">Prochain rendez-vous</label>
+          <options></options>
+        </Item>
+
+
+    </Item> <!-- end of group Plan -->
+
+    <tabstops ns="Maternity::Pediatrics::Consultation">
+    <tabstop>SubjectiveGroup::Subjective</tabstop>
+    <tabstop>ObjectiveGroup::Temperature::TemperatureValue</tabstop>
+    <tabstop>ObjectiveGroup::BloodPressure::Syst</tabstop>
+    <tabstop>ObjectiveGroup::BloodPressure::Diast</tabstop>
+    <tabstop>ObjectiveGroup::Weight::Value</tabstop>
+    <tabstop>ObjectiveGroup::Height::Value</tabstop>
+    <tabstop>ObjectiveGroup::HeadCircumference::Value</tabstop>
+    <tabstop>ObjectiveGroup::Objective</tabstop>
+    <tabstop>AssessmentPlanGroup::Assessment</tabstop>
+    <tabstop>AssessmentPlanGroup::Plan</tabstop>
+    </tabstops>
+
+  </MedForm>
+
+</FreeMedForms>
