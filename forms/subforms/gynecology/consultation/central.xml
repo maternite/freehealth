@@ -8,7 +8,7 @@
     <!-- Non translatable values -->
     <authors>Jerome Pinguet</authors>
     <version>test</version>
-    <fmfv>0.9.6</fmfv>
+    <fmfv>0.9.8</fmfv>
     <cdate>2015-01-27</cdate>
     <lmdate>2016-01-27</lmdate>
     <icon>__theme__/stethoscope.png</icon>

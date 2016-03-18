@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FreeMedForms>
+
+<FreeMedForms>
+
+  <formdescription>
+    <authors>Jérôme Pinguet</authors>
+    <version>test</version>
+    <fmfv>0.9.7</fmfv>
+    <cdate>2016-03-06</cdate>
+    <lmdate>2016-03-06</lmdate>
+    <icon>__theme__stethoscope.png</icon>
+    <weblink>https://github.com/maternite/freemedforms</weblink>
+    <bibliograpy/>
+
+    <license>GPLv3</license>
+    <description lang="xx">Delivery</description>
+    <description lang="fr">Accouchement</description>
+    <category lang="xx">Procedure</category>
+    <category lang="fr">Procédure</category>
+    <specialties lang="xx">Obstetrics</specialties>
+    <specialties lang="fr">Obstétrique</specialties>
+
+    <updateinfo>
+    </updateinfo>
+
+  </formdescription>
+
+  <file type="script" name="onload">./scripts/xx/delivery.js</file>
+
+  <MedForm name="Maternity::Obstetrics::Delivery" uifilename="./ui/xx/delivery.ui">
+    <label lang="xx">Delivery</label>
+    <label lang="fr">Accouchement</label>
+    <options>UseFormNameAsNameSpace</options>
+    <icon>__theme__/stethoscope.png</icon>
+
+    <Item type="group" name="Administrative">
+      <uilink widget="administrativeGroupBox"/>
+
+    <!--<Item type="datetime" name="Delivery::DateTime::No:Ui::Edit">
+      <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+      <label lang="xx">Date and time of delivery (NO ui) (NOW)</label>
+      <label lang="fr">Date et heure de l'accouchement</label>
+      <options>now</options>
+    </Item>-->
+
+    <Item type="group" name="Fetus">
+      <uilink label="" widget="fetusGroupBox" layout="" />
+      <label lang="xx">Fetus number</label>
+      <label lang="fr">Nombre de fœtus</label>
+      <options></options>
+
+        <Item type="spin" name="NumberOfFetus">
+          <uilink label="fetusNumberLabel" widget="fetusNumberSpinBox" layout="" />
+          <label lang="xx">Number of fetus</label>
+          <label lang="fr">Nombre de fœtus</label>
+        </Item>
+
+    </Item> <!-- end of group Fetus -->
+
+    <Item type="group" name="Delivery::Room::Entry::Mode">
+      <uilink label="" widget="deliveryRoomEntryModeGroupBox" layout="" />
+      <label lang="xx">Delivery room entry mode</label>
+      <label lang="fr">Mode d'entrée en salle de naissance</label>
+      <options></options>
+
+      <!-- <Item type="radio" name="Entry::Mode::Radio">
+        <uilink layout="entryModeRadioLayout" />
+        <label lang="xx">Entry mode</label>
+        <label lang="fr">Mode d'entrée</label>
+        <value>
+        <uuid id="0">not done</uuid>
+        <uuid id="1">Referred</uuid>
+        <uuid id="2">Spontaneous</uuid>
+        <possible id="0" lang="xx">ø</possible>
+        <possible id="1" lang="xx">Referred</possible>
+        <possible id="2" lang="xx">Spontaneous</possible>
+        <possible id="0" lang="fr">ø</possible>
+        <possible id="1" lang="fr">Référée</possible>
+        <possible id="2" lang="fr">Venue d'elle-même</possible>
+        </value>
+      </Item> -->
+
+      <Item type="check" name="Entry::Mode::Referred::Check">
+        <uilink widget="entryModeReferredCheckBox"/>
+        <options>DontPrintEmptyValues;OnLeft</options>                          
+        <label lang="xx">Referred</label>                                            
+        <label lang="fr">Référée</label>
+        <value>                                                                 
+          <numerical id="0">0</numerical>                                       
+          <numerical id="1">1</numerical>                                       
+        </value>                                                                
+        <script>                                                                
+          <onValueChanged>namespace.com.freemedforms.obstetrics.delivery.delivery_entryModeReferredCheckBox();</onValueChanged>
+        </script>
+      </Item>
+
+      <Item type="check" name="Entry::Mode::Spontaneous::Check">                   
+        <uilink widget="entryModeSpontaneousCheckBox"/>                            
+        <options>DontPrintEmptyValues;OnLeft</options>                          
+        <label lang="xx">Spontaneous</label>                                       
+        <label lang="fr">Spontanée</label>                                        
+        <value>                                                                 
+          <numerical id="0">0</numerical>                                       
+          <numerical id="1">1</numerical>                                       
+        </value>                                                                
+        <script>                                                                
+          <onValueChanged>namespace.com.freemedforms.obstetrics.delivery.delivery_entryModeSpontaneousCheckBox();</onValueChanged>
+        </script>                                                               
+      </Item>
+
+      <Item type="group" name="Referral">
+        <uilink label="" widget="referralGroupBox" layout="" />
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <options>collapsible</options>
+
+        <Item type="shorttext" name="Referrer::Identity">
+          <uilink label="referrerLabel" widget="referrerLineEdit" layout="" />
+          <label lang="xx">Referrer</label>
+          <label lang="fr">Référent</label>
+          <options></options>
+        </Item>
+
+        <Item type="shorttext" name="Referral::Indication">
+          <uilink label="referralIndicationLabel" widget="referralIndicationLineEdit" layout="" />
+          <label lang="xx">Indication</label>
+          <label lang="fr">Indication</label>
+          <options></options>
+        </Item>
+
+      </Item> <!-- end of group Referral -->
+
+      <Item type="group" name="Self::Referral::Group">
+        <uilink widget="selfReferralGroupBox"/>
+        <label lang="xx"></label>
+        <label lang="fr"></label>
+        <options>collapsible</options>
+
+        <Item name="HelpText" type="helptext">
+          <uilink widget="followedInThisInstitutionLabel" />
+          <label lang="xx">Followed in this institution</label>
+          <label lang="fr">Suivie au Pavillon Sainte Fleur</label>
+          <options>printable</options>
+        </Item>
+
+        <Item type="check" name="Followed::In::This::Institution::Check">                
+          <uilink widget="followedInThisInstitutionCheckBox"/>                         
+          <options>DontPrintEmptyValues;OnLeft</options>                          
+          <label lang="xx">Yes</label>                                    
+          <label lang="fr">Oui</label>                                      
+          <value>                                                                 
+            <numerical id="0">0</numerical>                                       
+            <numerical id="1">1</numerical>                                       
+          </value>                                                                
+          <script>                                                                
+          <onValueChanged>namespace.com.freemedforms.obstetrics.delivery.delivery_followedInThisInstitutionCheckBox();</onValueChanged>
+          </script>                                                               
+        </Item>
+
+        <Item type="check" name="Not::Followed::In::This::Institution::Check">       
+          <uilink widget="notFollowedInThisInstitutionCheckBox"/>                    
+          <options>DontPrintEmptyValues;OnLeft</options>                        
+          <label lang="xx">No</label>                                          
+          <label lang="fr">Non</label>                                          
+          <value>                                                               
+            <numerical id="0">0</numerical>                                     
+            <numerical id="1">1</numerical>                                     
+          </value>                                                              
+          <script>                                                              
+          <onValueChanged>namespace.com.freemedforms.obstetrics.delivery.delivery_notFollowedInThisInstitutionCheckBox();</onValueChanged>
+          </script>                                                             
+        </Item>
+
+        <Item type="group" name="Pregnancy::Follow::Up::Group">
+          <uilink widget="pregnancyFollowUpGroupBox"/>
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <options>collapsible</options>
+
+          <Item type="shorttext" name="Pregnancy::Follow::Up::Institution::ShortText">
+            <uilink label="pregnancyFollowUpInstitutionLabel" widget="pregnancyFollowUpInstitutionLineEdit"/>
+            <label lang="xx">Follow-up institution</label>
+            <label lang="fr">Lieu des consultations</label>  
+            <placeholder lang="xx"></placeholder>
+            <placeholder lang="fr"></placeholder>
+          </Item>
+
+          <Item type="spin" name="Number::Of::Consultation::Spin">
+            <uilink label="numberOfConsultationLabel" widget="numberOfConsultationSpinBox"/>
+            <label lang="xx">Number of consultation(s)</label>
+            <label lang="fr">Nombre de consultation(s)</label>
+          </Item>
+
+        </Item> <!-- end of group Pregnancy::Follow::Up::Group -->
+
+
+      </Item> <!-- end of group Self::Referral::Group -->
+
+    </Item> <!-- end of group Delivery::Room::Entry::Mode -->
+
+    </Item> <!-- end of group administrativeGroupBox -->
+
+
+  </MedForm>
+
+</FreeMedForms>
