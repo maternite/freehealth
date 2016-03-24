@@ -6,7 +6,10 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
         'delivery_entryModeReferredCheckBox' : delivery_entryModeReferredCheckBox,
         'delivery_entryModeSpontaneousCheckBox' : delivery_entryModeSpontaneousCheckBox,
         'delivery_followedInThisInstitutionCheckBox' : delivery_followedInThisInstitutionCheckBox,
-        'delivery_notFollowedInThisInstitutionCheckBox' : delivery_notFollowedInThisInstitutionCheckBox
+        'delivery_notFollowedInThisInstitutionCheckBox' : delivery_notFollowedInThisInstitutionCheckBox,
+        'delivery_healthcareProfessionalGroupBox' : delivery_healthcareProfessionalGroupBox,
+        'delivery_onReferralGroupBoxToggled' : delivery_onReferralGroupBoxToggled,
+        'delivery_onSelfReferralGroupBoxToggled' : delivery_onSelfReferralGroupBoxToggled
     });
 
 //    var delivery_fetusNumber, delivery_fetusGroup1, delivery_fetusGroup2, delivery_fetusGroup3, delivery_fetusGroup4, delivery_fetusGroup5, delivery_fetusGroup6;
@@ -14,6 +17,8 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
     var delivery_entryModeReferredCheckBox, delivery_referralGroupBox, delivery_entryModeSpontaneousCheckBox;
     var delivery_selfReferralGroupBox, delivery_followedInThisInstitutionCheckBox, delivery_notFollowedInThisInstitutionCheckBox;
     var delivery_pregnancyFollowUpGroupBox;
+    var delivery_healthcareProfessionalGroupBoxWidget, delivery_healthcareProfessionalGroupBoxItem;
+    var delivery_deliveryModeUniquelistItem;
 
     function delivery_setupUi() {
 
@@ -46,6 +51,10 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
         delivery_notFollowedInThisInstitutionCheckBox = delivery_formUi.findChild("notFollowedInThisInstitutionCheckBox");
 
         delivery_pregnancyFollowUpGroupBox = delivery_formUi.findChild("pregnancyFollowUpGroupBox");
+
+        delivery_healthcareProfessionalGroupBoxWidget = delivery_formUi.findChild("healthcareProfessionalGroupBox");
+        delivery_healthcareProfessionalGroupBoxItem = freemedforms.forms.item("Maternity::Obstetrics::Delivery::Delivery::Healthcare::Professional::Group");   
+        delivery_deliveryModeUniquelistItem = freemedforms.forms.item("Maternity::Obstetrics::Delivery::Delivery::Mode::Uniquelist");
         // fetus connection
         //delivery_fetusNumber['valueChanged(int)'].connect(this, delivery_hideFetusGroupBox);
         print("************************************ Inside delivery_setupUi()");
@@ -103,6 +112,80 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_pregnancyFollowUpGroupBox.checked = false;                  
             delivery_followedInThisInstitutionCheckBox.checked = true;               
         }  
+    }
+
+    function delivery_healthcareProfessionalGroupBox() {
+        var test1 = delivery_healthcareProfessionalGroupBoxItem.isVisible;
+        var test2 = delivery_healthcareProfessionalGroupBoxItem.visible == false;
+        var test3 = delivery_healthcareProfessionalGroupBoxItem.visible == true;
+        print ("delivery_healthcareProfessionalGroupBoxItem.isVisible");
+        print (test1);
+        print ("delivery_healthcareProfessionalGroupBoxItem.visible == false");
+        print (test2);
+        print ("delivery_healthcareProfessionalGroupBoxItem.visible == true"); 
+        print (test3);  
+        var test4 = delivery_healthcareProfessionalGroupBoxWidget.isVisible;      
+        var test5 = delivery_healthcareProfessionalGroupBoxWidget.visible == false;
+        var test6 = delivery_healthcareProfessionalGroupBoxWidget.visible == true;
+        print ("delivery_healthcareProfessionalGroupBoxWidget.isVisible");
+        print (test4);
+        print ("delivery_healthcareProfessionalGroupBoxWidget.visible == false");      
+        print (test5);
+        print ("delivery_healthcareProfessionalGroupBoxWidget.visible == true");
+        print (test6);
+        print (delivery_deliveryModeUniquelistItem.currentText);
+        if (delivery_deliveryModeUniquelistItem.currentUuid == "Delivery normal" ||
+            delivery_deliveryModeUniquelistItem.currentUuid == "Instrumental delivery" ||
+            delivery_deliveryModeUniquelistItem.currentUuid == "Not done") {    
+                delivery_healthcareProfessionalGroupBoxWidget.visible = false;
+        }
+
+        if (delivery_deliveryModeUniquelistItem.currentUuid == "Delivery by emergency cesarean section" ||
+            delivery_deliveryModeUniquelistItem.currentUuid == "Elective cesarean section") {
+                delivery_healthcareProfessionalGroupBoxWidget.visible = true;
+        }
+    var user = freemedforms.user
+    print("user.usualName");
+    print(user.usualName);
+
+    }
+
+    function delivery_onReferralGroupBoxToggled() {
+
+        //if ((delivery_referralGroupBox.checked == false) &&
+        //    (delivery_selfReferralGroupBox.checked == false)) {
+        //    print("return");
+        //    return;
+        //}
+
+        print("Referral");
+         if (delivery_referralGroupBox.checked == true) {               
+            delivery_selfReferralGroupBox.checked = false;                      
+            delivery_pregnancyFollowUpGroupBox.checked = false;                 
+        }                                                                       
+        else {                                                                  
+            delivery_selfReferralGroupBox.checked = true;                       
+            delivery_pregnancyFollowUpGroupBox.checked = false;                 
+        }
+    }
+
+    function delivery_onSelfReferralGroupBoxToggled() {
+
+        //if ((delivery_referralGroupBox.checked == false) &&                     
+        //    (delivery_selfReferralGroupBox.checked == false )) {                 
+        //    print("return");                                                    
+        //    return;
+        //}     
+                                                                                
+        print("selfReferral");                                                  
+         if (delivery_selfReferralGroupBox.checked == true) {                       
+            delivery_referralGroupBox.checked = false;                      
+            delivery_pregnancyFollowUpGroupBox.checked = false;                 
+        }                                                                       
+        else {                                                                  
+            delivery_referralGroupBox.checked = true;                       
+            delivery_pregnancyFollowUpGroupBox.checked = false;                 
+        }                                                                       
     }
 
     /* function delivery_defaultHideFetusGroupBox() {

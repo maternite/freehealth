@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>640</height>
+    <width>576</width>
+    <height>3332</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_6">
+  <layout class="QVBoxLayout" name="verticalLayout_14">
    <item>
     <widget class="QGroupBox" name="administrativeGroupBox">
      <property name="title">
@@ -246,6 +246,789 @@
                </item>
               </layout>
              </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="deliveryGroupBox">
+     <property name="title">
+      <string>deliveryGroupBox</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="onsetOfLabourLabel">
+          <property name="text">
+           <string>onsetOfLabour</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="onsetOfLabourListView"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>inductionOfLabour</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="inductionIndicationLabel">
+           <property name="text">
+            <string>indication</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="2">
+          <widget class="QLineEdit" name="inductionIndicationLineEdit"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="bishopScoreLabel">
+           <property name="text">
+            <string>bishop score</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="bishopScoreSpinBox">
+           <property name="maximum">
+            <number>13</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>255</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="modeOfDeliveryLabel">
+          <property name="text">
+           <string>modeOfDelivery</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="modeOfDeliveryListView"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="healthcareProfessionalGroupBox">
+     <property name="title">
+      <string>healthcare professional</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="medicalPractitionerLabel">
+        <property name="text">
+         <string>medical practitioner</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="registeredMidwifeLabel">
+        <property name="text">
+         <string>registered midwife</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="anesthesiologistLabel">
+        <property name="text">
+         <string>anesthetist </string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QListView" name="medicalPractitionerListView"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QListView" name="registeredMidwifeListView"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QListView" name="anesthesiologistListView"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="10" column="0">
+      <widget class="QLabel" name="uterineExplorationLabel">
+       <property name="text">
+        <string>uterine exploration</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="membraneRuptureDeliveryLabel">
+       <property name="text">
+        <string>time between membrane rupture and delivery</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="headDeliveryLabel">
+       <property name="text">
+        <string>delivery of the head</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QComboBox" name="placentalDeliveryProcedureComboBox"/>
+     </item>
+     <item row="7" column="1">
+      <widget class="QComboBox" name="headDeliveryComboBox"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="ruptureOfMembranesLabel">
+       <property name="text">
+        <string>rupture of membranes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="epiduralAnesthesiaLabel">
+       <property name="text">
+        <string>epidural anesthesia</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="ruptureOfMembranesDateTimeLabel">
+       <property name="text">
+        <string>rupture of membranes date and time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="directedLaborRadioLayout"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDateTimeEdit" name="ruptureOfMembranesDateTimeEdit"/>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLineEdit" name="membraneRuptureDeliveryValueLineEdit"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="streptococcusScreeningTestLabel">
+       <property name="text">
+        <string>group B streptococcus screening</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="ruptureOfMembranesRadioLayout"/>
+     </item>
+     <item row="0" column="2">
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="1">
+      <layout class="QHBoxLayout" name="epiduralAnesthesiaRadioLayout"/>
+     </item>
+     <item row="5" column="1">
+      <layout class="QHBoxLayout" name="streptococcusScreeningTestRadioLayout"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="directedLaborLabel">
+       <property name="text">
+        <string>directed labor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="placentalExpulsionActiveManagementLabel">
+       <property name="text">
+        <string>active management of placental expulsion</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="membraneRuptureDeliveryValueLabel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="placentalDeliveryProcedureLabel">
+       <property name="text">
+        <string>placental delivery procedure</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QListView" name="placentalExpulsionActiveManagementListView"/>
+     </item>
+     <item row="10" column="1">
+      <layout class="QHBoxLayout" name="uterineExplorationRadioLayout"/>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="reasonForUterineExplorationLabel">
+       <property name="text">
+        <string>Reason for manual postpartum exploration of uterus</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QComboBox" name="reasonForUterineExplorationComboBox"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="fetus1GroupBox">
+     <property name="title">
+      <string>fetus 1</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_9">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <widget class="QLabel" name="fetus1BirthDateTimeLabel">
+          <property name="text">
+           <string>birth date time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDateTimeEdit" name="fetus1BirthDateTimeEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="fetus1SexLabel">
+          <property name="text">
+           <string>sex</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="fetus1SexRadioLayout"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fetus1SexLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>208</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="fetus1WeightLabel">
+          <property name="text">
+           <string>weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QDoubleSpinBox" name="fetus1WeightValueDoubleSpinBox">
+            <property name="decimals">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="fetus1WeightUnitComboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QGroupBox" name="fetus1Apgar1GroupBox">
+          <property name="title">
+           <string>apgar 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="fetus1ApgarActivityLabel">
+             <property name="text">
+              <string>activity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus1ApgarPulseRadioLayout"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fetus1ApgarPulseLabel">
+             <property name="text">
+              <string>pulse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus1ApgarRespirationRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus1ApgarActivityRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus1ApgarAppearanceRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus1ApgarGrimaceRadioLayout"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fetus1ApgarAppearanceLabel">
+             <property name="text">
+              <string>appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="fetus1ApgarRespirationLabel">
+             <property name="text">
+              <string>respiration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="fetus1ApgarGrimaceLabel">
+             <property name="text">
+              <string>grimace</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="fetus1ApgarScoreLabel">
+             <property name="text">
+              <string>score</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus1ApgarScore1LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus1Apgar5GroupBox">
+          <property name="title">
+           <string>apgar 5</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar5AppearanceRadioLayout"/>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar5ActivityRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar5RespirationRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar5GrimaceRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar5PulseRadioLayout"/>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="fetus1ApgarScore5LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus1Apgar10GroupBox">
+          <property name="title">
+           <string>apgar 10</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar10RespirationRadioLayout"/>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar10GrimaceRadioLayout"/>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar10PulseRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar10AppearanceRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus1Apgar10ActivityRadioLayout"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus1ApgarScore10LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus1BirthDefectGroupBox">
+        <property name="title">
+         <string>birth defect</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <widget class="QCheckBox" name="fetus1ImperforateAnusCheckBox">
+           <property name="text">
+            <string>imperforate anus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus1OtherBirthDefectGroupBox">
+           <property name="title">
+            <string>other birth defect</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QLineEdit" name="fetus1OtherBirthDefectLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="postpartumComplicationsGroupBox">
+     <property name="title">
+      <string>postpartum complications</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_11">
+      <item>
+       <widget class="QGroupBox" name="postpartumHemorrhagicComplicationsGroupBox">
+        <property name="title">
+         <string>postpartum hemorrhagic complications</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QCheckBox" name="postpartumVulvarVaginalHematomaCheckBox">
+           <property name="text">
+            <string>postpartum vulvar or vaginal hematoma</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="postpartumHemorrhageGroupBox">
+           <property name="title">
+            <string>postpartum hemorhage</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="0" column="0">
+             <widget class="QLabel" name="postpartumHemorrhageEtiologyLabel">
+              <property name="text">
+               <string>etiology</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="postpartumHemorrhageEtiologyComboBox"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="postpartumHemorrhageEtiologyLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="postpartumHemorrhageTreatmentLabel">
+              <property name="text">
+               <string>treatment</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QListView" name="postpartumHemorrhageTreatmentListView"/>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="postpartumHemorrhageTreatmentLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="postpartumTraumaticComplicationsGroupBox">
+        <property name="title">
+         <string>postpartum traumatic complications</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QCheckBox" name="cervicalTearCheckBox">
+           <property name="text">
+            <string>cervical tear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="vaginalTearCheckBox">
+           <property name="text">
+            <string>vaginal tear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="vulvarTearCheckBox">
+           <property name="text">
+            <string>vulvar tear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="perinealTearGroupBox">
+           <property name="title">
+            <string>perineal tear</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="perinealTearDegreeLabel">
+                <property name="text">
+                 <string>degree</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="perinealTearDegreeSpinBox"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="episiotomyGroupBox">
+           <property name="title">
+            <string>episiotomy</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="0" column="0">
+             <widget class="QLabel" name="episiotomyLateralityLabel">
+              <property name="text">
+               <string>left right</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="episiotomyLateralityRadioLayout"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="episiotomyOperatorLabel">
+              <property name="text">
+               <string>operator</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="episiotomyOperatorComboBox"/>
+            </item>
+            <item row="0" column="2">
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </widget>
