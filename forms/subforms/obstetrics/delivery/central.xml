@@ -38,7 +38,7 @@
       <uilink widget="administrativeGroupBox"/>
 
     <Item type="datetime" name="Delivery::DateTime::Edit">
-      <uilink label="deliveryDateTimeLabel" widget="deliveryDateTimeEdit"/>
+      <uilink label="deliveryRoomAdmissionDateTimeLabel" widget="deliveryRoomAdmissionDateTimeEdit"/>
       <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
       <label lang="xx">Date and time of delivery</label>
       <label lang="fr">Date et heure de l'accouchement</label>
@@ -212,44 +212,58 @@
       <uilink widget="deliveryGroupBox" />      
       <label lang="xx">Delivery</label>                         
       <label lang="fr">Accouchement</label>              
-      <options></options> 
+      <options></options>
 
-      <Item type="uniquelist" name="Delivery::Onset::Uniquelist">                
-        <uilink label="onsetOfLabourLabel" widget="onsetOfLabourListView" layout="" />
-        <label lang="xx">Onset of labour</label>                               
-        <label lang="fr">Mode d'entréer en travail</label>                            
-        <value>                                                                 
-        <uuid id="0">Spontaneous</uuid>                                     
-        <uuid id="1">Induced</uuid>
+        <Item type="group" name="Labor::Group">
+            <uilink widget="laborGroupBox" />
+            <label lang="xx">Labor</label>
+            <label lang="fr">Travail</label>
+            <options></options>
 
-        <possible id="0" lang="xx">Spontaneous</possible>                   
-        <possible id="1" lang="xx">Induced</possible>
-        <possible id="0" lang="fr">Spontané</possible>                       
-        <possible id="1" lang="fr">DAT (Déclenchement Artificiel du Travail)</possible>                                
+            <Item type="datetime" name="Delivery::DateTime::Edit">
+              <uilink label="onsetOfLaborDateTimelabel" widget="onsetOfLaborDateTimeEdit"/>
+              <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+              <label lang="xx">Date and time of onset of labor</label>
+              <label lang="fr">Date et heure de début du travail</label>
+              <options>DontPrintEmptyValues</options>
+            </Item>
 
-        <numerical id="0">0</numerical>                                         
-        <numerical id="1">1</numerical>
-        </value>
+            <Item type="helptext" name="Delivery::Onset::Of::Labor::Helptext">
+                <uilink label="onsetOfLaborLabel"/>
+                <label lang="xx">Onset of labour</label>
+                <label lang="fr">Mode d'entrée en travail</label>
+            </Item>
 
-        <options>DontPrintEmptyValues;resizeToContent</options>                 
-        <script>                                                                
-        <onValueChanged></onValueChanged>
-        </script>                                                               
-      </Item>
+            <Item type="check" name="Delivery::Onset::Of::Labor::Spontaneous">
+                <uilink widget="spontaneousLaborCheckBox"/>
+                <label lang="xx">Spontaneous</label>
+                <label lang="fr">Spontané</label>
+                <options>PrintOnlyChecked</options>
+            </Item>
 
-      <Item type="shorttext" name="Delivery::Induction::Indication::ShortText">                                      
-        <uilink label="inductionIndicationLabel" widget="inductionIndicationLineEdit"/>                                                  
-        <label lang="xx">Indication of induction</label>                                                     
-        <label lang="fr">Indication du déclenchement</label>                                                     
-        <placeholder lang="xx"></placeholder>                                         
-        <placeholder lang="fr"></placeholder>                                         
-      </Item>
+            <Item type="group" name="Delivery::Onset::Of::Labor::Induced:Group">
+                <uilink widget="inductionOfLabourGroupBox"/>
+                <label lang="xx">Induced</label>
+                <label lang="fr">DAT (Déclenchement Artificiel du Travail)</label>
+                <options>collapsible</options>
 
-      <Item type="spin" name="Delivery::Induction::Bishop::Score::Spin">                                                
-        <uilink label="bishopScoreLabel" widget="bishopScoreSpinBox"/>                                                  
-        <label lang="xx">Bishop score</label>                                                     
-        <label lang="fr">Score de Bishop</label>                                                     
-      </Item>
+                  <Item type="shorttext" name="Delivery::Induction::Indication::ShortText">
+                    <uilink label="inductionIndicationLabel" widget="inductionIndicationLineEdit"/>
+                    <label lang="xx">Indication of induction</label>
+                    <label lang="fr">Indication du déclenchement</label>
+                    <placeholder lang="xx"></placeholder>
+                    <placeholder lang="fr"></placeholder>
+                  </Item>
+
+                  <Item type="spin" name="Delivery::Induction::Bishop::Score::Spin">
+                    <uilink label="bishopScoreLabel" widget="bishopScoreSpinBox"/>
+                    <label lang="xx">Bishop score</label>
+                    <label lang="fr">Score de Bishop</label>
+                  </Item>
+
+              </Item> <!-- end of group Delivery::Onset::Of::Labor::Induced::Group-->
+
+          </Item> <!-- end of group Delivery::Labor:Group-->
     
       <Item type="uniquelist" name="Delivery::Mode::Uniquelist">           
       <!--<sctid>236973005</sctid>-->                                             
@@ -1170,6 +1184,56 @@
 
         </Item> <!-- end of group Fetus::1::Apgar::10::Group -->
 
+        <Item type="group" name="Fetus::1::Umbilical::Cord::Group">
+            <uilink widget="fetus1UmbilicalCordGroupBox" />
+            <label lang="xx">Umbilical cord</label>
+            <label lang="fr">Cordon ombilical</label>
+            <options></options>
+
+            <Item type="group" name="Fetus::1::Nuchal::Cord::Group">
+                <uilink widget="fetus1NuchalCordGroupBox" />
+                <label lang="xx">Nuchal cord</label>
+                <label lang="fr">Circulaire</label>
+                <options>collapsible</options>
+
+                <Item type="spin" name="Fetus::1::Nuchal::Cord::Number::Of::Loop::Spin">
+                    <uilink label="fetus1NumberOfLoopLabel" widget="fetus1NumberOfLoopSpinBox"/>
+                    <label lang="xx">Number of loops</label>
+                    <label lang="fr">Nombre de tours</label>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::1::Loose::Or::Tight::Nuchal::Cord::Radio">
+                  <uilink layout="fetus1LooseOrTightNuchalCordHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <value>
+                  <uuid id="0">not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">tight</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">loose</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Loose</possible>
+                  <possible id="2" lang="xx">Tight</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Lâche</possible>
+                  <possible id="2" lang="fr">Serré</possible>
+                  </value>
+                </Item>
+
+            </Item> <!-- Fetus::1::Nuchal::Cord::Group -->
+
+            <Item type="check" name="Fetus::1::Umbilical::Cord::Around::Trunk::Check">
+                <uilink label="" widget="fetus1UmbilicalCordAroundTrunkCheckBox"/>
+                <label lang="xx">Umbilical cord around trunk</label>
+                <label lang="fr">Écharpe</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::1::Ubilical::Cord::Group -->
+
         <Item type="group" name="Fetus::1::Birth::Defect::Group">
             <uilink widget="fetus1BirthDefectGroupBox" />
             <label lang="xx">Birth defect</label>
@@ -1197,8 +1261,56 @@
 
             </Item> <!-- end of  Fetus::1::Birth::Defect::Other::Group -->
 
-
         </Item> <!-- end of  Fetus::1::Birth::Defect::Group -->
+
+        <Item type="group" name="Fetus::1::NICU::Transfer::Group">
+            <uilink widget="fetus1NicuTransferGroupBox" />
+            <label lang="xx">Neonatal Intensive Care Unit transfer</label>
+            <label lang="fr">Transfert en néonatologie</label>
+            <options>collapsible</options>
+
+                <Item type="datetime" name="Fetus::1::NICU::Transfer::Date::And::Time::Datetime">
+                  <uilink label="fetus1NicuTransferDateTimeLabel" widget="fetus1NicuTransferDateTimeEdit"/>
+                  <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                  <label lang="xx">Date and time of transfer</label>
+                  <label lang="fr">Date et heure du transfert</label>
+                  <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::1::NICU::Transfer::Timing::Radio">
+                  <uilink label="" layout="fetus1NicuTransferRadioHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <value>
+                  <uuid id="0">Not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">Early postpartum neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">Secondary neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Early</possible>
+                  <possible id="2" lang="xx">Delayed</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Postpartum immédiat</possible>
+                  <possible id="2" lang="fr">Secondaire</possible>
+                  </value>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::1::Nicus::Transfer::Reason::Shorttext">
+                    <uilink label="fetus1ReasonForNicuTransferLabel" widget="fetus1ReasonForNicuTransferLineEdit"/>
+                    <placeholder lang="xx">Reason for transfer</placeholder>
+                    <placeholder lang="fr">Motif de transfert</placeholder>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::1::Nicus::Transfer::Diagnosis::Shorttext">
+                    <uilink label="fetus1NicuTransferDiagnosisLabel" widget="fetus1NicuTransferDiagnosisLineEdit"/>
+                    <placeholder lang="xx">Diagnosis</placeholder>
+                    <placeholder lang="fr">Diagnostic de sortie</placeholder>
+                </Item>
+
+        </Item> <!-- end of group Fetus::1::NICU::Transfer::Group -->
+
 
         </Item> <!-- end of Fetus::1::Group -->
 

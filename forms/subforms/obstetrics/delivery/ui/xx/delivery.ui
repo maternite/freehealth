@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>576</width>
-    <height>3332</height>
+    <width>781</width>
+    <height>3788</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_14">
+  <layout class="QVBoxLayout" name="verticalLayout_18">
    <item>
     <widget class="QGroupBox" name="administrativeGroupBox">
      <property name="title">
@@ -23,14 +23,14 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QLabel" name="deliveryDateTimeLabel">
+         <widget class="QLabel" name="deliveryRoomAdmissionDateTimeLabel">
           <property name="text">
-           <string>deliveryDateTimeLabel</string>
+           <string>deliveryRoomAdmissionDateTimeLabel</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QDateTimeEdit" name="deliveryDateTimeEdit">
+         <widget class="QDateTimeEdit" name="deliveryRoomAdmissionDateTimeEdit">
           <property name="calendarPopup">
            <bool>false</bool>
           </property>
@@ -261,63 +261,99 @@
      <property name="title">
       <string>deliveryGroupBox</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_6">
+     <layout class="QVBoxLayout" name="verticalLayout_17">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <widget class="QLabel" name="onsetOfLabourLabel">
-          <property name="text">
-           <string>onsetOfLabour</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QListView" name="onsetOfLabourListView"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QGroupBox" name="groupBox">
+       <widget class="QGroupBox" name="laborGroupBox">
         <property name="title">
-         <string>inductionOfLabour</string>
+         <string>laborGroupBox</string>
         </property>
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <widget class="QLabel" name="inductionIndicationLabel">
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="onsetOfLaborDateTimelabel">
+             <property name="text">
+              <string>onset of labor date and time</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="onsetOfLaborDateTimeEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLabel" name="onsetOfLaborLabel">
            <property name="text">
-            <string>indication</string>
+            <string>onsetOfLabour</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="1" colspan="2">
-          <widget class="QLineEdit" name="inductionIndicationLineEdit"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="bishopScoreLabel">
+         <item>
+          <widget class="QCheckBox" name="spontaneousLaborCheckBox">
            <property name="text">
-            <string>bishop score</string>
+            <string>spontaneous labor</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QSpinBox" name="bishopScoreSpinBox">
-           <property name="maximum">
-            <number>13</number>
+         <item>
+          <widget class="QGroupBox" name="inductionOfLabourGroupBox">
+           <property name="title">
+            <string>induced labour</string>
            </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="inductionIndicationLabel">
+              <property name="text">
+               <string>indication</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="2">
+             <widget class="QLineEdit" name="inductionIndicationLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="bishopScoreLabel">
+              <property name="text">
+               <string>bishop score</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="bishopScoreSpinBox">
+              <property name="maximum">
+               <number>13</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>255</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </widget>
-         </item>
-         <item row="1" column="2">
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>255</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
          </item>
         </layout>
        </widget>
@@ -517,7 +553,7 @@
      <property name="title">
       <string>fetus 1</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_9">
+     <layout class="QVBoxLayout" name="verticalLayout_16">
       <item>
        <layout class="QGridLayout" name="gridLayout_10">
         <item row="0" column="0">
@@ -841,6 +877,78 @@
        </layout>
       </item>
       <item>
+       <widget class="QGroupBox" name="fetus1UmbilicalCordGroupBox">
+        <property name="title">
+         <string>umbilical cord</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item>
+          <widget class="QGroupBox" name="fetus1NuchalCordGroupBox">
+           <property name="title">
+            <string>nuchal cord</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <item>
+               <widget class="QLabel" name="fetus1NumberOfLoopLabel">
+                <property name="text">
+                 <string>number of loops</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus1NumberOfLoopSpinBox"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <layout class="QHBoxLayout" name="fetus1LooseOrTightNuchalCordHorizontalLayout"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_12">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus1UmbilicalCordAroundTrunkCheckBox">
+           <property name="text">
+            <string>cord around trunk</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
        <widget class="QGroupBox" name="fetus1BirthDefectGroupBox">
         <property name="title">
          <string>birth defect</string>
@@ -864,6 +972,77 @@
             </item>
            </layout>
           </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus1NicuTransferGroupBox">
+        <property name="title">
+         <string>nicu transfer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QLabel" name="fetus1NicuTransferDateTimeLabel">
+             <property name="text">
+              <string>timing</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="fetus1NicuTransferRadioHorizontalLayout"/>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="fetus1NicuTransferDateTimeEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QLabel" name="fetus1ReasonForNicuTransferLabel">
+             <property name="text">
+              <string>reason for transfer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus1ReasonForNicuTransferLineEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QLabel" name="fetus1NicuTransferDiagnosisLabel">
+             <property name="text">
+              <string>diagnosis</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus1NicuTransferDiagnosisLineEdit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </widget>
