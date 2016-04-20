@@ -156,6 +156,13 @@
         <options>DontPrintEmptyValues</options>
       </Item>
 
+      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::Value::HelpText">
+        <uilink label="trimester3CurrentWeeksAmenorrhoeaWeeksValueLabel" layout="" widget=""/> 
+        <label lang="xx"></label>                                          
+        <label lang="fr"></label>                                       
+        <options>DontPrintEmptyValues</options>                                 
+      </Item> 
+
       <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText">
         <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget=""/>
         <label lang="xx">days</label>
