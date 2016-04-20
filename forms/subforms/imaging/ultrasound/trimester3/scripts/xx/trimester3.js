@@ -16,6 +16,7 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester3', function (exp
     var trimester3_fetusNumber, trimester3_fetusGroup1, trimester3_fetusGroup2, trimester3_fetusGroup3, trimester3_fetusGroup4, trimester3_fetusGroup5, trimester3_fetusGroup6;
     var trimester3_gestationalAge, trimester3_dateToUse, trimester3_estimatedDueDate, trimester3_lastMenstrualPeriodUi, trimester3_lastMenstrualPeriodItem, trimester3_conceptionDateUi, trimester3_conceptionDateItem, trimester3_useLmp, trimester3_useLmpItem, trimester3_useDateOfConception, trimester3_useDateOfConceptionItem, trimester3_currentWeeksAmenorrhoeaWeeksValueLineEdit, trimester3_currentWeeksAmenorrhoeaDaysValueLineEdit, defaultDate;
     var trimester3_currentWeeksAmenorrhoeaWeeksValueItem;
+    var trimester3_estimatedDueDateLineEditItem;
     (function () {
     var x = "Hello!!!!!!!!!!!!!!!!!!!!!!!!!!";
     print(x);      // I will invoke myself
@@ -25,7 +26,7 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester3', function (exp
 
     function trimester3_setupUi() {
 
-        print("com.freemedforms.imaging.utrasound.trimester3 Setup UI");                 
+        print("com.freemedforms.imaging.ultrasound.trimester3 Setup UI");                 
                                                                                 
         // Get items to work with                                               
         freemedforms.forms.namespaceInUse = "";                                 
@@ -60,6 +61,7 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester3', function (exp
         trimester3_currentWeeksAmenorrhoeaWeeksValueItem = freemedforms.forms.item("Maternity::Imaging::Ultrasound::Trimester3::ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::Value::HelpText");       
         trimester3_estimatedDueDate = trimester3_formUi.findChild("eddValueLabel");
         trimester3_estimatedDueDateLineEdit = trimester3_formUi.findChild("eddValueLineEdit");
+        trimester3_estimatedDueDateLineEditItem = freemedforms.forms.item("Maternity::Imaging::Ultrasound::Trimester3::ObstetricalCalendar::Edd::ShortText");
         trimester3_setDefaults();
         trimester3_setLmpDefault();
 
@@ -75,14 +77,14 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester3', function (exp
         // hide LineEdit widgets used to print and record dynamic data:
         trimester3_currentWeeksAmenorrhoeaWeeksValueLineEdit.visible = false;   
         trimester3_currentWeeksAmenorrhoeaDaysValueLineEdit.visible = false;
-        trimester3_estimatedDueDateLineEdit.visible = false;
+        //trimester3_estimatedDueDateLineEdit.visible = false;
     }
     
     function trimester3_hideCalendarLineEdit() {
         // hide LineEdit widgets used to print and record dynamic data:         
         trimester3_currentWeeksAmenorrhoeaWeeksValueLineEdit.visible = false;   
         trimester3_currentWeeksAmenorrhoeaDaysValueLineEdit.visible = false;    
-        trimester3_estimatedDueDateLineEdit.visible = false;
+        //trimester3_estimatedDueDateLineEdit.visible = false;
     }
 
     // fetus functions
@@ -174,7 +176,7 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester3', function (exp
         // hide LineEdit widgets used to print and record dynamic data:         
         trimester3_currentWeeksAmenorrhoeaWeeksValueLineEdit.visible = false;   
         trimester3_currentWeeksAmenorrhoeaDaysValueLineEdit.visible = false;    
-        trimester3_estimatedDueDateLineEdit.visible = false;                    
+        //trimester3_estimatedDueDateLineEdit.visible = false;                    
     }
 
     function isDateDefault(date) {
@@ -231,8 +233,9 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester3', function (exp
         var trimester3_eddText = "<b>";
         trimester3_eddText += trimester3_edd;
         trimester3_eddText += "</b>";
-        trimester3_estimatedDueDate.setText(trimester3_eddText);        
-        trimester3_estimatedDueDateLineEdit.setText(trimester3_eddText);
+        //trimester3_estimatedDueDate.setText(trimester3_eddText);        
+        //trimester3_estimatedDueDateLineEdit.setText(trimester3_eddText);
+        trimester3_estimatedDueDateLineEditItem.setText(trimester3_eddText);
     }
 
     function trimester3_computeEddFromCd() {                                   
@@ -249,8 +252,9 @@ namespace.module('com.freemedforms.imaging.ultrasound.trimester3', function (exp
         var trimester3_eddText = "<b>";                                         
         trimester3_eddText += trimester3_edd;                                   
         trimester3_eddText += "</b>";                                           
-        trimester3_estimatedDueDate.setText(trimester3_eddText);                
-        trimester3_estimatedDueDateLineEdit.setText(trimester3_eddText);        
+        //trimester3_estimatedDueDate.setText(trimester3_eddText);                
+        //trimester3_estimatedDueDateLineEdit.setText(trimester3_eddText);
+        trimester3_estimatedDueDateLineEditItem.setText(trimester3_eddText);        
     }
 
     function trimester3_computeGestationalAge() {
