@@ -7,19 +7,46 @@
     <x>0</x>
     <y>0</y>
     <width>781</width>
-    <height>3788</height>
+    <height>9444</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_18">
+  <layout class="QVBoxLayout" name="verticalLayout_55">
    <item>
     <widget class="QGroupBox" name="administrativeGroupBox">
      <property name="title">
       <string>administrativeGroupBox</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="parityLabel">
+          <property name="text">
+           <string>parity</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="paritySpinBox"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_15">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
@@ -35,6 +62,19 @@
            <bool>false</bool>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_16">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
@@ -54,13 +94,13 @@
          <item row="0" column="1">
           <widget class="QSpinBox" name="fetusNumberSpinBox">
            <property name="minimum">
-            <number>1</number>
+            <number>0</number>
            </property>
            <property name="maximum">
             <number>6</number>
            </property>
            <property name="value">
-            <number>1</number>
+            <number>0</number>
            </property>
           </widget>
          </item>
@@ -372,44 +412,44 @@
         </item>
        </layout>
       </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="healthcareProfessionalGroupBox">
-     <property name="title">
-      <string>healthcare professional</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="0">
-       <widget class="QLabel" name="medicalPractitionerLabel">
-        <property name="text">
-         <string>medical practitioner</string>
+      <item>
+       <widget class="QGroupBox" name="healthcareProfessionalGroupBox">
+        <property name="title">
+         <string>healthcare professional</string>
         </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLabel" name="medicalPractitionerLabel">
+           <property name="text">
+            <string>medical practitioner</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="registeredMidwifeLabel">
+           <property name="text">
+            <string>registered midwife</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="anesthesiologistLabel">
+           <property name="text">
+            <string>anesthetist </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QListView" name="medicalPractitionerListView"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QListView" name="registeredMidwifeListView"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QListView" name="anesthesiologistListView"/>
+         </item>
+        </layout>
        </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="registeredMidwifeLabel">
-        <property name="text">
-         <string>registered midwife</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="anesthesiologistLabel">
-        <property name="text">
-         <string>anesthetist </string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QListView" name="medicalPractitionerListView"/>
-      </item>
-      <item row="1" column="1">
-       <widget class="QListView" name="registeredMidwifeListView"/>
-      </item>
-      <item row="2" column="1">
-       <widget class="QListView" name="anesthesiologistListView"/>
       </item>
      </layout>
     </widget>
@@ -553,7 +593,7 @@
      <property name="title">
       <string>fetus 1</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_16">
+     <layout class="QVBoxLayout" name="verticalLayout_18">
       <item>
        <layout class="QGridLayout" name="gridLayout_10">
         <item row="0" column="0">
@@ -877,6 +917,50 @@
        </layout>
       </item>
       <item>
+       <widget class="QGroupBox" name="fetus1AmnioticFluidGroupBox">
+        <property name="title">
+         <string>amniotic fluid</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_16">
+         <item>
+          <widget class="QCheckBox" name="fetus1AmnioticFluidClearCheckBox">
+           <property name="text">
+            <string>clear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus1AmnioticFluidYellowTintedCheckBox">
+           <property name="text">
+            <string>yellow tinted</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus1AmnioticFluidMeconiumStainedLiquorCheckBox">
+           <property name="text">
+            <string>meconium stained liquor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus1AmnioticFluidPeaSoupCheckBox">
+           <property name="text">
+            <string>pea soup</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus1AmnioticFluidFoulSmellingCheckBox">
+           <property name="text">
+            <string>foul smelling</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
        <widget class="QGroupBox" name="fetus1UmbilicalCordGroupBox">
         <property name="title">
          <string>umbilical cord</string>
@@ -1037,6 +1121,2736 @@
            </item>
            <item>
             <widget class="QLineEdit" name="fetus1NicuTransferDiagnosisLineEdit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="fetus2GroupBox">
+     <property name="title">
+      <string>fetus 2</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_20">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0">
+         <widget class="QLabel" name="fetus2BirthDateTimeLabel">
+          <property name="text">
+           <string>birth date time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDateTimeEdit" name="fetus2BirthDateTimeEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="fetus2SexLabel">
+          <property name="text">
+           <string>sex</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <layout class="QHBoxLayout" name="fetus2SexRadioLayout"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fetus2SexLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_17">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>208</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="fetus2WeightLabel">
+          <property name="text">
+           <string>weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <item>
+           <widget class="QDoubleSpinBox" name="fetus2WeightValueDoubleSpinBox">
+            <property name="decimals">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="fetus2WeightUnitComboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_18">
+        <item>
+         <widget class="QGroupBox" name="fetus2Apgar1GroupBox">
+          <property name="title">
+           <string>apgar 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="fetus2ApgarActivityLabel">
+             <property name="text">
+              <string>activity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus2ApgarPulseRadioLayout"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fetus2ApgarPulseLabel">
+             <property name="text">
+              <string>pulse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus2ApgarRespirationRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus2ApgarActivityRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus2ApgarAppearanceRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus2ApgarGrimaceRadioLayout"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fetus2ApgarAppearanceLabel">
+             <property name="text">
+              <string>appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="fetus2ApgarRespirationLabel">
+             <property name="text">
+              <string>respiration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="fetus2ApgarGrimaceLabel">
+             <property name="text">
+              <string>grimace</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="fetus2ApgarScoreLabel">
+             <property name="text">
+              <string>score</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus2ApgarScore1LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus2Apgar5GroupBox">
+          <property name="title">
+           <string>apgar 5</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar5AppearanceRadioLayout"/>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar5ActivityRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar5RespirationRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar5GrimaceRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar5PulseRadioLayout"/>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_20">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="fetus2ApgarScore5LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus2Apgar10GroupBox">
+          <property name="title">
+           <string>apgar 10</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar10RespirationRadioLayout"/>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar10GrimaceRadioLayout"/>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar10PulseRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar10AppearanceRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_22">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_23">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_24">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus2Apgar10ActivityRadioLayout"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus2ApgarScore10LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus2AmnioticFluidGroupBox">
+        <property name="title">
+         <string>amniotic fluid</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_21">
+         <item>
+          <widget class="QCheckBox" name="fetus2AmnioticFluidClearCheckBox">
+           <property name="text">
+            <string>clear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus2AmnioticFluidYellowTintedCheckBox">
+           <property name="text">
+            <string>yellow tinted</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus2AmnioticFluidMeconiumStainedLiquorCheckBox">
+           <property name="text">
+            <string>meconium stained liquor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus2AmnioticFluidPeaSoupCheckBox">
+           <property name="text">
+            <string>pea soup</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus2AmnioticFluidFoulSmellingCheckBox">
+           <property name="text">
+            <string>foul smelling</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus2UmbilicalCordGroupBox">
+        <property name="title">
+         <string>umbilical cord</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_22">
+         <item>
+          <widget class="QGroupBox" name="fetus2NuchalCordGroupBox">
+           <property name="title">
+            <string>nuchal cord</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_23">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_19">
+              <item>
+               <widget class="QLabel" name="fetus2NumberOfLoopLabel">
+                <property name="text">
+                 <string>number of loops</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus2NumberOfLoopSpinBox"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_19">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_20">
+              <item>
+               <layout class="QHBoxLayout" name="fetus2LooseOrTightNuchalCordHorizontalLayout"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_20">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus2UmbilicalCordAroundTrunkCheckBox">
+           <property name="text">
+            <string>cord around trunk</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus2BirthDefectGroupBox">
+        <property name="title">
+         <string>birth defect</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_24">
+         <item>
+          <widget class="QCheckBox" name="fetus2ImperforateAnusCheckBox">
+           <property name="text">
+            <string>imperforate anus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus2OtherBirthDefectGroupBox">
+           <property name="title">
+            <string>other birth defect</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_25">
+            <item>
+             <widget class="QLineEdit" name="fetus2OtherBirthDefectLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus2NicuTransferGroupBox">
+        <property name="title">
+         <string>nicu transfer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_26">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_21">
+           <item>
+            <widget class="QLabel" name="fetus2NicuTransferDateTimeLabel">
+             <property name="text">
+              <string>timing</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="fetus2NicuTransferRadioHorizontalLayout"/>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="fetus2NicuTransferDateTimeEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <widget class="QLabel" name="fetus2ReasonForNicuTransferLabel">
+             <property name="text">
+              <string>reason for transfer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus2ReasonForNicuTransferLineEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_23">
+           <item>
+            <widget class="QLabel" name="fetus2NicuTransferDiagnosisLabel">
+             <property name="text">
+              <string>diagnosis</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus2NicuTransferDiagnosisLineEdit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="fetus3GroupBox">
+     <property name="title">
+      <string>fetus 3</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_27">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_17">
+        <item row="0" column="0">
+         <widget class="QLabel" name="fetus3BirthDateTimeLabel">
+          <property name="text">
+           <string>birth date time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDateTimeEdit" name="fetus3BirthDateTimeEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="fetus3SexLabel">
+          <property name="text">
+           <string>sex</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_24">
+          <item>
+           <layout class="QHBoxLayout" name="fetus3SexRadioLayout"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fetus3SexLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_22">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>208</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="fetus3WeightLabel">
+          <property name="text">
+           <string>weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_25">
+          <item>
+           <widget class="QDoubleSpinBox" name="fetus3WeightValueDoubleSpinBox">
+            <property name="decimals">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="fetus3WeightUnitComboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_26">
+        <item>
+         <widget class="QGroupBox" name="fetus3Apgar1GroupBox">
+          <property name="title">
+           <string>apgar 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_18">
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_25">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="fetus3ApgarActivityLabel">
+             <property name="text">
+              <string>activity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus3ApgarPulseRadioLayout"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fetus3ApgarPulseLabel">
+             <property name="text">
+              <string>pulse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus3ApgarRespirationRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_26">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus3ApgarActivityRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus3ApgarAppearanceRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus3ApgarGrimaceRadioLayout"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fetus3ApgarAppearanceLabel">
+             <property name="text">
+              <string>appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="fetus3ApgarRespirationLabel">
+             <property name="text">
+              <string>respiration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="fetus3ApgarGrimaceLabel">
+             <property name="text">
+              <string>grimace</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_27">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_28">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="fetus3ApgarScoreLabel">
+             <property name="text">
+              <string>score</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus3ApgarScore1LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus3Apgar5GroupBox">
+          <property name="title">
+           <string>apgar 5</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_19">
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar5AppearanceRadioLayout"/>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar5ActivityRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_29">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_30">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar5RespirationRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar5GrimaceRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_31">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar5PulseRadioLayout"/>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_32">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="fetus3ApgarScore5LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus3Apgar10GroupBox">
+          <property name="title">
+           <string>apgar 10</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_20">
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar10RespirationRadioLayout"/>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_33">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar10GrimaceRadioLayout"/>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar10PulseRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar10AppearanceRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_34">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_35">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_23">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_36">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus3Apgar10ActivityRadioLayout"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus3ApgarScore10LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus3AmnioticFluidGroupBox">
+        <property name="title">
+         <string>amniotic fluid</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_28">
+         <item>
+          <widget class="QCheckBox" name="fetus3AmnioticFluidClearCheckBox">
+           <property name="text">
+            <string>clear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus3AmnioticFluidYellowTintedCheckBox">
+           <property name="text">
+            <string>yellow tinted</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus3AmnioticFluidMeconiumStainedLiquorCheckBox">
+           <property name="text">
+            <string>meconium stained liquor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus3AmnioticFluidPeaSoupCheckBox">
+           <property name="text">
+            <string>pea soup</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus3AmnioticFluidFoulSmellingCheckBox">
+           <property name="text">
+            <string>foul smelling</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus3UmbilicalCordGroupBox">
+        <property name="title">
+         <string>umbilical cord</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_29">
+         <item>
+          <widget class="QGroupBox" name="fetus3NuchalCordGroupBox">
+           <property name="title">
+            <string>nuchal cord</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_30">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_27">
+              <item>
+               <widget class="QLabel" name="fetus3NumberOfLoopLabel">
+                <property name="text">
+                 <string>number of loops</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus3NumberOfLoopSpinBox"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_24">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_28">
+              <item>
+               <layout class="QHBoxLayout" name="fetus3LooseOrTightNuchalCordHorizontalLayout"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_25">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus3UmbilicalCordAroundTrunkCheckBox">
+           <property name="text">
+            <string>cord around trunk</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus3BirthDefectGroupBox">
+        <property name="title">
+         <string>birth defect</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_31">
+         <item>
+          <widget class="QCheckBox" name="fetus3ImperforateAnusCheckBox">
+           <property name="text">
+            <string>imperforate anus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus3OtherBirthDefectGroupBox">
+           <property name="title">
+            <string>other birth defect</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_32">
+            <item>
+             <widget class="QLineEdit" name="fetus3OtherBirthDefectLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus3NicuTransferGroupBox">
+        <property name="title">
+         <string>nicu transfer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_33">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_29">
+           <item>
+            <widget class="QLabel" name="fetus3NicuTransferDateTimeLabel">
+             <property name="text">
+              <string>timing</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="fetus3NicuTransferRadioHorizontalLayout"/>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="fetus3NicuTransferDateTimeEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_26">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_30">
+           <item>
+            <widget class="QLabel" name="fetus3ReasonForNicuTransferLabel">
+             <property name="text">
+              <string>reason for transfer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus3ReasonForNicuTransferLineEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_31">
+           <item>
+            <widget class="QLabel" name="fetus3NicuTransferDiagnosisLabel">
+             <property name="text">
+              <string>diagnosis</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus3NicuTransferDiagnosisLineEdit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="fetus4GroupBox">
+     <property name="title">
+      <string>fetus 4</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_34">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_21">
+        <item row="0" column="0">
+         <widget class="QLabel" name="fetus4BirthDateTimeLabel">
+          <property name="text">
+           <string>birth date time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDateTimeEdit" name="fetus4BirthDateTimeEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="fetus4SexLabel">
+          <property name="text">
+           <string>sex</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_32">
+          <item>
+           <layout class="QHBoxLayout" name="fetus4SexRadioLayout"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fetus4SexLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_27">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>208</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="fetus4WeightLabel">
+          <property name="text">
+           <string>weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_33">
+          <item>
+           <widget class="QDoubleSpinBox" name="fetus4WeightValueDoubleSpinBox">
+            <property name="decimals">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="fetus4WeightUnitComboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_34">
+        <item>
+         <widget class="QGroupBox" name="fetus4Apgar1GroupBox">
+          <property name="title">
+           <string>apgar 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_22">
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_37">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="fetus4ApgarActivityLabel">
+             <property name="text">
+              <string>activity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus4ApgarPulseRadioLayout"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fetus4ApgarPulseLabel">
+             <property name="text">
+              <string>pulse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus4ApgarRespirationRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_38">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus4ApgarActivityRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus4ApgarAppearanceRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus4ApgarGrimaceRadioLayout"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fetus4ApgarAppearanceLabel">
+             <property name="text">
+              <string>appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="fetus4ApgarRespirationLabel">
+             <property name="text">
+              <string>respiration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="fetus4ApgarGrimaceLabel">
+             <property name="text">
+              <string>grimace</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_39">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_40">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="fetus4ApgarScoreLabel">
+             <property name="text">
+              <string>score</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus4ApgarScore1LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus4Apgar5GroupBox">
+          <property name="title">
+           <string>apgar 5</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_23">
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar5AppearanceRadioLayout"/>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar5ActivityRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_41">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_42">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar5RespirationRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar5GrimaceRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_43">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar5PulseRadioLayout"/>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_44">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="fetus4ApgarScore5LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus4Apgar10GroupBox">
+          <property name="title">
+           <string>apgar 10</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_24">
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar10RespirationRadioLayout"/>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_45">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar10GrimaceRadioLayout"/>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar10PulseRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar10AppearanceRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_46">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_47">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_28">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_48">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus4Apgar10ActivityRadioLayout"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus4ApgarScore10LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus4AmnioticFluidGroupBox">
+        <property name="title">
+         <string>amniotic fluid</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_35">
+         <item>
+          <widget class="QCheckBox" name="fetus4AmnioticFluidClearCheckBox">
+           <property name="text">
+            <string>clear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus4AmnioticFluidYellowTintedCheckBox">
+           <property name="text">
+            <string>yellow tinted</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus4AmnioticFluidMeconiumStainedLiquorCheckBox">
+           <property name="text">
+            <string>meconium stained liquor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus4AmnioticFluidPeaSoupCheckBox">
+           <property name="text">
+            <string>pea soup</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus4AmnioticFluidFoulSmellingCheckBox">
+           <property name="text">
+            <string>foul smelling</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus4UmbilicalCordGroupBox">
+        <property name="title">
+         <string>umbilical cord</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_36">
+         <item>
+          <widget class="QGroupBox" name="fetus4NuchalCordGroupBox">
+           <property name="title">
+            <string>nuchal cord</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_37">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_35">
+              <item>
+               <widget class="QLabel" name="fetus4NumberOfLoopLabel">
+                <property name="text">
+                 <string>number of loops</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus4NumberOfLoopSpinBox"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_29">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_36">
+              <item>
+               <layout class="QHBoxLayout" name="fetus4LooseOrTightNuchalCordHorizontalLayout"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_30">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus4UmbilicalCordAroundTrunkCheckBox">
+           <property name="text">
+            <string>cord around trunk</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus4BirthDefectGroupBox">
+        <property name="title">
+         <string>birth defect</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_38">
+         <item>
+          <widget class="QCheckBox" name="fetus4ImperforateAnusCheckBox">
+           <property name="text">
+            <string>imperforate anus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus4OtherBirthDefectGroupBox">
+           <property name="title">
+            <string>other birth defect</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_39">
+            <item>
+             <widget class="QLineEdit" name="fetus4OtherBirthDefectLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus4NicuTransferGroupBox">
+        <property name="title">
+         <string>nicu transfer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_40">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_37">
+           <item>
+            <widget class="QLabel" name="fetus4NicuTransferDateTimeLabel">
+             <property name="text">
+              <string>timing</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="fetus4NicuTransferRadioHorizontalLayout"/>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="fetus4NicuTransferDateTimeEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_31">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_38">
+           <item>
+            <widget class="QLabel" name="fetus4ReasonForNicuTransferLabel">
+             <property name="text">
+              <string>reason for transfer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus4ReasonForNicuTransferLineEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_39">
+           <item>
+            <widget class="QLabel" name="fetus4NicuTransferDiagnosisLabel">
+             <property name="text">
+              <string>diagnosis</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus4NicuTransferDiagnosisLineEdit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="fetus5GroupBox">
+     <property name="title">
+      <string>fetus 5</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_41">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_25">
+        <item row="0" column="0">
+         <widget class="QLabel" name="fetus5BirthDateTimeLabel">
+          <property name="text">
+           <string>birth date time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDateTimeEdit" name="fetus5BirthDateTimeEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="fetus5SexLabel">
+          <property name="text">
+           <string>sex</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_40">
+          <item>
+           <layout class="QHBoxLayout" name="fetus5SexRadioLayout"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fetus5SexLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_32">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>208</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="fetus5WeightLabel">
+          <property name="text">
+           <string>weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_41">
+          <item>
+           <widget class="QDoubleSpinBox" name="fetus5WeightValueDoubleSpinBox">
+            <property name="decimals">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="fetus5WeightUnitComboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_42">
+        <item>
+         <widget class="QGroupBox" name="fetus5Apgar1GroupBox">
+          <property name="title">
+           <string>apgar 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_26">
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_49">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="fetus5ApgarActivityLabel">
+             <property name="text">
+              <string>activity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus5ApgarPulseRadioLayout"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fetus5ApgarPulseLabel">
+             <property name="text">
+              <string>pulse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus5ApgarRespirationRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_50">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus5ApgarActivityRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus5ApgarAppearanceRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus5ApgarGrimaceRadioLayout"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fetus5ApgarAppearanceLabel">
+             <property name="text">
+              <string>appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="fetus5ApgarRespirationLabel">
+             <property name="text">
+              <string>respiration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="fetus5ApgarGrimaceLabel">
+             <property name="text">
+              <string>grimace</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_51">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_52">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="fetus5ApgarScoreLabel">
+             <property name="text">
+              <string>score</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus5ApgarScore1LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus5Apgar5GroupBox">
+          <property name="title">
+           <string>apgar 5</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_27">
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar5AppearanceRadioLayout"/>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar5ActivityRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_53">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_54">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar5RespirationRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar5GrimaceRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_55">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar5PulseRadioLayout"/>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_56">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="fetus5ApgarScore5LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus5Apgar10GroupBox">
+          <property name="title">
+           <string>apgar 10</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_28">
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar10RespirationRadioLayout"/>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_57">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar10GrimaceRadioLayout"/>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar10PulseRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar10AppearanceRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_58">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_59">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_33">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_60">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus5Apgar10ActivityRadioLayout"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus5ApgarScore10LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus5AmnioticFluidGroupBox">
+        <property name="title">
+         <string>amniotic fluid</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_42">
+         <item>
+          <widget class="QCheckBox" name="fetus5AmnioticFluidClearCheckBox">
+           <property name="text">
+            <string>clear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus5AmnioticFluidYellowTintedCheckBox">
+           <property name="text">
+            <string>yellow tinted</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus5AmnioticFluidMeconiumStainedLiquorCheckBox">
+           <property name="text">
+            <string>meconium stained liquor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus5AmnioticFluidPeaSoupCheckBox">
+           <property name="text">
+            <string>pea soup</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus5AmnioticFluidFoulSmellingCheckBox">
+           <property name="text">
+            <string>foul smelling</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus5UmbilicalCordGroupBox">
+        <property name="title">
+         <string>umbilical cord</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_43">
+         <item>
+          <widget class="QGroupBox" name="fetus5NuchalCordGroupBox">
+           <property name="title">
+            <string>nuchal cord</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_44">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_43">
+              <item>
+               <widget class="QLabel" name="fetus5NumberOfLoopLabel">
+                <property name="text">
+                 <string>number of loops</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus5NumberOfLoopSpinBox"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_34">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_44">
+              <item>
+               <layout class="QHBoxLayout" name="fetus5LooseOrTightNuchalCordHorizontalLayout"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_35">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus5UmbilicalCordAroundTrunkCheckBox">
+           <property name="text">
+            <string>cord around trunk</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus5BirthDefectGroupBox">
+        <property name="title">
+         <string>birth defect</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_45">
+         <item>
+          <widget class="QCheckBox" name="fetus5ImperforateAnusCheckBox">
+           <property name="text">
+            <string>imperforate anus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus5OtherBirthDefectGroupBox">
+           <property name="title">
+            <string>other birth defect</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_46">
+            <item>
+             <widget class="QLineEdit" name="fetus5OtherBirthDefectLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus5NicuTransferGroupBox">
+        <property name="title">
+         <string>nicu transfer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_47">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_45">
+           <item>
+            <widget class="QLabel" name="fetus5NicuTransferDateTimeLabel">
+             <property name="text">
+              <string>timing</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="fetus5NicuTransferRadioHorizontalLayout"/>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="fetus5NicuTransferDateTimeEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_36">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_46">
+           <item>
+            <widget class="QLabel" name="fetus5ReasonForNicuTransferLabel">
+             <property name="text">
+              <string>reason for transfer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus5ReasonForNicuTransferLineEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_47">
+           <item>
+            <widget class="QLabel" name="fetus5NicuTransferDiagnosisLabel">
+             <property name="text">
+              <string>diagnosis</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus5NicuTransferDiagnosisLineEdit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="fetus6GroupBox">
+     <property name="title">
+      <string>fetus 6</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_48">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_29">
+        <item row="0" column="0">
+         <widget class="QLabel" name="fetus6BirthDateTimeLabel">
+          <property name="text">
+           <string>birth date time</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDateTimeEdit" name="fetus6BirthDateTimeEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="fetus6SexLabel">
+          <property name="text">
+           <string>sex</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_48">
+          <item>
+           <layout class="QHBoxLayout" name="fetus6SexRadioLayout"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fetus6SexLineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_37">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>208</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="fetus6WeightLabel">
+          <property name="text">
+           <string>weight</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_49">
+          <item>
+           <widget class="QDoubleSpinBox" name="fetus6WeightValueDoubleSpinBox">
+            <property name="decimals">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <double>1000000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="fetus6WeightUnitComboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_50">
+        <item>
+         <widget class="QGroupBox" name="fetus6Apgar1GroupBox">
+          <property name="title">
+           <string>apgar 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_30">
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_61">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="fetus6ApgarActivityLabel">
+             <property name="text">
+              <string>activity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus6ApgarPulseRadioLayout"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fetus6ApgarPulseLabel">
+             <property name="text">
+              <string>pulse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus6ApgarRespirationRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_62">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus6ApgarActivityRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus6ApgarAppearanceRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus6ApgarGrimaceRadioLayout"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fetus6ApgarAppearanceLabel">
+             <property name="text">
+              <string>appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="fetus6ApgarRespirationLabel">
+             <property name="text">
+              <string>respiration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="fetus6ApgarGrimaceLabel">
+             <property name="text">
+              <string>grimace</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_63">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_64">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="fetus6ApgarScoreLabel">
+             <property name="text">
+              <string>score</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus6ApgarScore1LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus6Apgar5GroupBox">
+          <property name="title">
+           <string>apgar 5</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_31">
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar5AppearanceRadioLayout"/>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar5ActivityRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_65">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_66">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar5RespirationRadioLayout"/>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar5GrimaceRadioLayout"/>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_67">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar5PulseRadioLayout"/>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_68">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="fetus6ApgarScore5LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fetus6Apgar10GroupBox">
+          <property name="title">
+           <string>apgar 10</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_32">
+           <item row="8" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar10RespirationRadioLayout"/>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="Line" name="line_69">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar10GrimaceRadioLayout"/>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar10PulseRadioLayout"/>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar10AppearanceRadioLayout"/>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="Line" name="line_70">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="Line" name="line_71">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_38">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="Line" name="line_72">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <layout class="QVBoxLayout" name="fetus6Apgar10ActivityRadioLayout"/>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="fetus6ApgarScore10LineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus6AmnioticFluidGroupBox">
+        <property name="title">
+         <string>amniotic fluid</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_49">
+         <item>
+          <widget class="QCheckBox" name="fetus6AmnioticFluidClearCheckBox">
+           <property name="text">
+            <string>clear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus6AmnioticFluidYellowTintedCheckBox">
+           <property name="text">
+            <string>yellow tinted</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus6AmnioticFluidMeconiumStainedLiquorCheckBox">
+           <property name="text">
+            <string>meconium stained liquor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus6AmnioticFluidPeaSoupCheckBox">
+           <property name="text">
+            <string>pea soup</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus6AmnioticFluidFoulSmellingCheckBox">
+           <property name="text">
+            <string>foul smelling</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus6UmbilicalCordGroupBox">
+        <property name="title">
+         <string>umbilical cord</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_50">
+         <item>
+          <widget class="QGroupBox" name="fetus6NuchalCordGroupBox">
+           <property name="title">
+            <string>nuchal cord</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_51">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_51">
+              <item>
+               <widget class="QLabel" name="fetus6NumberOfLoopLabel">
+                <property name="text">
+                 <string>number of loops</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="fetus6NumberOfLoopSpinBox"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_39">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_52">
+              <item>
+               <layout class="QHBoxLayout" name="fetus6LooseOrTightNuchalCordHorizontalLayout"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_40">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fetus6UmbilicalCordAroundTrunkCheckBox">
+           <property name="text">
+            <string>cord around trunk</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus6BirthDefectGroupBox">
+        <property name="title">
+         <string>birth defect</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_52">
+         <item>
+          <widget class="QCheckBox" name="fetus6ImperforateAnusCheckBox">
+           <property name="text">
+            <string>imperforate anus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="fetus6OtherBirthDefectGroupBox">
+           <property name="title">
+            <string>other birth defect</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_53">
+            <item>
+             <widget class="QLineEdit" name="fetus6OtherBirthDefectLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="fetus6NicuTransferGroupBox">
+        <property name="title">
+         <string>nicu transfer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_54">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_53">
+           <item>
+            <widget class="QLabel" name="fetus6NicuTransferDateTimeLabel">
+             <property name="text">
+              <string>timing</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="fetus6NicuTransferRadioHorizontalLayout"/>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="fetus6NicuTransferDateTimeEdit"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_41">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_54">
+           <item>
+            <widget class="QLabel" name="fetus6ReasonForNicuTransferLabel">
+             <property name="text">
+              <string>reason for transfer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus6ReasonForNicuTransferLineEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_55">
+           <item>
+            <widget class="QLabel" name="fetus6NicuTransferDiagnosisLabel">
+             <property name="text">
+              <string>diagnosis</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="fetus6NicuTransferDiagnosisLineEdit">
              <property name="text">
               <string/>
              </property>
@@ -1214,6 +4028,25 @@
          </item>
         </layout>
        </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="deliveryAssessmentGroupBox">
+     <property name="title">
+      <string>assessment</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_19">
+      <item>
+       <widget class="QLabel" name="deliveryAssessmentLabel">
+        <property name="text">
+         <string>delivery comment</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="deliveryAssessmentFormLayout"/>
       </item>
      </layout>
     </widget>

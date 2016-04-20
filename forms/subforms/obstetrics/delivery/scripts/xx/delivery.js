@@ -31,14 +31,14 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
         delivery_formUi = delivery_formItem.ui();
 
         // fetus                                                 
-        //delivery_fetusNumber = delivery_formUi.findChild("fetusNumberSpinBox");                                      
-        //delivery_fetusGroup1 = delivery_formUi.findChild("fetus1GroupBox"); 
-        //delivery_fetusGroup2 = delivery_formUi.findChild("fetus2GroupBox");
-        //delivery_fetusGroup3 = delivery_formUi.findChild("fetus3GroupBox");                                   
-        //delivery_fetusGroup4 = delivery_formUi.findChild("fetus4GroupBox");
-        //delivery_fetusGroup5 = delivery_formUi.findChild("fetus5GroupBox");
-        //delivery_fetusGroup6 = delivery_formUi.findChild("fetus6GroupBox");
-        //delivery_defaultHideFetusGroupBox();
+        delivery_fetusNumber = delivery_formUi.findChild("fetusNumberSpinBox");
+        delivery_fetusGroup1 = delivery_formUi.findChild("fetus1GroupBox");
+        delivery_fetusGroup2 = delivery_formUi.findChild("fetus2GroupBox");
+        delivery_fetusGroup3 = delivery_formUi.findChild("fetus3GroupBox");
+        delivery_fetusGroup4 = delivery_formUi.findChild("fetus4GroupBox");
+        delivery_fetusGroup5 = delivery_formUi.findChild("fetus5GroupBox");
+        delivery_fetusGroup6 = delivery_formUi.findChild("fetus6GroupBox");
+        delivery_defaultHideFetusGroupBox();
 
         // entryMode
         delivery_entryModeReferredCheckBox = delivery_formUi.findChild("entryModeReferredCheckBox");
@@ -56,7 +56,7 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
         delivery_healthcareProfessionalGroupBoxItem = freemedforms.forms.item("Maternity::Obstetrics::Delivery::Delivery::Healthcare::Professional::Group");   
         delivery_deliveryModeUniquelistItem = freemedforms.forms.item("Maternity::Obstetrics::Delivery::Delivery::Mode::Uniquelist");
         // fetus connection
-        //delivery_fetusNumber['valueChanged(int)'].connect(this, delivery_hideFetusGroupBox);
+        delivery_fetusNumber['valueChanged(int)'].connect(this, delivery_hideFetusGroupBox);
         print("************************************ Inside delivery_setupUi()");
     }
     
@@ -188,8 +188,7 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
         }                                                                       
     }
 
-    /* function delivery_defaultHideFetusGroupBox() {
-            print("default to 1 visible fetusGroup");                                                    
+    function delivery_defaultHideFetusGroupBox() {
             delivery_fetusGroup1.visible = true;                                         
             delivery_fetusGroup2.visible = false;                                        
             delivery_fetusGroup3.visible = false;                                        
@@ -197,12 +196,9 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_fetusGroup5.visible = false;
             delivery_fetusGroup6.visible = false;                                        
         }
-    */
-    
-    /*function delivery_hideFetusGroupBox() {
-            print("fetusNumber = " + delivery_fetusNumber.value);
+
+    function delivery_hideFetusGroupBox() {
         if (delivery_fetusNumber.value == 0) {
-            print("if = 0");
             delivery_fetusGroup1.visible = false;
             delivery_fetusGroup2.visible = false;
             delivery_fetusGroup3.visible = false;
@@ -211,7 +207,6 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_fetusGroup6.visible = false;
         }
         else if (delivery_fetusNumber.value == 1) {
-            print("if = 1");
             delivery_fetusGroup1.visible = true;                                      
             delivery_fetusGroup2.visible = false;                                      
             delivery_fetusGroup3.visible = false;
@@ -220,7 +215,6 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_fetusGroup6.visible = false;
         }
         else if (delivery_fetusNumber.value == 2) {
-            print("if = 2");                                                
             delivery_fetusGroup1.visible = true;                                       
             delivery_fetusGroup2.visible = true;                                   
             delivery_fetusGroup3.visible = false;
@@ -229,7 +223,6 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_fetusGroup6.visible = false;                                      
         }  
         else if (delivery_fetusNumber.value == 3) {
-            print("if = 3");                                                
             delivery_fetusGroup1.visible = true;                                       
             delivery_fetusGroup2.visible = true;                                      
             delivery_fetusGroup3.visible = true;
@@ -238,7 +231,6 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_fetusGroup6.visible = false;                                     
         }
         else if (delivery_fetusNumber.value == 4) {                                      
-            print("if = 4");                                                    
             delivery_fetusGroup1.visible = true;                                         
             delivery_fetusGroup2.visible = true;                                         
             delivery_fetusGroup3.visible = true;
@@ -247,7 +239,6 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_fetusGroup6.visible = false;                                         
         }
         else if (delivery_fetusNumber.value == 5) {                                      
-            print("if = 5");                                                    
             delivery_fetusGroup1.visible = true;                                         
             delivery_fetusGroup2.visible = true;                                         
             delivery_fetusGroup3.visible = true;                                         
@@ -256,7 +247,6 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             delivery_fetusGroup6.visible = false;                                        
         }
         else if (delivery_fetusNumber.value == 6) {                             
-            print("if = 6");                                                    
             delivery_fetusGroup1.visible = true;                                
             delivery_fetusGroup2.visible = true;                                
             delivery_fetusGroup3.visible = true;                                
@@ -268,7 +258,6 @@ namespace.module('com.freemedforms.obstetrics.delivery', function (exports, requ
             print("not coded yet sorry");
         }
     }
-    */
 
 });
 

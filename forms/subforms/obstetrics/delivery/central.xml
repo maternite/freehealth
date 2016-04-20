@@ -36,25 +36,35 @@
 
     <Item type="group" name="Administrative">
       <uilink widget="administrativeGroupBox"/>
+      <label lang="xx">Administrative</label>
+      <label lang="fr">Administratif</label>
+
+      <Item type="spin" name="Fetus::1::Nuchal::Cord::Number::Of::Loop::Spin">
+        <uilink label="parityLabel" widget="paritySpinBox"/>
+        <label lang="xx">Parity</label>
+        <label lang="fr">Parité</label>
+        <options>DontPrintEmptyValues</options>
+      </Item>
 
     <Item type="datetime" name="Delivery::DateTime::Edit">
       <uilink label="deliveryRoomAdmissionDateTimeLabel" widget="deliveryRoomAdmissionDateTimeEdit"/>
       <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
-      <label lang="xx">Date and time of delivery</label>
-      <label lang="fr">Date et heure de l'accouchement</label>
-      <options>now;DontPrintEmptyValues</options>
+      <label lang="xx">Date and time of admission to the delivery room</label>
+      <label lang="fr">Date et heure d'entrée en salle de naissance</label>
+      <options>DontPrintEmptyValues</options>
     </Item>
 
     <Item type="group" name="Fetus">
       <uilink label="" widget="fetusGroupBox" layout="" />
       <label lang="xx">Fetus number</label>
       <label lang="fr">Nombre de fœtus</label>
-      <options></options>
+      <options>DontPrintEmptyValues</options>
 
         <Item type="spin" name="NumberOfFetus">
           <uilink label="fetusNumberLabel" widget="fetusNumberSpinBox" layout="" />
           <label lang="xx">Number of fetus</label>
           <label lang="fr">Nombre de fœtus</label>
+          <options>DontPrintEmptyValues</options>
         </Item>
 
     </Item> <!-- end of group Fetus -->
@@ -63,7 +73,7 @@
       <uilink label="" widget="deliveryRoomEntryModeGroupBox" layout="" />
       <label lang="xx">Delivery room entry mode</label>
       <label lang="fr">Mode d'entrée en salle de naissance</label>
-      <options></options>
+      <options>DontPrintEmptyValues</options>
 
       <!-- <Item type="radio" name="Entry::Mode::Radio">
         <uilink layout="entryModeRadioLayout" />
@@ -84,7 +94,7 @@
 
       <Item type="check" name="Entry::Mode::Referred::Check">
         <uilink widget="entryModeReferredCheckBox"/>
-        <options>DontPrintEmptyValues;OnLeft</options>                          
+        <options>PrintOnlyChecked;DontPrintEmptyValues;OnLeft</options>
         <label lang="xx">Referred</label>                                            
         <label lang="fr">Référée</label>
         <value>                                                                 
@@ -98,7 +108,7 @@
 
       <Item type="check" name="Entry::Mode::Spontaneous::Check">                   
         <uilink widget="entryModeSpontaneousCheckBox"/>                            
-        <options>DontPrintEmptyValues;OnLeft</options>                          
+        <options>PrintOnlyChecked;DontPrintEmptyValues;OnLeft</options>
         <label lang="xx">Spontaneous</label>                                       
         <label lang="fr">Spontanée</label>                                        
         <value>                                                                 
@@ -114,7 +124,7 @@
         <uilink label="" widget="referralGroupBox" layout="" />
         <label lang="xx">Referred</label>
         <label lang="fr">Référée</label>
-        <options>collapsible</options>
+        <options>collapsible;DontPrintEmptyValues</options>
         <script>
           <onToggled>namespace.com.freemedforms.obstetrics.delivery.delivery_onReferralGroupBoxToggled();</onToggled>
         </script>
@@ -123,14 +133,14 @@
           <uilink label="referrerLabel" widget="referrerLineEdit" layout="" />
           <label lang="xx">Referrer</label>
           <label lang="fr">Référent</label>
-          <options></options>
+          <options>DontPrintEmptyValues</options>
         </Item>
 
         <Item type="shorttext" name="Referral::Indication">
           <uilink label="referralIndicationLabel" widget="referralIndicationLineEdit" layout="" />
           <label lang="xx">Indication</label>
           <label lang="fr">Indication</label>
-          <options></options>
+          <options>DontPrintEmptyValues</options>
         </Item>
 
       </Item> <!-- end of group Referral -->
@@ -139,7 +149,7 @@
         <uilink widget="selfReferralGroupBox"/>
         <label lang="xx">Spontaneous</label>
         <label lang="fr">Spontanée</label>
-        <options>collapsible</options>
+        <options>collapsible;DontPrintEmptyValues</options>
         <script>
           <onToggled>namespace.com.freemedforms.obstetrics.delivery.delivery_onSelfReferralGroupBoxToggled();</onToggled>
         </script>
@@ -153,7 +163,7 @@
 
         <Item type="check" name="Followed::In::This::Institution::Check">                
           <uilink widget="followedInThisInstitutionCheckBox"/>                         
-          <options>DontPrintEmptyValues;OnLeft</options>                          
+          <options>PrintOnlyChecked;DontPrintEmptyValues;OnLeft</options>
           <label lang="xx">Yes</label>                                    
           <label lang="fr">Oui</label>                                      
           <value>                                                                 
@@ -167,7 +177,7 @@
 
         <Item type="check" name="Not::Followed::In::This::Institution::Check">       
           <uilink widget="notFollowedInThisInstitutionCheckBox"/>                    
-          <options>DontPrintEmptyValues;OnLeft</options>                        
+          <options>PrintOnlyChecked;DontPrintEmptyValues;OnLeft</options>
           <label lang="xx">No</label>                                          
           <label lang="fr">Non</label>                                          
           <value>                                                               
@@ -183,7 +193,7 @@
           <uilink widget="pregnancyFollowUpGroupBox"/>
           <label lang="xx"></label>
           <label lang="fr"></label>
-          <options>collapsible</options>
+          <options>collapsible;DontPrintEmptyValues</options>
 
           <Item type="shorttext" name="Pregnancy::Follow::Up::Institution::ShortText">
             <uilink label="pregnancyFollowUpInstitutionLabel" widget="pregnancyFollowUpInstitutionLineEdit"/>
@@ -191,12 +201,14 @@
             <label lang="fr">Lieu des consultations</label>  
             <placeholder lang="xx"></placeholder>
             <placeholder lang="fr"></placeholder>
+            <options>DontPrintEmptyValues</options>
           </Item>
 
           <Item type="spin" name="Number::Of::Consultation::Spin">
             <uilink label="numberOfConsultationLabel" widget="numberOfConsultationSpinBox"/>
             <label lang="xx">Number of consultation(s)</label>
             <label lang="fr">Nombre de consultation(s)</label>
+            <options>DontPrintEmptyValues</options>
           </Item>
 
         </Item> <!-- end of group Pregnancy::Follow::Up::Group -->
@@ -212,13 +224,13 @@
       <uilink widget="deliveryGroupBox" />      
       <label lang="xx">Delivery</label>                         
       <label lang="fr">Accouchement</label>              
-      <options></options>
+      <options>DontPrintEmptyValues</options>
 
         <Item type="group" name="Labor::Group">
             <uilink widget="laborGroupBox" />
             <label lang="xx">Labor</label>
             <label lang="fr">Travail</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
 
             <Item type="datetime" name="Delivery::DateTime::Edit">
               <uilink label="onsetOfLaborDateTimelabel" widget="onsetOfLaborDateTimeEdit"/>
@@ -232,6 +244,7 @@
                 <uilink label="onsetOfLaborLabel"/>
                 <label lang="xx">Onset of labour</label>
                 <label lang="fr">Mode d'entrée en travail</label>
+                <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="check" name="Delivery::Onset::Of::Labor::Spontaneous">
@@ -245,7 +258,7 @@
                 <uilink widget="inductionOfLabourGroupBox"/>
                 <label lang="xx">Induced</label>
                 <label lang="fr">DAT (Déclenchement Artificiel du Travail)</label>
-                <options>collapsible</options>
+                <options>collapsible;DontPrintEmptyValues</options>
 
                   <Item type="shorttext" name="Delivery::Induction::Indication::ShortText">
                     <uilink label="inductionIndicationLabel" widget="inductionIndicationLineEdit"/>
@@ -253,12 +266,14 @@
                     <label lang="fr">Indication du déclenchement</label>
                     <placeholder lang="xx"></placeholder>
                     <placeholder lang="fr"></placeholder>
+                    <options>DontPrintEmptyValues</options>
                   </Item>
 
                   <Item type="spin" name="Delivery::Induction::Bishop::Score::Spin">
                     <uilink label="bishopScoreLabel" widget="bishopScoreSpinBox"/>
                     <label lang="xx">Bishop score</label>
                     <label lang="fr">Score de Bishop</label>
+                    <options>DontPrintEmptyValues</options>
                   </Item>
 
               </Item> <!-- end of group Delivery::Onset::Of::Labor::Induced::Group-->
@@ -311,7 +326,7 @@
       <uilink widget="healthcareProfessionalGroupBox" />                                      
       <label lang="xx">Healthcare professionals</label>                                         
       <label lang="fr">Opérateurs</label>                                     
-      <options></options>
+      <options>DontPrintEmptyValues</options>
 
         <Item type="multilist" name="Delivery::Healthcare::Professional::Medical::Practitioner">
           <uilink label="medicalPractitionerLabel" widget="medicalPractitionerListView"/>
@@ -451,6 +466,7 @@
           <uilink label="epiduralAnesthesiaLabel" layout="epiduralAnesthesiaRadioLayout"/>
           <label lang="xx">Epidural anesthesia</label>
           <label lang="fr">Anesthésie péridurale</label>
+          <options>DontPrintEmptyValues</options>
           <value>
           <uuid id="0">not done</uuid>
           <!--<sctid id="3">385660001</sctid>-->
@@ -471,6 +487,7 @@
           <uilink label="directedLaborLabel" layout="directedLaborRadioLayout"/>
           <label lang="xx">Directed labor</label>
           <label lang="fr">Travail dirigé</label>
+          <options>DontPrintEmptyValues</options>
           <value>
           <uuid id="0">not done</uuid>
           <!--<sctid id="3">385660001</sctid>-->
@@ -491,12 +508,14 @@
             <uilink label="ruptureOfMembranesDateTimeLabel" widget="ruptureOfMembranesDateTimeEdit"/>
             <label lang="xx">Rupture of membranes date and time</label>
             <label lang="fr">Date et heure de la rupture des membranes</label>
+            <options>DontPrintEmptyValues</options>
         </Item>
 
         <Item type="radio" name="Rupture::Of::Membranes::Radio">
           <uilink label="ruptureOfMembranesLabel" layout="ruptureOfMembranesRadioLayout"/>
           <label lang="xx">Rupture of membranes</label>
           <label lang="fr">Rupture des membranes</label>
+          <options>DontPrintEmptyValues</options>
           <value>
           <uuid id="0">not done</uuid>
           <!--<sctid id="3">385660001</sctid>-->
@@ -517,6 +536,7 @@
           <uilink label="streptococcusScreeningTestLabel" layout="streptococcusScreeningTestRadioLayout"/>
           <label lang="xx">Streptococcus screening test</label>
           <label lang="fr">Strepto-test</label>
+          <options>DontPrintEmptyValues</options>
           <value>
           <uuid id="0">not done</uuid>
           <!--<sctid id="3">385660001</sctid>-->
@@ -611,6 +631,7 @@
           <uilink label="uterineExplorationLabel" layout="uterineExplorationRadioLayout" />
           <label lang="xx">Manual postpartum exploration of uterus</label>
           <label lang="fr">Révision utérine</label>
+          <options>DontPrintEmptyValues</options>
           <value>
           <uuid id="0">not done</uuid>
           <!--<sctid id="3">385660001</sctid>-->
@@ -659,14 +680,14 @@
             <uilink widget="fetus1GroupBox" />
             <label lang="xx">Fetus 1</label>
             <label lang="fr">Fœtus 1</label>
-            <options></options>
+            <options>collapsible;DontPrintEmptyValues</options>
 
             <Item type="datetime" name="Fetus::1::Birth::DateTime::Edit">
                 <uilink label="fetus1BirthDateTimeLabel" widget="fetus1BirthDateTimeEdit"/>
                 <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
                 <label lang="xx">Date and time of delivery</label>
                 <label lang="fr">Date et heure de l'accouchement</label>
-                <options>now;DontPrintEmptyValues</options>
+                <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="radio" name="Fetus::1::Sex::Radio">
@@ -702,6 +723,7 @@
                 <uilink widget="fetus1SexLineEdit"/>
                 <placeholder lang="xx">Comment</placeholder>
                 <placeholder lang="fr">Commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="measurement" name="Fetus::1::Weight::Value">
@@ -717,7 +739,7 @@
             <uilink widget="fetus1Apgar1GroupBox" />
             <label lang="xx">Apgar 1 mn</label>
             <label lang="fr">Apgar 1 mn</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
 
             <Item type="radio" name="Fetus::1::Apgar::1::Appearance::Radio">
               <uilink label="fetus1ApgarAppearanceLabel" widget="" layout="fetus1ApgarAppearanceRadioLayout" />
@@ -884,7 +906,7 @@
             <uilink widget="fetus1Apgar5GroupBox" />
             <label lang="xx">Apgar 5 mn</label>
             <label lang="fr">Apgar 5 mn</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
 
             <Item type="radio" name="Fetus::1::Apgar::5::Appearance::Radio">
               <uilink layout="fetus1Apgar5AppearanceRadioLayout" />
@@ -1036,7 +1058,7 @@
             <uilink widget="fetus1Apgar10GroupBox" />
             <label lang="xx">Apgar 10 mn</label>
             <label lang="fr">Apgar 10 mn</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
 
             <Item type="radio" name="Fetus::1::Apgar::10::Appearance::Radio">
               <uilink layout="fetus1Apgar10AppearanceRadioLayout" />
@@ -1184,17 +1206,60 @@
 
         </Item> <!-- end of group Fetus::1::Apgar::10::Group -->
 
+        <Item type="group" name="Fetus::1::Amniotic::Fluid::Group">
+            <uilink widget="fetus1AmnioticFluidGroupBox" />
+            <label lang="xx">Amniotic fluid</label>
+            <label lang="fr">Liquide amniotique</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::1::Amniotic::Fluid::Clear::Check">
+                <uilink label="" widget="fetus1AmnioticFluidClearCheckBox"/>
+                <label lang="xx">Clear</label>
+                <label lang="fr">Clair</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::1::Amniotic::Fluid::Yellow::Tinted::Check">
+                <uilink label="" widget="fetus1AmnioticFluidYellowTintedCheckBox"/>
+                <label lang="xx">YellowTinted</label>
+                <label lang="fr">Teinté</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::1::Amniotic::Fluid::Meconium::Stained::Liquor::Check">
+                <uilink label="" widget="fetus1AmnioticFluidMeconiumStainedLiquorCheckBox"/>
+                <label lang="xx">Meconium stained liquor</label>
+                <label lang="fr">Méconial</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::1::Amniotic::Fluid::Pea::Soup::Check">
+                <uilink label="" widget="fetus1AmnioticFluidPeaSoupCheckBox"/>
+                <label lang="xx">Pea soup</label>
+                <label lang="fr">Purée de pois</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::1::Amniotic::Fluid::Foul::Smelling::Check">
+                <uilink label="" widget="fetus1AmnioticFluidFoulSmellingCheckBox"/>
+                <label lang="xx">Foul smelling</label>
+                <label lang="fr">Fétide</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::1::Amniotic::Fluid::Group -->
+
         <Item type="group" name="Fetus::1::Umbilical::Cord::Group">
             <uilink widget="fetus1UmbilicalCordGroupBox" />
             <label lang="xx">Umbilical cord</label>
             <label lang="fr">Cordon ombilical</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
 
             <Item type="group" name="Fetus::1::Nuchal::Cord::Group">
                 <uilink widget="fetus1NuchalCordGroupBox" />
                 <label lang="xx">Nuchal cord</label>
                 <label lang="fr">Circulaire</label>
-                <options>collapsible</options>
+                <options>collapsible;DontPrintEmptyValues</options>
 
                 <Item type="spin" name="Fetus::1::Nuchal::Cord::Number::Of::Loop::Spin">
                     <uilink label="fetus1NumberOfLoopLabel" widget="fetus1NumberOfLoopSpinBox"/>
@@ -1207,6 +1272,7 @@
                   <uilink layout="fetus1LooseOrTightNuchalCordHorizontalLayout"/>
                   <label lang="xx"></label>
                   <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
                   <value>
                   <uuid id="0">not done</uuid>
                   <!--<sctid id="3">385660001</sctid>-->
@@ -1229,7 +1295,7 @@
                 <uilink label="" widget="fetus1UmbilicalCordAroundTrunkCheckBox"/>
                 <label lang="xx">Umbilical cord around trunk</label>
                 <label lang="fr">Écharpe</label>
-                <options>DontPrintEmptyValues</options>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
             </Item>
 
         </Item> <!-- end of group Fetus::1::Ubilical::Cord::Group -->
@@ -1238,7 +1304,7 @@
             <uilink widget="fetus1BirthDefectGroupBox" />
             <label lang="xx">Birth defect</label>
             <label lang="fr">Malformation congénitale</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
 
             <Item type="check" name="Fetus::1::Birth::Defect::Imperforate::Anus">
                 <uilink widget="fetus1ImperforateAnusCheckBox"/>
@@ -1251,12 +1317,13 @@
                 <uilink widget="fetus1OtherBirthDefectGroupBox" />
                 <label lang="xx">Other birth defect</label>
                 <label lang="fr">Autre malformation congénitale</label>
-                <options>collapsible</options>
+                <options>collapsible;DontPrintEmptyValues</options>
 
                 <Item type="shorttext" name="Fetus::1::Birth::Defect::Other::Shorttext">
                     <uilink widget="fetus1OtherBirthDefectLineEdit"/>
                     <placeholder lang="xx">Other birth defect</placeholder>
                     <placeholder lang="fr">Autre malformation congénitale</placeholder>
+                    <options>DontPrintEmptyValues</options>
                 </Item>
 
             </Item> <!-- end of  Fetus::1::Birth::Defect::Other::Group -->
@@ -1267,7 +1334,7 @@
             <uilink widget="fetus1NicuTransferGroupBox" />
             <label lang="xx">Neonatal Intensive Care Unit transfer</label>
             <label lang="fr">Transfert en néonatologie</label>
-            <options>collapsible</options>
+            <options>collapsible;DontPrintEmptyValues</options>
 
                 <Item type="datetime" name="Fetus::1::NICU::Transfer::Date::And::Time::Datetime">
                   <uilink label="fetus1NicuTransferDateTimeLabel" widget="fetus1NicuTransferDateTimeEdit"/>
@@ -1281,6 +1348,7 @@
                   <uilink label="" layout="fetus1NicuTransferRadioHorizontalLayout"/>
                   <label lang="xx"></label>
                   <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
                   <value>
                   <uuid id="0">Not done</uuid>
                   <!--<sctid id="3">385660001</sctid>-->
@@ -1301,18 +1369,3560 @@
                     <uilink label="fetus1ReasonForNicuTransferLabel" widget="fetus1ReasonForNicuTransferLineEdit"/>
                     <placeholder lang="xx">Reason for transfer</placeholder>
                     <placeholder lang="fr">Motif de transfert</placeholder>
+                    <options>DontPrintEmptyValues</options>
                 </Item>
 
                 <Item type="shorttext" name="Fetus::1::Nicus::Transfer::Diagnosis::Shorttext">
                     <uilink label="fetus1NicuTransferDiagnosisLabel" widget="fetus1NicuTransferDiagnosisLineEdit"/>
                     <placeholder lang="xx">Diagnosis</placeholder>
                     <placeholder lang="fr">Diagnostic de sortie</placeholder>
+                    <options>DontPrintEmptyValues</options>
                 </Item>
 
         </Item> <!-- end of group Fetus::1::NICU::Transfer::Group -->
 
 
         </Item> <!-- end of Fetus::1::Group -->
+
+        <Item type="group" name="Fetus::2::Group">
+            <uilink widget="fetus2GroupBox" />
+            <label lang="xx">Fetus 2</label>
+            <label lang="fr">Fœtus 2</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+            <Item type="datetime" name="Fetus::2::Birth::DateTime::Edit">
+                <uilink label="fetus2BirthDateTimeLabel" widget="fetus2BirthDateTimeEdit"/>
+                <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                <label lang="xx">Date and time of delivery</label>
+                <label lang="fr">Date et heure de l'accouchement</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Sex::Radio">
+                <uilink label="fetus2SexLabel" widget="" layout="fetus2SexRadioLayout"/>
+                <label lang="xx">Sex</label>
+                <label lang="fr">Sexe</label>
+                <options>compact;DontPrintEmptyValues</options>
+                <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Female</uuid>
+                <uuid id="2">Male</uuid>
+                <uuid id="3">Indeterminate</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Female</possible>
+                <possible id="2" lang="xx">Male</possible>
+                <possible id="3" lang="xx">Indeterminate</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Female</print>
+                <print id="2" lang="xx">Male</print>
+                <print id="3" lang="xx">Indeterminate</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Féminin</possible>
+                <possible id="2" lang="fr">Masculin</possible>
+                <possible id="3" lang="fr">Indéterminé</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Féminin</print>
+                <print id="2" lang="fr">Masculin</print>
+                <print id="3" lang="fr">Indéterminé</print>
+                </value>
+            </Item>
+
+            <Item type="shorttext" name="Fetus::2::Sex::Shorttext">
+                <uilink widget="fetus2SexLineEdit"/>
+                <placeholder lang="xx">Comment</placeholder>
+                <placeholder lang="fr">Commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="measurement" name="Fetus::2::Weight::Value">
+                <uilink label="fetus2WeightLabel" widget="fetus2WeightValueDoubleSpinBox;fetus2WeightUnitComboBox"/>
+                <label lang="xx">Weight</label>
+                <label lang="fr">Poids</label>
+                <options>DontPrintEmptyValues;Weight</options>
+                <default>grams</default>
+                <patientdata>WeightInGrams</patientdata>
+            </Item>
+
+        <Item type="group" name="Fetus::2::Apgar::1::Group">
+            <uilink widget="fetus2Apgar1GroupBox" />
+            <label lang="xx">Apgar 1 mn</label>
+            <label lang="fr">Apgar 1 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::2::Apgar::1::Appearance::Radio">
+              <uilink label="fetus2ApgarAppearanceLabel" widget="" layout="fetus2ApgarAppearanceRadioLayout" />
+              <label lang="xx">Appearance</label>
+              <label lang="fr">Apparence</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::1::Pulse::Radio">
+              <uilink label="fetus2ApgarPulseLabel" widget="" layout="fetus2ApgarPulseRadioLayout" />
+              <label lang="xx">Pulse</label>
+              <label lang="fr">Pouls</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::1::Grimace::Radio">
+              <uilink label="fetus2ApgarGrimaceLabel" widget="" layout="fetus2ApgarGrimaceRadioLayout" />
+              <label lang="xx">Grimace</label>
+              <label lang="fr">Grimace</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::1::Activity::Radio">
+              <uilink label="fetus2ApgarActivityLabel" widget="" layout="fetus2ApgarActivityRadioLayout" />
+              <label lang="xx">Activity</label>
+              <label lang="fr">Activité</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::2::Apgar::1::Respiration::Radio">
+              <uilink label="fetus2ApgarRespirationLabel" widget="" layout="fetus2ApgarRespirationRadioLayout" />
+              <label lang="xx">Respiration</label>
+              <label lang="fr">Respiration</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="helptext" name="Fetus::2::Apgar::Score::Label">
+                <uilink label="fetus2ApgarScoreLabel"/>
+                <label lang="fr">Score</label>
+                <label lang="xx">Score</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::2::Apgar::1::Score" >
+                <uilink widget="fetus2ApgarScore1LineEdit"/>
+                <sumof_regexp>Fetus::2::Apgar::1::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::2::Apgar::Group -->
+
+        <Item type="group" name="Fetus::2::Apgar::5::Group">
+            <uilink widget="fetus2Apgar5GroupBox" />
+            <label lang="xx">Apgar 5 mn</label>
+            <label lang="fr">Apgar 5 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::2::Apgar::5::Appearance::Radio">
+              <uilink layout="fetus2Apgar5AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::5::Pulse::Radio">
+              <uilink layout="fetus2Apgar5PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::5::Grimace::Radio">
+              <uilink layout="fetus2Apgar5GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::5::Activity::Radio">
+              <uilink layout="fetus2Apgar5ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::2::Apgar::5::Respiration::Radio">
+              <uilink layout="fetus2Apgar5RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::2::Apgar::5::Score" >
+                <uilink widget="fetus2ApgarScore5LineEdit"/>
+                <sumof_regexp>Fetus::2::Apgar::5::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::2::Apgar::5::Group -->
+
+        <Item type="group" name="Fetus::2::Apgar::10::Group">
+            <uilink widget="fetus2Apgar10GroupBox" />
+            <label lang="xx">Apgar 10 mn</label>
+            <label lang="fr">Apgar 10 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::2::Apgar::10::Appearance::Radio">
+              <uilink layout="fetus2Apgar10AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::10::Pulse::Radio">
+              <uilink layout="fetus2Apgar10PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::10::Grimace::Radio">
+              <uilink layout="fetus2Apgar10GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::2::Apgar::10::Activity::Radio">
+              <uilink layout="fetus2Apgar10ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::2::Apgar::10::Respiration::Radio">
+              <uilink layout="fetus2Apgar10RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::2::Apgar::10::Score" >
+                <uilink widget="fetus2ApgarScore10LineEdit"/>
+                <sumof_regexp>Fetus::2::Apgar::10::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::2::Apgar::10::Group -->
+
+        <Item type="group" name="Fetus::2::Amniotic::Fluid::Group">
+            <uilink widget="fetus2AmnioticFluidGroupBox" />
+            <label lang="xx">Amniotic fluid</label>
+            <label lang="fr">Liquide amniotique</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::2::Amniotic::Fluid::Clear::Check">
+                <uilink label="" widget="fetus2AmnioticFluidClearCheckBox"/>
+                <label lang="xx">Clear</label>
+                <label lang="fr">Clair</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::2::Amniotic::Fluid::Yellow::Tinted::Check">
+                <uilink label="" widget="fetus2AmnioticFluidYellowTintedCheckBox"/>
+                <label lang="xx">YellowTinted</label>
+                <label lang="fr">Teinté</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::2::Amniotic::Fluid::Meconium::Stained::Liquor::Check">
+                <uilink label="" widget="fetus2AmnioticFluidMeconiumStainedLiquorCheckBox"/>
+                <label lang="xx">Meconium stained liquor</label>
+                <label lang="fr">Méconial</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::2::Amniotic::Fluid::Pea::Soup::Check">
+                <uilink label="" widget="fetus2AmnioticFluidPeaSoupCheckBox"/>
+                <label lang="xx">Pea soup</label>
+                <label lang="fr">Purée de pois</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::2::Amniotic::Fluid::Foul::Smelling::Check">
+                <uilink label="" widget="fetus2AmnioticFluidFoulSmellingCheckBox"/>
+                <label lang="xx">Foul smelling</label>
+                <label lang="fr">Fétide</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::2::Amniotic::Fluid::Group -->
+
+        <Item type="group" name="Fetus::2::Umbilical::Cord::Group">
+            <uilink widget="fetus2UmbilicalCordGroupBox" />
+            <label lang="xx">Umbilical cord</label>
+            <label lang="fr">Cordon ombilical</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="group" name="Fetus::2::Nuchal::Cord::Group">
+                <uilink widget="fetus2NuchalCordGroupBox" />
+                <label lang="xx">Nuchal cord</label>
+                <label lang="fr">Circulaire</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="spin" name="Fetus::2::Nuchal::Cord::Number::Of::Loop::Spin">
+                    <uilink label="fetus2NumberOfLoopLabel" widget="fetus2NumberOfLoopSpinBox"/>
+                    <label lang="xx">Number of loops</label>
+                    <label lang="fr">Nombre de tours</label>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::2::Loose::Or::Tight::Nuchal::Cord::Radio">
+                  <uilink layout="fetus2LooseOrTightNuchalCordHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">tight</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">loose</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Loose</possible>
+                  <possible id="2" lang="xx">Tight</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Lâche</possible>
+                  <possible id="2" lang="fr">Serré</possible>
+                  </value>
+                </Item>
+
+            </Item> <!-- Fetus::2::Nuchal::Cord::Group -->
+
+            <Item type="check" name="Fetus::2::Umbilical::Cord::Around::Trunk::Check">
+                <uilink label="" widget="fetus2UmbilicalCordAroundTrunkCheckBox"/>
+                <label lang="xx">Umbilical cord around trunk</label>
+                <label lang="fr">Écharpe</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::2::Ubilical::Cord::Group -->
+
+        <Item type="group" name="Fetus::2::Birth::Defect::Group">
+            <uilink widget="fetus2BirthDefectGroupBox" />
+            <label lang="xx">Birth defect</label>
+            <label lang="fr">Malformation congénitale</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::2::Birth::Defect::Imperforate::Anus">
+                <uilink widget="fetus2ImperforateAnusCheckBox"/>
+                <label lang="xx">Imperforate anus</label>
+                <label lang="fr">Imperforation anale</label>
+                <options>printonlychecked</options>
+            </Item>
+
+            <Item type="group" name="Fetus::2::Birth::Defect::Other::Group">
+                <uilink widget="fetus2OtherBirthDefectGroupBox" />
+                <label lang="xx">Other birth defect</label>
+                <label lang="fr">Autre malformation congénitale</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="shorttext" name="Fetus::2::Birth::Defect::Other::Shorttext">
+                    <uilink widget="fetus2OtherBirthDefectLineEdit"/>
+                    <placeholder lang="xx">Other birth defect</placeholder>
+                    <placeholder lang="fr">Autre malformation congénitale</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+            </Item> <!-- end of  Fetus::2::Birth::Defect::Other::Group -->
+
+        </Item> <!-- end of  Fetus::2::Birth::Defect::Group -->
+
+        <Item type="group" name="Fetus::2::NICU::Transfer::Group">
+            <uilink widget="fetus2NicuTransferGroupBox" />
+            <label lang="xx">Neonatal Intensive Care Unit transfer</label>
+            <label lang="fr">Transfert en néonatologie</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="datetime" name="Fetus::2::NICU::Transfer::Date::And::Time::Datetime">
+                  <uilink label="fetus2NicuTransferDateTimeLabel" widget="fetus2NicuTransferDateTimeEdit"/>
+                  <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                  <label lang="xx">Date and time of transfer</label>
+                  <label lang="fr">Date et heure du transfert</label>
+                  <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::2::NICU::Transfer::Timing::Radio">
+                  <uilink label="" layout="fetus2NicuTransferRadioHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">Not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">Early postpartum neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">Secondary neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Early</possible>
+                  <possible id="2" lang="xx">Delayed</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Postpartum immédiat</possible>
+                  <possible id="2" lang="fr">Secondaire</possible>
+                  </value>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::2::Nicus::Transfer::Reason::Shorttext">
+                    <uilink label="fetus2ReasonForNicuTransferLabel" widget="fetus2ReasonForNicuTransferLineEdit"/>
+                    <placeholder lang="xx">Reason for transfer</placeholder>
+                    <placeholder lang="fr">Motif de transfert</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::2::Nicus::Transfer::Diagnosis::Shorttext">
+                    <uilink label="fetus2NicuTransferDiagnosisLabel" widget="fetus2NicuTransferDiagnosisLineEdit"/>
+                    <placeholder lang="xx">Diagnosis</placeholder>
+                    <placeholder lang="fr">Diagnostic de sortie</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+        </Item> <!-- end of group Fetus::2::NICU::Transfer::Group -->
+
+
+        </Item> <!-- end of Fetus::2::Group -->
+
+        <Item type="group" name="Fetus::3::Group">
+            <uilink widget="fetus3GroupBox" />
+            <label lang="xx">Fetus 3</label>
+            <label lang="fr">Fœtus 3</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+            <Item type="datetime" name="Fetus::3::Birth::DateTime::Edit">
+                <uilink label="fetus3BirthDateTimeLabel" widget="fetus3BirthDateTimeEdit"/>
+                <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                <label lang="xx">Date and time of delivery</label>
+                <label lang="fr">Date et heure de l'accouchement</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Sex::Radio">
+                <uilink label="fetus3SexLabel" widget="" layout="fetus3SexRadioLayout"/>
+                <label lang="xx">Sex</label>
+                <label lang="fr">Sexe</label>
+                <options>compact;DontPrintEmptyValues</options>
+                <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Female</uuid>
+                <uuid id="2">Male</uuid>
+                <uuid id="3">Indeterminate</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Female</possible>
+                <possible id="2" lang="xx">Male</possible>
+                <possible id="3" lang="xx">Indeterminate</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Female</print>
+                <print id="2" lang="xx">Male</print>
+                <print id="3" lang="xx">Indeterminate</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Féminin</possible>
+                <possible id="2" lang="fr">Masculin</possible>
+                <possible id="3" lang="fr">Indéterminé</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Féminin</print>
+                <print id="2" lang="fr">Masculin</print>
+                <print id="3" lang="fr">Indéterminé</print>
+                </value>
+            </Item>
+
+            <Item type="shorttext" name="Fetus::3::Sex::Shorttext">
+                <uilink widget="fetus3SexLineEdit"/>
+                <placeholder lang="xx">Comment</placeholder>
+                <placeholder lang="fr">Commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="measurement" name="Fetus::3::Weight::Value">
+                <uilink label="fetus3WeightLabel" widget="fetus3WeightValueDoubleSpinBox;fetus3WeightUnitComboBox"/>
+                <label lang="xx">Weight</label>
+                <label lang="fr">Poids</label>
+                <options>DontPrintEmptyValues;Weight</options>
+                <default>grams</default>
+                <patientdata>WeightInGrams</patientdata>
+            </Item>
+
+        <Item type="group" name="Fetus::3::Apgar::1::Group">
+            <uilink widget="fetus3Apgar1GroupBox" />
+            <label lang="xx">Apgar 1 mn</label>
+            <label lang="fr">Apgar 1 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::3::Apgar::1::Appearance::Radio">
+              <uilink label="fetus3ApgarAppearanceLabel" widget="" layout="fetus3ApgarAppearanceRadioLayout" />
+              <label lang="xx">Appearance</label>
+              <label lang="fr">Apparence</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::1::Pulse::Radio">
+              <uilink label="fetus3ApgarPulseLabel" widget="" layout="fetus3ApgarPulseRadioLayout" />
+              <label lang="xx">Pulse</label>
+              <label lang="fr">Pouls</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::1::Grimace::Radio">
+              <uilink label="fetus3ApgarGrimaceLabel" widget="" layout="fetus3ApgarGrimaceRadioLayout" />
+              <label lang="xx">Grimace</label>
+              <label lang="fr">Grimace</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::1::Activity::Radio">
+              <uilink label="fetus3ApgarActivityLabel" widget="" layout="fetus3ApgarActivityRadioLayout" />
+              <label lang="xx">Activity</label>
+              <label lang="fr">Activité</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::3::Apgar::1::Respiration::Radio">
+              <uilink label="fetus3ApgarRespirationLabel" widget="" layout="fetus3ApgarRespirationRadioLayout" />
+              <label lang="xx">Respiration</label>
+              <label lang="fr">Respiration</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="helptext" name="Fetus::3::Apgar::Score::Label">
+                <uilink label="fetus3ApgarScoreLabel"/>
+                <label lang="fr">Score</label>
+                <label lang="xx">Score</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::3::Apgar::1::Score" >
+                <uilink widget="fetus3ApgarScore1LineEdit"/>
+                <sumof_regexp>Fetus::3::Apgar::1::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::3::Apgar::Group -->
+
+        <Item type="group" name="Fetus::3::Apgar::5::Group">
+            <uilink widget="fetus3Apgar5GroupBox" />
+            <label lang="xx">Apgar 5 mn</label>
+            <label lang="fr">Apgar 5 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::3::Apgar::5::Appearance::Radio">
+              <uilink layout="fetus3Apgar5AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::5::Pulse::Radio">
+              <uilink layout="fetus3Apgar5PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::5::Grimace::Radio">
+              <uilink layout="fetus3Apgar5GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::5::Activity::Radio">
+              <uilink layout="fetus3Apgar5ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::3::Apgar::5::Respiration::Radio">
+              <uilink layout="fetus3Apgar5RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::3::Apgar::5::Score" >
+                <uilink widget="fetus3ApgarScore5LineEdit"/>
+                <sumof_regexp>Fetus::3::Apgar::5::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::3::Apgar::5::Group -->
+
+        <Item type="group" name="Fetus::3::Apgar::10::Group">
+            <uilink widget="fetus3Apgar10GroupBox" />
+            <label lang="xx">Apgar 10 mn</label>
+            <label lang="fr">Apgar 10 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::3::Apgar::10::Appearance::Radio">
+              <uilink layout="fetus3Apgar10AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::10::Pulse::Radio">
+              <uilink layout="fetus3Apgar10PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::10::Grimace::Radio">
+              <uilink layout="fetus3Apgar10GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::3::Apgar::10::Activity::Radio">
+              <uilink layout="fetus3Apgar10ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::3::Apgar::10::Respiration::Radio">
+              <uilink layout="fetus3Apgar10RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::3::Apgar::10::Score" >
+                <uilink widget="fetus3ApgarScore10LineEdit"/>
+                <sumof_regexp>Fetus::3::Apgar::10::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::3::Apgar::10::Group -->
+
+        <Item type="group" name="Fetus::3::Amniotic::Fluid::Group">
+            <uilink widget="fetus3AmnioticFluidGroupBox" />
+            <label lang="xx">Amniotic fluid</label>
+            <label lang="fr">Liquide amniotique</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::3::Amniotic::Fluid::Clear::Check">
+                <uilink label="" widget="fetus3AmnioticFluidClearCheckBox"/>
+                <label lang="xx">Clear</label>
+                <label lang="fr">Clair</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::3::Amniotic::Fluid::Yellow::Tinted::Check">
+                <uilink label="" widget="fetus3AmnioticFluidYellowTintedCheckBox"/>
+                <label lang="xx">YellowTinted</label>
+                <label lang="fr">Teinté</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::3::Amniotic::Fluid::Meconium::Stained::Liquor::Check">
+                <uilink label="" widget="fetus3AmnioticFluidMeconiumStainedLiquorCheckBox"/>
+                <label lang="xx">Meconium stained liquor</label>
+                <label lang="fr">Méconial</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::3::Amniotic::Fluid::Pea::Soup::Check">
+                <uilink label="" widget="fetus3AmnioticFluidPeaSoupCheckBox"/>
+                <label lang="xx">Pea soup</label>
+                <label lang="fr">Purée de pois</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::3::Amniotic::Fluid::Foul::Smelling::Check">
+                <uilink label="" widget="fetus3AmnioticFluidFoulSmellingCheckBox"/>
+                <label lang="xx">Foul smelling</label>
+                <label lang="fr">Fétide</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::3::Amniotic::Fluid::Group -->
+
+        <Item type="group" name="Fetus::3::Umbilical::Cord::Group">
+            <uilink widget="fetus3UmbilicalCordGroupBox" />
+            <label lang="xx">Umbilical cord</label>
+            <label lang="fr">Cordon ombilical</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="group" name="Fetus::3::Nuchal::Cord::Group">
+                <uilink widget="fetus3NuchalCordGroupBox" />
+                <label lang="xx">Nuchal cord</label>
+                <label lang="fr">Circulaire</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="spin" name="Fetus::3::Nuchal::Cord::Number::Of::Loop::Spin">
+                    <uilink label="fetus3NumberOfLoopLabel" widget="fetus3NumberOfLoopSpinBox"/>
+                    <label lang="xx">Number of loops</label>
+                    <label lang="fr">Nombre de tours</label>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::3::Loose::Or::Tight::Nuchal::Cord::Radio">
+                  <uilink layout="fetus3LooseOrTightNuchalCordHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">tight</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">loose</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Loose</possible>
+                  <possible id="2" lang="xx">Tight</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Lâche</possible>
+                  <possible id="2" lang="fr">Serré</possible>
+                  </value>
+                </Item>
+
+            </Item> <!-- Fetus::3::Nuchal::Cord::Group -->
+
+            <Item type="check" name="Fetus::3::Umbilical::Cord::Around::Trunk::Check">
+                <uilink label="" widget="fetus3UmbilicalCordAroundTrunkCheckBox"/>
+                <label lang="xx">Umbilical cord around trunk</label>
+                <label lang="fr">Écharpe</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::3::Ubilical::Cord::Group -->
+
+        <Item type="group" name="Fetus::3::Birth::Defect::Group">
+            <uilink widget="fetus3BirthDefectGroupBox" />
+            <label lang="xx">Birth defect</label>
+            <label lang="fr">Malformation congénitale</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::3::Birth::Defect::Imperforate::Anus">
+                <uilink widget="fetus3ImperforateAnusCheckBox"/>
+                <label lang="xx">Imperforate anus</label>
+                <label lang="fr">Imperforation anale</label>
+                <options>printonlychecked</options>
+            </Item>
+
+            <Item type="group" name="Fetus::3::Birth::Defect::Other::Group">
+                <uilink widget="fetus3OtherBirthDefectGroupBox" />
+                <label lang="xx">Other birth defect</label>
+                <label lang="fr">Autre malformation congénitale</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="shorttext" name="Fetus::3::Birth::Defect::Other::Shorttext">
+                    <uilink widget="fetus3OtherBirthDefectLineEdit"/>
+                    <placeholder lang="xx">Other birth defect</placeholder>
+                    <placeholder lang="fr">Autre malformation congénitale</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+            </Item> <!-- end of  Fetus::3::Birth::Defect::Other::Group -->
+
+        </Item> <!-- end of  Fetus::3::Birth::Defect::Group -->
+
+        <Item type="group" name="Fetus::3::NICU::Transfer::Group">
+            <uilink widget="fetus3NicuTransferGroupBox" />
+            <label lang="xx">Neonatal Intensive Care Unit transfer</label>
+            <label lang="fr">Transfert en néonatologie</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="datetime" name="Fetus::3::NICU::Transfer::Date::And::Time::Datetime">
+                  <uilink label="fetus3NicuTransferDateTimeLabel" widget="fetus3NicuTransferDateTimeEdit"/>
+                  <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                  <label lang="xx">Date and time of transfer</label>
+                  <label lang="fr">Date et heure du transfert</label>
+                  <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::3::NICU::Transfer::Timing::Radio">
+                  <uilink label="" layout="fetus3NicuTransferRadioHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">Not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">Early postpartum neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">Secondary neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Early</possible>
+                  <possible id="2" lang="xx">Delayed</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Postpartum immédiat</possible>
+                  <possible id="2" lang="fr">Secondaire</possible>
+                  </value>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::3::Nicus::Transfer::Reason::Shorttext">
+                    <uilink label="fetus3ReasonForNicuTransferLabel" widget="fetus3ReasonForNicuTransferLineEdit"/>
+                    <placeholder lang="xx">Reason for transfer</placeholder>
+                    <placeholder lang="fr">Motif de transfert</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::3::Nicus::Transfer::Diagnosis::Shorttext">
+                    <uilink label="fetus3NicuTransferDiagnosisLabel" widget="fetus3NicuTransferDiagnosisLineEdit"/>
+                    <placeholder lang="xx">Diagnosis</placeholder>
+                    <placeholder lang="fr">Diagnostic de sortie</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+        </Item> <!-- end of group Fetus::3::NICU::Transfer::Group -->
+
+
+        </Item> <!-- end of Fetus::3::Group -->
+
+        <Item type="group" name="Fetus::4::Group">
+            <uilink widget="fetus4GroupBox" />
+            <label lang="xx">Fetus 4</label>
+            <label lang="fr">Fœtus 4</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+            <Item type="datetime" name="Fetus::4::Birth::DateTime::Edit">
+                <uilink label="fetus4BirthDateTimeLabel" widget="fetus4BirthDateTimeEdit"/>
+                <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                <label lang="xx">Date and time of delivery</label>
+                <label lang="fr">Date et heure de l'accouchement</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Sex::Radio">
+                <uilink label="fetus4SexLabel" widget="" layout="fetus4SexRadioLayout"/>
+                <label lang="xx">Sex</label>
+                <label lang="fr">Sexe</label>
+                <options>compact;DontPrintEmptyValues</options>
+                <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Female</uuid>
+                <uuid id="2">Male</uuid>
+                <uuid id="3">Indeterminate</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Female</possible>
+                <possible id="2" lang="xx">Male</possible>
+                <possible id="3" lang="xx">Indeterminate</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Female</print>
+                <print id="2" lang="xx">Male</print>
+                <print id="3" lang="xx">Indeterminate</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Féminin</possible>
+                <possible id="2" lang="fr">Masculin</possible>
+                <possible id="3" lang="fr">Indéterminé</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Féminin</print>
+                <print id="2" lang="fr">Masculin</print>
+                <print id="3" lang="fr">Indéterminé</print>
+                </value>
+            </Item>
+
+            <Item type="shorttext" name="Fetus::4::Sex::Shorttext">
+                <uilink widget="fetus4SexLineEdit"/>
+                <placeholder lang="xx">Comment</placeholder>
+                <placeholder lang="fr">Commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="measurement" name="Fetus::4::Weight::Value">
+                <uilink label="fetus4WeightLabel" widget="fetus4WeightValueDoubleSpinBox;fetus4WeightUnitComboBox"/>
+                <label lang="xx">Weight</label>
+                <label lang="fr">Poids</label>
+                <options>DontPrintEmptyValues;Weight</options>
+                <default>grams</default>
+                <patientdata>WeightInGrams</patientdata>
+            </Item>
+
+        <Item type="group" name="Fetus::4::Apgar::1::Group">
+            <uilink widget="fetus4Apgar1GroupBox" />
+            <label lang="xx">Apgar 1 mn</label>
+            <label lang="fr">Apgar 1 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::4::Apgar::1::Appearance::Radio">
+              <uilink label="fetus4ApgarAppearanceLabel" widget="" layout="fetus4ApgarAppearanceRadioLayout" />
+              <label lang="xx">Appearance</label>
+              <label lang="fr">Apparence</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::1::Pulse::Radio">
+              <uilink label="fetus4ApgarPulseLabel" widget="" layout="fetus4ApgarPulseRadioLayout" />
+              <label lang="xx">Pulse</label>
+              <label lang="fr">Pouls</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::1::Grimace::Radio">
+              <uilink label="fetus4ApgarGrimaceLabel" widget="" layout="fetus4ApgarGrimaceRadioLayout" />
+              <label lang="xx">Grimace</label>
+              <label lang="fr">Grimace</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::1::Activity::Radio">
+              <uilink label="fetus4ApgarActivityLabel" widget="" layout="fetus4ApgarActivityRadioLayout" />
+              <label lang="xx">Activity</label>
+              <label lang="fr">Activité</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::4::Apgar::1::Respiration::Radio">
+              <uilink label="fetus4ApgarRespirationLabel" widget="" layout="fetus4ApgarRespirationRadioLayout" />
+              <label lang="xx">Respiration</label>
+              <label lang="fr">Respiration</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="helptext" name="Fetus::4::Apgar::Score::Label">
+                <uilink label="fetus4ApgarScoreLabel"/>
+                <label lang="fr">Score</label>
+                <label lang="xx">Score</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::4::Apgar::1::Score" >
+                <uilink widget="fetus4ApgarScore1LineEdit"/>
+                <sumof_regexp>Fetus::4::Apgar::1::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::4::Apgar::Group -->
+
+        <Item type="group" name="Fetus::4::Apgar::5::Group">
+            <uilink widget="fetus4Apgar5GroupBox" />
+            <label lang="xx">Apgar 5 mn</label>
+            <label lang="fr">Apgar 5 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::4::Apgar::5::Appearance::Radio">
+              <uilink layout="fetus4Apgar5AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::5::Pulse::Radio">
+              <uilink layout="fetus4Apgar5PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::5::Grimace::Radio">
+              <uilink layout="fetus4Apgar5GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::5::Activity::Radio">
+              <uilink layout="fetus4Apgar5ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::4::Apgar::5::Respiration::Radio">
+              <uilink layout="fetus4Apgar5RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::4::Apgar::5::Score" >
+                <uilink widget="fetus4ApgarScore5LineEdit"/>
+                <sumof_regexp>Fetus::4::Apgar::5::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::4::Apgar::5::Group -->
+
+        <Item type="group" name="Fetus::4::Apgar::10::Group">
+            <uilink widget="fetus4Apgar10GroupBox" />
+            <label lang="xx">Apgar 10 mn</label>
+            <label lang="fr">Apgar 10 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::4::Apgar::10::Appearance::Radio">
+              <uilink layout="fetus4Apgar10AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::10::Pulse::Radio">
+              <uilink layout="fetus4Apgar10PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::10::Grimace::Radio">
+              <uilink layout="fetus4Apgar10GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::4::Apgar::10::Activity::Radio">
+              <uilink layout="fetus4Apgar10ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::4::Apgar::10::Respiration::Radio">
+              <uilink layout="fetus4Apgar10RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::4::Apgar::10::Score" >
+                <uilink widget="fetus4ApgarScore10LineEdit"/>
+                <sumof_regexp>Fetus::4::Apgar::10::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::4::Apgar::10::Group -->
+
+        <Item type="group" name="Fetus::4::Amniotic::Fluid::Group">
+            <uilink widget="fetus4AmnioticFluidGroupBox" />
+            <label lang="xx">Amniotic fluid</label>
+            <label lang="fr">Liquide amniotique</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::4::Amniotic::Fluid::Clear::Check">
+                <uilink label="" widget="fetus4AmnioticFluidClearCheckBox"/>
+                <label lang="xx">Clear</label>
+                <label lang="fr">Clair</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::4::Amniotic::Fluid::Yellow::Tinted::Check">
+                <uilink label="" widget="fetus4AmnioticFluidYellowTintedCheckBox"/>
+                <label lang="xx">YellowTinted</label>
+                <label lang="fr">Teinté</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::4::Amniotic::Fluid::Meconium::Stained::Liquor::Check">
+                <uilink label="" widget="fetus4AmnioticFluidMeconiumStainedLiquorCheckBox"/>
+                <label lang="xx">Meconium stained liquor</label>
+                <label lang="fr">Méconial</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::4::Amniotic::Fluid::Pea::Soup::Check">
+                <uilink label="" widget="fetus4AmnioticFluidPeaSoupCheckBox"/>
+                <label lang="xx">Pea soup</label>
+                <label lang="fr">Purée de pois</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::4::Amniotic::Fluid::Foul::Smelling::Check">
+                <uilink label="" widget="fetus4AmnioticFluidFoulSmellingCheckBox"/>
+                <label lang="xx">Foul smelling</label>
+                <label lang="fr">Fétide</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::4::Amniotic::Fluid::Group -->
+
+        <Item type="group" name="Fetus::4::Umbilical::Cord::Group">
+            <uilink widget="fetus4UmbilicalCordGroupBox" />
+            <label lang="xx">Umbilical cord</label>
+            <label lang="fr">Cordon ombilical</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="group" name="Fetus::4::Nuchal::Cord::Group">
+                <uilink widget="fetus4NuchalCordGroupBox" />
+                <label lang="xx">Nuchal cord</label>
+                <label lang="fr">Circulaire</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="spin" name="Fetus::4::Nuchal::Cord::Number::Of::Loop::Spin">
+                    <uilink label="fetus4NumberOfLoopLabel" widget="fetus4NumberOfLoopSpinBox"/>
+                    <label lang="xx">Number of loops</label>
+                    <label lang="fr">Nombre de tours</label>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::4::Loose::Or::Tight::Nuchal::Cord::Radio">
+                  <uilink layout="fetus4LooseOrTightNuchalCordHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">tight</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">loose</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Loose</possible>
+                  <possible id="2" lang="xx">Tight</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Lâche</possible>
+                  <possible id="2" lang="fr">Serré</possible>
+                  </value>
+                </Item>
+
+            </Item> <!-- Fetus::4::Nuchal::Cord::Group -->
+
+            <Item type="check" name="Fetus::4::Umbilical::Cord::Around::Trunk::Check">
+                <uilink label="" widget="fetus4UmbilicalCordAroundTrunkCheckBox"/>
+                <label lang="xx">Umbilical cord around trunk</label>
+                <label lang="fr">Écharpe</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::4::Ubilical::Cord::Group -->
+
+        <Item type="group" name="Fetus::4::Birth::Defect::Group">
+            <uilink widget="fetus4BirthDefectGroupBox" />
+            <label lang="xx">Birth defect</label>
+            <label lang="fr">Malformation congénitale</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::4::Birth::Defect::Imperforate::Anus">
+                <uilink widget="fetus4ImperforateAnusCheckBox"/>
+                <label lang="xx">Imperforate anus</label>
+                <label lang="fr">Imperforation anale</label>
+                <options>printonlychecked</options>
+            </Item>
+
+            <Item type="group" name="Fetus::4::Birth::Defect::Other::Group">
+                <uilink widget="fetus4OtherBirthDefectGroupBox" />
+                <label lang="xx">Other birth defect</label>
+                <label lang="fr">Autre malformation congénitale</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="shorttext" name="Fetus::4::Birth::Defect::Other::Shorttext">
+                    <uilink widget="fetus4OtherBirthDefectLineEdit"/>
+                    <placeholder lang="xx">Other birth defect</placeholder>
+                    <placeholder lang="fr">Autre malformation congénitale</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+            </Item> <!-- end of  Fetus::4::Birth::Defect::Other::Group -->
+
+        </Item> <!-- end of  Fetus::4::Birth::Defect::Group -->
+
+        <Item type="group" name="Fetus::4::NICU::Transfer::Group">
+            <uilink widget="fetus4NicuTransferGroupBox" />
+            <label lang="xx">Neonatal Intensive Care Unit transfer</label>
+            <label lang="fr">Transfert en néonatologie</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="datetime" name="Fetus::4::NICU::Transfer::Date::And::Time::Datetime">
+                  <uilink label="fetus4NicuTransferDateTimeLabel" widget="fetus4NicuTransferDateTimeEdit"/>
+                  <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                  <label lang="xx">Date and time of transfer</label>
+                  <label lang="fr">Date et heure du transfert</label>
+                  <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::4::NICU::Transfer::Timing::Radio">
+                  <uilink label="" layout="fetus4NicuTransferRadioHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">Not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">Early postpartum neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">Secondary neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Early</possible>
+                  <possible id="2" lang="xx">Delayed</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Postpartum immédiat</possible>
+                  <possible id="2" lang="fr">Secondaire</possible>
+                  </value>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::4::Nicus::Transfer::Reason::Shorttext">
+                    <uilink label="fetus4ReasonForNicuTransferLabel" widget="fetus4ReasonForNicuTransferLineEdit"/>
+                    <placeholder lang="xx">Reason for transfer</placeholder>
+                    <placeholder lang="fr">Motif de transfert</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::4::Nicus::Transfer::Diagnosis::Shorttext">
+                    <uilink label="fetus4NicuTransferDiagnosisLabel" widget="fetus4NicuTransferDiagnosisLineEdit"/>
+                    <placeholder lang="xx">Diagnosis</placeholder>
+                    <placeholder lang="fr">Diagnostic de sortie</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+        </Item> <!-- end of group Fetus::4::NICU::Transfer::Group -->
+
+
+        </Item> <!-- end of Fetus::4::Group -->
+
+        <Item type="group" name="Fetus::5::Group">
+            <uilink widget="fetus5GroupBox" />
+            <label lang="xx">Fetus 5</label>
+            <label lang="fr">Fœtus 5</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+            <Item type="datetime" name="Fetus::5::Birth::DateTime::Edit">
+                <uilink label="fetus5BirthDateTimeLabel" widget="fetus5BirthDateTimeEdit"/>
+                <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                <label lang="xx">Date and time of delivery</label>
+                <label lang="fr">Date et heure de l'accouchement</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Sex::Radio">
+                <uilink label="fetus5SexLabel" widget="" layout="fetus5SexRadioLayout"/>
+                <label lang="xx">Sex</label>
+                <label lang="fr">Sexe</label>
+                <options>compact;DontPrintEmptyValues</options>
+                <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Female</uuid>
+                <uuid id="2">Male</uuid>
+                <uuid id="3">Indeterminate</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Female</possible>
+                <possible id="2" lang="xx">Male</possible>
+                <possible id="3" lang="xx">Indeterminate</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Female</print>
+                <print id="2" lang="xx">Male</print>
+                <print id="3" lang="xx">Indeterminate</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Féminin</possible>
+                <possible id="2" lang="fr">Masculin</possible>
+                <possible id="3" lang="fr">Indéterminé</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Féminin</print>
+                <print id="2" lang="fr">Masculin</print>
+                <print id="3" lang="fr">Indéterminé</print>
+                </value>
+            </Item>
+
+            <Item type="shorttext" name="Fetus::5::Sex::Shorttext">
+                <uilink widget="fetus5SexLineEdit"/>
+                <placeholder lang="xx">Comment</placeholder>
+                <placeholder lang="fr">Commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="measurement" name="Fetus::5::Weight::Value">
+                <uilink label="fetus5WeightLabel" widget="fetus5WeightValueDoubleSpinBox;fetus5WeightUnitComboBox"/>
+                <label lang="xx">Weight</label>
+                <label lang="fr">Poids</label>
+                <options>DontPrintEmptyValues;Weight</options>
+                <default>grams</default>
+                <patientdata>WeightInGrams</patientdata>
+            </Item>
+
+        <Item type="group" name="Fetus::5::Apgar::1::Group">
+            <uilink widget="fetus5Apgar1GroupBox" />
+            <label lang="xx">Apgar 1 mn</label>
+            <label lang="fr">Apgar 1 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::5::Apgar::1::Appearance::Radio">
+              <uilink label="fetus5ApgarAppearanceLabel" widget="" layout="fetus5ApgarAppearanceRadioLayout" />
+              <label lang="xx">Appearance</label>
+              <label lang="fr">Apparence</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::1::Pulse::Radio">
+              <uilink label="fetus5ApgarPulseLabel" widget="" layout="fetus5ApgarPulseRadioLayout" />
+              <label lang="xx">Pulse</label>
+              <label lang="fr">Pouls</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::1::Grimace::Radio">
+              <uilink label="fetus5ApgarGrimaceLabel" widget="" layout="fetus5ApgarGrimaceRadioLayout" />
+              <label lang="xx">Grimace</label>
+              <label lang="fr">Grimace</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::1::Activity::Radio">
+              <uilink label="fetus5ApgarActivityLabel" widget="" layout="fetus5ApgarActivityRadioLayout" />
+              <label lang="xx">Activity</label>
+              <label lang="fr">Activité</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::5::Apgar::1::Respiration::Radio">
+              <uilink label="fetus5ApgarRespirationLabel" widget="" layout="fetus5ApgarRespirationRadioLayout" />
+              <label lang="xx">Respiration</label>
+              <label lang="fr">Respiration</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="helptext" name="Fetus::5::Apgar::Score::Label">
+                <uilink label="fetus5ApgarScoreLabel"/>
+                <label lang="fr">Score</label>
+                <label lang="xx">Score</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::5::Apgar::1::Score" >
+                <uilink widget="fetus5ApgarScore1LineEdit"/>
+                <sumof_regexp>Fetus::5::Apgar::1::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::5::Apgar::Group -->
+
+        <Item type="group" name="Fetus::5::Apgar::5::Group">
+            <uilink widget="fetus5Apgar5GroupBox" />
+            <label lang="xx">Apgar 5 mn</label>
+            <label lang="fr">Apgar 5 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::5::Apgar::5::Appearance::Radio">
+              <uilink layout="fetus5Apgar5AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::5::Pulse::Radio">
+              <uilink layout="fetus5Apgar5PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::5::Grimace::Radio">
+              <uilink layout="fetus5Apgar5GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::5::Activity::Radio">
+              <uilink layout="fetus5Apgar5ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::5::Apgar::5::Respiration::Radio">
+              <uilink layout="fetus5Apgar5RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::5::Apgar::5::Score" >
+                <uilink widget="fetus5ApgarScore5LineEdit"/>
+                <sumof_regexp>Fetus::5::Apgar::5::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::5::Apgar::5::Group -->
+
+        <Item type="group" name="Fetus::5::Apgar::10::Group">
+            <uilink widget="fetus5Apgar10GroupBox" />
+            <label lang="xx">Apgar 10 mn</label>
+            <label lang="fr">Apgar 10 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::5::Apgar::10::Appearance::Radio">
+              <uilink layout="fetus5Apgar10AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::10::Pulse::Radio">
+              <uilink layout="fetus5Apgar10PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::10::Grimace::Radio">
+              <uilink layout="fetus5Apgar10GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::5::Apgar::10::Activity::Radio">
+              <uilink layout="fetus5Apgar10ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::5::Apgar::10::Respiration::Radio">
+              <uilink layout="fetus5Apgar10RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::5::Apgar::10::Score" >
+                <uilink widget="fetus5ApgarScore10LineEdit"/>
+                <sumof_regexp>Fetus::5::Apgar::10::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::5::Apgar::10::Group -->
+
+        <Item type="group" name="Fetus::5::Amniotic::Fluid::Group">
+            <uilink widget="fetus5AmnioticFluidGroupBox" />
+            <label lang="xx">Amniotic fluid</label>
+            <label lang="fr">Liquide amniotique</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::5::Amniotic::Fluid::Clear::Check">
+                <uilink label="" widget="fetus5AmnioticFluidClearCheckBox"/>
+                <label lang="xx">Clear</label>
+                <label lang="fr">Clair</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::5::Amniotic::Fluid::Yellow::Tinted::Check">
+                <uilink label="" widget="fetus5AmnioticFluidYellowTintedCheckBox"/>
+                <label lang="xx">YellowTinted</label>
+                <label lang="fr">Teinté</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::5::Amniotic::Fluid::Meconium::Stained::Liquor::Check">
+                <uilink label="" widget="fetus5AmnioticFluidMeconiumStainedLiquorCheckBox"/>
+                <label lang="xx">Meconium stained liquor</label>
+                <label lang="fr">Méconial</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::5::Amniotic::Fluid::Pea::Soup::Check">
+                <uilink label="" widget="fetus5AmnioticFluidPeaSoupCheckBox"/>
+                <label lang="xx">Pea soup</label>
+                <label lang="fr">Purée de pois</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::5::Amniotic::Fluid::Foul::Smelling::Check">
+                <uilink label="" widget="fetus5AmnioticFluidFoulSmellingCheckBox"/>
+                <label lang="xx">Foul smelling</label>
+                <label lang="fr">Fétide</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::5::Amniotic::Fluid::Group -->
+
+        <Item type="group" name="Fetus::5::Umbilical::Cord::Group">
+            <uilink widget="fetus5UmbilicalCordGroupBox" />
+            <label lang="xx">Umbilical cord</label>
+            <label lang="fr">Cordon ombilical</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="group" name="Fetus::5::Nuchal::Cord::Group">
+                <uilink widget="fetus5NuchalCordGroupBox" />
+                <label lang="xx">Nuchal cord</label>
+                <label lang="fr">Circulaire</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="spin" name="Fetus::5::Nuchal::Cord::Number::Of::Loop::Spin">
+                    <uilink label="fetus5NumberOfLoopLabel" widget="fetus5NumberOfLoopSpinBox"/>
+                    <label lang="xx">Number of loops</label>
+                    <label lang="fr">Nombre de tours</label>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::5::Loose::Or::Tight::Nuchal::Cord::Radio">
+                  <uilink layout="fetus5LooseOrTightNuchalCordHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">tight</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">loose</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Loose</possible>
+                  <possible id="2" lang="xx">Tight</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Lâche</possible>
+                  <possible id="2" lang="fr">Serré</possible>
+                  </value>
+                </Item>
+
+            </Item> <!-- Fetus::5::Nuchal::Cord::Group -->
+
+            <Item type="check" name="Fetus::5::Umbilical::Cord::Around::Trunk::Check">
+                <uilink label="" widget="fetus5UmbilicalCordAroundTrunkCheckBox"/>
+                <label lang="xx">Umbilical cord around trunk</label>
+                <label lang="fr">Écharpe</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::5::Ubilical::Cord::Group -->
+
+        <Item type="group" name="Fetus::5::Birth::Defect::Group">
+            <uilink widget="fetus5BirthDefectGroupBox" />
+            <label lang="xx">Birth defect</label>
+            <label lang="fr">Malformation congénitale</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::5::Birth::Defect::Imperforate::Anus">
+                <uilink widget="fetus5ImperforateAnusCheckBox"/>
+                <label lang="xx">Imperforate anus</label>
+                <label lang="fr">Imperforation anale</label>
+                <options>printonlychecked</options>
+            </Item>
+
+            <Item type="group" name="Fetus::5::Birth::Defect::Other::Group">
+                <uilink widget="fetus5OtherBirthDefectGroupBox" />
+                <label lang="xx">Other birth defect</label>
+                <label lang="fr">Autre malformation congénitale</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="shorttext" name="Fetus::5::Birth::Defect::Other::Shorttext">
+                    <uilink widget="fetus5OtherBirthDefectLineEdit"/>
+                    <placeholder lang="xx">Other birth defect</placeholder>
+                    <placeholder lang="fr">Autre malformation congénitale</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+            </Item> <!-- end of  Fetus::5::Birth::Defect::Other::Group -->
+
+        </Item> <!-- end of  Fetus::5::Birth::Defect::Group -->
+
+        <Item type="group" name="Fetus::5::NICU::Transfer::Group">
+            <uilink widget="fetus5NicuTransferGroupBox" />
+            <label lang="xx">Neonatal Intensive Care Unit transfer</label>
+            <label lang="fr">Transfert en néonatologie</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="datetime" name="Fetus::5::NICU::Transfer::Date::And::Time::Datetime">
+                  <uilink label="fetus5NicuTransferDateTimeLabel" widget="fetus5NicuTransferDateTimeEdit"/>
+                  <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                  <label lang="xx">Date and time of transfer</label>
+                  <label lang="fr">Date et heure du transfert</label>
+                  <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::5::NICU::Transfer::Timing::Radio">
+                  <uilink label="" layout="fetus5NicuTransferRadioHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">Not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">Early postpartum neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">Secondary neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Early</possible>
+                  <possible id="2" lang="xx">Delayed</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Postpartum immédiat</possible>
+                  <possible id="2" lang="fr">Secondaire</possible>
+                  </value>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::5::Nicus::Transfer::Reason::Shorttext">
+                    <uilink label="fetus5ReasonForNicuTransferLabel" widget="fetus5ReasonForNicuTransferLineEdit"/>
+                    <placeholder lang="xx">Reason for transfer</placeholder>
+                    <placeholder lang="fr">Motif de transfert</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::5::Nicus::Transfer::Diagnosis::Shorttext">
+                    <uilink label="fetus5NicuTransferDiagnosisLabel" widget="fetus5NicuTransferDiagnosisLineEdit"/>
+                    <placeholder lang="xx">Diagnosis</placeholder>
+                    <placeholder lang="fr">Diagnostic de sortie</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+        </Item> <!-- end of group Fetus::5::NICU::Transfer::Group -->
+
+
+        </Item> <!-- end of Fetus::5::Group -->
+
+        <Item type="group" name="Fetus::6::Group">
+            <uilink widget="fetus6GroupBox" />
+            <label lang="xx">Fetus 6</label>
+            <label lang="fr">Fœtus 6</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+            <Item type="datetime" name="Fetus::6::Birth::DateTime::Edit">
+                <uilink label="fetus6BirthDateTimeLabel" widget="fetus6BirthDateTimeEdit"/>
+                <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                <label lang="xx">Date and time of delivery</label>
+                <label lang="fr">Date et heure de l'accouchement</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Sex::Radio">
+                <uilink label="fetus6SexLabel" widget="" layout="fetus6SexRadioLayout"/>
+                <label lang="xx">Sex</label>
+                <label lang="fr">Sexe</label>
+                <options>compact;DontPrintEmptyValues</options>
+                <value>
+                <uuid id="0">∅</uuid>
+                <uuid id="1">Female</uuid>
+                <uuid id="2">Male</uuid>
+                <uuid id="3">Indeterminate</uuid>
+                <possible id="0" lang="xx">∅</possible>
+                <possible id="1" lang="xx">Female</possible>
+                <possible id="2" lang="xx">Male</possible>
+                <possible id="3" lang="xx">Indeterminate</possible>
+                <print id="0" lang="xx">Not evaluated</print>
+                <print id="1" lang="xx">Female</print>
+                <print id="2" lang="xx">Male</print>
+                <print id="3" lang="xx">Indeterminate</print>
+                <possible id="0" lang="fr">∅</possible>
+                <possible id="1" lang="fr">Féminin</possible>
+                <possible id="2" lang="fr">Masculin</possible>
+                <possible id="3" lang="fr">Indéterminé</possible>
+                <print id="0" lang="fr">Non évalué</print>
+                <print id="1" lang="fr">Féminin</print>
+                <print id="2" lang="fr">Masculin</print>
+                <print id="3" lang="fr">Indéterminé</print>
+                </value>
+            </Item>
+
+            <Item type="shorttext" name="Fetus::6::Sex::Shorttext">
+                <uilink widget="fetus6SexLineEdit"/>
+                <placeholder lang="xx">Comment</placeholder>
+                <placeholder lang="fr">Commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="measurement" name="Fetus::6::Weight::Value">
+                <uilink label="fetus6WeightLabel" widget="fetus6WeightValueDoubleSpinBox;fetus6WeightUnitComboBox"/>
+                <label lang="xx">Weight</label>
+                <label lang="fr">Poids</label>
+                <options>DontPrintEmptyValues;Weight</options>
+                <default>grams</default>
+                <patientdata>WeightInGrams</patientdata>
+            </Item>
+
+        <Item type="group" name="Fetus::6::Apgar::1::Group">
+            <uilink widget="fetus6Apgar1GroupBox" />
+            <label lang="xx">Apgar 1 mn</label>
+            <label lang="fr">Apgar 1 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::6::Apgar::1::Appearance::Radio">
+              <uilink label="fetus6ApgarAppearanceLabel" widget="" layout="fetus6ApgarAppearanceRadioLayout" />
+              <label lang="xx">Appearance</label>
+              <label lang="fr">Apparence</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::1::Pulse::Radio">
+              <uilink label="fetus6ApgarPulseLabel" widget="" layout="fetus6ApgarPulseRadioLayout" />
+              <label lang="xx">Pulse</label>
+              <label lang="fr">Pouls</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::1::Grimace::Radio">
+              <uilink label="fetus6ApgarGrimaceLabel" widget="" layout="fetus6ApgarGrimaceRadioLayout" />
+              <label lang="xx">Grimace</label>
+              <label lang="fr">Grimace</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::1::Activity::Radio">
+              <uilink label="fetus6ApgarActivityLabel" widget="" layout="fetus6ApgarActivityRadioLayout" />
+              <label lang="xx">Activity</label>
+              <label lang="fr">Activité</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::6::Apgar::1::Respiration::Radio">
+              <uilink label="fetus6ApgarRespirationLabel" widget="" layout="fetus6ApgarRespirationRadioLayout" />
+              <label lang="xx">Respiration</label>
+              <label lang="fr">Respiration</label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="helptext" name="Fetus::6::Apgar::Score::Label">
+                <uilink label="fetus6ApgarScoreLabel"/>
+                <label lang="fr">Score</label>
+                <label lang="xx">Score</label>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::6::Apgar::1::Score" >
+                <uilink widget="fetus6ApgarScore1LineEdit"/>
+                <sumof_regexp>Fetus::6::Apgar::1::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::6::Apgar::Group -->
+
+        <Item type="group" name="Fetus::6::Apgar::5::Group">
+            <uilink widget="fetus6Apgar5GroupBox" />
+            <label lang="xx">Apgar 5 mn</label>
+            <label lang="fr">Apgar 5 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::6::Apgar::5::Appearance::Radio">
+              <uilink layout="fetus6Apgar5AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::5::Pulse::Radio">
+              <uilink layout="fetus6Apgar5PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::5::Grimace::Radio">
+              <uilink layout="fetus6Apgar5GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::5::Activity::Radio">
+              <uilink layout="fetus6Apgar5ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::6::Apgar::5::Respiration::Radio">
+              <uilink layout="fetus6Apgar5RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::6::Apgar::5::Score" >
+                <uilink widget="fetus6ApgarScore5LineEdit"/>
+                <sumof_regexp>Fetus::6::Apgar::5::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::6::Apgar::5::Group -->
+
+        <Item type="group" name="Fetus::6::Apgar::10::Group">
+            <uilink widget="fetus6Apgar10GroupBox" />
+            <label lang="xx">Apgar 10 mn</label>
+            <label lang="fr">Apgar 10 mn</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="radio" name="Fetus::6::Apgar::10::Appearance::Radio">
+              <uilink layout="fetus6Apgar10AppearanceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Blue or pale all over</possible>
+                <possible id="2" lang="xx">Acrocyanosis: blue at extremities, body pink</possible>
+                <possible id="3" lang="xx">No cyanosis: body and extremities pink</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Bleue ou pâle</possible>
+                <possible id="2" lang="fr">Cyanose des extrémités</possible>
+                <possible id="3" lang="fr">Rose</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::10::Pulse::Radio">
+              <uilink layout="fetus6Apgar10PulseRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">&lt; 100 beats per minute</possible>
+                <possible id="3" lang="xx">&gt; 100 beats per minute</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absent</possible>
+                <possible id="2" lang="fr">&lt; 100 bpm</possible>
+                <possible id="3" lang="fr">&gt; 100 bpm</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::10::Grimace::Radio">
+              <uilink layout="fetus6Apgar10GrimaceRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">No response to stimulation</possible>
+                <possible id="2" lang="xx">Grimace on suction or aggressive stimulation</possible>
+                <possible id="3" lang="xx">Cry on stimulation</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nulle</possible>
+                <possible id="2" lang="fr">Grimaces</possible>
+                <possible id="3" lang="fr">Cris</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="radio" name="Fetus::6::Apgar::10::Activity::Radio">
+              <uilink layout="fetus6Apgar10ActivityRadioLayout" />
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">None</possible>
+                <possible id="2" lang="xx">Some flexion</possible>
+                <possible id="3" lang="xx">Flexed arms and legs that resist extension</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Nul</possible>
+                <possible id="2" lang="fr">Hypotonie</possible>
+                <possible id="3" lang="fr">Tonus normal</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+
+            <Item type="radio" name="Fetus::6::Apgar::10::Respiration::Radio">
+              <uilink layout="fetus6Apgar10RespirationRadioLayout" />
+              <label lang="xx"></label>
+              <label lang="fr"></label>
+              <value>
+                <uuid id="0">Not done</uuid>
+                <!--<sctid>385660001</sctid>-->
+                <uuid id="1">0</uuid>
+                <uuid id="2">1</uuid>
+                <uuid id="3">2</uuid>
+
+                <possible id="0" lang="xx">ø</possible>
+                <possible id="1" lang="xx">Absent</possible>
+                <possible id="2" lang="xx">Weak, irregular, gasping</possible>
+                <possible id="3" lang="xx">Strong, lusty cry</possible>
+
+                <possible id="0" lang="fr">ø</possible>
+                <possible id="1" lang="fr">Absente</possible>
+                <possible id="2" lang="fr">Quelques mouvements spontanés</possible>
+                <possible id="3" lang="fr">Normale</possible>
+
+                <numerical id="0">0</numerical>
+                <numerical id="1">0</numerical>
+                <numerical id="2">1</numerical>
+                <numerical id="3">2</numerical>
+              </value>
+              <options>DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="sum" name="Fetus::6::Apgar::10::Score" >
+                <uilink widget="fetus6ApgarScore10LineEdit"/>
+                <sumof_regexp>Fetus::6::Apgar::10::*</sumof_regexp>
+                <options>DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::6::Apgar::10::Group -->
+
+        <Item type="group" name="Fetus::6::Amniotic::Fluid::Group">
+            <uilink widget="fetus6AmnioticFluidGroupBox" />
+            <label lang="xx">Amniotic fluid</label>
+            <label lang="fr">Liquide amniotique</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::6::Amniotic::Fluid::Clear::Check">
+                <uilink label="" widget="fetus6AmnioticFluidClearCheckBox"/>
+                <label lang="xx">Clear</label>
+                <label lang="fr">Clair</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::6::Amniotic::Fluid::Yellow::Tinted::Check">
+                <uilink label="" widget="fetus6AmnioticFluidYellowTintedCheckBox"/>
+                <label lang="xx">YellowTinted</label>
+                <label lang="fr">Teinté</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::6::Amniotic::Fluid::Meconium::Stained::Liquor::Check">
+                <uilink label="" widget="fetus6AmnioticFluidMeconiumStainedLiquorCheckBox"/>
+                <label lang="xx">Meconium stained liquor</label>
+                <label lang="fr">Méconial</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::6::Amniotic::Fluid::Pea::Soup::Check">
+                <uilink label="" widget="fetus6AmnioticFluidPeaSoupCheckBox"/>
+                <label lang="xx">Pea soup</label>
+                <label lang="fr">Purée de pois</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+            <Item type="check" name="Fetus::6::Amniotic::Fluid::Foul::Smelling::Check">
+                <uilink label="" widget="fetus6AmnioticFluidFoulSmellingCheckBox"/>
+                <label lang="xx">Foul smelling</label>
+                <label lang="fr">Fétide</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::6::Amniotic::Fluid::Group -->
+
+        <Item type="group" name="Fetus::6::Umbilical::Cord::Group">
+            <uilink widget="fetus6UmbilicalCordGroupBox" />
+            <label lang="xx">Umbilical cord</label>
+            <label lang="fr">Cordon ombilical</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="group" name="Fetus::6::Nuchal::Cord::Group">
+                <uilink widget="fetus6NuchalCordGroupBox" />
+                <label lang="xx">Nuchal cord</label>
+                <label lang="fr">Circulaire</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="spin" name="Fetus::6::Nuchal::Cord::Number::Of::Loop::Spin">
+                    <uilink label="fetus6NumberOfLoopLabel" widget="fetus6NumberOfLoopSpinBox"/>
+                    <label lang="xx">Number of loops</label>
+                    <label lang="fr">Nombre de tours</label>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::6::Loose::Or::Tight::Nuchal::Cord::Radio">
+                  <uilink layout="fetus6LooseOrTightNuchalCordHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">tight</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">loose</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Loose</possible>
+                  <possible id="2" lang="xx">Tight</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Lâche</possible>
+                  <possible id="2" lang="fr">Serré</possible>
+                  </value>
+                </Item>
+
+            </Item> <!-- Fetus::6::Nuchal::Cord::Group -->
+
+            <Item type="check" name="Fetus::6::Umbilical::Cord::Around::Trunk::Check">
+                <uilink label="" widget="fetus6UmbilicalCordAroundTrunkCheckBox"/>
+                <label lang="xx">Umbilical cord around trunk</label>
+                <label lang="fr">Écharpe</label>
+                <options>PrintOnlyChecked;DontPrintEmptyValues</options>
+            </Item>
+
+        </Item> <!-- end of group Fetus::6::Ubilical::Cord::Group -->
+
+        <Item type="group" name="Fetus::6::Birth::Defect::Group">
+            <uilink widget="fetus6BirthDefectGroupBox" />
+            <label lang="xx">Birth defect</label>
+            <label lang="fr">Malformation congénitale</label>
+            <options>DontPrintEmptyValues</options>
+
+            <Item type="check" name="Fetus::6::Birth::Defect::Imperforate::Anus">
+                <uilink widget="fetus6ImperforateAnusCheckBox"/>
+                <label lang="xx">Imperforate anus</label>
+                <label lang="fr">Imperforation anale</label>
+                <options>printonlychecked</options>
+            </Item>
+
+            <Item type="group" name="Fetus::6::Birth::Defect::Other::Group">
+                <uilink widget="fetus6OtherBirthDefectGroupBox" />
+                <label lang="xx">Other birth defect</label>
+                <label lang="fr">Autre malformation congénitale</label>
+                <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="shorttext" name="Fetus::6::Birth::Defect::Other::Shorttext">
+                    <uilink widget="fetus6OtherBirthDefectLineEdit"/>
+                    <placeholder lang="xx">Other birth defect</placeholder>
+                    <placeholder lang="fr">Autre malformation congénitale</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+            </Item> <!-- end of  Fetus::6::Birth::Defect::Other::Group -->
+
+        </Item> <!-- end of  Fetus::6::Birth::Defect::Group -->
+
+        <Item type="group" name="Fetus::6::NICU::Transfer::Group">
+            <uilink widget="fetus6NicuTransferGroupBox" />
+            <label lang="xx">Neonatal Intensive Care Unit transfer</label>
+            <label lang="fr">Transfert en néonatologie</label>
+            <options>collapsible;DontPrintEmptyValues</options>
+
+                <Item type="datetime" name="Fetus::6::NICU::Transfer::Date::And::Time::Datetime">
+                  <uilink label="fetus6NicuTransferDateTimeLabel" widget="fetus6NicuTransferDateTimeEdit"/>
+                  <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
+                  <label lang="xx">Date and time of transfer</label>
+                  <label lang="fr">Date et heure du transfert</label>
+                  <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="radio" name="Fetus::6::NICU::Transfer::Timing::Radio">
+                  <uilink label="" layout="fetus6NicuTransferRadioHorizontalLayout"/>
+                  <label lang="xx"></label>
+                  <label lang="fr"></label>
+                  <options>DontPrintEmptyValues</options>
+                  <value>
+                  <uuid id="0">Not done</uuid>
+                  <!--<sctid id="3">385660001</sctid>-->
+                  <uuid id="1">Early postpartum neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="0">373066001</sctid>-->
+                  <uuid id="2">Secondary neonatal intensive care unit transfer</uuid>
+                  <!--<sctid id="2">373067005</sctid>-->
+                  <possible id="0" lang="xx">ø</possible>
+                  <possible id="1" lang="xx">Early</possible>
+                  <possible id="2" lang="xx">Delayed</possible>
+                  <possible id="0" lang="fr">ø</possible>
+                  <possible id="1" lang="fr">Postpartum immédiat</possible>
+                  <possible id="2" lang="fr">Secondaire</possible>
+                  </value>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::6::Nicus::Transfer::Reason::Shorttext">
+                    <uilink label="fetus6ReasonForNicuTransferLabel" widget="fetus6ReasonForNicuTransferLineEdit"/>
+                    <placeholder lang="xx">Reason for transfer</placeholder>
+                    <placeholder lang="fr">Motif de transfert</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+                <Item type="shorttext" name="Fetus::6::Nicus::Transfer::Diagnosis::Shorttext">
+                    <uilink label="fetus6NicuTransferDiagnosisLabel" widget="fetus6NicuTransferDiagnosisLineEdit"/>
+                    <placeholder lang="xx">Diagnosis</placeholder>
+                    <placeholder lang="fr">Diagnostic de sortie</placeholder>
+                    <options>DontPrintEmptyValues</options>
+                </Item>
+
+        </Item> <!-- end of group Fetus::6::NICU::Transfer::Group -->
+
+
+        </Item> <!-- end of Fetus::6::Group -->
 
 
 
@@ -1321,13 +4931,13 @@
         <uilink widget="postpartumComplicationsGroupBox" />
         <label lang="xx">Postpartum complications</label>
         <label lang="fr">Complications du post-partum</label>
-        <options></options>
+        <options>DontPrintEmptyValues</options>
 
         <Item type="group" name="Postpartum::Hemorrhagic::Complications::Group">
         <uilink widget="postpartumHemorrhagicComplicationsGroupBox" />
         <label lang="xx">Postpartum hemorrhagic complications</label>
         <label lang="fr">Complications hémorragiques du post-partum</label>
-        <options></options>
+        <options>DontPrintEmptyValues</options>
 
         <Item type="check" name="Postpartum::Vulvar::Or::Vaginal::Hematoma">
             <uilink widget="postpartumVulvarVaginalHematomaCheckBox"/>
@@ -1340,7 +4950,7 @@
         <uilink widget="postpartumHemorrhageGroupBox" />
         <label lang="xx">Postpartum hemorrhage</label>
         <label lang="fr">Hémorragie du post-partum</label>
-        <options>collapsible</options>
+        <options>collapsible;DontPrintEmptyValues</options>
 
             <Item type="combo" name="Postpartum::Complications::Hemorrhage::Etiology::Combo">
               <uilink label="postpartumHemorrhageEtiologyLabel" widget="postpartumHemorrhageEtiologyComboBox"/>
@@ -1376,6 +4986,7 @@
                 <uilink widget="postpartumHemorrhageEtiologyLineEdit"/>
                 <placeholder lang="xx">Other etiology or comment</placeholder>
                 <placeholder lang="fr">Autre étiologie ou commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
             </Item>
 
             <Item type="multilist" name="Postpartum::Complications::Hemorrhage::Treatment::Multilist">
@@ -1409,6 +5020,7 @@
                 <uilink widget="postpartumHemorrhageTreatmentLineEdit"/>
                 <placeholder lang="xx">Other treatment or comment</placeholder>
                 <placeholder lang="fr">Autre traitement ou commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
             </Item>
 
 
@@ -1421,7 +5033,7 @@
             <uilink widget="postpartumTraumaticComplicationsGroupBox" />
             <label lang="xx">Postpartum traumatic complications</label>
             <label lang="fr">Complications traumatiques du post-partum</label>
-            <options></options>
+            <options>DontPrintEmptyValues</options>
 
             <Item type="check" name="Postpartum::Traumatic::Complications::Cervical::Tear::Check">
                 <uilink widget="cervicalTearCheckBox"/>
@@ -1448,7 +5060,7 @@
                 <uilink widget="perinealTearGroupBox" />
                 <label lang="xx">Perineal tear</label>
                 <label lang="fr">Déchirure périnéale</label>
-                <options>collapsible</options>
+                <options>collapsible;DontPrintEmptyValues</options>
 
                 <Item type="spin" name="Postpartum::Traumatic::Complication::Perineal::Tear::Degree::Spin">
                     <uilink label="perinealTearDegreeLabel" widget="perinealTearDegreeSpinBox"/>
@@ -1463,7 +5075,7 @@
                 <uilink widget="episiotomyGroupBox" />
                 <label lang="xx">Episiotomy</label>
                 <label lang="fr">Épisiotomie</label>
-                <options>collapsible</options>
+                <options>collapsible;DontPrintEmptyValues</options>
 
                 <Item type="radio" name="Postpartum::Traumatic::Complication::Episiotomy::Radio">
                     <uilink label="episiotomyLateralityLabel" layout="episiotomyLateralityRadioLayout"/>
@@ -1537,9 +5149,21 @@
 
     </Item> <!-- end of group Postpartum::Complications::Group -->
 
-
-
     </Item> <!-- end of Delivery::Group -->
+
+    <Item type="group" name="Delivery::Assessment::Group">
+        <uilink widget="deliveryAssessmentGroupBox" />
+        <label lang="xx">Assessment</label>
+        <label lang="fr">Résumé</label>
+        <options>DontPrintEmptyValues</options>
+
+        <Item type="editor" name="Delivery::Assessment::Editor">
+            <uilink label="deliveryAssessmentLabel" layout="deliveryAssessmentFormLayout"/>
+            <label lang="xx">Assessment</label>
+            <label lang="fr">Commentaire sur l'accouchement</label>
+            <options>FullEditor;DontPrintEmptyValues</options>
+        </Item>
+    </Item> <!-- end of group Delivery::Assessment::Group -->
 
   </MedForm>
 
