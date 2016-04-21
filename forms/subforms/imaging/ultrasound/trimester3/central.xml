@@ -5,7 +5,7 @@
 
   <formdescription>
     <authors>Jérôme Pinguet</authors>
-    <version>1.0</version>
+    <version>test</version>
     <fmfv>0.9.7</fmfv>
     <cdate>2015-10-01</cdate>
     <lmdate>2016-04-20</lmdate>
@@ -156,8 +156,8 @@
         <options>DontPrintEmptyValues</options>
       </Item>
 
-      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::Value::HelpText">
-        <uilink label="trimester3CurrentWeeksAmenorrhoeaWeeksValueLabel" layout="" widget=""/> 
+      <Item type="shorttext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::Value">
+        <uilink widget="trimester3CurrentWeeksAmenorrhoeaWeeksValueLineEdit"/> 
         <label lang="xx"></label>                                          
         <label lang="fr"></label>                                       
         <options>DontPrintEmptyValues</options>                                 
@@ -168,6 +168,13 @@
         <label lang="xx">days</label>
         <label lang="fr">jours</label>
         <options>DontPrintEmptyValues</options>
+      </Item>
+
+      <Item type="shorttext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaDays::Value">
+        <uilink widget="trimester3CurrentWeeksAmenorrhoeaDaysValueLineEdit"/>  
+        <label lang="xx"></label>                                               
+        <label lang="fr"></label>                                               
+        <options>DontPrintEmptyValues</options>                                 
       </Item>
 
       <Item type="helptext" name="ObstetricalCalendar::Edd::HelpText">
@@ -181,7 +188,7 @@
     
       <Item type="shorttext" name="ObstetricalCalendar::Edd::ShortText">
         <uilink widget="eddValueLineEdit"/>
-        <options>DontPrintEmptyValues;html</options>
+        <options>DontPrintEmptyValues</options>
       </Item>    
 
       <Item type="date" name="ObstetricalCalendar::Edd::Ultrasound">

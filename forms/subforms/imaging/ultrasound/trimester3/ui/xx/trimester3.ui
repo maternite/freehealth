@@ -220,13 +220,6 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="trimester3CurrentWeeksAmenorrhoeaWeeksValueLabel">
-          <property name="text">
-           <string>weeksValue</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLineEdit" name="trimester3CurrentWeeksAmenorrhoeaWeeksValueLineEdit">
           <property name="enabled">
            <bool>true</bool>
@@ -243,13 +236,6 @@
          <widget class="QLabel" name="currentWeeksAmenorrhoeaWeeksLabel">
           <property name="text">
            <string>weeks</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="trimester3CurrentWeeksAmenorrhoeaDaysValueLabel">
-          <property name="text">
-           <string>daysValue</string>
           </property>
          </widget>
         </item>
