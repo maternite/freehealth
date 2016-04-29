@@ -659,8 +659,6 @@
             <possible id="1" lang="fr">Naturelle</possible>
             <possible id="2" lang="fr">Dirigée</possible>
             <possible id="3" lang="fr">Manuelle</possible>
-            <possible id="4" lang="fr"></possible>
-            <possible id="5" lang="fr"></possible>
           </value>
           <options>DontPrintEmptyValues</options>
         </Item>
