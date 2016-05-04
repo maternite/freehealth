@@ -4033,6 +4033,24 @@
     </widget>
    </item>
    <item>
+    <layout class="QGridLayout" name="drugsPrescriptionGridLayout"/>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="counsellingGroupBox">
+     <property name="title">
+      <string>counselling</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_56">
+      <item>
+       <widget class="QListView" name="counsellingListView"/>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="counsellingLineEdit"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="deliveryAssessmentGroupBox">
      <property name="title">
       <string>assessment</string>

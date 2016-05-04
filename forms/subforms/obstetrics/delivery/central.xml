@@ -487,9 +487,9 @@
             <uuid id="0">∅</uuid>
             <uuid id="1">1 Dr MANASSE-RATSIMANDRESY Andrianalisoa</uuid>
             <uuid id="2">2 Dr RANDRIANARIJAONA Paul Jocelyn Mamy</uuid>
-            <uuid id="3">3</uuid>
-            <uuid id="4">4</uuid>
-            <uuid id="5">5</uuid>
+            <uuid id="3">3 Mme NOROVOLOLONA Charline</uuid>
+            <uuid id="4">4 Mr RAFANOMEZANTSOA Heritiana</uuid>
+            <uuid id="5">5 Mme VELO Georgette</uuid>
             <uuid id="6">6</uuid>
             <uuid id="7">7</uuid>
             <uuid id="8">8</uuid>
@@ -499,9 +499,9 @@
             <possible id="0" lang="xx">∅</possible>
             <possible id="1" lang="xx">1 Dr MANASSE-RATSIMANDRESY Andrianalisoa</possible>
             <possible id="2" lang="xx">2 Dr RANDRIANARIJAONA Paul Jocelyn Mamy</possible>
-            <possible id="3" lang="xx">3</possible>
-            <possible id="4" lang="xx">4</possible>
-            <possible id="5" lang="xx">5</possible>
+            <possible id="3" lang="xx">3 Mme NOROVOLOLONA Charline</possible>
+            <possible id="4" lang="xx">4 Mr RAFANOMEZANTSOA Heritiana</possible>
+            <possible id="5" lang="xx">5 Mme VELO Georgette</possible>
             <possible id="6" lang="xx">6</possible>
             <possible id="7" lang="xx">7</possible>
             <possible id="8" lang="xx">8</possible>
@@ -511,9 +511,9 @@
             <possible id="0" lang="fr">∅</possible>
             <possible id="1" lang="fr">1 Dr MANASSE-RATSIMANDRESY Andrianalisoa</possible>
             <possible id="2" lang="fr">2 Dr RANDRIANARIJAONA Paul Jocelyn Mamy</possible>
-            <possible id="3" lang="fr">3</possible>
-            <possible id="4" lang="fr">4</possible>
-            <possible id="5" lang="fr">5</possible>
+            <possible id="3" lang="fr">3 Mme NOROVOLOLONA Charline</possible>
+            <possible id="4" lang="fr">4 Mr RAFANOMEZANTSOA Heritiana</possible>
+            <possible id="5" lang="fr">5 Mme VELO Georgette</possible>
             <possible id="6" lang="fr">6</possible>
             <possible id="7" lang="fr">7</possible>
             <possible id="8" lang="fr">8</possible>
@@ -5161,21 +5161,50 @@
 
                 <Item type="combo" name="Postpartum::Traumatic::Complication::Episiotomy::Operator::Combo">
                   <uilink label="episiotomyOperatorLabel" widget="episiotomyOperatorComboBox"/>
-                  <label lang="xx">Operator</label>
-                  <label lang="fr">Opérateur</label>
+                  <label lang="xx">Operators</label>
+                  <label lang="fr">Opérateurs</label>
                   <value>
-                    <uuid id="0">Not done</uuid>
-                    <!--<sctid></sctid>-->
-                    <uuid id="1"></uuid>
-                    <uuid id="2"></uuid>
-                    <uuid id="3"></uuid>
-                    <uuid id="4"></uuid>
-                    <uuid id="5"></uuid>
-                    <uuid id="6"></uuid>
-                    <uuid id="7"></uuid>
-                    <uuid id="8"></uuid>
-                    <uuid id="9"></uuid>
-                    <uuid id="10"></uuid>
+                      <uuid id="0">∅</uuid>
+                      <uuid id="1">1 Dr RAKOTOZAFY Faratiana Lantoarisoa</uuid>
+                      <uuid id="2">2 Dr RABETSIMAMANGA Lyn Anja</uuid>
+                      <uuid id="3">3 Dr REKORONIRINA Biarinivo Eddie</uuid>
+                      <uuid id="4">4 Dr ANDRIAMANANTENA Christophe</uuid>
+                      <uuid id="5">5 Dr RASOANAMPOIZINA Hanitratiana</uuid>
+                      <uuid id="6">6 Dr RALALAHANTASOA Jeannine</uuid>
+                      <uuid id="7">7 Dr BEVELO Wai Carène</uuid>
+                      <uuid id="8">8 Dr RAHERITIANA Marie Angéline</uuid>
+                      <uuid id="9">9 Dr RAZAFINANDRASANA Rakotoarisoa Vololona</uuid>
+                      <uuid id="10">10 Mme RAZANAMAHASOA Jeannette</uuid>
+                      <uuid id="11">11 Mme RAZAFIMIORA Michèle</uuid>
+                      <uuid id="12">12 Mme NIVOHARIMALALA Diane Ismarah</uuid>
+                      <uuid id="13">13 Mlle BARAVANO Marcellia</uuid>
+                      <uuid id="14">14 Mme RAMILIJAONA Filiste Cléo</uuid>
+                      <uuid id="15">15 Mme RANAIVOARISON Hery Vololona Tantely</uuid>
+                      <uuid id="16">16 Mlle RAKOTONIAINA Hary Malala</uuid>
+                      <uuid id="17">17 Mme RAKOTOARIMANANA Hanta Malala</uuid>
+                      <uuid id="18">18 Mme FAHENDRENASOA Emile</uuid>
+                      <uuid id="19">19 Mme TAHIRY Elisoa Sarah Miora</uuid>
+                      <uuid id="20">20 Mme TSIMANAVAO Tahiriniaiana Georgia</uuid>
+                      <uuid id="21">21 Mme RASOAVINIAVO Olitiana</uuid>
+                      <uuid id="22">22 Mme RAVELOJAONA Voninahitriniaina</uuid>
+                      <uuid id="23">23 Mme RAHELINAIVO Mamitiana</uuid>
+                      <uuid id="24">24 Mme RASOLOFOARIMASY Felana</uuid>
+                      <uuid id="25">25 Mme ANDRIANILAINA Hanitratiana</uuid>
+                      <uuid id="26">26 Mme RANAIVOARIJAONA Fanomezantsoa Ando</uuid>
+                      <uuid id="27">27 Mme ANDRIAMBOLOLONTSOA Ange Brigitte</uuid>
+                      <uuid id="28">28 Sœur NIRINASOLO Apolline</uuid>
+                      <uuid id="29">29 Mlle RAOILISON Josée Florina</uuid>
+                      <uuid id="30">30 Mlle NARINDRANIAINA Haingomalala</uuid>
+                      <uuid id="31">31 Mme VOLOLONTSARA Herimalala</uuid>
+                      <uuid id="32">32 Mme RAKOTOARISON Lanto Eliane</uuid>
+                      <uuid id="33">33 Mme RAJAONA Hanitrarivo</uuid>
+                      <uuid id="34">34 Mlle RAJAONERA Malalatiana</uuid>
+                      <uuid id="35">35 Mlle MAMPIONONTSOA Annicette</uuid>
+                      <uuid id="36">36 Mme Domoina</uuid>
+                      <uuid id="37">37 Mme Mandimby</uuid>
+                      <uuid id="38">38 Mme Voninahitra</uuid>
+                      <uuid id="39">39 Mme Nicole</uuid>
+                      <uuid id="40">40 Mme Ando</uuid>
 
                     <possible id="0" lang="xx">ø</possible>
                     <possible id="1" lang="xx"></possible>
@@ -5188,18 +5217,79 @@
                     <possible id="8" lang="xx"></possible>
                     <possible id="9" lang="xx"></possible>
                     <possible id="10" lang="xx"></possible>
+                    <possible id="11" lang="xx"></possible>
+                    <possible id="12" lang="xx"></possible>
+                    <possible id="13" lang="xx"></possible>
+                    <possible id="14" lang="xx"></possible>
+                    <possible id="15" lang="xx"></possible>
+                    <possible id="16" lang="xx"></possible>
+                    <possible id="17" lang="xx"></possible>
+                    <possible id="18" lang="xx"></possible>
+                    <possible id="19" lang="xx"></possible>
+                    <possible id="20" lang="xx"></possible>
+                    <possible id="21" lang="xx"></possible>
+                    <possible id="22" lang="xx"></possible>
+                    <possible id="23" lang="xx"></possible>
+                    <possible id="24" lang="xx"></possible>
+                    <possible id="25" lang="xx"></possible>
+                    <possible id="26" lang="xx"></possible>
+                    <possible id="27" lang="xx"></possible>
+                    <possible id="28" lang="xx"></possible>
+                    <possible id="29" lang="xx"></possible>
+                    <possible id="30" lang="xx"></possible>
+                    <possible id="31" lang="xx"></possible>
+                    <possible id="32" lang="xx"></possible>
+                    <possible id="33" lang="xx"></possible>
+                    <possible id="34" lang="xx"></possible>
+                    <possible id="35" lang="xx"></possible>
+                    <possible id="36" lang="xx"></possible>
+                    <possible id="37" lang="xx"></possible>
+                    <possible id="38" lang="xx"></possible>
+                    <possible id="39" lang="xx"></possible>
+                    <possible id="40" lang="xx"></possible>
 
-                    <possible id="0" lang="fr">ø</possible>
-                    <possible id="1" lang="fr"></possible>
-                    <possible id="2" lang="fr"></possible>
-                    <possible id="3" lang="fr"></possible>
-                    <possible id="4" lang="fr"></possible>
-                    <possible id="5" lang="fr"></possible>
-                    <possible id="6" lang="fr"></possible>
-                    <possible id="7" lang="fr"></possible>
-                    <possible id="8" lang="fr"></possible>
-                    <possible id="9" lang="fr"></possible>
-                    <possible id="10" lang="fr"></possible>
+
+                    <possible id="0" lang="fr">∅</possible>
+                    <possible id="1" lang="fr">1 Dr RAKOTOZAFY Faratiana Lantoarisoa</possible>
+                    <possible id="2" lang="fr">2 Dr RABETSIMAMANGA Lyn Anja</possible>
+                    <possible id="3" lang="fr">3 Dr REKORONIRINA Biarinivo Eddie</possible>
+                    <possible id="4" lang="fr">4 Dr ANDRIAMANANTENA Christophe</possible>
+                    <possible id="5" lang="fr">5 Dr RASOANAMPOIZINA Hanitratiana</possible>
+                    <possible id="6" lang="fr">6 Dr RALALAHANTASOA Jeannine</possible>
+                    <possible id="7" lang="fr">7 Dr BEVELO Wai Carène</possible>
+                    <possible id="8" lang="fr">8 Dr RAHERITIANA Marie Angéline</possible>
+                    <possible id="9" lang="fr">9 Dr RAZAFINANDRASANA Rakotoarisoa Vololona</possible>
+                    <possible id="10" lang="fr">10 Mme RAZANAMAHASOA Jeannette</possible>
+                    <possible id="11" lang="fr">11 Mme RAZAFIMIORA Michèle</possible>
+                    <possible id="12" lang="fr">12 Mme NIVOHARIMALALA Diane Ismarah</possible>
+                    <possible id="13" lang="fr">13 Mlle BARAVANO Marcellia</possible>
+                    <possible id="14" lang="fr">14 Mme RAMILIJAONA Filiste Cléo</possible>
+                    <possible id="15" lang="fr">15 Mme RANAIVOARISON Hery Vololona Tantely</possible>
+                    <possible id="16" lang="fr">16 Mlle RAKOTONIAINA Hary Malala</possible>
+                    <possible id="17" lang="fr">17 Mme RAKOTOARIMANANA Hanta Malala</possible>
+                    <possible id="18" lang="fr">18 Mme FAHENDRENASOA Emile</possible>
+                    <possible id="19" lang="fr">19 Mme TAHIRY Elisoa Sarah Miora</possible>
+                    <possible id="20" lang="fr">20 Mme TSIMANAVAO Tahiriniaiana Georgia</possible>
+                    <possible id="21" lang="fr">21 Mme RASOAVINIAVO Olitiana</possible>
+                    <possible id="22" lang="fr">22 Mme RAVELOJAONA Voninahitriniaina</possible>
+                    <possible id="23" lang="fr">23 Mme RAHELINAIVO Mamitiana</possible>
+                    <possible id="24" lang="fr">24 Mme RASOLOFOARIMASY Felana</possible>
+                    <possible id="25" lang="fr">25 Mme ANDRIANILAINA Hanitratiana</possible>
+                    <possible id="26" lang="fr">26 Mme RANAIVOARIJAONA Fanomezantsoa Ando</possible>
+                    <possible id="27" lang="fr">27 Mme ANDRIAMBOLOLONTSOA Ange Brigitte</possible>
+                    <possible id="28" lang="fr">28 Sœur NIRINASOLO Apolline</possible>
+                    <possible id="29" lang="fr">29 Mlle RAOILISON Josée Florina</possible>
+                    <possible id="30" lang="fr">30 Mlle NARINDRANIAINA Haingomalala</possible>
+                    <possible id="31" lang="fr">31 Mme VOLOLONTSARA Herimalala</possible>
+                    <possible id="32" lang="fr">32 Mme RAKOTOARISON Lanto Eliane</possible>
+                    <possible id="33" lang="fr">33 Mme RAJAONA Hanitrarivo</possible>
+                    <possible id="34" lang="fr">34 Mlle RAJAONERA Malalatiana</possible>
+                    <possible id="35" lang="fr">35 Mlle MAMPIONONTSOA Annicette</possible>
+                    <possible id="36" lang="fr">36 Mme Domoina</possible>
+                    <possible id="37" lang="fr">37 Mme Mandimby</possible>
+                    <possible id="38" lang="fr">38 Mme Voninahitra</possible>
+                    <possible id="39" lang="fr">39 Mme Nicole</possible>
+                    <possible id="40" lang="fr">40 Mme Ando</possible>
                   </value>
                   <options>DontPrintEmptyValues</options>
                 </Item>
@@ -5212,19 +5302,73 @@
 
     </Item> <!-- end of Delivery::Group -->
 
-    <Item type="group" name="Delivery::Assessment::Group">
+<!--    <Item name="Prescription::Drugs" type="prescriptor">
+        <label lang="xx">Prescription</label>                           
+        <label lang="fr">Prescription</label>                           
+        <options>DontPrintEmptyValues</options>                                 
+        <patientdata>DrugsChronicTherapeutics</patientdata>                     
+    </Item>
+-->
+    <Item type="group" name="Counselling::Group">
+        <uilink widget="counsellingGroupBox" />
+        <label lang="xx">Counselling</label>
+        <label lang="fr">Counselling</label>
+        <options>DontPrintEmptyValues</options>
+
+        <Item type="multilist" name="Counselling::Multilist">
+          <uilink label="" widget="counsellingListView" layout="" />
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <value>
+            <uuid id="0">Not done</uuid>
+            <!--<sctid>385660001</sctid>-->
+            <uuid id="1">Breastfeeding</uuid>
+            <uuid id="2">Perineal care</uuid>
+            <uuid id="3">Rising from bed after six hours</uuid>
+            <uuid id="4"></uuid>
+            <uuid id="5"></uuid>
+
+            <possible id="0" lang="xx">ø</possible>
+            <possible id="1" lang="xx">Breastfeeding</possible>
+            <possible id="2" lang="xx">Perineal care</possible>
+            <possible id="3" lang="xx">Rising from bed after six hours</possible>
+            <possible id="4" lang="xx"></possible>
+            <possible id="5" lang="xx"></possible>
+
+            <possible id="0" lang="fr">ø</possible>
+            <possible id="1" lang="fr">Allaitement</possible>
+            <possible id="2" lang="fr">Soin du périné</possible>
+            <possible id="3" lang="fr">Lever après six heures</possible>
+            <possible id="4" lang="fr"></possible>
+            <possible id="5" lang="fr"></possible>
+          </value>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+        <Item type="shorttext" name="Counselling::LineEdit">
+          <uilink label="" widget="counsellingLineEdit" layout="" />
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <placeholder lang="xx">Other</placeholder>
+          <placeholder lang="fr">Autre</placeholder>
+          <options>DontPrintEmptyValues</options>
+        </Item>
+
+    </Item> <!-- end of group Counselling::Group -->
+
+    <Item type="group" name="Assessment::Group">
         <uilink widget="deliveryAssessmentGroupBox" />
         <label lang="xx">Assessment</label>
         <label lang="fr">Résumé</label>
         <options>DontPrintEmptyValues</options>
 
-        <Item type="editor" name="Delivery::Assessment::Editor">
+        <Item type="editor" name="Assessment::Editor">
             <uilink label="deliveryAssessmentLabel" layout="deliveryAssessmentFormLayout"/>
             <label lang="xx">Assessment</label>
             <label lang="fr">Commentaire sur l'accouchement</label>
             <options>FullEditor;DontPrintEmptyValues</options>
         </Item>
-    </Item> <!-- end of group Delivery::Assessment::Group -->
+    </Item> <!-- end of group Assessment::Group -->
 
   </MedForm>
 
