@@ -5159,8 +5159,8 @@
                       </value>
                 </Item>
 
-                <Item type="combo" name="Postpartum::Traumatic::Complication::Episiotomy::Operator::Combo">
-                  <uilink label="episiotomyOperatorLabel" widget="episiotomyOperatorComboBox"/>
+                <Item type="multilist" name="Postpartum::Traumatic::Complication::Episiotomy::Operator::Multilist">
+                  <uilink label="episiotomyOperatorLabel" widget="episiotomyOperatorListView"/>
                   <label lang="xx">Operators</label>
                   <label lang="fr">Opérateurs</label>
                   <value>
@@ -5342,7 +5342,7 @@
             <possible id="4" lang="fr"></possible>
             <possible id="5" lang="fr"></possible>
           </value>
-          <options>DontPrintEmptyValues</options>
+          <options>DontPrintEmptyValues;resizeToContent</options>
         </Item>
 
         <Item type="shorttext" name="Counselling::LineEdit">
