@@ -28,7 +28,7 @@
   
   <file type="script" name="onload">./scripts/xx/postnatal.js</file>
 
-  <MedForm name="Maternity::Obstetrics::Prenatal" uifilename="./ui/xx/postnatal.ui">
+  <MedForm name="Maternity::Obstetrics::Postnatal" uifilename="./ui/xx/postnatal.ui">
     <label lang="xx">Postnatal consultation</label>
     <label lang="fr">Consultation postnatale</label>
     <options>UseFormNameAsNameSpace</options>
@@ -37,144 +37,7 @@
     <file type="htmlprintmask">./html/xx/padtools_mask.html</file>
     <file type="htmlexportmask">./html/xx/padtools_mask.html</file>
 -->
-  <Item type="group" name="ObstetricalCalendar">
-    <uilink label="" widget="obstetricalCalendarGroupBox" layout="" />
-    <label lang="xx">Obstetrical calendar</label>
-    <label lang="fr">Calendrier obstétrical</label>
-    <options>collapsible;expanded;DontPrintEmptyValues</options>
-
-      <Item type="date" name="ObstetricalCalendar::LastMentrualPeriod">
-        <uilink label="lastMenstrualPeriodLabel" layout="" widget="lastMenstrualPeriodDateEdit"/>
-        <label lang="xx">Last Menstrual Period (LMP)</label>
-        <label lang="fr">Date des Dernières Règles (DDR)</label>
-        <patientdata>LastMenstrualPeriod</patientdata>
-        <options>DontPrintEmptyValues</options>
-        <script>
-          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.prenatal_chooseDateToUse();</onValueChanged>
-        </script>
-      </Item>
-
-      <Item type="date" name="ObstetricalCalendar::ConceptionDate">
-        <uilink label="conceptionDateLabel" layout="" widget="conceptionDateDateEdit"/>
-        <label lang="xx">Conception date</label>
-        <label lang="fr">Date de conception</label>
-        <patientdata>LastMenstrualPeriod</patientdata>
-        <options>DontPrintEmptyValues</options>
-        <script>
-          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.prenatal_chooseDateToUse();</onValueChanged>
-        </script>
-      </Item>
-
-      <Item name="ObstetricalCalendar::UseLmpDateOfConceptionHelpText" type="helptext">
-        <uilink label="useLmpDateOfConceptionLabel" layout="" widget=""/>
-        <label lang="xx">Which date to use?</label>
-        <label lang="fr">Quelle date utiliser?</label>
-        <options>printable</options>
-        <value>
-          <default></default>
-        </value>
-      </Item>
-
-      <Item type="check" name="ObstetricalCalendar::UseLMP::Check">
-        <uilink widget="useLmpCheck"/>
-        <options>DontPrintEmptyValues;OnLeft</options>
-        <label lang="xx">LMP</label>
-        <label lang="fr">DDR</label>
-        <value>
-          <numerical id="0">0</numerical>
-          <numerical id="1">1</numerical>
-        </value>
-        <script>
-          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.prenatal_setLmp();</onValueChanged>
-        </script>
-      </Item>
-
-      <Item type="check" name="ObstetricalCalendar::UseConceptionDate::Check">
-        <uilink widget="useDateOfConceptionCheck"/>
-        <options>printonlychecked;OnLeft</options>
-        <label lang="xx">Conception date (only in case of ART or IUI)</label>
-        <label lang="fr">Date de conception (uniquement en cas de procréation médicalement assistée)</label>
-        <value>
-          <numerical id="0">0</numerical>
-          <numerical id="1">1</numerical>
-        </value>
-        <script>
-          <onValueChanged>namespace.com.freemedforms.obstetrics.prenatal.prenatal_setDateOfConception();</onValueChanged>
-        </script>
-      </Item>
-
-      <Item type="radio" name="ObstetricalCalendar::LmpDeterminedBy::Radio">
-          <uilink label="lmpDeterminedByLabel" widget="" layout="lmpDeterminedByRadioLayout"/>
-          <label lang="xx">LMP determined by</label>
-          <label lang="fr">DDR déterminée par</label>
-          <options>compact;DontPrintEmptyValues</options>
-          <value>
-            <uuid id="0">History taking</uuid>
-            <!--<sctid id="0">84100007</sctid>-->
-            <uuid id="1">Ultrasound scan for fetal cephalometry</uuid>
-            <!--<sctid id="1">169224002</sctid>-->
-            <uuid id="2">not done</uuid>
-            <!--<sctid id="2">385660001</sctid>-->
-            <possible id="0" lang="xx">History taking</possible>
-            <possible id="1" lang="xx">Ultrasound scan (cephalometry)</possible>
-            <possible id="2" lang="xx">∅</possible>
-            <print id="0" lang="xx">History taking</print>
-            <print id="1" lang="xx">Ultrasound scan (cephalometry)</print>
-            <print id="2" lang="xx">Not evaluated</print>
-            <possible id="0" lang="fr">Anamnèse</possible>
-            <possible id="1" lang="fr">Échographie du 1er trimestre</possible>
-            <possible id="2" lang="fr">∅</possible>
-            <print id="0" lang="fr">Anamnèse</print>
-            <print id="1" lang="fr">Échographie du 1er trimestre</print>
-            <print id="2" lang="fr">Item non évalué</print>
-          </value>
-        </Item>
-
-      <Item type="shorttext" name="ObstetricalCalendar::LmpDeterminedBy::Comment">
-          <uilink label="" widget="lmpDeterminedByLineEdit" layout=""/>
-          <label lang="xx"></label>
-          <label lang="fr"></label>
-          <tooltip lang="xx"></tooltip>
-          <tooltip lang="fr"></tooltip>
-          <placeholder lang="xx">Comment</placeholder>
-          <placeholder lang="fr">Commentaire</placeholder>
-          <options>DontPrintEmptyValues;readonly;html</options>
-      </Item>
-
-      <Item name="ObstetricalCalendar::gestationalAgeHelpText" type="helptext">
-        <uilink label="gestationalAgeHelpTextLabel" layout="" widget=""/>
-        <label lang="xx">Gestational age in weeks of amenorrhoea</label>
-        <label lang="fr">Âge gestationnel en semaines d'aménorrhée</label>
-        <options>printable</options>
-        <value>
-          <default>The default value</default>
-        </value>
-      </Item>
-
-      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmenorrhoeaWeeks::HelpText">
-        <uilink label="currentWeeksAmenorrhoeaWeeksLabel" layout="" widget=""/>
-        <label lang="xx">weeks</label>
-        <label lang="fr">semaines</label>
-      </Item>
-
-      <Item type="helptext" name="ObstetricalCalendar::CurrentWeeksAmnorrhoeaDays::HelpText">
-        <uilink label="currentWeeksAmenorrhoeaDaysLabel" layout="" widget=""/>
-        <label lang="xx">days</label>
-        <label lang="fr">jours</label>
-      </Item>
-
-      <Item type="helptext" name="ObstetricalCalendar::Edd::HelpText">
-          <uilink label="eddLabel" widget="" layout=""/>
-          <label lang="xx">Estimated date of delivery</label>
-          <label lang="fr">Terme</label>
-          <tooltip lang="xx"></tooltip>
-          <tooltip lang="fr"></tooltip>
-          <options>html</options>
-      </Item>
-
-  </Item> <!-- end of group obstetrical calendar -->
-
-  <Item type="group" name="Subjective">
+    <Item type="group" name="Subjective">
     <uilink label="" widget="subjectiveGroupBox" layout="" />
     <label lang="xx">Subjective</label>
     <label lang="fr">Subjectif</label>
@@ -183,128 +46,72 @@
     <Item type="texteditor" name="CaseHistory">
       <uilink label="caseHistoryLabel" widget="" layout="caseHistoryFormLayout" />
       <label lang="xx">Case history</label>
-      <label lang ="fr">Anamnèse</label>
+      <label lang ="fr">Motif de consultation</label>
       <options>FullEditor;DontPrintEmptyValues</options>
     </Item>
 
-    <Item type="texteditor" name="Medical::Regimen">
-      <uilink label="medicalRegimenLabel" widget="" layout="medicalRegimenFormLayout" />
-      <label lang="xx">Medical regimen orders assessment</label>
-      <label lang ="fr">Traitements médicamenteux ou non médicamenteux (phytothérapie, remèdes traditionnels améliorés) en cours</label>
-      <options>FullEditor;DontPrintEmptyValues</options>
-    </Item>
-
-    <Item type="radio" name="FetalMovement">
-      <uilink label="fetalMovementLabel" widget="" layout="fetalMovementRadioLayout" />
-      <label lang="xx">Fetal movement</label>
-      <label lang="fr">Mouvements actifs fœtaux</label>
+    <Item type="combo" name="Newborn::Nutrition">
+      <uilink label="newbornNutritionLabel" widget="newbornNutritionComboBox" layout="" />
+      <label lang="xx">Newborn nutrition</label>
+      <label lang ="fr">Allaitement</label>
       <value>
-      <uuid id="0">yes</uuid>
-      <!--<sctid id="0">373066001</sctid>-->
-      <uuid id="1">decreased</uuid>
-      <!--<sctid id="1">1250004</sctid>-->
-      <uuid id="2">no</uuid>
-      <!--<sctid id="2">373067005</sctid>-->
-      <uuid id="3">not done</uuid>
-      <!--<sctid id="3">385660001</sctid>-->
-      <possible id="0" lang="xx">Yes</possible>
-      <possible id="1" lang="xx">Decreased</possible>
-      <possible id="2" lang="xx">No</possible>
-      <possible id="3" lang="xx">ø</possible>
-      <print id="0" lang="xx">Yes</print>                                 
-      <print id="1" lang="xx">Decreased</print>                           
-      <print id="2" lang="xx">No</print>                                  
-      <print id="3" lang="xx">Not evaluated</print>
-      <possible id="0" lang="fr">Oui</possible>
-      <possible id="1" lang="fr">Diminués</possible>
-      <possible id="2" lang="fr">Non</possible>
-      <possible id="3" lang="fr">ø</possible>
-      <print id="0" lang="fr">Oui</print>                                 
-      <print id="1" lang="fr">Diminués</print>                            
-      <print id="2" lang="fr">Non</print>                                 
-      <print id="3" lang="fr">Non évalué</print>
-      </value>
-      <options>compact;DontPrintEmptyValues</options>
+          <uuid id="0">Not done</uuid>
+          <!--<sctid>385660001</sctid>-->
+          <uuid id="1">Exclusive breastfeeding</uuid>
+          <uuid id="2">Mixed feeding</uuid>
+          <uuid id="3">Infant formula</uuid>
+
+          <possible id="0" lang="xx">ø</possible>
+          <possible id="1" lang="xx">Exclusive breastfeeding</possible>
+          <possible id="2" lang="xx">Mixed feeding</possible>
+          <possible id="3" lang="xx">Infant formula</possible>
+
+          <possible id="0" lang="fr">ø</possible>
+          <possible id="1" lang="fr">Allaitement maternel exclusif</possible>
+          <possible id="2" lang="fr">Mixte</possible>
+          <possible id="3" lang="fr">Allaitement artificiel</possible>
+
+        </value>
+      <options>DontPrintEmptyValues</options>
     </Item>
 
-    <Item type="group" name="SubjectiveFatigueScore">
-      <uilink label="" widget="subjectiveFatigueScoreGroupBox" layout="" />
-      <label lang="xx">Fatigue score</label>
-      <label lang="fr">Score de fatigue</label>
-      <options>collapsible;expanded;DontPrintEmptyValues</options>
+    <Item type="helptext" name="Menstruation::Yes::No::Helptext">
+       <uilink widget="menstruationLabel"/>
+       <label lang="xx">Menstruation</label>
+       <label lang="fr">Retour de couches</label>
+    </Item>
 
-      <Item type="check" name="Score::Fatigue::Check::Standing">
-        <uilink widget="standingCheck"/>
-        <options>printonlychecked;OnLeft</options>
-        <label lang="xx">Standing up at work for more than 4 hours a day</label>
-        <label lang="fr">Travail debout pendant plus de 4 heures par jour</label>
-        <value>
-          <numerical id="1">0</numerical>
-          <numerical id="0">1</numerical>
-        </value>
-      </Item>
+    <Item type="check" name="Menstruation::Yes">
+      <uilink widget="menstruationYesCheckBox"/>
+      <options>printonlychecked;OnLeft</options>
+      <label lang="xx">Yes</label>
+      <label lang="fr">Oui</label>
+      <value>
+        <numerical id="0">0</numerical>
+        <numerical id="1">1</numerical>
+      </value>
+    </Item>
 
-      <Item type="check" name="Score::Fatigue::Check::Industrial">
-        <uilink widget="industrialCheck"/>
-        <options>printonlychecked;OnLeft</options>
-        <label lang="xx">Industrial machinery related work</label>
-        <label lang="fr">Travail sur machine industrielle</label>
-        <value>
-          <numerical id="0">1</numerical>
-          <numerical id="1">0</numerical>
-        </value>
-      </Item>
+    <Item type="check" name="Menstruation::No">
+      <uilink widget="menstruationYesCheckBox"/>
+      <options>printonlychecked</options>
+      <label lang="xx">No</label>
+      <label lang="fr">Non</label>
+      <value>
+        <numerical id="0">0</numerical>
+        <numerical id="1">1</numerical>
+      </value>
+    </Item>
 
-      <Item type="check" name="Score::Fatigue::Check::Repetitive">
-        <uilink widget="repetitiveCheck"/>
-        <options>printonlychecked;OnLeft</options>
-        <label lang="xx">Repetitive tasks</label>
-        <label lang="fr">Travail répétitif</label>
-        <value>
-          <numerical id="0">1</numerical>
-          <numerical id="1">0</numerical>
-        </value>
-      </Item>
+    <Item type="date" name="Menstruation::Date">
+      <uilink widget="menstruationDateEdit" />
+      <options>DontPrintEmptyValues</options>
+    </Item>
 
-      <Item type="check" name="Score::Fatigue::Check::Physical">
-        <uilink widget="physicalCheck"/>
-        <options>printonlychecked;OnLeft</options>
-        <label lang="xx">Physical work, heavy lifting </label>
-        <label lang="fr">Travail physique, port de charges lourdes</label>
-        <value>
-          <numerical id="0">1</numerical>
-          <numerical id="1">0</numerical>
-        </value>
-      </Item>
-
-      <Item type="check" name="Score::Fatigue::Check::Hardness">
-        <uilink widget="hardnessCheck"/>
-        <options>printonlychecked;OnLeft</options>
-        <label lang="xx">Hard labor</label>
-        <label lang="fr">Pénibilité du poste de travail</label>
-        <value>
-          <numerical id="0">1</numerical>
-          <numerical id="1">0</numerical>
-        </value>
-      </Item>
-
-      <Item type="shorttext" name="Score::Fatigue::FinalScore">
-        <uilink label="fatigueScoreTotalLabel" widget="fatigueScoreTotalLineEdit"/>
-        <label>Score = </label>
-        <options>DontPrintEmptyValues</options>
-      </Item>
-
-      <Item type="texteditor" name="Score::Fatigue::Comment">
-        <uilink label="fatigueScoreCommentLabel" layout="fatigueScoreCommentLayout"/>
-        <label lang="xx">Comments</label>
-        <label lang="fr">Remarques</label>
-        <options>DontPrintEmptyValues</options>
-      </Item>
-    </Item> <!-- end of group subjective fatigue score -->
 
   </Item>  <!-- end of group subjective -->
 
-    <Item type="group" name="Objective">
+  <Item type="group" name="Objective">
       <uilink label="" widget="objectiveGroup" />
       <label lang="xx">Objective</label>
       <label lang="fr">Objectif</label>
@@ -450,163 +257,101 @@
           <options>DontPrintEmptyValues</options>                               
         </Item>
 
-        <Item type="spin" name="ObjectiveGroup::FundalHeight::Value">
-          <!--<sctid>249016007</sctid>-->
-          <uilink label="fundalHeightLabel" widget="fundalHeightSpinBox" layout=""/>
-          <label lang="xx">Fundal height</label>
-          <label lang="fr">Hauteur utérine</label>
-          <tooltip lang="xx">Fundal height</tooltip>
-          <tooltip lang="fr">Hauteur utérine</tooltip>
-          <options>DontPrintEmptyValues</options>
-        </Item>
+        <Item type="group" name="Postpartum::Period">
+            <uilink label="" widget="postpartumPeriodGroupBox" />
+            <label lang="xx">Postpartum period</label>
+            <label lang="fr">Post-partum</label>
+            <options>DontPrintEmptyValues</options>
 
-        <Item type="radio" name="ObjectiveGroup::PeripheralEdema::Radio">
-          <uilink label="peripheralEdemaLabel" widget="" layout="peripheralEdemaRadioLayout"/>
-          <label lang="xx">Peripheral edema</label>
-          <label lang="fr">Œdèmes périphériques (des membres inférieurs)</label>
-          <options>compact;DontPrintEmptyValues</options>
-          <value>
-            <uuid id="0">yes</uuid>
-            <!--<sctid id="0">373066001</sctid>-->
-            <uuid id="1">no</uuid>
-            <!--<sctid id="1">373067005</sctid>-->
-            <uuid id="2">not done</uuid>
-            <!--<sctid id="2">385660001</sctid>-->
-            <possible id="0" lang="xx">Yes</possible>
-            <possible id="1" lang="xx">No</possible>
-            <possible id="2" lang="xx">∅</possible>
-            <print id="0" lang="xx">Yes</print>
-            <print id="1" lang="xx">No</print>
-            <print id="2" lang="xx">Not evaluated</print>
-            <possible id="0" lang="fr">Oui</possible>
-            <possible id="1" lang="fr">Non</possible>
-            <possible id="2" lang="fr">∅</possible>
-            <print id="0" lang="fr">Oui</print>
-            <print id="1" lang="fr">Non</print>
-            <print id="2" lang="fr">Item non évalué</print>
-          </value>
-        </Item>
+            <Item type="helptext" name="Postpartum::Period::Helptext">
+              <uilink widget="postpartumPeriodLabel"/>
+              <label lang="xx">Postpartum period</label>
+              <label lang="fr">Suites de couches</label>
+              <options>DontPrintEmptyValues</options>
+            </Item>
 
-        <Item name="ObjectiveGroup::PeripheralEdema::Comment" type="shorttext">
-          <uilink label="" widget="peripheralEdemaLineEdit" layout="" />
-          <label lang="xx"></label>
-          <label lang="fr"></label>
-          <placeholder lang="xx">Comment</placeholder>
-          <placeholder lang="fr">Commentaire</placeholder>
-          <options>DontPrintEmptyValues</options>
-        </Item>
+            <Item type="check" name="Postpartum::Period::Normal::CheckBox">
+              <uilink widget="postpartumPeriodNormalCheckBox"/>
+              <options>Printonlychecked;OnLeft</options>
+              <label lang="xx">Normal</label>
+              <label lang="fr">Normales</label>
+              <value>
+                <numerical id="0">0</numerical>
+                <numerical id="1">1</numerical>
+              </value>
+            </Item>
 
-        <Item type="radio" name="ObjectiveGroup::VaricoseVeins::Radio">
-          <uilink label="varicoseVeinsLabel" widget="" layout="varicoseVeinsRadioLayout"/>
-          <label lang="xx">Varicose veins</label>
-          <label lang="fr">Varices</label>
-          <options>compact;DontPrintEmptyValues</options>
-          <value>
-            <uuid id="0">yes</uuid>
-            <!--<sctid id="0">373066001</sctid>-->
-            <uuid id="1">no</uuid>
-            <!--<sctid id="1">373067005</sctid>-->
-            <uuid id="2">not done</uuid>
-            <!--<sctid id="2">385660001</sctid>-->
-            <possible id="0" lang="xx">Yes</possible>
-            <possible id="1" lang="xx">No</possible>
-            <possible id="2" lang="xx">∅</possible>
-            <print id="0" lang="xx">Yes</print>
-            <print id="1" lang="xx">No</print>
-            <print id="2" lang="xx">Not evaluated</print>
-            <possible id="0" lang="fr">Oui</possible>
-            <possible id="1" lang="fr">Non</possible>
-            <possible id="2" lang="fr">∅</possible>
-            <print id="0" lang="fr">Oui</print>
-            <print id="1" lang="fr">Non</print>
-            <print id="2" lang="fr">Item non évalué</print>
-          </value>
-        </Item>
+            <Item type="check" name="Postpartum::Period::Abnormal::CheckBox">
+              <uilink widget="postpartumPeriodAbnormalCheckBox"/>
+              <options>printonlychecked</options>
+              <label lang="xx">Abnormal</label>
+              <label lang="fr">Pathologiques</label>
+              <value>
+                <numerical id="0">0</numerical>
+                <numerical id="1">1</numerical>
+              </value>
+            </Item>
 
-        <Item name="ObjectiveGroup::VaricoseVeins::Comment" type="shorttext">
-          <uilink label="" widget="varicoseVeinsLineEdit" layout="" />
-          <label lang="xx"></label>
-          <label lang="fr"></label>
-          <placeholder lang="xx">Comment</placeholder>
-          <placeholder lang="fr">Commentaire</placeholder>
-          <options>DontPrintEmptyValues</options>
-        </Item>
+            <Item type="group" name="Postpartum::Medical::Complication::GroupBox">
+                <uilink label="" widget="postpartumMedicalComplicationGroupBox" />
+                <label lang="xx">Postpartum medical complications</label>
+                <label lang="fr">Complications du post-partum</label>
+                <options>DontPrintEmptyValues</options>
 
-        <Item type="radio" name="ObjectiveGroup::Pelvis::Radio">
-          <!--<sctid>46633002</sctid>-->
-          <uilink label="pelvisLabel" widget="" layout="pelvisRadioLayout" />
-          <label lang="xx">Pelvis</label>
-          <label lang="fr">Bassin</label>
-          <value>
-          <uuid id="0">Narrow</uuid>
-          <!--<sctid id="0">134223000</sctid>-->
-          <uuid id="1">Funnel shape</uuid>
-          <!--<sctid id="1">36394000</sctid>-->
-          <uuid id="2">Asymmetrical</uuid>
-          <!--<sctid id="2">4128009</sctid>-->
-          <uuid id="3">Borderline normal</uuid>
-          <!--<sctid id="3">371932001</sctid>-->
-          <uuid id="4">Normal shape</uuid>
-          <!--<sctid id="4">371932001</sctid>-->
-          <uuid id="5">not done</uuid>
-          <!--<sctid id="5">385660001</sctid>-->
-          <possible id="0" lang="xx">Narrow</possible>
-          <possible id="1" lang="xx">Funnel shape</possible>
-          <possible id="2" lang="xx">Asymmetrical</possible>
-          <possible id="3" lang="xx">Borderline</possible>
-          <possible id="4" lang="xx">Normal</possible>
-          <possible id="5" lang="xx">ø</possible>
-          <possible id="0" lang="fr">Rétréci</possible>
-          <possible id="1" lang="fr">En entonnoir</possible>
-          <possible id="2" lang="fr">Asymétrique</possible>
-          <possible id="3" lang="fr">Limite</possible>
-          <possible id="4" lang="fr">Normal</possible>
-          <possible id="5" lang="fr">ø</possible>
-          <options>compact;DontPrintEmptyValues</options>
-        </value>
-      </Item>
+                <Item type="multilist" name="Breastfeeding::Complication::Multilist">
+                  <uilink label="breastfeedingComplicationLabel" widget="breastfeedingComplicationListView" />
+                  <label lang="xx">Breastfeeding complications</label>
+                  <label lang="fr">Complications de l'allaitement</label>
+                  <value>
+                  <uuid id="0">Breast engorgement</uuid>
+                  <uuid id="1">Lymphangitis</uuid>
+                  <uuid id="2">Breast abscess</uuid>
+                  <uuid id="3">Cracked nipples</uuid>
+                  <possible id="0" lang="xx">Breast engorgement</possible>
+                  <possible id="1" lang="xx">Lymphangitis</possible>
+                  <possible id="2" lang="xx">Breast abscess</possible>
+                  <possible id="3" lang="xx">Cracked nipples</possible>
+                  <possible id="0" lang="fr">Engorgement mammaire</possible>
+                  <possible id="1" lang="fr">Lymphangite</possible>
+                  <possible id="2" lang="fr">Abcès mammaire</possible>
+                  <possible id="3" lang="fr">Crevasses</possible>
+                  <options>resizeToContent;DontPrintEmptyValues</options>
+                </value>
+              </Item>
 
-      <Item type="group" name="Objective::Cervix">
-        <uilink label="" widget="objectiveCervixGroup" />
-        <label lang="xx">Cervix</label>
-        <label lang="fr">Col</label>
-        <options>collapsible;expanded;DontPrintEmptyValues</options>
+              <Item type="shorttext" name="Breastfeeding::Complication::Shorttext" >
+                <uilink widget="breastfeedingComplicationLineEdit"/>
+                <placeholder lang="xx">Comment</placeholder>
+                <placeholder lang="fr">Commentaire</placeholder>
+                <options>DontPrintEmptyValues</options>
+              </Item>
 
-
-      <Item type="radio" name="ObjectiveGroup::Cervix::Position">
-          <!--<sctid></sctid>-->
-          <uilink label="cervixPositionLabel" widget="" layout="cervixPositionRadioLayout" />
-          <label lang="xx">Position</label>
-          <label lang="fr">Position</label>
-          <value>
-          <uuid id="0">Posterior</uuid>
-          <!--<sctid id="0"></sctid>-->
-          <uuid id="1">Middle</uuid>
-          <!--<sctid id="1"></sctid>-->
-          <uuid id="2">Anterior</uuid>
-          <!--<sctid id="2"></sctid>-->
-          <uuid id="3">Lateral</uuid>
-          <!--<sctid id="3"></sctid>-->
-          <uuid id="4">not done</uuid>
-          <!--<sctid id="4">385660001</sctid>-->
-          <possible id="0" lang="xx">Posterior</possible>
-          <possible id="1" lang="xx">Middle</possible>
-          <possible id="2" lang="xx">Anterior</possible>
-          <possible id="3" lang="xx">Lateral</possible>
-          <possible id="4" lang="xx">ø</possible>
-          <possible id="0" lang="fr">Postérieur</possible>
-          <possible id="1" lang="fr">Intermédiaire</possible>
-          <possible id="2" lang="fr">Centré</possible>
-          <possible id="3" lang="fr">Latéro-dévié</possible>
-          <possible id="4" lang="fr">ø</possible>
-          <numerical id="0">0</numerical>
-          <numerical id="1">1</numerical>
-          <numerical id="2">2</numerical>
-          <numerical id="3">2</numerical>
-          <numerical id="4">0</numerical>
-        </value>
-          <options>compact;DontPrintEmptyValues</options>
-      </Item>
+              <Item type="multilist" name="Puerperal::Infection">
+                  <uilink label="cervixPositionLabel" widget="" layout="cervixPositionRadioLayout" />
+                  <label lang="xx">Puerperal infection</label>
+                  <label lang="fr">Infection puerperale</label>
+                  <value>
+                  <uuid id="0">Urinary tract infection</uuid>
+                  <uuid id="1">Endometritis</uuid>
+                  <uuid id="2">Episiotomy complication</uuid>
+                  <uuid id="3">Peritonitis</uuid>
+                  <uuid id="4">Septicemia</uuid>
+                  <uuid id="5">Broad ligament phlegmon</uuid>
+                  <possible id="0" lang="xx">Urinary tract infection</possible>
+                  <possible id="1" lang="xx">Endometritis</possible>
+                  <possible id="2" lang="xx">Episiotomy complication</possible>
+                  <possible id="3" lang="xx">Peritonitis</possible>
+                  <possible id="4" lang="xx">Septicemia</possible>
+                  <possible id="5" lang="xx">Broad ligament phlegmon</possible>
+                  <possible id="0" lang="fr">Infection urinaire</possible>
+                  <possible id="1" lang="fr">Endométrite</possible>
+                  <possible id="2" lang="fr">Complication de l'épisiotomie</possible>
+                  <possible id="3" lang="fr">Péritonite</possible>
+                  <possible id="4" lang="fr">Septicémie</possible>
+                  <possible id="5" lang="fr">Phlegmon du ligament large</possible>
+                </value>
+                  <options>resizeToContent;DontPrintEmptyValues</options>
+              </Item>
 
       <Item type="radio" name="ObjectiveGroup::Cervix::Consistency">
           <!--<sctid></sctid>-->
