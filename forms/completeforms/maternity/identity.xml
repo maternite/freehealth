@@ -9,7 +9,7 @@
     <version>test</version>
     <fmfv>0.9.6</fmfv>
     <cdate>2012-09-03</cdate>
-    <lmdate>2015-04-24</lmdate>
+    <lmdate>2016-05-16</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliography/>
@@ -40,6 +40,6 @@
     <icon>__theme__/identity.png</icon>
   </Page>
 
-  <file>__subForms__/generic/fullidentity_maternity/central.xml</file>
+  <file>__subForms__/maternity/generic/fullidentity_maternity/central.xml</file>
 
 </FreeMedForms>

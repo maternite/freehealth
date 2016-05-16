@@ -11,14 +11,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>555</width>
-    <height>2252</height>
+    <width>392</width>
+    <height>2296</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string/>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_6">
    <item>
     <widget class="QGroupBox" name="subjectiveGroupBox">
      <property name="title">
@@ -56,6 +56,19 @@
         </item>
         <item>
          <widget class="QComboBox" name="newbornNutritionComboBox"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
@@ -95,6 +108,19 @@
           </attribute>
          </widget>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
      </layout>
@@ -109,6 +135,13 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_9">
         <item>
+         <widget class="QLabel" name="temperatureLabel">
+          <property name="text">
+           <string>T</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QDoubleSpinBox" name="temperatureValue">
           <property name="decimals">
            <number>1</number>
@@ -121,17 +154,30 @@
         <item>
          <widget class="QComboBox" name="temperatureUnit"/>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="temperatureLabel">
-        <property name="text">
-         <string>T</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="bloodPressureLabel">
+          <property name="text">
+           <string>BP</string>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QSpinBox" name="bloodPressureSystolicValue">
           <property name="maximum">
@@ -159,17 +205,30 @@
           </property>
          </widget>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="bloodPressureLabel">
-        <property name="text">
-         <string>BP</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="weightLabel">
+          <property name="text">
+           <string>W</string>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QDoubleSpinBox" name="weightValue">
           <property name="decimals">
@@ -183,17 +242,30 @@
         <item>
          <widget class="QComboBox" name="weightUnit"/>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="weightLabel">
-        <property name="text">
-         <string>W</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <layout class="QHBoxLayout" name="prePregnancyWeightLayout">
+        <item>
+         <widget class="QLabel" name="prePregnancyWeightLabel">
+          <property name="text">
+           <string>PPW</string>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QDoubleSpinBox" name="prePregnancyWeightValue">
           <property name="decimals">
@@ -207,41 +279,71 @@
         <item>
          <widget class="QComboBox" name="prePregnancyWeightUnit"/>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="prePregnancyWeightLabel">
-        <property name="text">
-         <string>PPW</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="weightGainValue">
-        <property name="text">
-         <string>WG V</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="weightGainValueLineEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="weightGainLabel">
-        <property name="text">
-         <string>WG L</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="weightGainLabel">
+          <property name="text">
+           <string>WG L</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="weightGainValue">
+          <property name="text">
+           <string>WG V</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="weightGainValueLineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QLabel" name="heightLabel">
+          <property name="text">
+           <string>H</string>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QDoubleSpinBox" name="heightValue">
           <property name="maximum">
@@ -252,38 +354,61 @@
         <item>
          <widget class="QComboBox" name="heightUnit"/>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="heightLabel">
-        <property name="text">
-         <string>H</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="bmiValueLabel">
-        <property name="text">
-         <string>BMI</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="bmiLabel">
-        <property name="text">
-         <string>BMI</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="bmiValueLineEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLabel" name="bmiLabel">
+          <property name="text">
+           <string>BMI L</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="bmiValueLabel">
+          <property name="text">
+           <string>BMI V</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="bmiValueLineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
       <item>
        <widget class="QGroupBox" name="postpartumPeriodGroupBox">
@@ -319,6 +444,19 @@
               <string notr="true">buttonGroup</string>
              </attribute>
             </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -383,14 +521,14 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="thromboembolismLabel">
+             <widget class="QLabel" name="thrombosisLabel">
               <property name="text">
-               <string>thromboembolism</string>
+               <string>thrombosis</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QListView" name="thromboembolismListView">
+             <widget class="QListView" name="thrombosisListView">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -400,7 +538,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="thromboembolismLineEdit"/>
+             <widget class="QLineEdit" name="thrombosisLineEdit"/>
             </item>
             <item>
              <widget class="Line" name="line_5">
@@ -444,7 +582,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="otherComplicationLineEdit"/>
+             <layout class="QFormLayout" name="otherComplicationFormLayout"/>
             </item>
            </layout>
           </widget>
@@ -462,26 +600,15 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_15">
       <item>
-       <layout class="QVBoxLayout" name="diagnosisVerticalLayout">
-        <item>
-         <widget class="QLabel" name="assessmentDiagnosisLabel">
-          <property name="text">
-           <string>diagnosis</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QListView" name="assessmentDiagnosisListView"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="assessmentDiagnosisLineEdit"/>
-        </item>
-       </layout>
-      </item>
-      <item>
        <layout class="QVBoxLayout" name="problemsVerticalLayout">
         <item>
          <widget class="QLabel" name="assessmentProblemsLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>problems</string>
           </property>
@@ -500,7 +627,198 @@
      <property name="title">
       <string>plan</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_16">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="Line" name="line_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="counsellingLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>counselling</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="nutritionCounsellingCheckBox">
+          <property name="text">
+           <string>nutrition</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="contraceptionCounsellingCheckBox">
+          <property name="text">
+           <string>contraception</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="rubellaVaccineCounsellingCheckBox">
+          <property name="text">
+           <string>rubella vaccine</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="perinealRehabilitationCounsellingCheckBox">
+          <property name="text">
+           <string>perineal rehabilitation</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QCheckBox" name="breastSelfExamCounsellingCheckBox">
+          <property name="text">
+           <string>breast self-exam</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="contraceptionGroupBox">
+        <property name="title">
+         <string>contraception</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QCheckBox" name="oralContraceptivePillCheckBox">
+             <property name="text">
+              <string>oral contraceptive pill</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="contraceptiveImplantCheckBox">
+             <property name="text">
+              <string>contraceptive implant</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="depotMedroxyprogesteroneAcetateCheckBox">
+             <property name="text">
+              <string>depot medroxyprogesterone acetate</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="combinedInjectableContraceptiveCheckBox">
+             <property name="text">
+              <string>combined injectable contraceptive</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="intrauterineDeviceCheckBox">
+             <property name="text">
+              <string>intrauterine device</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="oralContraceptivePillGroupBox">
+           <property name="title">
+            <string>oral contraceptive pill</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="oralContraceptivePillLabel">
+              <property name="text">
+               <string>oral contraceptive pill</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="oralContraceptivePillLineEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_14">
+        <item row="0" column="0">
+         <widget class="QLabel" name="papTestLabel">
+          <property name="text">
+           <string>pap test</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="papTestPrescribedCheckBox">
+          <property name="text">
+           <string>prescribed</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QLabel" name="prescribedTestOtherLabel">
+          <property name="text">
+           <string>others</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="prescribedTestOtherLineEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_9">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
       <item>
        <layout class="QVBoxLayout" name="planOfCareVerticalLayout">
         <item>
@@ -518,360 +836,6 @@
         </item>
         <item>
          <layout class="QHBoxLayout" name="planPlanOfCareTextEditorLayout"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="Line" name="line_4">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="prescribedUltrasoundGridLayout">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetMinimumSize</enum>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLabel" name="prescribedUltrasoundLabel">
-          <property name="font">
-           <font>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>prescribedUltrasound</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QCheckBox" name="prescribedUltrasoundTrimester1CheckBox">
-          <property name="text">
-           <string>us trimester 1</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QCheckBox" name="prescribedUltrasoundTrimester2CheckBox">
-          <property name="text">
-           <string>us trimester 2</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QCheckBox" name="prescribedUltrasoundTrimester3CheckBox">
-          <property name="text">
-           <string>us trimester 3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QCheckBox" name="prescribedUltrasoundPelvicCheckBox">
-          <property name="text">
-           <string>us pelvic</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QCheckBox" name="prescribedUltrasoundControlCheckBox">
-          <property name="text">
-           <string>us control</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="Line" name="line_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="prescribedLabTestTitleLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>prescribed biology</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="serologyGridLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="prescribedLabTestSerologyLabel">
-          <property name="text">
-           <string>serology</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="prescribedToxoplasmosisCheckBox">
-          <property name="text">
-           <string>serum toxoplasmosis</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QCheckBox" name="prescribedMeaslesCheckBox">
-          <property name="text">
-           <string>serum measles (rubeola)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QCheckBox" name="prescribedHepatitisBVirusCheckBox">
-          <property name="text">
-           <string>serum hbv</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QCheckBox" name="prescribedSyphilisCheckBox">
-          <property name="text">
-           <string>serum syphilis</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QCheckBox" name="prescribedHIVCheckBox">
-          <property name="text">
-           <string>serum hiv</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="gridLayout_12">
-        <item row="0" column="0">
-         <widget class="QLabel" name="prescribedLabTestHematologyLabel">
-          <property name="text">
-           <string>hematology</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="prescribedRBCAntibodyScreenCheckBox">
-          <property name="text">
-           <string>serum RBC antibody screen</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QCheckBox" name="prescribedCBCCheckBox">
-          <property name="text">
-           <string>serum CBC</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="gridLayout_13">
-        <item row="0" column="0">
-         <widget class="QLabel" name="prescribedLabTestBiochemistryLabel">
-          <property name="text">
-           <string>biochemistry</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="prescribedSerumCreatinineCheckBox">
-          <property name="text">
-           <string>serum creatinine</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QCheckBox" name="prescribedCRPCheckBox">
-          <property name="text">
-           <string>serum CRP</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QCheckBox" name="prescribedSerumUricAcidCheckBox">
-          <property name="text">
-           <string>serum uric acid</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QCheckBox" name="prescribedUrineProtein24HourCheckBox">
-          <property name="text">
-           <string>urine proteine 24h</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="gridLayout_14">
-        <item row="0" column="0">
-         <widget class="QLabel" name="prescribedLabTestBacteriologyLabel">
-          <property name="text">
-           <string>bacteriology</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="prescribedUrineCultureCheckBox">
-          <property name="text">
-           <string>urine culture</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QCheckBox" name="vaginalWetMountCheckBox">
-          <property name="text">
-           <string>vaginal wet mount</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QGridLayout" name="gridLayout_11">
-        <item row="0" column="0">
-         <widget class="QLabel" name="prescribedLabTestOtherLabel">
-          <property name="text">
-           <string>others</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="oSullivanCheckBox">
-          <property name="text">
-           <string>o'sullivan test</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <spacer name="horizontalSpacer_8">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="Line" name="line_9">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="tetanusVaccineLabel">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>tetanus vaccine</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_20">
-        <item>
-         <widget class="QLabel" name="tetanusPrescribedLabel">
-          <property name="text">
-           <string>prescribed tetanus vaccine</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="tetanusPrescribedLayout"/>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_10">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_21">
-        <item>
-         <widget class="QLabel" name="tetanusPrescribedNumberLabel">
-          <property name="text">
-           <string>prescribed tetanus number</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QCheckBox" name="tetanus1CheckBox">
-          <property name="text">
-           <string>tt1</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QCheckBox" name="tetanus2CheckBox">
-          <property name="text">
-           <string>tt2</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QCheckBox" name="tetanus3CheckBox">
-          <property name="text">
-           <string>tt3</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QCheckBox" name="tetanus4CheckBox">
-          <property name="text">
-           <string>tt4</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QCheckBox" name="tetanus5CheckBox">
-          <property name="text">
-           <string>tt5</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_9">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
         </item>
        </layout>
       </item>

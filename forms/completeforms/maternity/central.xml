@@ -9,7 +9,7 @@
     <version>test</version>
     <fmfv>0.9.7</fmfv>
     <cdate>2015-08-24</cdate>
-    <lmdate>2016-01-27</lmdate>
+    <lmdate>2016-05-16</lmdate>
     <icon>generalpractitioner.png</icon>
     <weblink></weblink>
     <bibliography/>
@@ -78,7 +78,7 @@
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <file>__subForms__/pmh/vaccination/central.xml</file>
+    <file>__subForms__/maternity/pmh/vaccination/central.xml</file>
 
   </MedForm>
 
@@ -87,7 +87,7 @@
     <label lang="fr">Sang</label>
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
-    <file>__subForms__/generic/blood_type/central.xml</file>
+    <file>__subForms__/maternity/generic/blood_type/central.xml</file>
   </MedForm>
 
   <MedForm name="Maternity::PMH::Gynecology">
@@ -96,8 +96,8 @@
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <file>__subForms__/pmh/pmhgynobst/central.xml</file>
-    <file>__subForms__/generic/pap_smear/central.xml</file>
+    <file>__subForms__/maternity/pmh/pmhgynobst/central.xml</file>
+    <file>__subForms__/maternity/generic/pap_smear/central.xml</file>
 
   </MedForm>
 
@@ -107,7 +107,7 @@
     <icon>__theme__/stethoscope.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
 
-    <file>__subForms__/pmh/pmhinterruptedpregnancy/central.xml</file>
+    <file>__subForms__/maternity/pmh/pmhinterruptedpregnancy/central.xml</file>
 
   </MedForm>
 
@@ -120,7 +120,7 @@
     <label lang="fr">Résultats d'analyses biologiques</label>
     <icon>__theme__/labtests.png</icon>
     <options>NoEpisode;DontPrintEmptyValues</options>
-          <file>__subForms__/generic/labtest_result/central.xml</file>
+          <file>__subForms__/maternity/generic/labtest_result/central.xml</file>
 </MedForm>
 
 <MedForm name="Maternity::Imaging">                                        
@@ -161,7 +161,7 @@
   <icon>__theme__/stethoscope.png</icon>
   <options>NoEpisode;DontPrintEmptyValues</options>
 
-  <file>__subForms__/obstetrics/prescription/central.xml</file>
+  <file>__subForms__/maternity/obstetrics/prescription/central.xml</file>
 
 </MedForm>
 
