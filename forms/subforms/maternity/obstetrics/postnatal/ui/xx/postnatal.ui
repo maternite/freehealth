@@ -86,8 +86,17 @@
           <property name="text">
            <string>yes</string>
           </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
           <attribute name="buttonGroup">
-           <string notr="true">buttonGroup</string>
+           <string notr="true">menstruationButtonGroup</string>
           </attribute>
          </widget>
         </item>
@@ -103,8 +112,17 @@
           <property name="text">
            <string>no</string>
           </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
           <attribute name="buttonGroup">
-           <string notr="true">buttonGroup</string>
+           <string notr="true">menstruationButtonGroup</string>
           </attribute>
          </widget>
         </item>
@@ -431,7 +449,7 @@
               <string>normal</string>
              </property>
              <attribute name="buttonGroup">
-              <string notr="true">buttonGroup</string>
+              <string notr="true">postpartumPeriodButtonGroup</string>
              </attribute>
             </widget>
            </item>
@@ -441,7 +459,7 @@
               <string>abnormal</string>
              </property>
              <attribute name="buttonGroup">
-              <string notr="true">buttonGroup</string>
+              <string notr="true">postpartumPeriodButtonGroup</string>
              </attribute>
             </widget>
            </item>
@@ -689,6 +707,9 @@
       </item>
       <item>
        <widget class="QGroupBox" name="contraceptionGroupBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="title">
          <string>contraception</string>
         </property>
@@ -734,6 +755,9 @@
          </item>
          <item>
           <widget class="QGroupBox" name="oralContraceptivePillGroupBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="title">
             <string>oral contraceptive pill</string>
            </property>
@@ -910,8 +934,41 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>oralContraceptivePillCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>oralContraceptivePillGroupBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>1926</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>203</x>
+     <y>2109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>contraceptionCounsellingCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>contraceptionGroupBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>1771</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>2021</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
+  <buttongroup name="postpartumPeriodButtonGroup"/>
+  <buttongroup name="menstruationButtonGroup"/>
  </buttongroups>
 </ui>

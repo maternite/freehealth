@@ -51,7 +51,7 @@
       <label lang="xx">Pregnancy with abortive outcome number</label>
       <label lang="fr">Grossesse interrompue numéro</label>
       <value>
-        <uuid id="0">0</uuid>
+        <uuid id="0">ø</uuid>
         <uuid id="1">1</uuid>
         <uuid id="2">2</uuid>
         <uuid id="3">3</uuid>
@@ -71,8 +71,8 @@
         <uuid id="17">17</uuid>
         <uuid id="18">18</uuid>
         <uuid id="19">19</uuid>
-        <uuid id="20">ø</uuid>
-        <possible id="0" lang="xx">0</possible>
+
+        <possible id="0" lang="xx">ø</possible>
         <possible id="1" lang="xx">1</possible>
         <possible id="2" lang="xx">2</possible>
         <possible id="3" lang="xx">3</possible>
@@ -92,8 +92,8 @@
         <possible id="17" lang="xx">17</possible>
         <possible id="18" lang="xx">18</possible>
         <possible id="19" lang="xx">19</possible>
-        <possible id="20" lang="xx">ø</possible>
-        <possible id="0" lang="fr">0</possible>                                 
+
+        <possible id="0" lang="fr">ø</possible>
         <possible id="1" lang="fr">1</possible>                                 
         <possible id="2" lang="fr">2</possible>                                 
         <possible id="3" lang="fr">3</possible>                                 
@@ -113,7 +113,7 @@
         <possible id="17" lang="fr">17</possible>                               
         <possible id="18" lang="fr">18</possible>                               
         <possible id="19" lang="fr">19</possible>                               
-        <possible id="20" lang="fr">ø</possible>
+
         <numerical id="0">0</numerical>
         <numerical id="1">1</numerical>
         <numerical id="2">2</numerical>
@@ -134,7 +134,6 @@
         <numerical id="17">17</numerical>
         <numerical id="18">18</numerical>
         <numerical id="19">19</numerical>
-        <numerical id="20">0</numerical>
       </value>
       <options>resizeToContent;DontPrintEmptyValue</options>
     </Item>

@@ -275,10 +275,6 @@
               <options>Printonlychecked;OnLeft</options>
               <label lang="xx">Normal</label>
               <label lang="fr">Normales</label>
-              <value>
-                <numerical id="0">0</numerical>
-                <numerical id="1">1</numerical>
-              </value>
             </Item>
 
             <Item type="check" name="Postpartum::Period::Abnormal::CheckBox">
@@ -286,10 +282,6 @@
               <options>printonlychecked</options>
               <label lang="xx">Abnormal</label>
               <label lang="fr">Pathologiques</label>
-              <value>
-                <numerical id="0">0</numerical>
-                <numerical id="1">1</numerical>
-              </value>
             </Item>
 
             <Item type="group" name="Postpartum::Medical::Complication::GroupBox">
