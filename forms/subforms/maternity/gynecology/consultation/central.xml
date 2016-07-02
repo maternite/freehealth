@@ -282,7 +282,7 @@
           <Item name="Objective::Pelvic::Vagina::Vaginal::Examination::Shorttext" type="shorttext">
             <uilink label="vaginalExaminationLabel" widget="vaginalExaminationLineEdit" layout="" />
             <label lang="xx">Vaginal examination</label>
-            <label lang="fr">Doigté (Toucher vaginal)</label>
+            <label lang="fr">Aspect du vagin</label>
             <placeholder lang="xx"></placeholder>
             <placeholder lang="fr"></placeholder>
             <options>DontPrintEmptyValues</options>
@@ -313,8 +313,8 @@
             <uilink label="" widget="leucorrhoeaLineEdit" layout="" />
             <label lang="xx"></label>                        
             <label lang="fr"></label>                   
-            <placeholder lang="xx"></placeholder>                               
-            <placeholder lang="fr"></placeholder>                               
+            <placeholder lang="xx">Description</placeholder>
+            <placeholder lang="fr">Caractéristiques</placeholder>
             <options>DontPrintEmptyValues</options>                             
           </Item>
 

@@ -8,7 +8,7 @@
     <version>test</version>
     <fmfv>0.9.7</fmfv>
     <cdate>2016-03-06</cdate>
-    <lmdate>2016-03-06</lmdate>
+    <lmdate>2016-07-01</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -333,17 +333,15 @@
           <label lang="xx">Medical practitioner</label>
           <label lang="fr">Médecin(s)</label>
           <value>
-            <uuid id="0">∅</uuid>
-            <uuid id="1">1 Dr RAKOTOZAFY Faratiana Lantoarisoa</uuid>
-            <uuid id="2">2 Dr RABETSIMAMANGA Lyn Anja</uuid>
-            <uuid id="3">3 Dr REKORONIRINA Biarinivo Eddie</uuid>
-            <uuid id="4">4 Dr ANDRIAMANANTENA Christophe</uuid>
-            <uuid id="5">5 Dr RASOANAMPOIZINA Hanitratiana</uuid>
-            <uuid id="6">6 Dr RALALAHANTASOA Jeannine</uuid>
-            <uuid id="7">7 Dr BEVELO Wai Carène</uuid>
-            <uuid id="8">8 Dr RAHERITIANA Marie Angéline</uuid>
-            <uuid id="9">9 Dr RAZAFINANDRASANA Rakotoarisoa Vololona</uuid>
-            <uuid id="10">10</uuid>
+            <uuid id="0">Dr ANDRIAMANANTENA Christophe</uuid>
+            <uuid id="1">Dr BEVELO Wai CarèneDr RAKOTOZAFY Faratiana Lantoarisoa</uuid>
+            <uuid id="2">Dr RABETSIMAMANGA Lyn Anja</uuid>
+            <uuid id="3">Dr RAHERITIANA Marie Angéline</uuid>
+            <uuid id="4">Dr RAKOTOZAFY Faratiana Lantoarisoa</uuid>
+            <uuid id="5">Dr RALALAHANTASOA Jeannine</uuid>
+            <uuid id="6">Dr RASOANAMPOIZINA Hanitratiana</uuid>
+            <uuid id="7">Dr RAZAFINANDRASANA Rakotoarisoa Vololona</uuid>
+            <uuid id="8">Dr REKORONIRINA Biarinivo Eddie </uuid>
 
             <possible id="0" lang="xx">∅</possible>
             <possible id="1" lang="xx"></possible>
@@ -354,20 +352,16 @@
             <possible id="6" lang="xx"></possible>
             <possible id="7" lang="xx"></possible>
             <possible id="8" lang="xx"></possible>
-            <possible id="9" lang="xx"></possible>
-            <possible id="10" lang="xx"></possible>
 
-            <possible id="0" lang="fr">∅</possible>
-            <possible id="1" lang="fr">1 Dr RAKOTOZAFY Faratiana Lantoarisoa</possible>
-            <possible id="2" lang="fr">2 Dr RABETSIMAMANGA Lyn Anja</possible>
-            <possible id="3" lang="fr">3 Dr REKORONIRINA Biarinivo Eddie</possible>
-            <possible id="4" lang="fr">4 Dr ANDRIAMANANTENA Christophe</possible>
-            <possible id="5" lang="fr">5 Dr RASOANAMPOIZINA Hanitratiana</possible>
-            <possible id="6" lang="fr">6 Dr RALALAHANTASOA Jeannine</possible>
-            <possible id="7" lang="fr">7 Dr BEVELO Wai Carène</possible>
-            <possible id="8" lang="fr">8 Dr RAHERITIANA Marie Angéline</possible>
-            <possible id="9" lang="fr">9 Dr RAZAFINANDRASANA Rakotoarisoa Vololona</possible>
-            <possible id="10" lang="fr">10</possible>
+            <possible id="0" lang="fr">Dr ANDRIAMANANTENA Christophe</possible>
+            <possible id="1" lang="fr">Dr BEVELO Wai Carène</possible>
+            <possible id="2" lang="fr">Dr RABETSIMAMANGA Lyn Anja</possible>
+            <possible id="3" lang="fr">Dr RAHERITIANA Marie Angéline</possible>
+            <possible id="4" lang="fr">Dr RAKOTOZAFY Faratiana Lantoarisoa</possible>
+            <possible id="5" lang="fr">Dr RALALAHANTASOA Jeannine</possible>
+            <possible id="6" lang="fr">Dr RASOANAMPOIZINA Hanitratiana</possible>
+            <possible id="7" lang="fr">Dr RAZAFINANDRASANA Rakotoarisoa Vololona</possible>
+            <possible id="8" lang="fr">Dr REKORONIRINA Biarinivo Eddie</possible>
           </value>
           <options>DontPrintEmptyValues</options>
         </Item>
@@ -484,41 +478,23 @@
           <label lang="xx">Anesthesiologist</label>
           <label lang="fr">Anesthésistes</label>
           <value>
-            <uuid id="0">∅</uuid>
-            <uuid id="1">1 Dr MANASSE-RATSIMANDRESY Andrianalisoa</uuid>
-            <uuid id="2">2 Dr RANDRIANARIJAONA Paul Jocelyn Mamy</uuid>
-            <uuid id="3">3 Mme NOROVOLOLONA Charline</uuid>
-            <uuid id="4">4 Mr RAFANOMEZANTSOA Heritiana</uuid>
-            <uuid id="5">5 Mme VELO Georgette</uuid>
-            <uuid id="6">6</uuid>
-            <uuid id="7">7</uuid>
-            <uuid id="8">8</uuid>
-            <uuid id="9">9</uuid>
-            <uuid id="10">10</uuid>
+            <uuid id="0">Dr MANASSE-RATSIMANDRESY Andrianalisoa</uuid>
+            <uuid id="1">Mme NOROVOLOLONA Charline</uuid>
+            <uuid id="2">Mr RAFANOMEZANTSOA Heritiana</uuid>
+            <uuid id="3">Dr RANDRIANARIJAONA Paul Jocelyn Mamy</uuid>
+            <uuid id="4">Mme VELO Georgette</uuid>
 
-            <possible id="0" lang="xx">∅</possible>
-            <possible id="1" lang="xx">1 Dr MANASSE-RATSIMANDRESY Andrianalisoa</possible>
-            <possible id="2" lang="xx">2 Dr RANDRIANARIJAONA Paul Jocelyn Mamy</possible>
-            <possible id="3" lang="xx">3 Mme NOROVOLOLONA Charline</possible>
-            <possible id="4" lang="xx">4 Mr RAFANOMEZANTSOA Heritiana</possible>
-            <possible id="5" lang="xx">5 Mme VELO Georgette</possible>
-            <possible id="6" lang="xx">6</possible>
-            <possible id="7" lang="xx">7</possible>
-            <possible id="8" lang="xx">8</possible>
-            <possible id="9" lang="xx">9</possible>
-            <possible id="10" lang="xx">10</possible>
+            <possible id="0" lang="xx">Dr MANASSE-RATSIMANDRESY Andrianalisoa</possible>
+            <possible id="1" lang="xx">Mme NOROVOLOLONA Charline</possible>
+            <possible id="2" lang="xx">Mr RAFANOMEZANTSOA Heritiana</possible>
+            <possible id="3" lang="xx">Dr RANDRIANARIJAONA Paul Jocelyn Mamy</possible>
+            <possible id="4" lang="xx">Mme VELO Georgette</possible>
 
-            <possible id="0" lang="fr">∅</possible>
-            <possible id="1" lang="fr">1 Dr MANASSE-RATSIMANDRESY Andrianalisoa</possible>
-            <possible id="2" lang="fr">2 Dr RANDRIANARIJAONA Paul Jocelyn Mamy</possible>
-            <possible id="3" lang="fr">3 Mme NOROVOLOLONA Charline</possible>
-            <possible id="4" lang="fr">4 Mr RAFANOMEZANTSOA Heritiana</possible>
-            <possible id="5" lang="fr">5 Mme VELO Georgette</possible>
-            <possible id="6" lang="fr">6</possible>
-            <possible id="7" lang="fr">7</possible>
-            <possible id="8" lang="fr">8</possible>
-            <possible id="9" lang="fr">9</possible>
-            <possible id="10" lang="fr">10</possible>
+            <possible id="0" lang="fr">Dr MANASSE-RATSIMANDRESY Andrianalisoa</possible>
+            <possible id="1" lang="fr">Mme NOROVOLOLONA Charline</possible>
+            <possible id="2" lang="fr">Mr RAFANOMEZANTSOA Heritiana</possible>
+            <possible id="3" lang="fr">Dr RANDRIANARIJAONA Paul Jocelyn Mamy</possible>
+            <possible id="4" lang="fr">Mme VELO Georgette</possible>
           </value>
           <options>DontPrintEmptyValues</options>
         </Item>
@@ -569,6 +545,7 @@
 
         <Item type="datetime" name="Rupture::Of:Membranes::Date::Time">
             <uilink label="ruptureOfMembranesDateTimeLabel" widget="ruptureOfMembranesDateTimeEdit"/>
+            <datetimeformat>dd-MM-yyyy HH:mm</datetimeformat>
             <label lang="xx">Rupture of membranes date and time</label>
             <label lang="fr">Date et heure de la rupture des membranes</label>
             <options>DontPrintEmptyValues</options>
@@ -5297,6 +5274,15 @@
             </Item> <!-- end of group Postpartum::Traumatic::Complications::Episiotomy::Group -->
 
         </Item> <!-- end of group Postpartum::Traumatic::Complications::Group -->
+
+        <Item type="shorttext" name="Postpartum::Complication::LineEdit">
+          <uilink label="" widget="postpartumComplicationLineEdit" layout="" />
+          <label lang="xx"></label>
+          <label lang="fr"></label>
+          <placeholder lang="xx">Other postpartum complication</placeholder>
+          <placeholder lang="fr">Autre complication du postpartum</placeholder>
+          <options>DontPrintEmptyValues</options>
+        </Item>
 
     </Item> <!-- end of group Postpartum::Complications::Group -->
 

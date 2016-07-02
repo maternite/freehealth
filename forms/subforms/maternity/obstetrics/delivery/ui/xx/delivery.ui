@@ -456,6 +456,22 @@
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout_5">
+     <item row="6" column="3">
+      <spacer name="horizontalSpacer_42">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="7" column="1">
+      <widget class="QComboBox" name="headDeliveryComboBox"/>
+     </item>
      <item row="10" column="0">
       <widget class="QLabel" name="uterineExplorationLabel">
        <property name="text">
@@ -480,9 +496,6 @@
      <item row="8" column="1">
       <widget class="QComboBox" name="placentalDeliveryProcedureComboBox"/>
      </item>
-     <item row="7" column="1">
-      <widget class="QComboBox" name="headDeliveryComboBox"/>
-     </item>
      <item row="3" column="0">
       <widget class="QLabel" name="ruptureOfMembranesLabel">
        <property name="text">
@@ -490,12 +503,18 @@
        </property>
       </widget>
      </item>
+     <item row="2" column="1">
+      <widget class="QDateTimeEdit" name="ruptureOfMembranesDateTimeEdit"/>
+     </item>
      <item row="0" column="0">
       <widget class="QLabel" name="epiduralAnesthesiaLabel">
        <property name="text">
         <string>epidural anesthesia</string>
        </property>
       </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLineEdit" name="membraneRuptureDeliveryValueLineEdit"/>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="ruptureOfMembranesDateTimeLabel">
@@ -506,12 +525,6 @@
      </item>
      <item row="1" column="1">
       <layout class="QHBoxLayout" name="directedLaborRadioLayout"/>
-     </item>
-     <item row="2" column="1">
-      <widget class="QDateTimeEdit" name="ruptureOfMembranesDateTimeEdit"/>
-     </item>
-     <item row="6" column="2">
-      <widget class="QLineEdit" name="membraneRuptureDeliveryValueLineEdit"/>
      </item>
      <item row="5" column="0">
       <widget class="QLabel" name="streptococcusScreeningTestLabel">
@@ -542,6 +555,13 @@
      <item row="5" column="1">
       <layout class="QHBoxLayout" name="streptococcusScreeningTestRadioLayout"/>
      </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="membraneRuptureDeliveryValueLabel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
       <widget class="QLabel" name="directedLaborLabel">
        <property name="text">
@@ -556,12 +576,8 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
-      <widget class="QLabel" name="membraneRuptureDeliveryValueLabel">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
+     <item row="9" column="1">
+      <widget class="QListView" name="placentalExpulsionActiveManagementListView"/>
      </item>
      <item row="8" column="0">
       <widget class="QLabel" name="placentalDeliveryProcedureLabel">
@@ -570,8 +586,8 @@
        </property>
       </widget>
      </item>
-     <item row="9" column="1">
-      <widget class="QListView" name="placentalExpulsionActiveManagementListView"/>
+     <item row="11" column="1">
+      <widget class="QComboBox" name="reasonForUterineExplorationComboBox"/>
      </item>
      <item row="10" column="1">
       <layout class="QHBoxLayout" name="uterineExplorationRadioLayout"/>
@@ -582,9 +598,6 @@
         <string>Reason for manual postpartum exploration of uterus</string>
        </property>
       </widget>
-     </item>
-     <item row="11" column="1">
-      <widget class="QComboBox" name="reasonForUterineExplorationComboBox"/>
      </item>
     </layout>
    </item>
@@ -4028,6 +4041,9 @@
          </item>
         </layout>
        </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="postpartumComplicationLineEdit"/>
       </item>
      </layout>
     </widget>

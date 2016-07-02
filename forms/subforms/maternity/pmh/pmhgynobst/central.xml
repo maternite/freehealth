@@ -39,13 +39,30 @@
     <label lang="xx">PMH Gynecology and Obstetrics</label>
     <label lang="fr">Antécédents gynécologiques et obstétricaux</label>
 
+    <Item type="spinbox" name="Menarche::Age">
+        <uilink widget="menarcheAgeSpinBox"/>
+    </Item>
+
     <Item type="date" name="Menarche::Date">
       <uilink label="menarcheLabel" widget="menarcheDateEdit" layout="" />
+      <dateformat>yyyy</dateformat>
       <!--<sct>Menarche (finding)</sct>-->
       <!--<sctid>20016009</sctid>-->
       <label lang="xx">Menarche</label>
       <label lang="fr">Ménarche</label>
       <options></options>
+    </Item>
+
+    <Item type="helptext" name="Menarche::Age::Helptext">
+      <uilink widget="menarcheAgeLabel"/>
+      <label lang="xx">Age</label>
+      <label lang="fr">Âge</label>
+    </Item>
+
+    <Item type="helptext" name="Menarche::Date::Helptext">
+      <uilink widget="menarcheDateLabel"/>
+      <label lang="xx">Year</label>
+      <label lang="fr">Année</label>
     </Item>
 
     <Item type="shorttext" name="Menarche::Comment::Shorttext">

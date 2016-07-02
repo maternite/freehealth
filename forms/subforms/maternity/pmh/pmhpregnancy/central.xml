@@ -5,10 +5,10 @@
 
   <formdescription>
     <authors>Jérôme Pinguet</authors>
-    <version>1.0</version>
-    <fmfv>0.9.6</fmfv>
+    <version>test</version>
+    <fmfv>0.9.8</fmfv>
     <cdate>2015-08-26</cdate>
-    <lmdate>2015-09-17</lmdate>
+    <lmdate>2016-07-01</lmdate>
     <icon>__theme__stethoscope.png</icon>
     <weblink>https://github.com/maternite/freemedforms</weblink>
     <bibliograpy/>
@@ -1502,18 +1502,24 @@
       <!--<sctid>11687002</sctid>-->
       <uuid id="4">Not done</uuid>
       <!--<sctid>385660001</sctid>-->
+      <uuid id="5">Intrauterine growth retardation</uuid>
+      <uuid id="6">Intrauterine fetal death</uuid>
 
       <possible id="0" lang="xx">Miscarriage</possible>
       <possible id="1" lang="xx">Threatened premature labor</possible>
       <possible id="2" lang="xx">Pregnancy-induced hypertension</possible>
       <possible id="3" lang="xx">Gestational diabetes mellitus</possible>
       <possible id="4" lang="xx">ø</possible>
+      <possible id="5" lang="xx">IUGR (Intrauterine growth retardation)</possible>
+      <possible id="5" lang="xx">IUFD (Intrauterine fetal death)</possible>
 
       <possible id="0" lang="fr">Menace de fausse couche spontanée</possible>
       <possible id="1" lang="fr">Menace d'accouchement prématuré</possible>
       <possible id="2" lang="fr">Hypertension artérielle pendant la grossesse</possible>
       <possible id="3" lang="fr">Diabète gestationnel</possible>
       <possible id="4" lang="fr">ø</possible>
+      <possible id="5" lang="fr">RCIU (Retard de croissance intra-utérin)</possible>
+      <possible id="6" lang="fr">MIU (Mort intra-utérine)</possible>
 
     </value>
   </Item>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>543</width>
-    <height>654</height>
+    <height>716</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -64,9 +64,26 @@
          </widget>
         </item>
         <item>
+         <widget class="QLabel" name="menarcheAgeLabel">
+          <property name="text">
+           <string>age</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="menarcheAgeSpinBox"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="menarcheDateLabel">
+          <property name="text">
+           <string>date</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QDateEdit" name="menarcheDateEdit">
           <property name="displayFormat">
-           <string>dd/MM/yyyy</string>
+           <string>yyyy</string>
           </property>
          </widget>
         </item>
